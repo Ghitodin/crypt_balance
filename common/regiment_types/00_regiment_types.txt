@@ -307,7 +307,7 @@ house_guard = {
 	low_maintenance_cost = { gold = 0 }
 	high_maintenance_cost = { gold = 1 }
 	
-	max_sub_regiments = 1
+	#max_sub_regiments = 1
 	
 	stack = 100
 	ai_quality = { value = 100 }

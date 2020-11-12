@@ -106,10 +106,10 @@ execute_prisoner_effect = {
 					scope:victim = { tier_or_related_liege_tier_equal_trigger = { TIER = tier_county } }
 				}
 			}
-			add_dread = medium_dread_gain
+			add_dread = minor_dread_gain
 		}
 		else = {
-			add_dread = minor_dread_gain
+			#add_dread = minor_dread_gain
 		}
 		# Piety loss (or gain) from executions
 		if = {
@@ -470,10 +470,10 @@ sacrifice_prisoner_effect = {
 					scope:victim = { tier_or_related_liege_tier_equal_trigger = { TIER = tier_county } }
 				}
 			}
-			add_dread = medium_dread_gain
+			add_dread = minor_dread_gain
 		}
 		else = {
-			add_dread = minor_dread_gain
+			#add_dread = minor_dread_gain
 		}
 		if = {
 			limit = {

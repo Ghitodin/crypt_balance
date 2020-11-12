@@ -1,14 +1,14 @@
 ﻿
 intimidated_from_faction_modifier = {
 	modifier = {
-		add = -20 # Notable deterrent, but Intimidated vassals should still join Factions if they hate you enough.
+		add = -10 # Notable deterrent, but Intimidated vassals should still join Factions if they hate you enough.
 		has_dread_level_towards = {
 			target = $TARGET$
 			level = 1
 		}
 	}
 	modifier = {
-		add = -100 # Effectively a full blocker — Terrified vassals should never join Factions.
+		add = -30 # Effectively a full blocker — Terrified vassals should never join Factions.
 		has_dread_level_towards = {
 			target = $TARGET$
 			level = 2

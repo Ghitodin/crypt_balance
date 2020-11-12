@@ -49,7 +49,7 @@ baron_modifier = {
 }
 
 count_modifier = {
-	domain_limit = 2
+	domain_limit = 3
 	knight_limit = 5
 }
 
@@ -62,13 +62,13 @@ duke_modifier = {
 king_modifier = {
 	domain_limit = 3
 	knight_limit = 7
-	vassal_limit = 40
+	vassal_limit = 30
 }
 
 emperor_modifier = {
 	domain_limit = 3
-	knight_limit = 8
-	vassal_limit = 60
+	knight_limit = 7
+	vassal_limit = 40
 }
 
 # These modifiers are applied to the holder of a title of the respective tier (per title)

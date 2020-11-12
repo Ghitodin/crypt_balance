@@ -159,7 +159,7 @@ torture_interaction_actor_effect = {
 					}
 				}
 			}
-			add_dread = torture_interaction_massive_dread_gain
+			add_dread = torture_interaction_major_dread_gain
 		}
 		else_if = {
 			limit = {
@@ -176,7 +176,7 @@ torture_interaction_actor_effect = {
 					}
 				}
 			}
-			add_dread = torture_interaction_major_dread_gain
+			add_dread = torture_interaction_medium_dread_gain
 		}
 		else_if = {
 			limit = {
@@ -205,7 +205,7 @@ torture_interaction_actor_effect = {
 					}
 				}
 			}
-			add_dread = torture_interaction_medium_dread_gain
+			add_dread = torture_interaction_minor_dread_gain
 		}
 		else_if = {
 			limit = {
@@ -230,7 +230,7 @@ torture_interaction_actor_effect = {
 					}
 				}
 			}
-			add_dread = torture_interaction_minor_dread_gain
+			#add_dread = torture_interaction_minor_dread_gain
 		}
 
 

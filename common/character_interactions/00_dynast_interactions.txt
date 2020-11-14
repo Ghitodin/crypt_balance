@@ -319,7 +319,7 @@ restore_inheritance_interaction = {
 
 	cost = {
 		renown = {
-			value = medium_dynasty_prestige_value
+			value = miniscule_dynasty_prestige_value
 		}
 	}
 	

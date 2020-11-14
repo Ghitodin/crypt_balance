@@ -39,6 +39,7 @@
 			rank = oldest
 			title_division = partition
 			create_primary_tier_titles = yes
+			primary_heir_minimum_share = 0.5
 		}
 		flag = partition_succession_law
 		modifier = {
@@ -83,6 +84,8 @@
 			traversal_order = children
 			rank = oldest
 			title_division = partition
+			create_primary_tier_titles = yes
+			primary_heir_minimum_share = 0.5
 		}
 		flag = partition_succession_law
 		modifier = {
@@ -134,6 +137,7 @@
 			traversal_order = children
 			rank = oldest
 			title_division = partition
+			create_primary_tier_titles = yes
 			primary_heir_minimum_share = 0.5
 		}
 		flag = partition_succession_law
@@ -183,7 +187,9 @@
 			order_of_succession = inheritance
 			traversal_order = children
 			rank = oldest
-			title_division = single_heir
+			title_division = partition
+			create_primary_tier_titles = yes
+			primary_heir_minimum_share = 0.5
 		}
 		flag = advanced_succession_law
 		modifier = {
@@ -232,8 +238,10 @@
 		succession = {
 			order_of_succession = inheritance
 			traversal_order = children
-			rank = youngest
-			title_division = single_heir
+			rank = oldest
+			title_division = partition
+			create_primary_tier_titles = yes
+			primary_heir_minimum_share = 0.5
 		}
 		
 		flag = advanced_succession_law
@@ -272,9 +280,11 @@
 		}
 		succession = {
 			order_of_succession = inheritance
-			traversal_order = dynasty_house
+			traversal_order = children
 			rank = oldest
-			title_division = single_heir
+			title_division = partition
+			create_primary_tier_titles = yes
+			primary_heir_minimum_share = 0.5
 		}
 		
 		flag = advanced_succession_law

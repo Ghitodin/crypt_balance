@@ -58,7 +58,7 @@
 				AND = { # Tribal Subjugation
 					has_government = tribal_government
 					scope:defender = {
-						has_government = tribal_government
+						# has_government = tribal_government
 					}
 				}
 				AND = { # Temporal Subjugation

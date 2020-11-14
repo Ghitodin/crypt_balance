@@ -644,11 +644,11 @@ crush_opinion_impact = 30
 #DYNASTY PRESTIGE
 
 #Note! These are base values, use loss/gain below
-miniscule_dynasty_prestige_value = 25
-minor_dynasty_prestige_value = 50
-medium_dynasty_prestige_value = 75
-major_dynasty_prestige_value = 150
-massive_dynasty_prestige_value = 250
+miniscule_dynasty_prestige_value = 75
+minor_dynasty_prestige_value = 150
+medium_dynasty_prestige_value = 300
+major_dynasty_prestige_value = 500
+massive_dynasty_prestige_value = 600
 monumental_dynasty_prestige_value = 1000
 
 miniscule_dynasty_prestige_loss = {

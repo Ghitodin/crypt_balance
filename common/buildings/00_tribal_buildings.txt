@@ -74,7 +74,7 @@ tribe_02 = {
 	cost_prestige = expensive_building_tier_3_cost
 	cost_gold = expensive_building_tier_1_cost
 	
-	levy = normal_building_levy_tier_4
+	levy = normal_building_levy_tier_5
 	garrison = good_building_garrison_tier_2
 	province_modifier = {
 		monthly_income = poor_building_tax_tier_3
@@ -108,12 +108,13 @@ longhouses_01 = {
 	levy = normal_building_levy_tier_1
 	
 	character_modifier = {
-		monthly_prestige = 0.15
+		monthly_prestige = 0.20
 		light_cavalry_damage_add = 1
 		light_cavalry_pursuit_add = 1
 	}
+	
 	county_modifier = {
-		monthly_county_control_change_add = 0.1
+		monthly_county_control_change_add = 0.2
 	}
 	
 	next_building = longhouses_02
@@ -148,7 +149,7 @@ longhouses_02 = {
 	levy = normal_building_levy_tier_2
 	
 	character_modifier = {
-		monthly_prestige = 0.2
+		monthly_prestige = 0.3
 		skirmishers_pursuit_mult = 0.02
 		light_cavalry_damage_add = 2
 		light_cavalry_pursuit_add = 2
@@ -156,7 +157,7 @@ longhouses_02 = {
 		light_cavalry_toughness_add = 1
 	}
 	county_modifier = {
-		monthly_county_control_change_add = 0.2
+		monthly_county_control_change_add = 0.4
 	}
 	
 	ai_value = {
@@ -185,7 +186,7 @@ war_camps_01 = {
 	cost_prestige = expensive_building_tier_1_cost
 	cost_gold = tribal_building_tier_1_cost
 	
-	levy = normal_building_levy_tier_1
+	levy = excellent_building_levy_tier_1
 	
 	character_modifier = {
 		knight_limit = 1
@@ -225,7 +226,7 @@ war_camps_02 = {
 	cost_prestige = expensive_building_tier_2_cost
 	cost_gold = tribal_building_tier_2_cost
 	
-	levy = normal_building_levy_tier_2
+	levy = excellent_building_levy_tier_2
 	
 	character_modifier = {
 		knight_limit = 2

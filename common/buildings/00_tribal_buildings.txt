@@ -109,6 +109,8 @@ longhouses_01 = {
 	
 	character_modifier = {
 		monthly_prestige = 0.15
+		light_cavalry_damage_add = 1
+		light_cavalry_pursuit_add = 1
 	}
 	county_modifier = {
 		monthly_county_control_change_add = 0.1
@@ -147,6 +149,11 @@ longhouses_02 = {
 	
 	character_modifier = {
 		monthly_prestige = 0.2
+		skirmishers_pursuit_mult = 0.02
+		light_cavalry_damage_add = 2
+		light_cavalry_pursuit_add = 2
+		light_cavalry_screen_add = 1
+		light_cavalry_toughness_add = 1
 	}
 	county_modifier = {
 		monthly_county_control_change_add = 0.2

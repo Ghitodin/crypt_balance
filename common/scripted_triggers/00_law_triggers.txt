@@ -170,7 +170,7 @@ can_keep_single_heir_succession_law_trigger = {
 
 can_have_single_heir_succession_law_trigger = {
 	culture = {
-		has_innovation = innovation_heraldry
+		has_innovation = innovation_primogeniture
 	}
 	# Non-tribals only
 	custom_description = {
@@ -219,6 +219,7 @@ can_keep_single_heir_dynasty_house_trigger = {
 			can_have_single_heir_dynasty_house_trigger = yes
 			historical_succession_access_single_heir_dynasty_house_trigger = yes
 		}
+		has_variable = $KEK$
 	}
 }
 
@@ -239,10 +240,12 @@ can_have_single_heir_dynasty_house_trigger = {
 		culture = {
 			has_innovation = innovation_table_of_princes
 		}
+		has_variable = $KEK$
 	}
 	trigger_else = {
 		culture = {
 			has_innovation = innovation_heraldry
+			has_variable = $KEK$
 		}
 	}
 	custom_description = {

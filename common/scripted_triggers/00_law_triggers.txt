@@ -216,8 +216,8 @@ can_keep_single_heir_dynasty_house_trigger = {
 			has_realm_law = single_heir_dynasty_house
 		}
 		OR = {
-			can_have_single_heir_dynasty_house_trigger = yes
-			historical_succession_access_single_heir_dynasty_house_trigger = yes
+			#can_have_single_heir_dynasty_house_trigger = yes
+			#historical_succession_access_single_heir_dynasty_house_trigger = yes
 		}
 		has_variable = $KEK$
 	}
@@ -238,13 +238,13 @@ can_have_single_heir_dynasty_house_trigger = {
 			}
 		}
 		culture = {
-			has_innovation = innovation_table_of_princes
+			#has_innovation = innovation_table_of_princes
 		}
 		has_variable = $KEK$
 	}
 	trigger_else = {
 		culture = {
-			has_innovation = innovation_heraldry
+			#has_innovation = innovation_heraldry
 			has_variable = $KEK$
 		}
 	}

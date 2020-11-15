@@ -242,13 +242,14 @@
 			rank = oldest
 			title_division = partition
 			create_primary_tier_titles = yes
-			primary_heir_minimum_share = 0.8
+			primary_heir_minimum_share = 0.7
 		}
 		
 		flag = advanced_succession_law
 		modifier = {
 			player_heir_opinion = 20
 			eligible_child_except_player_heir_opinion = -5
+			direct_vassal_opinion = -5
 		}
 		pass_cost = {
 			prestige = change_succession_law_prestige_cost
@@ -272,12 +273,15 @@
 		}
 		can_have = {
 			can_have_single_heir_dynasty_house_trigger = yes
+			has_variable = $KEK$
 		}
 		can_pass = {
 			can_change_single_heir_dynasty_house_succession_law_trigger = yes
+			has_variable = $KEK$
 		}
 		should_start_with = {
 			historical_succession_access_single_heir_dynasty_house_trigger = yes
+			has_variable = $KEK$
 		}
 		succession = {
 			order_of_succession = inheritance

@@ -213,8 +213,13 @@ innovation_table_of_princes = {
 		}
 	}
 	
-	unlock_law = single_heir_dynasty_house
-	custom = unlock_single_heir_dynasty_house_changing
+	#unlock_law = single_heir_dynasty_house
+	#custom = unlock_single_heir_dynasty_house_changing
+	monthly_prestige_gain_mult = 0.05
+	modifier = {
+		short_reign_duration_mult = -0.07
+		title_creation_cost_mult = -0.15
+	}
 	
 	flag = global_regional
 	flag = tribal_era_regional

@@ -3,10 +3,10 @@
 		default = {
 			levies = {
 				value = 0
-				max = 0.1
+				max = 0.15
 				scope:liege = {
 					add = {
-						value = 0.03
+						value = 0.04
 						multiply = prestige_level
 					}
 				}

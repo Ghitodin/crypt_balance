@@ -28443,7 +28443,7 @@ e_caspian-pontic_steppe = {
 	capital = c_itil # Itil
 }
 	k_pontic_steppe = {
-		color = { 85 40 5 }
+		color = { 240 190 20 }
 		color2= { 255 255 255 }
 		
 		capital = c_odessa # Odessa

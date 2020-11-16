@@ -88,6 +88,16 @@ on_title_gain_inheritance = {
 			add_dread = 50
 		}
 	}
+	
+	# TEST
+		any_sibling = {
+			this = root
+			add_truce_both_ways = {
+				character = scope:actor
+				days = 3650
+				name = TRUCE_GRANT_INDEPENDENCE
+			}
+	}
 }
 
 # A title is usurped by a character

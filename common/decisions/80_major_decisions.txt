@@ -1329,7 +1329,7 @@ tribal_challenge_ruler_decision = { #by Linnéa Thimrén
 	}
 
 	ai_will_do = {
-		base = 0
+		base = -100 # FUCK THIS SHIIIIIT!!!!
 
 		ai_value_modifier = {
 			ai_greed = 0.25

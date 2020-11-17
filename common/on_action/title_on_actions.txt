@@ -79,6 +79,7 @@ on_title_gain = {
 on_title_gain_inheritance = {
 	events = {
 	}
+	
 	effect = {
 		if = {
 			limit = {
@@ -87,16 +88,22 @@ on_title_gain_inheritance = {
 			}
 			add_dread = 50
 		}
-	}
-	
-	# TEST
-		any_sibling = {
-			this = root
-			add_truce_both_ways = {
-				character = scope:actor
-				days = 3650
-				name = TRUCE_GRANT_INDEPENDENCE
+		
+		every_sibling = {
+			if = {
+				limit = {
+					NOT = {
+						target_is_liege_or_above = root
+						target_is_vassal_or_below = root
+					}
+				}
+				add_truce_both_ways = {
+					character = root
+					days = 7300 # peace for 20 years
+					name = TRUCE_GRANT_INDEPENDENCE
+				}
 			}
+		}
 	}
 }
 

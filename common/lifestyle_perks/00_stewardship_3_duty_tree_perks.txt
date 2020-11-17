@@ -143,10 +143,8 @@ meritocracy_perk = {
 	parent = toe_the_line_perk
 	parent = positions_of_power_perk
 	
-	effect = {	
-		custom_description_no_bullet = {
-			text = meritocracy_perk_effect
-		}
+	character_modifier = {
+		monthly_county_control_change_add = 0.3
 	}
 }
 

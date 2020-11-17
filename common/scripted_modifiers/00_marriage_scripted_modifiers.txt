@@ -244,6 +244,26 @@ elopment_ai_accept_modifier = { #Should copy marriage_ai_accept_modifier on rele
 
 
 marriage_ai_accept_modifier = {
+	
+	modifier = {
+		add = {
+			value = 1
+				subtract = {
+					value = scope:recipient.max_military_strength
+					divide = { value = scope:actor.max_military_strength min = 1 }
+				}
+			multiply = 35
+	  	}
+		scope:recipient = {
+			yields_alliance = {
+				candidate = scope:secondary_recipient
+				target = scope:actor
+				target_candidate = scope:secondary_actor
+			}
+		}
+		desc = offer_vassalization_interaction_aibehavior_power_tt
+	}
+
 	#########
 	# HOOKS #
 	#########

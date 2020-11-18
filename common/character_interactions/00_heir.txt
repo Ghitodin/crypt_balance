@@ -1,4 +1,4 @@
-﻿@designate_heir_cost = 1000
+﻿@designate_heir_cost = 500
 # Set one of your children as heir
 
 
@@ -15,7 +15,10 @@ designate_heir_interaction = {
 			is_child_of = scope:actor
 		}
 		scope:actor = {
-			can_designate_heir_trigger = yes
+			OR = {
+				can_designate_heir_trigger = yes
+				has_perk = meritocracy_perk
+			}
 		}
 		NOT = {
 			scope:recipient = scope:actor.designated_heir

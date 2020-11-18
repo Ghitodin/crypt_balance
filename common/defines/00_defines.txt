@@ -221,7 +221,7 @@ NCharacter = {
 	PERCENTAGE_BISEXUAL = 5.0				# chance (0-100%) of a randomly created character being bisexual
 	PERCENTAGE_ASEXUAL = 1.0				# chance (0-100%) of a randomly created character being asexual
 
-	DESIGNATE_HEIR_DISPLAY_COST = 1000	# Prestige cost for designating heir. Actual cost is handled by the scripter interaction 'designate_heir'
+	DESIGNATE_HEIR_DISPLAY_COST = 500	# Prestige cost for designating heir. Actual cost is handled by the scripter interaction 'designate_heir'
 
 	PRETENDERS_TO_TITLE = 5				# Max number of character stored to be the pretenders of a title (includes heir)
 

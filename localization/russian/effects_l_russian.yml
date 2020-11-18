@@ -1634,6 +1634,12 @@
  I_CAN_DEMAND_PAYMENT_FOR_HOOKS:1 "Вы можете [demand_payment|El] за [hooks|El]"
  THEY_CAN_DEMAND_PAYMENT_FOR_HOOKS:0 "[CHARACTER.GetShortUIName|U] может [demand_payment|E] за [hooks|El]"
 
+#REWORKED:
+ UNLOCKS_CLAIM_THRONE_INTERACTION_REWORKED:0 "Разблокирует действие Назначить [heir|El]а"
+ I_CAN_USE_THE_CLAIM_THRONE_INTERACTION_REWORKED:1 "Вы можете назначать вашего [heir|El]а"
+ THEY_CAN_USE_THE_CLAIM_THRONE_INTERACTION_REWORKED:0 "[CHARACTER.GetShortUIName|U] может назначить своего [heir|El]а"
+#----------------------------------------
+
  UNLOCKS_CLAIM_THRONE_INTERACTION:0 "Разблокирует действие [claim_throne|El]"
  I_CAN_USE_THE_CLAIM_THRONE_INTERACTION:1 "Вы можете [Concept( 'claim_throne', 'претендовать на трон' )|E] вашего [Concept( 'liege, 'сюзерена' )|E]"
  THEY_CAN_USE_THE_CLAIM_THRONE_INTERACTION:0 "[CHARACTER.GetShortUIName|U] может [claim_throne|El] у своего сюзерена"

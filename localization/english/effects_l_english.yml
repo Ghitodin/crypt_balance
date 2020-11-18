@@ -1634,6 +1634,11 @@
  I_CAN_DEMAND_PAYMENT_FOR_HOOKS:1 "You can [demand_payment|E] for [hooks|E]"
  THEY_CAN_DEMAND_PAYMENT_FOR_HOOKS:0 "[CHARACTER.GetShortUIName|U] can [demand_payment|E] for [hooks|E]"
 
+#REWORKED:
+ UNLOCKS_CLAIM_THRONE_INTERACTION_REWORKED:0 "Unlocks the designation [heir|E] Interaction"
+ I_CAN_USE_THE_CLAIM_THRONE_INTERACTION_REWORKED:1 "Rulers can designate their [heir|E]"
+ THEY_CAN_USE_THE_CLAIM_THRONE_INTERACTION_REWORKED:0 "[CHARACTER.GetShortUIName|U] can designate his [heir|E]"
+#----------------------------------------
 
  UNLOCKS_CLAIM_THRONE_INTERACTION:0 "Unlocks the [claim_throne|E] Interaction"
  I_CAN_USE_THE_CLAIM_THRONE_INTERACTION:1 "You can use [claim_throne|E] against your [liege|E]"

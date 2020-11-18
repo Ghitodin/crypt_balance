@@ -241,10 +241,8 @@ is_alliance_valid = {
 
 # Can the character designate an heir? Used for the Realm screen
 can_designate_heir = {
-	OR = {
-		can_designate_heir_trigger = yes
-		has_perk = meritocracy_perk
-	}
+	#can_designate_heir_trigger = yes
+	has_perk = meritocracy_perk
 }
 
 

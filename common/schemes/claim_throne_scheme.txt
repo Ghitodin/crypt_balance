@@ -9,6 +9,9 @@
 		is_adult = yes
 		is_landed = yes
 		is_imprisoned = no
+		
+		# FUCK THIS SHIT, VALEEEERAAA!
+		has_variable = $KEK$
 	}
 	
 	valid = {

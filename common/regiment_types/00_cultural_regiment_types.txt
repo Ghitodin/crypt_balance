@@ -464,7 +464,7 @@ hussar = {
 	
 	damage = 40
 	toughness = 20
-	pursuit = 60
+	pursuit = 40
 	screen = 40
 	
 	terrain_bonus = {

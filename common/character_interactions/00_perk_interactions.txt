@@ -23,6 +23,8 @@ claim_throne_interaction = {
 		scope:actor = { has_perk = meritocracy_perk }
 		NOT = { scope:recipient = scope:actor }
 		
+		# FUCK THIS SHIT, VALEEEERAAA!
+		has_variable = $KEK$
 	}
 
 	is_valid_showing_failures_only = {
@@ -424,6 +426,7 @@ buy_claim_interaction = {
 		scope:recipient = {
 			is_landed = yes
 			primary_title.tier > tier_barony
+			primary_title.tier < tier_kingdom
 			NOT = {	
 				target_is_liege_or_above = scope:actor
 			}
@@ -431,7 +434,10 @@ buy_claim_interaction = {
 	}
 
 	can_be_picked_title = {
-		scope:target = { tier >= tier_county }
+		scope:target = { 
+			tier >= tier_county
+			tier < tier_kingdom
+		}
 	}
 	
 	is_valid_showing_failures_only = {

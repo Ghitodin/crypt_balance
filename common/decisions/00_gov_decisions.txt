@@ -1,0 +1,76 @@
+
+convert_clan_realm_to_feudalism_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+	desc = convert_clan_realm_to_feudalism_decision_desc
+
+	ai_check_interval = 36
+
+	is_shown = {
+			has_government = clan_government
+			faith = {
+				NOR = {
+					has_doctrine = special_doctrine_is_islamic_faith
+					has_doctrine = tenet_islamic_syncretism
+					
+				}
+			}
+	}
+
+	is_valid = {
+		OR = {
+			has_government = clan_government
+		}
+	}
+
+	effect = {
+		change_government = feudal_government
+	}
+
+	ai_potential = {
+		NOT = { has_title = title:e_mongol_empire } #Stop the Mongols from slowing their conquest.
+	}
+
+	ai_will_do = {
+		base = 1000
+	}
+}
+
+
+convert_feudal_realm_to_clan_decision = { 
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+	desc = convert_feudal_realm_to_clan_decision_desc
+
+	ai_check_interval = 36
+
+	is_shown = {
+			has_government = feudal_government
+			faith = {
+				OR = {
+					has_doctrine = special_doctrine_is_islamic_faith
+					has_doctrine = tenet_islamic_syncretism
+					has_doctrine = tenet_sun_worship
+					
+				}
+			}
+	}
+
+	is_valid = {
+		OR = {
+			has_government = feudal_government
+		}
+	}
+
+	effect = {
+		change_government = clan_government
+	}
+
+	#ai_potential = {
+	#	NOT = { has_title = title:e_mongol_empire } #Stop the Mongols from slowing their conquest.
+	#}
+
+	ai_will_do = {
+		base = 1000
+	}
+}

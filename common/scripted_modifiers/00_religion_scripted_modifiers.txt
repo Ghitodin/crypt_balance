@@ -110,7 +110,7 @@ religion_demand_conversion_default_modifier = {
 	}
 	
 	modifier = {
-		desc = unreformed_faith_doctrine_name
+		desc = ASK_FOR_CONVERSION_UNREFORMED_CUSTOM
 		trigger = {
 			scope:actor.faith = {
 				has_doctrine = unreformed_faith_doctrine

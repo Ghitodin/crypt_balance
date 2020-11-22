@@ -108,6 +108,21 @@ religion_demand_conversion_default_modifier = {
 		}
 		add = -20
 	}
+	
+	modifier = {
+		desc = ASK_FOR_CONVERSION_ADAPTIVENESS
+		trigger = {
+			scope:actor.faith = {
+				has_doctrine = unreformed_faith_doctrine
+				NOT = {
+					scope:recipient.faith = {
+						has_doctrine = unreformed_faith_doctrine
+					}
+				}
+			}
+		}
+		add = -50
+	}
 
 	modifier = {
 		desc = ASK_FOR_CONVERSION_SANCTIONED_FALSE_CONVERSION

@@ -169,7 +169,10 @@ can_potentially_call_ally_trigger = {
 		text = cannot_call_vassal_to_war
 		$JOINER$ = {
 			NOT = {
-				target_is_liege_or_above = $WARRIOR$
+				AND = {
+					target_is_liege_or_above = $WARRIOR$
+					$WARRIOR$ = { is_attacker_in_war = scope:target }
+				}
 			}
 		}
 	}

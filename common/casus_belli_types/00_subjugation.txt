@@ -24,8 +24,9 @@
 				limit = {
 					has_government = tribal_government
 					scope:defender = {
-						has_government = tribal_government
+						# has_government = tribal_government
 					}
+					primary_title.tier >= scope:defender.primary_title.tier
 				}
 				prestige_level >= 2
 			}
@@ -57,6 +58,7 @@
 			OR = {
 				AND = { # Tribal Subjugation
 					has_government = tribal_government
+					primary_title.tier >= scope:defender.primary_title.tier
 					scope:defender = {
 						# has_government = tribal_government
 					}

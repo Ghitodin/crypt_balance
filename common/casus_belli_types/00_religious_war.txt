@@ -2673,8 +2673,8 @@ undirected_great_holy_war = {
 	target_de_jure_regions_above = yes
 	use_de_jure_wargoal_only = yes
 	check_all_defenders_for_ticking_war_score = yes # All defenders land in the Crusade Kingdom should count
-	defender_ticking_warscore = 0.125
-	attacker_ticking_warscore = 0.125
+	defender_ticking_warscore = 0.07
+	attacker_ticking_warscore = 0.07
 	max_defender_score_from_occupation = 50
 	max_attacker_score_from_occupation = 150
 	full_occupation_by_defender_gives_victory = no
@@ -2685,8 +2685,8 @@ undirected_great_holy_war = {
 	is_great_holy_war = yes
 	landless_attacker_needs_armies = no
 	
-	defender_score_from_battles_scale = 125
-	attacker_score_from_battles_scale = 125
+	defender_score_from_battles_scale = 115
+	attacker_score_from_battles_scale = 115
 	
 	max_defender_score_from_battles = 150
 

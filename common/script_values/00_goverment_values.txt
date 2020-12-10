@@ -22,7 +22,7 @@ clan_government_levies_max_possible = {
 	value = clan_government_levies_default
 	add = {
 		value = clan_government_levies_opinion_scale_positive
-		multiply = 80
+		multiply = 60
 	}
 }
 
@@ -30,7 +30,7 @@ clan_government_tax_max_possible = {
 	value = clan_government_tax_default
 	add = {
 		value = clan_government_tax_opinion_scale_positive
-		multiply = 80
+		multiply = 70
 	}
 }
 

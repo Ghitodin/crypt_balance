@@ -76,37 +76,37 @@ holding_defender_advantage = {
 }
 
 combat_debt_level_0 = {
-	advantage = -5
+	advantage = -1
 	image = owner_in_debt
 }
 
 combat_debt_level_1 = {
-	advantage = -10
+	advantage = -2
 	image = owner_in_debt
 }
 
 combat_debt_level_2 = {
-	advantage = -15
+	advantage = -3
 	image = owner_in_debt
 }
 
 combat_debt_level_3 = {
-	advantage = -20
+	advantage = -3
 	image = owner_in_debt
 }
 
 combat_debt_level_4 = {
-	advantage = -25
+	advantage = -4
 	image = owner_in_debt
 }
 
 combat_debt_level_5 = {
-	advantage = -30
+	advantage = -4
 	image = owner_in_debt
 }
 
 combat_debt_level_6 = {
-	advantage = -50
+	advantage = -5
 	image = owner_in_debt
 }
 

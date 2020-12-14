@@ -298,10 +298,10 @@
 		}
 
 		scope:attacker.faith = {
-			change_fervor = -1
+			change_fervor = 1
 		}
 		scope:defender.faith = {
-			change_fervor = 3
+			change_fervor = -1
 		}
 
 		# Truce
@@ -732,10 +732,10 @@ religious_war = {
 		}
 
 		scope:attacker.faith = {
-			change_fervor = -2
+			change_fervor = 2
 		}
 		scope:defender.faith = {
-			change_fervor = 4
+			change_fervor = -2
 		}
 
 		# Truce
@@ -1175,10 +1175,10 @@ major_religious_war = {
 		}
 
 		scope:attacker.faith = {
-			change_fervor = -5
+			change_fervor = 5
 		}
 		scope:defender.faith = {
-			change_fervor = 10
+			change_fervor = -5
 		}
 
 		# Truce
@@ -3193,10 +3193,10 @@ undirected_great_holy_war = {
 		}
 
 		scope:attacker.faith = {
-			change_fervor = -25
+			change_fervor = 20
 		}
 		scope:defender.faith = {
-			change_fervor = 30
+			change_fervor = -20
 		}
 
 		#Truce between the chief beneficiary & all defenders
@@ -3609,10 +3609,10 @@ directed_great_holy_war = {
 		}
 
 		scope:attacker.faith = {
-			change_fervor = -25
+			change_fervor = 20
 		}
 		scope:defender.faith = {
-			change_fervor = 30
+			change_fervor = -20
 		}
 
 		#Truce between the chief beneficiary & all defenders

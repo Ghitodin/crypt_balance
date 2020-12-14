@@ -142,7 +142,7 @@
 	}
 	#Claims
 	modifier = {
-		add = 30
+		add = -50
 		desc = tooltip_feudal_elector_vote_myself_claimant
 		this = scope:candidate
 		scope:candidate = {
@@ -156,7 +156,7 @@
 				limit = {
 					has_claim_on = scope:title
 				}
-				add = 30
+				add = -50
 			}
 		}
 	}
@@ -165,7 +165,7 @@
 holder_voting_pattern_feudal_elective_modifier = {
 	##########################	Holder voting pattern	##########################
 	modifier = { #Current ruler will always try to elect his player heir before everybody else.
-		add = 50
+		add = -1000
 		desc = tooltip_feudal_holder_elector_vote_player_heir
 		player_heir = scope:candidate
 		NOT = { player_heir = root }
@@ -179,7 +179,7 @@ holder_voting_pattern_feudal_elective_modifier = {
 	modifier = { #Current ruler should prefer his own children.
 		desc = tooltip_feudal_holder_elector_vote_not_child
 		add = {
-			subtract = 50
+			subtract = 10
 			if = { #Even less so if not same House.
 				limit = {
 					exists = root.house
@@ -188,7 +188,7 @@ holder_voting_pattern_feudal_elective_modifier = {
 						root.house = scope:candidate.house
 					}
 				}
-				subtract = 50
+				subtract = 10
 			}
 			if = { #Even less so if not same Dynasty.
 				limit = {
@@ -198,7 +198,7 @@ holder_voting_pattern_feudal_elective_modifier = {
 						root.dynasty = scope:candidate.dynasty
 					}
 				}
-				subtract = 150
+				subtract = 25
 			}
 		}
 		scope:holder = {
@@ -782,13 +782,13 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 	}
 	#Claims
 	modifier = {
-		add = 30
+		add = -1000
 		desc = tooltip_feudal_elector_vote_strong_claimant
 		NOT = { this = scope:candidate }
 		scope:candidate = { has_claim_on = scope:title }
 	}
 	modifier = {
-		add = 15
+		add = -50
 		desc = tooltip_feudal_elector_vote_weak_claimant
 		NOT = { this = scope:candidate }
 		scope:candidate = { has_weak_claim_on = scope:title }
@@ -2282,7 +2282,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 			value <= -25
 		}
 		add = {
-			value = 10
+			value = 5
 			if = {
 				limit = {
 					dread_modified_ai_boldness = {
@@ -2290,7 +2290,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 						value <= -50
 					}
 				}
-				add = 15
+				add = 5
 			}
 			if = {
 				limit = {
@@ -2299,7 +2299,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 						value <= -75
 					}
 				}
-				add = 20
+				add = 5
 			}
 			if = {
 				limit = {
@@ -2308,7 +2308,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 						value <= -95
 					}
 				}
-				add = 25
+				add = 5
 			}
 		}
 	}
@@ -2432,7 +2432,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 			value <= low_negative_opinion
 		}
 		add = {
-			subtract = 10
+			subtract = 2
 			if = { #Even less so if lower opinion.
 				limit = {
 					opinion = {
@@ -2440,7 +2440,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 						value <= medium_negative_opinion
 					}
 				}
-				subtract = 15 #-25 total
+				subtract = 3 #-5 total
 			}
 			if = { #Even less so if lower opinion.
 				limit = {
@@ -2449,7 +2449,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 						value <= high_negative_opinion
 					}
 				}
-				subtract = 25 #-50 total
+				subtract = 4 #-9 total
 			}
 			if = { #Even less so if lower opinion.
 				limit = {
@@ -2458,13 +2458,13 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 						value <= very_high_negative_opinion
 					}
 				}
-				subtract = 50 #-100 total
+				subtract = 4 #-13 total
 			}
 			if = { #Even less so if rival.
 				limit = {
 					has_relation_rival = scope:holder
 				}
-				subtract = 50 #-150 total
+				subtract = 7 #-20 total
 			}
 		}
 	}
@@ -2480,7 +2480,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 			value >= low_positive_opinion
 		}
 		add = {
-			value = 10
+			value = 3
 			if = { #Even more so if higher opinion.
 				limit = {
 					opinion = {
@@ -2488,7 +2488,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 						value >= medium_positive_opinion
 					}
 				}
-				add = 15 #25 total
+				add = 4 #7 total
 			}
 			if = { #Even more so if higher opinion.
 				limit = {
@@ -2497,7 +2497,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 						value >= high_positive_opinion
 					}
 				}
-				add = 25 #50 total
+				add = 5 #13 total
 			}
 			if = { #Even more so if higher opinion.
 				limit = {
@@ -2506,7 +2506,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 						value >= very_high_positive_opinion
 					}
 				}
-				add = 50 #100 total
+				add = 6 #19 total
 			}
 			if = { #Even more so if friend/lover.
 				limit = {
@@ -2515,7 +2515,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 						has_relation_lover = scope:holder
 					}
 				}
-				add = 50 #150 total
+				add = 6 #25 total
 			}
 		}
 	}

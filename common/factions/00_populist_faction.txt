@@ -227,7 +227,7 @@
 
 		liege_debt_modifier = {
 			TARGET = scope:target
-			SCORE_PER_DEBT_LEVEL = 20 # Worth ~5 opinon per debt level, up to a max of 140 (-35 opinion)
+			SCORE_PER_DEBT_LEVEL = 4 # Worth ~1 opinon per debt level, up to a max of 28 (-7 opinion)
 		}
 
 		# 10-year 'grace period' from populist factions forming after game start
@@ -301,7 +301,7 @@
 
 		liege_debt_modifier = {
 			TARGET = scope:faction.faction_target
-			SCORE_PER_DEBT_LEVEL = 20 # Worth ~5 opinon per debt level, up to a max of 140 (-35 opinion)
+			SCORE_PER_DEBT_LEVEL = 4 # Worth ~1 opinon per debt level, up to a max of 28 (-7 opinion)
 		}
 	}
 

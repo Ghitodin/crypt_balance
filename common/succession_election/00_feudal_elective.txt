@@ -19,7 +19,7 @@ feudal_elective = {
 		}
 		modifier = { #Imperial Dignity
 			desc = tooltip_feudal_vote_strength_emperor_tier
-			add = 3
+			add = -1
 			highest_held_title_tier = 5
 		}
 		modifier = { #Royal Dignity

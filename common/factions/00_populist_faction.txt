@@ -385,7 +385,7 @@
 
 		liege_debt_modifier = {
 			TARGET = scope:faction.faction_target
-			SCORE_PER_DEBT_LEVEL = 10
+			SCORE_PER_DEBT_LEVEL = 2
 		}
 
 		# The AI is almost always unwilling to join a faction against their friends and lovers.

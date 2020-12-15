@@ -1121,82 +1121,69 @@ adopt_special_succession_decision = { #by Ewan Cowhig Croft
 
 	is_shown = {
 		OR = {	#Must be eligible for a special succession type.
-			special_succession_witengamot_trigger = yes
-			special_succession_thing_trigger = yes
-			special_succession_tanistry_trigger = yes
+			#special_succession_witengamot_trigger = yes
+			#special_succession_thing_trigger = yes
+			#special_succession_tanistry_trigger = yes
+			
+			has_title = title:e_byzantium
+			has_title = title:e_france
+			has_title = title:e_spain
+			has_title = title:e_outremer
+			has_title = title:e_armenia
+			has_title = title:e_slavia
+			has_title = title:e_roman_empire
+			has_title = title:e_persia
+			has_title = title:e_arabia
 		}
 		AND = {
-			highest_held_title_tier >= tier_kingdom
-			has_realm_law_flag = partition_succession_law
+			highest_held_title_tier >= tier_empire
+			OR = {
+				has_realm_law_flag = confederate_partition_succession_law
+				has_realm_law_flag = partition_succession_law
+				has_realm_law_flag = high_partition_succession_law
+				has_realm_law_flag = single_heir_succession_law
+				has_realm_law_flag = single_heir_succession_law_youngest
+				has_realm_law_flag = single_heir_dynasty_house
+			}
 			any_held_title = {
-				tier >= tier_kingdom
-				NOR = {
-					has_title_law_flag = advanced_succession_law
-					has_title_law_flag = elective_succession_law
-				}
+				tier >= tier_empire
 			}
 		}
-		current_date < 1100.1.1	#Curtail special succession types as the centuries wear on. Ever on.
 	}
 
 	is_valid = {
-		trigger_if = {
-			limit = { highest_held_title_tier = tier_kingdom }
-			#Either hold a valid top-tier king title as a king...
-			AND = {
-				any_held_title = {
-					tier = tier_kingdom
-					NOR = {
-						custom_description = {
-							text = found_kingdom_decision_advanced_succesion
-							has_title_law_flag = advanced_succession_law
-						}
-						custom_description = {
-							text = found_kingdom_decision_elective_succesion
-							has_title_law_flag = elective_succession_law
-						}
-					}
-				}
-			}
-		}
-		trigger_else = {
+		#trigger = {
 			#... Or a valid top-tier empire title as an emperor.
 			AND = {
 				highest_held_title_tier >= tier_empire
 				any_held_title = {
 					tier >= tier_empire
-					NOR = {
-						custom_description = {
-							text = found_kingdom_decision_advanced_succesion
-							has_title_law_flag = advanced_succession_law
-						}
+					NOT = {
 						custom_description = {
 							text = found_kingdom_decision_elective_succesion
-							has_title_law_flag = elective_succession_law
+							has_title_law = feudal_elective_succession_law
 						}
 					}
 				}
 			}
-		}
-	}
-
-	cost = {
-		prestige = 300
+		#}
 	}
 
 	effect = {
-		show_as_tooltip = {
-			custom_tooltip = adopt_special_succession_decision_effects.tt
+		every_held_title = {
+			limit = {
+				tier = tier_empire
+			}
+			add_title_law = feudal_elective_succession_law
 		}
-		trigger_event = major_decisions.3100
 	}
 
 	ai_potential = {
-		always = yes
+		#always = yes
 	}
 
 	ai_will_do = {
-		base = 100
+		base = 1000
 	}
 }
 

@@ -715,6 +715,17 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 			}
 		}
 	}
+	
+	modifier = {
+		add = -1000
+		desc = tooltip_feudal_elector_vote_dynasty
+		NOT = { this = scope:candidate }
+		
+		scope:candidate = {
+			dynasty = scope:holder.dynasty
+		}
+	}
+	
 	#Educational preferences
 	modifier = { # Warrior society prefers warriors
 		desc = tooltip_feudal_elector_vote_martial_education
@@ -782,13 +793,13 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 	}
 	#Claims
 	modifier = {
-		add = -1000
+		add = 10
 		desc = tooltip_feudal_elector_vote_strong_claimant
 		NOT = { this = scope:candidate }
 		scope:candidate = { has_claim_on = scope:title }
 	}
 	modifier = {
-		add = -50
+		add = 5
 		desc = tooltip_feudal_elector_vote_weak_claimant
 		NOT = { this = scope:candidate }
 		scope:candidate = { has_weak_claim_on = scope:title }

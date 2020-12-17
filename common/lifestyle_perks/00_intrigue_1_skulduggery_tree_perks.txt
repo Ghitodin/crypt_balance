@@ -30,13 +30,8 @@
 		always = yes
 	}
 
-	effect = {
-		custom_description_no_bullet = {
-			text = truth_is_relative_scheme_effect
-		}
-		custom_description_no_bullet = {
-			text = truth_is_relative_perk_effect
-		}
+	character_modifier = {
+		intrigue = 2
 	}
 }
 

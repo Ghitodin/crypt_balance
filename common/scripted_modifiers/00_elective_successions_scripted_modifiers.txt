@@ -804,6 +804,23 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 		NOT = { this = scope:candidate }
 		scope:candidate = { has_weak_claim_on = scope:title }
 	}
+	#Lands
+	modifier = {
+		add = -1000
+		desc = tooltip_saxon_elector_vote_candidate_unlanded
+		NOT = { this = scope:candidate }
+		scope:candidate = {
+			highest_held_title_tier < tier_county
+		}
+	}
+	modifier = {
+		add = -30
+		desc = tooltip_saxon_elector_vote_candidate_count_magnate
+		NOT = { this = scope:candidate }
+		scope:candidate = {
+			highest_held_title_tier = tier_county
+		}
+	}
 }
 
 elector_voting_pattern_prestige_piety_feudal_elective_modifier = {

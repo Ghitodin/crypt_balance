@@ -139,8 +139,8 @@ crown_authority = {
 			feudal_government_tax_contribution_mult = 0.25
 			vassal_levy_contribution_mult = 0.25
 		}
-		flag = vassal_all_wars_banned
-		flag = can_designate_heirs
+		#flag = vassal_all_wars_banned
+		#flag = can_designate_heirs
 		
 		can_keep = { realm_law_use_crown_authority = yes }
 

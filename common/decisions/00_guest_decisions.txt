@@ -1,7 +1,7 @@
 ﻿invite_knights_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
 
-	ai_check_interval = 0
+	ai_check_interval = 24
 
 	cooldown = { days = 3650 }
 	
@@ -41,11 +41,11 @@
 	cost = { prestige = { value = medium_prestige_value } }	
 
 	ai_potential = {
-		always = no
+		#always = no
 	}
 
 	ai_will_do = {
-		base = 0
+		base = 100
 	}
 }
 

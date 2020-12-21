@@ -3717,7 +3717,7 @@ hof_ask_for_gold_interaction = {
 	ai_target_quick_trigger = {
 		adult = yes
 	}
-	ai_frequency = 60
+	ai_frequency = 10
 	
 	cooldown_against_recipient = { years = 3 }
 

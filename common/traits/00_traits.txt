@@ -6641,7 +6641,7 @@ sayyid = {
 	index = 170
 	fame = yes
 	
-	same_faith_opinion = 5
+	same_faith_opinion = 3
 	
 	ruler_designer_cost = 25
 	
@@ -6713,7 +6713,7 @@ saoshyant_descendant = {
 	}
 	learning = 1
 
-	same_faith_opinion = 5
+	same_faith_opinion = 2
 	
 	shown_in_ruler_designer = no
 	
@@ -6739,7 +6739,7 @@ savior = {
 		divine_blood
 	}
 	
-	same_faith_opinion = 10
+	same_faith_opinion = 3
 	
 	shown_in_ruler_designer = no
 	
@@ -6766,7 +6766,7 @@ divine_blood = {
 		savior
 	}
 	
-	same_faith_opinion = 5
+	same_faith_opinion = 3
 	
 	shown_in_ruler_designer = no
 
@@ -6788,7 +6788,7 @@ divine_blood = {
 blood_of_prophet = {
 	index = 176
 	fame = yes
-	same_faith_opinion = 5
+	same_faith_opinion = 3
 	
 	shown_in_ruler_designer = no
 	
@@ -8692,7 +8692,7 @@ consecrated_blood = {
 	index = 249
 	fame = yes
 
-	religious_vassal_opinion = 10
+	religious_vassal_opinion = 3
 	
 	shown_in_ruler_designer = no
 	

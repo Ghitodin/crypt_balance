@@ -27,7 +27,7 @@ princely_elective = { #HRE Elective.
 					limit = {
 						max_military_strength > scope:holder.max_military_strength
 					}
-					add = 2
+					add = 0
 				}
 			}
 			NOT = { this = scope:holder }

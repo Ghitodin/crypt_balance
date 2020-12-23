@@ -24,7 +24,7 @@ feudal_elective = {
 		}
 		modifier = { #Royal Dignity
 			desc = tooltip_feudal_vote_strength_king_tier
-			add = 2
+			add = 1
 			highest_held_title_tier = 4
 		}
 		modifier = { #Princely Dignity
@@ -40,7 +40,7 @@ feudal_elective = {
 					limit = {
 						max_military_strength > scope:holder.max_military_strength
 					}
-					add = 1
+					add = 0
 				}
 			}
 			NOT = { this = scope:holder }

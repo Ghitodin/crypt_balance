@@ -2637,6 +2637,10 @@ release_from_prison_interaction = {
 					}
 				}
 			}
+			scope:recipient = {
+				is_courtier_of = scope:actor
+			}
+			
 			scope:actor = {
 				can_add_hook = {
 					type = favor_hook #Matches the hook added in the on_accept
@@ -2786,7 +2790,7 @@ release_from_prison_interaction = {
 		}
 		modifier = {
 			trigger = {
-				scope:recipient = { ai_zeal <= 20 }
+				scope:recipient = { ai_zeal > 20 }
 				scope:demand_conversion = yes
 			}
 			add = -20
@@ -2794,11 +2798,11 @@ release_from_prison_interaction = {
 		}
 		modifier = {
 			trigger = {
-				scope:recipient = { ai_zeal > 20 }
+				#scope:recipient = { ai_zeal >= 0 }
 				scope:demand_conversion = yes
 			}
 			add = {
-				value = ai_zeal
+				value = 40
 				if = {
 					limit = {
 						scope:recipient.faith = {
@@ -2810,8 +2814,19 @@ release_from_prison_interaction = {
 					}
 					multiply = -1
 				}
-				else = {
+				else_if = {
+					limit = {
+						scope:recipient.faith = {
+							faith_hostility_level = {
+								target = scope:actor.faith
+								value < faith_evil_level
+							}
+						}
+					}
 					multiply = -2
+				}
+				else = {
+					multiply = -4
 				}
 			}
 			desc = "CONVERSION_NEGATIVE_REASON"
@@ -2885,6 +2900,48 @@ release_from_prison_interaction = {
 			add = -10
 			trigger = {
 				scope:recruit = yes
+			}
+			desc = "RECRUITMET_NEGATIVE_REASON"
+		}
+		modifier = {
+			trigger = {
+				scope:recipient = { ai_zeal > 20 }
+				scope:recruit = yes
+			}
+			add = -20
+			desc = "RECRUITMET_NEGATIVE_REASON"
+		}
+		modifier = {
+			trigger = {
+				scope:recruit = yes
+			}
+			add = {
+				value = 40
+				if = {
+					limit = {
+						scope:recipient.faith = {
+							faith_hostility_level = {
+								target = scope:actor.faith
+								value <= faith_astray_level
+							}
+						}
+					}
+					multiply = -1
+				}
+				else_if = {
+					limit = {
+						scope:recipient.faith = {
+							faith_hostility_level = {
+								target = scope:actor.faith
+								value < faith_evil_level
+							}
+						}
+					}
+					multiply = -2
+				}
+				else = {
+					multiply = -4
+				}
 			}
 			desc = "RECRUITMET_NEGATIVE_REASON"
 		}

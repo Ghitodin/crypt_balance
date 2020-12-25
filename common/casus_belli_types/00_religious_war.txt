@@ -2695,6 +2695,8 @@ undirected_great_holy_war = {
 	battle_participation_mult = 7.5
 	on_primary_attacker_death = inherit
 	on_primary_defender_death = inherit
+	transfer_behavior = transfer
+	ignore_effect = change_title_holder
 
 	white_peace_possible = no
 
@@ -3330,6 +3332,8 @@ directed_great_holy_war = {
 	gui_defender_faith_might_join = yes
 	on_primary_attacker_death = inherit
 	on_primary_defender_death = inherit
+	transfer_behavior = transfer
+	ignore_effect = change_title_holder
 
 	allowed_for_character = {
 		faith = {

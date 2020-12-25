@@ -6,9 +6,9 @@
 light_footmen = {
 	type = skirmishers
 	
-	damage = 10
-	toughness = 16
-	pursuit = 10
+	damage = 12
+	toughness = 17
+	pursuit = 11
 	screen = 16
 	
 	terrain_bonus = {
@@ -28,7 +28,7 @@ light_footmen = {
 	mercenary_fallback = yes
 	holy_order_fallback = yes
 	
-	stack = 175
+	stack = 150
 	ai_quality = { value = culture_ai_weight_skirmishers }
 	icon = skirmishers
 }

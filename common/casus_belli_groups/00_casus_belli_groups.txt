@@ -3,9 +3,15 @@
 		OR = { # Cannot Holy War if your Liege(s) are of a different Faith than you.
 			is_independent_ruler = yes
 			any_liege_or_above = {
-				faith = prev.faith
+				faith.religion = prev.faith.religion
 				count = all
 			}
+			#any_liege_or_above = {
+				#faith_hostility_level = {
+					#target = prev.faith
+					#value <= faith_astray_level
+				#}
+			#}
 		}
 		faith = {
 			NOR = {

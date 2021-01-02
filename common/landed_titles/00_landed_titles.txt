@@ -47000,7 +47000,7 @@ e_france = {
 			add = @better_than_the_alternatives_score
 		}
 	}
-}	
+	
 	k_france = {
 		color = { 15 27 187 }
 		color2 = { 255 255 20 }
@@ -50035,6 +50035,7 @@ e_france = {
 		}
 	}
 
+}
 
 e_spain = {
 	color = { 233 200 20 }
@@ -50050,7 +50051,7 @@ e_spain = {
 			add = @correct_culture_primary_score
 		}
 	}
-}	
+	
 	k_andalusia = {
 		color = { 31 138 40 }
 		color2 = { 255 255 255 }
@@ -52452,6 +52453,7 @@ e_spain = {
 		}
 	}
 
+}
 
 e_maghreb = {
 	color = { 209 63 44 }

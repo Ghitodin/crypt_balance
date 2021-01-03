@@ -142,7 +142,7 @@
 	}
 	#Claims
 	modifier = {
-		add = -50
+		add = -70
 		desc = tooltip_feudal_elector_vote_myself_claimant
 		this = scope:candidate
 		scope:candidate = {
@@ -793,13 +793,13 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 	}
 	#Claims
 	modifier = {
-		add = 10
+		add = -70
 		desc = tooltip_feudal_elector_vote_strong_claimant
 		NOT = { this = scope:candidate }
 		scope:candidate = { has_claim_on = scope:title }
 	}
 	modifier = {
-		add = 5
+		add = -50
 		desc = tooltip_feudal_elector_vote_weak_claimant
 		NOT = { this = scope:candidate }
 		scope:candidate = { has_weak_claim_on = scope:title }

@@ -306,6 +306,7 @@
  EFFECT_CHARACTER_HEADER:0 "[CHARACTER.GetShortUINameNoTooltip]:\n"
  MAKE_CONCUBINE_EFFECT:3 "Takes [TARGET_CHARACTER.GetShortUIName] as a [TARGET_CHARACTER.Custom('ConcubineConsortGameConcept')]"
  I_MADE_CONCUBINE_EFFECT:1 "You took [TARGET_CHARACTER.GetTitledFirstName] as your [TARGET_CHARACTER.Custom('ConcubineConsortWomanManGameConcept')]"
+ THEY_MADE_CONCUBINE_EFFECT:0 "[CHARACTER.GetTitledFirstName] took [TARGET_CHARACTER.GetTitledFirstName] as [CHARACTER.GetHerHis] [TARGET_CHARACTER.Custom('ConcubineConsortWomanManGameConcept')]"
  REMOVE_CONCUBINE_EFFECT:3 "[TARGET_CHARACTER.GetShortUIName|U] stops being a [TARGET_CHARACTER.Custom('ConcubineConsortGameConcept')]"
  THEY_REMOVE_CONCUBINE_EFFECT:1 "[TARGET_CHARACTER.GetShortUIName|U] stopped being [CHARACTER.GetShortUINamePossessive] [TARGET_CHARACTER.Custom('ConcubineConsortWomanManGameConcept')]"
  CREATE_BETROTHAL_EFFECT:0 "Becomes betrothed to [TARGET_CHARACTER.GetShortUIName]"
@@ -488,7 +489,7 @@
  I_STRESS_IMPACT_GAIN:1 "You $ONLY$gain [stress_gain_i]$VALUE|-0$ [stress|E] $TRAITS$"
  I_STRESS_IMPACT_LOSS:1 "You $ONLY$lose [stress_loss_i]$VALUE|+0$ [stress|E] $TRAITS$"
  I_PAST_STRESS_IMPACT_GAIN:1 "You $ONLY$gained [stress_gain_i]$VALUE|-0$ [stress|E] $TRAITS$"
- I_PAST_STRESS_IMPACT_LOSS:1 "You $ONLY$lost  [stress_loss_i]$VALUE|+0$ [stress|E] $TRAITS$"
+ I_PAST_STRESS_IMPACT_LOSS:1 "You $ONLY$lost [stress_loss_i]$VALUE|+0$ [stress|E] $TRAITS$"
  THEY_PAST_STRESS_IMPACT_GAIN:0 "[CHARACTER.GetShortUIName|U] $ONLY$gained [stress_gain_i]$VALUE|V0$ [stress|E] $TRAITS$"
  THEY_PAST_STRESS_IMPACT_LOSS:0 "[CHARACTER.GetShortUIName|U] $ONLY$lost [stress_loss_i]$VALUE|V0$ [stress|E] $TRAITS$"
  
@@ -508,9 +509,9 @@
  STRESS_IMPACT_ONLY:0 "only "
  STRESS_IMPACT_INCREASED:0 ""
 
- RETURN_TO_COURT_EFFECT:0 "Returns to the [lieges|E] court"
- I_RETURN_TO_COURT_EFFECT:1 "You return to your [lieges|E] court"
- THEY_RETURN_TO_COURT_EFFECT:0 "[CHARACTER.GetUIName] returns to [CHARACTER.GetHerHis] [lieges|E] court"
+ RETURN_TO_COURT_EFFECT:2 "Returns to the [liege|E]'s [court|E]"
+ I_RETURN_TO_COURT_EFFECT:2 "You return to your [liege|E]'s [court|E]"
+ THEY_RETURN_TO_COURT_EFFECT:1 "[CHARACTER.GetUIName] returns to [CHARACTER.GetHerHis] [liege|E]'s [court|E]"
 
  RETURNED_TO_COURT_EFFECT:0 "Returned to the employer's court"
  I_RETURNED_TO_COURT_EFFECT:1 "You returned to your employer's court"
@@ -549,7 +550,7 @@
  THEY_GAIN_POTENTIAL_FRIEND:0 "[CHARACTER.GetShortUIName|U] grows closer to forming a friendship with [TARGET_CHARACTER.GetShortUIName]"
  THEY_GAINED_POTENTIAL_FRIEND:0 "[CHARACTER.GetShortUIName|U] grew closer to forming a friendship with [TARGET_CHARACTER.GetShortUIName]"
  GAINS_POTENTIAL_FRIEND:0 "Grows closer to forming a friendship with [TARGET_CHARACTER.GetShortUIName]"
- I_LOSE_POTENTIAL_FRIEND:1 "You and [TARGET_CHARACTER.GetShortUIName] and are no longer close"
+ I_LOSE_POTENTIAL_FRIEND:2 "You and [TARGET_CHARACTER.GetShortUIName] are no longer close"
 
  I_GAIN_POTENTIAL_LOVER:1 "You grow closer to forming an intimate relationship with [TARGET_CHARACTER.GetShortUIName]"
  I_GOT_POTENTIAL_LOVER:1 "You grew closer to forming an intimate relationship with [TARGET_CHARACTER.GetShortUIName]"
@@ -715,9 +716,9 @@
  THEY_GAIN_PIETY_LEVEL_EFFECT:0 "[CHARACTER.GetShortUIName|U] gain $VALUE|V0$ [piety_levels|E]"
  THEY_LOSE_PIETY_LEVEL_EFFECT:0 "[CHARACTER.GetShortUIName|U] loses $VALUE|V0$ [piety_levels|E]"
  
- BREAKING_TRUCE:0 "Breaks the [truce|E]:"
+ BREAKING_TRUCE:1 "\n#S Breaking the [truce|E]#!"
  
- ATTACKING_ALLY:0 "Attacks an [ally|E]:"
+ ATTACKING_ALLY:1 "\n#S Attacking an [ally|E]#!"
  
  SET_CULTURE_GLOBAL:1 "Adopts the [TARGET_CULTURE.GetName|V] Culture"
  SET_CULTURE_FIRST:2 "You adopt the [TARGET_CULTURE.GetName|V] Culture"
@@ -914,7 +915,7 @@
  THEY_GOT_TITLE:0 "[CHARACTER.GetShortUIName|U] got [TARGET_TITLE.GetName|V]"
 
  DESTROY_TITLE:0 "[TARGET_TITLE.GetName|U] is destroyed"
- DESTROY_TITLE_PAST:0 "[TARGET_TITLE.GetName] was destroyed"
+ DESTROY_TITLE_PAST:0 "[TARGET_TITLE.GetName|U] was destroyed"
  DESTROY_TITLE_GLOBAL:0 "is destroyed"
  DESTROY_TITLE_GLOBAL_PAST:0 "was destroyed"
 
@@ -1003,18 +1004,18 @@
  THEIR_HOUSE_LOSE_MODIFIER_EFFECT:0 "[house|E] [DYNASTY_HOUSE.GetBaseName|V] loses $MODIFIER|V$"
  HOUSE_LOSES_MODIFIER_EFFECT:0 "[house|E] [DYNASTY_HOUSE.GetBaseName|V] loses $MODIFIER|V$"
 
- ADDS_DYNASTY_MODIFIER:0 "[DYNASTY.GetBaseName|V] [dynasty|E] gains $MODIFIER|V$"
+ ADDS_DYNASTY_MODIFIER:1 "The [DYNASTY.GetBaseName|V] [dynasty|E] gains $MODIFIER|V$"
  MY_DYNASTY_RECEIVED_MODIFIER_EFFECT:1 "Your [dynasty|E] gained $MODIFIER|V$"
- THEIR_DYNASTY_RECEIVED_MODIFIER_EFFECT:1 "[DYNASTY.GetBaseName|V] [dynasty|E] gained $MODIFIER|V$"
+ THEIR_DYNASTY_RECEIVED_MODIFIER_EFFECT:2 "The [DYNASTY.GetBaseName|V] [dynasty|E] gained $MODIFIER|V$"
  MY_DYNASTY_RECEIVE_MODIFIER_EFFECT:1 "Your [dynasty|E] gains $MODIFIER|V$"
- THEIR_DYNASTY_RECEIVE_MODIFIER_EFFECT:1 "[DYNASTY.GetBaseName|V] [dynasty|E] gains $MODIFIER|V$"
+ THEIR_DYNASTY_RECEIVE_MODIFIER_EFFECT:2 "The [DYNASTY.GetBaseName|V] [dynasty|E] gains $MODIFIER|V$"
  DYNASTY_RECEIVES_MODIFIER_EFFECT:0 "Gains $MODIFIER|V$"
 
- ADDS_DYNASTY_MODIFIER_UNTIL:0 "[DYNASTY.GetBaseName|V] [dynasty|E] gains $MODIFIER|V$ for $DURATION|V$"
+ ADDS_DYNASTY_MODIFIER_UNTIL:1 "The [DYNASTY.GetBaseName|V] [dynasty|E] gains $MODIFIER|V$ for $DURATION|V$"
  MY_DYNASTY_RECEIVED_MODIFIER_UNTIL_EFFECT:1 "Your [dynasty|E] gained $MODIFIER|V$ for $DURATION|V$"
- THEIR_DYNASTY_RECEIVED_MODIFIER_UNTIL_EFFECT:1 "[DYNASTY.GetBaseName|V] [dynasty|E] gained $MODIFIER|V$ for $DURATION|V$"
+ THEIR_DYNASTY_RECEIVED_MODIFIER_UNTIL_EFFECT:2 "The [DYNASTY.GetBaseName|V] [dynasty|E] gained $MODIFIER|V$ for $DURATION|V$"
  MY_DYNASTY_RECEIVE_MODIFIER_UNTIL_EFFECT:1 "Your [dynasty|E] gains $MODIFIER|V$ for $DURATION|V$"
- THEIR_DYNASTY_RECEIVE_MODIFIER_UNTIL_EFFECT:1 "[DYNASTY.GetBaseName|V] [dynasty|E] gains $MODIFIER|V$ for $DURATION|V$"
+ THEIR_DYNASTY_RECEIVE_MODIFIER_UNTIL_EFFECT:2 "The [DYNASTY.GetBaseName|V] [dynasty|E] gains $MODIFIER|V$ for $DURATION|V$"
  DYNASTY_RECEIVES_MODIFIER_UNTIL_EFFECT:0 "Gains $MODIFIER|V$ for $DURATION|V$"
 
  REMOVES_DYNASTY_MODIFIER:1 "[DYNASTY.GetBaseName|V] [dynasty|E] loses $MODIFIER|V$"
@@ -1192,6 +1193,7 @@
  DIVORCE_GLOBAL:0 "Divorces [TARGET_CHARACTER.GetUIName]"
  DIVORCE_FIRST:1 "You divorce [TARGET_CHARACTER.GetUIName]"
  DIVORCE_THIRD:0 "[CHARACTER.GetShortUIName|U] divorces [TARGET_CHARACTER.GetUIName]"
+ DIVORCED_THIRD:0 "[CHARACTER.GetShortUIName|U] divorced [TARGET_CHARACTER.GetUIName]"
  
  CHANGE_FERVOR_GLOBAL:1 "[fervor|E] increases by $VALUE|+0$"
  CHANGE_FERVOR_GLOBAL_NEG:1 "[fervor|E] decreases by $VALUE|-0$"
@@ -1256,6 +1258,8 @@
  DYNASTY_LOSES_PRESTIGE_EFFECT:1 "[dynasty|E] [DYNASTY.GetBaseName] loses [dynasty_prestige_i]$VALUE|-0$ [dynasty_prestige|E]"
  DYNAST_GAINED_PRESTIGE_EFFECT:1 "[dynasty|E] [DYNASTY.GetBaseName] gained [dynasty_prestige_i]$VALUE|+0$ [dynasty_prestige|E]"
  DYNAST_LOST_PRESTIGE_EFFECT:1 "[dynasty|E] [DYNASTY.GetBaseName] lost [dynasty_prestige_i]$VALUE|-0$ [dynasty_prestige|E]"
+ DYNASTY_GAINED_PRESTIGE_GLOBAL_EFFECT:0 "Gains [dynasty_prestige_i]$VALUE|+0$ [dynasty_prestige|E]"
+ DYNASTY_LOST_PRESTIGE_GLOBAL_EFFECT:0 "Lost [dynasty_prestige_i]$VALUE|-0$ [dynasty_prestige|E]"
 
  THEOCRACY_APPROVE_EFFECT:1 "Starts endorsing you #weak ([church_property|E])#!"
  THEOCRACY_DISAPPROVE_EFFECT:1 "@warning_icon!#X Stops endorsing you#! #weak ([church_property|E])#!"
@@ -1309,16 +1313,18 @@
  REFILLS_LEVIES:0 "Refills levies"
 
  SET_PRIMARY_TITLE_TO:0 "Make [TARGET_TITLE.GetName] the [primary_title|E] of [CHARACTER.GetName]"
- PRIMARY_TITLE_HAS_BEEN_SET_TO:0 "[TARGET_TITLE.GetName] has become the [primary_title|E] of [CHARACTER.GetName]"
- TITLE_BECOMES_MY_PRIMARY:1 "[TARGET_TITLE.GetName] becomes your [primary_title|E]"
- TITLE_HAS_BECOME_MY_PRIMARY:1 "[TARGET_TITLE.GetName] has become your [primary_title|E]"
+ PRIMARY_TITLE_HAS_BEEN_SET_TO:0 "[TARGET_TITLE.GetName|U] has become the [primary_title|E] of [CHARACTER.GetName]"
+ TITLE_BECOMES_MY_PRIMARY:1 "[TARGET_TITLE.GetName|U] becomes your [primary_title|E]"
+ TITLE_HAS_BECOME_MY_PRIMARY:1 "[TARGET_TITLE.GetName|U] has become your [primary_title|E]"
 
- TARGET_TITLE_BECOMES_DE_JURE_OF_TITLE:0 "[TARGET_TITLE.GetName] becomes [de_jure|E] liege of [TITLE.GetName]"
- TARGET_TITLE_BECAME_DE_JURE_OF_TITLE:0 "[TARGET_TITLE.GetName] became [de_jure|E] liege of [TITLE.GetName]"
+ TARGET_TITLE_BECOMES_DE_JURE_OF_TITLE:0 "[TARGET_TITLE.GetName|U] becomes [de_jure|E] liege of [TITLE.GetName]"
+ TARGET_TITLE_BECAME_DE_JURE_OF_TITLE:0 "[TARGET_TITLE.GetName|U] became [de_jure|E] liege of [TITLE.GetName]"
 
  ADD_DOCTRINE_DESC:0 "Add #T $DOCTRINE$#! to [FAITH.GetName] faith"
  REMOVE_DOCTRINE_DESC:0 "Remove #T $DOCTRINE$#! from [FAITH.GetName] faith"
- SET_REALM_CAPITAL_DESC:0 "[TARGET_TITLE.GetName] becomes the new Realm Capital of [CHARACTER.GetPrimaryTitle.GetName]"
+ SET_REALM_CAPITAL_DESC:1 "[TARGET_TITLE.GetName|U] becomes their new Realm Capital"
+ SET_REALM_CAPITAL_FIRST_DESC:0 "[TARGET_TITLE.GetName|U] becomes your new Realm Capital"
+ SET_REALM_CAPITAL_THIRD_DESC:0 "[TARGET_TITLE.GetName|U] becomes the new Realm Capital of [CHARACTER.GetName]"
  ADD_INNOVATION_EFFECT:1 "The [CULTURE.GetName] culture discovers $INNOVATION_TYPE|V$"
  ADDED_INNOVATION_EFFECT:0 "The [CULTURE.GetCollectiveNoun] discovered $INNOVATION_TYPE|V$"
 
@@ -1390,8 +1396,9 @@
  ADD_TITLE_LAW:1 "[TITLE.GetName|U] will gain [LAW.GetName|V] succession"
  ADDED_TITLE_LAW:0 "[TITLE.GetName|U] gained [LAW.GetName|V] succession"
 
- leave_faction_with_cooldown_effect_third.tt:1 "Will not join another [faction|E] for #V $VALUE|0$ years#!"
+ leave_faction_with_cooldown_effect_third.tt:2 "[CHARACTER.GetShortUIName] cannot join another [faction|E] for #V $VALUE|0$ years#!"
  leave_faction_with_cooldown_effect_first.tt:2 "You cannot join another [faction|E] for #V $VALUE|0$ years#!"
+ leave_faction_with_cooldown_effect_global.tt:0 "Cannot join another [faction|E] for #V $VALUE|0$ years#!"
 
  LEAVES_COURT:0 "Leaves [CHARACTER.GetLiege.GetShortUINamePossessive] [court|E]"
  CHARACTER_LEAVES_COURT:0 "[CHARACTER.GetShortUIName|U] leaves [CHARACTER.GetLiege.GetShortUINamePossessive] [court|E]"
@@ -1566,12 +1573,13 @@
 
  CASUS_BELLI_COST_PERK_REDUCTION:0 "[casus_belli|E] Cost: #P -[EmptyScope.ScriptValue('bellum_justum_discount_percentage')|0]%#!"
  CASUS_BELLI_COST_DYNASTY_PERK_REDUCTION:0 "[casus_belli|E] Cost: #P -20%#!"
+ BETTER_KNIGHTS_DYNASTY_PERK_REDUCTION:0 "[dynasty|E] members are less likely to die or get wounded in [battle|E], and have a higher chance of gaining [prowess|E] serving as [knights|E]"
 
  PERK_CAN_SIGN_ALLIANCE:0 "Can propose one [alliance|E] without a [marriage|E]"
  
  PERK_TRUCE_BREAKING_COST_REDUCTION:0 "Shorter [truces|E] and no [prestige|E] penalty for breaking them"
 
- EACH_ALLIANCE_GRANTS_DIPLOMACY:0 "Each [alliance|E] grants: [diplomacy_i]#P +1#!"
+ EACH_ALLIANCE_GRANTS_DIPLOMACY:1 "Each [alliance|E] grants: [diplomacy_i]#P +1#! (To the Maximum of [EmptyScope.ScriptValue('embassies_max')|0])"
 
  FABRICATE_CLAIM_SPEED_GAIN:0 "[fabricate_claim|E] Speed: #P +[EmptyScope.ScriptValue('accomplished_forger_percentage')|0]%#!"
 
@@ -1592,9 +1600,9 @@
  
  FEWER_COMPLICATIONS_DURING_PREGNANCY:0 "Fewer complications during pregnancy"
 
- EACH_FRIEND_ADDS_RANDOM_SKILL_POINT:2 "Each of your [friend|E] Relations gives you #P 2#! random [skill|E] points"
+ EACH_FRIEND_ADDS_RANDOM_SKILL_POINT:3 "Each of your [friend|E] Relations gives you #P 2#! random [skill|E] points (To the Maximum of [EmptyScope.ScriptValue('friendly_counsel_max')|0])"
 
- EACH_LIVING_CHILD_ADDS_RANDOM_SKILL_POINT:1 "Each living child gives you #P 1#! random [skill|E] point"
+ EACH_LIVING_CHILD_ADDS_RANDOM_SKILL_POINT:3 "Each living child gives you #P 1#! random [skill|E] point (Maximum of [EmptyScope.ScriptValue('sound_foundations_max')|0])"
 
  OFFER_VASSALIZATION_ACCEPTANCE_INCREASE:0 "[offer_vassalization|E] Acceptance: #P +[EmptyScope.ScriptValue('true_ruler_value')|0]#!"
 
@@ -1622,7 +1630,7 @@
  I_WILL_RECEIVE_WARNING_OF_NATURAL_DEATH:1 "When [character_death_death|E] of natural causes is #V 1#! year away, you will receive a warning"
  THEY_WILL_RECEIVE_WARNING_OF_NATURAL_DEATH:0 "When [character_death_death|E] of natural causes is #V 1#! year away, [CHARACTER.GetShortUIName] will receive a warning"
 
- CONVERT_COUNTY_NO_NEGATIVE_FERVOR_MODIFIERS:2 "[convert_county|E]: The time it takes to convert a [county|E] is no longer increased if that a [faith|E] has higher [fervor|E] than your Faith"
+ CONVERT_COUNTY_NO_NEGATIVE_FERVOR_MODIFIERS:3 "[convert_county|E]: The time it takes to convert a [county|E] is no longer increased if that [faith|E] has higher [fervor|E] than your Faith"
 
  REDUCED_DISEASE_FREQUENCY_AT_COURT:0 "Reduced chance of contracting [illnesses|E]\nReduced chance for [courtiers|E] to contract [illnesses|E]"
 
@@ -1672,14 +1680,27 @@
 
  all_family_members_at_court_converison:1 "All your [family_members|E]"
  
- HOUSE_GUARD_DESCRIPTION:0 "#weak Only one regiment of House Guard can be recruited#!"
+ HOUSE_GUARD_DESCRIPTION:1 "#weak Only one regiment of House Guard can be recruited (up to Size 5)#!"
+ 
+ CHEAPER_HUNTS_AND_FEASTS:0 "[hunt|E] and [feast|E] Cost: [gold_i]#P -30%#!"
  
  MARRIAGE_ACCEPTANCE_LEGACY_FOR_SELF:0 "[marriage|E] Acceptance: #P +[EmptyScope.ScriptValue('glory_legacy_1_marriage_acceptance')|0]#!"
- BETTER_GUESTS_LEGACY:0 "Better [guests|E] will be attracted"
+ FEWER_FACTIONS_LEGACY:0 "[vassals|E] are less likely to join [claimant_factions|E] and [liberty_factions|E]#!"
+ BETTER_GUESTS_LEGACY:1 "Better [guests|E] will be attracted\n[guest|E] Recruitment Cost: [gold_i]#P -30%#!"
+ MORE_PIETY_FROM_PILGRIMAGES_LEGACY:0 "More [piety|E] from [pilgrimages|E]: [piety_i]#P +30%#!"
  LEGACY_IMPROVED_COUNCIL_TASKS:1 "Base progress and [councillor|E] Skill impact on [councillor_tasks|E]: #P +10%#!"
+ LEGACY_DYNASTY_MEMBERS_MORE_LIKELY_TO_ACCEPT_CONVERSIONS:1 "[dynasty|E] Member [demand_conversion|E] Acceptance: #P +50#!"
+ LEGACY_DYNASTY_MEMBERS_KIDNAP_AFTER_SIEGES_BETTER:1 "[gold|E] from ransoms: [gold_i]#P +50%#!\nGain [prestige|E] [prestige_i] when ransoming [prisoners|E]\nMore likely to [imprison|E] [characters|E] after a successful [siege|E] or [raid|E]"
+ LEGACY_ENEMIES_LOSE_EXTRA_CONTROL_WHEN_OCCUPIED:0 "Enemy [counties|E] lose #EMP substantial#! extra [control|E] when [occupied|E]"
+ LEGACY_MORE_PRESTIGE_FROM_BATTLES:0 "[prestige|E] and [prestige_experience|E] from [battles|E]: [prestige_i] #P +100%#!"
+ LEGACY_GOLD_FROM_BATTLES:0 "Gain [gold|E][gold_i] from [battles|E] #weak (5 gold per 100 [dead_soldiers|E])#!"
+ CHEAPER_AGENTS_LEGACY:0 "[agent|E] Bribe Cost: [gold_i]#P -50%#!"
+ LEGACY_SEDUCE_BONUSES:0 "[send_gift|E] Cost: [gold_i]#P -50%#!\n[seduce_scheme|E] [success_chance|E]: #P +[EmptyScope.ScriptValue('fp1_adventure_legacy_2_success_chance_seduction')|0]%#!\nGain [prestige|E] [prestige_i] for successful [seduce_schemes|E]\n#weak (The riskier Seduction, the more Prestige gained)#!"
+ LEGACY_BONUS_PER_FRIEND:0 "Can use the [befriend_scheme|E] on [vassals|E]\nEach of your [friend|E] relations give you #P 3#! [vassal|E] [opinion|E], #P 2#! [county_opinion|E], and #P +1%#! [gold_i] [vassal|E] [tax|E] [modifier_contribution|E]\n#weak (For up to 5 [friends])#!"
 
- ALL_DYNASTY_MEMBERS_HAVE_MURDER_SAVE:0 "Major chance to [prevented_murder_prevent|E] one [murder|E] against each Dynasty Member"
-
+ ALL_DYNASTY_MEMBERS_HAVE_MURDER_SAVE:1 "Major chance to [prevented_murder_prevent|E] one [murder|E] against each [dynasty|E] Member\n[interaction|E] Acceptance from [intimidated_i][intimidated|E] or [terrified_i][cowed|E]: #P +100%#!"
+ LEGACY_DYNASTY_MEMBERS_GAIN_BONUS_TROOPS_WHEN_VARANGIAN_ADVENTURING:0 "Receive bonus troops above the cap when [varangian_adventuring|E]\n[dynast_interaction|E]: #V Send to the Varangian Guard#!\n#weak The [dynast] gains the ability to pay [prestige] [prestige_i] in order to send away unlanded adult [dynasty] members to potentially gain [skills] and [traits]#!"
+ 
  SET_ABSOLUTE_COUNTY_CONTROL:0 "Enables [absolute_control|E] for [counties|E]"
  
  intrigue_skulduggery_focus_effect:0 "[agent|E] Acceptance: #P +10#!"
@@ -1844,8 +1865,8 @@
  REMOVE_SPECIAL_CHARACTER_EFFECT:0 "[TARGET_CHARACTER.GetShortUINamePossessive] is removed as the special character"
  REMOVE_SPECIAL_CHARACTER_PAST_EFFECT:0 "[TARGET_CHARACTER.GetShortUINamePossessive] was removed as the special character"
  ALLOW_IN_SCHEME_PAST_EFFECT:0 "Is allowed to join the [SCHEME.GetName] as an agent"
- ADD_PERK_EFFECT:0 "Gain the [PERK.GetName('CHARACTER')] Perk"
- ADD_PERK_PAST_EFFECT:0 "Gained the [PERK.GetName('CHARACTER')] Perk"
+ ADD_PERK_EFFECT:1 "Gain the [PERK.GetName( CHARACTER.Self )] Perk"
+ ADD_PERK_PAST_EFFECT:1 "Gained the [PERK.GetName( CHARACTER.Self )] Perk"
  SET_GENERATED_ASEXUALITY_CHANCE_EFFECT:0 "The chance of generated characters being [asexual|E] becomes #V $VALUE$%#!"
  SET_GENERATED_ASEXUALITY_CHANCE_PAST_EFFECT:0 "The chance of generated characters being [asexual|E] is now #V $VALUE$%#!"
  CLEAR_FORCED_VOTE_EFFECT:0 "Becomes free to vote as they wish"
@@ -1896,3 +1917,11 @@
  SAT_MOTHER_OF_CHARACTER:0 "[TARGET_CHARACTER.GetShortUIName|U] [Select_CString( TARGET_CHARACTER.IsLocalPlayer, 'are', 'is' )] [CHARACTER.GetHerHis] new mother"
  SAT_MY_MOTHER:0 "[TARGET_CHARACTER.GetShortUIName|U] is your new mother"
  SAT_THEIR_MOTHER:0 "[TARGET_CHARACTER.GetShortUIName|U] [Select_CString( TARGET_CHARACTER.IsLocalPlayer, 'are', 'is' )] the new mother of [CHARACTER.GetShortUIName]"
+ 
+ ADD_LOOT_RAIDING_ARMY_EFFECT:1 "Adds $VALUE|0V$ loot to the current raiding army"
+ ADD_LOOT_RAIDING_ARMY_PAST_EFFECT:1 "Added $VALUE|0V$ loot to the raiding army"
+ 
+ send_to_varangian_guard_interaction_effect_desc:0 "#weak While serving in the Varangian Guard, [CHARACTER.GetFirstName] might increase [CHARACTER.GetHerHis] [skills|E] or gain [traits|E] — but [CHARACTER.GetSheHe] might also become wounded, or worse. [CHARACTER.GetSheHe|U] will return within a few years, but cannot be recalled.#!"
+
+ custom.every_courtier_and_guest:0 "Every [courtier|E] and [guest|E]"
+ custom.every_knight:0 "Every [knight|E]"

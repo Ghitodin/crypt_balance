@@ -31,6 +31,7 @@
  I_LACK_LAW_ALLOWING_TITLE_REVOCATION_CROWN:1 "Ваш [crown_authority|El] ниже, чем «ограниченный»"
  I_LACK_LAW_ALLOWING_VASSAL_RETRACTION_CROWN:1 "Ваш [crown_authority|El] ниже, чем «ограниченный»"
  I_LACK_LAW_ALLOWING_SUCCESSION_LAW_CHANGE:2 "Ваш [crown_authority|El] ниже абсолютного"
+ I_LACK_TRIBAL_LAW_ALLOWING_SUCCESSION_LAW_CHANGE:0 "У вас нет ограниченного [Concept( 'tribal_authority', 'авторитета вождя' )|E]"
  I_LACK_LAW_ALLOWING_PARTITION_SUCCESSION_LAW_CHANGE:1 "У вас нет ограниченного [Concept( 'crown_authority', 'авторитета короны' )|E]"
  I_LACK_LAW_ALLOWING_DESIGNATE_HEIR:0 "У вас нет абсолютного [Concept( 'crown_authority', 'авторитета короны' )|E]"
  MY_DYNASTY_MEMBER_LEADS_THE_ELECTION:1 "Член вашей [Concept( 'dynasty', 'династии' )|E] ([CHARACTER.GetPrimaryTitle.GetHeir.GetShortUIName|V]) лидирует на выборах по вашему [Concept( 'primary_title', 'первому титулу' )|E]"

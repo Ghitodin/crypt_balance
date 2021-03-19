@@ -409,6 +409,16 @@
 			factor = 0
 		}
 		
+		modifier = { # Don't call brand-new allies into old wars, at least until some time has elapsed.
+			has_variable = delay_calling_recent_ally
+			var:delay_calling_recent_ally = scope:recipient
+			scope:target = {
+				war_days >= 30
+			}
+			factor = 0
+
+		}
+
 		modifier = { # If the recipient is allied to both the attacker and the defender, the attacker shouldn't call
 			scope:target.casus_belli.primary_attacker = scope:actor
 			scope:target.casus_belli.primary_defender = {

@@ -223,3 +223,27 @@ debt_level_6 = {
 	vassal_opinion = -8
 	county_opinion_add = -8
 }
+
+debt_level_7 = {
+	levy_size = -0.15
+	levy_reinforcement_rate = -0.15
+	development_growth_factor = -0.15
+	vassal_opinion = -8
+	county_opinion_add = -8
+}
+
+debt_level_8 = {
+	levy_size = -0.15
+	levy_reinforcement_rate = -0.15
+	development_growth_factor = -0.15
+	vassal_opinion = -8
+	county_opinion_add = -8
+}
+
+debt_level_9 = {
+	levy_size = -0.15
+	levy_reinforcement_rate = -0.15
+	development_growth_factor = -0.15
+	vassal_opinion = -8
+	county_opinion_add = -8
+}

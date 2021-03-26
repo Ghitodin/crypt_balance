@@ -86,13 +86,15 @@ restore_sunni_caliphate_decision = {
 	}
 
 	is_valid = {
-		amount >= 2
-		completely_controls = title:c_mecca
-		completely_controls = title:d_medina
-		completely_controls = title:d_shammar
-		completely_controls = title:d_palestine
-		completely_controls = title:d_oultrejourdain
-		piety_level >= high_piety_level
+		calc_true_if = {
+			amount >= 2
+			completely_controls = title:c_mecca
+			completely_controls = title:d_medina
+			completely_controls = title:d_shammar
+			completely_controls = title:d_palestine
+			completely_controls = title:d_oultrejourdain
+			piety_level >= high_piety_level
+		}
 	}
 
 	is_valid_showing_failures_only = {

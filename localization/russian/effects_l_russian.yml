@@ -256,7 +256,7 @@
  all_courtiers_and_guests:1 "Все [courtiers|El] и [guests|El] [Select_CString(ROOT.GetCharacter.IsPlayer, '', 'персонажа ' )][ROOT.GetCharacter.GetNamePossessiveOrMy][Select_CString(ROOT.GetCharacter.IsPlayer, 'его персонажа', '' )]"
  all_close_family_members:0 "Все [close_family_members|El] [Select_CString(THIS.GetCharacter.IsPlayer, '', 'персонажа ' )][THIS.GetCharacter.GetNamePossessiveOrMy][Select_CString(THIS.GetCharacter.IsPlayer, 'его персонажа', '' )]"
  all_family_members:0 "Все [family_members|El] [Select_CString(THIS.GetCharacter.IsPlayer, '', 'персонажа ' )][THIS.GetCharacter.GetNamePossessiveOrMy][Select_CString(THIS.GetCharacter.IsPlayer, 'его персонажа', '' )]"
- all_unlanded_family_members:0 "Все $game_concept_unlanded$ [family_members|E] персонажа [THIS.GetCharacter.GetShortUIName]"
+ all_unlanded_family_members:0 "Каждый $game_concept_unlanded$ [family_member|El] [Select_CString(THIS.GetCharacter.IsPlayer, '', 'персонажа ' )][THIS.GetCharacter.GetNamePossessiveOrMy][Select_CString(THIS.GetCharacter.IsPlayer, 'его персонажа', '' )]"
  all_close_family_and_spouses:0 "Все [close_family_members|El] и [spouse|El] [Select_CString(THIS.GetCharacter.IsPlayer, '', 'персонажа ' )][THIS.GetCharacter.GetNamePossessiveOrMy][Select_CString(THIS.GetCharacter.IsPlayer, 'его персонажа', '' )]"
  all_your_guests:0 "Все ваши [Concept( 'guests', 'гости' )|E]"
  all_close_family_members_of_kicked_characters:0 "Все их [close_family_members|El]"
@@ -725,7 +725,7 @@
  SET_CULTURE_GLOBAL:1 "Принимает [TARGET_CULTURE.GetName|Vl]#V #L ую#!#! культуру"
  SET_CULTURE_FIRST:2 "Вы принимаете [TARGET_CULTURE.GetName|Vl]#V #L ую#!#! культуру"
  SET_CULTURE_THIRD:1 "[CHARACTER.GetShortUIName|U] принимает [TARGET_CULTURE.GetName|Vl]#V #L ую#!#! культуру"
- SET_CULTURE_GLOBAL_PAST:0 "Принята [TARGET_CULTURE.GetName|V]#V #L ая#!#! культура"
+ SET_CULTURE_GLOBAL_PAST:0 "Принята [TARGET_CULTURE.GetName|Vl]#V #L ая#!#! культура"
  SET_CULTURE_FIRST_PAST:2 "Вы приняли [TARGET_CULTURE.GetName|Vl]#V #L ую#!#! культуру"
  SET_CULTURE_THIRD_PAST:1 "[CHARACTER.GetShortUIName|U] [Select_CString(CHARACTER.IsFemale, 'приняла', 'принял' )] [TARGET_CULTURE.GetName|Vl]#V #L ую#!#! культуру"
 
@@ -1029,6 +1029,7 @@
  
  I_ACCEPT_THE_INVITATION:1 "Вы принимаете приглашение"
  I_DECLINE_THE_INVITATION:1 "Вы отклоняете приглашение"
+ CHARACTER_DECLINES_INVITATION:0 "[CHARACTER.GetShortUIName|U] отклоняет приглашение"
  I_AM_INVITED:1 "Вы приглашены"
  CHARACTER_ACCEPTS_INVITATION:0 "[CHARACTER.GetShortUIName|U] принимает приглашение"
  CHARACTER_IS_INVITED:0 "[CHARACTER.GetShortUIName|U] [Select_CString(CHARACTER.IsFemale, 'приглашена', 'приглашен' )]"
@@ -1113,7 +1114,7 @@
  I_JOINED_FACTION_EFFECT:0 "Вы присоединились к фракции [FACTION.GetName|V]"
  JOIN_FACTION_EFFECT:1 "Присоединяется к фракции [FACTION.GetName|V]"
  JOINED_FACTION_EFFECT:0 "Теперь состоит во фракции [FACTION.GetName|V]"
- JOIN_FACTION_FORCED_EFFECT:1 "[TARGET_CHARACTER.GetShortUIName] вынуждает [Select_CString(CHARACTER.IsPlayer, '', 'персонажа ' )][CHARACTER.GetNamePossessiveOrMy][Select_CString(CHARACTER.IsPlayer, 'его персонажа', '' )] присоединиться к фракции [FACTION.GetName|V] до $DURATION|V$"
+ JOIN_FACTION_FORCED_EFFECT:1 "[Select_CString(TARGET_CHARACTER.IsPlayer, '', 'Персонаж ' )][TARGET_CHARACTER.GetNamePossessiveOrMy|U][Select_CString(TARGET_CHARACTER.IsPlayer, ' персонаж', '' )] вынуждает [Select_CString(CHARACTER.IsPlayer, '', 'персонажа ' )][CHARACTER.GetNamePossessiveOrMy][Select_CString(CHARACTER.IsPlayer, 'его персонажа', '' )] присоединиться к фракции [FACTION.GetName|V] до $DURATION|V$"
  
  LEAVE_FACTION_EFFECT:0 "Покидает фракцию [FACTION.GetName|V]"
  I_LEAVE_FACTION_EFFECT:1 "Вы покидаете [Concept( 'prison', 'тюрьму' )|E]"
@@ -1329,6 +1330,8 @@
  SET_REALM_CAPITAL_THIRD_DESC:0 "[TARGET_TITLE.GetName|U] становится новой столицей державы [Select_CString(CHARACTER.IsLocalPlayer, '', 'персонажа' )][CHARACTER.GetNamePossessiveOrMy][Select_CString(CHARACTER.IsLocalPlayer, 'его персонажа', '' )]"
  ADD_INNOVATION_EFFECT:1 "[CULTURE.GetCollectiveNoun] открывают $INNOVATION_TYPE|V$"
  ADDED_INNOVATION_EFFECT:0 "[CULTURE.GetCollectiveNoun] открыли $INNOVATION_TYPE|V$"
+ REMOVE_INNOVATION_EFFECT:0 "[CULTURE.GetName]ая культура забывает, что такое $INNOVATION_TYPE|V$"
+ REMOVED_INNOVATION_EFFECT:0 "[CULTURE.GetCollectiveNoun] забыли, что такое $INNOVATION_TYPE|V$"
 
  ADD_DOCTRINE_GLOBAL_DESC:1 "Получает доктрину «$DOCTRINE_GROUP$»: $DOCTRINE$"
  ADD_DOCTRINE_GLOBAL_PAST_DESC:1 "Получена доктрина «$DOCTRINE_GROUP$»: $DOCTRINE$"
@@ -1345,6 +1348,8 @@
 
  ACTIVATE_HOLY_SITE_DESC:0 "[TITLE.GetNameNoTier] получит #L [CHARACTER.GetFaith.GetAdjective|l]ое#! [holy_site|El] $HOLY_SITE$"
  ACTIVATE_HOLY_SITE_PAST_DESC:0 "[TITLE.GetNameNoTier] теперь контролирует #L [CHARACTER.GetFaith.GetAdjective|l]ое#! [holy_site|El] $HOLY_SITE$"
+ DEACTIVATE_HOLY_SITE_DESC:0 "[TITLE.GetNameNoTier] потеряет священное место «[holy_site|E]$HOLY_SITE$» ([CHARACTER.GetFaith])"
+ DEACTIVATE_HOLY_SITE_PAST_DESC:0 "[TITLE.GetNameNoTier] потеряет священное место «[holy_site|E]$HOLY_SITE$» ([CHARACTER.GetFaith])"
 
  ADD_RANDOM_INNOVATION_EFFECT:1 "[CULTURE.GetCollectiveNoun] развивают случайную [Concept( 'innovation', 'инновацию' )|E] группы $GROUP$"
  GOT_RANDOM_INNOVATION_EFFECT:0 "[CULTURE.GetCollectiveNoun] развили случайную [Concept( 'innovation', 'инновацию' )|E] группы $GROUP$"
@@ -1693,8 +1698,9 @@
  CHEAPER_AGENTS_LEGACY:0 "Стоимость подкупа [Concept( 'agent', 'соучастников' )|E]: [gold_i]#P -50%#!"
  LEGACY_SEDUCE_BONUSES:0 "Стоимость [Concept( 'send_gift', 'отправки подарка' )|E]: [gold_i]#P -50%#!\n[success_chance|E] [Concept( 'seduce_scheme', 'происков соблазнения' )|E]: #P +[EmptyScope.ScriptValue('fp1_adventure_legacy_2_success_chance_seduction')|0]%#!\nВы получаете [Concept( 'prestige', 'престиж' )|E] [prestige_i] за успешные [Concept( 'seduce_schemes', 'происки соблазнения' )|E]\n#weak (Чем рискованнее соблазнение, тем больше престижа)#!"
  LEGACY_BONUS_PER_FRIEND:0 "Можно использовать [Concept( 'befriend_scheme', 'план сближения' )|E] в отношении [Concept( 'vassals', 'вассалов' )|E]\nКаждый [Concept( 'friend', 'друг' )|E] даёт вам #P 3#! к [Concept( 'opinion', 'мнению' )|E] [Concept( 'vassals', 'вассалов' )|E], #P 2#! к [Concept( 'county_opinion', 'мнению графств' )|E] и #P +1%#! [gold_i] к [Concept( 'modifier_contribution', 'модификатору' )|E] [Concept( 'tax', 'налогов' )|E] от [Concept( 'vassals', 'вассалов' )|E]\n#weak (Не более 5 [Concept( 'friends', 'друзей' )|E])#!"
+ LEGACY_MORE_LIKELY_TO_GET_TRADE_EVENTS_WHEN_RAIDING:0 "Повышенная вероятность получить события торговли во время [Concept( 'raiding', 'налетов' )|E]"
 
- ALL_DYNASTY_MEMBERS_HAVE_MURDER_SAVE:1 "Большой шанс [prevented_murder_prevent|El] одно [murder|El] каждого члена [Concept( 'dynasty', 'династии' )|E]\nПринятие [Concept( 'interaction', 'предложений' )|E] со стороны [intimidated_i][Concept( 'intimidated', 'запуганных' )|E] или [terrified_i][Concept( 'terrified', 'приведенных в ужас' )|E] персонажей: #P +100%#!"
+ ALL_DYNASTY_MEMBERS_HAVE_MURDER_SAVE:1 "Большой шанс [prevented_murder_prevent|El] одно [murder|El] каждого члена [Concept( 'dynasty', 'династии' )|E]\nПринятие [Concept( 'interaction', 'предложений' )|E] со стороны [intimidated_i][Concept( 'intimidated', 'запуганных' )|E] или [terrified_i][Concept( 'cowed', 'приведенных в ужас' )|E] персонажей: #P +100%#!"
  LEGACY_DYNASTY_MEMBERS_GAIN_BONUS_TROOPS_WHEN_VARANGIAN_ADVENTURING:0 "Вы получаете дополнительные войска во время [Concept( 'varangian_adventuring', 'варяжских приключений' )|E]\n[dynast_interaction|E]: #V Отправить в варяжскую гвардию#!\n#weak [dynast|E] получает возможность потратить [Concept( 'prestige', 'престиж' )|E] [prestige_i], чтобы отослать безземельных взрослых членов [Concept( 'dynasty', 'династии' )|E]. Во время службы они могут получить [Concept( 'skills', 'навыки' )|E] или [Concept( 'traits', 'свойства' )|E]#!"
  
  SET_ABSOLUTE_COUNTY_CONTROL:0 "Получает [absolute_control|El] над [Concept( 'counties', 'графствами' )|E]"
@@ -1881,6 +1887,8 @@
  SET_IMMORTAL_AGE_PAST_EFFECT:0 "Возраст бессмертия выставлен на #V $VALUE$#!"
  ADD_DYNASTY_PERK_EFFECT:0 "Будет получено достоинство династии [DYNASTY_PERK.GetName]"
  ADD_DYNASTY_PERK_PAST_EFFECT:0 "Получено достоинство династии [DYNASTY_PERK.GetName]"
+ REMOVE_DYNASTY_PERK_EFFECT:0 "Будет потеряно достоинство династии [DYNASTY_PERK.GetName]"
+ REMOVE_DYNASTY_PERK_PAST_EFFECT:0 "Потеряно достоинство династии [DYNASTY_PERK.GetName]"
  CHANGE_CURRENT_WEIGHT_EFFECT:0 "Текущий вес изменяется на #V $VALUE$#!"
  CHANGE_CURRENT_WEIGHT_PAST_EFFECT:0 "Текущий вес изменен на #V $VALUE$#!"
  REMOVE_ALL_PROVINCE_MODIFIER_INSTANCES_EFFECT:0 "Теряет все модификаторы $MODIFIER$"
@@ -1895,8 +1903,8 @@
  REMOVE_ALL_COUNTY_MODIFIER_INSTANCES_PAST_EFFECT:0 "Потеряны все модификаторы $MODIFIER$"
  FACTION_REMOVE_WAR_EFFECT:0 "Убрать войну фракции"
  FACTION_REMOVE_WAR_PAST_EFFECT:0 "Убрана война фракции"
- GET_ALL_INNOVATIONS_FROM_EFFECT:3 "[CULTURE.GetName|V]ая [Concept( 'culture', 'культура' )|E] открывает все [Concept( 'innovations', 'инновации' )|E] [TARGET_CULTURE.GetName|V]ой [Concept( 'culture', 'культуры' )|E]"
- GET_ALL_INNOVATIONS_FROM_PAST_EFFECT:3 "[CULTURE.GetName|V]ая [Concept( 'culture', 'культура' )|E] открыла все [Concept( 'innovations', 'инновации' )|E] [TARGET_CULTURE.GetName|V]ой [Concept( 'culture', 'культуры' )|E]"
+ GET_ALL_INNOVATIONS_FROM_EFFECT:3 "#L #V [CULTURE.GetName]ая#!#! [Concept( 'culture', 'культура' )|E] открывает все [Concept( 'innovations', 'инновации' )|E] #L #V [TARGET_CULTURE.GetName|l]ой#!#! [Concept( 'culture', 'культуры' )|E]"
+ GET_ALL_INNOVATIONS_FROM_PAST_EFFECT:3 "#L #V [CULTURE.GetName]ая#!#! [Concept( 'culture', 'культура' )|E] открыла все [Concept( 'innovations', 'инновации' )|E] #L #V [TARGET_CULTURE.GetName|l]ой#!#! [Concept( 'culture', 'культуры' )|E]"
  
  CONTRACT_MODIFICATION_BLOCKED_GLOBAL:0 "Возможность изменить [Concept( 'feudal_contract', 'вассальный договор' )|E] будет #X заблокирована#!"
  CONTRACT_MODIFICATION_BLOCKED_GLOBAL_PAST:0 "Возможность изменить [Concept( 'feudal_contract', 'вассальный договор' )|E] была #X заблокирована#!"
@@ -1921,6 +1929,7 @@
 
  custom.every_courtier_and_guest:0 "Все [spouses|El] и [close_family_members|El]"
  custom.every_knight:0 "Каждый [knight|El]"
+ custom.every_held_county:0 "Каждое контролируемое [Concept( 'county', 'графство' )|E]"
 
  # Custom REWORKED:
  UNLOCKS_CLAIM_THRONE_INTERACTION_REWORKED:0 "Разблокирует действие Назначить [heir|El]а"

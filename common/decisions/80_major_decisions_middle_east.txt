@@ -56,6 +56,10 @@ create_outremer_empire_decision = {
 				name = unavailable_unique_decisions
 				target = flag:flag_created_outremer_empire
 			}
+			set_global_variable = {
+				name = flag_created_outremer_empire
+				value = root
+			}
 		}
 	}
 	
@@ -304,6 +308,10 @@ create_israel_kingdom_decision = {
 			add_to_global_variable_list = {
 				name = unavailable_unique_decisions
 				target = flag:create_israel_kingdom
+			}
+			set_global_variable = {
+				name = create_israel_kingdom
+				value = root
 			}
 		}
 	}
@@ -581,6 +589,10 @@ form_rum_sultanate_decision = {
 				name = unavailable_unique_decisions
 				target = flag:flag_formed_rum_sultanate
 			}
+			set_global_variable = {
+				name = flag_formed_rum_sultanate
+				value = root
+			}
 		}
 	}
 	
@@ -659,6 +671,10 @@ create_armenian_empire_decision = {
 			add_to_global_variable_list = {
 				name = unavailable_unique_decisions
 				target = flag:flag_created_armenian_empire
+			}
+			set_global_variable = {
+				name = flag_created_armenian_empire
+				value = scope:founder
 			}
 		}
 	}

@@ -50,25 +50,30 @@ baron_modifier = {
 
 count_modifier = {
 	domain_limit = 3
-	knight_limit = 5
+	knight_limit = 6
 }
 
 duke_modifier = {
 	domain_limit = 3
-	knight_limit = 6
+	knight_limit = 7
 	vassal_limit = 20
+
+	mercenary_hire_cost_mult = 0.1
 }
 
 king_modifier = {
 	domain_limit = 3
 	knight_limit = 7
 	vassal_limit = 30
+
+	mercenary_hire_cost_mult = 0.3
 }
 
 emperor_modifier = {
 	domain_limit = 3
 	knight_limit = 7
-	vassal_limit = 40
+	vassal_limit = 35
+	mercenary_hire_cost_mult = 0.6
 }
 
 # These modifiers are applied to the holder of a title of the respective tier (per title)
@@ -217,33 +222,41 @@ debt_level_5 = {
 }
 
 debt_level_6 = {
-	levy_size = -0.15
-	levy_reinforcement_rate = -0.15
-	development_growth_factor = -0.15
-	vassal_opinion = -8
-	county_opinion_add = -8
+	levy_size = -0.1
+	levy_reinforcement_rate = -0.1
+	development_growth_factor = -0.1
+	vassal_opinion = -5
+	county_opinion_add = -5
 }
 
 debt_level_7 = {
-	levy_size = -0.15
-	levy_reinforcement_rate = -0.15
-	development_growth_factor = -0.15
-	vassal_opinion = -8
-	county_opinion_add = -8
+	levy_size = -0.1
+	levy_reinforcement_rate = -0.1
+	development_growth_factor = -0.1
+	vassal_opinion = -5
+	county_opinion_add = -5
 }
 
 debt_level_8 = {
-	levy_size = -0.15
-	levy_reinforcement_rate = -0.15
-	development_growth_factor = -0.15
-	vassal_opinion = -8
-	county_opinion_add = -8
+	levy_size = -0.1
+	levy_reinforcement_rate = -0.1
+	development_growth_factor = -0.1
+	vassal_opinion = -5
+	county_opinion_add = -5
 }
 
 debt_level_9 = {
-	levy_size = -0.15
-	levy_reinforcement_rate = -0.15
-	development_growth_factor = -0.15
-	vassal_opinion = -8
-	county_opinion_add = -8
+	levy_size = -0.1
+	levy_reinforcement_rate = -0.1
+	development_growth_factor = -0.1
+	vassal_opinion = -5
+	county_opinion_add = -5
+}
+
+debt_level_no_income = { #Special no income
+	levy_size = -0.1
+	levy_reinforcement_rate = -0.1
+	development_growth_factor = -0.1
+	vassal_opinion = -5
+	county_opinion_add = -5
 }

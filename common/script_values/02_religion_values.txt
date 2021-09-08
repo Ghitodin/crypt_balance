@@ -418,7 +418,7 @@ ghw_target_stretch = 10
 #Always drastically buff any kingdom containing an uncontrolled holy site:
 ghw_target_has_holy_site = 50
 #Targets that should always be priorities if not controlled:
-ghw_target_key_religious_holding = 100
+ghw_target_key_religious_holding = 70
 ghw_target_religious_vengeance = 75
 #Distance modifiers stack:
 ghw_target_distance_01_reduction = 0.8

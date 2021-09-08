@@ -3411,13 +3411,13 @@ undirected_great_holy_war = {
 			}
 		}
 		
-		#Set 60 years cooldown.
+		#Set 50 years cooldown.
 		hidden_effect = {
 			scope:attacker.faith = {
 				set_variable = {
 					name = variable_ghw_cooldown
 					value = yes
-					years = 60
+					years = 50
 				}
 			}
 			if = { #Clear pledged gold flag.
@@ -3516,13 +3516,13 @@ undirected_great_holy_war = {
 		# Truce
 		add_truce_attacker_defeat_effect = yes
 
-		#Set 60 years cooldown.
+		#Set 50 years cooldown.
 		hidden_effect = {
 			scope:attacker.faith = {
 				set_variable = {
 					name = variable_ghw_cooldown
 					value = yes
-					years = 60
+					years = 50
 				}
 			}
 			if = { #Clear pledged gold flag.
@@ -3846,14 +3846,14 @@ directed_great_holy_war = {
 				}
 			}
 		}
-		#Set 60 years cooldown.
+		#Set 50 years cooldown.
 		hidden_effect = {
 			scope:attacker = {
 				faith = {
 					set_variable = {
 						name = variable_ghw_cooldown
 						value = yes
-						years = 60
+						years = 50
 					}
 				}
 			}
@@ -3951,14 +3951,14 @@ directed_great_holy_war = {
 				change_fervor = -15
 			}
 		}
-		#Set 60 years cooldown.
+		#Set 50 years cooldown.
 		hidden_effect = {
 			scope:attacker = {
 				faith = {
 					set_variable = {
 						name = variable_ghw_cooldown
 						value = yes
-						years = 60
+						years = 50
 					}
 				}
 			}

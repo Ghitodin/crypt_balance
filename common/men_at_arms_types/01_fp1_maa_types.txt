@@ -111,8 +111,8 @@ jomsviking_pirates = {
 
 	damage = 30
 	toughness = 30
-	pursuit = 40
-	screen = 40
+	pursuit = 22
+	screen = 22
 	
 	counters = {
 		heavy_infantry = 1

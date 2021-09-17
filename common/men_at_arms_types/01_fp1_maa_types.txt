@@ -99,7 +99,7 @@ varangian_veterans = {
 	low_maintenance_cost = { gold = varangian_veterans_low_maint_cost }
 	high_maintenance_cost = { gold = varangian_veterans_high_maint_cost }
 	
-	stack = 100
+	stack = 75
 	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = varangian_veterans
 }

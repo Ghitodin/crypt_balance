@@ -5,26 +5,8 @@ difficulty = {
 
 	}
 
-	very_easy_difficulty = {
-		apply_modifier = player:very_easy_difficulty
-	}
-	
-	easy_difficulty = {
-		apply_modifier = player:easy_difficulty
-	}
-
-	hard_difficulty = {
-		apply_modifier = player:hard_difficulty
-		apply_modifier = ai:ai_hard_difficulty
-	}
-
-	very_hard_difficulty = {
-		apply_modifier = player:very_hard_difficulty
-		apply_modifier = ai:ai_very_hard_difficulty
-	}
-
 	extreme_difficulty = {
 		apply_modifier = player:extreme_difficulty
-		apply_modifier = ai:ai_very_hard_difficulty
+		apply_modifier = ai:ai_extreme_difficulty
 	}	
 }

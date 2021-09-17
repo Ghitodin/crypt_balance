@@ -8,7 +8,7 @@
 
 feudal_elective = {
 	elector_vote_strength = {
-		base = 1
+		base = 4
 		modifier = { #Sicilian Parliamentary Support
 			desc = tooltip_feudal_vote_strength_parliament
 			add = 1
@@ -19,7 +19,7 @@ feudal_elective = {
 		}
 		modifier = { #Imperial Dignity
 			desc = tooltip_feudal_vote_strength_emperor_tier
-			add = -1
+			add = -4
 			highest_held_title_tier = 5
 		}
 		modifier = { #Royal Dignity
@@ -32,6 +32,16 @@ feudal_elective = {
 			add = 1
 			highest_held_title_tier = 3
 		}
+		
+		modifier = { # is not AI
+			desc = "Is a player: -4"
+			add = -4
+			NOR = {
+				is_ai = yes
+				highest_held_title_tier = 5
+			}
+		}
+		
 		modifier = { #Powerful Vassal
 			desc = tooltip_feudal_vote_strength_powerful_vassal
 			add = {

@@ -8,17 +8,27 @@
 
 princely_elective = { #HRE Elective.
 	elector_vote_strength = {
-		base = 1
+		base = 4
 		modifier = { #Imperial Dignity
 			desc = tooltip_feudal_vote_strength_emperor_tier
-			add = -1
+			add = -4
 			highest_held_title_tier = 5
 		}
 		modifier = { #Royal Dignity
 			desc = tooltip_feudal_vote_strength_king_tier
-			add = 1
+			add = 0
 			highest_held_title_tier = 4
 		}
+		
+		modifier = { # is not AI
+			desc = "Is a player: -4"
+			add = -4
+			NOR = {
+				is_ai = yes
+				highest_held_title_tier = 5
+			}
+		}
+		
 		modifier = { #Powerful Vassal
 			desc = tooltip_feudal_vote_strength_powerful_vassal
 			add = {

@@ -671,6 +671,19 @@ offer_fealty_interaction = {
 				}
 			}
 		}
+		
+		modifier = { #Is not the Rightful Liege of recipient
+			desc = offer_vassalization_interaction_aibehavior_not_rightfulliegetitleholder_tt
+			trigger = {
+				NOT = {
+					is_rightful_liege_of_trigger = {
+						LIEGE = scope:recipient
+						VASSAL = scope:actor
+					}
+				}
+			}
+			add = -250
+		}
 
 		modifier = { #I am a King!
 			desc = offer_fealty_interaction_aibehavior_amkingtier_tt

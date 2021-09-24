@@ -1,9 +1,9 @@
 ﻿#OPINIONS SET BY THE Sway Scheme
 
 scheme_sway_opinion = {
-	monthly_change = 0.05
+	monthly_change = 0.03
 	decaying = yes
-	max = 100
+	max = 40
 	stacking = yes
 }
 

@@ -26,10 +26,8 @@
 		}
 	}
 	
-	effect = {
-		custom_description_no_bullet = {
-			text = thoughtful_perk_effect
-		}
+	character_modifier = {
+		title_creation_cost_mult = -0.2
 	}
 }
 
@@ -40,10 +38,6 @@ ducal_conquest_perk = {
 	icon = node_diplomacy
 	
 	parent = thoughtful_perk
-	
-	character_modifier = {
-		title_creation_cost_mult = -0.2
-	}
 	
 	effect = {
 		custom_description_no_bullet = {
@@ -110,8 +104,8 @@ defensive_negotiations_perk = {
 	parent = thoughtful_perk
 	
 	character_modifier = {
-		independent_ruler_opinion = 15
-		fellow_vassal_opinion = 15
+		independent_ruler_opinion = 10
+		fellow_vassal_opinion = 10
 	}
 
 	effect = {

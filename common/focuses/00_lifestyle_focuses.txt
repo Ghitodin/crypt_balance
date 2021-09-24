@@ -4,7 +4,7 @@ diplomacy_foreign_affairs_focus = {
 	lifestyle = diplomacy_lifestyle
 	
 	modifier = {
-		diplomacy = 3
+		diplomacy = 2
 	}
 
 	desc = {
@@ -73,7 +73,7 @@ diplomacy_family_focus = {
 	lifestyle = diplomacy_lifestyle
 	
 	modifier = {
-		diplomacy = 2
+		diplomacy = 1
 		fertility = 0.2
 	}
 
@@ -262,9 +262,9 @@ intrigue_temptation_focus = {
 	}
 	
 	modifier = {
-		attraction_opinion = 10
+		attraction_opinion = 5
 		fertility = 0.2
-		seduce_scheme_power_mult = 0.2
+		seduce_scheme_power_mult = 0.1
 	}
 
 	auto_selection_weight = {
@@ -305,7 +305,7 @@ intrigue_intimidation_focus = {
 	
 	modifier = {
 		intrigue = 2
-		dread_baseline_add = 30
+		dread_baseline_add = 15
 	}
 
 	auto_selection_weight = {
@@ -358,7 +358,7 @@ stewardship_wealth_focus = {
 	}
 	
 	modifier = {
-		monthly_income_mult = 0.1
+		monthly_income_mult = 0.05
 	}
 
 	auto_selection_weight = {
@@ -395,7 +395,7 @@ stewardship_domain_focus = {
 	}
 	
 	modifier = {
-		stewardship = 3
+		stewardship = 2
 	}
 
 	auto_selection_weight = {
@@ -427,7 +427,7 @@ stewardship_duty_focus = {
 	
 	modifier = {
 		stewardship = 1
-		courtier_and_guest_opinion = 20
+		courtier_and_guest_opinion = 10
 	}
 
 	auto_selection_weight = {
@@ -459,7 +459,7 @@ learning_medicine_focus = {
 	
 	modifier = {
 		learning = 1
-		health = 0.25
+		negate_health_penalty_add = 0.5
 	}
 
 	auto_selection_weight = {
@@ -484,7 +484,7 @@ learning_scholarship_focus = {
 	}
 	
 	modifier = {
-		learning = 3
+		learning = 2
 		development_growth_factor = 0.15
 	}
 

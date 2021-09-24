@@ -51,7 +51,7 @@ open_minded_perk = {
 	
 	character_modifier = {
 		ignore_negative_culture_opinion = yes
-		different_culture_opinion = 15
+		different_culture_opinion = 5
 	}
 }
 
@@ -66,7 +66,7 @@ apostate_perk = {
 	parent = open_minded_perk
 	
 	character_modifier = {
-		different_faith_opinion = 15
+		different_faith_opinion = 5
 		faith_conversion_piety_cost_mult = -0.75
 	}
 }
@@ -103,7 +103,7 @@ scientific_perk = {
 	}
 	
 	character_modifier = {
-		cultural_head_fascination_mult = 0.35
+		cultural_head_fascination_mult = 0.20
 	}
 }
 
@@ -135,7 +135,7 @@ scholarly_circles_perk = {
 	parent = planned_cultivation_perk
 	
 	character_modifier = {
-		learning_per_piety_level = 2
+		learning_per_piety_level = 1
 	}
 }
 
@@ -167,10 +167,9 @@ sanctioned_loopholes_perk = {
 	
 	parent = learn_on_the_job_perk
 	
-	effect = {
-		custom_description_no_bullet = {
-			text = sanctioned_loopholes_perk_effect
-		}
+	character_modifier = {
+		learning_per_piety_level = 1
+		cultural_head_fascination_mult = 0.15
 	}
 }
 

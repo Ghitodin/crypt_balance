@@ -397,7 +397,7 @@ NCharacterOpinion = {
 	PRESTIGIOUS = { -10 0 2 3 4 5 }
 	PIOUS_MAGNIFICENCE = { -5 0 2 3 4 5 }
 	
-	SKILL_DIPLOMACY_MULT = 1	# opinion = round( ( <diplo skill> - SKILL_MODIFIER_OFFSET ) * SKILL_DIPLOMACY_MULT )
+	SKILL_DIPLOMACY_MULT = 0.8	# opinion = round( ( <diplo skill> - SKILL_MODIFIER_OFFSET ) * SKILL_DIPLOMACY_MULT )
 
 	SHORT_REIGN_YEARS = 10
 	LONG_REIGN_YEARS = 10

@@ -582,10 +582,10 @@ bush_hunter = {
 shomer = {
 	type = skirmishers
 	
-	damage = 10
-	toughness = 24
-	pursuit = 0
-	screen = 40
+	damage = 13
+	toughness = 22
+	pursuit = 10
+	screen = 28
 	
 	counters = {
 		heavy_infantry = 1
@@ -595,7 +595,7 @@ shomer = {
 	low_maintenance_cost = { gold = shomer_low_maint_cost }
 	high_maintenance_cost = { gold = shomer_high_maint_cost }
 	
-	stack = 100
+	stack = 120
 	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = skirmishers
 }

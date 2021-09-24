@@ -1011,7 +1011,7 @@ send_gift_opinion = {
 			}
 			add = {
 				value = scope:actor.diplomacy
-				multiply = 3
+				multiply = 1.5
 			}
 		}
 		if = {
@@ -1027,15 +1027,15 @@ send_gift_opinion = {
 			limit = {
 				scope:recipient.liege = scope:actor
 			}
-			divide = 1.5
+			divide = 1.8
 		}
 		if = {
 			limit = {
 				scope:recipient = scope:actor.faith.religious_head
 			}
-			divide = 3
+			divide = 4
 		}
-		max = 100
+		max = 55
 	}
 	if = {
 		limit = {

@@ -513,21 +513,20 @@ holy_site_great_mosque_of_cordoba_01 = {
 	cost_gold = 1000
 
 	character_modifier = {
-		different_culture_opinion = 5
-		character_capital_county_monthly_development_growth_add = 0.2
-		monthly_piety = 0.5
+		different_culture_opinion = 2
+		character_capital_county_monthly_development_growth_add = 0.1
+		monthly_piety = 0.2
 		monthly_dynasty_prestige_mult = 0.05
 	}
 	
 	county_modifier = {
-		tax_mult = 0.15
-		levy_size = 0.15
-		development_growth_factor = 0.2
-		development_growth = 0.2
+		tax_mult = 0.10
+		development_growth_factor = 0.05
+		development_growth = 0.05
 	}
 	
 	province_modifier = {
-		monthly_income = 3
+		monthly_income = 2
 	}
 	
 	ai_value = {

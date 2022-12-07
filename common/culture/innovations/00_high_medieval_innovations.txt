@@ -75,7 +75,7 @@ innovation_men_at_arms = {
 	icon = @maa_02
 
 	modifier = {
-		men_at_arms_cap = 1
+		men_at_arms_cap = 1 # THE MOD
 	}
 
 	flag = global_regular
@@ -90,7 +90,7 @@ innovation_knighthood = {
 	modifier = {
 		direct_vassal_opinion = 5
 		knight_effectiveness_mult = 0.2
-	}
+	} # THE MOD
 
 	flag = global_regular
 	flag = high_medieval_era_regular
@@ -118,7 +118,7 @@ innovation_heraldry = {
 	icon = @raised_banner
 
 	unlock_law = high_partition_succession_law
-	#unlock_law = single_heir_dynasty_house
+	#unlock_law = single_heir_dynasty_house # THE MOD
 	modifier = {
 		monthly_prestige_gain_mult = 0.05
 	}
@@ -194,7 +194,7 @@ innovation_guilds = {
 	icon = @nobility_01
 
 	modifier = {
-		men_at_arms_limit = 1
+		men_at_arms_limit = 1 # THE MOD
 	}
 
 	flag = global_regular

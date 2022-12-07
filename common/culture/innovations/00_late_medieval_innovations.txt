@@ -71,7 +71,7 @@ innovation_standing_armies = {
 	icon = @leadership_2
 	
 	modifier = {
-		men_at_arms_cap = 1
+		men_at_arms_cap = 1 # THE MOD
 	}
 
 	flag = global_regular
@@ -180,7 +180,7 @@ innovation_court_officials = {
 	icon = @nobility_02
 	
 	modifier = {
-		men_at_arms_limit = 1
+		men_at_arms_limit = 1 # THE MOD
 	}
 
 	flag = global_regular
@@ -237,8 +237,11 @@ innovation_condottieri = {
 	icon = @maa_01
 	
 	modifier = {
-		mercenary_count_mult = 1
 		same_culture_mercenary_hire_cost_mult = -0.25
+	}
+
+	culture_modifier = {
+		mercenary_count_mult = 1
 	}
 
 	flag = global_regional

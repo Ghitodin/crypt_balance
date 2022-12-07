@@ -72,7 +72,7 @@ innovation_mustering_grounds = {
 	icon = @leadership_2
 
 	modifier = {
-		men_at_arms_cap = 1
+		men_at_arms_cap = 1 # THE MOD
 	}
 
 	flag = global_regular
@@ -83,6 +83,8 @@ innovation_bannus = {
 	group = culture_group_military
 	culture_era = culture_era_tribal
 	icon = @raised_banner
+
+	custom = unlock_march_contract
 
 	modifier = {
 		levy_reinforcement_rate = 0.15
@@ -158,6 +160,7 @@ innovation_city_planning = {
 	unlock_building = city_01
 	unlock_building = temple_01
 	unlock_building = monastic_schools_01
+	unlock_building = megalith_01
 	unlock_building = market_villages_01
 
 	flag = global_regular
@@ -194,7 +197,7 @@ innovation_ledger = {
 	icon = @administration_2
 
 	modifier = {
-		men_at_arms_limit = 1
+		men_at_arms_limit = 1 # THE MOD
 	}
 
 	flag = global_regular
@@ -215,6 +218,7 @@ innovation_table_of_princes = {
 		}
 	}
 	
+	# THE MOD
 	#unlock_law = single_heir_dynasty_house
 	#custom = unlock_single_heir_dynasty_house_changing
 	monthly_prestige_gain_mult = 0.05

@@ -67,8 +67,6 @@ innovation_burhs = {
 
 
 	custom = unlock_early_medieval_military_buildings
-
-	custom = unlock_march_contract
 	
 	modifier = {
 		levy_size = 0.05
@@ -84,7 +82,7 @@ innovation_house_soldiers = {
 	icon = @maa_01
 
 	modifier = {
-		men_at_arms_cap = 1
+		men_at_arms_cap = 1 # THE MOD
 	}
 
 	flag = global_regular
@@ -214,7 +212,7 @@ innovation_baliffs = {
 	icon = @leadership_1
 
 	modifier = {
-		men_at_arms_limit = 1
+		men_at_arms_limit = 1 # THE MOD
 	}
 
 	flag = global_regular

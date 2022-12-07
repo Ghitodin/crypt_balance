@@ -17,6 +17,11 @@ commander_defender_advantage = {
 	visible = no
 }
 
+commander_coastal_advantage = {
+	advantage = 1
+	name = MOD_COASTAL_ADVANTAGE
+}
+
 commander_random_advantage = {
 	advantage = 1
 	name = MOD_RANDOM_ADVANTAGE
@@ -73,60 +78,61 @@ recently_disembarked_advantage = {
 
 holding_defender_advantage = {
 	advantage = 1
+	visible = no
 }
 
 combat_debt_level_0 = {
-	advantage = -1
+	advantage = -1 # THE MOD
 	image = owner_in_debt
 }
 
 combat_debt_level_1 = {
-	advantage = -2
+	advantage = -2 # THE MOD
 	image = owner_in_debt
 }
 
 combat_debt_level_2 = {
-	advantage = -3
+	advantage = -3 # THE MOD
 	image = owner_in_debt
 }
 
 combat_debt_level_3 = {
-	advantage = -3
+	advantage = -3 # THE MOD
 	image = owner_in_debt
 }
 
 combat_debt_level_4 = {
-	advantage = -4
+	advantage = -4 # THE MOD
 	image = owner_in_debt
 }
 
 combat_debt_level_5 = {
-	advantage = -4
+	advantage = -4 # THE MOD
 	image = owner_in_debt
 }
 
 combat_debt_level_6 = {
-	advantage = -5
+	advantage = -5 # THE MOD
 	image = owner_in_debt
 }
 
 combat_debt_level_7 = {
-	advantage = -5
+	advantage = -5 # THE MOD
 	image = owner_in_debt
 }
 
 combat_debt_level_8 = {
-	advantage = -5
+	advantage = -5 # THE MOD
 	image = owner_in_debt
 }
 
 combat_debt_level_9 = {
-	advantage = -5
+	advantage = -5 # THE MOD
 	image = owner_in_debt
 }
 
 combat_debt_level_no_income = { #Special no income
-	advantage = -5
+	advantage = -5 # THE MOD
 	image = owner_in_debt
 }
 
@@ -140,4 +146,19 @@ defending_controlled_province_advantage = {
 
 gathering_army_advantage = {
 	advantage = -5
+}
+
+owner_is_commander_advantage = {
+	advantage = 1
+	name = MOD_LEAD_BY_OWNER_ADVANTAGE
+}
+
+same_culture_heritage_advantage = {
+	advantage = 1
+	name = MOD_SAME_HERITAGE_COUNTY_ADVANTAGE
+}
+
+independent_primary_defender_advantage = {
+	advantage = 1
+	name = MOD_INDEPENDENT_PRIMARY_DEFENDER_ADVANTAGE
 }

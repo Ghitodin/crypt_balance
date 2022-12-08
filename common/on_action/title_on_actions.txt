@@ -29,6 +29,15 @@ on_title_destroyed = {
 	events = {
 		british_isles.1031	# Danelaw-England partition calc.
 	}
+
+	# remove existing claims
+	effect = {
+		scope:landed_title = {
+			every_claimant = {
+				remove_claim = prev
+			}
+		}
+	}
 }
 
 # A title is transferred to a new character
@@ -37,6 +46,8 @@ on_title_destroyed = {
 # scope:previous_holder = previous holder. Might be dead
 on_title_gain = {
 	effect = {
+		scope:title = { update_dynamic_coa = yes }
+		
 		if = {
 			limit = {
 				scope:title = { is_holy_order = yes }
@@ -64,18 +75,176 @@ on_title_gain = {
 				years = 4
 			}
 		}
+		
+		# Grandeur in elective realms
+		if = {
+			limit = {
+				exists = var:previous_holder_grandeur_value
+				has_royal_court = yes
+			}
+			hidden_effect = {
+				change_current_court_grandeur = -100 # Reset to 0
+				change_current_court_grandeur = var:previous_holder_grandeur_value
+				remove_variable = previous_holder_grandeur_value
+			}
+		}
+
+		# Petition allowed again
+		if = {
+			limit = { has_variable = petition_title_cooldown }
+			remove_variable = petition_title_cooldown
+		}
+
+		if = {
+			limit = {
+				exists = scope:previous_holder
+				scope:previous_holder = {
+					any_character_artifact = {
+						has_variable = artifact_succession_title #Is this an artifact that should follow a title?
+						var:artifact_succession_title = { is_title_created = yes } #Does the title the artifact should follow exist?
+						var:artifact_succession_title = scope:title #Scope title is the artifact title
+					}
+				}
+			}
+			scope:previous_holder = {
+				every_character_artifact = {
+					limit = {
+						has_variable = artifact_succession_title #Is this an artifact that should follow a title?
+						var:artifact_succession_title = { is_title_created = yes } #Does the title the artifact should follow exist?
+						var:artifact_succession_title = scope:title #Scope title is the artifact title
+					}
+					if = {
+						limit = {
+							OR = {
+								scope:transfer_type = flag:conquest
+								scope:transfer_type = flag:conquest_holy_war
+								scope:transfer_type = flag:conquest_claim
+								scope:transfer_type = flag:conquest_populist
+								scope:transfer_type = flag:abdication
+								scope:transfer_type = flag:usurped
+								scope:transfer_type = flag:revoked
+								scope:transfer_type = flag:faction_demand
+							}
+						}
+						set_owner = {
+							target = root
+							history = {
+								type = conquest
+								actor = scope:previous_holder
+								recipient = root
+								location = scope:previous_holder.location
+							}
+						}
+					}
+					else = {
+						set_owner = {
+							target = root
+							history = {
+								type = inherited
+								recipient = root
+							}
+						}
+					}
+				}
+			}
+		}
+
+
+		#Struggle Catalyst
+		if = {
+			limit = {
+				# We are only interested in the title within the Struggle Region
+				title:e_spain = {
+					any_in_de_jure_hierarchy = {
+						this = 	scope:title
+					}
+				}
+				# Only for usurpation
+				scope:transfer_type = flag:usurped
+
+				root = {
+					any_character_struggle = {
+						involvement = involved
+						activate_struggle_catalyst_secondary_character_involvement_involved_trigger = {
+							CATALYST = catalyst_usurp_title
+							CHAR = root
+						}
+					}
+				}
+			}
+			root = {
+				every_character_struggle = {
+					involvement = involved
+					limit = {
+						activate_struggle_catalyst_secondary_character_involvement_involved_trigger = {
+							CATALYST = catalyst_usurp_title
+							CHAR = root
+						}
+					}
+					activate_struggle_catalyst = {
+						catalyst = catalyst_usurp_title
+						character = root
+					}
+				}
+			}
+		}
+
+		# Achievements
+		if = { # FP2 El Cid
+			limit = {
+				scope:title = title:k_valencia
+				has_character_flag = fp2_el_cid_blood_relation_legacy
+			}
+			set_global_variable = { # DO. NOT. USE. add_achievement_global_variable_effect. IT BREAKS THE ACHIEVEMENT.
+				name = fp2_el_cid_achievement_unlocked
+				value = yes
+			}
+		}
+		
+		# Am I The Chad?
+		if = {
+			limit = { root = character:easteregg_chad_uhl }
+			set_house = house:house_chad_uhl
+		}
+		
+		# Memories
+		# Ascended to the throne
+		if = {
+			limit = {
+				OR = {
+					is_ruler = no
+					highest_held_title_tier <= scope:title.tier
+				}
+			}
+			
+			root = {
+				create_character_memory = {
+					type = ascended_throne_memory
+				}
+				
+				scope:new_memory = {
+					save_scope_as = ascended_throne_memory
+					set_variable = {
+						name = landed_title
+						value = scope:title
+					}
+				}
+			}
+		}
 	}
 	events = {
 		roman_restoration.0005		#New Roman Emperor gets Augustus trait. (old holder, if still alive, loses it)
 		roman_restoration.0199		#Restoring the Pentarchy.
 		religious_decision.0312		# Base game: new holder of a county with a runestone
 		fp1_other_decisions.0113	# FP1: new holder of a county with a runestone
-		coa.1						# check if title Coat of Arms should change.
 		delay = { days = 1 }
 		realm_maintenance.2001		#Big notification about inheriting emperor tier title
 		british_isles.1032			# Danelaw-England partition calc.
 		fp1_major_decisions.1011	# Harald Tanglehair becomes Harald Fairhair.
 		fp1_major_decisions.1012	# If Norway has just been created for the first time, flag that.
+		title_event.0001			# Rename West Francia to France
+		title_event.0002			# Rename East Francia to Germany
+		title_event.0011			# Asturias becomes Leon upon emergence of Castille
 	}
 }
 
@@ -94,7 +263,7 @@ on_title_gain_inheritance = {
 			}
 			add_dread = 50
 		}
-		
+		# THE MOD
 		every_sibling = {
 			if = {
 				limit = {
@@ -132,6 +301,21 @@ on_title_lost = {
 	}
 
 	effect = {
+		#Make sure nobody ever has only the Kingdom of Fashion
+		if = {
+			limit = {
+				scope:title = { tier = tier_kingdom }
+				has_title = title:k_fashion
+				NOT = {
+					any_held_title = { # Only trigger if you don't have any kingdom titles other than Fashion and the kingdom you just lost. Double negative is confusing but it's the only way I could think to script it
+						tier = tier_kingdom
+						NOT = { this = title:k_fashion }
+						NOT = { this = scope:title }
+					}
+				}
+			}
+			destroy_title = title:k_fashion
+		}
 		#Earmark landless Scandinavians for adventuring.
 		if = {
 			limit = {
@@ -181,6 +365,19 @@ on_title_lost = {
 			}
 		}
 
+		#To remove concubines if a character becomes unlanded
+		if = {
+			limit = {
+				is_landed = no
+				any_concubine = { count >= 1 }
+			}
+			every_concubine = {
+				root = {
+					remove_concubine = prev
+				}
+			}
+		}
+
 		#Apply loss of stress to the Rivals
 		if = {
 			limit = {
@@ -217,15 +414,86 @@ on_title_lost = {
 				}
 			}
 		}
+		
+		# Memories
+		# Lost a significant title
+		if = {
+			limit = {
+				scope:title.tier >= highest_held_title_tier
+				exists = scope:new_holder
+			}
+			
+			root = {
+				create_character_memory = {
+					type = lost_title_memory
+					
+					participants = {
+						new_holder = scope:new_holder
+					}
+				}
+				
+				scope:new_memory = {
+					save_scope_as = lost_title_memory
+					set_variable = {
+						name = landed_title
+						value = scope:title
+					}
+				}
+			}
+		}
 	}
 }
 
 # A claim is gained by a character
 # root = the claimant
 # scope:title = the title that is claimed
+# scope:transfer_type = flag:inheritance or none
 on_explicit_claim_gain = {
-	events = {
-		coa.1 # check if title Coat of Arms should change.
+	effect = {
+		if = {
+			limit = { 
+				title:k_england.holder = root
+			}
+			title:k_england = {
+				update_dynamic_coa = yes
+			}
+		}
+		# Struggle Catalyst
+		if = {
+			limit = {
+				NOT = { scope:transfer_type = flag:inheritance }
+
+				title:e_spain = {
+					any_in_de_jure_hierarchy = {
+						this = 	scope:title
+					}
+				}
+				root = {
+					any_character_struggle = {
+						involvement = involved
+						activate_struggle_catalyst_secondary_character_involvement_involved_trigger = {
+							CATALYST = catalyst_gain_claim_on_title
+							CHAR = root
+						}
+					}
+				}
+			}
+			root = {
+				every_character_struggle = {
+					involvement = involved
+					limit = {
+						activate_struggle_catalyst_secondary_character_involvement_involved_trigger = {
+							CATALYST = catalyst_gain_claim_on_title
+							CHAR = root
+						}
+					}
+					activate_struggle_catalyst = {
+						catalyst = catalyst_gain_claim_on_title
+						character = root
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -233,8 +501,15 @@ on_explicit_claim_gain = {
 # root = the claimant
 # scope:title = the title that was claimed
 on_explicit_claim_lost = {
-	events = {
-		coa.1 # check if title Coat of Arms should change.
+	effect = {
+		if = {
+			limit = { 
+				title:k_england.holder = root 
+			}
+			title:k_england = {
+				update_dynamic_coa = yes
+			}
+		}
 	}
 }
 
@@ -276,9 +551,22 @@ on_rank_down = { # Will not fire during history execution or for dying character
 	events = {
 	}
 	effect = {
-		add_character_flag = {
-			flag = make_suicide_available
-			years = 5
+		if = {
+			limit = {
+				NOR = {
+					has_trait = humble
+					has_trait = content
+					has_trait = generous
+				}
+			}
+			add_character_flag = {
+				flag = make_suicide_available
+				years = 5
+			}
+			set_variable = {
+				name = rank_demoted
+				value = yes
+			}
 		}
 		update_embassies_effect = yes
 		every_ally = {
@@ -292,6 +580,39 @@ on_rank_down = { # Will not fire during history execution or for dying character
 # scope:vassal = vassal being gained
 # scope:old_liege = the previous liege of the vassal. Might be the null character (vassal used to be a non-ruler or independent), so make sure to use "exists" checks where relevant
 on_vassal_gained = {
+	effect = {
+		# Struggle Catalyst
+		if = {
+			limit = {
+				# Verify if vassal used to be independent
+				NOT = { exists = scope:old_liege }
+				root = {
+					any_character_struggle = {
+						involvement = involved
+						activate_struggle_catalyst_secondary_character_involvement_involved_trigger = {
+							CATALYST = catalyst_vassalize_independent_ruler
+							CHAR = scope:vassal
+						}
+					}
+				}
+			}
+			root = {
+				every_character_struggle = {
+					involvement = involved
+					limit = {
+						activate_struggle_catalyst_secondary_character_involvement_involved_trigger = {
+							CATALYST = catalyst_vassalize_independent_ruler
+							CHAR = scope:vassal
+						}
+					}
+					activate_struggle_catalyst = {
+						catalyst = catalyst_vassalize_independent_ruler
+						character = root
+					}
+				}
+			}
+		}
+	}
 	events = {
 		realm_maintenance.1000 # Notify vassals of new liege
 	}

@@ -53,7 +53,7 @@
 						value = clan_government_levies_min_ca_3
 					}
 					else = {
-						value = 0.1
+						value = 0.1 # THE MOD
 					}
 				}
 			}
@@ -108,7 +108,7 @@
 						value = clan_government_tax_min_ca_3
 					}
 					else = {
-						value = 0.1
+						value = 0.1 # THE MOD
 					}
 				}
 			}

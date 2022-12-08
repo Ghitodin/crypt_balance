@@ -8,7 +8,7 @@
 
 feudal_elective = {
 	elector_vote_strength = {
-		base = 4
+		base = 4 # THE MOD
 		modifier = { #Sicilian Parliamentary Support
 			desc = tooltip_feudal_vote_strength_parliament
 			add = 1
@@ -19,12 +19,12 @@ feudal_elective = {
 		}
 		modifier = { #Imperial Dignity
 			desc = tooltip_feudal_vote_strength_emperor_tier
-			add = -4
+			add = -4 # THE MOD
 			highest_held_title_tier = 5
 		}
 		modifier = { #Royal Dignity
 			desc = tooltip_feudal_vote_strength_king_tier
-			add = 1
+			add = 1 # THE MOD
 			highest_held_title_tier = 4
 		}
 		modifier = { #Princely Dignity
@@ -33,7 +33,7 @@ feudal_elective = {
 			highest_held_title_tier = 3
 		}
 		
-		modifier = { # is not AI
+		modifier = { # is not AI # THE MOD
 			desc = "Is a player: -4"
 			add = -4
 			NOR = {
@@ -50,11 +50,12 @@ feudal_elective = {
 					limit = {
 						max_military_strength > scope:holder.max_military_strength
 					}
-					add = 0
+					add = 0 # THE MOD
 				}
 			}
 			NOT = { this = scope:holder }
 			is_powerful_vassal = yes
+			liege = scope:holder
 		}
 		modifier = { #Clerical Influence
 			desc = tooltip_feudal_vote_strength_theocrat

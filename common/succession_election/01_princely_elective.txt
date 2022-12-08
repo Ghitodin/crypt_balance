@@ -8,18 +8,18 @@
 
 princely_elective = { #HRE Elective.
 	elector_vote_strength = {
-		base = 4
+		base = 4 # THE MOD
 		modifier = { #Imperial Dignity
 			desc = tooltip_feudal_vote_strength_emperor_tier
-			add = -4
+			add = -4 # THE MOD
 			highest_held_title_tier = 5
 		}
 		modifier = { #Royal Dignity
 			desc = tooltip_feudal_vote_strength_king_tier
-			add = 0
+			add = 0 # THE MOD
 			highest_held_title_tier = 4
 		}
-		
+		 # THE MOD
 		modifier = { # is not AI
 			desc = "Is a player: -4"
 			add = -4
@@ -37,11 +37,12 @@ princely_elective = { #HRE Elective.
 					limit = {
 						max_military_strength > scope:holder.max_military_strength
 					}
-					add = 0
+					add = 0 # THE MOD
 				}
 			}
 			NOT = { this = scope:holder }
 			is_powerful_vassal = yes
+			liege = scope:holder
 		}
 		modifier = { #Clerical Influence
 			desc = tooltip_feudal_vote_strength_theocrat
@@ -81,6 +82,14 @@ princely_elective = { #HRE Elective.
 					is_vassal_of = scope:holder
 					is_independent_ruler = yes
 				}
+				trigger_if = { #Must be true priests
+					limit = { has_government = theocracy_government }
+					trigger_if = {
+						limit = { is_female = yes }
+						faith_dominant_gender_female_or_equal = yes
+					}
+					trigger_else = { faith_dominant_gender_male_or_equal = yes }
+				}
 			}
 		}
 		priority = {
@@ -98,35 +107,8 @@ princely_elective = { #HRE Elective.
 					}
 				}
 				faith = scope:holder.faith
-				OR = { # To make sure they are still de jure vassals of HRE #TODO_CD:Replace with dynamic version once creating the HRE is made into a dynamic decision.
-					title:c_cologne = {
-						holder = root
-						scope:title = { is_de_jure_liege_or_above_target = prev }
-					}
-					title:c_mainz = {
-						holder = root
-						scope:title = { is_de_jure_liege_or_above_target = prev }
-					}
-					title:c_trier = {
-						holder = root
-						scope:title = { is_de_jure_liege_or_above_target = prev }
-					}
-					title:d_bohemia = {
-						holder = root
-						scope:title = { is_de_jure_liege_or_above_target = prev }
-					}
-					title:d_east_franconia = {
-						holder = root
-						scope:title = { is_de_jure_liege_or_above_target = prev }
-					}
-					title:d_ostfalen = { #Saxony
-						holder = root
-						scope:title = { is_de_jure_liege_or_above_target = prev }
-					}
-					title:d_ostmark = { #Brandenburg
-						holder = root
-						scope:title = { is_de_jure_liege_or_above_target = prev }
-					}
+				any_held_title = {
+					is_target_in_global_variable_list = { name = hre_elector_list target = this }
 				}
 			}
 

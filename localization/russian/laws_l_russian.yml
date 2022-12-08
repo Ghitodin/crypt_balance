@@ -22,7 +22,8 @@
  crown_authority_2:0 "Высокий авторитет короны"
  crown_authority_2_effects:3 "$EFFECT_LIST_BULLET$ Правители могут выбирать из доступных [Concept( 'succession_law', 'законов наследования' )|El]\n$EFFECT_LIST_BULLET$ [vassals|E] не могут начинать [Concept( 'war', 'войну' )|El] против других вассалов, если [liege|El] у них не [hook|El].\n$EFFECT_LIST_BULLET$ Персонажи вне [Concept( 'realm', 'державы' )|El] не могут наследовать [titles|El] вассалов.\n$EFFECT_LIST_BULLET$ Всех вассалов, которые противятся отъему титулов или вассалов, объявляют [Concept( 'criminals', 'преступниками' )|El]."
  crown_authority_3:0 "Абсолютный авторитет короны"
- crown_authority_3_effects:1 "$EFFECT_LIST_BULLET$ [vassals|E] не могут объявлять никакие [Concept( 'wars', 'войны' )|El], если только [liege|El] у них не [hook|El]."
+ # THE MOD
+ #crown_authority_3_effects:1 "$EFFECT_LIST_BULLET$ [vassals|E] не могут объявлять никакие [Concept( 'wars', 'войны' )|El], если только [liege|El] у них не [hook|El].\n$EFFECT_LIST_BULLET$ Правитель назначает [Concept( 'heir', 'наследника' )|E]"
  crown_authority_1_effects_not_in_prev:0 "$EFFECT_LIST_BULLET$ Если будет действовать [clan_government|l], [vassals|El] станут собирать не менее [EmptyScope.ScriptValue('clan_government_levies_min_ca_1')|%0V] [Concept( 'levies', 'ополчения' )|E] и отдавать [EmptyScope.ScriptValue('clan_government_tax_min_ca_1')|%0V] [Concept( 'income', 'дохода' )|El]"
  crown_authority_2_effects_not_in_prev:0 "$EFFECT_LIST_BULLET$ Если будет действовать [clan_government|l], [vassals|El] станут собирать не менее [EmptyScope.ScriptValue('clan_government_levies_min_ca_2')|%0V] [Concept( 'levies', 'ополчения' )|E] и отдавать [EmptyScope.ScriptValue('clan_government_tax_min_ca_2')|%0V] [Concept( 'income', 'дохода' )|El]"
  crown_authority_3_effects_not_in_prev:0 "$EFFECT_LIST_BULLET$ Если будет действовать [clan_government|l], [vassals|El] станут собирать не менее [EmptyScope.ScriptValue('clan_government_levies_min_ca_3')|%0V] [Concept( 'levies', 'ополчения' )|E] и отдавать [EmptyScope.ScriptValue('clan_government_tax_min_ca_3')|%0V] [Concept( 'income', 'дохода' )|El]"
@@ -37,8 +38,8 @@
  MY_DYNASTY_MEMBER_LEADS_THE_ELECTION:1 "Член вашей [Concept( 'dynasty', 'династии' )|E] ([CHARACTER.GetPrimaryTitle.GetHeir.GetShortUIName|V]) лидирует на выборах по вашему [Concept( 'primary_title', 'первому титулу' )|E]"
  I_HAVE_POWERFUL_VASSAL_WITH_NEGATIVE_OPINION:2 "Один или несколько из ваших [Concept( 'powerful_vassal', 'могущественных вассалов' )|E] плохого мнения о вас, что не препятствует изменениям [Concept( 'succession_laws', 'законов о наследовании' )|E]"
  designate_heir:0 "Назначить наследником"
- CROWN_AUTHORITY_IS_ON_COOLDOWN:1 "Не так давно ваш авторитет правителя уже повышался. Поднять его сильнее будет можно не раньше [GetCurrentDateWithDiff( GetVarTimeRemaining( CHARACTER.MakeScope, 'crown_authority_cooldown') )]"
- TRIBAL_AUTHORITY_IS_ON_COOLDOWN:1 "Не так давно ваш авторитет правителя уже повышался. Поднять его сильнее будет можно не раньше [GetCurrentDateWithDiff( GetVarTimeRemaining( CHARACTER.MakeScope, 'tribal_authority_cooldown') )]"
+ CROWN_AUTHORITY_IS_ON_COOLDOWN:2 "Не так давно ваш авторитет правителя уже менялся. Повторно изменить его можно будет не раньше [GetCurrentDateWithDiff( GetVarTimeRemaining( CHARACTER.MakeScope, 'crown_authority_cooldown') )]"
+ TRIBAL_AUTHORITY_IS_ON_COOLDOWN:2 "Не так давно ваш авторитет вождя уже менялся. Повторно изменить его можно будет не раньше [GetCurrentDateWithDiff( GetVarTimeRemaining( CHARACTER.MakeScope, 'tribal_authority_cooldown') )]"
  tribal_authority:0 "[tribal_authority|E]"
  tribal_authority_0:0 "Разобщенные племена"
  tribal_authority_0_effects_not_in_prev:1 "$EFFECT_LIST_BULLET$[Concept( 'characters', 'Персонажей' )|E] #N нельзя#! заключать [Concept( 'imprisoned', 'в тюрьму' )|E]\n\n#weak Вассалы обязаны присылать [levies|El] и [taxes|El], но в остальном действуют по собственному разумению.#!"
@@ -48,3 +49,6 @@
  tribal_authority_2_effects:0 "$EFFECT_LIST_BULLET$ Можно отнимать [titles|El].\n$EFFECT_LIST_BULLET$ Можно отнимать [Concept( 'vassals', 'вассалов' )|El]."
  tribal_authority_3:0 "Абсолютный авторитет вождя"
  tribal_authority_3_effects:0 "$EFFECT_LIST_BULLET$ [Concept( 'independent', 'Независимый' )|E] [Concept( 'tribal', 'племенной' )|E] правитель может перейти к оседлому образу жизни, став [Concept( 'feudal', 'феодалом' )|E] или основав [Concept( 'clan', 'клан' )|E]"
+
+ # THE MOD
+ crown_authority_3_effects:1 "$EFFECT_LIST_BULLET$ [vassals|E] не могут объявлять никакие [Concept( 'wars', 'войны' )|El], если только [liege|El] у них не [hook|El]."

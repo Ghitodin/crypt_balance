@@ -2,14 +2,14 @@
 	#Default Feudal Elective
 	feudal_elective_succession_law = {
 		can_have = {
-			OR = {
+			OR = { # THE MOD
 				has_government = feudal_government
 				has_government = clan_government
 			}
 			highest_held_title_tier >= tier_empire
 			NOR = { #Cultures have their special flavor.
-				culture = culture:anglo_saxon
-				has_culture_group = culture_group:north_germanic_group
+				culture = { has_cultural_parameter = witenagemot_succession_enabled }
+				culture = { has_cultural_parameter = scandinavian_elective_enabled }
 			}
 		}
 		can_pass = {
@@ -25,7 +25,7 @@
 		flag = elective_succession_law
 		title_allegiance_opinion = 10
 		revoke_cost = {
-			prestige = 10000
+			prestige = 10000 # THE MOD
 		}
 		pass_cost = {
 			prestige = change_title_succession_law_prestige_cost
@@ -35,7 +35,10 @@
 	#HRE Succession
 	princely_elective_succession_law = {
 		can_have = {
-			has_government = feudal_government
+			OR = {
+				has_government = feudal_government
+				has_government = clan_government
+			}
 			highest_held_title_tier = tier_empire
 		}
 		can_pass = {
@@ -67,13 +70,14 @@
 		can_have = {
 			OR = {
 				has_government = feudal_government
+				has_government = clan_government
 				has_government = tribal_government
 			}
 			highest_held_title_tier >= tier_kingdom
 		}
 		can_pass = {
 			can_change_title_law_trigger = yes
-			culture = culture:anglo_saxon
+			culture = { has_cultural_parameter = witenagemot_succession_enabled }
 		}
 		can_title_have = {
 			can_title_have_law_general_trigger = yes
@@ -96,13 +100,14 @@
 		can_have = {
 			OR = {
 				has_government = feudal_government
+				has_government = clan_government
 				has_government = tribal_government
 			}
 			highest_held_title_tier >= tier_duchy
 		}
 		can_pass = {
 			can_change_title_law_trigger = yes
-			has_culture_group = culture_group:north_germanic_group
+			culture = { has_cultural_parameter = scandinavian_elective_enabled }
 		}
 		can_title_have = {
 			can_title_have_law_general_trigger = yes
@@ -125,6 +130,7 @@
 		can_have = {
 			OR = {
 				has_government = feudal_government
+				has_government = clan_government
 				has_government = tribal_government
 			}
 			highest_held_title_tier >= tier_duchy
@@ -133,8 +139,8 @@
 			can_change_title_law_trigger = yes
 			custom_description = {
 				OR = {
-					has_culture_group = culture_group:brythonic_group
-					has_culture_group = culture_group:goidelic_group
+					culture = { has_cultural_pillar = heritage_brythonic }
+					culture = { has_cultural_pillar = heritage_goidelic }
 				}
 				text = succession_laws_must_have_valid_tanistry_culture
 			}

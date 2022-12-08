@@ -6,7 +6,7 @@ fp1_adventure_legacy_1 = { # Wanderlust
 	can_be_picked = { eligible_for_fp1_dynasty_legacies_trigger = yes }
 
 	character_modifier = {
-		diplomatic_range_mult = 0.2
+		diplomatic_range_mult = 0.2 # THE MOD
 		#opinion_of_different_culture = 10
 		#different_culture_opinion = 10
 		ai_boldness = medium_positive_ai_value
@@ -22,7 +22,7 @@ fp1_adventure_legacy_1 = { # Wanderlust
 		value = 11
 		if = {
 			limit = {
-				has_culture_group = culture_group:north_germanic_group
+				culture = { has_cultural_pillar = heritage_north_germanic }
 			}
 			multiply = 10
 		}
@@ -42,7 +42,7 @@ fp1_adventure_legacy_2 = { # Gift-Givers
 		custom_description_no_bullet = { text = fp1_adventure_legacy_2_secondary_effect }
 		# Placed below secondary effect for aesthetic purposes.
 		#custom_description_no_bullet = { text = fp1_adventure_legacy_2_effect }
-		supply_duration = 1
+		supply_duration = 1 # THE MOD
 	}
 	character_modifier = {
 		supply_duration = 0.3
@@ -70,6 +70,7 @@ fp1_adventure_legacy_4 = { # Veteran Explorers
 	character_modifier = {
 		movement_speed = 0.1
 		enemy_hostile_scheme_success_chance_add = -15
+		#supply_duration = 1 # THE MOD
 	}
 }
 
@@ -122,6 +123,7 @@ fp1_pillage_legacy_1 = { # Sea-Wolves
 	}
 
 	effect = {
+		# THE MOD
 		#custom_description_no_bullet = { text = fp1_pillage_legacy_1_effect }
 	}
 
@@ -129,7 +131,7 @@ fp1_pillage_legacy_1 = { # Sea-Wolves
 		value = 11
 		if = {
 			limit = {
-				has_culture_group = culture_group:north_germanic_group
+				culture = { has_cultural_pillar = heritage_north_germanic }
 			}
 			multiply = 10
 		}
@@ -146,9 +148,9 @@ fp1_pillage_legacy_2 = { # Always Space in the Hold
 	legacy = fp1_pillage_legacy_track
 
 	character_modifier = {
-		max_loot_mult = 0.4
+		max_loot_mult = 0.4 # THE MOD
 		defender_advantage = 5
-		heavy_infantry_max_size_add = 1
+		heavy_infantry_max_size_add = 1 # THE MOD
 	}
 }
 
@@ -167,6 +169,7 @@ fp1_pillage_legacy_4 = { # Making a Killing
 	# Ewww, pun title. I feel deep shame :(.
 
 	effect = {
+		# THE MOD
 		#custom_description_no_bullet = { text = fp1_pillage_legacy_4_effect }
 	}
 

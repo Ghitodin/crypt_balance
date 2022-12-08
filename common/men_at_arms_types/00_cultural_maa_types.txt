@@ -10,7 +10,7 @@ huscarl = {
 	damage = 40
 	toughness = 26
 	pursuit = 0
-	screen = 20
+	screen = 20 # THE MOD
 	
 	terrain_bonus = {
 		taiga = { damage = 8 }
@@ -22,16 +22,20 @@ huscarl = {
 		archers = 1
 	}
 
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_huscarls }
+	}
+
 	winter_bonus = {
 		normal_winter = { toughness = 6 screen = 6 }
 		harsh_winter = { toughness = 6 screen = 6 }
 	}
-	
+	# THE MOD
 	buy_cost = { gold = heavy_infantry_recruitment_cost  }
 	low_maintenance_cost = { gold = heavy_infantry_low_maint_cost  }
 	high_maintenance_cost = { gold = heavy_infantry_high_maint_cost  }
 	
-	stack = 75
+	stack = 75 # THE MOD
 	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = danish_huskarls
 }
@@ -45,9 +49,9 @@ landsknecht = {
 	screen = 0
 	
 	terrain_bonus = {
-		hills = { damage = 3 toughness = 8 }
 		mountains = { damage = 5 toughness = 12 }
 		desert_mountains = { damage = 5 toughness = 12 }
+		hills = { damage = 3 toughness = 8 }
 	}
 
 	counters = {
@@ -67,14 +71,34 @@ landsknecht = {
 
 longbowmen = {
 	type = archers
+	can_recruit = {
+		culture = {
+			has_cultural_parameter = unlock_maa_longbowmen
+		}
+	}
 	
-	damage = 45
-	toughness = 14
+	damage = 20
+	toughness = 8
 	pursuit = 0
 	screen = 0
 	
 	terrain_bonus = {
 		hills = { damage = 12 toughness = 4 }
+	}
+
+	era_bonus = {
+		culture_era_early_medieval = {
+			damage = 8
+			toughness = 2
+		}
+		culture_era_high_medieval = {
+			damage = 16
+			toughness = 4
+		}
+		culture_era_late_medieval = {
+			damage = 24
+			toughness = 6
+		}
 	}
 
 	counters = {
@@ -193,14 +217,16 @@ picchieri = {
 	screen = 0
 	
 	terrain_bonus = {
-		hills = { toughness = 10 }
 		mountains = { toughness = 12 }
 		desert_mountains = { toughness = 12 }
+		hills = { toughness = 10 }
 	}
 
 	counters = {
 		light_cavalry = 1
 		heavy_cavalry = 1
+		camel_cavalry = 1
+		elephant_cavalry = 1
 	}
 
 	buy_cost = { gold = picchieri_recruitment_cost }
@@ -238,11 +264,11 @@ caballero = {
 	
 	damage = 22
 	toughness = 16
-	pursuit = 20
+	pursuit = 20 # THE MOD
 	screen = 50
 	
 	terrain_bonus = {
-		hills = { damage = 10 toughness = 5 }
+		hills = { damage = 15 toughness = 10 }
 		plains = { damage = 10 }
 		drylands = { damage = 10 }
 		mountains = { damage = -8 pursuit = -10 }
@@ -266,6 +292,44 @@ caballero = {
 	ai_quality = { value = @[cultural_maa_extra_ai_score + 20] }
 	icon = light_cavalry
 }
+
+monaspa = {
+	type = heavy_cavalry
+	
+	damage = 110
+	toughness = 30
+	pursuit = 25
+	screen = 10
+	
+	terrain_bonus = {
+		hills = { damage = 20 pursuit = 10 }
+		mountains = { damage = 20 pursuit = 10 }
+		desert_mountains = { damage = -30 }
+		wetlands = { damage = -80 toughness = -15 pursuit = -20 }
+	}
+
+	counters = {
+		archers = 1
+	}
+
+	winter_bonus = {
+		normal_winter = { damage = -10 toughness = -5 }
+		harsh_winter = { damage = -20 toughness = -5 }
+	}
+	
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_monaspa }
+	}
+
+	buy_cost = { gold = monaspa_recruitment_cost }
+	low_maintenance_cost = { gold = monaspa_low_maint_cost }
+	high_maintenance_cost = { gold = monaspa_high_maint_cost }
+	
+	stack = 50
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = heavy_cavalry
+}
+
 
 cataphract = {
 	type = heavy_cavalry
@@ -291,6 +355,10 @@ cataphract = {
 	winter_bonus = {
 		normal_winter = { damage = -15 toughness = -5 }
 		harsh_winter = { damage = -30 toughness = -10 }
+	}
+	
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_cataphract }
 	}
 
 	buy_cost = { gold = cataphract_recruitment_cost }
@@ -344,10 +412,10 @@ schiltron = {
 	screen = 0
 	
 	terrain_bonus = {
-		plains = { damage = 8 }
-		hills = { toughness = 8 }
 		mountains = { toughness = 12 }
 		desert_mountains = { toughness = 12 }
+		hills = { toughness = 8 }
+		plains = { damage = 8 }
 	}
 
 	counters = {
@@ -386,6 +454,10 @@ metsanvartija = {
 		harsh_winter = { toughness = 4 screen = 8 }
 	}
 
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_metsanvartija }
+	}
+
 	buy_cost = { gold = metsanvartija_recruitment_cost }
 	low_maintenance_cost = { gold = metsanvartija_low_maint_cost }
 	high_maintenance_cost = { gold = metsanvartija_high_maint_cost }
@@ -396,7 +468,7 @@ metsanvartija = {
 }
 
 horse_archers = {
-	type = skirmishers
+	type = archer_cavalry
 	
 	damage = 45
 	toughness = 20
@@ -416,6 +488,10 @@ horse_archers = {
 	counters = {
 		skirmishers = 1
 		heavy_infantry = 1
+	}
+
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_horse_archers }
 	}
 
 	buy_cost = { gold = horse_archers_recruitment_cost }
@@ -438,6 +514,10 @@ ayyar = {
 	counters = {
 		pikemen = 1
 	}
+
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_ayyar }
+	}
 	
 	buy_cost = { gold = ayyar_recruitment_cost }
 	low_maintenance_cost = { gold = ayyar_low_maint_cost }
@@ -455,10 +535,14 @@ mubarizun = {
 	toughness = 25
 	pursuit = 0
 	screen = 0
-	
+
 	counters = {
 		pikemen = 1
 		heavy_infantry = 1
+	}
+	
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_mubarizun }
 	}
 	
 	buy_cost = { gold = mubarizun_recruitment_cost }
@@ -468,6 +552,107 @@ mubarizun = {
 	stack = 100
 	ai_quality = { value = @[cultural_maa_extra_ai_score - 20] }
 	icon = heavy_infantry
+}
+
+mulaththamun = { #Murabit Cavalry
+	type = light_cavalry
+	
+	damage = 22
+	toughness = 15
+	pursuit = 30
+	screen = 40
+	
+	terrain_bonus = {
+		drylands = { damage = 10 toughness = 5 screen = 10 pursuit = 5 }
+		desert = { damage = 10 toughness = 5 screen = 20 pursuit = 10 }
+		plains = { damage = 10 toughness = 3 screen = 5 pursuit = 5 }
+		oasis = { damage = 10 }
+		
+		mountains = { damage = -8 pursuit = -10 }
+		desert_mountains = { damage = -12 pursuit = -20 }
+		wetlands = { damage = -15 toughness = -10 pursuit = -20 screen = -20
+		}
+	}
+
+	counters = {
+		archers = 1
+	}
+
+	winter_bonus = {
+		harsh_winter = { damage = -5 toughness = -2 }
+	}
+
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_mulaththamun }
+	}
+
+	buy_cost = { gold = mulaththamun_recruitment_cost }
+	low_maintenance_cost = { gold = mulaththamun_low_maint_cost }
+	high_maintenance_cost = { gold = mulaththamun_high_maint_cost }
+	
+	stack = 100
+	ai_quality = { value = @[cultural_maa_extra_ai_score + 20] }
+	icon = light_cavalry
+}
+
+
+archers_of_the_nile = { #Nile Archers
+	type = archers
+	
+	damage = 30
+	toughness = 14
+	pursuit = 10
+	screen = 10
+	
+	terrain_bonus = {
+		floodplains = { damage = 15 toughness = 15 pursuit = 10 screen = 10 }
+		oasis = { damage = 15 pursuit = 5 screen = 5 }
+		drylands = { damage = 10 toughness = 10 }
+		desert = { damage = -5 toughness = -5 }
+	}
+
+	counters = {
+		skirmishers = 1
+	}
+
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_archers_of_the_nile }
+	}
+
+	buy_cost = { gold = archers_of_the_nile_recruitment_cost }
+	low_maintenance_cost = { gold = archers_of_the_nile_low_maint_cost }
+	high_maintenance_cost = { gold = archers_of_the_nile_high_maint_cost }
+	
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = bowmen
+}
+
+paiks = { #Indian Footmen - carrying bows but also swords and spears.
+	type = archers
+	
+	damage = 28
+	toughness = 16
+	pursuit = 10
+	screen = 10
+	
+	terrain_bonus = {
+		jungle = { damage = 15 toughness = 15 pursuit = 10 screen = 10 }
+		forest = { damage = 15 pursuit = 5 screen = 5 }
+		hills = { damage = 10 toughness = 10 }
+	}
+
+	counters = {
+		elephant_cavalry = 1
+	}
+
+	buy_cost = { gold = paiks_recruitment_cost }
+	low_maintenance_cost = { gold = paiks_low_maint_cost }
+	high_maintenance_cost = { gold = paiks_high_maint_cost }
+	
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = bowmen
 }
 
 druzhina = {
@@ -480,6 +665,10 @@ druzhina = {
 	
 	counters = {
 		pikemen = 1
+	}
+
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_druzhina }
 	}
 	
 	buy_cost = { gold = druzhina_recruitment_cost }
@@ -516,6 +705,10 @@ hussar = {
 		harsh_winter = { damage = -5 }
 	}
 
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_hussar }
+	}
+
 	buy_cost = { gold = hussar_recruitment_cost }
 	low_maintenance_cost = { gold = hussar_low_maint_cost }
 	high_maintenance_cost = { gold = hussar_high_maint_cost }
@@ -541,6 +734,10 @@ horn_warrior = {
 
 	counters = {
 		heavy_infantry = 1
+	}
+
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_horn_warrior }
 	}
 
 	buy_cost = { gold = horn_warrior_recruitment_cost }
@@ -570,6 +767,10 @@ bush_hunter = {
 		skirmishers = 1
 	}
 
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_bush_hunter }
+	}
+
 	buy_cost = { gold = bush_hunter_recruitment_cost }
 	low_maintenance_cost = { gold = bush_hunter_low_maint_cost }
 	high_maintenance_cost = { gold = bush_hunter_high_maint_cost }
@@ -582,22 +783,60 @@ bush_hunter = {
 shomer = {
 	type = skirmishers
 	
-	damage = 13
-	toughness = 22
-	pursuit = 10
-	screen = 28
+	damage = 13 # THE MOD
+	toughness = 22 # THE MOD
+	pursuit = 10 # THE MOD
+	screen = 28 # THE MOD
 	
 	counters = {
 		heavy_infantry = 1
+	}
+
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_shomer }
 	}
 
 	buy_cost = { gold = shomer_recruitment_cost }
 	low_maintenance_cost = { gold = shomer_low_maint_cost }
 	high_maintenance_cost = { gold = shomer_high_maint_cost }
 	
-	stack = 120
+	stack = 120 # THE MOD
 	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = skirmishers
+}
+
+garudas = {
+	type = heavy_infantry
+	
+	damage = 42
+	toughness = 22
+	pursuit = 24
+	screen = 0
+	
+	terrain_bonus = {
+		jungle = { damage = 8 }
+		forest = { damage = 8 }
+	}
+	
+	counters = {
+		pikemen = 1
+		archers = 1
+	}
+	
+	buy_cost = { gold = garudas_recruitment_cost }
+	low_maintenance_cost = { gold = garudas_low_maint_cost }
+	high_maintenance_cost = { gold = garudas_high_maint_cost }
+	
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_garudas }
+	}
+	
+	stack = 100
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = heavy_infantry
 }
 
 khandayat = {
@@ -617,6 +856,10 @@ khandayat = {
 		pikemen = 1
 	}
 	
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_khandayat }
+	}
+
 	buy_cost = { gold = khandayat_recruitment_cost }
 	low_maintenance_cost = { gold = khandayat_low_maint_cost }
 	high_maintenance_cost = { gold = khandayat_high_maint_cost }
@@ -646,6 +889,10 @@ mountaineer = {
 	winter_bonus = {
 		normal_winter = { damage = 5 }
 		harsh_winter = { damage = 5 }
+	}
+
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_mountaineer }
 	}
 	
 	buy_cost = { gold = mountaineer_recruitment_cost }
@@ -712,6 +959,10 @@ guinea_warrior = { #AKA Guinean uplander
 		heavy_infantry = 1
 	}
 
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_guinea_warrior }
+	}
+
 	buy_cost = { gold = guinea_warrior_recruitment_cost }
 	low_maintenance_cost = { gold = guinea_warrior_low_maint_cost }
 	high_maintenance_cost = { gold = guinea_warrior_high_maint_cost }
@@ -769,6 +1020,10 @@ abudrar = { #AKA Jabali - Berber mountaineer
 		light_cavalry = 1
 		heavy_infantry = 1
 	}
+
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_abudrar }
+	}
 	
 	buy_cost = { gold = abudrar_recruitment_cost }
 	low_maintenance_cost = { gold = abudrar_low_maint_cost }
@@ -786,7 +1041,7 @@ zbrojnosh = {
 	toughness = 20
 	pursuit = 0
 	screen = 10
-	
+
 	terrain_bonus = {
 		hills = { damage = 8 toughness = 5 }
 		mountains = { damage = 6 }
@@ -797,6 +1052,10 @@ zbrojnosh = {
 	counters = {
 		pikemen = 1
 		archers = 1
+	}
+	
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_zbrojnosh }
 	}
 	
 	buy_cost = { gold = zbrojnosh_recruitment_cost }
@@ -824,6 +1083,10 @@ palace_guards = {
 	counters = {
 		pikemen = 2
 	}
+
+	can_recruit = {
+		culture = { has_cultural_parameter = unlock_maa_palace_guards }
+	}
 	
 	buy_cost = { gold = palace_guards_recruitment_cost }
 	low_maintenance_cost = { gold = palace_guards_low_maint_cost }
@@ -850,6 +1113,7 @@ chu_ko_nu = {
 	
 	counters = {
 		skirmishers = 1
+		archer_cavalry = 0.5
 	}
 	
 	buy_cost = { gold = chu_ko_nu_recruitment_cost }
@@ -859,4 +1123,34 @@ chu_ko_nu = {
 	stack = 100
 	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = crossbowmen
+}
+
+guanch_vaulter = {
+	type = skirmishers
+	
+	damage = 10
+	toughness = 12
+	pursuit = 15
+	screen = 20
+	siege_value = 0.1
+	
+	terrain_bonus = {
+		hills = { damage = 4 toughness = 6 }
+		mountains = { damage = 4 pursuit = 6 }
+		desert_mountains = { damage = 4 pursuit = 6 }
+		wetlands = { damage = 4 pursuit = 6 }
+	}
+
+	counters = {
+		heavy_infantry = 1
+	}
+
+	buy_cost = { gold = guanch_vaulter_recruitment_cost }
+	low_maintenance_cost = { gold = guanch_vaulter_low_maint_cost }
+	high_maintenance_cost = { gold = guanch_vaulter_high_maint_cost }
+	
+	
+	stack = 100
+	ai_quality = { value = culture_ai_weight_skirmishers }
+	icon = skirmishers
 }

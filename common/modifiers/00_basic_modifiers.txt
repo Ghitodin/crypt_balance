@@ -5,6 +5,7 @@
 # *_with_offset versions first subtract the NCharacter.SKILL_MODIFIER_OFFSET value from the skill
 
 diplomacy_modifier = {
+	ai_amenity_target_baseline = 0.01
 }
 diplomacy_modifier_with_offset = {
 	monthly_prestige_gain_mult = 0.01
@@ -49,13 +50,13 @@ baron_modifier = {
 }
 
 count_modifier = {
-	domain_limit = 3
-	knight_limit = 6
+	domain_limit = 3 # THE MOD
+	knight_limit = 6 # THE MOD
 }
 
 duke_modifier = {
-	domain_limit = 3
-	knight_limit = 7
+	domain_limit = 3 # THE MOD
+	knight_limit = 7 # THE MOD
 	vassal_limit = 20
 
 	mercenary_hire_cost_mult = 0.1
@@ -64,15 +65,16 @@ duke_modifier = {
 king_modifier = {
 	domain_limit = 3
 	knight_limit = 7
-	vassal_limit = 30
+	vassal_limit = 30 # THE MOD
 
 	mercenary_hire_cost_mult = 0.3
 }
 
 emperor_modifier = {
-	domain_limit = 3
-	knight_limit = 7
-	vassal_limit = 35
+	domain_limit = 3 # THE MOD
+	knight_limit = 7 # THE MOD
+	vassal_limit = 35 # THE MOD
+	ai_amenity_target_baseline = 0.2 # THE MOD
 	mercenary_hire_cost_mult = 0.6
 }
 
@@ -90,7 +92,7 @@ held_kingdom_modifier = {
 	monthly_prestige = 0.8
 }
 held_empire_modifier = {
-	monthly_prestige = 1
+	monthly_prestige = 1 # THE MOD
 }
 
 # Piety, prestige and stress level that do not modify anything exist for tooltiping
@@ -119,22 +121,27 @@ prestige_level_0 = {
 }
 prestige_level_1 = {
 	hide_effects = yes # Custom description will generate the full level information
+	ai_amenity_target_baseline = 0.1
 }
 prestige_level_2 = {
 	hide_effects = yes # Custom description will generate the full level information
 	knight_limit = 1
+	ai_amenity_target_baseline = 0.1 # THE MOD
 }
 prestige_level_3 = {
 	hide_effects = yes # Custom description will generate the full level information
 	knight_limit = 2
+	ai_amenity_target_baseline = 0.2 # THE MOD
 }
 prestige_level_4 = {
 	hide_effects = yes # Custom description will generate the full level information
 	knight_limit = 3
+	ai_amenity_target_baseline = 0.2 # THE MOD
 }
 prestige_level_5 = {
 	hide_effects = yes # Custom description will generate the full level information
 	knight_limit = 4
+	ai_amenity_target_baseline = 0.3 # THE MOD
 }
 
 stress_level_0 = {
@@ -174,89 +181,100 @@ very_easy_difficulty = {
 }
 
 debt_level_0 = {
-	levy_size = -0.02
-	levy_reinforcement_rate = -0.02
-	development_growth_factor = -0.02
-	vassal_opinion = -1
-	county_opinion_add = -1
+	levy_size = -0.02 # THE MOD
+	levy_reinforcement_rate = -0.02 # THE MOD
+	development_growth_factor = -0.02 # THE MOD
+	vassal_opinion = -1 # THE MOD
+	county_opinion_add = -1 # THE MOD
+	ai_amenity_spending = -0.1 # THE MOD
 }
 
 debt_level_1 = {
-	levy_size = -0.04
-	levy_reinforcement_rate = -0.04
-	development_growth_factor = -0.04
-	vassal_opinion = -2
-	county_opinion_add = -2
+	levy_size = -0.04 # THE MOD
+	levy_reinforcement_rate = -0.04 # THE MOD
+	development_growth_factor = -0.04 # THE MOD
+	vassal_opinion = -2 # THE MOD
+	county_opinion_add = -2 # THE MOD
+	ai_amenity_spending = -0.2 # THE MOD
 }
 
 debt_level_2 = {
-	levy_size = -0.06
-	levy_reinforcement_rate = -0.06
-	development_growth_factor = -0.06
-	vassal_opinion = -3
-	county_opinion_add = -3
+	levy_size = -0.06 # THE MOD
+	levy_reinforcement_rate = -0.06 # THE MOD
+	development_growth_factor = -0.06 # THE MOD
+	vassal_opinion = -3 # THE MOD
+	county_opinion_add = -3 # THE MOD
+	ai_amenity_spending = -0.2 # THE MOD
 }
 
 debt_level_3 = {
-	levy_size = -0.08
-	levy_reinforcement_rate = -0.08
-	development_growth_factor = -0.08
-	vassal_opinion = -4
-	county_opinion_add = -4
+	levy_size = -0.08 # THE MOD
+	levy_reinforcement_rate = -0.08 # THE MOD
+	development_growth_factor = -0.08 # THE MOD
+	vassal_opinion = -4 # THE MOD
+	county_opinion_add = -4 # THE MOD
+	ai_amenity_spending = -0.2 # THE MOD
 }
 
 debt_level_4 = {
-	levy_size = -0.1
-	levy_reinforcement_rate = -0.1
-	development_growth_factor = -0.1
-	vassal_opinion = -5
-	county_opinion_add = -5
+	levy_size = -0.1 # THE MOD
+	levy_reinforcement_rate = -0.1 # THE MOD
+	development_growth_factor = -0.1 # THE MOD
+	vassal_opinion = -5 # THE MOD
+	county_opinion_add = -5 # THE MOD
+	ai_amenity_spending = -0.3 # THE MOD
 }
 
 debt_level_5 = {
-	levy_size = -0.1
-	levy_reinforcement_rate = -0.1
-	development_growth_factor = -0.1
-	vassal_opinion = -5
-	county_opinion_add = -5
+	levy_size = -0.1 # THE MOD
+	levy_reinforcement_rate = -0.1 # THE MOD
+	development_growth_factor = -0.1 # THE MOD
+	vassal_opinion = -5 # THE MOD
+	county_opinion_add = -5 # THE MOD
+	ai_amenity_spending = -0.3 # THE MOD
 }
 
 debt_level_6 = {
-	levy_size = -0.1
-	levy_reinforcement_rate = -0.1
-	development_growth_factor = -0.1
-	vassal_opinion = -5
-	county_opinion_add = -5
+	levy_size = -0.1 # THE MOD
+	levy_reinforcement_rate = -0.1 # THE MOD
+	development_growth_factor = -0.1 # THE MOD
+	vassal_opinion = -5 # THE MOD
+	county_opinion_add = -5 # THE MOD
+	ai_amenity_spending = -0.3 # THE MOD
 }
 
 debt_level_7 = {
-	levy_size = -0.1
-	levy_reinforcement_rate = -0.1
-	development_growth_factor = -0.1
-	vassal_opinion = -5
-	county_opinion_add = -5
+	levy_size = -0.1 # THE MOD
+	levy_reinforcement_rate = -0.1 # THE MOD
+	development_growth_factor = -0.1 # THE MOD
+	vassal_opinion = -5 # THE MOD
+	county_opinion_add = -5 # THE MOD
+	ai_amenity_spending = -0.4 # THE MOD
 }
 
 debt_level_8 = {
-	levy_size = -0.1
-	levy_reinforcement_rate = -0.1
-	development_growth_factor = -0.1
-	vassal_opinion = -5
-	county_opinion_add = -5
+	levy_size = -0.1 # THE MOD
+	levy_reinforcement_rate = -0.1 # THE MOD
+	development_growth_factor = -0.1 # THE MOD
+	vassal_opinion = -5 # THE MOD
+	county_opinion_add = -5 # THE MOD
+	ai_amenity_spending = -0.4 # THE MOD
 }
 
 debt_level_9 = {
-	levy_size = -0.1
-	levy_reinforcement_rate = -0.1
-	development_growth_factor = -0.1
-	vassal_opinion = -5
-	county_opinion_add = -5
+	levy_size = -0.1 # THE MOD
+	levy_reinforcement_rate = -0.1 # THE MOD
+	development_growth_factor = -0.1 # THE MOD
+	vassal_opinion = -5 # THE MOD
+	county_opinion_add = -5 # THE MOD
+	ai_amenity_spending = -0.4 # THE MOD
 }
 
 debt_level_no_income = { #Special no income
-	levy_size = -0.1
-	levy_reinforcement_rate = -0.1
-	development_growth_factor = -0.1
-	vassal_opinion = -5
-	county_opinion_add = -5
+	levy_size = -0.1 # THE MOD
+	levy_reinforcement_rate = -0.1 # THE MOD
+	development_growth_factor = -0.1 # THE MOD
+	vassal_opinion = -5 # THE MOD
+	county_opinion_add = -5 # THE MOD
+	ai_amenity_spending = -0.4 # THE MOD
 }

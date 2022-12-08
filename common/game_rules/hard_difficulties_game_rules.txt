@@ -1,9 +1,5 @@
 difficulty = {
-	default = normal_difficulty
-
-	normal_difficulty = {
-
-	}
+	default = extreme_difficulty 
 
 	extreme_difficulty = {
 		apply_modifier = player:extreme_difficulty

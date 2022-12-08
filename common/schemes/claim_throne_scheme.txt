@@ -1,15 +1,39 @@
 ﻿claim_throne = {
 	
 	skill = learning
+	desc = claim_throne_desc_general
 	hostile = yes
+	icon = icon_scheme_hostile
 	
 	allow = {
-		has_perk = meritocracy_perk # Scheme unlocked by the Meritocracy Perk
-		
+		OR = {
+			has_perk = meritocracy_perk # Scheme unlocked by the Meritocracy Perk
+			AND = {
+				is_powerful_vassal_of = scope:target
+				any_character_struggle = {
+					involvement = involved
+					has_struggle_phase_parameter = unlocks_claim_throne_for_powerful_vassals
+					is_secondary_character_involvement_involved_trigger = {
+						CHAR = scope:target
+					}
+				}
+			}
+			AND = {
+				any_character_struggle = {
+					involvement = involved
+					has_struggle_phase_parameter = unlocks_abduct_for_all
+					is_secondary_character_involvement_involved_trigger = {
+						CHAR = scope:target
+					}
+				}
+			}
+		}
+
 		is_adult = yes
 		is_landed = yes
 		is_imprisoned = no
 		
+		# THE MOD
 		# FUCK THIS SHIT, VALEEEERAAA!
 		has_variable = $KEK$
 	}
@@ -177,9 +201,29 @@
 	}
 
 	
-	on_invalidated = {
-		scheme_owner = {
-			trigger_event = claim_throne_outcome.9999
+		if = {
+			limit = { exists = scheme_target.primary_title }
+			scheme_target.primary_title = { save_scope_as = target_title }
+		}
+		scope:owner = {
+			trigger_event = { id = claim_throne_outcome.9999 days = 1 }
+		}
+		if = {
+			limit = {
+				scope:target = { 
+					NOT = { in_diplomatic_range = scope:owner } 
+				}
+			}
+			scope:owner = {
+				send_interface_toast = {
+					title = fabricate_hook_failed_reset_message
+					left_icon = scope:target
+					custom_description_no_bullet = {
+						object = scope:target
+						text = scheme_target_not_in_diplomatic_range
+					}
+				}
+			}
 		}
 	}
 	

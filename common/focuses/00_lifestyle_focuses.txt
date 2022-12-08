@@ -4,8 +4,8 @@ diplomacy_foreign_affairs_focus = {
 	lifestyle = diplomacy_lifestyle
 	
 	modifier = {
-		diplomacy = 2
-		martial = -1
+		diplomacy = 2 # THE MOD
+		martial = -1 # THE MOD
 	}
 
 	desc = {
@@ -37,8 +37,8 @@ diplomacy_majesty_focus = {
 	
 	modifier = {
 		diplomacy = 1
-		martial = -1
-		monthly_prestige = 0.5
+		martial = -1 # THE MOD
+		monthly_prestige = 0.5 # THE MOD
 	}
 
 	desc = {
@@ -75,8 +75,8 @@ diplomacy_family_focus = {
 	lifestyle = diplomacy_lifestyle
 	
 	modifier = {
-		diplomacy = 1
-		martial = -1
+		diplomacy = 1 # THE MOD
+		martial = -1 # THE MOD
 		fertility = 0.2
 	}
 
@@ -108,7 +108,7 @@ martial_strategy_focus = {
 	
 	modifier = {
 		martial = 3
-		diplomacy = -1
+		diplomacy = -1 # THE MOD
 	}
 
 	auto_selection_weight = {
@@ -134,7 +134,7 @@ martial_authority_focus = {
 	
 	modifier = {
 		martial = 1
-		diplomacy = -1
+		diplomacy = -1 # THE MOD
 		monthly_county_control_change_add = 0.3
 		dread_gain_mult = 0.2
 	}
@@ -173,10 +173,10 @@ martial_chivalry_focus = {
 	}
 	
 	modifier = {
-		diplomacy = -1
+		diplomacy = -1 # THE MOD
 		advantage = 5
 		prowess = 3
-		attraction_opinion = 7
+		attraction_opinion = 7 # THE MOD
 	}
 
 	auto_selection_weight = {
@@ -219,7 +219,7 @@ intrigue_skulduggery_focus = {
 	}
 	
 	modifier = {
-		intrigue = 1
+		intrigue = 1 # THE MOD
 		stewardship = -1
 	}
 
@@ -269,10 +269,10 @@ intrigue_temptation_focus = {
 	}
 	
 	modifier = {
-		stewardship = -1
-		attraction_opinion = 5
+		stewardship = -1 # THE MOD
+		attraction_opinion = 5 # THE MOD
 		fertility = 0.2
-		seduce_scheme_power_mult = 0.1
+		seduce_scheme_power_mult = 0.1 # THE MOD
 	}
 
 	auto_selection_weight = {
@@ -313,8 +313,8 @@ intrigue_intimidation_focus = {
 	
 	modifier = {
 		intrigue = 2
-		stewardship = -1
-		dread_baseline_add = 15
+		stewardship = -1 # THE MOD
+		dread_baseline_add = 15 # THE MOD
 	}
 
 	auto_selection_weight = {
@@ -367,9 +367,9 @@ stewardship_wealth_focus = {
 	}
 	
 	modifier = {
-		diplomacy = -1
+		diplomacy = -1 # THE MOD
 		monthly_income_mult = 0.1
-		stress_gain_mult = 0.15
+		stress_gain_mult = 0.15 # THE MOD
 	}
 
 	auto_selection_weight = {
@@ -406,9 +406,9 @@ stewardship_domain_focus = {
 	}
 	
 	modifier = {
-		stewardship = 2
-		diplomacy = -1
-		stress_gain_mult = 0.1
+		stewardship = 2 # THE MOD
+		diplomacy = -1 # THE MOD
+		stress_gain_mult = 0.1 # THE MOD
 	}
 
 	auto_selection_weight = {
@@ -439,10 +439,10 @@ stewardship_duty_focus = {
 	}
 	
 	modifier = {
-		diplomacy = -1
+		diplomacy = -1 # THE MOD
 		stewardship = 1
-		courtier_and_guest_opinion = 10
-		stress_gain_mult = 0.1
+		courtier_and_guest_opinion = 10 # THE MOD
+		stress_gain_mult = 0.1 # THE MOD
 	}
 
 	auto_selection_weight = {
@@ -474,8 +474,8 @@ learning_medicine_focus = {
 	
 	modifier = {
 		learning = 1
-		intrigue = -1
-		negate_health_penalty_add = 0.5
+		intrigue = -1 # THE MOD
+		negate_health_penalty_add = 0.5 # THE MOD
 	}
 
 	auto_selection_weight = {
@@ -500,8 +500,8 @@ learning_scholarship_focus = {
 	}
 	
 	modifier = {
-		learning = 2
-		intrigue = -1
+		learning = 2 # THE MOD
+		intrigue = -1 # THE MOD
 		development_growth_factor = 0.15
 	}
 
@@ -528,7 +528,7 @@ learning_theology_focus = {
 	
 	modifier = {
 		learning = 1
-		intrigue = -1
+		intrigue = -1 # THE MOD
 		monthly_piety = 1
 	}
 

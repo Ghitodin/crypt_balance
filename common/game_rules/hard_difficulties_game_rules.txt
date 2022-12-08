@@ -1,8 +1,0 @@
-difficulty = {
-	default = extreme_difficulty 
-
-	extreme_difficulty = {
-		apply_modifier = player:extreme_difficulty
-		apply_modifier = ai:ai_extreme_difficulty
-	}	
-}

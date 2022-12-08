@@ -15,7 +15,7 @@
 		NOT = {
 			has_character_flag = used_lifetime_invasion
 		}
-		has_variable = $KEK$ # THE MOD
+		has_variable = kek # THE MOD
 	}
 
 	allowed_for_character_display_regardless = {
@@ -289,7 +289,7 @@ clan_invasion_war = {
 			has_character_flag = used_lifetime_invasion
 			faith = { has_doctrine_parameter = invasion_cb_enabled }
 		}
-		has_variable = $KEK$ # THE MOD
+		has_variable = kek # THE MOD
 	}
 
 	allowed_for_character_display_regardless = {

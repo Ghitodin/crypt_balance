@@ -272,15 +272,15 @@
 		}
 		can_have = {
 			can_have_single_heir_dynasty_house_trigger = yes
-			has_variable = $KEK$ # THE MOD
+			has_variable = kek # THE MOD
 		}
 		can_pass = {
 			can_change_single_heir_dynasty_house_succession_law_trigger = yes
-			has_variable = $KEK$ # THE MOD
+			has_variable = kek # THE MOD
 		}
 		should_start_with = {
 			historical_succession_access_single_heir_dynasty_house_trigger = yes
-			has_variable = $KEK$ # THE MOD
+			has_variable = kek # THE MOD
 		}
 		succession = {
 			order_of_succession = inheritance

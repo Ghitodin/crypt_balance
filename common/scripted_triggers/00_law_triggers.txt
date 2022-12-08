@@ -215,7 +215,7 @@ can_keep_single_heir_dynasty_house_trigger = {
 			#can_have_single_heir_dynasty_house_trigger = yes
 			#historical_succession_access_single_heir_dynasty_house_trigger = yes
 		}
-		has_variable = $KEK$ # THE MOD
+		has_variable = kek # THE MOD
 	}
 }
 
@@ -233,12 +233,12 @@ can_have_single_heir_dynasty_house_trigger = {
 		culture = { # THE MOD
 			#has_innovation = innovation_table_of_princes
 		}
-		has_variable = $KEK$ # THE MOD
+		has_variable = kek # THE MOD
 	}
 	trigger_else = {
 		culture = { # THE MOD
 			#has_innovation = innovation_heraldry
-			has_variable = $KEK$ # THE MOD
+			has_variable = kek # THE MOD
 		}
 	}
 	custom_description = {

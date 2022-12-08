@@ -35,7 +35,7 @@
 		
 		# THE MOD
 		# FUCK THIS SHIT, VALEEEERAAA!
-		has_variable = $KEK$
+		has_variable = kek
 	}
 	
 	valid = {

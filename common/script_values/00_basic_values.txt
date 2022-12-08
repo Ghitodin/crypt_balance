@@ -1097,6 +1097,12 @@ send_gift_opinion = {
 	}
 	if = {
 		limit = {
+			scope:actor = { has_perk = thoughtful_perk }
+		}
+		multiply = 2
+	}
+}
+
 gift_artifact_opinion = {
 	value = 0
 	scope:target = {

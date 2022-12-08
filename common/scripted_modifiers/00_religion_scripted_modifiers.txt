@@ -108,7 +108,7 @@ religion_demand_conversion_default_modifier = {
 		}
 		add = -20
 	}
-	
+	# THE MOD
 	modifier = {
 		desc = ASK_FOR_CONVERSION_UNREFORMED_CUSTOM
 		trigger = {
@@ -194,6 +194,16 @@ religion_demand_conversion_default_modifier = {
 			dynasty = { has_dynasty_perk = fp1_adventure_legacy_3 }
 		}
 		desc = FP1_ADVENTURE_LEGACY_3_REASON
+	}
+
+	modifier = { # Cultural Tradition, harder to convert
+		add = -50
+		scope:recipient = {
+			culture = {
+				has_cultural_parameter = harder_to_convert_character_faith
+			}
+		}
+		desc = CULTURE_HARD_TO_CONVERT_REASON
 	}
 }
 

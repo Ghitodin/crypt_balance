@@ -27,14 +27,29 @@
 		}
 	}
 	
+	culture_character_modifier = {
+		parameter = automatic_befriend_access
+		befriend_scheme_power_add = 25
+	}
+
 	effect = {
-		custom_description_no_bullet = {
-			text = befriend_perk_effect
+		# Cultures with Ritualised Friendship get a different effect, so we filter them out.
+		if = {
+			limit = {
+				NOT = {
+					culture = { has_cultural_parameter = automatic_befriend_access }
+				}
+			}
+			custom_description_no_bullet = {
+				text = befriend_perk_effect
+			}
 		}
+		# Everyone gets board games!
+		custom_description_no_bullet = { text = unlocks_board_games_interaction_effect }
 	}
-	character_modifier = {
-		stress_gain_mult = 0.25
-	}
+	character_modifier = { # THE MOD
+		stress_gain_mult = 0.25 # THE MOD
+	} # THE MOD
 }
 
 confidants_perk = {
@@ -72,7 +87,7 @@ flatterer_perk = {
 	parent = confidants_perk
 	
 	character_modifier = {
-		befriend_scheme_power_mult = 0.1
+		befriend_scheme_power_mult = 0.1 # THE MOD
 	}
 }
 
@@ -144,7 +159,7 @@ familial_familiar_perk = {
 	parent = groomed_to_rule_perk
 	
 	character_modifier = {
-		close_relative_opinion = 10
+		close_relative_opinion = 10 # THE MOD
 	}
 }
 

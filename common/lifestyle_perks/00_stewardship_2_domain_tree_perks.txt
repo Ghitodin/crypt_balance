@@ -64,8 +64,12 @@ defensive_measures_perk = {
 	parent = tax_man_perk
 	
 	character_modifier = {
-		garrison_size = 0.2
+		garrison_size = 0.1 # THE MOD
 		additional_fort_level = 1
+	}
+
+	effect = {
+		custom_description_no_bullet = { text = unlocks_truce_purchasing_interaction_desc }
 	}
 }
 
@@ -136,8 +140,8 @@ professional_workforce_perk = {
 	parent = cutting_corners_perk
 	
 	character_modifier = {
-		build_speed = -0.15
-		holding_build_speed = -0.15
+		build_speed = -0.15 # THE MOD
+		holding_build_speed = -0.15 # THE MOD
 	}
 }
 
@@ -152,7 +156,7 @@ centralization_perk = {
 	parent = professional_workforce_perk
 	
 	character_modifier = {
-		character_capital_county_monthly_development_growth_add = 0.2
+		character_capital_county_monthly_development_growth_add = 0.2 # THE MOD
 	}
 }
 
@@ -168,7 +172,7 @@ popular_figurehead_perk = {
 	parent = centralization_perk
 	
 	character_modifier = {
-		county_opinion_add = 20
+		county_opinion_add = 20 # THE MOD
 	}
 }
 
@@ -183,7 +187,7 @@ divided_attention_perk = {
 	parent = popular_figurehead_perk
 	
 	character_modifier = {
-		domain_limit = 1
+		domain_limit = 1 # THE MOD
 	}
 }
 

@@ -102,7 +102,7 @@ chivalric_dominance_perk = {
 	parent = stalwart_leader_perk
 
 	character_modifier = {
-		knight_effectiveness_mult = 0.20
+		knight_effectiveness_mult = 0.20 # THE MOD
 	}
 }
 
@@ -129,7 +129,7 @@ kingsguard_perk = {
 	parent = never_back_down_perk
 
 	character_modifier = {
-		knight_limit = 3
+		knight_limit = 3 # THE MOD
 	}
 }
 

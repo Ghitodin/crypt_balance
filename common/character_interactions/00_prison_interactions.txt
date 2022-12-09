@@ -3768,6 +3768,7 @@ release_from_prison_interaction = {
 			}
 			desc = "RENOUNCE_CLAIMS_REASON"
 		}
+		modifier = {
 			add = -50
 			trigger = {
 				scope:become_executioner = yes

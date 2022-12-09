@@ -627,6 +627,7 @@ buy_claim_interaction = {
 			}
 		}
 		trigger_if = { # Can't buy claims on head of faith titles
+			limit = {
 				exists = scope:target
 				scope:target = { is_head_of_faith = yes }
 			}

@@ -145,7 +145,7 @@ embrace_outremer_culture_decision = {
 
 	is_shown = {
 		is_ruler = yes
-		}
+		is_landed = yes
 		faith:catholic.religion = { exists = var:variable_ghw_unlocked } #The era of the Crusades must have started.
 		NOR = {
 			root.culture = culture:roman

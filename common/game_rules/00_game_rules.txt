@@ -2,8 +2,7 @@
 	default = normal_difficulty
 
 	normal_difficulty = {
-		#apply_modifier = player:extreme_difficulty
-		#apply_modifier = ai:ai_extreme_difficulty
+
 	}
 	
 	very_easy_difficulty = {
@@ -16,10 +15,10 @@
 		flag = blocks_achievements
 	}
 
-	#extreme_difficulty = { # THE MOD
-		#apply_modifier = player:extreme_difficulty
-		#apply_modifier = ai:ai_extreme_difficulty
-	#}
+	extreme_difficulty = { # THE MOD
+		apply_modifier = player:extreme_difficulty
+		apply_modifier = ai:ai_extreme_difficulty
+	}
 }
 
 exclave_independence = {

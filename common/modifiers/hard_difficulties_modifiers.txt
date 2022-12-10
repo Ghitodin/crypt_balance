@@ -1,20 +1,21 @@
 
 extreme_difficulty = {
-	general_opinion = -3
-	vassal_opinion = -6
-	tyranny_gain_mult = 0.2
-	dread_gain_mult = -0.2
-	short_reign_duration_mult = 0.15
+	general_opinion = -5
+	vassal_opinion = -8
+	tyranny_gain_mult = 0.25
+	dread_gain_mult = -0.25
+	short_reign_duration_mult = 0.2
 	vassal_tax_contribution_mult = -0.2
 	vassal_levy_contribution_mult = -0.35
 	levy_size = -0.15
 	stress_gain_mult = 0.3
 	stress_loss_mult = -0.3
-	men_at_arms_maintenance = 0.2
-	army_maintenance_mult = 0.1
-	mercenary_hire_cost_mult = 0.1
+	men_at_arms_maintenance = 0.3
+	
+	army_maintenance_mult = 0.2
+	mercenary_hire_cost_mult = 0.3
 	domain_limit = -1
-	monthly_income_mult = -0.1
+	monthly_income_mult = -0.2
 	monthly_prestige_gain_mult = -0.35
 	monthly_piety_gain_mult = -0.35
 	owned_personal_scheme_success_chance_add = -10
@@ -23,6 +24,15 @@ extreme_difficulty = {
 
 ai_extreme_difficulty = {
 	ai_boldness = medium_positive_ai_value
-	ai_war_chance = 0.15
-	ai_war_cooldown = -0.15
+	ai_war_chance = 0.25
+	ai_war_cooldown = -0.2
+	men_at_arms_recruitment_cost = -0.5
+	men_at_arms_maintenance = -0.3
+	men_at_arms_cap = 2
+	men_at_arms_limit = 2	
+	levy_size = 0.2
+	monthly_income_mult = 0.2
+	direct_vassal_opinion = 5
+	same_faith_opinion = 5
+	same_culture_opinion = 5
 }

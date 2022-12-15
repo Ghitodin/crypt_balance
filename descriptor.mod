@@ -4,5 +4,5 @@ tags={
 	"Fixes"
 }
 name="Crypt Balance"
-supported_version="1.8.0"
+supported_version="1.8.1"
 remote_file_id="2262138819"

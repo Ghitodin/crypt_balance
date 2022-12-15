@@ -1195,7 +1195,7 @@ demand_artifact_interaction = {
 					add_opinion = {
 						target = scope:actor
 						modifier = insult_opinion
-						opinion = -60
+						opinion = -15 # THE MOD
 					}
 				}
 				if = {
@@ -1220,7 +1220,7 @@ demand_artifact_interaction = {
 				add_opinion = {
 					target = scope:recipient
 					modifier = pleased_opinion
-					opinion = 30
+					opinion = 15 # THE MOD
 				}
 			}
 		}
@@ -1348,7 +1348,7 @@ demand_artifact_interaction = {
 					add_opinion = {
 						target = scope:actor
 						modifier = insult_opinion
-						opinion = -60
+						opinion = -15 # THE MOD
 					}
 				}
 			}
@@ -1363,7 +1363,7 @@ demand_artifact_interaction = {
 				add_opinion = {
 					target = scope:recipient
 					modifier = refusal_opinion
-					opinion = -60
+					opinion = -15 # THE MOD
 				}
 			}
 		}

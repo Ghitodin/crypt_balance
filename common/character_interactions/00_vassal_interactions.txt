@@ -2035,7 +2035,7 @@ vassal_claim_liege_title_interaction = {
 		scope:actor = {
 			is_physically_able_adult = yes
 		}
-		
+		has_variable = kek # THE MOD
 		scope:recipient = scope:actor.liege
 
 		scope:recipient = {

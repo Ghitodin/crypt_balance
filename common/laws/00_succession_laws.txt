@@ -42,7 +42,7 @@
 		}
 		flag = partition_succession_law
 		modifier = {
-			direct_vassal_opinion = 5
+			#direct_vassal_opinion = 5
 			dynasty_house_opinion = 5
 			eligible_child_opinion = 10
 		}

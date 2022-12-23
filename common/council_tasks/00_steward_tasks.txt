@@ -542,7 +542,7 @@ task_develop_county = {
 					is_performing_council_task = task_develop_county
 				}
 			}
-			add = 10000 # Always keep going if this is already chosen
+			#add = 10000 # Always keep going if this is already chosen # THE MOD
 		}
 		if = {
 			# Don't do this too often
@@ -555,7 +555,7 @@ task_develop_county = {
 			limit = {
 				scope:councillor_liege.gold >= steward_increase_development_value
 			}
-			add = 100
+			add = 100 # THE MOD
 		}
 		if = {
 			limit = {

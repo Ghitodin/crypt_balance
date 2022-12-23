@@ -555,7 +555,7 @@ task_develop_county = {
 			limit = {
 				scope:councillor_liege.gold >= steward_increase_development_value
 			}
-			add = 300
+			add = 100
 		}
 		if = {
 			limit = {

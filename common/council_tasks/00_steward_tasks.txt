@@ -1255,7 +1255,7 @@ task_accept_culture = {
 	
 	is_valid_showing_failures_only = {
 		scope:councillor_liege = {
-			highest_held_title_tier >= tier_duchy
+			highest_held_title_tier >= tier_empire
 		}
 	}
 

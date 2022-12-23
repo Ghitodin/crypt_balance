@@ -782,7 +782,7 @@ task_promote_culture = {
 			OR = {
 				NOT = {
 					scope:county.culture = {
-						cultural_acceptance = { target = scope:councillor_liege.culture value >= 60 }
+						cultural_acceptance = { target = scope:councillor_liege.culture value >= 80 }
 					}
 				}
 				scope:councillor_liege.culture = { # All AI's are motivated to spread new Hybrid/Divergent cultures

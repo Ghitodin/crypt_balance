@@ -43,8 +43,8 @@
 		flag = partition_succession_law
 		modifier = {
 			#direct_vassal_opinion = 5
-			dynasty_house_opinion = 5
-			eligible_child_opinion = 10
+			#dynasty_house_opinion = 5
+			#eligible_child_opinion = 10
 		}
 		pass_cost = {
 			prestige = change_succession_law_prestige_cost
@@ -88,9 +88,9 @@
 		}
 		flag = partition_succession_law
 		modifier = {
-			direct_vassal_opinion = 5
-			player_heir_opinion = 10
-			eligible_child_except_player_heir_opinion = 5
+			#direct_vassal_opinion = 5
+			#player_heir_opinion = 10
+			#eligible_child_except_player_heir_opinion = 5
 		}
 		pass_cost = {
 			prestige = change_succession_law_prestige_cost
@@ -141,8 +141,8 @@
 		}
 		flag = partition_succession_law
 		modifier = {
-			direct_vassal_opinion = 5
-			player_heir_opinion = 15
+			#direct_vassal_opinion = 5
+			#player_heir_opinion = 15
 		}
 		pass_cost = {
 			prestige = change_succession_law_prestige_cost
@@ -192,9 +192,9 @@
 		}
 		flag = advanced_succession_law
 		modifier = {
-			player_heir_opinion = 20
-			eligible_child_except_player_heir_opinion = -5
-			direct_vassal_opinion = -5 # THE MOD
+			#player_heir_opinion = 20
+			#eligible_child_except_player_heir_opinion = -5
+			#direct_vassal_opinion = -5 # THE MOD
 		}
 		pass_cost = {
 			prestige = change_succession_law_prestige_cost
@@ -246,9 +246,9 @@
 		
 		flag = advanced_succession_law
 		modifier = {
-			player_heir_opinion = 20
-			eligible_child_except_player_heir_opinion = -5
-			direct_vassal_opinion = -5 # THE MOD
+			#player_heir_opinion = 20
+			#eligible_child_except_player_heir_opinion = -5
+			#direct_vassal_opinion = -5 # THE MOD
 		}
 		pass_cost = {
 			prestige = change_succession_law_prestige_cost
@@ -293,9 +293,9 @@
 		
 		flag = advanced_succession_law
 		modifier = {
-			eligible_child_except_player_heir_opinion = -15
-			direct_vassal_opinion = -5
-			dynasty_house_opinion = 5
+			#eligible_child_except_player_heir_opinion = -15
+			#direct_vassal_opinion = -5
+			#dynasty_house_opinion = 5
 		}
 		pass_cost = {
 			prestige = change_succession_law_prestige_cost

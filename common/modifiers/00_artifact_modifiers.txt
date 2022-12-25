@@ -443,9 +443,9 @@ artifact_monthly_piety_gain_mult_11_modifier = { monthly_piety_gain_mult = 0.22 
 artifact_monthly_piety_gain_mult_12_modifier = { monthly_piety_gain_mult = 0.24 }
 
 artifact_same_faith_opinion_1_modifier = { same_faith_opinion = 1 } # THE MOD
-artifact_same_faith_opinion_2_modifier = { same_faith_opinion = 2 } # THE MOD
-artifact_same_faith_opinion_3_modifier = { same_faith_opinion = 3 } # THE MOD
-artifact_same_faith_opinion_4_modifier = { same_faith_opinion = 4 } # THE MOD
+artifact_same_faith_opinion_2_modifier = { same_faith_opinion = 1 } # THE MOD
+artifact_same_faith_opinion_3_modifier = { same_faith_opinion = 2 } # THE MOD
+artifact_same_faith_opinion_4_modifier = { same_faith_opinion = 3 } # THE MOD
 artifact_same_faith_opinion_negative_1_modifier = { same_faith_opinion = -2 }
 
 artifact_monthly_piety_from_buildings_mult_1_modifier = { monthly_piety_from_buildings_mult = 0.02 }

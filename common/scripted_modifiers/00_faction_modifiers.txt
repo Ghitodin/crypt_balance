@@ -8,7 +8,7 @@ intimidated_from_faction_modifier = {
 		}
 	}
 	modifier = { # THE MOD
-		add = -15 # Effectively a full blocker — Terrified vassals should never join Factions.
+		add = -30 # Effectively a full blocker — Terrified vassals should never join Factions.
 		has_dread_level_towards = {
 			target = $TARGET$
 			level = 2

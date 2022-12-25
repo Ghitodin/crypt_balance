@@ -9,23 +9,23 @@
 ark_of_covenant_modifier = {
 	court_grandeur_baseline_add = 6
 	domain_tax_same_faith_mult = 0.15
-	clergy_opinion = 10
+	clergy_opinion = 5 # THE MOD
 	same_heritage_county_advantage_add = 5
 	monthly_dynasty_prestige_mult = 0.05
-	monthly_piety = 2
+	monthly_piety = 1 # THE MOD
 }
 
 koh_i_noor = {
 	court_grandeur_baseline_add = 6
 	monthly_dynasty_prestige_mult = 0.05
 	attraction_opinion = 10
-	general_opinion = 5
+	general_opinion = 3 # THE MOD
 	monthly_prestige = 1
 }
 
 al_taj_modifier = {
 	monthly_prestige = 1
-	same_faith_opinion = 5
+	same_faith_opinion = 4 # THE MOD
 	floodplains_development_growth_factor = 0.2
 }
 
@@ -65,7 +65,7 @@ banner_thankfulness = {
 
 alexander_the_great_armor_modifier = {
 	court_grandeur_baseline_add = 6
-	powerful_vassal_opinion = 10
+	powerful_vassal_opinion = 5 # THE MOD
 	happy_powerful_vassal_levy_contribution_mult = 0.2
 	light_cavalry_max_size_add = 1
 	light_cavalry_pursuit_mult = 0.2
@@ -92,7 +92,7 @@ spear_prophet_modifier = {
 	court_grandeur_baseline_add = 6
 	monthly_piety_gain_per_knight_mult = 0.03
 	levy_reinforcement_rate_same_faith = 0.5
-	clan_government_opinion_same_faith = 5
+	clan_government_opinion_same_faith = 3 # THE MOD
 	knight_effectiveness_mult = 0.2
 }
 
@@ -105,9 +105,9 @@ mantle_prophet_modifier = {
 
 reichskrone_modifier = {
 	monthly_dynasty_prestige_mult = 0.05
-	vassal_limit = 25
+	vassal_limit = 15 # THE MOD
 	monthly_prestige_gain_per_happy_powerful_vassal_mult = 0.02
-	courtier_and_guest_opinion = 10
+	courtier_and_guest_opinion = 5 # THE MOD
 }
 
 cintamani_modifier = {
@@ -143,7 +143,7 @@ muhammed_sword_1_modifier = {
 }
 
 muhammed_sword_2_modifier = {
-	same_faith_opinion = 3
+	same_faith_opinion = 2 # THE MOD
 }
 
 muhammed_sword_3_modifier = {
@@ -257,8 +257,8 @@ iron_crown_modifier = {
 	court_grandeur_baseline_add = 6
 	monthly_dynasty_prestige_mult = 0.05
 	monthly_prestige_gain_mult = 0.04
-	lombard_opinion = 5
-	italian_opinion = 5
+	lombard_opinion = 3 # THE MOD
+	italian_opinion = 3 # THE MOD
 	vassal_limit = 10
 	character_capital_county_monthly_development_growth_add = 0.02
 }
@@ -278,7 +278,7 @@ shankha_conch_modifier = {
 
 skull_cap_charlemagne_modifier = {
 	court_grandeur_baseline_add = 4
-	powerful_vassal_opinion = 10
+	powerful_vassal_opinion = 6 # THE MOD
 	knight_effectiveness_mult = 0.1
 	men_at_arms_maintenance = -0.05
 }
@@ -314,7 +314,7 @@ abhidhamma_pitaka_modifier = {
 	monthly_piety = 0.5
 	court_grandeur_baseline_add = 3
 	monthly_dynasty_prestige_mult = 0.05
-	direct_vassal_opinion = 4
+	direct_vassal_opinion = 3 # THE MOD
 }
 
 durendal_modifier = {
@@ -472,8 +472,8 @@ throne_scone_modifier = {
 	court_grandeur_baseline_add = 3
 	monthly_dynasty_prestige = 0.04
 	monthly_prestige = 0.25
-	scottish_opinion = 5
-	gaelic_opinion = 5
+	scottish_opinion = 3 # THE MOD
+	gaelic_opinion = 3 # THE MOD
 	pikemen_maintenance_mult = -0.05
 	
 }
@@ -631,17 +631,17 @@ chalice_of_dona_urraca_modifier = {
 
 former_bells_of_santiago_modifier = {
 	court_grandeur_baseline_add = 3
-	islam_religion_opinion = 10
-	christianity_religion_opinion = -10
+	islam_religion_opinion = 6 # THE MOD
+	christianity_religion_opinion = -15 # THE MOD
 	monthly_piety_gain_per_happy_powerful_vassal_add = 0.1
 	negate_health_penalty_add = 0.5
 }
 
 bells_of_santiago_modifier = {
 	court_grandeur_baseline_add = 3
-	same_faith_opinion = 10
-	christianity_religion_opinion = 10
-	islam_religion_opinion = -10
+	same_faith_opinion = 4 # THE MOD
+	christianity_religion_opinion = 3 # THE MOD
+	islam_religion_opinion = -15 # THE MOD
 	monthly_piety_gain_per_happy_powerful_vassal_add = 0.1
 	monthly_dynasty_prestige = 0.5
 }

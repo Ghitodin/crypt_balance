@@ -14,6 +14,19 @@ start_murder_interaction = {
 
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
+		
+		AND = { # THE MOD
+			scope:recipient = {
+				OR = {
+					is_landed = no
+					faith = scope:actor.faith
+					has_relation_rival = scope:actor
+				}
+			}
+			scope:actor = {
+				is_ia = no
+			}
+		}
 
 		NAND = { # Game Rules!
 			has_game_rule = no_players_multiplayer_murder_schemes

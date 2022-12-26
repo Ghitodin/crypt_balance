@@ -1054,7 +1054,7 @@ medium_de_jure_drift_progress_loss = -15
 
 #Send Gift
 send_gift_opinion = {
-	value = 5
+	value = 10 # THE MOD
 	add = {
 		if = {
 			limit = {
@@ -1086,7 +1086,7 @@ send_gift_opinion = {
 			}
 			divide = 4 # THE MOD
 		}
-		max = 55 # THE MOD
+		max = 50 # THE MOD
 		
 	}
 	if = {
@@ -1097,9 +1097,9 @@ send_gift_opinion = {
 	}
 	if = {
 		limit = {
-			scope:actor = { has_perk = thoughtful_perk }
+			#scope:actor = { has_perk = thoughtful_perk } # THE MOD
 		}
-		multiply = 2
+		#multiply = 2 # THE MOD
 	}
 }
 

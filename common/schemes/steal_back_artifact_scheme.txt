@@ -13,7 +13,7 @@
 	maximum_progress_chance = 90
 	minimum_success = 10
 	maximum_secrecy = 95
-	maximum_success = 85
+	maximum_success = 50 # THE MOD
 	
 	cooldown = { years = 10 }
 	is_secret = yes
@@ -37,7 +37,7 @@
 			scope:target = { #AI won't steal if they like you
 				opinion = {
 					target = scope:owner
-					value <= 50
+					value <= 55 # THE MOD
 				}
 
 				trigger_if = { #AI won't steal from friends... Unless...
@@ -56,7 +56,7 @@
 				}
 				trigger_if = { #So players don't get spammed by AIs trying to steal 
 					limit = {
-						is_ai = no
+						#is_ai = no # THE MOD
 					}
 					NOT = {
 						any_targeting_scheme = {
@@ -120,12 +120,12 @@
 	base_success_chance = {
 		base = 10
 		#SCHEME OWNER#
-		compare_modifier = {
-			desc = SCHEME_IS_A_SCHEMER
-			target = scope:owner
-			value = intrigue
-			multiplier = 2
-		}
+		#compare_modifier = { # THE MOD
+			#desc = SCHEME_IS_A_SCHEMER
+			#target = scope:owner
+			#value = intrigue
+			#multiplier = 2
+		#}
 	}
 
 	agent_success_chance = {
@@ -134,7 +134,7 @@
 		compare_modifier = {
 			desc = "SCHEME_AGENT_INTRIGUE"
 			value = intrigue
-			multiplier = 2
+			multiplier = 1 # THE MOD
 		}
 	}
 

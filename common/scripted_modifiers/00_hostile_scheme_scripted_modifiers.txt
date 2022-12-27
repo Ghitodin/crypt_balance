@@ -437,7 +437,7 @@ hostile_murder_agent_base_join_chance_modifier = {
 	modifier = {
 		exists = scope:hook
 		scope:hook = yes
-		add = 100
+		add = 70 # THE MOD
 		desc = SCHEME_WEAK_HOOK_USED
 	}
 	

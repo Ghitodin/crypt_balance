@@ -3520,7 +3520,7 @@ paranoid = {
 	diplomacy = -1
 	intrigue = 3
 	
-	stress_gain_mult = 1
+	stress_gain_mult = 0.25
 	dread_gain_mult = 0.25
 	
 	scheme_discovery_chance_mult = 0.1

@@ -5,6 +5,7 @@
 
 base_court_amenities_cost = {
 	value = sub_realm_size
+	multiply = 3
 	divide = {
 		add = 4
 		subtract = {

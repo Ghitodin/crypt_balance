@@ -318,18 +318,18 @@ artifact_happy_powerful_vassal_tax_contribution_mult_8_modifier = { happy_powerf
 artifact_general_opinion_1_modifier = { general_opinion = 2 } # THE MOD
 
 # Rulership-related Modifiers
-artifact_vassal_limit_1_modifier = { vassal_limit = 2 }
-artifact_vassal_limit_2_modifier = { vassal_limit = 4 }
-artifact_vassal_limit_3_modifier = { vassal_limit = 6 }
-artifact_vassal_limit_4_modifier = { vassal_limit = 8 }
-artifact_vassal_limit_5_modifier = { vassal_limit = 10 }
-artifact_vassal_limit_6_modifier = { vassal_limit = 12 }
-artifact_vassal_limit_7_modifier = { vassal_limit = 14 }
-artifact_vassal_limit_8_modifier = { vassal_limit = 16 }
+artifact_vassal_limit_1_modifier = { vassal_limit = 1 } # THE MOD
+artifact_vassal_limit_2_modifier = { vassal_limit = 2 } # THE MOD
+artifact_vassal_limit_3_modifier = { vassal_limit = 3 } # THE MOD
+artifact_vassal_limit_4_modifier = { vassal_limit = 4 } # THE MOD
+artifact_vassal_limit_5_modifier = { vassal_limit = 5 } # THE MOD
+artifact_vassal_limit_6_modifier = { vassal_limit = 5 } # THE MOD
+artifact_vassal_limit_7_modifier = { vassal_limit = 5 } # THE MOD
+artifact_vassal_limit_8_modifier = { vassal_limit = 6 } # THE MOD
 artifact_vassal_opinion_1_modifier = { vassal_opinion = 1 }
-artifact_vassal_opinion_2_modifier = { vassal_opinion = 2 }
-artifact_vassal_opinion_3_modifier = { vassal_opinion = 3 }
-artifact_vassal_opinion_4_modifier = { vassal_opinion = 4 }
+artifact_vassal_opinion_2_modifier = { vassal_opinion = 1 } # THE MOD
+artifact_vassal_opinion_3_modifier = { vassal_opinion = 2 } # THE MOD
+artifact_vassal_opinion_4_modifier = { vassal_opinion = 2 } # THE MOD
 artifact_vassal_opinion_penalty_1_modifier = { vassal_opinion = -3 }
 
 artifact_powerful_vassal_opinion_1_modifier = { powerful_vassal_opinion = 1 } # THE MOD
@@ -461,18 +461,18 @@ artifact_monthly_piety_from_buildings_mult_10_modifier = { monthly_piety_from_bu
 artifact_monthly_piety_from_buildings_mult_11_modifier = { monthly_piety_from_buildings_mult = 0.22 }
 artifact_monthly_piety_from_buildings_mult_12_modifier = { monthly_piety_from_buildings_mult = 0.24 }
 
-artifact_clergy_opinion_1_modifier = { clergy_opinion = 2 }
-artifact_clergy_opinion_2_modifier = { clergy_opinion = 3 }
-artifact_clergy_opinion_3_modifier = { clergy_opinion = 4 }
-artifact_clergy_opinion_4_modifier = { clergy_opinion = 5 }
-artifact_clergy_opinion_5_modifier = { clergy_opinion = 6 }
-artifact_clergy_opinion_6_modifier = { clergy_opinion = 7 }
-artifact_clergy_opinion_7_modifier = { clergy_opinion = 8 }
-artifact_clergy_opinion_8_modifier = { clergy_opinion = 9 }
-artifact_clergy_opinion_9_modifier = { clergy_opinion = 10 }
-artifact_clergy_opinion_10_modifier = { clergy_opinion = 11 }
-artifact_clergy_opinion_11_modifier = { clergy_opinion = 12 }
-artifact_clergy_opinion_12_modifier = { clergy_opinion = 13 }
+artifact_clergy_opinion_1_modifier = { clergy_opinion = 1 } # THE MOD
+artifact_clergy_opinion_2_modifier = { clergy_opinion = 1 } # THE MOD
+artifact_clergy_opinion_3_modifier = { clergy_opinion = 2 } # THE MOD
+artifact_clergy_opinion_4_modifier = { clergy_opinion = 2 } # THE MOD
+artifact_clergy_opinion_5_modifier = { clergy_opinion = 3 } # THE MOD
+artifact_clergy_opinion_6_modifier = { clergy_opinion = 4 } # THE MOD
+artifact_clergy_opinion_7_modifier = { clergy_opinion = 5 } # THE MOD
+artifact_clergy_opinion_8_modifier = { clergy_opinion = 5 } # THE MOD
+artifact_clergy_opinion_9_modifier = { clergy_opinion = 6 } # THE MOD
+artifact_clergy_opinion_10_modifier = { clergy_opinion = 6 } # THE MOD
+artifact_clergy_opinion_11_modifier = { clergy_opinion = 7 } # THE MOD
+artifact_clergy_opinion_12_modifier = { clergy_opinion = 7 } # THE MOD
 
 artifact_church_holding_build_gold_cost_1_modifier = { church_holding_build_gold_cost = -0.01 church_holding_holding_build_gold_cost = -0.01 }
 artifact_church_holding_build_gold_cost_2_modifier = { church_holding_build_gold_cost = -0.02 church_holding_holding_build_gold_cost = -0.02 }

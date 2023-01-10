@@ -278,9 +278,9 @@ tradition_fp2_malleable_subjects = {
 	}
 
 	character_modifier = {
-		mercenary_hire_cost_mult = -0.5
-		vassal_levy_contribution_mult = 0.25
-		different_culture_opinion = 10
+		mercenary_hire_cost_mult = -0.15 # THE MOD
+		#vassal_levy_contribution_mult = 0.25 # THE MOD
+		#different_culture_opinion = 10 # THE MOD
 		ignore_negative_opinion_of_culture = yes
 	}
 

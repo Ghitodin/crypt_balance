@@ -878,7 +878,7 @@
 				AND = {
 					exists = player_heir
 					player_heir_position = { #0, 1, 2 = the first three player heirs in succession line.
-						value <= 4 # THE MOD
+						value <= 1 # THE MOD
 						target = scope:secondary_recipient
 					}
 				}
@@ -910,7 +910,7 @@
 							AND = {
 								exists = player_heir
 								player_heir_position = {
-									value  <= 4 #First 4 player heirs # THE MOD
+									value  <= 1 #First 4 player heirs # THE MOD
 									target = scope:secondary_recipient
 								}
 							}
@@ -978,16 +978,16 @@
 						}
 					}
 				} # THE MOD
-				subtract = 80 #A bit more than a weak hook
+				subtract = 60 #A bit more than a weak hook
 			}
 			else_if = {
 				limit = {
 					scope:recipient = { has_realm_law = equal_law }
 				} # THE MOD
-				subtract = 100 #If The realm law is equal, and the secondary_recipient is NOT ruler or their 1st/2nd/3rd heir, slash the penalty in half
+				subtract = 50 #If The realm law is equal, and the secondary_recipient is NOT ruler or their 1st/2nd/3rd heir, slash the penalty in half
 			}
 			else = { # THE MOD
-				subtract = 200 #Base penalty for dynasty members who are NOT ruler or their 1st/2nd/3rd heir
+				subtract = 40 #Base penalty for dynasty members who are NOT ruler or their 1st/2nd/3rd heir
 			}
 		}
 		desc = MATRILINEAL_PATRILINEAL_REASON

@@ -722,7 +722,7 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 	}
 	# THE MOD
 	modifier = {
-		add = -1000
+		add = 0
 		desc = tooltip_feudal_elector_vote_dynasty
 		NOT = { this = scope:candidate }
 		

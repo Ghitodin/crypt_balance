@@ -24,6 +24,7 @@
 				}
 			}
 			multiply = 4
+			max = 50
 	  	}
 		scope:recipient = {
 			yields_alliance = {
@@ -877,20 +878,20 @@
 				AND = {
 					exists = player_heir
 					player_heir_position = { #0, 1, 2 = the first three player heirs in succession line.
-						value <= 2
+						value <= 4 # THE MOD
 						target = scope:secondary_recipient
 					}
 				}
 				has_realm_law = equal_law
 				AND = {
-					scope:secondary_recipient = { is_female = yes }
+					#scope:secondary_recipient = { is_female = yes } # THE MOD
 					OR = {
 						has_realm_law = female_only_law
 						has_realm_law = female_preference_law
 					}
 				}
 				AND = {
-					scope:secondary_recipient = { is_male = yes }
+					#scope:secondary_recipient = { is_male = yes } # THE MOD
 					OR = {
 						has_realm_law = male_only_law
 						has_realm_law = male_preference_law
@@ -909,7 +910,7 @@
 							AND = {
 								exists = player_heir
 								player_heir_position = {
-									value = 0 #First player heir
+									value  <= 4 #First 4 player heirs # THE MOD
 									target = scope:secondary_recipient
 								}
 							}
@@ -950,8 +951,8 @@
 							}
 						}
 					}
-				}
-				subtract = 100
+				} # THE MOD
+				subtract = 200
 			}
 			#For the second heir
 			else_if = {
@@ -963,8 +964,8 @@
 							target = scope:secondary_recipient
 						}
 					}
-				}
-				subtract = 60 #A bit more than a strong hook
+				} # THE MOD
+				subtract = 160 #A bit more than a strong hook
 			}
 			#For the third heir
 			else_if = {
@@ -976,17 +977,17 @@
 							target = scope:secondary_recipient
 						}
 					}
-				}
-				subtract = 30 #A bit more than a weak hook
+				} # THE MOD
+				subtract = 80 #A bit more than a weak hook
 			}
 			else_if = {
 				limit = {
 					scope:recipient = { has_realm_law = equal_law }
-				}
-				subtract = 10 #If The realm law is equal, and the secondary_recipient is NOT ruler or their 1st/2nd/3rd heir, slash the penalty in half
+				} # THE MOD
+				subtract = 100 #If The realm law is equal, and the secondary_recipient is NOT ruler or their 1st/2nd/3rd heir, slash the penalty in half
 			}
-			else = {
-				subtract = 20 #Base penalty for dynasty members who are NOT ruler or their 1st/2nd/3rd heir
+			else = { # THE MOD
+				subtract = 200 #Base penalty for dynasty members who are NOT ruler or their 1st/2nd/3rd heir
 			}
 		}
 		desc = MATRILINEAL_PATRILINEAL_REASON

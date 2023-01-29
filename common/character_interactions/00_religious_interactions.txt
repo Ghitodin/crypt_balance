@@ -4102,9 +4102,9 @@ hof_ask_for_gold_interaction = {
 		compare_modifier = {
 			value = scope:recipient.gold
 			trigger = {
-				scope:recipient.gold > 500 # THE MOD
+				scope:recipient.gold > 1200 # THE MOD
 			}
-			offset = -500 # THE MOD
+			offset = -1200 # THE MOD
 			multiplier = 0.1
 			max = 50
 			desc = ASK_FOR_GOLD_OVERFLOWING_COFFERS
@@ -4179,7 +4179,7 @@ hof_ask_for_gold_interaction = {
 		}
 		
 		modifier = { # I am rich already
-			add = -25
+			add = -40 # THE MOD
 			desc = I_AM_RICH
 			scope:actor = {
 				gold >= scope:actor.medium_treasury_value
@@ -4190,7 +4190,7 @@ hof_ask_for_gold_interaction = {
 		}
 		
 		modifier = { # I am rich already
-			add = -50
+			add = -100 # THE MOD
 			desc = I_AM_RICH
 			scope:actor = {
 				gold >= scope:actor.major_treasury_value
@@ -4201,7 +4201,7 @@ hof_ask_for_gold_interaction = {
 		}
 		
 		modifier = { # I am very rich already
-			add = -75
+			add = -150 # THE MOD
 			desc = I_AM_RICH
 			scope:actor = {
 				gold >= scope:actor.massive_treasury_value

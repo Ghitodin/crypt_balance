@@ -32,12 +32,13 @@
 	hostile = no
 	uses_resistance = no
 
-	power_per_skill_point = 4.0
+	power_per_skill_point = 2.0 # THE MOD
 	spymaster_power_per_skill_point = 0	
 	resistance_per_skill_point = 0
 	spymaster_resistance_per_skill_point = 0
 	minimum_progress_chance = 1
 	maximum_progress_chance = 95
+	maximum_success = 50 # THE MOD
 
 	
 	valid = {

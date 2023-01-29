@@ -930,19 +930,19 @@ barony_is_valid_for_holy_order_lease_cancellation_trigger = {
 			tier = tier_barony
 			is_leased_out = yes
 			has_revokable_lease = yes
-			lessee_title.holder = {
-				save_temporary_scope_as = title_holder
-				any_religion_global = {
-					any_faith = {
-						any_faith_holy_order = {
-							leader = {
-								this = scope:title_holder
-								location = scope:location
-							}
-						}
-					}
-				}
-			}
+			#lessee_title.holder = {
+			#	save_temporary_scope_as = title_holder
+			#	any_religion_global = {
+			#		any_faith = {
+			#			any_faith_holy_order = {
+			#				leader = {
+			#					this = scope:title_holder
+			#					location = scope:location
+			#				}
+			#			}
+			#		}
+			#	}
+			#}
 		}
 	}
 }

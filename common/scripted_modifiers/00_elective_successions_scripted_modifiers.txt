@@ -396,12 +396,12 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 		NOT = { this = scope:candidate }
 		root.culture = scope:candidate.culture
 		add = {
-			add = 10
+			add = 15 # THE MOD
 			if = { #Boost for Scandinavian Elective.
 				limit = {
 					scope:title = { has_title_law = scandinavian_elective_succession_law }
 				}
-				add = 10
+				add = 15 # THE MOD
 			}
 		}
 	}
@@ -446,12 +446,12 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 		}
 		NOT = { is_close_family_of = scope:candidate }
 		add = {
-			subtract = 10
+			subtract = 25 # THE MOD
 			if = { #Boost for Scandinavian Elective.
 				limit = {
 					scope:title = { has_title_law = scandinavian_elective_succession_law }
 				}
-				subtract = 10
+				subtract = 25 # THE MOD
 			}
 		}
 	}
@@ -464,12 +464,12 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 		}
 		NOT = { is_close_family_of = scope:candidate }
 		add = {
-			subtract = 15
+			subtract = 50 # THE MOD
 			if = { #Boost for Scandinavian Elective.
 				limit = {
 					scope:title = { has_title_law = scandinavian_elective_succession_law }
 				}
-				subtract = 15
+				subtract = 50 # THE MOD
 			}
 		}
 	}
@@ -499,12 +499,12 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 			NOT = { capital_county = { scope:title = { is_de_jure_liege_or_above_target = prev } } }
 		}
 		add = {
-			subtract = 15
+			subtract = 100 # THE MOD
 			if = { #Boost for Scandinavian Elective.
 				limit = {
 					scope:title = { has_title_law = scandinavian_elective_succession_law }
 				}
-				subtract = 15
+				subtract = 45 # THE MOD
 			}
 		}
 	}
@@ -649,7 +649,7 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 
 	#Barbarism
 	modifier = {
-		add = -15
+		add = -100 # THE MOD
 		desc = tooltip_feudal_elector_vote_uncivilized
 		OR = {
 			has_government = feudal_government
@@ -663,7 +663,7 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 		}
 	}
 	modifier = {
-		add = -15
+		add = -100 # THE MOD
 		desc = tooltip_feudal_elector_vote_settled
 		has_government = clan_government
 		scope:candidate = {
@@ -854,18 +854,18 @@ elector_voting_pattern_prestige_piety_feudal_elective_modifier = {
 	modifier = {
 		desc = tooltip_feudal_elector_vote_dynasty_prestige
 		add = {
-			value = 20
+			value = 15 # THE MOD
 			if = {
 				limit = {
 					scope:candidate.dynasty = { dynasty_prestige_level >= 10 }
 				}
-				add = 20
+				add = 15 # THE MOD
 			}
 			if = {
 				limit = {
 					scope:candidate.dynasty = { dynasty_prestige_level >= 7 }
 				}
-				add = 20
+				add = 15 # THE MOD
 			}
 		}
 		NOT = { this = scope:candidate }

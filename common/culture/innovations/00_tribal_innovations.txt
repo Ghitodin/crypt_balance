@@ -71,7 +71,7 @@ innovation_mustering_grounds = {
 	culture_era = culture_era_tribal
 	icon = @leadership_2
 
-	modifier = {
+	character_modifier = {
 		men_at_arms_cap = 1 # THE MOD
 	}
 
@@ -86,8 +86,9 @@ innovation_bannus = {
 
 	custom = unlock_march_contract
 
-	modifier = {
+	character_modifier = {
 		levy_reinforcement_rate = 0.15
+		active_accolades = 1
 	}
 
 	flag = global_regular
@@ -100,6 +101,8 @@ innovation_quilted_armor = {
 	icon = @weapons_and_armor_02
 
 	unlock_maa = armored_footmen
+
+	custom = eligible_accolade_vanguard_attribute
 
 	flag = global_regular
 	flag = tribal_era_regular
@@ -121,7 +124,7 @@ innovation_currency_01 = {
 	culture_era = culture_era_tribal
 	icon = @majesty_02
 
-	modifier = {
+	character_modifier = {
 		development_growth_factor = 0.1
 	}
 
@@ -136,6 +139,10 @@ innovation_gavelkind = {
 	icon = @administration_3
 
 	unlock_law = confederate_partition_succession_law
+	
+	character_modifier = {
+		domain_limit = 1
+	}
 
 	flag = global_regular
 	flag = tribal_era_regular
@@ -173,6 +180,7 @@ innovation_casus_belli = {
 	icon = @administration_1
 
 	unlock_casus_belli = individual_county_de_jure_cb
+	unlock_casus_belli = individual_duchy_de_jure_cb
 
 	flag = global_regular
 	flag = tribal_era_regular
@@ -196,7 +204,7 @@ innovation_ledger = {
 	culture_era = culture_era_tribal
 	icon = @administration_2
 
-	modifier = {
+	character_modifier = {
 		men_at_arms_limit = 1 # THE MOD
 	}
 
@@ -231,36 +239,13 @@ innovation_table_of_princes = {
 	flag = tribal_era_regional
 }
 
-innovation_visigothic_codes = {
-	group = culture_group_regional
-	culture_era = culture_era_tribal
-	icon = @nobility_01
-	
-	potential = {
-		OR = {
-			#Pyrenaic Visigoths & influenced-cultures only
-			this = culture:occitan
-			this = culture:basque
-			this = culture:aragonese
-			this = culture:catalan
-		}
-	}
-	
-	unlock_law = high_partition_succession_law
-	unlock_law = equal_law
-	custom = unlock_equal_succession_changing
-	
-	flag = global_regional
-	flag = tribal_era_regional
-}
-
 innovation_longboats = {
 	group = culture_group_regional
 	culture_era = culture_era_tribal
 	region = world_europe_north
 	icon = @longboats
 
-	modifier = {
+	character_modifier = {
 		embarkation_cost_mult = -0.75
 		naval_movement_speed_mult = 0.25
 	}
@@ -279,6 +264,9 @@ innovation_elephantry = {
 	icon = @elephant
 
 	unlock_maa = war_elephant
+	unlock_building = elephant_pens_01
+
+	custom = eligible_accolade_elephantry_attribute
 
 	flag = global_regional
 	flag = tribal_era_regional
@@ -291,6 +279,9 @@ innovation_war_camels = {
 	icon = @camel
 
 	unlock_maa = camel_rider
+	unlock_building = camel_farms_01
+
+	custom = eligible_accolade_camelry_attribute
 
 	flag = global_regional
 	flag = tribal_era_regional
@@ -302,17 +293,10 @@ innovation_wootz_steel = {
 	region = world_india_deccan
 	icon = @weapons_and_armor_01
 
-	modifier = {
+	character_modifier = {
 		prowess = 1
 	}
-	maa_upgrade = {
-		type = heavy_infantry
-		damage = 2
-	}
-	maa_upgrade = {
-		type = heavy_cavalry
-		damage = 2
-	}
+	unlock_building = wind_furnace_01
 
 	flag = global_regional
 	flag = tribal_era_regional
@@ -324,7 +308,7 @@ innovation_african_canoes = {
 	region = world_africa_west
 	icon = @majesty_01
 
-	modifier = {
+	character_modifier = {
 		embarkation_cost_mult = -0.25
 		raid_speed = 0.1
 	}

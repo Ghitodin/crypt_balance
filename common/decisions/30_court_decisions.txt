@@ -18,6 +18,8 @@
 	}
 
 	is_shown = {
+		has_variable = kek # THE MOD
+
 		is_landed = yes
 		primary_title.tier >= tier_county
 		is_independent_ruler = no

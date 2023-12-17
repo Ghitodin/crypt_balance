@@ -65,14 +65,7 @@ confidants_perk = {
 			text = confidants_perk_effect
 		}
 		hidden_effect = {
-			every_relation = {
-				type = friend
-				root = {
-					add_character_modifier = {
-						modifier = confidants_perk_modifier
-					}
-				}
-			}	
+			update_confidants_effect = yes
 		}
 	}
 }
@@ -260,6 +253,6 @@ family_man_perk = {
 	parent = sound_foundations_perk
 	
 	effect = {
-		add_trait_force_tooltip = family_first	
+		add_trait_force_tooltip = family_first
 	}
 }

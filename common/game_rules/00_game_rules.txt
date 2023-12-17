@@ -1,4 +1,9 @@
 ﻿difficulty = {
+	
+	categories = {
+		difficulty ai
+	}
+	
 	default = normal_difficulty
 
 	normal_difficulty = {
@@ -22,6 +27,11 @@
 }
 
 exclave_independence = {
+	
+	categories = {
+		titles tweaks
+	}
+	
 	default = ai_significant_exclave_independence
 	
 	off_exclave_independence = {
@@ -54,6 +64,11 @@ exclave_independence = {
 }
 
 multiplayer_murder_schemes = {
+	
+	categories = {
+		multiplayer
+	}
+	
 	default = default_multiplayer_murder_schemes
 
 	default_multiplayer_murder_schemes = {
@@ -70,6 +85,11 @@ multiplayer_murder_schemes = {
 }
 
 minor_disease_frequency = {
+	
+	categories = {
+		difficulty health
+	}
+	
 	default = default_minor_disease_frequency
 
 	default_minor_disease_frequency = {
@@ -82,6 +102,11 @@ minor_disease_frequency = {
 }
 
 matrilineal_marriages = {
+	
+	categories = {
+		historicity
+	}
+	
 	default = default_matrilineal_marriages
 
 	default_matrilineal_marriages = {
@@ -106,6 +131,11 @@ matrilineal_marriages = {
 }
 
 gender_equality = {
+	
+	categories = {
+		game_modes
+	}
+	
 	default = default_gender_equality
 
 	default_gender_equality = {
@@ -122,6 +152,11 @@ gender_equality = {
 }
 
 realm_stability = {
+	
+	categories = {
+		difficulty tweaks ai
+	}
+	
 	default = default_realm_stability
 
 	lesser_realm_stability = {
@@ -141,6 +176,11 @@ realm_stability = {
 }
 
 hybrid_culture_ai_frequency = {
+	
+	categories = {
+		ai culture
+	}
+	
 	default = default_hybrid_culture_ai_frequency
 	#dlc = "The Royal Court"
 
@@ -158,6 +198,11 @@ hybrid_culture_ai_frequency = {
 }
 
 hybrid_culture_ai_restrictions = {
+	
+	categories = {
+		ai historicity culture
+	}
+	
 	default = default_hybrid_culture_ai_restrictions
 	#dlc = "The Royal Court"
 
@@ -175,6 +220,11 @@ hybrid_culture_ai_restrictions = {
 }
 
 divergent_culture_ai_frequency = {
+	
+	categories = {
+		ai culture
+	}
+	
 	default = default_divergent_culture_ai_frequency
 	#dlc = "The Royal Court"
 
@@ -196,6 +246,11 @@ divergent_culture_ai_frequency = {
 }
 
 hybrid_and_divergence_cooldowns = {
+	
+	categories = {
+		tweaks culture
+	}
+	
 	default = default_hybrid_and_divergence_cooldowns
 	#dlc = "The Royal Court"
 
@@ -217,6 +272,11 @@ hybrid_and_divergence_cooldowns = {
 }
 
 regional_heresy = {
+	
+	categories = {
+		historicity faith
+	}
+	
 	default = default_regional_heresy
 
 	default_regional_heresy = {
@@ -233,6 +293,11 @@ regional_heresy = {
 }
 
 mongol_invasion = {
+	
+	categories = {
+		difficulty historicity
+	}
+	
 	default = default_mongol_invasion
 
 	default_mongol_invasion = {
@@ -248,7 +313,67 @@ mongol_invasion = {
 	}
 }
 
+random_harm = {
+		
+	categories = {
+		difficulty health
+	}
+		
+	default = harm_dangerous
+	
+	harm_dangerous = {}
+	
+	harm_illusion_of_safety = {}
+	
+	harm_safe = {}
+	
+	harm_tragic = {}
+	
+	harm_spiteful = {}
+	
+	harm_tragically_spiteful = {}
+}
+
+random_harm_target = {
+		
+	categories = {
+		difficulty health
+	}
+		
+	default = harm_target_ai_only
+	
+	harm_target_all = {}
+		
+	harm_target_player_only = {}
+		
+	harm_target_ai_only = {}
+}
+
+random_nickname_frequency = {
+	
+	categories = {
+		tweaks flavor
+	}
+	
+	default = random_nickname_frequency_default
+
+	random_nickname_frequency_default = {}
+	
+	random_nickname_frequency_halved = {}
+	
+	random_nickname_frequency_quartered = {}
+	
+	random_nickname_frequency_none = {}
+	
+	random_nickname_frequency_doubled = {}
+}
+
 casus_belli_costs = {
+	
+	categories = {
+		difficulty game_modes
+	}
+	
 	default = default_casus_belli_costs
 
 	default_casus_belli_costs = {
@@ -262,6 +387,11 @@ casus_belli_costs = {
 }
 
 culture_conversion_speed = {
+	
+	categories = {
+		tweaks historicity culture
+	}
+	
 	default = default_culture_conversion_speed
 
 	default_culture_conversion_speed = {
@@ -286,6 +416,11 @@ culture_conversion_speed = {
 }
 
 faith_conversion_speed = {
+	
+	categories = {
+		tweaks historicity faith
+	}
+	
 	default = default_faith_conversion_speed
 
 	default_faith_conversion_speed = {
@@ -310,6 +445,11 @@ faith_conversion_speed = {
 }
 
 diplomatic_range = {
+	
+	categories = {
+		tweaks historicity
+	}
+	
 	default = default_diplomatic_range
 
 	default_diplomatic_range = {
@@ -327,6 +467,11 @@ diplomatic_range = {
 }
 
 end_date = {
+	
+	categories = {
+		game_modes
+	}
+	
 	default = 1453_end_date
 
 	1453_end_date = {
@@ -340,6 +485,11 @@ end_date = {
 }
 
 de_jure_requirement = {
+	
+	categories = {
+		titles tweaks
+	}
+	
 	default = on_limited_de_jure_requirement
 
 	on_limited_de_jure_requirement = {
@@ -356,6 +506,11 @@ de_jure_requirement = {
 }
 
 empire_obscurity_requirement = {
+	
+	categories = {
+		titles tweaks
+	}
+	
 	default = on_empire_obscurity_requirement
 
 	on_empire_obscurity_requirement = {
@@ -368,6 +523,11 @@ empire_obscurity_requirement = {
 }
 
 custom_kingdoms = {
+	
+	categories = {
+		historicity titles
+	}
+	
 	default = on_custom_kingdoms
 
 	on_custom_kingdoms = {
@@ -380,6 +540,11 @@ custom_kingdoms = {
 }
 
 generate_families = {
+	
+	categories = {
+		tweaks flavor
+	}
+	
 	default = on_generate_families
 
 	on_generate_families = {
@@ -396,6 +561,11 @@ generate_families = {
 }
 
 same_sex_relations = {
+	
+	categories = {
+		game_modes
+	}
+	
 	default = default_same_sex_relations
 
 	default_same_sex_relations = {
@@ -408,6 +578,11 @@ same_sex_relations = {
 }
 
 same_sex_marriage = {
+	
+	categories = {
+		game_modes
+	}
+	
 	default = default_same_sex_marriage
 
 	default_same_sex_marriage = {
@@ -419,7 +594,33 @@ same_sex_marriage = {
 	}
 }
 
+adoption = {
+	
+	categories = {
+		game_modes
+	}
+	
+	default = default_adoption
+
+	no_adoption = {
+
+	}
+
+	default_adoption = {
+
+	}
+
+	adoption_always_allowed = {
+		flag = blocks_achievements
+	}
+}
+
 sexuality_distribution = {
+	
+	categories = {
+		game_modes
+	}
+	
 	default = sexuality_distribution_default
 
 	sexuality_distribution_default = { }
@@ -435,6 +636,11 @@ sexuality_distribution = {
 }
 
 faith_acceptance = {
+	
+	categories = {
+		game_modes faith
+	}
+	
 	default = default_faith_acceptance
 
 	default_faith_acceptance = {
@@ -447,6 +653,11 @@ faith_acceptance = {
 }
 
 randomized_faiths = {
+	
+	categories = {
+		game_modes faith
+	}
+	
 	default = randomized_faiths_off
 
 	randomized_faiths_off = {
@@ -459,6 +670,11 @@ randomized_faiths = {
 }
 
 random_ruler_placement = {
+	
+	categories = {
+		game_modes
+	}
+	
 	default = random_ruler_placement_off
 
 	random_ruler_placement_off = {
@@ -474,7 +690,66 @@ random_ruler_placement = {
 	}
 }
 
+ai_embarkation_cost = {
+	
+	categories = {
+		difficulty ai tweaks
+	}
+	
+	default = regular_embarkation_costs
+
+	regular_embarkation_costs = {
+
+	}
+	
+	no_ai_embarkation_costs = {
+		apply_modifier = ai:no_embarkation_cost
+	}
+}
+
+domain_limit_tweaks = {
+	
+	categories = {
+		difficulty tweaks
+	}
+	
+	default = domain_limit_default
+
+	domain_limit_default = {
+	
+	}
+
+	domain_limit_plus_one = {
+		apply_modifier = all:domain_limit_plus_one
+	}
+
+	domain_limit_plus_two = {
+		apply_modifier = all:domain_limit_plus_two
+	}
+
+	domain_limit_plus_three = {
+		apply_modifier = all:domain_limit_plus_three
+	}
+
+	domain_limit_minus_one = {
+		apply_modifier = all:domain_limit_minus_one
+	}
+
+	domain_limit_minus_two = {
+		apply_modifier = all:domain_limit_minus_two
+	}
+
+	domain_limit_minus_three = {
+		apply_modifier = all:domain_limit_minus_three
+	}
+}
+
 hungarian_migration = {
+	
+	categories = {
+		historicity flavor
+	}
+	
 	default = launch_immediate
 	launch_historical = {}
 	launch_immediate = {}
@@ -483,6 +758,11 @@ hungarian_migration = {
 }
 
 dlc_fp1_scandinavian_adventurers = {
+	
+	categories = {
+		difficulty historicity flavor
+	}
+	
 	default = fp1_scandi_adventurers_frequent
 	#dlc = "The Northern Lords"
 	fp1_scandi_adventurers_rare = { flag = blocks_achievements }
@@ -493,8 +773,30 @@ dlc_fp1_scandinavian_adventurers = {
 }
 
 dissolution_umayyad = {
+	
+	categories = {
+		historicity flavor
+	}
+	
 	default = dissolution_unconstrained
 	dissolution_unconstrained = {}
 	dissolution_after_caliph_death = {}
 	dissolution_historical_date = {}
+}
+
+dlc_fp3_seljuk_invasion = {
+
+	categories = {
+		difficulty historicity
+	}
+	
+	default = default_seljuk_invasion
+
+	default_seljuk_invasion = {}
+	
+	never_seljuk_invasion = {
+		flag = blocks_achievements
+	}
+
+	random_seljuk_invasion = {}
 }

@@ -2,7 +2,7 @@
 @maa_buy_cost = 150
 @maa_low_maintenance_cost = 1.0
 @maa_high_maintenance_cost = 5.0
-@cultural_maa_extra_ai_score = 60 # Equivalent to having 6 extra regiments beyond what the code scoring would indicate (see NEGATIVE_SCORE_PER_EXISTING_REGIMENT)
+@cultural_maa_extra_ai_score = 80 # Equivalent to having 8 extra regiments beyond what the code scoring would indicate (see NEGATIVE_SCORE_PER_EXISTING_REGIMENT)
 
 huscarl = {
 	type = heavy_infantry
@@ -84,21 +84,6 @@ longbowmen = {
 	
 	terrain_bonus = {
 		hills = { damage = 12 toughness = 4 }
-	}
-
-	era_bonus = {
-		culture_era_early_medieval = {
-			damage = 8
-			toughness = 2
-		}
-		culture_era_high_medieval = {
-			damage = 16
-			toughness = 4
-		}
-		culture_era_late_medieval = {
-			damage = 24
-			toughness = 6
-		}
 	}
 
 	counters = {
@@ -525,7 +510,7 @@ ayyar = {
 	
 	stack = 100
 	ai_quality = { value = @cultural_maa_extra_ai_score }
-	icon = heavy_infantry
+	icon = ayyar
 }
 
 mubarizun = {
@@ -551,7 +536,7 @@ mubarizun = {
 	
 	stack = 100
 	ai_quality = { value = @[cultural_maa_extra_ai_score - 20] }
-	icon = heavy_infantry
+	icon = mubarizun
 }
 
 mulaththamun = { #Murabit Cavalry
@@ -651,7 +636,7 @@ paiks = { #Indian Footmen - carrying bows but also swords and spears.
 	high_maintenance_cost = { gold = paiks_high_maint_cost }
 	
 	stack = 100
-	ai_quality = { value = @cultural_maa_extra_ai_score }
+	ai_quality = { value = @[cultural_maa_extra_ai_score - 40] }
 	icon = bowmen
 }
 

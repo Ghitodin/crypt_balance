@@ -84,7 +84,7 @@ organized_muster_rolls_perk = {
 	parent = defensive_measures_perk
 	
 	character_modifier = {
-		levy_reinforcement_rate = 0.2
+		levy_reinforcement_rate = 0.2 # THE MOD
 	}
 }
 

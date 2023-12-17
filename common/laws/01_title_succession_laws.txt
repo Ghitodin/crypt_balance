@@ -3,13 +3,14 @@
 	feudal_elective_succession_law = {
 		can_have = {
 			OR = { # THE MOD
-				has_government = feudal_government
-				has_government = clan_government
+				government_has_flag = government_is_feudal
+				government_has_flag = government_is_clan
 			}
 			highest_held_title_tier >= tier_empire
 			NOR = { #Cultures have their special flavor.
 				culture = { has_cultural_parameter = witenagemot_succession_enabled }
 				culture = { has_cultural_parameter = scandinavian_elective_enabled }
+				culture = { has_cultural_parameter = tribal_elective_enabled } #FP3 addition
 			}
 		}
 		can_pass = {
@@ -36,8 +37,8 @@
 	princely_elective_succession_law = {
 		can_have = {
 			OR = {
-				has_government = feudal_government
-				has_government = clan_government
+				government_has_flag = government_is_feudal
+				government_has_flag = government_is_clan
 			}
 			highest_held_title_tier = tier_empire
 		}
@@ -56,6 +57,7 @@
 		title_allegiance_opinion = 10
 		modifier = {
 			vassal_limit = 20
+			minority_opinion = -15
 		}
 		revoke_cost = {
 			prestige = change_hre_title_succession_law_prestige_cost
@@ -69,9 +71,9 @@
 	saxon_elective_succession_law = {
 		can_have = {
 			OR = {
-				has_government = feudal_government
-				has_government = clan_government
-				has_government = tribal_government
+				government_has_flag = government_is_feudal
+				government_has_flag = government_is_clan
+				government_has_flag = government_is_tribal
 			}
 			highest_held_title_tier >= tier_kingdom
 		}
@@ -95,13 +97,14 @@
 			prestige = change_title_succession_law_prestige_cost
 		}
 	}
+	
 	#Thing
 	scandinavian_elective_succession_law = {
 		can_have = {
 			OR = {
-				has_government = feudal_government
-				has_government = clan_government
-				has_government = tribal_government
+				government_has_flag = government_is_feudal
+				government_has_flag = government_is_clan
+				government_has_flag = government_is_tribal
 			}
 			highest_held_title_tier >= tier_duchy
 		}
@@ -125,13 +128,14 @@
 			prestige = change_title_succession_law_prestige_cost
 		}
 	}
+
 	#Tanistry
 	gaelic_elective_succession_law = {
 		can_have = {
 			OR = {
-				has_government = feudal_government
-				has_government = clan_government
-				has_government = tribal_government
+				government_has_flag = government_is_feudal
+				government_has_flag = government_is_clan
+				government_has_flag = government_is_tribal
 			}
 			highest_held_title_tier >= tier_duchy
 		}
@@ -151,6 +155,37 @@
 		succession = {
 			order_of_succession = election
 			election_type = gaelic_elective
+		}
+		flag = elective_succession_law
+		title_allegiance_opinion = 5
+		revoke_cost = {
+			prestige = change_title_succession_law_prestige_cost
+		}
+		pass_cost = {
+			prestige = change_title_succession_law_prestige_cost
+		}
+	}
+
+	#Jirga elective 
+	tribal_elective_succession_law = { #FOR FP3 
+		can_have = {
+			OR = {
+				government_has_flag = government_is_feudal
+				government_has_flag = government_is_clan
+				government_has_flag = government_is_tribal
+			}
+			highest_held_title_tier >= tier_kingdom
+		}
+		can_pass = {
+			can_change_title_law_trigger = yes
+			culture = { has_cultural_parameter = tribal_elective_enabled }
+		}
+		can_title_have = {
+			can_title_have_law_general_trigger = yes
+		}
+		succession = {
+			order_of_succession = election
+			election_type = tribal_elective
 		}
 		flag = elective_succession_law
 		title_allegiance_opinion = 5

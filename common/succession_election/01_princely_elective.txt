@@ -49,20 +49,23 @@ princely_elective = { #HRE Elective.
 			add = 2
 			NOT = { this = scope:holder }
 			OR = {
-				has_government = theocracy_government
+				government_has_flag = government_is_theocracy
 				has_council_position = councillor_court_chaplain
 			}
 			faith = scope:holder.faith
 			faith = { has_doctrine = doctrine_theocracy_lay_clergy }
 			NOT = { root = scope:holder.faith.religious_head }
-			#TODO_CD:Possible trigger checking for investiture succession?
 		}
 		modifier = { #Papal Influence
 			desc = tooltip_feudal_vote_strength_pope
 			add = 4 #If the Pope is an elector, his vote is the most important of all.
 			NOT = { this = scope:holder }
 			root = scope:holder.faith.religious_head
-			#TODO_CD:Possible trigger checking for investiture succession?
+		}
+		modifier = { #Regent Influence
+			desc = tooltip_feudal_vote_strength_is_diarch
+			add = 1
+			is_diarch_of_target = scope:holder
 		}
 	}
 	
@@ -83,7 +86,7 @@ princely_elective = { #HRE Elective.
 					is_independent_ruler = yes
 				}
 				trigger_if = { #Must be true priests
-					limit = { has_government = theocracy_government }
+					limit = { government_has_flag = government_is_theocracy }
 					trigger_if = {
 						limit = { is_female = yes }
 						faith_dominant_gender_female_or_equal = yes
@@ -100,12 +103,6 @@ princely_elective = { #HRE Elective.
 			}
 			modifier = { # Prince-Electors. (specific titles, held by rulers of the same faith as the current holder)
 				add = 75
-				scope:title = { #Either title is higher than Duke-tier, or must be primary.
-					OR = {
-						tier >= tier_kingdom
-						holder = { has_primary_title = prev }
-					}
-				}
 				faith = scope:holder.faith
 				any_held_title = {
 					is_target_in_global_variable_list = { name = hre_elector_list target = this }
@@ -134,24 +131,24 @@ princely_elective = { #HRE Elective.
 					}
 					if = { #Slightly favor theocracies of same faith.
 						limit = {
-							has_government = theocracy_government
+							government_has_flag = government_is_theocracy
 							faith = scope:holder.faith
 						}
 						add = 4
 					}
 					if = { #Malus for other governments.
 						limit = {
-							has_government = republic_government
+							government_has_flag = government_is_republic
 						}
 						subtract = 5
 					}
 					if = { #Malus for other governments.
 						limit = {
 							OR = {
-								has_government = tribal_government
-								has_government = clan_government
-								has_government = mercenary_government
-								has_government = holy_order_government
+								government_has_flag = government_is_tribal
+								government_has_flag = government_is_clan
+								government_has_flag = government_is_mercenary
+								government_has_flag = government_is_holy_order
 							}
 						}
 						subtract = 4

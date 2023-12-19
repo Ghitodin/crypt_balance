@@ -946,8 +946,9 @@ artifact_tribal_holding_build_speed_add_2_modifier = { tribal_holding_build_spee
 
 artifact_fake_papal_tiara_modifier = {
 	icon = prestige_positive
-	monthly_piety = -0.1
-	knight_effectiveness_mult = 0.15
+	monthly_piety = -0.2
+	clergy_opinion = -3
+	knight_effectiveness_mult = 0.1 # THE MOD
 	knight_limit = 1
 }
 

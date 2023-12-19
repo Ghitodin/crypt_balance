@@ -393,14 +393,14 @@ artifact_zealot_vassal_opinion_2_modifier = { zealot_opinion = 3 }
 artifact_zealot_vassal_opinion_3_modifier = { zealot_opinion = 5 }
 artifact_zealot_vassal_opinion_4_modifier = { zealot_opinion = 8 }
 
-artifact_powerful_vassal_opinion_1_modifier = { powerful_vassal_opinion = 1 }
-artifact_powerful_vassal_opinion_2_modifier = { powerful_vassal_opinion = 2 }
-artifact_powerful_vassal_opinion_3_modifier = { powerful_vassal_opinion = 3 }
-artifact_powerful_vassal_opinion_4_modifier = { powerful_vassal_opinion = 4 }
-artifact_powerful_vassal_opinion_5_modifier = { powerful_vassal_opinion = 6 }
-artifact_powerful_vassal_opinion_6_modifier = { powerful_vassal_opinion = 8 }
-artifact_powerful_vassal_opinion_7_modifier = { powerful_vassal_opinion = 10 }
-artifact_powerful_vassal_opinion_8_modifier = { powerful_vassal_opinion = 12 }
+artifact_powerful_vassal_opinion_1_modifier = { powerful_vassal_opinion = 1 } # THE MOD
+artifact_powerful_vassal_opinion_2_modifier = { powerful_vassal_opinion = 1 } # THE MOD
+artifact_powerful_vassal_opinion_3_modifier = { powerful_vassal_opinion = 2 } # THE MOD
+artifact_powerful_vassal_opinion_4_modifier = { powerful_vassal_opinion = 3 } # THE MOD
+artifact_powerful_vassal_opinion_5_modifier = { powerful_vassal_opinion = 4 } # THE MOD
+artifact_powerful_vassal_opinion_6_modifier = { powerful_vassal_opinion = 5 } # THE MOD
+artifact_powerful_vassal_opinion_7_modifier = { powerful_vassal_opinion = 5 } # THE MOD
+artifact_powerful_vassal_opinion_8_modifier = { powerful_vassal_opinion = 6 } # THE MOD
 
 artifact_independent_ruler_opinion_1_modifier = { independent_ruler_opinion = 1 }
 artifact_independent_ruler_opinion_2_modifier = { independent_ruler_opinion = 2 }

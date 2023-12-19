@@ -730,7 +730,7 @@ artifact_intrigue_1_modifier = { intrigue = 1 }
 artifact_intrigue_2_modifier = { intrigue = 2 }
 
 artifact_attraction_opinion_negative_1_modifier = { attraction_opinion = -5 }
-artifact_fertility_negative_modifier = { fertility = -1 }
+artifact_fertility_negative_modifier = { fertility = -0.5 } # THE MOD
 
 #artifact_owned_personal_scheme_success_2_modifier = { owned_personal_scheme_success_chance_add = 10 }
 

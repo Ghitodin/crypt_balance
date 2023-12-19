@@ -220,7 +220,7 @@ intrigue_skulduggery_focus = {
 	
 	modifier = {
 		intrigue = 1 # THE MOD
-		stewardship = -1
+		stewardship = -1 # THE MOD
 	}
 
 	auto_selection_weight = {

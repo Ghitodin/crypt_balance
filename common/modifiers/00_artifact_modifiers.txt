@@ -849,14 +849,14 @@ artifact_armor_4_artifact_modifier = {
 
 artifact_emperors_crown_artifact_modifier = {
 	icon = grandeur_positive
-	vassal_opinion = 5
-	short_reign_duration_mult = -0.2
+	vassal_opinion = 2  # THE MOD
+	short_reign_duration_mult = -0.1 # THE MOD
 }
 
 artifact_crown_artifact_modifier = {
 	icon = grandeur_positive
-	vassal_opinion = 3
-	short_reign_duration_mult = -0.3
+	vassal_opinion = 1 # THE MOD
+	short_reign_duration_mult = -0.15 # THE MOD
 }
 
 blessed_artifact_modifier = {

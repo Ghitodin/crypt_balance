@@ -406,10 +406,10 @@ artifact_independent_ruler_opinion_1_modifier = { independent_ruler_opinion = 1 
 artifact_independent_ruler_opinion_2_modifier = { independent_ruler_opinion = 2 }
 artifact_independent_ruler_opinion_3_modifier = { independent_ruler_opinion = 3 }
 artifact_independent_ruler_opinion_4_modifier = { independent_ruler_opinion = 4 }
-artifact_independent_ruler_opinion_5_modifier = { independent_ruler_opinion = 6 }
-artifact_independent_ruler_opinion_6_modifier = { independent_ruler_opinion = 8 }
-artifact_independent_ruler_opinion_7_modifier = { independent_ruler_opinion = 10 }
-artifact_independent_ruler_opinion_8_modifier = { independent_ruler_opinion = 12 }
+artifact_independent_ruler_opinion_5_modifier = { independent_ruler_opinion = 5 } # THE MOD
+artifact_independent_ruler_opinion_6_modifier = { independent_ruler_opinion = 6 } # THE MOD
+artifact_independent_ruler_opinion_7_modifier = { independent_ruler_opinion = 6 } # THE MOD
+artifact_independent_ruler_opinion_8_modifier = { independent_ruler_opinion = 7 } # THE MOD
 
 artifact_men_at_arms_maintenance_1_modifier = { men_at_arms_maintenance = -0.01 }
 artifact_men_at_arms_maintenance_2_modifier = { men_at_arms_maintenance = -0.02 }

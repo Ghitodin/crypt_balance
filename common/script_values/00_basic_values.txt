@@ -717,12 +717,12 @@ high_dread = 80
 #PRESTIGE
 
 #Note! These are base values, use loss/gain below
-miniscule_prestige_value = 35
-minor_prestige_value = 75
-medium_prestige_value = 150
-major_prestige_value = 350
-massive_prestige_value = 750
-monumental_prestige_value = 1500
+miniscule_prestige_value = 25 # THE MOD
+minor_prestige_value = 50 # THE MOD
+medium_prestige_value = 100 # THE MOD
+major_prestige_value = 225 # THE MOD
+massive_prestige_value = 400 # THE MOD
+monumental_prestige_value = 800 # THE MOD
 
 
 miniscule_prestige_loss = {

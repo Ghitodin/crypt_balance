@@ -124,9 +124,13 @@ innovation_heraldry = {
 	culture_era = culture_era_high_medieval
 	icon = @raised_banner
 
-	unlock_law = high_partition_succession_law
+	#unlock_law = high_partition_succession_law # THE MOD
 	#unlock_law = single_heir_dynasty_house # THE MOD
 	custom = more_courtly
+	
+	county_modifier = { # THE MOD
+		building_slot_add = 1
+	}
 
 	flag = global_regular
 	flag = high_medieval_era_regular
@@ -140,8 +144,8 @@ innovation_windmills = {
 	unlock_building = windmills_01
 	unlock_building = watermills_01
 
-	county_modifier = {
-		building_slot_add = 1
+	county_modifier = { # THE MOD
+		# building_slot_add = 1
 	}
 
 	flag = global_regular

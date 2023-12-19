@@ -315,7 +315,7 @@ artifact_happy_powerful_vassal_tax_contribution_mult_6_modifier = { happy_powerf
 artifact_happy_powerful_vassal_tax_contribution_mult_7_modifier = { happy_powerful_vassal_tax_contribution_mult = 0.07 }
 artifact_happy_powerful_vassal_tax_contribution_mult_8_modifier = { happy_powerful_vassal_tax_contribution_mult = 0.08 }
 
-artifact_general_opinion_1_modifier = { general_opinion = 4 }
+artifact_general_opinion_1_modifier = { general_opinion = 2 } # THE MOD
 
 artifact_courtly_tax_contribution_mult_1_modifier = { courtly_tax_contribution_mult = 0.01 }
 artifact_courtly_tax_contribution_mult_2_modifier = { courtly_tax_contribution_mult = 0.02 }
@@ -358,14 +358,14 @@ artifact_zealot_levy_contribution_mult_3_modifier = { zealot_levy_contribution_m
 artifact_zealot_levy_contribution_mult_4_modifier = { zealot_levy_contribution_mult = 0.04 }
 
 # Rulership-related Modifiers
-artifact_vassal_limit_1_modifier = { vassal_limit = 2 }
-artifact_vassal_limit_2_modifier = { vassal_limit = 4 }
-artifact_vassal_limit_3_modifier = { vassal_limit = 6 }
-artifact_vassal_limit_4_modifier = { vassal_limit = 8 }
-artifact_vassal_limit_5_modifier = { vassal_limit = 10 }
-artifact_vassal_limit_6_modifier = { vassal_limit = 12 }
-artifact_vassal_limit_7_modifier = { vassal_limit = 14 }
-artifact_vassal_limit_8_modifier = { vassal_limit = 16 }
+artifact_vassal_limit_1_modifier = { vassal_limit = 1 } # THE MOD
+artifact_vassal_limit_2_modifier = { vassal_limit = 2 } # THE MOD
+artifact_vassal_limit_3_modifier = { vassal_limit = 3 } # THE MOD
+artifact_vassal_limit_4_modifier = { vassal_limit = 4 } # THE MOD
+artifact_vassal_limit_5_modifier = { vassal_limit = 5 } # THE MOD
+artifact_vassal_limit_6_modifier = { vassal_limit = 5 } # THE MOD
+artifact_vassal_limit_7_modifier = { vassal_limit = 5 } # THE MOD
+artifact_vassal_limit_8_modifier = { vassal_limit = 6 } # THE MOD
 #artifact_vassal_opinion_1_modifier = { vassal_opinion = 1 }
 #artifact_vassal_opinion_2_modifier = { vassal_opinion = 2 }
 #artifact_vassal_opinion_3_modifier = { vassal_opinion = 3 }

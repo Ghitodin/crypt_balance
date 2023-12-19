@@ -140,8 +140,8 @@ innovation_gavelkind = {
 
 	unlock_law = confederate_partition_succession_law
 	
-	character_modifier = {
-		domain_limit = 1
+	character_modifier = { # THE MOD
+	#	domain_limit = 1
 	}
 
 	flag = global_regular

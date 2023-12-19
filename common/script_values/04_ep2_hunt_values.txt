@@ -70,17 +70,17 @@ hunt_activity_guest_list_size_value = {
 
 hunt_prestige_guest_gain_value = {
 	value = hunt_prestige_reward_value
-	divide = 2
+	divide = 3 # THE MOD
 }
 
 hunt_prestige_with_piety_guest_gain_value = {
 	value = hunt_prestige_with_piety_reward_value
-	divide = 2
+	divide = 3 # THE MOD
 }
 
 hunt_piety_guest_gain_value = {
 	value = hunt_piety_reward_value
-	divide = 2
+	divide = 3 # THE MOD
 }
 
 hunt_activity_success_increase_minor_value = 3
@@ -968,7 +968,7 @@ hunt_melee_kill_prowess_value = {
 }
 
 hunt_prestige_melee_value = {
-	value = 75
+	value = 50 # THE MOD
 	if = {
 		limit = {
 			OR = {
@@ -1104,7 +1104,7 @@ hunt_prestige_reward_value = {
 					var:animal_type ?= flag:fox
 				}
 			}
-			multiply = 2
+			multiply = 1.5 # THE MOD
 		}
 		else_if = {
 			limit = {
@@ -1114,7 +1114,7 @@ hunt_prestige_reward_value = {
 				var:animal_type ?= flag:bison
 				var:animal_type ?= flag:aurochs
 			}
-			multiply = 6
+			multiply = 2.5 # THE MOD
 		}
 		else_if ={
 			limit = {
@@ -1124,9 +1124,9 @@ hunt_prestige_reward_value = {
 				var:animal_type ?= flag:leopard
 				hunt_activity_exotic_bird_trigger = { VAR = var:animal_type }
 			}
-			multiply = 8
+			multiply = 4 # THE MOD
 		}
-		else = { multiply = 4 }
+		else = { multiply = 2 } # THE MOD
 		if = {
 			limit = {
 				has_activity_option = { category = hunt_option_attendants option = hunt_attendants_normal }
@@ -1178,9 +1178,9 @@ hunt_piety_reward_value = {
 }
 
 hunt_glory_hound_vassal_opinion_value = {
-	value = 5
+	value = 3 # THE MOD
 	add = {
-		value = 5
+		value = 2 # THE MOD
 		multiply = hunt_prestige_animal_level_value
 	}
 }

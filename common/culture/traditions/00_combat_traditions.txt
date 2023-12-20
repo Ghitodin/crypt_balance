@@ -661,7 +661,7 @@ tradition_only_the_strong = {
 	}
 	character_modifier = {
 		men_at_arms_recruitment_cost = 0.25
-		knight_effectiveness_mult = 1
+		knight_effectiveness_mult = 0.7 # THE MOD
 		knight_limit = 2
 		accolade_glory_gain_mult = 0.2
 	}

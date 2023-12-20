@@ -492,17 +492,18 @@
 			traversal_order = children
 			rank = oldest
 			title_division = partition
+			create_primary_tier_titles = yes # THE MOD
 		}
 
 		flag = same_house_vassals_gain_claim_on_primary_title
 		flag = house_unity_stage_antagonistic
 		
 		modifier = {
-			dynasty_house_opinion = -10
-			glory_hound_opinion = 15
-			zealot_opinion = 10
-			player_heir_opinion = 10
-			eligible_child_except_player_heir_opinion = 5
+			#dynasty_house_opinion = -10 # THE MOD
+			#glory_hound_opinion = 15 # THE MOD
+			#zealot_opinion = 10 # THE MOD
+			#player_heir_opinion = 10 # THE MOD
+			#eligible_child_except_player_heir_opinion = 5 # THE MOD
 		}
 
 		widget_name = "widget_clan_law"
@@ -547,16 +548,17 @@
 			traversal_order = children
 			rank = oldest
 			title_division = partition
+			create_primary_tier_titles = yes # THE MOD
 		}
 
 		flag = same_house_vassals_gain_claim_on_primary_title
 		flag = house_unity_stage_competitive
 
 		modifier = {
-			glory_hound_opinion = 10
-			zealot_opinion = 5
-			player_heir_opinion = 10
-			eligible_child_except_player_heir_opinion = 5
+			#glory_hound_opinion = 10 # THE MOD
+			#zealot_opinion = 5 # THE MOD 
+			#player_heir_opinion = 10 # THE MOD
+			#eligible_child_except_player_heir_opinion = 5 # THE MOD
 		}
 
 		widget_name = "widget_clan_law"
@@ -613,12 +615,13 @@
 			traversal_order = children
 			rank = oldest
 			title_division = partition
-			primary_heir_minimum_share = 0.25
+			#primary_heir_minimum_share = 0.25 # THE MOD
+			create_primary_tier_titles = yes # THE MOD
 		}
 		modifier = {
-			glory_hound_opinion = 5
-			parochial_opinion = 5
-			player_heir_opinion = 15
+			#glory_hound_opinion = 5 # THE MOD
+			#parochial_opinion = 5 # THE MOD
+			#player_heir_opinion = 15 # THE MOD
 		}
 
 		widget_name = "widget_clan_law"
@@ -665,12 +668,13 @@
 			traversal_order = children
 			rank = oldest
 			title_division = partition
-			primary_heir_minimum_share = 0.33
+			#primary_heir_minimum_share = 0.33 # THE MOD
+			create_primary_tier_titles = yes # THE MOD
 		}
 		modifier = {
-			parochial_opinion = 10
-			courtly_opinion = 5
-			player_heir_opinion = 25
+			#parochial_opinion = 10 # THE MOD
+			#courtly_opinion = 5 # THE MOD
+			#player_heir_opinion = 25 # THE MOD
 		}
 
 		widget_name = "widget_clan_law"
@@ -718,12 +722,13 @@
 			traversal_order = children
 			rank = oldest
 			title_division = partition
-			primary_heir_minimum_share = 0.66
+			#primary_heir_minimum_share = 0.66 # THE MOD
+			create_primary_tier_titles = yes # THE MOD
 		}
 		modifier = {
-			parochial_opinion = 15
-			courtly_opinion = 10
-			player_heir_opinion = 40
+			#parochial_opinion = 15 # THE MOD
+			#courtly_opinion = 10 # THE MOD
+			#player_heir_opinion = 40 # THE MOD
 		}
 
 		widget_name = "widget_clan_law"

@@ -1193,23 +1193,23 @@ crush_opinion_impact = 30
 
 #Note! These are base values, use loss/gain below
 miniscule_dynasty_prestige_value = {
-	value = 75 # THE MOD
+	value = 25
 	multiply = { value = scale_dynasty_prestige_by_era }
 }
 minor_dynasty_prestige_value = {
-	value = 150 # THE MOD
+	value = 50
 	multiply = { value = scale_dynasty_prestige_by_era }
 }
 medium_dynasty_prestige_value = {
-	value = 300 # THE MOD
+	value = 75
 	multiply = { value = scale_dynasty_prestige_by_era }
 }
 major_dynasty_prestige_value = {
-	value = 500 # THE MOD
+	value = 150
 	multiply = { value = scale_dynasty_prestige_by_era}
 }
 massive_dynasty_prestige_value = {
-	value = 600 # THE MOD
+	value = 250
 	multiply = { value = scale_dynasty_prestige_by_era }
 }
 monumental_dynasty_prestige_value = 1000

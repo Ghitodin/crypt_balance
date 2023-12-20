@@ -1816,7 +1816,7 @@ feast_events_ewan.0801 = {
 
 		# Effects handled in stress loss.
 
-		stress_impact = { base = massive_stress_impact_loss }
+		stress_impact = { base = medium_stress_impact_loss } # THE MOD
 		ai_chance = {
 			# Higher base weight because the AI wants to lose stress when it selects this intent.
 			base = 100
@@ -1864,7 +1864,7 @@ feast_events_ewan.0801 = {
 
 		# Lil bit of stress loss here too, since however you cut it you're hanging out with folks you can get along with.
 		stress_impact = {
-			base = minor_stress_impact_loss
+			base = -10 # THE MOD
 			gregarious = miniscule_stress_impact_loss
 		}
 		ai_chance = {

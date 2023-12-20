@@ -1185,36 +1185,6 @@ lifestyle_blademaster = {
 			desc = trait_blademaster_1
 		}
 	}
-	
-
-	compatibility = {
-		blademaster_1 = @pos_compat_medium
-		blademaster_2 = @pos_compat_medium
-		blademaster_3 = @pos_compat_medium
-		brave = @pos_compat_low
-		craven = @neg_compat_low
-	}
-}
-blademaster_3 = {
-	lifestyle = yes
-	negate_health_penalty_add = 1
-	prowess = 12
-	
-	culture_modifier = {
-		parameter = trait_county_opinion_modifiers
-		county_opinion_add = 10
-	}
-	
-	culture_modifier = {
-		parameter = blademaster_trait_bonuses
-		attraction_opinion = 15
-		monthly_prestige = 1
-	}
-
-	culture_modifier = {
-		parameter = blademaster_traits_give_learning
-		learning = 6
-	}
 
 	# Loc
 	desc = {
@@ -10407,7 +10377,8 @@ paragon = {
 consecrated_blood = {
 	category = fame
 
-	religious_vassal_opinion = 3 # THE MOD
+	#religious_vassal_opinion = 3 # THE MOD
+	zealot_opinion = 10
 	
 	shown_in_ruler_designer = no
 	

@@ -190,51 +190,51 @@ marauder_attribute = {
 		# glory_requirement =  { modifiers and unlocks }
 		100 = { # rank 1
 			liege_modifier = {
-				monthly_prestige_gain_per_dread_mult = 0.0003 # THE MOD
+				monthly_prestige_gain_per_dread_mult = 0.001
 			}
 			knight_army_modifier = {
-				uncontrolled_province_advantage = 1 # THE MOD
+				uncontrolled_province_advantage = 2
 			}
 		}
 		300 = { # rank 2
 			liege_modifier = {
-				monthly_prestige_gain_per_dread_mult = 0.0003 # THE MOD
+				monthly_prestige_gain_per_dread_mult = 0.001
 			}
 			knight_army_modifier = {
-				uncontrolled_province_advantage = 1 # THE MOD
+				uncontrolled_province_advantage = 2
 			}
 		}
 		600 = { # rank 3
 			liege_modifier = {
-				monthly_prestige_gain_per_dread_mult = 0.0007 # THE MOD
+				monthly_prestige_gain_per_dread_mult = 0.002
 			}
 			knight_army_modifier = {
-				uncontrolled_province_advantage = 2 # THE MOD 
+				uncontrolled_province_advantage = 3
 			}
 		}
 		1000 = { # rank 4
 			liege_modifier = {
-				monthly_prestige_gain_per_dread_mult = 0.0007 # THE MOD
+				monthly_prestige_gain_per_dread_mult = 0.002
 			}
 			knight_army_modifier = {
-				uncontrolled_province_advantage = 2 # THE MOD
+				uncontrolled_province_advantage = 3
 			}
 		}
 			
 		1500 = { # rank 5
 			knight_army_modifier = {
-				uncontrolled_province_advantage = 3 # THE MOD
+				uncontrolled_province_advantage = 5
 			}
 			liege_modifier = {
-				monthly_prestige_gain_per_dread_mult = 0.001 # THE MOD
+				monthly_prestige_gain_per_dread_mult = 0.003
 			}
 		}
 		2100 = { # rank 6
 			knight_army_modifier = {
-				uncontrolled_province_advantage = 3 # THE MOD
+				uncontrolled_province_advantage = 5
 			}
 			liege_modifier = {
-				monthly_prestige_gain_per_dread_mult = 0.001 # THE MOD
+				monthly_prestige_gain_per_dread_mult = 0.003
 			}
 		}
 	}
@@ -421,37 +421,37 @@ idealist_attribute = {
 		# glory_requirement =  { modifiers and unlocks }
 		100 = { # rank 1
 			liege_modifier = {
-				courtly_opinion = 2 # THE MOD
-				minority_opinion = 1 # THE MOD 
-				barons_and_minor_landholders_opinion = 1 # THE MOD
+				courtly_opinion = 5
+				minority_opinion = 3
+				barons_and_minor_landholders_opinion = 3
 			}
 		}
 		300 = { # rank 2
 			liege_modifier = {
-				courtly_opinion = 2 # THE MOD 
-				minority_opinion = 2 # THE MOD 
-				barons_and_minor_landholders_opinion = 1 # THE MOD
+				courtly_opinion = 5
+				minority_opinion = 3
+				barons_and_minor_landholders_opinion = 3
 			}
 		}
 		600 = { # rank 3
 			liege_modifier = {
-				courtly_opinion = 2 # THE MOD
-				minority_opinion = 2 # THE MOD
-				barons_and_minor_landholders_opinion = 2 # THE MOD
+				courtly_opinion = 8
+				minority_opinion = 6
+				barons_and_minor_landholders_opinion = 6
 			}
 		}
 		1000 = { # rank 4
 			liege_modifier = {
-				courtly_opinion = 3 # THE MOD
-				minority_opinion = 2 # THE MOD
-				barons_and_minor_landholders_opinion = 2 # THE MOD
+				courtly_opinion = 8
+				minority_opinion = 6
+				barons_and_minor_landholders_opinion = 6
 			}
 		}
 		1500 = { # rank 5
 			liege_modifier = {
-				courtly_opinion = 3 # THE MOD
-				minority_opinion = 3 # THE MOD
-				barons_and_minor_landholders_opinion = 2 # THE MOD
+				courtly_opinion = 10
+				minority_opinion = 10
+				barons_and_minor_landholders_opinion = 10
 			}
 			accolade_parameters = {
 				accolade_champions_white_peace
@@ -459,9 +459,9 @@ idealist_attribute = {
 		}
 		2100 = { # rank 6
 			liege_modifier = {
-				courtly_opinion = 3 # THE MOD
-				minority_opinion = 3 # THE MOD
-				barons_and_minor_landholders_opinion = 3 # THE MOD
+				courtly_opinion = 10
+				minority_opinion = 10
+				barons_and_minor_landholders_opinion = 10
 			}
 			accolade_parameters = {
 				accolade_champions_white_peace
@@ -626,7 +626,7 @@ charmer_attribute = {
 		# glory_requirement =  { modifiers and unlocks }
 		100 = { # rank 1
 			liege_modifier = {
-				seduce_scheme_power_add = 3 # THE MOD
+				seduce_scheme_power_add = 10
 			}
 			accolade_parameters = {
 				accolade_court_seduction_vulnerability
@@ -634,7 +634,7 @@ charmer_attribute = {
 		}
 		300 = { # rank 2
 			liege_modifier = {
-				seduce_scheme_power_add = 3 # THE MOD
+				seduce_scheme_power_add = 10
 			}
 			accolade_parameters = {
 				accolade_court_seduction_vulnerability
@@ -642,7 +642,7 @@ charmer_attribute = {
 		}
 		600 = { # rank 3
 			liege_modifier = {
-				seduce_scheme_power_add = 7 # THE MOD
+				seduce_scheme_power_add = 20
 			}
 			accolade_parameters = {
 				accolade_court_seduction_vulnerability
@@ -651,7 +651,7 @@ charmer_attribute = {
 		}
 		1000 = { # rank 4
 			liege_modifier = {
-				seduce_scheme_power_add = 7 # THE MOD
+				seduce_scheme_power_add = 20
 			}
 			accolade_parameters = {
 				accolade_court_seduction_vulnerability
@@ -660,7 +660,7 @@ charmer_attribute = {
 		}
 		1500 = { # rank 5
 			liege_modifier = {
-				seduce_scheme_power_add = 10 # THE MOD
+				seduce_scheme_power_add = 30
 			}
 			accolade_parameters = {
 				accolade_court_seduction_vulnerability
@@ -669,7 +669,7 @@ charmer_attribute = {
 		}
 		2100 = { # rank 6
 			liege_modifier = {
-				seduce_scheme_power_add = 10 # THE MOD
+				seduce_scheme_power_add = 30
 			}
 			accolade_parameters = {
 				accolade_court_seduction_vulnerability
@@ -881,17 +881,17 @@ thug_attribute = {
 		# glory_requirement =  { modifiers and unlocks }
 		100 = { # rank 1
 			liege_modifier = {
-				dread_per_tyranny_add = 0.07 # THE MOD
+				dread_per_tyranny_add = 0.2
 			}
 		}
 		300 = { # rank 2
 			liege_modifier = {
-				dread_per_tyranny_add = 0.07 # THE MOD
+				dread_per_tyranny_add = 0.2
 			}
 		}
 		600 = { # rank 3
 			liege_modifier = {
-				dread_per_tyranny_add = 0.14 # THE MOD
+				dread_per_tyranny_add = 0.4
 			}
 			accolade_parameters = {
 				accolade_imprisonment_chance
@@ -899,7 +899,7 @@ thug_attribute = {
 		}
 		1000 = { # rank 4
 			liege_modifier = {
-				dread_per_tyranny_add = 0.14 # THE MOD
+				dread_per_tyranny_add = 0.4
 			}
 			accolade_parameters = {
 				accolade_imprisonment_chance
@@ -907,7 +907,7 @@ thug_attribute = {
 		}
 		1500 = { # rank 5
 			liege_modifier = {
-				dread_per_tyranny_add = 0.25 # THE MOD
+				dread_per_tyranny_add = 0.8
 			}
 			accolade_parameters = {
 				accolade_imprisonment_chance_high
@@ -915,7 +915,7 @@ thug_attribute = {
 		}
 		2100 = { # rank 6
 			liege_modifier = {
-				dread_per_tyranny_add = 0.25 # THE MOD
+				dread_per_tyranny_add = 0.8
 			}
 			accolade_parameters = {
 				accolade_imprisonment_chance_high
@@ -1066,48 +1066,48 @@ disciplinarian_attribute = {
 		# glory_requirement =  { modifiers and unlocks }
 		100 = { # rank 1
 			liege_modifier = {
-				levy_reinforcement_rate = 0.03 # THE MOD
+				levy_reinforcement_rate = 0.1
 			}
 		}
 		300 = { # rank 2
 			liege_modifier = {
-				levy_reinforcement_rate = 0.03 # THE MOD
+				levy_reinforcement_rate = 0.1
 			}
 		}
 		600 = { # rank 3
 			liege_modifier = {
-				levy_reinforcement_rate = 0.07 # THE MOD
-				levy_maintenance = -0.03 # THE MOD
+				levy_reinforcement_rate = 0.2
+				levy_maintenance = -0.1
 			}
 			knight_army_modifier = {
-				hostile_county_attrition = -0.125 # THE MOD
+				hostile_county_attrition = -0.4
 			}
 		}
 		1000 = { # rank 4
 			liege_modifier = {
-				levy_reinforcement_rate = 0.07 # THE MOD
-				levy_maintenance = -0.03 # THE MOD
+				levy_reinforcement_rate = 0.2
+				levy_maintenance = -0.1
 			}
 			knight_army_modifier = {
-				hostile_county_attrition = -0.125 # THE MOD
+				hostile_county_attrition = -0.4
 			}
 		}
 		1500 = { # rank 5
 			liege_modifier = {
-				levy_reinforcement_rate = 0.1 # THE MOD
-				levy_maintenance = -0.07 # THE MOD
+				levy_reinforcement_rate = 0.3
+				levy_maintenance = -0.2
 			}
 			knight_army_modifier = {
-				hostile_county_attrition = -0.25 # THE MOD
+				hostile_county_attrition = -0.8
 			}
 		}
 		2100 = { # rank 6
 			liege_modifier = {
-				levy_reinforcement_rate = 0.1 # THE MOD
-				levy_maintenance = -0.07 # THE MOD
+				levy_reinforcement_rate = 0.3
+				levy_maintenance = -0.2
 			}
 			knight_army_modifier = {
-				hostile_county_attrition = -0.25 # THE MOD
+				hostile_county_attrition = -0.8
 			}
 		}
 	}
@@ -1338,17 +1338,17 @@ fanatic_attribute = {
 		# glory_requirement =  { modifiers and unlocks }
 		100 = { # rank 1
 			liege_modifier = {
-				zealot_opinion = 3 # THE MOD
+				zealot_opinion = 10
 			}
 		}
 		300 = { # rank 2
 			liege_modifier = {
-				zealot_opinion = 3 # THE MOD
+				zealot_opinion = 10
 			}
 		}
 		600 = { # rank 3
 			liege_modifier = {
-				zealot_opinion = 5 # THE MOD
+				zealot_opinion = 15
 			}
 			accolade_parameters = {
 				acclaimed_knight_piety_from_battle
@@ -1356,7 +1356,7 @@ fanatic_attribute = {
 		}
 		1000 = { # rank 4
 			liege_modifier = {
-				zealot_opinion = 5 # THE MOD
+				zealot_opinion = 15
 			}
 			#knight_army_modifier = {
 			#	tolerance_advantage_mod = 6
@@ -1367,7 +1367,7 @@ fanatic_attribute = {
 		}
 		1500 = { # rank 5
 			liege_modifier = {
-				zealot_opinion = 8 # THE MOD
+				zealot_opinion = 25
 			}
 			accolade_parameters = {
 				acclaimed_knight_piety_from_battle_high
@@ -1375,7 +1375,7 @@ fanatic_attribute = {
 		}
 		2100 = { # rank 6
 			liege_modifier = {
-				zealot_opinion = 8 # THE MOD
+				zealot_opinion = 25
 			}
 			accolade_parameters = {
 				acclaimed_knight_piety_from_battle_high
@@ -1553,44 +1553,44 @@ valiant_attribute = {
 		# glory_requirement =  { modifiers and unlocks }
 		100 = { # rank 1
 			knight_army_modifier = {
-				army_damage_mult = 0.03 # THE MOD
+				army_damage_mult = 0.1
 			}
 		}
 		300 = { # rank 2
 			knight_army_modifier = {
-				army_damage_mult = 0.03 # THE MOD
+				army_damage_mult = 0.1
 			}
 		}
 		600 = { # rank 3
 			knight_army_modifier = {
-				army_damage_mult = 0.07 # THE MOD
+				army_damage_mult = 0.2
 			}
 			liege_modifier = {
-				glory_hound_opinion = 5 # THE MOD
+				glory_hound_opinion = 15
 			}
 		}
 		1000 = { # rank 4
 			knight_army_modifier = {
-				army_damage_mult = 0.07 # THE MOD
+				army_damage_mult = 0.2
 			}
 			liege_modifier = {
-				glory_hound_opinion = 5 # THE MOD
+				glory_hound_opinion = 15
 			}
 		}
 		1500 = { # rank 5
 			knight_army_modifier = {
-				army_damage_mult = 0.1 # THE MOD
+				army_damage_mult = 0.3
 			}
 			liege_modifier = {
-				glory_hound_opinion = 8 # THE MOD
+				glory_hound_opinion = 25
 			}
 		}
 		2100 = { # rank 6
 			knight_army_modifier = {
-				army_damage_mult = 0.1 # THE MOD
+				army_damage_mult = 0.3
 			}
 			liege_modifier = {
-				glory_hound_opinion = 8 # THE MOD
+				glory_hound_opinion = 25
 			}
 		}
 	}
@@ -1750,44 +1750,44 @@ stalwart_attribute = {
         # glory_requirement =  { modifiers and unlocks }
         100 = { # rank 1
            liege_modifier = {
-                character_travel_safety = 2 # THE MOD
+                character_travel_safety = 5
             }
         }
         300 = { # rank 2
             liege_modifier = {
-                character_travel_safety = 2 # THE MOD
+                character_travel_safety = 5
             }
         }
         600 = { # rank 3
             knight_army_modifier = {
-                army_toughness_mult = 0.03 # THE MOD
+                army_toughness_mult = 0.1
             }
             liege_modifier = {
-                character_travel_safety = 3 # THE MOD
+                character_travel_safety = 10
             }
         }
         1000 = { # rank 4
             knight_army_modifier = {
-                army_toughness_mult = 0.03 # THE MOD
+                army_toughness_mult = 0.1
             }
             liege_modifier = {
-                character_travel_safety = 3 # THE MOD
+                character_travel_safety = 10
             }
         }
         1500 = { # rank 5
             knight_army_modifier = {
-                army_toughness_mult = 0.05 # THE MOD
+                army_toughness_mult = 0.15
             }
             liege_modifier = {
-                character_travel_safety = 5 # THE MOD
+                character_travel_safety = 15
             }
         }
         2100 = { # rank 6
             knight_army_modifier = {
-                army_toughness_mult = 0.05 # THE MOD
+                army_toughness_mult = 0.15
             }
             liege_modifier = {
-                character_travel_safety = 5 # THE MOD
+                character_travel_safety = 15
             }
         }
     }
@@ -1957,36 +1957,36 @@ scoundrel_attribute = {
         # glory_requirement =  { modifiers and unlocks }
         100 = { # rank 1
             liege_modifier = {
-               mercenary_hire_cost_mult = -0.03 # THE MOD
+               mercenary_hire_cost_mult = -0.1
             }
         }
         300 = { # rank 2
             liege_modifier = {
-                mercenary_hire_cost_mult = -0.03 # THE MOD
+                mercenary_hire_cost_mult = -0.1
             }
         }
         600 = { # rank 3
             liege_modifier = {
-                martial_per_stress_level = 1 # THE MOD
-                mercenary_hire_cost_mult = -0.07 # THE MOD
+                martial_per_stress_level = 2
+                mercenary_hire_cost_mult = -0.2
             }
         }
         1000 = { # rank 4
             liege_modifier = {
-                martial_per_stress_level = 1 # THE MOD
-                mercenary_hire_cost_mult = -0.07 # THE MOD
+                martial_per_stress_level = 2
+                mercenary_hire_cost_mult = -0.2
             }
         }
         1500 = { # rank 5
             liege_modifier = {
-                martial_per_stress_level = 2 # THE MOD
-                mercenary_hire_cost_mult = -0.1 # THE MOd
+                martial_per_stress_level = 5
+                mercenary_hire_cost_mult = -0.3
             }
         }
         2100 = { # rank 6
             liege_modifier = {
-                martial_per_stress_level = 2 # THE MOD
-                mercenary_hire_cost_mult = -0.1 # THE MOD
+                martial_per_stress_level = 5
+                mercenary_hire_cost_mult = -0.3
             }
         }
     }

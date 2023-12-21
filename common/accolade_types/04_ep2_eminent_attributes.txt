@@ -9,15 +9,15 @@
 ##################################################
 # CONTROL VALUES
 
-@lifestyle_bonus_tier_1_value = 0.15
-@lifestyle_bonus_tier_2_value = 0.25
-@lifestyle_bonus_tier_3_value = 0.35
+@lifestyle_bonus_tier_1_value = 0.05 # THE MOD 
+@lifestyle_bonus_tier_2_value = 0.07 # THE MOD
+@lifestyle_bonus_tier_3_value = 0.1 # THE MOD
 #
-@army_supply_bonus_tier_1_value = 0.25
-@army_supply_bonus_tier_2_value = 0.5
+@army_supply_bonus_tier_1_value = 0.07 # THE MOD 
+@army_supply_bonus_tier_2_value = 0.15 # THE MOD
 #
-@knight_effectiveness_tier_1_value = 0.4
-@knight_effectiveness_tier_2_value = 0.8
+@knight_effectiveness_tier_1_value = 0.1 # THE MOD 
+@knight_effectiveness_tier_2_value = 0.2 # THE MOD
 
 ##################################################
 # LIFESTYLE TRAIT ATTRIBUTES

@@ -643,8 +643,8 @@ accuse_of_decandence_interaction = {
 		add_clan_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
-			VALUE = major_unity_loss
-			DESC = clan_unity_decadence.desc
+			VALUE = major_unity_gain # THE MOD
+			DESC = clan_unity_extolled.desc # THE MOD
 			REVERSE_NON_HOUSE_TARGET = no
 		}		
 	}
@@ -652,7 +652,7 @@ accuse_of_decandence_interaction = {
 	cost = {
 		piety = {
 			value = {
-				add = minor_piety_value
+				add = medium_piety_value # THE MOD
 				if = {
 					limit = {
 						scope:recipient = {
@@ -660,7 +660,7 @@ accuse_of_decandence_interaction = {
 						}
 					}
 					add = {
-						value = minor_piety_value
+						value = medium_piety_value # THE MOD
 						multiply = scope:recipient.num_virtuous_traits
 					}
 				}
@@ -671,7 +671,7 @@ accuse_of_decandence_interaction = {
 						}
 					}
 					add = {
-						value = minor_piety_value
+						value = medium_piety_value # THE MOD
 						multiply = 0.5
 						multiply = scope:recipient.num_sinful_traits
 						min = 10
@@ -941,8 +941,8 @@ extoll_virtuousness_interaction = {
 		add_clan_unity_interaction_effect = {
 			CHARACTER = scope:actor
 			TARGET = scope:recipient
-			VALUE = major_unity_gain
-			DESC = clan_unity_extolled.desc
+			VALUE = major_unity_loss # THE MOD
+			DESC = clan_unity_decadence.desc
 			REVERSE_NON_HOUSE_TARGET = no
 		}		
 	}

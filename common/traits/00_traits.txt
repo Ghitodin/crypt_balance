@@ -9327,7 +9327,7 @@ decadent = {
 		extolled
 	}
 	
-	dynasty_house_opinion = -15
+	dynasty_house_opinion = -10 # THE MOD
 	same_opinion = 25
 	monthly_piety = -1
 	stress_gain_mult = 0.25
@@ -9355,7 +9355,7 @@ extolled = {
 		decadent
 	}
 	
-	dynasty_house_opinion = 15
+	dynasty_house_opinion = 7 # THE MOD
 	monthly_piety = 1
 	enemy_hostile_scheme_success_chance_add = 25
 	

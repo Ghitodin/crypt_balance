@@ -40,7 +40,7 @@ education_intrigue_2 = {
 	minimum_age = 16
 	intrigue = 4
 	category = education
-	monthly_intrigue_lifestyle_xp_gain_mult = 0.2
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.15 # THE MOD
 	
 	ruler_designer_cost = 20
 	
@@ -63,7 +63,7 @@ education_intrigue_3 = {
 	minimum_age = 16
 	intrigue = 6
 	category = education
-	monthly_intrigue_lifestyle_xp_gain_mult = 0.3
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.2 # THE MOD
 	
 	ruler_designer_cost = 40
 	
@@ -86,7 +86,7 @@ education_intrigue_4 = {
 	minimum_age = 16
 	intrigue = 8
 	category = education
-	monthly_intrigue_lifestyle_xp_gain_mult = 0.4
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.25 # THE MOD
 	
 	ruler_designer_cost = 80
 	
@@ -107,12 +107,12 @@ education_intrigue_4 = {
 }
 education_intrigue_5 = {
 	minimum_age = 16
-	intrigue = 10
-	diplomacy = 3
+	intrigue = 9 # THE MOD
+	diplomacy = 1 # THE MOD
 	category = education
-	monthly_intrigue_lifestyle_xp_gain_mult = 0.5
-	monthly_diplomacy_lifestyle_xp_gain_mult = 0.25
-	flag = agent_acceptance_25
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.3 # THE MOD
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.1 # THE MOD
+	#flag = agent_acceptance_25  # THE MOD
 	flag = scheme_start_progress
 	
 	ruler_designer_cost = 150
@@ -167,7 +167,7 @@ education_diplomacy_2 = {
 	minimum_age = 16
 	diplomacy = 4
 	category = education
-	monthly_diplomacy_lifestyle_xp_gain_mult = 0.2
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.15 # THE MOD
 	
 	ruler_designer_cost = 20
 
@@ -190,7 +190,7 @@ education_diplomacy_3 = {
 	minimum_age = 16
 	diplomacy = 6
 	category = education
-	monthly_diplomacy_lifestyle_xp_gain_mult = 0.3
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.2 # THE MOD
 	
 	ruler_designer_cost = 40
 	
@@ -213,7 +213,7 @@ education_diplomacy_4 = {
 	minimum_age = 16
 	diplomacy = 8
 	category = education
-	monthly_diplomacy_lifestyle_xp_gain_mult = 0.4
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.25 # THE MOD
 	
 	ruler_designer_cost = 80
 
@@ -243,13 +243,13 @@ education_diplomacy_4 = {
 }
 education_diplomacy_5 = {
 	minimum_age = 16
-	diplomacy = 10
-	martial = 3
+	diplomacy = 9 # THE MOD
+	martial = 1 # THE MOD
 	category = education
-	monthly_diplomacy_lifestyle_xp_gain_mult = 0.5
-	monthly_martial_lifestyle_xp_gain_mult = 0.25
-	flag = offer_vassalisation_25
-	flag = better_war_hostages
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.3 # THE MOD
+	monthly_martial_lifestyle_xp_gain_mult = 0.1 # THE MOD
+	#flag = offer_vassalisation_25 # THE MOD
+	#flag = better_war_hostages # THE MOD
 	
 	ruler_designer_cost = 150
 
@@ -312,7 +312,7 @@ education_stewardship_2 = { #Thrifty clerk
 	minimum_age = 16
 	stewardship = 4
 	category = education
-	monthly_stewardship_lifestyle_xp_gain_mult = 0.2
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.15 # THE MOD
 	
 	ruler_designer_cost = 20
 	
@@ -335,7 +335,7 @@ education_stewardship_3 = {	#Fortune builder
 	minimum_age = 16
 	stewardship = 6
 	category = education
-	monthly_stewardship_lifestyle_xp_gain_mult = 0.3
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.2 # THE MOD
 	
 	ruler_designer_cost = 40
 	
@@ -358,7 +358,7 @@ education_stewardship_4 = {
 	minimum_age = 16
 	stewardship = 8
 	category = education
-	monthly_stewardship_lifestyle_xp_gain_mult = 0.4
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.25 # THE MOD
 	
 	culture_modifier = {
 		parameter = elephant_bonuses_for_rank_4_education
@@ -387,12 +387,12 @@ education_stewardship_4 = {
 }
 education_stewardship_5 = {
 	minimum_age = 16
-	stewardship = 10
-	learning = 3
+	stewardship = 9 # THE MOD
+	learning = 1 # THE MOD
 	category = education
-	monthly_stewardship_lifestyle_xp_gain_mult = 0.5
-	monthly_learning_lifestyle_xp_gain_mult = 0.25
-	vassal_tax_mult = 0.25
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.3 # THE MOD
+	monthly_learning_lifestyle_xp_gain_mult = 0.1 # THE MOD
+	vassal_tax_mult = 0.05 # THE MOD
 	
 	culture_modifier = {
 		parameter = elephant_bonuses_for_rank_4_education
@@ -467,7 +467,7 @@ education_martial_2 = { #Tough soldier
 	minimum_age = 16
 	martial = 4
 	category = education
-	monthly_martial_lifestyle_xp_gain_mult = 0.2
+	monthly_martial_lifestyle_xp_gain_mult = 0.15 # THE MOD
 	
 	culture_modifier = {
 		parameter = prowess_from_martial_education
@@ -502,7 +502,7 @@ education_martial_3 = { #Skilled tactician
 	minimum_age = 16
 	martial = 6
 	category = education
-	monthly_martial_lifestyle_xp_gain_mult = 0.3
+	monthly_martial_lifestyle_xp_gain_mult = 0.2 # THE MOD
 	
 	culture_modifier = {
 		parameter = prowess_from_martial_education
@@ -537,7 +537,7 @@ education_martial_4 = { #Brilliant strategist
 	minimum_age = 16
 	martial = 8
 	category = education
-	monthly_martial_lifestyle_xp_gain_mult = 0.4
+	monthly_martial_lifestyle_xp_gain_mult = 0.25 # THE MOD
 	
 	culture_modifier = {
 		parameter = prowess_from_martial_education
@@ -578,13 +578,13 @@ education_martial_4 = { #Brilliant strategist
 }
 education_martial_5 = {
 	minimum_age = 16
-	martial = 10
-	stewardship = 3
+	martial = 9 # THE MOD
+	stewardship = 1 # THE MOD
 	category = education
-	monthly_martial_lifestyle_xp_gain_mult = 0.5
-	monthly_stewardship_lifestyle_xp_gain_mult = 0.25
-	army_siege_value_mult = 0.5
-	movement_speed = 0.2
+	monthly_martial_lifestyle_xp_gain_mult = 0.3 # THE MOD
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.1 # THE MOD
+	army_siege_value_mult = 0.15 # THE MOD
+	movement_speed = 0.1 # THE MOD
 	
 	culture_modifier = {
 		parameter = prowess_from_martial_education
@@ -674,7 +674,7 @@ education_learning_2 = {
 	minimum_age = 16
 	learning = 4
 	category = education
-	monthly_learning_lifestyle_xp_gain_mult = 0.2
+	monthly_learning_lifestyle_xp_gain_mult = 0.15 # THE MOD
 	
 	culture_modifier = {
 		parameter = prowess_from_religious_traits
@@ -713,7 +713,7 @@ education_learning_3 = {
 	minimum_age = 16
 	learning = 6
 	category = education
-	monthly_learning_lifestyle_xp_gain_mult = 0.3
+	monthly_learning_lifestyle_xp_gain_mult = 0.2 # THE MOD
 	
 	culture_modifier = {
 		parameter = prowess_from_religious_traits
@@ -752,7 +752,7 @@ education_learning_4 = {
 	minimum_age = 16
 	learning = 8
 	category = education
-	monthly_learning_lifestyle_xp_gain_mult = 0.4
+	monthly_learning_lifestyle_xp_gain_mult = 0.25 # THE MOD
 	
 	culture_modifier = {
 		parameter = prowess_from_religious_traits
@@ -799,12 +799,12 @@ education_learning_4 = {
 }
 education_learning_5 = {
 	minimum_age = 16
-	learning = 10
-	intrigue = 3
+	learning = 9 # THE MOD
+	intrigue = 1 # THE MOD
 	category = education
-	monthly_learning_lifestyle_xp_gain_mult = 0.5
-	monthly_intrigue_lifestyle_xp_gain_mult = 0.25
-	development_growth = 0.1
+	monthly_learning_lifestyle_xp_gain_mult = 0.3 # THE MOD
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.1 # THE MOD
+	development_growth = 0.05 # THE MOD
 	
 	culture_modifier = {
 		parameter = prowess_from_religious_traits

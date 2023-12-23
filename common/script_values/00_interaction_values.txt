@@ -4,17 +4,17 @@
 			ransom_cost_value < medium_gold_value 
 			ransom_cost_value > minor_gold_value 
 		}
-		value = minor_gold_value
+		value = 10 # THE MOD
 	}
 	else_if = {
 		limit = {
 			ransom_cost_value < medium_gold_value 
 			ransom_cost_value < minor_gold_value 
 		}
-		value = ransom_cost_value
+		value = 10 # THE MOD
 	}
 	else = {
-		value = medium_gold_value
+		value = 10 # THE MOD
 	}
 }
 

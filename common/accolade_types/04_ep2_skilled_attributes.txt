@@ -332,7 +332,7 @@ tactician_attribute = {
 		600 = {
 			liege_modifier = { 
 				monthly_martial_lifestyle_xp_gain_mult = @lifestyle_bonus_tier_2_value
-				martial = 1
+				#martial = 1 # THE MOD
 			}
 			knight_army_modifier = {
 				counter_efficiency = @lifestyle_bonus_tier_2_value
@@ -466,27 +466,27 @@ reeve_attribute = {
 		# Rank 1
 		100 = {
 			liege_modifier = {
-				parochial_opinion = 10
+				parochial_opinion = 3 # THE MOD
 			}
 		}
 		# Rank 2
 		300 = {
 			liege_modifier = {
-				parochial_opinion = 10
+				parochial_opinion = 3 # THE MOD
 			}
 		}
 		# Rank 3
 		600 = {
 			liege_modifier = {
-				parochial_opinion = 15
-				stewardship = 1
+				parochial_opinion = 5 # THE MOD
+				#stewardship = 1
 			}
 			accolade_parameters = { accolade_development_growth_on_tournament_completion_low }
 		}
 		# Rank 4
 		1000 = {
 			liege_modifier = {
-				parochial_opinion = 15
+				parochial_opinion = 5 # THE MOD
 				stewardship = 1
 			}
 			accolade_parameters = { accolade_development_growth_on_tournament_completion_low }
@@ -494,8 +494,8 @@ reeve_attribute = {
 		# Rank 5
 		1500 = {
 			liege_modifier = {
-				parochial_opinion = 25
-				stewardship = 2
+				parochial_opinion = 8 # THE MOD
+				stewardship = 1 # THE MOD
 			}
 			accolade_parameters = {
 				accolade_development_growth_on_tournament_completion_high
@@ -505,8 +505,8 @@ reeve_attribute = {
 		# Rank 6
 		2100 = {
 			liege_modifier = {
-				parochial_opinion = 25
-				stewardship = 2
+				parochial_opinion = 10 # THE MOD
+				stewardship = 1 # THE MOD
 			}
 			accolade_parameters = {
 				accolade_development_growth_on_tournament_completion_high
@@ -630,7 +630,7 @@ manipulator_attribute = {
 			liege_modifier = {
 				intrigue_scheme_power = @intrigue_scheme_power_bonus_tier_2_value
 				knight_effectiveness_per_dread = @knight_effectiveness_per_dread_tier_2_value
-				intrigue = 1
+				#intrigue = 1 # THE MOD
 			}
 		}
 		# Rank 4
@@ -645,9 +645,9 @@ manipulator_attribute = {
 		1500 = {
 			liege_modifier = {
 				intrigue_scheme_power = @intrigue_scheme_power_bonus_tier_3_value
-				knight_effectiveness_per_dread = @knight_effectiveness_per_dread_tier_3_value
-				dread_baseline_add = @dread_base_bonus_tier_3_value
-				intrigue = 2
+				knight_effectiveness_per_dread = @knight_effectiveness_per_dread_tier_2_value # THE MOD
+				dread_baseline_add = @dread_base_bonus_tier_2_value # THE MOD
+				intrigue = 1 # THE MOD
 			}
 		}
 		# Rank 6
@@ -656,7 +656,7 @@ manipulator_attribute = {
 				intrigue_scheme_power = @intrigue_scheme_power_bonus_tier_3_value
 				knight_effectiveness_per_dread = @knight_effectiveness_per_dread_tier_3_value
 				dread_baseline_add = @dread_base_bonus_tier_3_value
-				intrigue = 2
+				intrigue = 1 # THE MOD
 			}
 		}
 	}
@@ -792,7 +792,7 @@ mentor_attribute = {
 		600 = {
 			liege_modifier = {
 				knight_limit = 1
-				learning = 1
+				#learning = 1 # THE MOD
 			}
 			accolade_parameters = {
 				accolade_train_commanders_bonus
@@ -813,8 +813,8 @@ mentor_attribute = {
 		# Rank 5
 		1500 = {
 			liege_modifier = {
-				knight_limit = 2
-				learning = 2
+				knight_limit = 1 # THE MOD
+				learning = 1 # THE MOD
 			}
 			accolade_parameters = {
 				accolade_train_commanders_bonus_high
@@ -824,8 +824,8 @@ mentor_attribute = {
 		# Rank 6
 		2100 = {
 			liege_modifier = {
-				knight_limit = 2
-				learning = 2
+				knight_limit = 1 # THE MOD
+				learning = 1 # THE MOD
 			}
 			accolade_parameters = {
 				accolade_train_commanders_bonus_high
@@ -1001,7 +1001,7 @@ contender_attribute = {
 		# Rank 5
 		1500 = {
 			liege_modifier = {
-				monthly_prestige_gain_per_knight_mult = 0.02
+				monthly_prestige_gain_per_knight_mult = 0.01 # THE MOD
 				tourney_participant_xp_gain_mult = @tourney_participant_xp_mult_bonus_tier_3_value
 			}
 			accolade_parameters = {
@@ -1012,7 +1012,7 @@ contender_attribute = {
 		# Rank 6
 		2100 = {
 			liege_modifier = {
-				monthly_prestige_gain_per_knight_mult = 0.02
+				monthly_prestige_gain_per_knight_mult = 0.01 # THE MOD
 				tourney_participant_xp_gain_mult = @tourney_participant_xp_mult_bonus_tier_3_value
 			}
 			accolade_parameters = {

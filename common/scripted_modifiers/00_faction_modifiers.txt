@@ -724,7 +724,7 @@ common_faction_modifiers = {
 	# Unity - House members are less likely to join factions against each other with high levels of unity
 	modifier = { # Friendly unity level
 		desc = "FACTION_REASON_unity_significantly_less_likely_claimant_factions"
-		add = -10 # THE MOD
+		add = -5 # THE MOD
 		exists = root.house
 		exists = $FACTION_TARGET$.house
 		house = $FACTION_TARGET$.house
@@ -734,7 +734,7 @@ common_faction_modifiers = {
 	}
 	modifier = { # Harmonious unity level
 		desc = "FACTION_REASON_unity_significantly_less_likely_claimant_factions"
-		add = -20 # THE MOD
+		add = -10 # THE MOD
 		exists = root.house
 		exists = $FACTION_TARGET$.house
 		house = $FACTION_TARGET$.house
@@ -1937,7 +1937,7 @@ claimant_faction_modifiers = {
 	
 	# Unity - House members are more likely to join and create claimant factions with low levels of unity
 	modifier = { # Competitive unity level
-		add = 10 # THE MOD
+		add = 5 # THE MOD
 		desc = "FACTION_REASON_unity_more_likely_claimant_factions"
 		exists = root.house
 		exists = $FACTION_TARGET$.house
@@ -1947,7 +1947,7 @@ claimant_faction_modifiers = {
 		}
 	}
 	modifier = { # Antagonistic unity level
-		add = 20 # THE MOD
+		add = 10 # THE MOD
 		desc = "FACTION_REASON_unity_significantly_more_likely_claimant_factions"
 		exists = root.house
 		exists = $FACTION_TARGET$.house

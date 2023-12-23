@@ -26,103 +26,104 @@
 @number_maa_regiments_increment_3 = 6
 @number_maa_regiments_increment_4 = 8
 
-@accolade_maa_maint_1 = -0.1
-@accolade_maa_maint_2 = -0.15
-@accolade_maa_maint_3 = -0.2
-@accolade_maa_maint_4 = -0.25
-@accolade_maa_maint_5 = -0.3
+@accolade_maa_maint_1 = -0.02 # THE MOD
+@accolade_maa_maint_2 = -0.04 # THE MOD
+@accolade_maa_maint_3 = -0.06 # THE MOD
+@accolade_maa_maint_4 = -0.08 # THE MOD
+@accolade_maa_maint_5 = -0.1 # THE MOD
 
-@accolade_maa_damage_1 = 0.1
-@accolade_maa_damage_2 = 0.2
-@accolade_maa_damage_3 = 0.3
-@accolade_maa_damage_4 = 0.4
-@accolade_maa_damage_5 = 0.5
-@accolade_maa_damage_6 = 0.6
+@accolade_maa_damage_1 = 0.03 # THE MOD
+@accolade_maa_damage_2 = 0.06 # THE MOD
+@accolade_maa_damage_3 = 0.08 # THE MOD
+@accolade_maa_damage_4 = 0.1 # THE MOD
+@accolade_maa_damage_5 = 0.12 # THE MOD
+@accolade_maa_damage_6 = 0.15 # THE MOD
 
-@accolade_maa_toughness_1 = 0.1
-@accolade_maa_toughness_2 = 0.2
-@accolade_maa_toughness_3 = 0.3
-@accolade_maa_toughness_4 = 0.4
-@accolade_maa_toughness_5 = 0.5
-@accolade_maa_toughness_6 = 0.6
+@accolade_maa_toughness_1 = 0.03 # THE MOD
+@accolade_maa_toughness_2 = 0.06 # THE MOD
+@accolade_maa_toughness_3 = 0.08 # THE MOD
+@accolade_maa_toughness_4 = 0.1 # THE MOD
+@accolade_maa_toughness_5 = 0.12 # THE MOD
+@accolade_maa_toughness_6 = 0.15 # THE MOD
 
-@accolade_maa_screen_1 = 0.1
-@accolade_maa_screen_2 = 0.2
-@accolade_maa_screen_3 = 0.3
-@accolade_maa_screen_4 = 0.4
-@accolade_maa_screen_5 = 0.5
-@accolade_maa_screen_6 = 0.6
+@accolade_maa_screen_1 = 0.03 # THE MOD
+@accolade_maa_screen_2 = 0.06 # THE MOD
+@accolade_maa_screen_3 = 0.08 # THE MOD
+@accolade_maa_screen_4 = 0.1 # THE MOD
+@accolade_maa_screen_5 = 0.12 # THE MOD
+@accolade_maa_screen_6 = 0.15 # THE MOD
 
-@accolade_maa_pursuit_1 = 0.1
-@accolade_maa_pursuit_2 = 0.2
-@accolade_maa_pursuit_3 = 0.3
-@accolade_maa_pursuit_4 = 0.4
-@accolade_maa_pursuit_5 = 0.5
-@accolade_maa_pursuit_6 = 0.6
+@accolade_maa_pursuit_1 = 0.03 # THE MOD
+@accolade_maa_pursuit_2 = 0.06 # THE MOD
+@accolade_maa_pursuit_3 = 0.08 # THE MOD
+@accolade_maa_pursuit_4 = 0.1 # THE MOD
+@accolade_maa_pursuit_5 = 0.12 # THE MOD
+@accolade_maa_pursuit_6 = 0.15 # THE MOD
 
-@archer_attr_archer_maint_1 = -0.2
-@archer_attr_archer_maint_2 = -0.4
-@archer_attr_archer_maint_3 = -0.6
+@archer_attr_archer_maint_1 = -0.06 # THE MOD
+@archer_attr_archer_maint_2 = -0.12 # THE MOD
+@archer_attr_archer_maint_3 = -0.2 # THE MOD
 
-@skirmisher_attr_winter_movement_speed_1 = 0.1
-@skirmisher_attr_winter_movement_speed_2 = 0.15
-@skirmisher_attr_winter_movement_speed_3 = 0.20
+@skirmisher_attr_winter_movement_speed_1 = 0.03 # THE MOD
+@skirmisher_attr_winter_movement_speed_2 = 0.05 # THE MOD
+@skirmisher_attr_winter_movement_speed_3 = 0.07 # THE MOD
 
-@skirmisher_attr_skirm_toughness_2 = 6
-@skirmisher_attr_skirm_toughness_3 = 15
+# Nerfed just in case, for most MAA types generic constants are used 
+@skirmisher_attr_skirm_toughness_2 = 2 # THE MOD
+@skirmisher_attr_skirm_toughness_3 = 5 # THE MOD
 
-@skirmisher_attr_skirm_screen_2 = 6
-@skirmisher_attr_skirm_screen_3 = 15
+@skirmisher_attr_skirm_screen_2 = 2 # THE MOD
+@skirmisher_attr_skirm_screen_3 = 5 # THE MOD
 
-@skirmisher_attr_skirm_pursuit_2 = 6
-@skirmisher_attr_skirm_pursuit_3 = 15
+@skirmisher_attr_skirm_pursuit_2 = 2 # THE MOD
+@skirmisher_attr_skirm_pursuit_3 = 5 # THE MOD
 
-@pike_attr_toughness_1 = 0.15
-@pike_attr_toughness_2 = 0.3
-@pike_attr_toughness_3 = 0.5
+@pike_attr_toughness_1 = 0.05 # THE MOD
+@pike_attr_toughness_2 = 0.1 # THE MOD
+@pike_attr_toughness_3 = 0.15 # THE MOD
 
-@pike_attr_damage_1 = 0.05
-@pike_attr_damage_2 = 0.1
-@pike_attr_damage_3 = 0.15
+@pike_attr_damage_1 = 0.015 # THE MOD
+@pike_attr_damage_2 = 0.03 # THE MOD
+@pike_attr_damage_3 = 0.05 # THE MOD
 
-@pike_attr_max_size_2 = 1
-@pike_attr_max_size_3 = 2
+@pike_attr_max_size_2 = 0 # THE MOD
+@pike_attr_max_size_3 = 0 # THE MOD
 
-@outrider_attr_light_cav_pursuit_1 = 0.1
-@outrider_attr_light_cav_pursuit_2 = 0.2
-@outrider_attr_light_cav_pursuit_3 = 0.35
+@outrider_attr_light_cav_pursuit_1 = 0.03 # THE MOD
+@outrider_attr_light_cav_pursuit_2 = 0.06 # THE MOD
+@outrider_attr_light_cav_pursuit_3 = 0.1 # THE MOD
 
-@outrider_attr_light_cav_screen_1 = 0.05
-@outrider_attr_light_cav_screen_2 = 0.15
-@outrider_attr_light_cav_screen_3 = 0.25
+@outrider_attr_light_cav_screen_1 = 0.015 # THE MOD
+@outrider_attr_light_cav_screen_2 = 0.05 # THE MOD
+@outrider_attr_light_cav_screen_3 = 0.08 # THE MOD
 
-@outrider_attr_light_cav_damage_2 = 0.1
-@outrider_attr_light_cav_damage_3 = 0.15
+@outrider_attr_light_cav_damage_2 = 0.03 # THE MOD
+@outrider_attr_light_cav_damage_3 = 0.05 # THE MOD
 
-@outrider_attr_movement_speed_1 = 0.05
-@outrider_attr_movement_speed_2 = 0.10
-@outrider_attr_movement_speed_3 = 0.15
+@outrider_attr_movement_speed_1 = 0.015 # THE MOD
+@outrider_attr_movement_speed_2 = 0.03 # THE MOD
+@outrider_attr_movement_speed_3 = 0.05 # THE MOD
 
-@vanguard_attr_heavy_inf_max_size_1 = 1
-@vanguard_attr_heavy_inf_max_size_2 = 2
-@vanguard_attr_heavy_inf_max_size_3 = 4
+@vanguard_attr_heavy_inf_max_size_1 = 0 # THE MOD
+@vanguard_attr_heavy_inf_max_size_2 = 0 # THE MOD
+@vanguard_attr_heavy_inf_max_size_3 = 0 # THE MOD
 
-@vanguard_attr_heavy_inf_maint_1 = -0.05
-@vanguard_attr_heavy_inf_maint_2 = -0.15
-@vanguard_attr_heavy_inf_maint_3 = -0.25
+@vanguard_attr_heavy_inf_maint_1 = -0.02 # THE MOD
+@vanguard_attr_heavy_inf_maint_2 = -0.05 # THE MOD
+@vanguard_attr_heavy_inf_maint_3 = -0.08 # THE MOD
 
-@vanguard_attr_heavy_inf_damage_2 = 0.1
-@vanguard_attr_heavy_inf_damage_3 = 0.1
+@vanguard_attr_heavy_inf_damage_2 = 0.03 # THE MOD
+@vanguard_attr_heavy_inf_damage_3 = 0.03 # THE MOD
 
-@vanguard_attr_heavy_inf_tough_3 = 0.2
+@vanguard_attr_heavy_inf_tough_3 = 0.07 # THE MOD
 
-@lancer_attr_heavy_cav_tough_1 = 15
-@lancer_attr_heavy_cav_tough_2 = 20
-@lancer_attr_heavy_cav_tough_3 = 30
+@lancer_attr_heavy_cav_tough_1 = 5 # THE MOD
+@lancer_attr_heavy_cav_tough_2 = 7 # THE MOD
+@lancer_attr_heavy_cav_tough_3 = 10 # THE MOD
 
-@lancer_attr_heavy_cav_damage_1 = 5
-@lancer_attr_heavy_cav_damage_2 = 10
-@lancer_attr_heavy_cav_damage_3 = 15
+@lancer_attr_heavy_cav_damage_1 = 2 # THE MOD
+@lancer_attr_heavy_cav_damage_2 = 3 # THE MOD
+@lancer_attr_heavy_cav_damage_3 = 5 # THE MOD
 
 @lancer_attr_heavy_cav_tough_negate_1 = @[lancer_attr_heavy_cav_tough_1 * -1]
 @lancer_attr_heavy_cav_tough_negate_2 = @[lancer_attr_heavy_cav_tough_2 * -1]
@@ -132,84 +133,84 @@
 @lancer_attr_heavy_cav_damage_negate_2 = @[lancer_attr_heavy_cav_damage_2 * -1]
 @lancer_attr_heavy_cav_damage_negate_3 = @[lancer_attr_heavy_cav_damage_3 * -1]
 
-@crossbow_attr_army_siege_1 = 0.1
-@crossbow_attr_army_siege_2 = 0.25
-@crossbow_attr_army_siege_3 = 0.4
+@crossbow_attr_army_siege_1 = 0.03 # THE MOD
+@crossbow_attr_army_siege_2 = 0.08 # THE MOD
+@crossbow_attr_army_siege_3 = 0.12 # THE MOD
 
-@crossbow_attr_siege_phase_time_1 = -0.1
-@crossbow_attr_siege_phase_time_2 = -0.25
-@crossbow_attr_siege_phase_time_3 = -0.35
+@crossbow_attr_siege_phase_time_1 = -0.03 # THE MOD
+@crossbow_attr_siege_phase_time_2 = -0.08 # THE MOD
+@crossbow_attr_siege_phase_time_3 = -0.12 # THE MOD
 
-@besieger_attr_siege_weapon_max_size_1 = 1
-@besieger_attr_siege_weapon_max_size_2 = 2
-@besieger_attr_siege_weapon_max_size_3 = 4
+@besieger_attr_siege_weapon_max_size_1 = 0 # THE MOD
+@besieger_attr_siege_weapon_max_size_2 = 0 # THE MOD
+@besieger_attr_siege_weapon_max_size_3 = 0 # THE MOD
 
-@besieger_attr_siege_phase_time_1 = -0.1
-@besieger_attr_siege_phase_time_2 = -0.15
-@besieger_attr_siege_phase_time_3 = -0.2
+@besieger_attr_siege_phase_time_1 = -0.03 # THE MOD
+@besieger_attr_siege_phase_time_2 = -0.05 # THE MOD
+@besieger_attr_siege_phase_time_3 = -0.07 # THE MOD
 
-@besieger_attr_siege_mortal_loss_1 = 0.1
-@besieger_attr_siege_mortal_loss_2 = 0.15
-@besieger_attr_siege_mortal_loss_3 = 0.2
+@besieger_attr_siege_mortal_loss_1 = 0.03 # THE MOD
+@besieger_attr_siege_mortal_loss_2 = 0.05 # THE MOD
+@besieger_attr_siege_mortal_loss_3 = 0.07 # THE MOD
 
-@camelry_attr_camelier_desert_screen_1 = 20
-@camelry_attr_camelier_desert_screen_2 = 40
-@camelry_attr_camelier_desert_screen_3 = 60
+@camelry_attr_camelier_desert_screen_1 = 7 # THE MOD
+@camelry_attr_camelier_desert_screen_2 = 14 # THE MOD
+@camelry_attr_camelier_desert_screen_3 = 20 # THE MOD
 
-@camelry_attr_camelier_desert_pursuit_1 = 20
-@camelry_attr_camelier_desert_pursuit_2 = 40
-@camelry_attr_camelier_desert_pursuit_3 = 60
+@camelry_attr_camelier_desert_pursuit_1 = 7 # THE MOD
+@camelry_attr_camelier_desert_pursuit_2 = 14 # THE MOD
+@camelry_attr_camelier_desert_pursuit_3 = 20 # THE MOD
 
-@camelry_attr_camelier_drylands_screen_1 = 10
-@camelry_attr_camelier_drylands_screen_2 = 20
-@camelry_attr_camelier_drylands_screen_3 = 30
+@camelry_attr_camelier_drylands_screen_1 = 3 # THE MOD
+@camelry_attr_camelier_drylands_screen_2 = 7 # THE MOD
+@camelry_attr_camelier_drylands_screen_3 = 10 # THE MOD
 
-@camelry_attr_camelier_drylands_pursuit_1 = 10
-@camelry_attr_camelier_drylands_pursuit_2 = 20
-@camelry_attr_camelier_drylands_pursuit_3 = 30
+@camelry_attr_camelier_drylands_pursuit_1 = 3 # THE MOD
+@camelry_attr_camelier_drylands_pursuit_2 = 7 # THE MOD
+@camelry_attr_camelier_drylands_pursuit_3 = 10 # THE MOD
 
-@camelry_attr_desert_supply_1 = 0.25
-@camelry_attr_desert_supply_2 = 0.35
-@camelry_attr_desert_supply_3 = 0.5
+@camelry_attr_desert_supply_1 = 0.08 # THE MOD
+@camelry_attr_desert_supply_2 = 0.10 # THE MOD
+@camelry_attr_desert_supply_3 = 0.15 # THE MOD
 
-@camelry_attr_drylands_supply_1 = 0.15
-@camelry_attr_drylands_supply_2 = 0.2
-@camelry_attr_drylands_supply_3 = 0.3
+@camelry_attr_drylands_supply_1 = 0.05 # THE MOD
+@camelry_attr_drylands_supply_2 = 0.07 # THE MOD
+@camelry_attr_drylands_supply_3 = 0.1 # THE MOD
 
-@camelry_attr_desert_mountains_supply_1 = 0.1
-@camelry_attr_desert_mountains_supply_2 = 0.15
-@camelry_attr_desert_mountains_supply_3 = 0.2
+@camelry_attr_desert_mountains_supply_1 = 0.03 # THE MOD 
+@camelry_attr_desert_mountains_supply_2 = 0.05 # THE MOD 
+@camelry_attr_desert_mountains_supply_3 = 0.07 # THE MOD 
 
-@elephantry_attr_eleph_maint_1 = -0.2
-@elephantry_attr_eleph_maint_2 = -0.35
-@elephantry_attr_eleph_maint_3 = -0.5
+@elephantry_attr_eleph_maint_1 = -0.07 # THE MOD 
+@elephantry_attr_eleph_maint_2 = -0.1 # THE MOD 
+@elephantry_attr_eleph_maint_3 = -0.15 # THE MOD 
 
-@elephantry_attr_eleph_max_size_1 = 1
-@elephantry_attr_eleph_max_size_2 = 2
-@elephantry_attr_eleph_max_size_3 = 3
+@elephantry_attr_eleph_max_size_1 = 0 # THE MOD 
+@elephantry_attr_eleph_max_size_2 = 0 # THE MOD 
+@elephantry_attr_eleph_max_size_3 = 0 # THE MOD 
 
-@elephantry_attr_eleph_damage_2 = 0.2
-@elephantry_attr_eleph_damage_3 = 0.2
+@elephantry_attr_eleph_damage_2 = 0.07 # THE MOD 
+@elephantry_attr_eleph_damage_3 = 0.07 # THE MOD 
 
-@elephantry_attr_eleph_tough_3 = 0.2
+@elephantry_attr_eleph_tough_3 = 0.07 # THE MOD 
 
-@horse_archer_attr_arcav_screen_1 = 0.25
-@horse_archer_attr_arcav_screen_2 = 0.25
-@horse_archer_attr_arcav_screen_3 = 0.25
+@horse_archer_attr_arcav_screen_1 = 0.08 # THE MOD
+@horse_archer_attr_arcav_screen_2 = 0.08 # THE MOD
+@horse_archer_attr_arcav_screen_3 = 0.08 # THE MOD
 
-@horse_archer_attr_arcav_max_size_1 = 1
-@horse_archer_attr_arcav_max_size_2 = 1
-@horse_archer_attr_arcav_max_size_3 = 1
+@horse_archer_attr_arcav_max_size_1 = 0 # THE MOD
+@horse_archer_attr_arcav_max_size_2 = 0 # THE MOD
+@horse_archer_attr_arcav_max_size_3 = 0 # THE MOD
 
-@horse_archer_attr_arcav_pursuit_2 = 0.5
-@horse_archer_attr_arcav_pursuit_3 = 0.5
+@horse_archer_attr_arcav_pursuit_2 = 0.15 # THE MOD
+@horse_archer_attr_arcav_pursuit_3 = 0.15 # THE MOD
 
-@horse_archer_attr_arcav_maint_2 = -0.3
-@horse_archer_attr_arcav_maint_3 = -0.3
+@horse_archer_attr_arcav_maint_2 = -0.1 # THE MOD
+@horse_archer_attr_arcav_maint_3 = -0.1 # THE MOD
 
-@horse_archer_attr_arcav_damage_3 = 0.5
+@horse_archer_attr_arcav_damage_3 = 0.15 # THE MOD
 
-@horse_archer_attr_arcav_tough_3 = 0.25
+@horse_archer_attr_arcav_tough_3 = 0.08 # THE MOD
 
 ##################################################
 # MEN_AT_ARMS ACCOLADES
@@ -333,7 +334,7 @@ archer_attribute = {
 	ranks = {
 		100 = {
 			liege_modifier = { 
-				archers_max_size_add = @number_maa_regiments_increment_2
+				# archers_max_size_add = @number_maa_regiments_increment_2 # THE MOD
 			}
 			knight_army_modifier = { 
 				archers_damage_mult = @accolade_maa_damage_1
@@ -342,7 +343,7 @@ archer_attribute = {
 		}
 		300 = {
 			liege_modifier = { 
-				archers_max_size_add = @number_maa_regiments_increment_2
+				# archers_max_size_add = @number_maa_regiments_increment_2 # THE MOD
 			}
 			knight_army_modifier = { 
 				archers_damage_mult = @accolade_maa_damage_1 
@@ -352,7 +353,7 @@ archer_attribute = {
 		600 = {
 			liege_modifier = { 
 				archers_maintenance_mult = @accolade_maa_maint_2
-				archers_max_size_add = @number_maa_regiments_increment_3
+				# archers_max_size_add = @number_maa_regiments_increment_3 # THE MOD
 			}
 			knight_army_modifier = { 
 				archers_damage_mult = @accolade_maa_damage_4
@@ -364,7 +365,7 @@ archer_attribute = {
 		1000 = {
 			liege_modifier = { 
 				archers_maintenance_mult = @accolade_maa_maint_2
-				archers_max_size_add = @number_maa_regiments_increment_3
+				# archers_max_size_add = @number_maa_regiments_increment_3 # THE MOD
 			}
 			knight_army_modifier = { 
 				archers_damage_mult = @accolade_maa_damage_4
@@ -374,7 +375,7 @@ archer_attribute = {
 		1500 = {
 			liege_modifier = {
 				archers_maintenance_mult = @accolade_maa_maint_4
-				archers_max_size_add = @number_maa_regiments_increment_4
+				# archers_max_size_add = @number_maa_regiments_increment_4 # THE MOD
 			}
 			knight_army_modifier = { 
 				archers_damage_mult = @accolade_maa_damage_6
@@ -385,7 +386,7 @@ archer_attribute = {
 		2100 = {
 			liege_modifier = { 
 				archers_maintenance_mult = @accolade_maa_maint_4
-				archers_max_size_add = @number_maa_regiments_increment_4
+				# archers_max_size_add = @number_maa_regiments_increment_4 # THE MOD
 			}
 			knight_army_modifier = { 
 				archers_damage_mult = @accolade_maa_damage_6
@@ -521,7 +522,7 @@ skirmisher_attribute = {
 	ranks = {
 		100 = {
 			liege_modifier = { 
-				skirmishers_max_size_add = @number_maa_regiments_increment_2
+				# skirmishers_max_size_add = @number_maa_regiments_increment_2 # THE MOD
 			}
 			knight_army_modifier = { 
 				skirmishers_damage_mult = @accolade_maa_damage_1
@@ -532,7 +533,7 @@ skirmisher_attribute = {
 		}
 		300 = {
 			liege_modifier = { 
-				skirmishers_max_size_add = @number_maa_regiments_increment_2
+				# skirmishers_max_size_add = @number_maa_regiments_increment_2 # THE MOD
 			}
 			knight_army_modifier = { 
 				skirmishers_damage_mult = @accolade_maa_damage_1 
@@ -544,7 +545,7 @@ skirmisher_attribute = {
 		600 = {
 			liege_modifier = { 
 				skirmishers_maintenance_mult = @accolade_maa_maint_2
-				skirmishers_max_size_add = @number_maa_regiments_increment_3
+				# skirmishers_max_size_add = @number_maa_regiments_increment_3 # THE MOD
 			}
 			knight_army_modifier = { 
 				skirmishers_damage_mult = @accolade_maa_damage_4
@@ -557,7 +558,7 @@ skirmisher_attribute = {
 		1000 = {
 			liege_modifier = { 
 				skirmishers_maintenance_mult = @accolade_maa_maint_2
-				skirmishers_max_size_add = @number_maa_regiments_increment_3
+				# skirmishers_max_size_add = @number_maa_regiments_increment_3 # THE MOD
 			}
 			knight_army_modifier = { 
 				skirmishers_damage_mult = @accolade_maa_damage_4
@@ -569,7 +570,7 @@ skirmisher_attribute = {
 		1500 = {
 			liege_modifier = {
 				skirmishers_maintenance_mult = @accolade_maa_maint_4
-				skirmishers_max_size_add = @number_maa_regiments_increment_4
+				# skirmishers_max_size_add = @number_maa_regiments_increment_4 # THE MOD
 			}
 			knight_army_modifier = { 
 				skirmishers_damage_mult = @accolade_maa_damage_6
@@ -582,7 +583,7 @@ skirmisher_attribute = {
 		2100 = {
 			liege_modifier = { 
 				skirmishers_maintenance_mult = @accolade_maa_maint_4
-				skirmishers_max_size_add = @number_maa_regiments_increment_4
+				# skirmishers_max_size_add = @number_maa_regiments_increment_4 # THE MOD
 			}
 			knight_army_modifier = { 
 				skirmishers_damage_mult = @accolade_maa_damage_6
@@ -713,7 +714,7 @@ pike_attribute = {
 	ranks = {
 		100 = {
 			liege_modifier = { 
-				pikemen_max_size_add = @number_maa_regiments_increment_1
+				# pikemen_max_size_add = @number_maa_regiments_increment_1 # THE MOD 
 			}
 			knight_army_modifier = { 
 				pikemen_damage_mult = @accolade_maa_damage_1
@@ -722,7 +723,7 @@ pike_attribute = {
 		}
 		300 = {
 			liege_modifier = { 
-				pikemen_max_size_add = @number_maa_regiments_increment_1
+				# pikemen_max_size_add = @number_maa_regiments_increment_1 # THE MOD 
 			}
 			knight_army_modifier = { 
 				pikemen_damage_mult = @accolade_maa_damage_1 
@@ -732,7 +733,7 @@ pike_attribute = {
 		600 = {
 			liege_modifier = { 
 				pikemen_maintenance_mult = @accolade_maa_maint_1
-				pikemen_max_size_add = @number_maa_regiments_increment_2
+				# pikemen_max_size_add = @number_maa_regiments_increment_2 # THE MOD
 			}
 			knight_army_modifier = { 
 				pikemen_damage_mult = @accolade_maa_damage_3
@@ -743,7 +744,7 @@ pike_attribute = {
 		1000 = {
 			liege_modifier = { 
 				pikemen_maintenance_mult = @accolade_maa_maint_1
-				pikemen_max_size_add = @number_maa_regiments_increment_2
+				# pikemen_max_size_add = @number_maa_regiments_increment_2 # THE MOD
 			}
 			knight_army_modifier = { 
 				pikemen_damage_mult = @accolade_maa_damage_3
@@ -753,7 +754,7 @@ pike_attribute = {
 		1500 = {
 			liege_modifier = {
 				pikemen_maintenance_mult = @accolade_maa_maint_3
-				pikemen_max_size_add = @number_maa_regiments_increment_3
+				# pikemen_max_size_add = @number_maa_regiments_increment_3 # THE MOD
 			}
 			knight_army_modifier = { 
 				pikemen_damage_mult = @accolade_maa_damage_5
@@ -764,7 +765,7 @@ pike_attribute = {
 		2100 = {
 			liege_modifier = { 
 				pikemen_maintenance_mult = @accolade_maa_maint_3
-				pikemen_max_size_add = @number_maa_regiments_increment_3
+				# pikemen_max_size_add = @number_maa_regiments_increment_3 # THE MOD
 			}
 			knight_army_modifier = { 
 				pikemen_damage_mult = @accolade_maa_damage_5
@@ -896,7 +897,7 @@ outrider_attribute = {
 	ranks = {
 		100 = {
 			liege_modifier = { 
-				light_cavalry_max_size_add = @number_maa_regiments_increment_1
+				# light_cavalry_max_size_add = @number_maa_regiments_increment_1 # THE MOD
 			}
 			knight_army_modifier = { 
 				light_cavalry_damage_mult = @accolade_maa_damage_1
@@ -907,7 +908,7 @@ outrider_attribute = {
 		}
 		300 = {
 			liege_modifier = { 
-				light_cavalry_max_size_add = @number_maa_regiments_increment_1
+				# light_cavalry_max_size_add = @number_maa_regiments_increment_1 # THE MOD
 			}
 			knight_army_modifier = { 
 				light_cavalry_damage_mult = @accolade_maa_damage_1 
@@ -919,7 +920,7 @@ outrider_attribute = {
 		600 = {
 			liege_modifier = { 
 				light_cavalry_maintenance_mult = @accolade_maa_maint_1
-				light_cavalry_max_size_add = @number_maa_regiments_increment_2
+				# light_cavalry_max_size_add = @number_maa_regiments_increment_2 # THE MOD
 			}
 			knight_army_modifier = { 
 				light_cavalry_damage_mult = @accolade_maa_damage_4
@@ -932,7 +933,7 @@ outrider_attribute = {
 		1000 = {
 			liege_modifier = { 
 				light_cavalry_maintenance_mult = @accolade_maa_maint_1
-				light_cavalry_max_size_add = @number_maa_regiments_increment_2
+				# light_cavalry_max_size_add = @number_maa_regiments_increment_2 # THE MOD
 			}
 			knight_army_modifier = { 
 				light_cavalry_damage_mult = @accolade_maa_damage_4
@@ -944,7 +945,7 @@ outrider_attribute = {
 		1500 = {
 			liege_modifier = {
 				light_cavalry_maintenance_mult = @accolade_maa_maint_3
-				light_cavalry_max_size_add = @number_maa_regiments_increment_3
+				# light_cavalry_max_size_add = @number_maa_regiments_increment_3 # THE MOD
 			}
 			knight_army_modifier = { 
 				light_cavalry_damage_mult = @accolade_maa_damage_6
@@ -957,7 +958,7 @@ outrider_attribute = {
 		2100 = {
 			liege_modifier = { 
 				light_cavalry_maintenance_mult = @accolade_maa_maint_3
-				light_cavalry_max_size_add = @number_maa_regiments_increment_3
+				# light_cavalry_max_size_add = @number_maa_regiments_increment_3 # THE MOD
 			}
 			knight_army_modifier = { 
 				light_cavalry_damage_mult = @accolade_maa_damage_6
@@ -1114,7 +1115,7 @@ vanguard_attribute = {
 	ranks = {
 		100 = {
 			liege_modifier = { 
-				heavy_infantry_max_size_add = @number_maa_regiments_increment_1
+				# heavy_infantry_max_size_add = @number_maa_regiments_increment_1 # THE MOD
 			}
 			knight_army_modifier = { 
 				heavy_infantry_damage_mult = @accolade_maa_damage_1
@@ -1123,7 +1124,7 @@ vanguard_attribute = {
 		}
 		300 = {
 			liege_modifier = { 
-				heavy_infantry_max_size_add = @number_maa_regiments_increment_1
+				# heavy_infantry_max_size_add = @number_maa_regiments_increment_1 # THE MOD
 			}
 			knight_army_modifier = { 
 				heavy_infantry_damage_mult = @accolade_maa_damage_1 
@@ -1133,7 +1134,7 @@ vanguard_attribute = {
 		600 = {
 			liege_modifier = { 
 				heavy_infantry_maintenance_mult = @accolade_maa_maint_1
-				heavy_infantry_max_size_add = @number_maa_regiments_increment_2
+				# heavy_infantry_max_size_add = @number_maa_regiments_increment_2 # THE MOD
 			}
 			knight_army_modifier = { 
 				heavy_infantry_damage_mult = @accolade_maa_damage_4
@@ -1144,7 +1145,7 @@ vanguard_attribute = {
 		1000 = {
 			liege_modifier = { 
 				heavy_infantry_maintenance_mult = @accolade_maa_maint_1
-				heavy_infantry_max_size_add = @number_maa_regiments_increment_2
+				# heavy_infantry_max_size_add = @number_maa_regiments_increment_2 # THE MOD
 			}
 			knight_army_modifier = { 
 				heavy_infantry_damage_mult = @accolade_maa_damage_4
@@ -1154,7 +1155,7 @@ vanguard_attribute = {
 		1500 = {
 			liege_modifier = {
 				heavy_infantry_maintenance_mult = @accolade_maa_maint_3
-				heavy_infantry_max_size_add = @number_maa_regiments_increment_3
+				# heavy_infantry_max_size_add = @number_maa_regiments_increment_3 # THE MOD
 			}
 			knight_army_modifier = { 
 				heavy_infantry_damage_mult = @accolade_maa_damage_6
@@ -1165,7 +1166,7 @@ vanguard_attribute = {
 		2100 = {
 			liege_modifier = { 
 				heavy_infantry_maintenance_mult = @accolade_maa_maint_3
-				heavy_infantry_max_size_add = @number_maa_regiments_increment_3
+				# heavy_infantry_max_size_add = @number_maa_regiments_increment_3 # THE MOD
 			}
 			knight_army_modifier = { 
 				heavy_infantry_damage_mult = @accolade_maa_damage_6
@@ -1317,7 +1318,7 @@ lancer_attribute = {
 	ranks = {
 		100 = {
 			liege_modifier = { 
-				heavy_cavalry_max_size_add = @number_maa_regiments_increment_1
+				# heavy_cavalry_max_size_add = @number_maa_regiments_increment_1 # THE MOD
 			}
 			knight_army_modifier = { 
 				heavy_cavalry_damage_mult = @accolade_maa_damage_1
@@ -1326,7 +1327,7 @@ lancer_attribute = {
 		}
 		300 = {
 			liege_modifier = { 
-				heavy_cavalry_max_size_add = @number_maa_regiments_increment_1
+				# heavy_cavalry_max_size_add = @number_maa_regiments_increment_1 # THE MOD
 			}
 			knight_army_modifier = { 
 				heavy_cavalry_damage_mult = @accolade_maa_damage_1 
@@ -1336,7 +1337,7 @@ lancer_attribute = {
 		600 = {
 			liege_modifier = { 
 				heavy_cavalry_maintenance_mult = @accolade_maa_maint_1
-				heavy_cavalry_max_size_add = @number_maa_regiments_increment_2
+				# heavy_cavalry_max_size_add = @number_maa_regiments_increment_2 # THE MOD
 			}
 			knight_army_modifier = { 
 				heavy_cavalry_damage_mult = @accolade_maa_damage_4
@@ -1347,7 +1348,7 @@ lancer_attribute = {
 		1000 = {
 			liege_modifier = { 
 				heavy_cavalry_maintenance_mult = @accolade_maa_maint_1
-				heavy_cavalry_max_size_add = @number_maa_regiments_increment_2
+				# heavy_cavalry_max_size_add = @number_maa_regiments_increment_2 # THE MOD
 			}
 			knight_army_modifier = { 
 				heavy_cavalry_damage_mult = @accolade_maa_damage_4
@@ -1357,7 +1358,7 @@ lancer_attribute = {
 		1500 = {
 			liege_modifier = {
 				heavy_cavalry_maintenance_mult = @accolade_maa_maint_3
-				heavy_cavalry_max_size_add = @number_maa_regiments_increment_3
+				# heavy_cavalry_max_size_add = @number_maa_regiments_increment_3 # THE MOD
 			}
 			knight_army_modifier = { 
 				heavy_cavalry_damage_mult = @accolade_maa_damage_6
@@ -1368,7 +1369,7 @@ lancer_attribute = {
 		2100 = {
 			liege_modifier = { 
 				heavy_cavalry_maintenance_mult = @accolade_maa_maint_3
-				heavy_cavalry_max_size_add = @number_maa_regiments_increment_3
+				# heavy_cavalry_max_size_add = @number_maa_regiments_increment_3 # THE MOD
 			}
 			knight_army_modifier = { 
 				heavy_cavalry_damage_mult = @accolade_maa_damage_6
@@ -1548,7 +1549,7 @@ crossbowmen_attribute = {
 		ranks = {
 		100 = {
 			liege_modifier = { 
-				archers_max_size_add = @number_maa_regiments_increment_2
+				# archers_max_size_add = @number_maa_regiments_increment_2 # THE MOD
 			}
 			knight_army_modifier = { 
 				archers_damage_mult = @accolade_maa_damage_1
@@ -1558,7 +1559,7 @@ crossbowmen_attribute = {
 		}
 		300 = {
 			liege_modifier = { 
-				archers_max_size_add = @number_maa_regiments_increment_2
+				# archers_max_size_add = @number_maa_regiments_increment_2 # THE MOD
 			}
 			knight_army_modifier = { 
 				archers_damage_mult = @accolade_maa_damage_1 
@@ -1569,7 +1570,7 @@ crossbowmen_attribute = {
 		600 = {
 			liege_modifier = { 
 				archers_maintenance_mult = @accolade_maa_maint_2
-				archers_max_size_add = @number_maa_regiments_increment_3
+				# archers_max_size_add = @number_maa_regiments_increment_3 # THE MOD
 			}
 			knight_army_modifier = { 
 				archers_damage_mult = @accolade_maa_damage_4
@@ -1581,7 +1582,7 @@ crossbowmen_attribute = {
 		1000 = {
 			liege_modifier = { 
 				archers_maintenance_mult = @accolade_maa_maint_2
-				archers_max_size_add = @number_maa_regiments_increment_3
+				# archers_max_size_add = @number_maa_regiments_increment_3 # THE MOD
 			}
 			knight_army_modifier = { 
 				archers_damage_mult = @accolade_maa_damage_4
@@ -1592,7 +1593,7 @@ crossbowmen_attribute = {
 		1500 = {
 			liege_modifier = {
 				archers_maintenance_mult = @accolade_maa_maint_4
-				archers_max_size_add = @number_maa_regiments_increment_4
+				# archers_max_size_add = @number_maa_regiments_increment_4 # THE MOD
 			}
 			knight_army_modifier = { 
 				archers_damage_mult = @accolade_maa_damage_6
@@ -1604,7 +1605,7 @@ crossbowmen_attribute = {
 		2100 = {
 			liege_modifier = { 
 				archers_maintenance_mult = @accolade_maa_maint_4
-				archers_max_size_add = @number_maa_regiments_increment_4
+				# archers_max_size_add = @number_maa_regiments_increment_4 # THE MOD
 			}
 			knight_army_modifier = { 
 				archers_damage_mult = @accolade_maa_damage_6
@@ -1711,42 +1712,54 @@ besieger_attribute = {
 	ranks = {
 		# Siege equipment, we want to just let you get real crazy with it, so you can have more and more and more siege equipment. Simultaneously, a sieging knight'll help you to bring places down faster.
 		100 = {
-			liege_modifier = { siege_weapon_max_size_add = @besieger_attr_siege_weapon_max_size_1 }
+			liege_modifier = { 
+				# siege_weapon_max_size_add = @besieger_attr_siege_weapon_max_size_1  # THE MOD
+			}
 			knight_army_modifier = {
 				siege_phase_time = @besieger_attr_siege_phase_time_1
 				siege_morale_loss = @besieger_attr_siege_mortal_loss_1
 			}
 		}
 		300 = {
-			liege_modifier = { siege_weapon_max_size_add = @besieger_attr_siege_weapon_max_size_1 }
+			liege_modifier = { 
+				# siege_weapon_max_size_add = @besieger_attr_siege_weapon_max_size_1  # THE MOD
+			}
 			knight_army_modifier = {
 				siege_phase_time = @besieger_attr_siege_phase_time_1
 				siege_morale_loss = @besieger_attr_siege_mortal_loss_1
 			}
 		}
 		600 = {
-			liege_modifier = { siege_weapon_max_size_add = @besieger_attr_siege_weapon_max_size_2 }
+			liege_modifier = { 
+				# siege_weapon_max_size_add = @besieger_attr_siege_weapon_max_size_2 # THE MOD
+			}
 			knight_army_modifier = {
 				siege_phase_time = @besieger_attr_siege_phase_time_2
 				siege_morale_loss = @besieger_attr_siege_mortal_loss_2
 			}
 		}
 		1000 = {
-			liege_modifier = { siege_weapon_max_size_add = @besieger_attr_siege_weapon_max_size_2 }
+			liege_modifier = { 
+				# siege_weapon_max_size_add = @besieger_attr_siege_weapon_max_size_2 # THE MOD
+			}
 			knight_army_modifier = {
 				siege_phase_time = @besieger_attr_siege_phase_time_2
 				siege_morale_loss = @besieger_attr_siege_mortal_loss_2
 			}
 		}
 		1500 = {
-			liege_modifier = { siege_weapon_max_size_add = @besieger_attr_siege_weapon_max_size_3 }
+			liege_modifier = { 
+				# siege_weapon_max_size_add = @besieger_attr_siege_weapon_max_size_3 # THE MOD
+			}
 			knight_army_modifier = {
 				siege_phase_time = @besieger_attr_siege_phase_time_3
 				siege_morale_loss = @besieger_attr_siege_mortal_loss_3
 			}
 		}
 		2100 = {
-			liege_modifier = { siege_weapon_max_size_add = @besieger_attr_siege_weapon_max_size_3 }
+			liege_modifier = { 
+				# siege_weapon_max_size_add = @besieger_attr_siege_weapon_max_size_3 # THE MOD
+			}
 			knight_army_modifier = {
 				siege_phase_time = @besieger_attr_siege_phase_time_3
 				siege_morale_loss = @besieger_attr_siege_mortal_loss_3
@@ -1866,7 +1879,7 @@ camelry_attribute = {
 	ranks = {
 		100 = {
 			liege_modifier = { 
-				camel_cavalry_max_size_add = @number_maa_regiments_increment_1
+				# camel_cavalry_max_size_add = @number_maa_regiments_increment_1 # THE MOD
 			}
 			knight_army_modifier = { 
 				camel_cavalry_damage_mult = @accolade_maa_damage_1
@@ -1878,7 +1891,7 @@ camelry_attribute = {
 		}
 		300 = {
 			liege_modifier = { 
-				camel_cavalry_max_size_add = @number_maa_regiments_increment_1
+				# camel_cavalry_max_size_add = @number_maa_regiments_increment_1 # THE MOD
 			}
 			knight_army_modifier = { 
 				camel_cavalry_damage_mult = @accolade_maa_damage_1 
@@ -1891,7 +1904,7 @@ camelry_attribute = {
 		600 = {
 			liege_modifier = { 
 				camel_cavalry_maintenance_mult = @accolade_maa_maint_1
-				camel_cavalry_max_size_add = @number_maa_regiments_increment_2
+				# camel_cavalry_max_size_add = @number_maa_regiments_increment_2 # THE MOD
 			}
 			knight_army_modifier = { 
 				camel_cavalry_damage_mult = @accolade_maa_damage_4
@@ -1905,7 +1918,7 @@ camelry_attribute = {
 		1000 = {
 			liege_modifier = { 
 				camel_cavalry_maintenance_mult = @accolade_maa_maint_1
-				camel_cavalry_max_size_add = @number_maa_regiments_increment_2
+				# camel_cavalry_max_size_add = @number_maa_regiments_increment_2 # THE MOD
 			}
 			knight_army_modifier = { 
 				camel_cavalry_damage_mult = @accolade_maa_damage_4
@@ -1918,7 +1931,7 @@ camelry_attribute = {
 		1500 = {
 			liege_modifier = {
 				camel_cavalry_maintenance_mult = @accolade_maa_maint_3
-				camel_cavalry_max_size_add = @number_maa_regiments_increment_3
+				# camel_cavalry_max_size_add = @number_maa_regiments_increment_3 # THE MOD
 			}
 			knight_army_modifier = { 
 				camel_cavalry_damage_mult = @accolade_maa_damage_6
@@ -1932,7 +1945,7 @@ camelry_attribute = {
 		2100 = {
 			liege_modifier = { 
 				camel_cavalry_maintenance_mult = @accolade_maa_maint_3
-				camel_cavalry_max_size_add = @number_maa_regiments_increment_3
+				# camel_cavalry_max_size_add = @number_maa_regiments_increment_3 # THE MOD
 			}
 			knight_army_modifier = { 
 				camel_cavalry_damage_mult = @accolade_maa_damage_6
@@ -2060,19 +2073,19 @@ elephantry_attribute = {
 		100 = {
 			liege_modifier = {
 				elephant_cavalry_maintenance_mult = @elephantry_attr_eleph_maint_1
-				elephant_cavalry_max_size_add = @elephantry_attr_eleph_max_size_1
+				# elephant_cavalry_max_size_add = @elephantry_attr_eleph_max_size_1 # THE MOD
 			}
 		}
 		300 = {
 			liege_modifier = {
 				elephant_cavalry_maintenance_mult = @elephantry_attr_eleph_maint_1
-				elephant_cavalry_max_size_add = @elephantry_attr_eleph_max_size_1
+				# elephant_cavalry_max_size_add = @elephantry_attr_eleph_max_size_1 # THE MOD
 			}
 		}
 		600 = {
 			liege_modifier = {
 				elephant_cavalry_maintenance_mult = @elephantry_attr_eleph_maint_2
-				elephant_cavalry_max_size_add = @elephantry_attr_eleph_max_size_2
+				# elephant_cavalry_max_size_add = @elephantry_attr_eleph_max_size_2 # THE MOD
 			}
 			knight_army_modifier = { elephant_cavalry_damage_mult = @elephantry_attr_eleph_damage_2 }
 			men_at_arms = { accolade_maa_elephantiers }
@@ -2080,14 +2093,14 @@ elephantry_attribute = {
 		1000 = {
 			liege_modifier = {
 				elephant_cavalry_maintenance_mult = @elephantry_attr_eleph_maint_2
-				elephant_cavalry_max_size_add = @elephantry_attr_eleph_max_size_2
+				# elephant_cavalry_max_size_add = @elephantry_attr_eleph_max_size_2 # THE MOD
 			}
 			knight_army_modifier = { elephant_cavalry_damage_mult = @elephantry_attr_eleph_damage_2 }
 		}
 		1500 = {
 			liege_modifier = {
 				elephant_cavalry_maintenance_mult = @elephantry_attr_eleph_maint_3
-				elephant_cavalry_max_size_add = @elephantry_attr_eleph_max_size_3
+				# elephant_cavalry_max_size_add = @elephantry_attr_eleph_max_size_3 # THE MOD
 			}
 			knight_army_modifier = {
 				elephant_cavalry_damage_mult = @elephantry_attr_eleph_damage_3
@@ -2098,11 +2111,11 @@ elephantry_attribute = {
 		2100 = {
 			liege_modifier = {
 				elephant_cavalry_maintenance_mult = @elephantry_attr_eleph_maint_3
-				elephant_cavalry_max_size_add = @elephantry_attr_eleph_max_size_3
+				# elephant_cavalry_max_size_add = @elephantry_attr_eleph_max_size_3 # THE MOD
 			}
 			knight_army_modifier = {
 				elephant_cavalry_damage_mult = @elephantry_attr_eleph_damage_3
-				elephant_cavalry_toughness_mult = @elephantry_attr_eleph_tough_3
+				# elephant_cavalry_toughness_mult = @elephantry_attr_eleph_tough_3 # THE MOD
 			}
 		}
 	}
@@ -2226,7 +2239,7 @@ horse_archer_attribute = {
 	ranks = {
 		100 = {
 			liege_modifier = { 
-				archer_cavalry_max_size_add = @number_maa_regiments_increment_1
+				# archer_cavalry_max_size_add = @number_maa_regiments_increment_1 # THE MOD
 			}
 			knight_army_modifier = { 
 				archer_cavalry_damage_mult = @accolade_maa_damage_1
@@ -2237,7 +2250,7 @@ horse_archer_attribute = {
 		}
 		300 = {
 			liege_modifier = { 
-				archer_cavalry_max_size_add = @number_maa_regiments_increment_1
+				# archer_cavalry_max_size_add = @number_maa_regiments_increment_1 # THE MOD
 			}
 			knight_army_modifier = { 
 				archer_cavalry_damage_mult = @accolade_maa_damage_1 
@@ -2249,7 +2262,7 @@ horse_archer_attribute = {
 		600 = {
 			liege_modifier = { 
 				archer_cavalry_maintenance_mult = @accolade_maa_maint_1
-				archer_cavalry_max_size_add = @number_maa_regiments_increment_2
+				# archer_cavalry_max_size_add = @number_maa_regiments_increment_2 # THE MOD
 			}
 			knight_army_modifier = { 
 				archer_cavalry_damage_mult = @accolade_maa_damage_4
@@ -2262,7 +2275,7 @@ horse_archer_attribute = {
 		1000 = {
 			liege_modifier = { 
 				archer_cavalry_maintenance_mult = @accolade_maa_maint_1
-				archer_cavalry_max_size_add = @number_maa_regiments_increment_2
+				# archer_cavalry_max_size_add = @number_maa_regiments_increment_2 # THE MOD
 			}
 			knight_army_modifier = { 
 				archer_cavalry_damage_mult = @accolade_maa_damage_4
@@ -2274,7 +2287,7 @@ horse_archer_attribute = {
 		1500 = {
 			liege_modifier = {
 				archer_cavalry_maintenance_mult = @accolade_maa_maint_3
-				archer_cavalry_max_size_add = @number_maa_regiments_increment_3
+				# archer_cavalry_max_size_add = @number_maa_regiments_increment_3 # THE MOD
 			}
 			knight_army_modifier = { 
 				archer_cavalry_damage_mult = @accolade_maa_damage_6
@@ -2287,7 +2300,7 @@ horse_archer_attribute = {
 		2100 = {
 			liege_modifier = { 
 				archer_cavalry_maintenance_mult = @accolade_maa_maint_3
-				archer_cavalry_max_size_add = @number_maa_regiments_increment_4
+				# archer_cavalry_max_size_add = @number_maa_regiments_increment_4 # THE MOD
 			}
 			knight_army_modifier = { 
 				archer_cavalry_damage_mult = @accolade_maa_damage_6

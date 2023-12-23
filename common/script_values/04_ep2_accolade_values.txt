@@ -134,9 +134,9 @@ accolade_all_knights_trait_xp_high_value = 10
 # MAA ATTRIBUTES
 ###############
 
-accolade_hostile_knight_death_in_battle_low_value = 0.25
-accolade_hostile_knight_death_in_battle_medium_value = 0.5
-accolade_hostile_knight_death_in_battle_high_value = 0.75
+accolade_hostile_knight_death_in_battle_low_value = 0.1 # THE MOD
+accolade_hostile_knight_death_in_battle_medium_value = 0.2 # THE MOD
+accolade_hostile_knight_death_in_battle_high_value = 0.3 # THE MOD
 
 accolade_hostile_knight_death_in_battle_actual_low_value = {
 	value = accolade_hostile_knight_death_in_battle_low_value
@@ -155,16 +155,16 @@ accolade_hostile_knight_death_in_battle_actual_high_value = {
 # EMINENT ATTRIBUTES
 ###############
 
-acclaimed_knight_hunt_danger_value = 10
-acclaimed_knight_hunt_danger_value_high = 15
-accolade_tournament_invite_acceptance_value = 20
-accolade_feast_wedding_invite_acceptance_value = 20
+acclaimed_knight_hunt_danger_value = 3 # THE MOD
+acclaimed_knight_hunt_danger_value_high = 5 # THE MOD
+accolade_tournament_invite_acceptance_value = 7 # THE MOD 
+accolade_feast_wedding_invite_acceptance_value = 7 # THE MOD
 acclaimed_knight_prestige_from_victory_value = miniscule_prestige_value
 acclaimed_knight_prestige_from_victory_value_high = minor_prestige_value
 
-accolade_defends_family_low_value = -0.25
-accolade_defends_family_medium_value = -0.5
-accolade_defends_family_high_value = -0.75
+accolade_defends_family_low_value = -0.1 # THE MOD 
+accolade_defends_family_medium_value = -0.2 # THE MOD
+accolade_defends_family_high_value = -0.3 # THE MOD
 
 accolade_defends_family_actual_low_value = {
 	value = accolade_defends_family_low_value

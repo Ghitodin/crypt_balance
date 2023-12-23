@@ -2,9 +2,9 @@
 # KNIGHTLY ACCOLADE VALUES
 #######################################
 
-accolade_low_value = 5
-accolade_medium_value = 10
-accolade_high_value = 20
+accolade_low_value = 2 # THE MOD 
+accolade_medium_value = 4 # THE MOD
+accolade_high_value = 7 # THE MOD
 
 accolade_prowess_requirement_value = 8
 accolade_prowess_requirement_high_value = 15
@@ -95,21 +95,21 @@ maa_accolade_minimum_martial_value = medium_skill_rating
 accolade_agent_acceptance_chance_bonus = accolade_medium_value
 accolade_agent_acceptance_chance_bonus_high = accolade_high_value
 accolade_invite_courtiers_value = accolade_high_value
-accolade_imprisonment_chance_value = 15
-accolade_imprisonment_chance_value_high = 25
+accolade_imprisonment_chance_value = 5 # THE MOD
+accolade_imprisonment_chance_value_high = 10 # THE MOD
 accolade_wise_educator_prestige = 100
 accolade_wise_educator_prestige_high = 250
 accolade_wise_educator_prowess = 1
 accolade_wise_educator_prowess_high = 3
 accolade_white_peace_prestige_value = major_prestige_value
-accolade_seduction_vulnerability_value = 15
+accolade_seduction_vulnerability_value = 5 # THE MOD
 accolade_politicker_join_scheme_value = 25
-accolade_charmer_fertility_value = 0.25
-accolade_charmer_fertility_high_value = 0.5
+accolade_charmer_fertility_value = 0.08 # THE MOD
+accolade_charmer_fertility_high_value = 0.2 # THE MOD
 accolade_charmer_attraction_opinion_value = accolade_medium_value
 accolade_charmer_attraction_opinion_high_value = accolade_high_value
-accolade_piety_reduction_value = 0.5
-accolade_piety_reduction_value_high = 0.25
+accolade_piety_reduction_value = 0.85 # THE MOD
+accolade_piety_reduction_value_high = 0.7 # THE MOD
 
 ###############
 # SKILLED ATTRIBUTES

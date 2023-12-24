@@ -9,6 +9,7 @@ accolade_maa_archers = {
 	icon = bowmen
 
 	can_recruit = {
+		has_variable = kek # THE MOD
 		any_active_accolade = { 
 			primary_type = {
 				this = accolade_type:archer_attribute
@@ -50,6 +51,7 @@ accolade_maa_skirmishers = {
 	icon = skirmishers
 
 	can_recruit = {
+		has_variable = kek # THE MOD
 		any_active_accolade = {
 			primary_type = {
 				this = accolade_type:skirmisher_attribute
@@ -92,6 +94,7 @@ accolade_maa_pikes = {
 	icon = pikemen
 
 	can_recruit = {
+		has_variable = kek # THE MOD
 		any_active_accolade = {
 			primary_type = {
 				this = accolade_type:pike_attribute
@@ -136,6 +139,7 @@ accolade_maa_outriders = {
 	icon = light_cavalry
 
 	can_recruit = {
+		has_variable = kek # THE MOD
 		any_active_accolade = {
 			primary_type = {
 				this = accolade_type:outrider_attribute
@@ -184,6 +188,7 @@ accolade_maa_vanguards = {
 	icon = heavy_infantry
 
 	can_recruit = {
+		has_variable = kek # THE MOD
 		any_active_accolade = {
 			primary_type = {
 				this = accolade_type:vanguard_attribute
@@ -219,6 +224,7 @@ accolade_maa_lancers = {
 	icon = heavy_cavalry
 
 	can_recruit = {
+		has_variable = kek # THE MOD
 		any_active_accolade = {
 			primary_type = {
 				this = accolade_type:lancer_attribute
@@ -268,6 +274,7 @@ accolade_maa_crossbowers = {
 	icon = crossbowmen
 
 	can_recruit = {
+		has_variable = kek # THE MOD
 		any_active_accolade = {
 			primary_type = {
 				this = accolade_type:crossbowmen_attribute
@@ -312,6 +319,7 @@ accolade_maa_cameliers = {
 	icon = camel_riders
 
 	can_recruit = {
+		has_variable = kek # THE MOD
 		any_active_accolade = {
 			primary_type = {
 				this = accolade_type:camelry_attribute
@@ -363,6 +371,7 @@ accolade_maa_elephantiers = {
 	icon = war_elephants
 
 	can_recruit = {
+		has_variable = kek # THE MOD
 		any_active_accolade = {
 			primary_type = {
 				this = accolade_type:elephantry_attribute
@@ -414,6 +423,7 @@ accolade_maa_horse_archers = {
 	icon = horse_archers
 
 	can_recruit = {
+		has_variable = kek # THE MOD
 		any_active_accolade = {
 			primary_type = {
 				this = accolade_type:horse_archer_attribute

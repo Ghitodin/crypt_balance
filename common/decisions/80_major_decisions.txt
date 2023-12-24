@@ -894,12 +894,17 @@ adopt_special_succession_decision = { #by Ewan Cowhig Croft
 				has_realm_law_flag = single_heir_succession_law
 				has_realm_law_flag = single_heir_succession_law_youngest
 				has_realm_law_flag = single_heir_dynasty_house
+				has_realm_law = clan_antagonistic_partition_succession_law
+				has_realm_law = clan_competitive_partition_succession_law
+				has_realm_law = clan_impassive_partition_succession_law
+				has_realm_law = clan_friendly_partition_succession_law
+				has_realm_law = clan_harmonious_partition_succession_law
 			}
 			any_held_title = {
 				tier >= tier_empire
 			}
 		}
-		# TODO Check this logic, added in 1.11.3  
+ 
 		trigger_if = { # Prevent Norway from essentially giving England back to the Anglo-Saxons
 			limit = {
 				is_ai = yes

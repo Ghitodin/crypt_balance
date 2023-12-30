@@ -42,10 +42,9 @@ fp1_adventure_legacy_2 = { # Gift-Givers
 		custom_description_no_bullet = { text = fp1_adventure_legacy_2_secondary_effect }
 		# Placed below secondary effect for aesthetic purposes.
 		#custom_description_no_bullet = { text = fp1_adventure_legacy_2_effect }
-		supply_duration = 1 # THE MOD
 	}
 	character_modifier = {
-		supply_duration = 0.3
+		supply_duration = 1 # THE MOD
 	}
 }
 

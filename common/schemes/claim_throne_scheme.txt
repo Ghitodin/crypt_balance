@@ -219,7 +219,7 @@
 	}
 
 	
-	#on_invalidated = { # THE MOD
+	on_invalidated = {
 		if = {
 			limit = { exists = scheme_target.primary_title }
 			scheme_target.primary_title = { save_scope_as = target_title }
@@ -244,7 +244,7 @@
 				}
 			}
 		}
-	#} # THE MOD 
+	}
 	
 	
 	power_per_skill_point = 3

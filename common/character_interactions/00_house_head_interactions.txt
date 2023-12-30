@@ -18,7 +18,7 @@ call_house_member_to_war_interaction = {
 	
 	is_shown = {
 		NOT = { scope:recipient = scope:actor }
-		has_variable = kek # THE MOD
+		no # THE MOD
 		scope:actor = {
 			OR = {
 				is_house_head = yes

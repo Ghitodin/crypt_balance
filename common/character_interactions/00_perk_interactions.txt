@@ -64,7 +64,7 @@ claim_throne_interaction = {
 		
 		# THE MOD
 		# FUCK THIS SHIT, VALEEEERAAA!
-		has_variable = kek
+		no # THE MOD
 	}
 
 	is_valid_showing_failures_only = {

@@ -18,7 +18,7 @@
 	}
 
 	is_shown = {
-		has_variable = kek # THE MOD
+		no # THE MOD
 
 		is_landed = yes
 		primary_title.tier >= tier_county

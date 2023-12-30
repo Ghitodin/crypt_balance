@@ -18,7 +18,7 @@
 		NOT = {
 			has_character_flag = used_lifetime_invasion
 		}
-		has_variable = kek # THE MOD
+		no # THE MOD
 	}
 
 	allowed_for_character_display_regardless = {
@@ -393,7 +393,7 @@ clan_invasion_war = {
 				has_character_flag = pending_lifetime_invasion
 			}
 		}
-		has_variable = kek # THE MOD
+		no # THE MOD
 	}
 
 	allowed_for_character_display_regardless = {

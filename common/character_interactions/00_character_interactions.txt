@@ -1384,8 +1384,7 @@ force_vote_in_succession_election_interaction = {
 
 			scope:actor = {
 				has_usable_hook = scope:recipient
-				# THE MOD
-				has_variable = kek # Disable that shit
+				no # THE MOD
 			}
 		}
 	}

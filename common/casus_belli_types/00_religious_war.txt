@@ -1040,7 +1040,7 @@ major_religious_war = {
 		scope:attacker.faith = {
 			NOT = { has_doctrine_parameter = unreformed }
 		}
-		has_variable = kek # THE MOD
+		no # THE MOD
 	}
 
 	allowed_for_character_display_regardless = {

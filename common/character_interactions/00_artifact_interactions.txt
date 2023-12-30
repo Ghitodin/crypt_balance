@@ -1985,7 +1985,7 @@ challenge_for_artifact_interaction = {
 	answer_reject_key = REQUEST_ARTIFACT_COMBAT_REJECT
 
 	is_shown = {
-		has_variable = kek # THE MOD
+		no # THE MOD
 		# Can't duel yourself.
 		NOT = { scope:actor = scope:recipient }
 		custom_description = {

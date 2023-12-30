@@ -4173,7 +4173,7 @@ e_germany = {
 				}
 			}
 		}
-		no # THE MOD
+		has_variable = kek # THE MOD
 	}
 
 	ai_primary_priority = {

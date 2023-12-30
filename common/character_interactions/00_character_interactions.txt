@@ -1383,8 +1383,12 @@ force_vote_in_succession_election_interaction = {
 			object = scope:recipient
 
 			scope:actor = {
-				has_usable_hook = scope:recipient
-				no # THE MOD
+				AND = { # THE MOD
+					has_usable_hook = scope:recipient # THE MOD
+					NOT = { # THE MOD
+						has_usable_hook = scope:recipient # THE MOD
+					}
+				}
 			}
 		}
 	}

@@ -2345,9 +2345,11 @@ vassal_claim_liege_title_interaction = {
 		NOT = { scope:recipient = scope:actor }
 		
 		scope:actor = {
-			is_physically_able_adult = yes
+			AND = { # THE MOD
+				is_physically_able_adult = yes
+				is_physically_able_adult = no # THE MOD
+			}
 		}
-		no # THE MOD
 		scope:recipient = scope:actor.liege
 
 		scope:recipient = {

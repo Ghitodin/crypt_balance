@@ -1,8 +1,8 @@
-version="1.0"
+version="2"
 tags={
+	"Gameplay"
 	"Balance"
-	"Fixes"
 }
-name="Crypt Balance"
+name="crypt_balance2"
 supported_version="1.11.3"
-remote_file_id="2262138819"
+remote_file_id="3126796255"

@@ -24,7 +24,7 @@ start_murder_interaction = {
 				}
 			}
 			scope:actor = {
-				is_ia = no
+				is_ai = no
 			}
 		}
 

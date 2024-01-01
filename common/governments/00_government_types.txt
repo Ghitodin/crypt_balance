@@ -109,10 +109,10 @@ clan_government = {
 					limit = {
 						is_powerful_vassal = yes
 					}
-					value = -20 # THE MOD
+					value = -2 # THE MOD
 				}
 				else = {
-					value = -15 # THE MOD
+					value = -1 # THE MOD
 				}
 			}
 		}

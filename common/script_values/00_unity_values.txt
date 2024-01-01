@@ -103,10 +103,10 @@ unity_antagonistic_invasion_cooldown_value = {
 }
 
 clan_powerful_vassal_no_alliance_opinion_penalty_value = {
-	value = -30
+	value = -1 # The mod
 }
 clan_vassal_no_alliance_opinion_penalty_value = {
-	value = -15
+	value = -1 # The mod
 }
 
 unity_major_decision_piety_cost = { value = 200 }

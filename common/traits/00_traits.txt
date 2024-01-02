@@ -11203,8 +11203,8 @@ tourney_participant = {
 
 			100 = {
 				prowess_per_stress_level = 4
-				men_at_arms_limit = 2
-				knight_limit = 2
+				#men_at_arms_limit = 2 # THE MOD
+				knight_limit = 1 # THE MOD
 			}		
 		}
 		bow = {

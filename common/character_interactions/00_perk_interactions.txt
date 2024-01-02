@@ -24,7 +24,7 @@ claim_throne_interaction = {
 		scope:actor = {
 			highest_held_title_tier > tier_barony
 			OR = {
-				has_perk = meritocracy_perk
+				#has_perk = meritocracy_perk # THE MOD
 				AND = {
 					is_diarch_of_target = scope:recipient
 					scope:recipient = {
@@ -61,10 +61,6 @@ claim_throne_interaction = {
 			}
 		}
 		NOT = { scope:recipient = scope:actor }
-		
-		# THE MOD
-		# FUCK THIS SHIT, VALEEEERAAA!
-		no # THE MOD
 	}
 
 	is_valid_showing_failures_only = {

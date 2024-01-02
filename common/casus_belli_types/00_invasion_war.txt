@@ -15,10 +15,8 @@
 			}
 			has_character_flag = bp2_inspired_culture_for_conquest
 		}
-		NOT = {
-			has_character_flag = used_lifetime_invasion
-		}
-		no # THE MOD
+		
+		has_character_flag = used_lifetime_invasion # THE MOD
 	}
 
 	allowed_for_character_display_regardless = {

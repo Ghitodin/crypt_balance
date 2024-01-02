@@ -1985,9 +1985,13 @@ challenge_for_artifact_interaction = {
 	answer_reject_key = REQUEST_ARTIFACT_COMBAT_REJECT
 
 	is_shown = {
-		no # THE MOD
 		# Can't duel yourself.
-		NOT = { scope:actor = scope:recipient }
+		AND = { # THE MOD
+			scope:actor = scope:recipient # THE MOD
+			NOT = { # THE MOD
+				scope:actor = scope:recipient # THE MOD
+			} # THE MOD
+		}
 		custom_description = {
 			text = "challenge_for_artifact_interaction_valid_tt_1"
 			scope:recipient = {

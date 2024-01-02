@@ -18,9 +18,11 @@
 	}
 
 	is_shown = {
-		no # THE MOD
 
-		is_landed = yes
+		AND = { # THE MOD
+			is_landed = yes
+			is_landed = no # THE MOD
+		} # THE MOD
 		primary_title.tier >= tier_county
 		is_independent_ruler = no
 		exists = liege

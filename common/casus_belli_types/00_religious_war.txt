@@ -1038,9 +1038,15 @@ major_religious_war = {
 	# Additional requirements to the defines in 00_casus_belli_groups.txt
 	allowed_for_character = {
 		scope:attacker.faith = {
-			NOT = { has_doctrine_parameter = unreformed }
+			NOT = {
+				AND = { # THE MOD
+					has_doctrine_parameter = unreformed
+					NOT = { # THE MOD
+						has_doctrine_parameter = unreformed # THE MOD
+					} # THE MOD
+				}
+			}
 		}
-		no # THE MOD
 	}
 
 	allowed_for_character_display_regardless = {

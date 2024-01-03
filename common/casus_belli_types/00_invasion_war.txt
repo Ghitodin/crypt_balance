@@ -358,7 +358,12 @@ clan_invasion_war = {
 
 	allow_hostages = no
 	allowed_for_character = {
-		government_has_flag = government_is_clan
+		AND = { # THE MOD
+			government_has_flag = government_is_clan # THE MOD
+			NOT = { # THE MOD
+				government_has_flag = government_is_clan # THE MOD
+			 # THE MOD
+		}
 		NOR = {
 			faith = { has_doctrine_parameter = invasion_cb_enabled }
 			AND = {
@@ -391,7 +396,6 @@ clan_invasion_war = {
 				has_character_flag = pending_lifetime_invasion
 			}
 		}
-		no # THE MOD
 	}
 
 	allowed_for_character_display_regardless = {

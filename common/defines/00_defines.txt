@@ -1183,11 +1183,11 @@ NRaid = {
 	RAID_LOOT_PER_SOLDIER = 0.1				# How much loot can a single soldier carry? Minimum increment is 0.001
 	MIN_SOLDIERS_TO_RAID = 200				# How small can a raid army be and still be able to loot?
 	MONTHLY_ATTRITION = 0.01				# How much attrition do you take while looting a province? 0.01 = 1% per month
-	MONTHS_OF_RAID_LOOT = 9				# How many months of holding income (with owner effects discounted) does raiding provide?
+	MONTHS_OF_RAID_LOOT = 10				# How many months of holding income (with owner effects discounted) does raiding provide?
 	
 	# Progress cannot be lower than 1/day (except when interrupted by combat)
 	BASE_PROGRESS = 20						# How much base raid action progress do you get per day?
-	PROGRESS_PER_SOLDIER = 0.005				# How much raid action progress do you get per day per soldier? Minimum resolution is 0.001
+	PROGRESS_PER_SOLDIER = 0.008				# How much raid action progress do you get per day per soldier? Minimum resolution is 0.001
 	BASE_DIFFICULTY = 350					# How much base progress is needed?
 	DIFFICULTY_PER_FORT_LEVEL = 350			# How much progress is needed per fort level in the holding?
 	DIFFICULTY_PER_COUNTY_FORT_LEVEL = 250	# How much progress is needed per fort level in the county *outside* the holding?

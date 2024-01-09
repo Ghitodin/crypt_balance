@@ -83,7 +83,7 @@ emperor_modifier = {
 	knight_limit = 7 # THE MOD
 	vassal_limit = 35 # THE MOD
 	ai_amenity_target_baseline = 0.2 # THE MOD
-	active_accolades = 2
+	active_accolades = 1 # THE MOD
 	tax_slot_add = 2
 	mercenary_hire_cost_mult = 0.6
 }

@@ -20,7 +20,7 @@ stewardship_modifier = {
 	character_travel_speed = 1
 }
 stewardship_modifier_with_offset = {
-	domain_tax_mult = 0.02
+	domain_tax_mult = 0.006 # THE MOD
 	#build_gold_cost = -0.02
 	#holding_build_gold_cost = -0.02
 }
@@ -29,11 +29,11 @@ martial_modifier = {
 	character_travel_safety = 1
 }
 martial_modifier_with_offset = {
-	levy_reinforcement_rate = 0.02 # THE MOD
-	#army_maintenance_mult = -0.01 # THE MOD
+	levy_reinforcement_rate = 0.01 # THE MOD
+	army_maintenance_mult = -0.01
 	#counter_efficiency = -0.02
 	army_toughness_mult = 0.01
-	levy_size = 0.02 # THE MOD     		
+	levy_size = 0.015 # THE MOD     		
 }
 
 learning_modifier = {

@@ -582,7 +582,7 @@ holy_site_great_mosque_of_mecca_01 = {
 	}
 	
 	province_modifier = {
-		monthly_income = 3
+		monthly_income = 2 # THE MOD
 	}
 	
 	ai_value = {
@@ -2768,17 +2768,17 @@ dome_of_the_rock_01 = {
 		monthly_dynasty_prestige_mult = 0.05
 		monthly_county_control_change_factor = 0.1
 		martial_per_piety_level = 1
-		knight_effectiveness_mult = 0.2
+		knight_effectiveness_mult = 0.15 # THE MOD
 	}
 	
 	county_modifier = {
-		tax_mult = 0.3
-		development_growth_factor = 0.3
-		development_growth = 0.3
+		#tax_mult = 0.3 # THE MOD
+		development_growth_factor = 0.15 # THE MOD
+		development_growth = 0.15 # THE MOD
 	}
 	
 	province_modifier = {
-		monthly_income = 3
+		#monthly_income = 0.5 # THE MOD
 	}
 	
 	ai_value = {
@@ -2843,18 +2843,18 @@ temple_in_jerusalem_01 = {
 		monthly_county_control_change_factor = 0.1
 		martial_per_piety_level = 1
 		learning_per_prestige_level = 1
-		knight_effectiveness_mult = 0.2
-		same_faith_opinion = 5
+		knight_effectiveness_mult = 0.15 #THE MOD
+		same_faith_opinion = 2 #THE MOD
 	}
 	
 	county_modifier = {
-		tax_mult = 0.3
-		development_growth_factor = 0.3
-		development_growth = 0.3
+		#tax_mult = 0.3 #THE MOD
+		development_growth_factor = 0.2 #THE MOD
+		development_growth = 0.2 #THE MOD
 	}
 	
 	province_modifier = {
-		monthly_income = 3
+		monthly_income = 2 #THE MOD
 	}
 	
 	ai_value = {

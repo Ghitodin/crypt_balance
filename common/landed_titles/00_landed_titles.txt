@@ -51331,13 +51331,13 @@ e_arabia = {
 
 		capital = c_jerusalem
 
-		can_create = {
-			faith = { religion_tag = christianity_religion }
-		}
+		#can_create = { # THE MOD
+			#faith = { religion_tag = christianity_religion } THE MOD
+		#} THE MOD
 
-		can_create_on_partition = {
-			faith = { religion_tag = christianity_religion }
-		}
+		#can_create_on_partition = { THE MOD
+			#faith = { religion_tag = christianity_religion } THE MOD
+		#} THE MOD
 
 		ai_primary_priority = {
 			if = {

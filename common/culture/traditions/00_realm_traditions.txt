@@ -228,11 +228,11 @@ tradition_republican_legacy = {
 	}
 	
 	parameters = {
-		can_make_republican_vassals = yes
+		#can_make_republican_vassals = yes # THE MOD
 		unlock_innovation_pike_columns = yes
 		city_buildings_more_powerful = yes
 		city_buildings_less_control = yes
-		republican_vassals_pay_more = yes
+		#republican_vassals_pay_more = yes # THE MOD
 		more_parochial_vassals = yes
 	}
 	character_modifier = {

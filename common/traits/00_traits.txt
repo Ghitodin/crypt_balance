@@ -7762,7 +7762,7 @@ hajjaj = {
 excommunicated = {
 	category = fame
 	monthly_piety_gain_mult = -0.5
-	zealot_opinion = -50
+	zealot_opinion = -20 # THE MOD
 	
 	shown_in_ruler_designer = no
 

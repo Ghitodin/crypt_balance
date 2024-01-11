@@ -108,6 +108,7 @@ ask_for_conversion_courtier_interaction = {
 		scope:recipient = { is_courtier_of = scope:actor }
 		scope:recipient = { is_ruler = no }
 		scope:recipient = { is_imprisoned = no }
+		scope:recipient = { is_hostage = no } # THE MOD
 	}
 
 	cooldown_against_recipient = { years = 15 }

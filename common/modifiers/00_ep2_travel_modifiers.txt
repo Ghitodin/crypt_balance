@@ -63,7 +63,7 @@ trained_in_warrior_culture_modifier = {
 
 training_hard_modifier = {
 	icon = martial_positive
-	prowess = 20
+	prowess = 6 # THE MOD
 }
 	
 philosophical_musings_modifier = {

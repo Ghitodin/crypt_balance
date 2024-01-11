@@ -7168,7 +7168,7 @@ ep2_wedding.1180 = {
 			}
 		}
 		stress_impact = {
-			base = major_stress_impact_loss
+			base = medium_stress_impact_loss # THE MOD
 		}
 		ai_chance = {
 			base = 150
@@ -7473,7 +7473,7 @@ ep2_wedding.1190 = {
 			}
 		}
 		stress_impact = {
-			base = medium_stress_impact_loss
+			base = minor_stress_impact_loss # THE MOD
 		}
 		ai_chance = {
 			base = 200

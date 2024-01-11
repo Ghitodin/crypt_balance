@@ -1951,7 +1951,7 @@ ep2_wedding_ewan.0011 = {
 
 		# We give base stress loss for this'un too.
 		stress_impact = {
-			base = medium_stress_impact_loss
+			base = minor_stress_impact_loss # THE MOD
 			deceitful = minor_stress_impact_loss
 			honest = miniscule_stress_impact_gain
 		}
@@ -1974,7 +1974,7 @@ ep2_wedding_ewan.0011 = {
 
 		# We give base stress loss for this'un too.
 		stress_impact = {
-			base = minor_stress_impact_loss
+			base = miniscule_stress_impact_loss # THE MOD
 			shy = minor_stress_impact_loss
 			eccentric = minor_stress_impact_gain
 		}
@@ -2795,7 +2795,7 @@ ep2_wedding_ewan.0021 = {
 
 		# We give base stress loss for this'un too.
 		stress_impact = {
-			base = minor_stress_impact_loss
+			base = miniscule_stress_impact_loss # THE MOD
 			shy = minor_stress_impact_loss
 		}
 		ai_chance = {
@@ -3254,7 +3254,7 @@ ep2_wedding_ewan.0031 = {
 
 		# We give base stress loss for this'un too.
 		stress_impact = {
-			base = major_stress_impact_loss
+			base = medium_stress_impact_loss # THE MOD
 			shy = medium_stress_impact_loss
 			lazy = medium_stress_impact_loss
 			gregarious = miniscule_stress_impact_gain
@@ -3808,7 +3808,7 @@ ep2_wedding_ewan.0041 = {
 
 		# We most give base stress loss for this'un.
 		stress_impact = {
-			base = medium_stress_loss
+			base = minor_stress_loss # THE MOD
 			lazy = miniscule_stress_impact_loss
 			compassionate = miniscule_stress_impact_loss
 		}
@@ -5760,7 +5760,7 @@ ep2_wedding_ewan.0061 = {
 
 		# We give base stress loss for this'un too.
 		stress_impact = {
-			base = major_stress_impact_loss
+			base = medium_stress_impact_loss # THE MOD
 			deceitful = miniscule_stress_impact_loss
 			callous = miniscule_stress_impact_loss
 			sadistic = miniscule_stress_impact_loss
@@ -5855,7 +5855,7 @@ ep2_wedding_ewan.0061 = {
 		}
 
 		stress_impact = {
-			base = major_stress_loss
+			base = minor_stress_loss # THE MOD
 			deceitful = minor_stress_impact_loss
 			callous = minor_stress_impact_loss
 			sadistic = minor_stress_impact_loss
@@ -5876,7 +5876,7 @@ ep2_wedding_ewan.0061 = {
 
 		# Effect is stress loss.
 		stress_impact = {
-			base = medium_stress_loss
+			base = minor_stress_loss # THE MOD
 			lazy = medium_stress_impact_loss
 			diligent = miniscule_stress_impact_gain
 		}

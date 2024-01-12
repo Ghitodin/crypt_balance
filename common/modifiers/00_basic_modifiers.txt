@@ -53,40 +53,41 @@ baron_modifier = {
 }
 
 count_modifier = {
-	domain_limit = 3 # THE MOD
+	domain_limit = 4 # THE MOD
 	knight_limit = 6 # THE MOD
 	tax_slot_add = 1
-	ai_war_chance = -0.9
+	ai_war_chance = -0.4 # THE MOD
 }
 
 duke_modifier = {
-	domain_limit = 3 # THE MOD
+	domain_limit = 4 # THE MOD
 	knight_limit = 7 # THE MOD
 	vassal_limit = 20
-	tax_slot_add = 1
+	active_accolades = 1 # THE MOD
+	tax_slot_add = 1 # THE MOD
 
 	mercenary_hire_cost_mult = 0.1
 }
 
 king_modifier = {
-	domain_limit = 3
+	domain_limit = 4
 	knight_limit = 7
 	vassal_limit = 30 # THE MOD
 	active_accolades = 1
 	tax_slot_add = 2
 
-	mercenary_hire_cost_mult = 0.3
+	mercenary_hire_cost_mult = 0.2 # THE MOD
 }
 
 emperor_modifier = {
-	domain_limit = 3 # THE MOD
+	domain_limit = 4 # THE MOD
 	knight_limit = 7 # THE MOD
 	vassal_limit = 35 # THE MOD
-	ai_amenity_target_baseline = 0.2 # THE MOD
+	ai_amenity_target_baseline = 0.3
 	active_accolades = 1 # THE MOD
 	tax_slot_add = 2
-	mercenary_hire_cost_mult = 0.6
-	vassal_opinion = -10
+	mercenary_hire_cost_mult = 0.3 # THE MOD
+	vassal_opinion = -5 # THE MOD
 }
 
 # These modifiers are applied to the holder of a title of the respective tier (per title)

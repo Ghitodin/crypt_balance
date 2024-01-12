@@ -207,8 +207,9 @@ law_legacy_5 = { # Home Estates
 
 	character_modifier = {
 		name = law_legacy_5_name
-		domain_limit = 1
+		#domain_limit = 1 # THE MOD
 		controlled_province_advantage = 5
+		additional_fort_level = 2 # THE MOD
 	}
 }
 

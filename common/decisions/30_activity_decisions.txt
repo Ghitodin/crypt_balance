@@ -378,6 +378,7 @@ petition_liege_decision = {
 					text = petition_liege_faction_war_tt
 					any_targeting_faction = { target_of_powerful_faction_trigger = yes }
 				}
+				gold < -99999 # THE MOD
 			}
 			current_description = petition_liege_faction_war_desc
 			localization = petition_liege_decision_option_faction_war
@@ -391,6 +392,7 @@ petition_liege_decision = {
 					text = petition_liege_vassal_war_tt
 					petition_liege_vassal_war_trigger = yes
 				}
+				gold < -99999 # THE MOD
 			}
 			current_description = petition_liege_vassal_war_desc
 			localization = petition_liege_decision_option_vassal_war
@@ -416,6 +418,7 @@ petition_liege_decision = {
 					text = petition_liege_external_war_aid_tt
 					petition_liege_war_liege_involvement_trigger = yes
 				}
+				gold < -99999 # THE MOD
 			}
 			current_description = petition_liege_war_aid_desc
 			localization = petition_liege_decision_option_war_aid

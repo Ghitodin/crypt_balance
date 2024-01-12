@@ -308,8 +308,8 @@
 		scope:recipient = {
 			NOR = {
 				is_allied_to = scope:actor
-				#target_is_vassal_or_below = scope:actor
-				#target_is_liege_or_above = scope:actor
+				#target_is_vassal_or_below = scope:actor # THE MOD
+				#target_is_liege_or_above = scope:actor # THE MOD
 			}
 			yields_alliance = {
 				candidate = scope:secondary_recipient

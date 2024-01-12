@@ -40,13 +40,13 @@
 	#########
 	modifier = { #Weak hook
 		scope:hook = yes
-		add = 100
+		add = 75 # THE MOD
 		scope:actor = { NOT = { has_strong_hook = scope:recipient } }
 		desc = SCHEME_WEAK_HOOK_USED
 	}
 	modifier = { #Strong Hook (in some cases it's not auto accept)
 		scope:hook = yes
-		add = 200
+		add = 150 # THE MOD
 		scope:actor = { has_strong_hook = scope:recipient }
 		desc = SCHEME_STRONG_HOOK_USED
 	}
@@ -169,7 +169,7 @@
     							target_is_liege_or_above = scope:actor
     							target_is_vassal_or_below = scope:actor
 							}
-							count >= 2
+							count >= 1 # THE MOD
 						}
 					}
 				}
@@ -302,14 +302,14 @@
 					target_is_vassal_or_below = scope:actor
 					target_is_liege_or_above = scope:actor
 				}
-				count >= 2
+				count >= 1 # THE MOD
 			}
 		}
 		scope:recipient = {
 			NOR = {
 				is_allied_to = scope:actor
-				target_is_vassal_or_below = scope:actor
-				target_is_liege_or_above = scope:actor
+				#target_is_vassal_or_below = scope:actor
+				#target_is_liege_or_above = scope:actor
 			}
 			yields_alliance = {
 				candidate = scope:secondary_recipient

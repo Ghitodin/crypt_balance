@@ -20,7 +20,7 @@ stewardship_modifier = {
 	character_travel_speed = 1
 }
 stewardship_modifier_with_offset = {
-	domain_tax_mult = 0.006 # THE MOD
+	domain_tax_mult = 0.008 # THE MOD
 	#build_gold_cost = -0.02
 	#holding_build_gold_cost = -0.02
 }

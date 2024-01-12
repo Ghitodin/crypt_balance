@@ -2,22 +2,22 @@
 
 # Prowess Modifiers
 artifact_prowess_1_modifier = { prowess_no_portrait = 1 }
-artifact_prowess_2_modifier = { prowess_no_portrait = 2 }
-artifact_prowess_3_modifier = { prowess_no_portrait = 3 }
-artifact_prowess_4_modifier = { prowess_no_portrait = 4 }
-artifact_prowess_5_modifier = { prowess_no_portrait = 5 }
-artifact_prowess_6_modifier = { prowess_no_portrait = 6 }
-artifact_prowess_7_modifier = { prowess_no_portrait = 7 }
-artifact_prowess_8_modifier = { prowess_no_portrait = 8 }
-artifact_prowess_9_modifier = { prowess_no_portrait = 9 }
-artifact_prowess_10_modifier = { prowess_no_portrait = 10 }
-artifact_prowess_11_modifier = { prowess_no_portrait = 11 }
+artifact_prowess_2_modifier = { prowess_no_portrait = 1 } # THE MOD
+artifact_prowess_3_modifier = { prowess_no_portrait = 2 } # THE MOD
+artifact_prowess_4_modifier = { prowess_no_portrait = 2 } # THE MOD
+artifact_prowess_5_modifier = { prowess_no_portrait = 3 } # THE MOD
+artifact_prowess_6_modifier = { prowess_no_portrait = 3 } # THE MOD
+artifact_prowess_7_modifier = { prowess_no_portrait = 4 } # THE MOD
+artifact_prowess_8_modifier = { prowess_no_portrait = 4 } # THE MOD
+artifact_prowess_9_modifier = { prowess_no_portrait = 5 } # THE MOD
+artifact_prowess_10_modifier = { prowess_no_portrait = 5 } # THE MOD
+artifact_prowess_11_modifier = { prowess_no_portrait = 6 } # THE MOD
 
 artifact_prowess_1_negative_modifier = { prowess_no_portrait = -1 }
 artifact_prowess_2_negative_modifier = { prowess_no_portrait = -2 }
 artifact_prowess_no_decorations_modifier = { prowess_no_portrait = 1 } # Bonus prowess given to weapons with no decorations. Independent from the other prowess modifiers so we can balance it separately. 
 artifact_prowess_no_decorations_medium_tier_modifier = { prowess_no_portrait = 2 } # Bonus prowess given to weapons with no decorations. Independent from the other prowess modifiers so we can balance it separately. 
-artifact_prowess_no_decorations_high_tier_modifier = { prowess_no_portrait = 4 } # Bonus prowess given to weapons with no decorations. Independent from the other prowess modifiers so we can balance it separately. 
+artifact_prowess_no_decorations_high_tier_modifier = { prowess_no_portrait = 3 }  # THE MOD # Bonus prowess given to weapons with no decorations. Independent from the other prowess modifiers so we can balance it separately. 
 
 # Combat-related Modifiers
 artifact_knight_limit_1_modifier = { knight_limit = 1 }
@@ -69,13 +69,13 @@ artifact_levy_reinforcement_rate_same_faith_11_modifier = { levy_reinforcement_r
 artifact_levy_reinforcement_rate_same_faith_12_modifier = { levy_reinforcement_rate_same_faith = 0.50 }
 
 artifact_negate_prowess_penalty_add_1_modifier = { negate_prowess_penalty_add = 1 }
-artifact_negate_prowess_penalty_add_2_modifier = { negate_prowess_penalty_add = 2 }
-artifact_negate_prowess_penalty_add_3_modifier = { negate_prowess_penalty_add = 3 }
-artifact_negate_prowess_penalty_add_4_modifier = { negate_prowess_penalty_add = 4 }
-artifact_negate_prowess_penalty_add_5_modifier = { negate_prowess_penalty_add = 5 }
-artifact_negate_prowess_penalty_add_6_modifier = { negate_prowess_penalty_add = 6 }
-artifact_negate_prowess_penalty_add_7_modifier = { negate_prowess_penalty_add = 7 }
-artifact_negate_prowess_penalty_add_8_modifier = { negate_prowess_penalty_add = 8 }
+artifact_negate_prowess_penalty_add_2_modifier = { negate_prowess_penalty_add = 1 } # THE MOD
+artifact_negate_prowess_penalty_add_3_modifier = { negate_prowess_penalty_add = 2 } # THE MOD
+artifact_negate_prowess_penalty_add_4_modifier = { negate_prowess_penalty_add = 2 } # THE MOD
+artifact_negate_prowess_penalty_add_5_modifier = { negate_prowess_penalty_add = 3 } # THE MOD
+artifact_negate_prowess_penalty_add_6_modifier = { negate_prowess_penalty_add = 3 } # THE MOD
+artifact_negate_prowess_penalty_add_7_modifier = { negate_prowess_penalty_add = 4 } # THE MOD
+artifact_negate_prowess_penalty_add_8_modifier = { negate_prowess_penalty_add = 4 } # THE MOD
 
 artifact_raid_speed_1_modifier = { raid_speed = 0.05 }
 artifact_raid_speed_2_modifier = { raid_speed = 0.10 }
@@ -830,19 +830,19 @@ artifact_armor_1_artifact_modifier = {
 
 artifact_armor_2_artifact_modifier = {
 	icon = prowess_positive
-	prowess_no_portrait = 2
+	prowess_no_portrait = 1 # THE MOD
 	vassal_opinion = 1 # THE MOD
 }
 
 artifact_armor_3_artifact_modifier = {
 	icon = prowess_positive
-	prowess_no_portrait = 3
+	prowess_no_portrait = 2 # THE MOD
 	vassal_opinion = 1 # THE MOD
 }
 
 artifact_armor_4_artifact_modifier = {
 	icon = prowess_positive
-	prowess_no_portrait = 4
+	prowess_no_portrait = 3 # THE MOD
 	vassal_opinion = 2 # THE MOD
 	hostile_scheme_resistance_add = 5
 }
@@ -909,7 +909,7 @@ artifact_half_baked_propaganda_chronicle_modifier = {
 
 artifact_tournament_sharpened_blade_modifier = {
 	icon = prowess_positive
-	prowess = 8
+	prowess = 4  # THE MOD
 }
 
 # EP2

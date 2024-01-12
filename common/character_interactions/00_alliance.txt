@@ -1262,6 +1262,28 @@ negotiate_alliance_interaction = {
 		# Declared war opinion
 		# Actor is at war penalty
 		
+		# THE MOD START
+		modifier = {
+			add = {
+				scope:actor = {
+					every_ally = {
+						add = -30 # THE MOD
+					}
+				}
+			}
+			scope:actor = {
+				any_ally = {
+					NOR = {
+						target_is_vassal_or_below = scope:actor
+						target_is_liege_or_above = scope:actor
+					}
+					count >= 2 # THE MOD
+				}
+			}
+			desc = YOU_HAVE_TOO_MANY_ALLIANCES
+		}
+		# THE MOD START
+		
 		modifier = {
 			add = 20
 			scope:recipient = {
@@ -1851,7 +1873,7 @@ negotiate_alliance_interaction = {
 
 		# Unity modifiers
 		evaluate_action_increasing_house_unity = {
-			VALUE = 100
+			VALUE = 30 # THE MOD
 		}
 
 		fp3_struggle_resist_allied_wars_modifier = yes
@@ -1908,7 +1930,7 @@ negotiate_alliance_interaction = {
 
 		# Unity modifiers
 		evaluate_action_increasing_house_unity = {
-			VALUE = 100
+			VALUE = 30 # THE MOD
 		}
 		
 		modifier = { # The AI shouldn't propose to their Lieges
@@ -2046,6 +2068,17 @@ perk_alliance_interaction = {
 			name = perk_alliance_interaction
 			value = yes
 		}
+		
+		# THE MOD START
+		modifier = {
+			add = 20
+			scope:recipient = {
+				is_close_family_of = scope:actor
+			}
+			desc = CLOSE_FAMILY_REASON
+		}
+		# THE MOD END
+		
 		scope:actor = {
 			custom_tooltip = negotiate_alliance_effect_tooltip
 			trigger_event = char_interaction.0235
@@ -2560,7 +2593,7 @@ perk_alliance_interaction = {
 			add = {
 				scope:actor = {
 					every_ally = {
-						add = -15
+						add = -20 # THE MOD
 					}
 				}
 			}
@@ -2577,7 +2610,7 @@ perk_alliance_interaction = {
 			add = {
 				scope:recipient = {
 					every_ally = {
-						add = -15
+						add = -10 # THE MOD
 					}
 				}
 			}
@@ -2664,7 +2697,7 @@ perk_alliance_interaction = {
 
 		# Unity modifiers
 		evaluate_action_increasing_house_unity = {
-			VALUE = 100
+			VALUE = 30 # THE MOD
 		}
 		
 		modifier = { # Don't disturb the player with pointless asks

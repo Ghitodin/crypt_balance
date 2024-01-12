@@ -844,10 +844,10 @@ fp3_sided_with_tax_collector_tax_dispute = {
 
 fp3_incursion_instability = {
 	icon = horse_negative
-	levy_size = -0.2
-	tax_mult = -0.2
-	parochial_opinion = -20
-	county_opinion_add = -10
+	levy_size = -0.1 # THE MOD
+	tax_mult = -0.1 # THE MOD
+	parochial_opinion = -10 # THE MOD
+	county_opinion_add = -5 # THE MOD
 }
 
 ####### FP3 Ending: Honorary titles

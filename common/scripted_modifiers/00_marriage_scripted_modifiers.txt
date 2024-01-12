@@ -286,13 +286,13 @@
 		add = {
 			scope:actor = {
 				every_ally = {
-					limit = {
-						NOR = {
-    						target_is_liege_or_above = scope:actor
-    						target_is_vassal_or_below = scope:actor
-						}
-					}
-					add = -40 # THE MOD
+					#limit = {
+					#	NOR = {
+    				#		target_is_liege_or_above = scope:actor
+    				#		target_is_vassal_or_below = scope:actor
+					#	}
+					#}
+					add = -30 # THE MOD
 				}
 			}
 		}

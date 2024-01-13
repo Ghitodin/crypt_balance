@@ -380,6 +380,20 @@ reforge_artifact = {
 repair_artifact = {
 	gold = {
 		value = { value = 25 desc = "BASE" }
+		
+		# THE MOD START
+		if = {
+			limit = {
+				scope:artifact.artifact_owner = {
+					is_ai = no
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+		# THE MOD END
+		
 		if = {
 			limit = {
 				scope:artifact = {

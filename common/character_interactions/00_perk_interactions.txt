@@ -696,8 +696,10 @@ buy_claim_interaction = {
 		scope:recipient = {
 			is_landed = yes
 			primary_title.tier > tier_barony
-			# THE MOD
+			# MOD START
 			primary_title.tier < tier_kingdom
+			faith = scope:actor.faith
+			# MOD END
 			NOT = {	
 				target_is_liege_or_above = scope:actor
 			}
@@ -828,7 +830,7 @@ buy_claim_interaction = {
 							tier = tier_county
 						}
 					}
-					add_piety = minor_buy_claim_piety_loss
+					add_piety = 750 # THE MOD
 				}
 				if = {
 					limit = {
@@ -836,7 +838,7 @@ buy_claim_interaction = {
 							tier = tier_duchy
 						}
 					}
-					add_piety = medium_buy_claim_piety_loss
+					add_piety = 1500 # THE MOD
 				}
 				if = {
 					limit = {

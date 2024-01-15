@@ -110,9 +110,17 @@
 			FACTION_TARGET = scope:target
 		}
 		
+		# THE MOD START
+		OR = {
+			is_ai = no
+			liege = {
+				is_ai = no
+			}
+		}
+		# THE MOD END
+		
 		liege = {
 			is_independent_ruler = yes
-			is_ai = no # THE MOD
 			NOT = { government_has_flag = government_is_theocracy }
 			custom_tooltip = {
 				text = nation_fracturing_faction.can_character_create_ui.blocked_by_struggle

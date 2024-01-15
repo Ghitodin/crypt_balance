@@ -845,7 +845,7 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 		NOT = { this = scope:candidate }
 		scope:candidate = { is_diarch_of_target = scope:holder }
 	}
-	#Lands # THE MOD
+	#Lands # MOD START
 	modifier = {
 		add = -1000
 		desc = tooltip_saxon_elector_vote_candidate_unlanded
@@ -855,13 +855,14 @@ elector_voting_pattern_circumstances_feudal_elective_modifier = {
 		}
 	}
 	modifier = {
-		add = -30
+		add = -1000
 		desc = tooltip_saxon_elector_vote_candidate_count_magnate
 		NOT = { this = scope:candidate }
 		scope:candidate = {
 			highest_held_title_tier = tier_county
 		}
 	}
+	# MOD END
 }
 
 elector_voting_pattern_prestige_piety_feudal_elective_modifier = {

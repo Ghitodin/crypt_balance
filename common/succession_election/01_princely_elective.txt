@@ -21,8 +21,8 @@ princely_elective = { #HRE Elective.
 		}
 		 # THE MOD
 		modifier = { # is not AI
-			desc = "Is a player: -4"
-			add = -4
+			desc = "Is a player: -2"
+			add = -2
 			NOR = {
 				is_ai = yes
 				highest_held_title_tier = 5

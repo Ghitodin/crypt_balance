@@ -109,7 +109,7 @@ church_and_state_perk = {
 	}
 	doctrine_character_modifier = {
 		doctrine = doctrine_theocracy_temporal
-		realm_priest_opinion = 50
+		realm_priest_opinion = 30 # THE MOD
 	}
 }
 

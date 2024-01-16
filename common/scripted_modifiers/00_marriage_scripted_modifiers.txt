@@ -231,10 +231,10 @@
 				limit = {
 					scope:actor = {
 						any_ally = {
-							NOR = {
-    							target_is_liege_or_above = scope:actor
-    							target_is_vassal_or_below = scope:actor
-							}
+							#NOR = { # THE MOD START
+    						#	target_is_liege_or_above = scope:actor
+    						#	target_is_vassal_or_below = scope:actor
+							#} # THE MOD END
 							count >= 2
 						}
 					}
@@ -242,10 +242,10 @@
 				scope:actor = {
 					every_ally = {
 						limit = {
-							NOR = {
-    							target_is_liege_or_above = scope:actor
-    							target_is_vassal_or_below = scope:actor
-							}
+							#NOR = {  # THE MOD START
+    						#	target_is_liege_or_above = scope:actor
+    						#	target_is_vassal_or_below = scope:actor
+							#}  # THE MOD END
 						}
 						multiply = 0.5
 					}
@@ -292,7 +292,7 @@
     				#		target_is_vassal_or_below = scope:actor
 					#	}
 					#}
-					add = -30 # THE MOD
+					add = -35 # THE MOD
 				}
 			}
 		}

@@ -1273,10 +1273,10 @@ negotiate_alliance_interaction = {
 			}
 			scope:actor = {
 				any_ally = {
-					NOR = {
-						target_is_vassal_or_below = scope:actor
-						target_is_liege_or_above = scope:actor
-					}
+					#NOR = { # THE MOD START
+					#	target_is_vassal_or_below = scope:actor
+					#	target_is_liege_or_above = scope:actor
+					#} # THE MOD END
 					count >= 2 # THE MOD
 				}
 			}

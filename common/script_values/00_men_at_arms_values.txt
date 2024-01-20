@@ -322,6 +322,38 @@ culture_ai_weight_skirmishers = {
 		}
 		add = -500
 	}
+	
+	# THE MOD START
+	if = { # Like (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_adaptive_skirmishing
+				has_cultural_tradition = tradition_hit_and_run
+				has_cultural_tradition = tradition_jungle_warriors
+				has_cultural_tradition = tradition_forest_fighters
+				has_cultural_tradition = tradition_forest_folk
+				has_cultural_tradition = tradition_jungle_dwellers
+			}
+		}
+		add = 20
+	}
+	if = { # Big Like (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_strength_in_numbers
+			}
+		}
+		add = 70
+	}
+	if = { # Dislike (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_formation_fighting
+			}
+		}
+		add = -20
+	}
+	# THE MOD END
 }
 
 culture_ai_weight_archers = {
@@ -361,6 +393,39 @@ culture_ai_weight_archers = {
 		}
 		add = -500
 	}
+	
+	# THE MOD START
+	if = { # Like (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_adaptive_skirmishing
+				has_cultural_tradition = tradition_hit_and_run
+				has_cultural_tradition = tradition_forest_fighters
+				has_cultural_tradition = tradition_highland_warriors
+				has_cultural_tradition = tradition_forest_folk
+				has_cultural_tradition = tradition_mountain_homes
+			}
+		}
+		add = 20
+	}
+	if = { # Big Like (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_strength_in_numbers
+				has_cultural_tradition = tradition_longbow_competitions
+			}
+		}
+		add = 70
+	}
+	if = { # Dislike (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_formation_fighting
+			}
+		}
+		add = -20
+	}
+	# THE MOD END
 }
 
 culture_ai_weight_heavy_infantry = {
@@ -388,6 +453,33 @@ culture_ai_weight_heavy_infantry = {
 		}
 		add = -500
 	}
+	
+	# THE MOD START
+	if = { # Big Like (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_roman_legacy
+			}
+		}
+		add = 70
+	}
+	if = { # Dislike (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_adaptive_skirmishing
+			}
+		}
+		add = -20
+	}
+	if = { # Big Dislike (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_strength_in_numbers
+			}
+		}
+		add = -70
+	}
+	# THE MOD END
 }
 
 culture_ai_weight_pikemen = {
@@ -411,6 +503,28 @@ culture_ai_weight_pikemen = {
 		}
 		add = -500
 	}
+	
+	# THE MOD START
+	if = { # Like (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_mountaineers
+				has_cultural_tradition = tradition_highland_warriors
+				has_cultural_tradition = tradition_formation_fighting
+				has_cultural_tradition = tradition_hill_dwellers
+			}
+		}
+		add = 20
+	}
+	if = { # Big Dislike (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_strength_in_numbers
+			}
+		}
+		add = -70
+	}
+	# THE MOD END
 }
 
 culture_ai_weight_light_cavalry = {
@@ -476,6 +590,49 @@ culture_ai_weight_light_cavalry = {
 		}
 		add = -200
 	}
+	
+	# THE MOD START
+	if = { # Like (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_horse_lords
+				has_cultural_tradition = tradition_horse_breeder
+				has_cultural_tradition = tradition_hit_and_run
+				has_cultural_tradition = tradition_warriors_of_the_dry
+				has_cultural_tradition = tradition_dryland_dwellers
+			}
+		}
+		add = 20
+	}
+	if = { # Big Like (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_strength_in_numbers
+			}
+		}
+		add = 70
+	}
+	if = { # Dislike (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_formation_fighting
+				has_cultural_tradition = tradition_mountaineers
+				has_cultural_tradition = tradition_highland_warriors
+				has_cultural_tradition = tradition_winter_warriors
+				has_cultural_tradition = tradition_hill_dwellers
+			}
+		}
+		add = -20
+	}
+	if = { # Big Dislike (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_wetlanders
+			}
+		}
+		add = -70
+	}
+	# THE MOD END
 }
 
 culture_ai_weight_heavy_cavalry = {
@@ -531,6 +688,47 @@ culture_ai_weight_heavy_cavalry = {
 		}
 		add = -500
 	}
+	
+	# THE MOD START
+	if = { # Like (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_horse_breeder
+				has_cultural_tradition = tradition_chivalry
+			}
+		}
+		add = 20
+	}
+	if = { # Big Like (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_roman_legacy
+			}
+		}
+		add = 70
+	}
+	if = { # Dislike (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_mountaineers
+				has_cultural_tradition = tradition_adaptive_skirmishing
+				has_cultural_tradition = tradition_highland_warriors
+				has_cultural_tradition = tradition_winter_warriors
+				has_cultural_tradition = tradition_hill_dwellers
+			}
+		}
+		add = -20
+	}
+	if = { # Big Dislike (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_strength_in_numbers
+				has_cultural_tradition = tradition_wetlanders
+			}
+		}
+		add = -70
+	}
+	# THE MOD END
 }
 
 culture_ai_weight_camels = {
@@ -545,6 +743,36 @@ culture_ai_weight_camels = {
 		}
 		add = 80
 	}
+	
+	# THE MOD START
+	if = { # Like (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_warriors_of_the_dry
+				has_cultural_tradition = tradition_dryland_dwellers
+			}
+		}
+		add = 20
+	}
+	if = { # Big Like (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_strength_in_numbers
+			}
+		}
+		add = 70
+	}
+	if = { # Dislike (traditions):
+		limit = {
+			culture = {
+				has_cultural_tradition = tradition_mountaineers
+				has_cultural_tradition = tradition_highland_warriors
+				has_cultural_tradition = tradition_winter_warriors
+			}
+		}
+		add = -20
+	}
+	# THE MOD END
 }
 
 culture_ai_weight_elephants = {

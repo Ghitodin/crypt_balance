@@ -1004,6 +1004,7 @@ tradition_strength_in_numbers = {
 		levy_size = 0.15
 	}
 	character_modifier = {
+		camel_cavalry_max_size_add = 2 # THE MOD
 		light_cavalry_max_size_add = 2
 		archers_max_size_add = 2
 		skirmishers_max_size_add = 2
@@ -1013,6 +1014,7 @@ tradition_strength_in_numbers = {
 		heavy_cavalry_max_size_add = -2
 		skirmishers_recruitment_cost_mult = -0.15
 		light_cavalry_recruitment_cost_mult = -0.15
+		camel_cavalry_recruitment_cost_mult = -0.15
 		archers_recruitment_cost_mult = -0.15
 		knight_limit = -2
 	}

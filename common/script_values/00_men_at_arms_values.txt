@@ -495,7 +495,7 @@ culture_ai_weight_heavy_infantry = {
 				}
 			}
 		}
-		add = -70
+		add = -200
 	}
 	# THE MOD END
 }
@@ -544,7 +544,7 @@ culture_ai_weight_pikemen = {
 				}
 			}
 		}
-		add = -70
+		add = -200
 	}
 	# THE MOD END
 }
@@ -660,7 +660,7 @@ culture_ai_weight_light_cavalry = {
 				}
 			}
 		}
-		add = -70
+		add = -200
 	}
 	# THE MOD END
 }
@@ -764,7 +764,7 @@ culture_ai_weight_heavy_cavalry = {
 				}
 			}
 		}
-		add = -70
+		add = -200
 	}
 	# THE MOD END
 }

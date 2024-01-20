@@ -1194,6 +1194,13 @@ call_dynasty_member_to_war_interaction = {
 		scope:recipient = {
 			is_ruler = yes
 		}
+		
+		scope:recipient = {
+			AND = { # THE MOD
+				is_landed = yes
+				is_landed = no # THE MOD
+			}
+		}
 
 		scope:recipient = {
 			NOT = {

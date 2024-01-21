@@ -317,11 +317,13 @@ erudition_legacy_2 = { # Ordained Rulership
 		name = erudition_legacy_2_modifier_name
 		doctrine = doctrine_theocracy_lay_clergy
 		zealot_opinion = 5
+		courtly_opinion = -3 # THE MOD
 	}
 	doctrine_character_modifier = {
 		name = erudition_legacy_2_modifier_name
 		doctrine = doctrine_theocracy_temporal
 		clergy_opinion = 5
+		courtly_opinion = -3 # THE MOD
 	}
 }
 

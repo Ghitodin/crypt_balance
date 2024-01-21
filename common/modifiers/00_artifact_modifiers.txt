@@ -21,7 +21,7 @@ artifact_prowess_no_decorations_high_tier_modifier = { prowess_no_portrait = 3 }
 
 # Combat-related Modifiers
 artifact_knight_limit_1_modifier = { knight_limit = 1 }
-artifact_knight_limit_2_modifier = { knight_limit = 2 }
+artifact_knight_limit_2_modifier = { knight_limit = 1 } # THE MOD
 #artifact_knight_limit_3_modifier = { knight_limit = 3 }
 #artifact_knight_limit_4_modifier = { knight_limit = 4 }
 
@@ -238,13 +238,13 @@ artifact_court_grandeur_baseline_add_5_modifier = { court_grandeur_baseline_add 
 artifact_court_grandeur_baseline_add_6_modifier = { court_grandeur_baseline_add = 6 }
 
 artifact_dynasty_opinion_1_modifier = { dynasty_opinion = 1 }
-artifact_dynasty_opinion_2_modifier = { dynasty_opinion = 2 }
-artifact_dynasty_opinion_3_modifier = { dynasty_opinion = 3 }
-artifact_dynasty_opinion_4_modifier = { dynasty_opinion = 4 }
-artifact_dynasty_opinion_5_modifier = { dynasty_opinion = 6 }
-artifact_dynasty_opinion_6_modifier = { dynasty_opinion = 8 }
-artifact_dynasty_opinion_7_modifier = { dynasty_opinion = 10 }
-artifact_dynasty_opinion_8_modifier = { dynasty_opinion = 12 }
+artifact_dynasty_opinion_2_modifier = { dynasty_opinion = 1 } # THE MOD
+artifact_dynasty_opinion_3_modifier = { dynasty_opinion = 2 } # THE MOD
+artifact_dynasty_opinion_4_modifier = { dynasty_opinion = 2 } # THE MOD
+artifact_dynasty_opinion_5_modifier = { dynasty_opinion = 3 } # THE MOD
+artifact_dynasty_opinion_6_modifier = { dynasty_opinion = 3 } # THE MOD
+artifact_dynasty_opinion_7_modifier = { dynasty_opinion = 4 } # THE MOD
+artifact_dynasty_opinion_8_modifier = { dynasty_opinion = 4 } # THE MOD
 
 artifact_monthly_dynasty_prestige_1_modifier = { monthly_dynasty_prestige_mult = 0.02 }
 artifact_monthly_dynasty_prestige_2_modifier = { monthly_dynasty_prestige_mult = 0.03 }

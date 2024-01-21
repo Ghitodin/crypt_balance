@@ -67,7 +67,7 @@ fp3_marriage_material_modifier = {
 
 fp3_dutiful_scion_modifier = {
 	icon = family_positive 
-	dynasty_opinion = 10
+	dynasty_opinion = 5 # THE MOD
 	diplomacy = 2
 	stewardship = 2
 	stress_gain_mult = 0.25
@@ -105,7 +105,7 @@ fp3_conversion_curious_county_modifier = {
 
 fp3_teapot_alcoholism_modifier = {
 	icon = drink_positive
-	same_faith_opinion = 5
+	same_faith_opinion = 3 # THE MOD
 }
 
 ulema_displeased_drinking = {
@@ -130,7 +130,8 @@ fp3_luxurious_bathhouse_modifier = {
 	icon = treatment_positive 
 	stress_loss_mult = 0.25
 	courtier_and_guest_opinion = 15
-	courtly_opinion = 10
+	courtly_opinion = 5 # THE MOD
+	zealot_opinion = -3 # THE MOD
 }
 
 fp3_less_luxurious_bathhouse_modifier = {
@@ -216,13 +217,13 @@ fp3_better_company_modifier = {
 
 fp3_light_of_the_walayah_modifier = {
 	icon = magic_positive
-	same_faith_opinion = 5
+	same_faith_opinion = 3 # THE MOD
 	diplomacy_per_piety_level = 1
 }
 
 fp3_azariqa_ascendancy_modifier = {
 	icon = prowess_positive
-	same_faith_opinion = 10
+	same_faith_opinion = 5 # THE MOD
 	martial_per_piety_level = 1
 }
 
@@ -390,10 +391,10 @@ fp3_reneged_on_promise_modifier = {
 }
 
 fp3_artifact_shahnameh_modifier = {
-	persian_opinion = 10
-	tajik_opinion = 10
-	khwarezmian_opinion = 10
-	afghan_opinion = 10
+	persian_opinion = 5 # THE MOD
+	tajik_opinion = 5 # THE MOD
+	khwarezmian_opinion = 5 # THE MOD
+	afghan_opinion = 5 # THE MOD
 	monthly_dynasty_prestige_mult = 0.05
 }
 
@@ -453,7 +454,7 @@ fp3_relentless_skeptic_modifier = {
 
 fp3_promoted_persian_mathematics_modifier = {
 	icon = learning_positive
-	courtly_opinion = 5
+	courtly_opinion = -3 # THE MOD
 	zealot_opinion = 5
 }
 
@@ -614,7 +615,7 @@ dreaded_beauty = {
 generous_beauty = {
 	icon = prestige_positive
 	vassal_tax_mult = -0.1
-	vassal_opinion = 5
+	vassal_opinion = 3 # THE MOD
 	short_reign_duration_mult = -0.15
 }
 
@@ -640,12 +641,14 @@ fp3_house_modifier_rebuilding_efforts = {
 	build_gold_cost = -0.1
 	build_speed = -0.1
 	tax_mult = 0.1
-	parochial_opinion = 20
+	parochial_opinion = 10 # THE MOD
+	glory_hound_opinion = -5 # THE MOD
 }
 
 fp3_house_modifier_frontier_ambitions = {
 	icon = martial_positive
-	glory_hound_opinion = 20
+	glory_hound_opinion = 10 # THE MOD
+	parochial_opinion = -5 # THE MOD
 	levy_size = 0.2
 	men_at_arms_maintenance = -0.1
 	men_at_arms_recruitment_cost = -0.2
@@ -661,8 +664,8 @@ fp3_house_modifier_destroyed_the_caliphate = {
 }
 
 fp3_zoroastrian_brazier_modifier = {
-	zealot_opinion = 5
-	same_faith_opinion = 5
+	zealot_opinion = 3 # THE MOD
+	same_faith_opinion = 3 # THE MOD
 	monthly_piety = 0.5
 }
 
@@ -673,7 +676,7 @@ fp3_irrigation_insights_modifier = {
 
 disturbed_sky_burial = {
 	icon = piety_positive
-	zealot_opinion = 10
+	zealot_opinion = 7 # THE MOD
 	minority_opinion = -10
 }
 
@@ -718,7 +721,7 @@ fp3_punished_the_destitute = {
 	icon = county_modifier_opinion_negative
 	county_opinion_add = -10
 	monthly_county_control_change_factor = 0.05
-	courtly_opinion = 5
+	courtly_opinion = -5 # THE MOD
 	zealot_opinion = 5
 }
 
@@ -738,15 +741,15 @@ fp3_established_futuwaa_lodges_modifier = {
 fp3_established_madrasas_modifier = {
 	icon = learning_positive
 	monthly_lifestyle_xp_gain_mult = 0.1
-	zealot_same_faith_opinion = 10
+	zealot_same_faith_opinion = 5 # THE MOD
 }
 
 fp3_rekindler_of_iran_modifier = {
 	icon = flame_positive
 	same_heritage_county_advantage_add = 5
-	glory_hound_same_culture_opinion = 10
-	parochial_same_culture_opinion = 10
-	courtly_same_culture_opinion = 5
+	glory_hound_same_culture_opinion = 5 # THE MOD
+	parochial_same_culture_opinion = 7 # THE MOD
+	courtly_same_culture_opinion = -5 # THE MOD
 	cultural_head_fascination_mult = 0.20
 	world_persian_empire_development_growth_factor = 0.2
 }
@@ -755,7 +758,7 @@ fp3_flame_of_iran_modifier = {
 	icon = flame_positive
 	same_heritage_county_advantage_add = 5
 	glory_hound_same_culture_opinion = 5
-	parochial_same_culture_opinion = 5
+	parochial_same_culture_opinion = -3 # THE MOD
 	world_persian_empire_development_growth_factor = 0.2
 }
 
@@ -771,7 +774,7 @@ fp3_higher_purpose_modifier = {
 
 scheme_helpful_sympathizer_modifier = {
 	icon = intrigue_positive 
-	scheme_success_chance = 10 
+	scheme_success_chance = 7 # THE MOD 
 }
 
 scheme_untrustworthy_sympathizer_modifier = {
@@ -970,7 +973,7 @@ fp3_treatise_on_building_modifier = {
 fp3_treatise_on_control_modifier = {
 	icon = county_modifier_control_positive
 	monthly_county_control_change_add = 0.3
-	county_opinion_add = 10
+	county_opinion_add = 5 # THE MOD
 }
 
 fp3_treatise_on_mathematics_modifier = {

@@ -7,7 +7,7 @@
 living_simply_modifier = {
 	icon = spoon_positive
 	stress_loss_mult = 0.25
-	religious_vassal_opinion = 10
+	religious_vassal_opinion = 5 # THE MOD
 }	
 
 villager_gifts_modifier = {
@@ -17,7 +17,7 @@ villager_gifts_modifier = {
 
 loyal_attitudes_modifier = {
 	icon = piety_positive
-	vassal_opinion = 10
+	vassal_opinion = 5 # THE MOD
 	vassal_levy_contribution_add = 0.1
 }
 
@@ -30,7 +30,7 @@ pacifist_mindset_modifier = {
 
 told_good_story_modifier = {
 	icon = social_positive
-	vassal_opinion = 5
+	vassal_opinion = 3 # THE MOD
 	diplomacy = 1
 }
 
@@ -128,7 +128,7 @@ broadened_horizons_modifier = {
 
 firm_convictions_modifier = {
 	icon = social_positive
-	religious_vassal_opinion = 10
+	religious_vassal_opinion = 7 # THE MOD
 }
 
 more_supplies_modifier = {

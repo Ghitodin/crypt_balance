@@ -7716,7 +7716,7 @@ hajjaj = {
 		parameter = mandatory_hajj
 		monthly_piety_gain_mult = 0.35 #offset the -0.25 and add 0.1
 		same_faith_opinion = 5 #offset the -5
-		zealot_opinion = 10
+		zealot_opinion = 5 # THE MOD
 	}
 	
 	ruler_designer_cost = 30
@@ -10907,7 +10907,7 @@ education_republican_knowledge_4 = {
 
 tourney_participant = {
 
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 
 	ruler_designer_cost = 5
 
@@ -11229,7 +11229,7 @@ tourney_participant = {
 
 			65 = {
 				monthly_prestige_gain_mult = 0.1
-				glory_hound_opinion = 20
+				glory_hound_opinion = 5 # THE MOD
 			}
 
 			100 = {
@@ -11265,7 +11265,7 @@ tourney_participant = {
 lifestyle_traveler = {
 	icon = "traveler.dds"
 
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	diplomacy = 1
 
 	ruler_designer_cost = 20

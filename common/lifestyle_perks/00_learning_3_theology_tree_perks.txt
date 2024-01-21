@@ -28,11 +28,13 @@
 	
 	doctrine_character_modifier = {
 		doctrine = doctrine_theocracy_lay_clergy
-		zealot_opinion = 10
+		zealot_opinion = 7 # THE MOD
+		courtly_opinion = -4 # THE MOD
 	}
 	doctrine_character_modifier = {
 		doctrine = doctrine_theocracy_temporal
-		clergy_opinion = 10
+		clergy_opinion = 7 # THE MOD
+		courtly_opinion = -4 # THE MOD
 	}
 }
 
@@ -139,11 +141,12 @@ defender_of_the_faith_perk = {
 		doctrine = doctrine_pluralism_fundamentalist
 		tolerance_advantage_mod = 10
 		prowess_per_piety_level = 2
-		clergy_opinion = 20
+		clergy_opinion = 12 # THE MOD
 	}
 	doctrine_character_modifier = {
 		doctrine = doctrine_pluralism_righteous
-		zealot_opinion = 10
+		zealot_opinion = 7 # THE MOD
+		courtly_opinion = -4 # THE MOD
 		tyranny_gain_mult = -0.25
 	}
 	doctrine_character_modifier = {

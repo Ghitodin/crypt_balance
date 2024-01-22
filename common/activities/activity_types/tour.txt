@@ -580,7 +580,7 @@
 		}
 	}
 
-	cooldown = { years = 10 }
+	cooldown = { years = 50 } # THE MOD
 
 	###################
 	# OPTIONS

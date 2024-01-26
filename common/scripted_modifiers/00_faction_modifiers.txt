@@ -770,7 +770,7 @@ common_faction_modifiers = {
 	# Realm Stability Settings
 	modifier = {
 		desc = "FACTION_REASON_GAME_RULE_REALM_STABILITY_LESSER"
-		add = 50
+		add = 30 # THE MOD
 		has_game_rule = lesser_realm_stability
 	}
 	modifier = {
@@ -1931,7 +1931,7 @@ claimant_faction_modifiers = {
 	# More likely to create a claimant faction against a Ruler below their CGLevel
 	modifier = {
 		desc = "FACTION_REASON_LOWER_COURT_GRANDEUR"
-		add = 50
+		add = 15 # THE MOD
 		$FACTION_TARGET$.court_grandeur_current_level < $FACTION_TARGET$.court_grandeur_minimum_expected_level
 	}
 	
@@ -1959,7 +1959,7 @@ claimant_faction_modifiers = {
 
 	modifier = { # Byzantium has extra trouble with Unpreferred Heirs
 		desc = "FACTION_REASON_BYZANTINE"
-		factor = 1.2
+		factor = 1.1 # THE MOD
 	 	culture = {
 			has_cultural_parameter = byzantine_faction_differences
 		}

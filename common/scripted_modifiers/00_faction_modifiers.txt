@@ -1424,7 +1424,7 @@ liberty_faction_modifiers = {
 	# Legacy
 	modifier = {
 		desc = "FACTION_REASON_GLORY_LEGACY_4"
-		add = -20
+		add = -10 # THE MOD
 		$FACTION_TARGET$ = {
 			exists = dynasty
 			dynasty = {
@@ -1627,7 +1627,7 @@ claimant_faction_modifiers = {
 	# Legacy
 	modifier = {
 		desc = "FACTION_REASON_GLORY_LEGACY_4"
-		add = -20
+		add = -10 # THE MOD
 		$FACTION_TARGET$ = {
 			exists = dynasty
 			dynasty = {

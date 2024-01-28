@@ -770,7 +770,7 @@ common_faction_modifiers = {
 	# Realm Stability Settings
 	modifier = {
 		desc = "FACTION_REASON_GAME_RULE_REALM_STABILITY_LESSER"
-		add = 30 # THE MOD
+		add = 20 # THE MOD
 		has_game_rule = lesser_realm_stability
 	}
 	modifier = {

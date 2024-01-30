@@ -227,7 +227,7 @@ head_of_faith_gold_value = {
 	value = monthly_character_income
 	multiply = massive_income_multiplier_value
 	min = massive_gold_min_value
-	max = monumental_gold_max_value
+	max = 600 # THE MOD
 }
 
 minor_treasury_value = {

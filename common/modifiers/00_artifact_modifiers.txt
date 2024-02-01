@@ -25,18 +25,18 @@ artifact_knight_limit_2_modifier = { knight_limit = 1 } # THE MOD
 #artifact_knight_limit_3_modifier = { knight_limit = 3 }
 #artifact_knight_limit_4_modifier = { knight_limit = 4 }
 
-artifact_knight_effectiveness_1_modifier = { knight_effectiveness_mult = 0.02 }
-artifact_knight_effectiveness_2_modifier = { knight_effectiveness_mult = 0.03 }
-artifact_knight_effectiveness_3_modifier = { knight_effectiveness_mult = 0.04 }
-artifact_knight_effectiveness_4_modifier = { knight_effectiveness_mult = 0.05 }
-artifact_knight_effectiveness_5_modifier = { knight_effectiveness_mult = 0.06 }
-artifact_knight_effectiveness_6_modifier = { knight_effectiveness_mult = 0.07 }
-artifact_knight_effectiveness_7_modifier = { knight_effectiveness_mult = 0.08 }
-artifact_knight_effectiveness_8_modifier = { knight_effectiveness_mult = 0.09 }
-artifact_knight_effectiveness_9_modifier = { knight_effectiveness_mult = 0.10 }
-artifact_knight_effectiveness_10_modifier = { knight_effectiveness_mult = 0.12 }
-artifact_knight_effectiveness_11_modifier = { knight_effectiveness_mult = 0.14 }
-artifact_knight_effectiveness_12_modifier = { knight_effectiveness_mult = 0.16 }
+artifact_knight_effectiveness_1_modifier = { knight_effectiveness_mult = 0.01 } # THE MOD
+artifact_knight_effectiveness_2_modifier = { knight_effectiveness_mult = 0.015 } # THE MOD
+artifact_knight_effectiveness_3_modifier = { knight_effectiveness_mult = 0.02 } # THE MOD
+artifact_knight_effectiveness_4_modifier = { knight_effectiveness_mult = 0.025 } # THE MOD
+artifact_knight_effectiveness_5_modifier = { knight_effectiveness_mult = 0.03 } # THE MOD
+artifact_knight_effectiveness_6_modifier = { knight_effectiveness_mult = 0.035 } # THE MOD
+artifact_knight_effectiveness_7_modifier = { knight_effectiveness_mult = 0.04 } # THE MOD
+artifact_knight_effectiveness_8_modifier = { knight_effectiveness_mult = 0.045 } # THE MOD
+artifact_knight_effectiveness_9_modifier = { knight_effectiveness_mult = 0.05 } # THE MOD
+artifact_knight_effectiveness_10_modifier = { knight_effectiveness_mult = 0.06 } # THE MOD
+artifact_knight_effectiveness_11_modifier = { knight_effectiveness_mult = 0.07 } # THE MOD
+artifact_knight_effectiveness_12_modifier = { knight_effectiveness_mult = 0.08 } # THE MOD
 
 artifact_tolerance_advantage_mod_1_modifier = { tolerance_advantage_mod = 2 }
 artifact_tolerance_advantage_mod_2_modifier = { tolerance_advantage_mod = 4 }

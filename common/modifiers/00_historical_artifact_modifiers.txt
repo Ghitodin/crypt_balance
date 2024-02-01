@@ -93,7 +93,7 @@ spear_prophet_modifier = {
 	monthly_piety_gain_per_knight_mult = 0.03
 	levy_reinforcement_rate_same_faith = 0.5
 	clan_government_opinion_same_faith = 3 # THE MOD
-	knight_effectiveness_mult = 0.2
+	knight_effectiveness_mult = 0.1 # THE MOD
 }
 
 mantle_prophet_modifier = {
@@ -279,7 +279,7 @@ shankha_conch_modifier = {
 skull_cap_charlemagne_modifier = {
 	court_grandeur_baseline_add = 4
 	powerful_vassal_opinion = 4 # THE MOD
-	knight_effectiveness_mult = 0.1
+	knight_effectiveness_mult = 0.05 # THE MOD
 	men_at_arms_maintenance = -0.05
 }
 
@@ -321,7 +321,7 @@ durendal_modifier = {
 	court_grandeur_baseline_add = 3
 	monthly_prestige = 0.4 # THE MOD
 	monthly_dynasty_prestige_mult = 0.05
-	knight_effectiveness_mult = 0.1
+	knight_effectiveness_mult = 0.05 # THE MOD
 	attraction_opinion = 5 # THE MOD
 	defender_advantage = 3
 }
@@ -377,7 +377,7 @@ curtana_modifier = {
 	monthly_prestige = 0.5
 	monthly_dynasty_prestige_mult = 0.05
 	seduce_scheme_power_mult = 0.5
-	knight_effectiveness_mult = 0.1
+	knight_effectiveness_mult = 0.05 # THE MOD
 }
 
 colada_modifier = {
@@ -433,7 +433,7 @@ excalibur_modifier = {
 	court_grandeur_baseline_add = 1
 	monthly_prestige = 0.1
 	monthly_dynasty_prestige = 0.03
-	knight_effectiveness_mult = 0.02
+	knight_effectiveness_mult = 0.01 # THE MOD
 }
 
 edmund_head_modifier = {
@@ -561,7 +561,7 @@ aruval_modifier = {
 	monthly_dynasty_prestige = 0.1
 	monthly_piety = 0.5
 	knight_limit = 1
-	knight_effectiveness_mult = 0.15
+	knight_effectiveness_mult = 0.07 # THE MOD
 	monthly_piety_gain_per_knight_add = 0.01
 	jungle_levy_size = 0.1
 	jungle_advantage = 4

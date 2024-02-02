@@ -193,8 +193,8 @@ military_academy_01 = {
 	cost_gold = expensive_building_tier_3_cost
 	
 	character_modifier = {
-		knight_limit = 2
-		knight_effectiveness_mult = 0.20 # THE MOD
+		knight_limit = 1 # THE MOD
+		knight_effectiveness_mult = 0.10 # THE MOD
 		army_maintenance_mult = -0.025
 		men_at_arms_recruitment_cost = -0.1
 		#men_at_arms_limit = 1 # THE MOD
@@ -246,8 +246,8 @@ military_academy_02 = {
 	cost_gold = expensive_building_tier_4_cost
 	
 	character_modifier = {
-		knight_limit = 4
-		knight_effectiveness_mult = 0.4 # THE MOD
+		knight_limit = 2 # THE MOD
+		knight_effectiveness_mult = 0.15 # THE MOD
 		army_maintenance_mult = -0.035
 		men_at_arms_recruitment_cost = -0.2
 		#men_at_arms_limit = 2 # THE MOD
@@ -293,8 +293,8 @@ military_academy_03 = {
 	cost_gold = expensive_building_tier_5_cost
 	
 	character_modifier = {
-		knight_limit = 6
-		knight_effectiveness_mult = 0.6 # THE MOD
+		knight_limit = 3 # THE MOD
+		knight_effectiveness_mult = 0.2 # THE MOD
 		army_maintenance_mult = -0.05
 		men_at_arms_recruitment_cost = -0.3
 		#men_at_arms_limit = 3 # THE MOD

@@ -7574,15 +7574,15 @@ pilgrim = {
 	faith_modifier = {
 		parameter = basic_pilgrimage_rewards
 		monthly_piety_gain_mult = 0.05
-		zealot_opinion = 5
+		zealot_opinion = 3 # THE MOD
 	}
 	
 	faith_modifier = {
 		parameter = mandatory_pilgrimage
 		monthly_piety_gain_mult = 0.35 #offset the -0.25 and add 0.1
-		same_faith_opinion = 5
-		zealot_opinion = 5
-		clergy_opinion = 5
+		same_faith_opinion = 2 # THE MOD
+		zealot_opinion = 3 # THE MOD
+		clergy_opinion = 3 # THE MOD
 	}
 	
 	track = {
@@ -7595,15 +7595,15 @@ pilgrim = {
 			faith_modifier = {
 				parameter = basic_pilgrimage_rewards
 				monthly_piety_gain_mult = 0.1
-				zealot_opinion = 10
+				zealot_opinion = 5 # THE MOD
 				learning = 1
 			}
 			
 			faith_modifier = {
 				parameter = mandatory_pilgrimage
 				monthly_piety_gain_mult = 0.4 #offset the -0.25 and add 0.15
-				zealot_opinion = 20
-				clergy_opinion = 10
+				zealot_opinion = 5 # THE MOD
+				clergy_opinion = 5 # THE MOD
 			}
 
 			ai_zeal = 10
@@ -7617,7 +7617,7 @@ pilgrim = {
 			faith_modifier = {
 				parameter = basic_pilgrimage_rewards
 				monthly_piety_gain_mult = 0.1
-				zealot_opinion = 20
+				zealot_opinion = 7 # THE MOD
 				different_culture_opinion = 5
 				learning = 2
 			}
@@ -7625,8 +7625,8 @@ pilgrim = {
 			faith_modifier = {
 				parameter = mandatory_pilgrimage
 				monthly_piety_gain_mult = 0.4 #offset the -0.25 and add 0.15
-				zealot_opinion = 40
-				clergy_opinion = 10
+				zealot_opinion = 7 # THE MOD
+				clergy_opinion = 7 # THE MOD
 			}
 
 			ai_zeal = 15

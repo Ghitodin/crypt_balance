@@ -5,8 +5,8 @@ blood_legacy_1 = { # Noble Veins
 
 	character_modifier = {
 		name = blood_legacy_1_modifier
-		positive_random_genetic_chance = 0.30
-		positive_inactive_inheritance_chance = 0.30
+		positive_random_genetic_chance = 0.15 # THE MOD
+		positive_inactive_inheritance_chance = 0.15 # THE MOD
 	}
 	
 	ai_chance = {
@@ -24,7 +24,7 @@ blood_legacy_2 = { # Convergent Blood
 	legacy = blood_legacy_track
 
 	character_modifier = {
-		genetic_trait_strengthen_chance = 0.3
+		genetic_trait_strengthen_chance = 0.15 # THE MOD
 	}
 }
 
@@ -33,8 +33,8 @@ blood_legacy_3 = { # Resilient Bloodline
 
 	character_modifier = {
 		name = blood_legacy_3_modifier
-		negative_random_genetic_chance = -0.30
-		negative_inactive_inheritance_chance = -0.30
+		negative_random_genetic_chance = -0.15 # THE MOD
+		negative_inactive_inheritance_chance = -0.15 # THE MOD
 	}
 }
 

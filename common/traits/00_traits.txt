@@ -984,7 +984,7 @@ lifestyle_reveler = {
 	# Modifiers
 	courtly_opinion = 5
 	intrigue = 1
-	same_opinion = 15
+	same_opinion = 5 # THE MOD
 	culture_modifier = {
 		parameter = reveler_traits_more_valued
 		monthly_prestige = 0.25
@@ -1227,7 +1227,7 @@ lifestyle_blademaster = {
 lifestyle_hunter = {
 	icon = hunter.dds
 	category = lifestyle
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	ruler_designer_cost = 20
 	stress_loss_mult = 0.05
 	prowess = 1

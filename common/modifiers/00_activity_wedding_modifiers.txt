@@ -52,7 +52,7 @@ gwedding_gracious_host_modifier = {
 	icon = wedding_positive
 	monthly_prestige_gain_mult = 0.03
 	monthly_dynasty_prestige_mult = 0.03
-	courtly_opinion = 5
+	courtly_opinion = 3 # THE MOD
 }
 
 gwedding_magnificent_host_modifier = {
@@ -61,24 +61,24 @@ gwedding_magnificent_host_modifier = {
 	monthly_prestige_gain_mult = 0.05
 	monthly_stewardship_lifestyle_xp_gain_mult = 0.1
 	monthly_diplomacy_lifestyle_xp_gain_mult = 0.1
-	courtly_opinion = 8
+	courtly_opinion = 5 # THE MOD
 }
 
 gwedding_grand_wedding_modifier = {
 	icon = wedding_positive
-	courtly_opinion = 3
+	courtly_opinion = 2 # THE MOD
 	monthly_prestige_gain_mult = 0.01
 }
 
 gwedding_grandiose_wedding_modifier = {
 	icon = wedding_positive
-	courtly_opinion = 5
+	courtly_opinion = 3 # THE MOD
 	monthly_prestige_gain_mult = 0.02
 }
 
 gwedding_magnificent_wedding_modifier = {
 	icon = wedding_positive
-	courtly_opinion = 8
+	courtly_opinion = 5 # THE MOD
 	monthly_prestige_gain_mult = 0.03
 	monthly_dynasty_prestige_mult = 0.03
 }
@@ -185,7 +185,7 @@ wedding_consorts_envy_modifier = {
 
 wedding_peasants_connections_county_modifier = {
 	icon = county_modifier_opinion_positive
-	county_opinion_add = 25
+	county_opinion_add = 5 # THE MOD
 	development_growth_factor = 0.2
 }
 
@@ -240,21 +240,21 @@ ep2_wedding_ewan_0041_attraction_modifier = {
 
 ep2_wedding_ewan_0051_snooty_modifier = {
 	icon = bird_positive
-	courtly_opinion = 25
+	courtly_opinion = 15 # THE MOD
 	parochial_opinion = -10
 }
 
 ep2_wedding_ewan_0051_approachable_modifier = {
 	icon = dog_positive
-	parochial_opinion = 25
-	minority_opinion = 10
-	barons_and_minor_landholders_opinion = 10
+	parochial_opinion = 15 # THE MOD
+	minority_opinion = 5 # THE MOD
+	barons_and_minor_landholders_opinion = 5 # THE MOD
 	courtly_opinion = -10
 }
 
 ruler_married_here_county_modifier = {
 	icon = county_modifier_opinion_positive
-	county_opinion_add = 20
+	county_opinion_add = 5 # THE MOD
 	development_growth_factor = medium_development_growth_gain
 	development_growth = 0.1
 }
@@ -273,6 +273,6 @@ wedding_severe_host_modifier = {
 
 wedding_social_drinker_modifier = {
 	icon = social_positive
-	courtly_opinion = 5
+	courtly_opinion = 3 # THE MOD
 	monthly_income_mult = -0.01
 }

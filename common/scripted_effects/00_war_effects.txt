@@ -1776,7 +1776,7 @@ pay_short_term_gold_reparations_effect = {
 						has_cultural_parameter = more_gold_for_successful_defensive_wars
 					}
 				}
-				multiply = 2
+				multiply = 1.2 # THE MOD
 			}
 		}
 		target = scope:defender

@@ -10,6 +10,10 @@ culture_era_early_medieval = {
 	culture_modifier = {
 		culture_tradition_max_add = 1
 	}
+	
+	character_modifier = {
+		levy_reinforcement_rate = -0.15 # THE MOD
+	}
 
 	custom = more_expensive_court_positions
 	custom = increased_activity_cost
@@ -63,6 +67,7 @@ culture_era_high_medieval = {
 	
 	character_modifier = {
 		mercenary_hire_cost_mult = 0.15
+		levy_reinforcement_rate = -0.25 # THE MOD
 	}
 
 	custom = more_expensive_court_positions
@@ -139,6 +144,7 @@ culture_era_late_medieval = {
 
 	character_modifier = {
 		mercenary_hire_cost_mult = 0.15
+		levy_reinforcement_rate = -0.3 # THE MOD
 	}
 
 	custom = more_expensive_court_positions

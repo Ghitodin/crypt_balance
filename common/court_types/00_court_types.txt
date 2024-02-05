@@ -164,7 +164,7 @@ court_warlike = {
 	level_perk = {
 		court_grandeur = 10
 		owner_modifier = {
-			supply_capacity_mult = 2 # THE MOD
+			martial_per_prestige_level = 1 # THE MOD
 		}
 	}
 

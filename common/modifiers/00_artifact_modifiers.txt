@@ -342,20 +342,20 @@ artifact_zealot_tax_contribution_mult_4_modifier = { zealot_tax_contribution_mul
 #artifact_courtly_levy_contribution_mult_3_modifier = { courtly_levy_contribution_mult = 0.03 }
 #artifact_courtly_levy_contribution_mult_4_modifier = { courtly_levy_contribution_mult = 0.04 }
 
-artifact_glory_hound_levy_contribution_mult_1_modifier = { glory_hound_levy_contribution_mult = 0.01 }
-artifact_glory_hound_levy_contribution_mult_2_modifier = { glory_hound_levy_contribution_mult = 0.02 }
-artifact_glory_hound_levy_contribution_mult_3_modifier = { glory_hound_levy_contribution_mult = 0.03 }
-artifact_glory_hound_levy_contribution_mult_4_modifier = { glory_hound_levy_contribution_mult = 0.04 }
+artifact_glory_hound_levy_contribution_mult_1_modifier = { glory_hound_levy_contribution_mult = 0.01 } # THE MOD
+artifact_glory_hound_levy_contribution_mult_2_modifier = { glory_hound_levy_contribution_mult = 0.01 } # THE MOD
+artifact_glory_hound_levy_contribution_mult_3_modifier = { glory_hound_levy_contribution_mult = 0.02 } # THE MOD
+artifact_glory_hound_levy_contribution_mult_4_modifier = { glory_hound_levy_contribution_mult = 0.02 } # THE MOD
 
 #artifact_parochial_levy_contribution_mult_1_modifier = { parochial_levy_contribution_mult = 0.01 }
 #artifact_parochial_levy_contribution_mult_2_modifier = { parochial_levy_contribution_mult = 0.02 }
 #artifact_parochial_levy_contribution_mult_3_modifier = { parochial_levy_contribution_mult = 0.03 }
 #artifact_parochial_levy_contribution_mult_4_modifier = { parochial_levy_contribution_mult = 0.04 }
 
-artifact_zealot_levy_contribution_mult_1_modifier = { zealot_levy_contribution_mult = 0.01 }
-artifact_zealot_levy_contribution_mult_2_modifier = { zealot_levy_contribution_mult = 0.02 }
-artifact_zealot_levy_contribution_mult_3_modifier = { zealot_levy_contribution_mult = 0.03 }
-artifact_zealot_levy_contribution_mult_4_modifier = { zealot_levy_contribution_mult = 0.04 }
+artifact_zealot_levy_contribution_mult_1_modifier = { zealot_levy_contribution_mult = 0.01 } # THE MOD
+artifact_zealot_levy_contribution_mult_2_modifier = { zealot_levy_contribution_mult = 0.01 } # THE MOD
+artifact_zealot_levy_contribution_mult_3_modifier = { zealot_levy_contribution_mult = 0.02 } # THE MOD 
+artifact_zealot_levy_contribution_mult_4_modifier = { zealot_levy_contribution_mult = 0.02 } # THE MOD
 
 # Rulership-related Modifiers
 artifact_vassal_limit_1_modifier = { vassal_limit = 1 } # THE MOD

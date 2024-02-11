@@ -66,7 +66,7 @@ feudal_government_levies = {
 		feudal_levies_exempt = {
 			position = { 0 0 }
 
-			levies = 0
+			levies = 0.17 # THE MOD
 			vassal_opinion = 10
 
 			ai_liege_desire = 1
@@ -77,7 +77,7 @@ feudal_government_levies = {
 			parent = feudal_levies_exempt
 			position = { 1 0 }
 
-			levies = 0.1
+			levies = 0.21 # THE MOD
 			vassal_opinion = 5
 
 			ai_liege_desire = 2
@@ -99,7 +99,7 @@ feudal_government_levies = {
 			parent = feudal_levies_normal
 			position = { 3 0 }
 			
-			levies = 0.35
+			levies = 0.3 # THE MOD
 			vassal_opinion = -15
 
 			ai_liege_desire = 4
@@ -110,7 +110,7 @@ feudal_government_levies = {
 			parent = feudal_levies_high
 			position = { 4 0 }
 			
-			levies = 0.5
+			levies = 0.35 # THE MOD
 			vassal_opinion = -25
 
 			ai_liege_desire = 5

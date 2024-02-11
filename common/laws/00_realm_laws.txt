@@ -102,7 +102,7 @@ crown_authority = {
 			vassal_levy_contribution_mult = 0.1
 		}
 		flag = uses_crown_authority
-		flag = vassal_internal_wars_banned
+		#flag = vassal_internal_wars_banned # THE MOD
 		flag = vassal_refusal_is_treason
 		flag = can_change_succession_laws
 		flag = titles_cannot_leave_realm_on_succession # Hardcoded flag

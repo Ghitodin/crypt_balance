@@ -35,6 +35,7 @@ ai_extreme_difficulty = {
 	men_at_arms_limit = 1	
 	levy_size = 0.1
 	monthly_income_mult = 0.2
+	monthly_income = 3
 	direct_vassal_opinion = 8
 	same_faith_opinion = 5
 	same_culture_opinion = 5

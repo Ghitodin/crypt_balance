@@ -157,7 +157,7 @@ ghazi_special_rights_tax_collector = {
 		}
 	}
 
-	levies_factor = -0.2
+	levies_factor = -0.1 # THE MOD
 
 	liege_modifier = {
 		monthly_piety_gain_mult = 0.02

@@ -136,7 +136,7 @@
 	}
 
 	ai_will_do = {
-		base = 3
+		base = 7 # THE MOD
 		
 		modifier = { # If your liege is the same culture as your capital, better get on with it! This should combat scattered wrong-culture Counts and such.
 			add = 77

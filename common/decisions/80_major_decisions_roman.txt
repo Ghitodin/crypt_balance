@@ -508,7 +508,8 @@ set_capital_constantinople_decision = {
 			resolve_title_and_vassal_change = scope:change
 
 		}
-		set_realm_capital = title:c_byzantion
+
+		#set_realm_capital = title:c_byzantion # THE MOD 
 		if = {
 			limit = {
 				exists = scope:target_for_denunciation
@@ -587,7 +588,7 @@ set_capital_rome_decision = {
 			resolve_title_and_vassal_change = scope:change
 
 		}
-		set_realm_capital = title:c_roma
+		#set_realm_capital = title:c_roma # THE MOD
 	}
 	
 	ai_potential = {

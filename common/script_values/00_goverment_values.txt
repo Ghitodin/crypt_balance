@@ -17,7 +17,7 @@ clan_government_tax_collector_aptitude_multiplier = {
 					VALUE = 5
 				}
 			}
-			add = 2 # THE MOD
+			add = 1.8 # THE MOD
 		}
 		else_if = {
 			limit = {
@@ -26,7 +26,7 @@ clan_government_tax_collector_aptitude_multiplier = {
 					VALUE = 4
 				}
 			}
-			add = 1.7 # THE MOD
+			add = 1.6 # THE MOD
 		}
 		else_if = {
 			limit = {
@@ -35,7 +35,7 @@ clan_government_tax_collector_aptitude_multiplier = {
 					VALUE = 3
 				}
 			}
-			add = 1.6 # THE MOD
+			add = 1.45 # THE MOD
 		}
 		else_if = {
 			limit = {
@@ -44,7 +44,7 @@ clan_government_tax_collector_aptitude_multiplier = {
 					VALUE = 2
 				}
 			}
-			add = 1.4 # THE MOD
+			add = 1.35 # THE MOD
 		}
 		else_if = {
 			limit = {

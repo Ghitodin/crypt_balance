@@ -87,7 +87,7 @@ emperor_modifier = {
 	active_accolades = 1 # THE MOD
 	tax_slot_add = 2
 	mercenary_hire_cost_mult = 0.3 # THE MOD
-	vassal_opinion = -5 # THE MOD
+	vassal_opinion = -12 # THE MOD
 }
 
 # These modifiers are applied to the holder of a title of the respective tier (per title)

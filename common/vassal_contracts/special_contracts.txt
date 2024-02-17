@@ -145,7 +145,7 @@ special_contract = {
 				army_maintenance_mult = -0.1 # THE MOD
 				garrison_size = 0.1 # THE MOD
 				levy_reinforcement_rate = 0.1 # THE MOD
-				controlled_province_advantage = 5
+				controlled_province_advantage = 3 # THE MOD
 			}
 
 			flag = has_march_contract

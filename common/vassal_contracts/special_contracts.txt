@@ -141,10 +141,10 @@ special_contract = {
 			tax_factor = march_contract_taxes
 
 			vassal_modifier = {
-				levy_size = 0.2
-				army_maintenance_mult = -0.2
-				garrison_size = 0.2
-				levy_reinforcement_rate = 0.2
+				levy_size = 0.1 # THE MOD
+				army_maintenance_mult = -0.1 # THE MOD
+				garrison_size = 0.1 # THE MOD
+				levy_reinforcement_rate = 0.1 # THE MOD
 				controlled_province_advantage = 5
 			}
 

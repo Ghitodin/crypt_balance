@@ -119,7 +119,7 @@ scutage_contract_levies_tooltip = {
 	multiply = 100
 	multiply = -1
 }
-march_contract_taxes = -0.5
+march_contract_taxes = 0 # THE MOD
 march_contract_taxes_tooltip = {
 	value = march_contract_taxes
 	multiply = 100

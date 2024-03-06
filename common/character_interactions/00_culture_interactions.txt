@@ -114,7 +114,7 @@ ai_cultural_hybridization_interaction = {
 	
 	ai_potential = {
 		has_dlc_feature = hybridize_culture
-		OR = {
+		AND = { # THE MOD
 			is_independent_ruler = yes
 			highest_held_title_tier >= tier_kingdom
 		}

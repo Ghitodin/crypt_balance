@@ -6,6 +6,7 @@
 
 	allowed_for_character = {
 		has_any_artifact_claim = yes
+		is_landed = no # THE MOD
 	}
 	allowed_against_character = {
 		scope:attacker = {

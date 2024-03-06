@@ -3753,7 +3753,7 @@ directed_great_holy_war = {
 					highest_held_title_tier >= tier_county
 					exists = scope:attacker.faith.great_holy_war
 					NOT = { scope:attacker.faith.great_holy_war = { has_pledged_defender = prev } }
-					NOT = { scope:defender = top_liege }
+					#NOT = { scope:defender = top_liege } # THE MOD
 				}
 				trigger_event = great_holy_war.0093 #AI counterpledging.
 			}

@@ -61,6 +61,7 @@ claim_throne_interaction = {
 			}
 		}
 		NOT = { scope:recipient = scope:actor }
+		
 	}
 
 	is_valid_showing_failures_only = {

@@ -137,14 +137,30 @@ grant_vassal_interaction = {
 	ai_accept = {
 		base = 10
 		modifier = {
-			AND = { 	
-				scope:secondary_actor.primary_title = {
-					any_this_title_or_de_jure_above = {
-						holder = scope:actor
+			OR = { 
+				# You can't grant your de jure vassals to liege.
+				AND = {  	
+					scope:secondary_actor.primary_title = {
+						any_this_title_or_de_jure_above = {
+							holder = scope:actor
+						}
+					}
+					scope:actor.liege = scope:recipient	
+				}
+				# Not at war with the vassal being transferred (blocks explicit transfer of war enemies, which invalidates the war).
+				scope:secondary_actor = {  
+					is_at_war_with = scope:actor
+				}
+				# Not at war with a vassal under the vassal being transferred (blocks implicit transfers of war enemies).
+				scope:secondary_actor = { 
+					any_vassal_or_below = {
+						is_at_war_with = scope:actor
 					}
 				}
-				scope:actor.liege = scope:recipient		
+				# You can't give your diarch away as a vassal.	
+				scope:secondary_actor = scope:actor.diarch		
 			}
+
 			add = -1000
 		}
 	}

@@ -135,7 +135,7 @@ martial_authority_focus = {
 	modifier = {
 		martial = 1
 		diplomacy = -1 # THE MOD
-		monthly_county_control_change_add = 0.3
+		monthly_county_control_growth_add = 0.3
 		dread_gain_mult = 0.2
 	}
 
@@ -174,7 +174,7 @@ martial_chivalry_focus = {
 	
 	modifier = {
 		diplomacy = -1 # THE MOD
-		advantage = 5
+		advantage = 3 # THE MOD
 		prowess = 3
 		attraction_opinion = 7 # THE MOD
 	}

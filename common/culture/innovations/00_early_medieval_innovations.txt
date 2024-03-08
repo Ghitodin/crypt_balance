@@ -242,7 +242,7 @@ innovation_reconquista = {
 
 	custom = cb_discount_piety_10
 	custom = more_zealot
-	character_modifier = {		
+	character_modifier = {
 		monthly_piety_gain_mult = 0.1
 	}
 
@@ -270,10 +270,6 @@ innovation_ghilman = {
 	culture_era = culture_era_early_medieval
 	region = world_middle_east_arabia
 	icon = @maa_02
-	
-	potential = {
-		NOT  = { has_fp3_dlc_trigger = yes }
-	}
 
 	character_modifier = {
 		men_at_arms_maintenance = -0.15

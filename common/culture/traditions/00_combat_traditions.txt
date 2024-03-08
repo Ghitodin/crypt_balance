@@ -1014,7 +1014,7 @@ tradition_strength_in_numbers = {
 		heavy_cavalry_max_size_add = -2
 		skirmishers_recruitment_cost_mult = -0.15
 		light_cavalry_recruitment_cost_mult = -0.15
-		camel_cavalry_recruitment_cost_mult = -0.15
+		camel_cavalry_recruitment_cost_mult = -0.15 # THE MOD
 		archers_recruitment_cost_mult = -0.15
 		knight_limit = -2
 	}
@@ -1275,7 +1275,7 @@ tradition_quarrelsome = {
 		disloyal_trait_more_common = yes
 	}
 	character_modifier = {
-		monthly_county_control_change_factor = -0.4
+		monthly_county_control_growth_factor = -0.4
 		
 		ai_honor = -20
 		ai_war_chance = 0.5

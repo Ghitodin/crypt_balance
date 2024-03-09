@@ -245,7 +245,7 @@
 
 		liege_debt_modifier = {
 			TARGET = scope:target
-			SCORE_PER_DEBT_LEVEL = 4 # Worth ~5 opinon per debt level, up to a max of 140 (-35 opinion)
+			SCORE_PER_DEBT_LEVEL = 4 # Worth ~5 opinon per debt level, up to a max of 140 (-35 opinion) # THE MOD
 		}
 
 		# Ruling Caste
@@ -372,7 +372,7 @@
 
 		liege_debt_modifier = {
 			TARGET = scope:faction.faction_target
-			SCORE_PER_DEBT_LEVEL = 4 # Worth ~1 opinon per debt level, up to a max of 28 (-7 opinion)
+			SCORE_PER_DEBT_LEVEL = 4 # Worth ~1 opinon per debt level, up to a max of 28 (-7 opinion) # THE MOD
 		}
 
 		# Ruling Caste
@@ -479,9 +479,8 @@
 			}
 			OR = {
 				NOT = {
-					is_rightful_liege_of_trigger = {
-						VASSAL = root
-						LIEGE = scope:faction.faction_target
+					scope:faction.faction_target = {
+						is_rightful_liege_of = root
 					}
 				}
 				any_sub_realm_county = {

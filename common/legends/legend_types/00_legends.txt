@@ -248,8 +248,8 @@
 					promoted_legend ?= { save_scope_as = promoted_legend } #For the ending event loc
 					scope:protagonist = { save_scope_as = legend_protagonist }
 					custom_tooltip = {
-						text = unlock_legendary_adventure_tt
-						add_character_flag = launch_a_legendary_adventure
+						#text = unlock_legendary_adventure_tt # THE MOD
+						#add_character_flag = launch_a_legendary_adventure # THE MOD
 					}
 					give_legendary_building_heroic_tooltip_effect = yes
 					legend_ending_rewards_heroic_effect = yes
@@ -368,8 +368,8 @@
 						add_character_flag = launch_a_legendary_adventure
 					}
 					custom_tooltip = {
-						text = unlock_legendary_fealty_tt
-						add_character_flag = legend_demand_fealty
+						#text = unlock_legendary_fealty_tt # THE MOD
+						#add_character_flag = legend_demand_fealty # THE MOD
 					}
 					give_legendary_building_mythical_heroic_tooltip_effect = yes
 					legend_ending_rewards_heroic_effect = yes
@@ -570,7 +570,7 @@ legitimizing = {
 						scope:title = { save_scope_as = title_claim }
 					}
 					give_legendary_building_legitimizing_tooltip_effect = yes
-					legend_ending_rewards_legitimizing_effect = yes
+					#legend_ending_rewards_legitimizing_effect = yes # THE MOD
 					legend_ending_rewards_famed_legitimizing_effect = yes
 					legend_ending_achievements_effect = yes
 					trigger_event = story_event_legends.0002
@@ -677,8 +677,8 @@ legitimizing = {
 					promoted_legend ?= { save_scope_as = promoted_legend } #For the ending event loc
 					scope:protagonist = { save_scope_as = legend_protagonist }
 					custom_tooltip = {
-						text = unlock_legendary_integration_d_tt
-						add_character_flag = legendary_integration_d
+						#text = unlock_legendary_integration_d_tt # THE MOD
+						#add_character_flag = legendary_integration_d # THE MOD
 					}
 					if = {
 						limit = {
@@ -694,7 +694,7 @@ legitimizing = {
 						scope:title = { save_scope_as = title_claim }
 					}
 					give_legendary_building_legitimizing_tooltip_effect = yes
-					legend_ending_rewards_legitimizing_effect = yes
+					#legend_ending_rewards_legitimizing_effect = yes # THE MOD
 					legend_ending_rewards_illustrious_legitimizing_effect = yes
 					legend_ending_achievements_effect = yes
 					trigger_event = story_event_legends.0002
@@ -809,8 +809,8 @@ legitimizing = {
 					promoted_legend ?= { save_scope_as = promoted_legend } #For the ending event loc
 					scope:protagonist = { save_scope_as = legend_protagonist }
 					custom_tooltip = {
-						text = unlock_legendary_integration_k_tt
-						add_character_flag = legendary_integration_k
+						#text = unlock_legendary_integration_k_tt # THE MOD
+						#add_character_flag = legendary_integration_k # THE MOD
 					}
 					if = {
 						limit = {
@@ -836,7 +836,7 @@ legitimizing = {
 						scope:culture = { save_scope_as = legendary_culture }
 					}
 					give_legendary_building_mythical_legitimizing_tooltip_effect = yes
-					legend_ending_rewards_legitimizing_effect = yes
+					#legend_ending_rewards_legitimizing_effect = yes # THE MOD
 					legend_ending_rewards_mythical_legitimizing_effect = yes
 					legend_ending_achievements_effect = yes
 					trigger_event = story_event_legends.0002

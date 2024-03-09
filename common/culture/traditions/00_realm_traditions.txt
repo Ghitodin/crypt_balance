@@ -1058,12 +1058,12 @@ tradition_roman_legacy = {
 	province_modifier = {
 	}
 	character_modifier = {
-		levy_size = -0.25
+		levy_size = -0.2 # THE MOD
 		men_at_arms_recruitment_cost = -0.15
 		men_at_arms_maintenance = -0.15
-		levy_reinforcement_rate = -0.25
-		heavy_infantry_max_size_add = 2
-		heavy_cavalry_max_size_add = 2
+		levy_reinforcement_rate = -0.20 # THE MOD
+		heavy_infantry_max_size_add = 1 # THE MOD
+		heavy_cavalry_max_size_add = 1 # THE MOD
 	}
 	
 	cost = {

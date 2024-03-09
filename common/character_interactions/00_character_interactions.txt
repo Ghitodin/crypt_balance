@@ -817,21 +817,21 @@ offer_vassalization_interaction = {
 		# LOW LEGITIMACY
 		modifier = {
 			desc = "LOW_LEGITIMACY_REASON"
-			add = -8 # THE MOD
+			add = -5 # THE MOD
 			scope:actor = {
 				has_legitimacy_flag = reduced_vassalization_acceptance
 			}
 		}
 		modifier = {
 			desc = "LOW_LEGITIMACY_REASON"
-			add = -15 # THE MOD
+			add = -8 # THE MOD
 			scope:actor = {
 				has_legitimacy_flag = very_reduced_vassalization_acceptance
 			}
 		}
 		modifier = {
 			desc = "LOW_LEGITIMACY_REASON"
-			add = -25 # THE MOD
+			add = -10 # THE MOD
 			scope:actor = {
 				has_legitimacy_flag = massively_reduced_vassalization_acceptance
 			}
@@ -840,21 +840,21 @@ offer_vassalization_interaction = {
 		# HIGH LEGITIMACY
 		modifier = {
 			desc = "HIGH_LEGITIMACY_REASON"
-			add = 8 # THE MOD
+			add = 2 # THE MOD
 			scope:actor = {
 				has_legitimacy_flag = increased_vassalization_acceptance
 			}
 		}
 		modifier = {
 			desc = "HIGH_LEGITIMACY_REASON"
-			add = 15 # THE MOD
+			add = 3 # THE MOD
 			scope:actor = {
 				has_legitimacy_flag = very_increased_vassalization_acceptance
 			}
 		}
 		modifier = {
 			desc = "HIGH_LEGITIMACY_REASON"
-			add = 25 # THE MOD
+			add = 5 # THE MOD
 			scope:actor = {
 				has_legitimacy_flag = extra_increased_vassalization_acceptance
 			}

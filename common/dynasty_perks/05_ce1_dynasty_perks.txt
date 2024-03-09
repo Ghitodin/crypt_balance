@@ -5,6 +5,7 @@ ce1_heroic_legacy_1 = { # Heroes of Old
 
 	can_be_picked = {
 		has_dlc_feature = legends_of_the_dead
+		NOT = { has_dlc_feature = legends_of_the_dead } # THE MOD
 	}
 
 	effect = {
@@ -111,6 +112,7 @@ ce1_legitimacy_legacy_1 = { # Sons of our Fathers
 
 	can_be_picked = {
 		has_dlc_feature = legends_of_the_dead
+		NOT = { has_dlc_feature = legends_of_the_dead } # THE MOD
 	}
 
 	character_modifier = {

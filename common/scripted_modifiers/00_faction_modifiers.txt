@@ -2078,15 +2078,15 @@ claimant_faction_modifiers = {
 			value = 0
 			if = {
 				limit = { $FACTION_TARGET$ = { has_legitimacy_flag = increased_factions } }
-				add = 10
+				add = 3 # THE MOD
 			}
 			else_if = {
 				limit = { $FACTION_TARGET$ = { has_legitimacy_flag = very_increased_factions } }
-				add = 20
+				add = 7 # THE MOD
 			}
 			else_if = {
 				limit = { $FACTION_TARGET$ = { has_legitimacy_flag = massively_increased_factions } }
-				add = 30
+				add = 10 # THE MOD
 			}
 		}
 	}
@@ -2105,15 +2105,15 @@ claimant_faction_modifiers = {
 			value = 0
 			if = {
 				limit = { $FACTION_TARGET$ = { has_legitimacy_flag = reduced_factions } }
-				add = -10
+				add = -3 # THE MOD
 			}
 			else_if = {
 				limit = { $FACTION_TARGET$ = { has_legitimacy_flag = very_reduced_factions } }
-				add = -20
+				add = -7 # THE MOD
 			}
 			else_if = {
 				limit = { $FACTION_TARGET$ = { has_legitimacy_flag = extra_reduced_factions } }
-				add = -30
+				add = -10 # THE MOD
 			}
 		}
 	}

@@ -196,15 +196,15 @@
 					scope:attacker = {
 						if = {
 							limit = { has_legitimacy_flag = reduced_claim_cb_cost }
-							add = 0.5 
+							add = 0.75 # THE MOD 
 						}
 						else_if = {
 							limit = { has_legitimacy_flag = very_reduced_claim_cb_cost }
-							add = 0.25 
+							add = 0.5 # THE MOD 
 						}
 						else_if = {
 							limit = { has_legitimacy_flag = extra_reduced_claim_cb_cost }
-							add = 0.15 
+							add = 0.3 # THE MOD 
 						}
 						else = {
 							add = 1
@@ -219,15 +219,15 @@
 					scope:attacker = {
 						if = {
 							limit = { has_legitimacy_flag = massively_increased_claim_cb_cost }
-							add = 2.5
+							add = 1.75 # THE MOD
 						}
 						else_if = {
 							limit = { has_legitimacy_flag = very_increased_claim_cb_cost }
-							add = 2
+							add = 1.5 # THE MOD
 						}
 						else_if = {
 							limit = { has_legitimacy_flag = increased_claim_cb_cost }
-							add = 1.5
+							add = 1.25 # THE MOD
 						}
 						else = {
 							add = 1

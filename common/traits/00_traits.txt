@@ -5688,9 +5688,9 @@ consumption = { # Tuberculosis
 	stewardship = -1
 	intrigue = -2
 	prowess = -2
-	health = -2.5
-	child_health = -1
-	elderly_health = -2
+	health = -1.25 # THE MOD
+	child_health = -0.5 # THE MOD
+	elderly_health = -1 # THE MOD
 	category = health
 
 	dread_baseline_add = -10
@@ -5755,8 +5755,8 @@ typhus = {
 	intrigue = -1
 	learning = -2
 	prowess = -4
-	health = -4.5
-	elderly_health = -1
+	health = -2.25 # THE MOD
+	elderly_health = -0.5 # THE MOD
 	fertility = -0.2
 
 	category = health
@@ -5794,8 +5794,8 @@ bubonic_plague = {
 	intrigue = -3
 	learning = -2
 	prowess = -10
-	health = -7
-	elderly_health = -2
+	health = -3.5 # THE MOD
+	elderly_health = -1 # THE MOD
 	fertility = -0.50
 
 	category = health
@@ -5831,8 +5831,8 @@ smallpox = {
 	stewardship = -1
 	learning = -2
 	prowess = -10
-	health = -4.5
-	elderly_health = -1.5
+	health = -2.25 # THE MOD
+	elderly_health = -0.75 # THE MOD
 	fertility = -0.25
 
 	category = health
@@ -5869,8 +5869,8 @@ measles = {
 	intrigue = -1
 	learning = -2
 	prowess = -4
-	health = -3
-	child_health = -3
+	health = -1.5 # THE MOD
+	child_health = -1.5 # THE MOD
 
 	category = health
 	
@@ -5904,8 +5904,8 @@ dysentery = { # Bloody Flux
 	martial = -1
 	intrigue = -2
 	prowess = -8
-	health = -3.5
-	elderly_health = -2
+	health = -1.75 # THE MOD
+	elderly_health = -1 # THE MOD
 
 	category = health
 	
@@ -5939,7 +5939,7 @@ ergotism = { # Holy Fire
 	stewardship = -1
 	intrigue = -2
 	learning = -2
-	health = -3.5
+	health = -1.75 # THE MOD
 
 	category = health
 	

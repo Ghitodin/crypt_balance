@@ -3387,6 +3387,7 @@ remove_guardian_interaction = {
 		if = {
 			limit = {
 				scope:actor = {
+					has_character_flag = guardian_unity_block # THE MOD
 					NOT = {
 						has_character_flag = guardian_unity_block
 					}

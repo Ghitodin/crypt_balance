@@ -2145,6 +2145,16 @@ revoke_title_interaction_effect = {
 			add_piety_level = -2
 		}
 	}
+	# THE MOD START
+	if = {
+		limit = {
+			scope:landed_title.tier = tier_barony
+		}
+		scope:actor = {
+			add_prestige = -400
+		}
+	}
+	# THE MOD END
 	if = {
 		limit = {
 			scope:landed_title.tier != tier_barony

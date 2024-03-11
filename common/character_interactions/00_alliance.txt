@@ -1892,15 +1892,15 @@ negotiate_alliance_interaction = {
 				value = 0
 				if = {
 					limit = { scope:actor = { has_legitimacy_flag = reduced_alliance_acceptance } }
-					add = -8 # THE MOD
+					add = -2 # THE MOD
 				}
 				if = {
 					limit = { scope:actor = { has_legitimacy_flag = very_reduced_alliance_acceptance } }
-					add = -15 # THE MOD
+					add = -5 # THE MOD
 				}
 				if = {
 					limit = { scope:actor = { has_legitimacy_flag = massively_reduced_alliance_acceptance } }
-					add = -30 # THE MOD
+					add = -10 # THE MOD
 				}
 			}
 		}
@@ -1919,15 +1919,15 @@ negotiate_alliance_interaction = {
 				value = 0
 				if = {
 					limit = { scope:actor = { has_legitimacy_flag = increased_alliance_acceptance } }
-					add = 8 # THE MOD
+					add = 2 # THE MOD
 				}
 				if = {
 					limit = { scope:actor = { has_legitimacy_flag = very_increased_alliance_acceptance } }
-					add = 15 # THE MOD
+					add = 5 # THE MOD
 				}
 				if = {
 					limit = { scope:actor = { has_legitimacy_flag = extra_increased_alliance_acceptance } }
-					add = 30 # THE MOD
+					add = 10 # THE MOD
 				}
 			}
 		}

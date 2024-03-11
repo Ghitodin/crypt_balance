@@ -894,7 +894,7 @@ default_ai_legitimacy_expectation = {
 	max = 4
 }
 
-default_legitimacy_opinion_penalty = -10
+default_legitimacy_opinion_penalty = -1 # THE MOD
 
 ### EFFECTS
 

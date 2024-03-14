@@ -33,7 +33,7 @@ martial_modifier_with_offset = {
 	army_maintenance_mult = -0.01
 	#counter_efficiency = -0.02
 	army_toughness_mult = 0.01
-	levy_size = 0.015 # THE MOD     		
+	levy_size = 0.01 # THE MOD     		
 }
 
 learning_modifier = {

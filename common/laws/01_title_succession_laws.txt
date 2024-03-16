@@ -24,7 +24,7 @@
 			election_type = feudal_elective
 		}
 		flag = elective_succession_law
-		title_allegiance_opinion = 10
+		#title_allegiance_opinion = 10 # THE MOD
 		revoke_cost = {
 			prestige = 10000 # THE MOD
 		}

@@ -1123,10 +1123,7 @@ offer_fealty_interaction = {
 			desc = offer_vassalization_interaction_aibehavior_not_rightfulliegetitleholder_tt
 			trigger = {
 				NOT = {
-					is_rightful_liege_of_trigger = {
-						LIEGE = scope:recipient
-						VASSAL = scope:actor
-					}
+					scope:recipient = { is_rightful_liege_of = scope:actor }
 				}
 			}
 			add = -250

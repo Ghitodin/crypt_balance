@@ -387,7 +387,7 @@ glory_legacy_1 = { # Desirable Match
 	
 	character_modifier = {
 		ai_amenity_target_baseline = 0.2
-		glory_hound_opinion = 5
+		glory_hound_opinion = 3 # THE MOD
 	}
 
 	effect = {
@@ -414,7 +414,7 @@ glory_legacy_2 = { # Renowned Name
 		name = glory_legacy_2_name
 		active_accolades = 1
 		monthly_prestige_gain_mult = 0.1
-		mercenary_hire_cost_mult = -0.1
+		#mercenary_hire_cost_mult = -0.1 # THE MOD
 		knight_limit = 1
 		monthly_court_grandeur_change_mult = 1
 	}

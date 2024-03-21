@@ -2004,15 +2004,15 @@
 			value = 0
 			if = {
 				limit = { scope:actor = { has_legitimacy_flag = reduced_marriage_acceptance } }
-				add = -2 # THE MOD
+				add = -15 # THE MOD
 			}
 			else_if = {
 				limit = { scope:actor = { has_legitimacy_flag = very_reduced_marriage_acceptance } }
-				add = -5 # THE MOD
+				add = -30 # THE MOD
 			}
 			else_if = {
 				limit = { scope:actor = { has_legitimacy_flag = massively_reduced_marriage_acceptance } }
-				add = -10 # THE MOD
+				add = -35 # THE MOD
 			}
 		}
 	}
@@ -2031,15 +2031,15 @@
 			value = 0
 			if = {
 				limit = { scope:actor = { has_legitimacy_flag = increased_marriage_acceptance } }
-				add = 2 # THE MOD
+				add = 10 # THE MOD
 			}
 			else_if = {
 				limit = { scope:actor = { has_legitimacy_flag = very_increased_marriage_acceptance } }
-				add = 5 # THE MOD
+				add = 20 # THE MOD
 			}
 			else_if = {
 				limit = { scope:actor = { has_legitimacy_flag = extra_increased_marriage_acceptance } }
-				add = 10 # THE MOD
+				add = 30 # THE MOD
 			}
 		}
 	}

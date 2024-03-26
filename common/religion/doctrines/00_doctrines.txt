@@ -806,7 +806,7 @@ doctrine_pluralism = {
 			pluralism_pluralistic_proselytization_penalty = yes
 			pluralism_pluralistic_faction_join_chance = yes
 			pluralism_pluralistic_resistant_to_heresy = yes
-			pluralism_pluralistic_holy_wars_preserve_vassals = yes
+			#pluralism_pluralistic_holy_wars_preserve_vassals = yes # THE MOD
 			
 		}
 	}

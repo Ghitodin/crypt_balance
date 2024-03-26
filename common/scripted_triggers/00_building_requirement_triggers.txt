@@ -251,7 +251,12 @@ building_hill_farms_requirement_terrain = {
 }
 
 building_elephant_pens_requirement_terrain = {
-	terrain = jungle
+	OR = { # THE MOD 
+		terrain = desert # THE MOD
+		terrain = drylands # THE MOD
+		terrain = oasis # THE MOD
+		terrain = jungle
+	} # THE MOD
 	geographical_region = world_innovation_elephants
 }
 

@@ -81,7 +81,7 @@ organized_retreat_perk = {
 	parent = bellum_justum_perk
 	
 	character_modifier = {
-		movement_speed = 0.7 # THE MOD
+		movement_speed = 0.07 # THE MOD
 		character_travel_speed_mult = 0.15 # THE MOD
 		heavy_infantry_screen_add = 3 # THE MOD
 		pikemen_screen_add = 3 # THE MOD

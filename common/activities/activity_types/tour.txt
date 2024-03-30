@@ -736,10 +736,13 @@
 			tour_type_taxation = {
 				is_valid = {
 					custom_tooltip = {
-						text = CB_TRIBAL_COST
-						NOT = {
-							government_has_flag = government_is_tribal
-						}
+						# text = CB_TRIBAL_COST # THE MOD We disable for everyone, not only tribal rulers
+						AND = { # THE MOD
+							NOT = {
+								government_has_flag = government_is_tribal
+							}
+							government_has_flag = government_is_tribal # THE MOD
+						} # THE MOD
 					}
 				}
 				ai_will_do = {

@@ -38,10 +38,10 @@ artifact_knight_effectiveness_10_modifier = { knight_effectiveness_mult = 0.06 }
 artifact_knight_effectiveness_11_modifier = { knight_effectiveness_mult = 0.07 } # THE MOD
 artifact_knight_effectiveness_12_modifier = { knight_effectiveness_mult = 0.08 } # THE MOD
 
-artifact_tolerance_advantage_mod_1_modifier = { tolerance_advantage_mod = 2 }
-artifact_tolerance_advantage_mod_2_modifier = { tolerance_advantage_mod = 4 }
-artifact_tolerance_advantage_mod_3_modifier = { tolerance_advantage_mod = 6 }
-artifact_tolerance_advantage_mod_4_modifier = { tolerance_advantage_mod = 8 }
+artifact_tolerance_advantage_mod_1_modifier = { tolerance_advantage_mod = 1 } # THE MOD
+artifact_tolerance_advantage_mod_2_modifier = { tolerance_advantage_mod = 2 } # THE MOD
+artifact_tolerance_advantage_mod_3_modifier = { tolerance_advantage_mod = 3 } # THE MOD
+artifact_tolerance_advantage_mod_4_modifier = { tolerance_advantage_mod = 4 } # THE MOD
 
 artifact_controlled_province_advantage_1_modifier = { controlled_province_advantage = 1 }
 artifact_controlled_province_advantage_2_modifier = { controlled_province_advantage = 2 }

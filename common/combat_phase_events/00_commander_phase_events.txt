@@ -4,12 +4,12 @@
 	chance = {
 		base = 1000
 		modifier = {
-			add = 1000
+			add = 200 # THE MOD
 			has_perk = stalwart_leader_perk
 			is_ai = no
 		}
 		modifier = {
-			add = 300
+			add = 500 # THE MOD
 			has_perk = stalwart_leader_perk
 			is_ai = yes
 		}
@@ -48,10 +48,10 @@ commander_wounded = {
 		base = 25
 		modifier = {
 			factor = { # Prowess directly reduces chance of injury/death
-				value = 40 # Value at which 'immortality' happens
+				value = 100 # THE MOD # Value at which 'immortality' happens
 				subtract = prowess
-				divide = 40
-				min = 0.1 # Everyone dies.
+				divide = 50 # THE MOD
+				min = 0.5 # THE MOD # Everyone dies.
 			}
 		}
 		modifier = { # Reduce chance when outnumbering the enemy
@@ -156,10 +156,10 @@ commander_maimed = {
 		base = 10
 		modifier = {
 			factor = { # Prowess directly reduces chance of injury/death
-				value = 30 # Value at which 'immortality' happens
+				value = 100 # THE MOD # Value at which 'immortality' happens
 				subtract = prowess
-				divide = 30
-				min = 0.1 # Everyone dies.
+				divide = 50 # THE MOD
+				min = 0.2 # THE MOD # Everyone dies.
 			}
 		}
 		modifier = { # Reduce chance when outnumbering the enemy
@@ -266,8 +266,8 @@ commander_killed = {
 			}
 			#...or they are absolutely terrible at battle to begin with!
 			AND = {
-				martial <= low_skill_rating
-				prowess <= low_skill_rating
+				martial <= 100 # THE MOD
+				prowess <= 100 # THE MOD
 			}
 		}
 		NOT = {
@@ -279,9 +279,9 @@ commander_killed = {
 		base = 5
 		modifier = {
 			factor = { # Prowess directly reduces chance of injury/death
-				value = 30 # Value at which 'immortality' happens
+				value = 80 # THE MOD # Value at which 'immortality' happens
 				subtract = prowess
-				divide = 30
+				divide = 40 # THE MOD
 				min = 0.1 # Everyone dies.
 			}
 		}
@@ -317,6 +317,20 @@ commander_killed = {
 			has_trait_rank = {
 				trait = wounded
 				rank = 3
+			}
+		}
+		modifier = { # THE MOD
+			factor = 3
+			has_trait_rank = {
+				trait = wounded
+				rank = 2
+			}
+		}
+		modifier = { # THE MOD
+			factor = 2
+			has_trait_rank = {
+				trait = wounded
+				rank = 1
 			}
 		}
 	}

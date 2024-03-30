@@ -33,7 +33,7 @@
 	
 	effect = {
 		custom_description_no_bullet = {
-			#text = stalwart_leader_perk_effect # THE MOD
+			text = stalwart_leader_perk_effect # THE MOD
 		}
 		custom_description_no_bullet = {
 			text = unlock_dueling_rivals_effect

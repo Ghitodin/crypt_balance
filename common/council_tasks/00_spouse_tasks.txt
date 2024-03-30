@@ -55,7 +55,7 @@ task_court_politics = {
 
 	council_owner_modifier = {
 		name = task_court_politics_modifier
-		diplomacy = 1
+		diplomacy = 0.8 # THE MOD
 		scale = spouse_task_court_politics_scale
 	}
 
@@ -111,7 +111,7 @@ task_chivalry = {
 
 	council_owner_modifier = {
 		name = task_chivalry_modifier
-		martial = 1
+		martial = 0.7 # THE MOD
 		scale = spouse_task_chivalry_scale
 	}
 
@@ -167,7 +167,7 @@ task_manage_domain = {
 
 	council_owner_modifier = {
 		name = task_manage_domain_modifier
-		stewardship = 1
+		stewardship = 0.8 # THE MOD
 		scale = spouse_task_manage_domain_scale
 	}
 
@@ -223,7 +223,7 @@ task_court_intrigue = {
 
 	council_owner_modifier = {
 		name = task_court_intrigue_modifier
-		intrigue = 1
+		intrigue = 0.8 # THE MOD
 		scale = spouse_task_court_intrigue_scale
 	}
 
@@ -279,7 +279,7 @@ task_patronage = {
 
 	council_owner_modifier = {
 		name = task_patronage_modifier
-		learning = 1
+		learning = 0.8 # THE MOD
 		scale = spouse_task_patronage_scale
 	}
 

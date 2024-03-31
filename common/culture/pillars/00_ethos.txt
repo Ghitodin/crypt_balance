@@ -3,7 +3,7 @@
 	character_modifier = {
 		prowess = 2
 		men_at_arms_recruitment_cost = -0.1
-		men_at_arms_maintenance = -0.1
+		#men_at_arms_maintenance = -0.1 # THE MOD
 		minority_different_culture_opinion = -10
 		
 		ai_war_chance = 0.5
@@ -13,7 +13,7 @@
 		levy_size = 0.1
 	}
 	culture_modifier = {
-		mercenary_count_mult = 0.5
+		mercenary_count_mult = 0.2 # THE MOD
 	}
 
 	ai_will_do = {

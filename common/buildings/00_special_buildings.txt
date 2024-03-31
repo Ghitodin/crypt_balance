@@ -252,7 +252,7 @@ holy_site_pagan_grand_temple_01 = {
 	character_modifier = {
 		monthly_piety = 0.25
 		monthly_dynasty_prestige_mult = 0.05
-		knight_effectiveness_mult = 0.15
+		#knight_effectiveness_mult = 0.15 # THE MOD
 		levy_reinforcement_rate = 0.1
 		monthly_county_control_growth_factor = 0.05
 	}
@@ -264,7 +264,7 @@ holy_site_pagan_grand_temple_01 = {
 		development_growth = 0.15
 	}
 	
-	levy = 500
+	#levy = 500 # THE MOD
 	province_modifier = {
 		monthly_income = 1
 	}

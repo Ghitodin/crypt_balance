@@ -266,8 +266,8 @@ commander_killed = {
 			}
 			#...or they are absolutely terrible at battle to begin with!
 			AND = {
-				martial <= 100 # THE MOD
-				prowess <= 100 # THE MOD
+				martial <= 12 # THE MOD
+				prowess <= 12 # THE MOD
 			}
 		}
 		NOT = {
@@ -279,7 +279,7 @@ commander_killed = {
 		base = 5
 		modifier = {
 			factor = { # Prowess directly reduces chance of injury/death
-				value = 80 # THE MOD # Value at which 'immortality' happens
+				value = 60 # THE MOD # Value at which 'immortality' happens
 				subtract = prowess
 				divide = 40 # THE MOD
 				min = 0.1 # Everyone dies.

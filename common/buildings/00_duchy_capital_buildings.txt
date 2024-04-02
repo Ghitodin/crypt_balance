@@ -40,13 +40,22 @@ burial_site_01 = {
 		court_grandeur_baseline_add = 2
 		owned_legend_spread_mult = 0.2
 		legitimacy_gain_mult = 0.1
+		learning = 1 # THE MOD
+		monthly_learning_lifestyle_xp_gain_mult = 0.07 # THE MOD
+		stress_gain_mult = -0.1 # THE MOD
+		clergy_opinion = 3 # THE MOD
 	}
 	duchy_capital_county_modifier = {
 		monthly_county_control_growth_factor = 0.1
 		county_opinion_add = 5
 		epidemic_resistance = 20
 	}
-
+	# THE MOD START
+	province_modifier = { 
+		monthly_income = good_building_tax_tier_3
+	} 
+	# THE MOD END
+	
 	next_building = burial_site_02
 
 	type_icon = "icon_building_graveyard.dds"
@@ -54,7 +63,7 @@ burial_site_01 = {
 	type = duchy_capital
 
 	ai_value = {
-		base = 20
+		base = 15 # THE MOD
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
@@ -93,19 +102,27 @@ burial_site_02 = {
 		court_grandeur_baseline_add = 4
 		owned_legend_spread_mult = 0.3
 		legitimacy_gain_mult = 0.15
+		learning = 2 # THE MOD
+		monthly_learning_lifestyle_xp_gain_mult = 0.09 # THE MOD
+		stress_gain_mult = -0.15 # THE MOD
+		clergy_opinion = 4 # THE MOD
 	}
 	duchy_capital_county_modifier = {
 		county_opinion_add = 10
 		monthly_county_control_growth_factor = 0.2
 		epidemic_resistance = 30
 	}
-
+	# THE MOD START
+	province_modifier = { 
+		monthly_income = good_building_tax_tier_4
+	} # THE MOD END
+	
 	next_building = burial_site_03
 
 	type = duchy_capital
 
 	ai_value = {
-		base = 20
+		base = 15 # THE MOD
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
@@ -140,19 +157,28 @@ burial_site_03 = {
 		court_grandeur_baseline_add = 6
 		owned_legend_spread_mult = 0.4
 		legitimacy_gain_mult = 0.2
+		learning = 3 # THE MOD
+		monthly_learning_lifestyle_xp_gain_mult = 0.12 # THE MOD
+		stress_gain_mult = -0.2 # THE MOD
+		clergy_opinion = 5 # THE MOD
 	}
 	duchy_capital_county_modifier = {
 		county_opinion_add = 10
 		monthly_county_control_growth_factor = 0.4
 		epidemic_resistance = 40
 	}
-
+	# THE MOD START
+	province_modifier = { 
+		monthly_income = good_building_tax_tier_5
+	} 
+	# THE MOD END
+	
 	type = duchy_capital
 
 	flag = fully_upgraded_duchy_capital_building
 
 	ai_value = {
-		base = 20
+		base = 15 # THE MOD
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this

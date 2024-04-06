@@ -126,55 +126,55 @@
 ###############
 
 # Base Damage Mult
-@low_damage_mult_base = 0.05
-@normal_damage_mult_base = 0.1
-@high_damage_mult_base = 0.20
-@very_high_damage_mult_base = 0.30
+@low_damage_mult_base = 0.03 # THE MOD
+@normal_damage_mult_base = 0.05 # THE MOD
+@high_damage_mult_base = 0.10  # THE MOD
+@very_high_damage_mult_base = 0.15  # THE MOD
 
 # Scaling Increase Damage Mult
-@low_damage_mult_addition_per_tier = 0.05
-@normal_damage_mult_addition_per_tier = 0.1
-@high_damage_mult_addition_per_tier = 0.20
-@very_high_damage_mult_addition_per_tier = 0.30
+@low_damage_mult_addition_per_tier = 0.03 # THE MOD
+@normal_damage_mult_addition_per_tier = 0.05 # THE MOD
+@high_damage_mult_addition_per_tier = 0.10 # THE MOD
+@very_high_damage_mult_addition_per_tier = 0.15 # THE MOD
 
 
 # Base Toughness Mult
-@low_toughness_mult_base = 0.05
-@normal_toughness_mult_base = 0.1
-@high_toughness_mult_base = 0.20
-@very_high_toughness_mult_base = 0.30
+@low_toughness_mult_base = 0.03 # THE MOD
+@normal_toughness_mult_base = 0.05 # THE MOD
+@high_toughness_mult_base = 0.10 # THE MOD
+@very_high_toughness_mult_base = 0.15 # THE MOD
 
 # Scaling Increase Toughness Mult
-@low_toughness_mult_addition_per_tier = 0.05
-@normal_toughness_mult_addition_per_tier = 0.1
-@high_toughness_mult_addition_per_tier = 0.20
-@very_high_toughness_mult_addition_per_tier = 0.30
+@low_toughness_mult_addition_per_tier = 0.03 # THE MOD
+@normal_toughness_mult_addition_per_tier = 0.05 # THE MOD
+@high_toughness_mult_addition_per_tier = 0.10 # THE MOD
+@very_high_toughness_mult_addition_per_tier = 0.15 # THE MOD
 
 
 # Base Screen Mult
-@low_screen_mult_base = 0.05
-@normal_screen_mult_base = 0.1
-@high_screen_mult_base = 0.20
-@very_high_screen_mult_base = 0.30
+@low_screen_mult_base = 0.03 # THE MOD
+@normal_screen_mult_base = 0.05 # THE MOD
+@high_screen_mult_base = 0.10 # THE MOD
+@very_high_screen_mult_base = 0.15 # THE MOD
 
 # Scaling Increase Toughness Mult
-@low_screen_mult_addition_per_tier = 0.05
-@normal_screen_mult_addition_per_tier = 0.1
-@high_screen_mult_addition_per_tier = 0.20
-@very_high_screen_mult_addition_per_tier = 0.30
+@low_screen_mult_addition_per_tier = 0.03 # THE MOD
+@normal_screen_mult_addition_per_tier = 0.05  # THE MOD
+@high_screen_mult_addition_per_tier = 0.10 # THE MOD
+@very_high_screen_mult_addition_per_tier = 0.15 # THE MOD
 
 
 # Base Pursuit Mult
-@low_pursuit_mult_base = 0.05
-@normal_pursuit_mult_base = 0.1
-@high_pursuit_mult_base = 0.20
-@very_high_pursuit_mult_base = 0.30
+@low_pursuit_mult_base = 0.03 # THE MOD
+@normal_pursuit_mult_base = 0.05 # THE MOD
+@high_pursuit_mult_base = 0.10 # THE MOD
+@very_high_pursuit_mult_base = 0.15 # THE MOD
 
 # Scaling Increase Pursuit Mult
-@low_pursuit_mult_addition_per_tier = 0.05
-@normal_pursuit_mult_addition_per_tier = 0.1
-@high_pursuit_mult_addition_per_tier = 0.20
-@very_high_pursuit_mult_addition_per_tier = 0.30
+@low_pursuit_mult_addition_per_tier = 0.03 # THE MOD
+@normal_pursuit_mult_addition_per_tier = 0.05 # THE MOD
+@high_pursuit_mult_addition_per_tier = 0.10 # THE MOD
+@very_high_pursuit_mult_addition_per_tier = 0.15 # THE MOD
 
 
 # Base Siege Value Mult 

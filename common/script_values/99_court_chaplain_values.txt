@@ -1069,7 +1069,7 @@ convert_faith_development_penalty = {
 		multiply = {
 			subtract = scope:county.development_level
 			divide = 100
-			min = -0.9
+			min = -0.6 # THE MOD
 		}
 	}
 }

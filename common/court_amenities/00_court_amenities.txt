@@ -15,7 +15,7 @@
 		}
 		owner_modifier = {
 			monthly_prestige_gain_mult = 0.01
-			court_grandeur_baseline_add = 3 # THE MOD
+			court_grandeur_baseline_add = 2 # THE MOD
 		}
 		courtier_guest_modifier = {
 			monthly_prestige = 0.2
@@ -61,7 +61,7 @@
 		}
 		owner_modifier = {
 			monthly_prestige_gain_mult = 0.02
-			court_grandeur_baseline_add = 5 # THE MOD
+			court_grandeur_baseline_add = 4 # THE MOD
 		}
 		courtier_guest_modifier = {
 			monthly_prestige = 0.4
@@ -108,7 +108,7 @@
 		}
 		owner_modifier = { 
 			monthly_prestige_gain_mult = 0.03
-			court_grandeur_baseline_add = 8 # THE MOD
+			court_grandeur_baseline_add = 6 # THE MOD
 		}
 		courtier_guest_modifier = {
 			monthly_prestige = 0.8
@@ -154,7 +154,7 @@
 		}
 		owner_modifier = {
 			monthly_prestige_gain_mult = 0.04
-			court_grandeur_baseline_add = 11 # THE MOD	
+			court_grandeur_baseline_add = 8 # THE MOD	
 		}
 		courtier_guest_modifier = {
 			monthly_prestige = 1.6
@@ -207,7 +207,7 @@ court_food_quality = {
 			gold = court_food_quality_modest_cost
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 3 # THE MOD
+			court_grandeur_baseline_add = 2 # THE MOD
 		}
 
 		courtier_guest_modifier = {
@@ -260,7 +260,7 @@ court_food_quality = {
 			}
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 5 # THE MOD
+			court_grandeur_baseline_add = 4 # THE MOD
 		}
 
 		owner_modifier_description = owner_court_food_quality_decent
@@ -315,7 +315,7 @@ court_food_quality = {
 			}
 		}
 		owner_modifier = { 
-			court_grandeur_baseline_add = 8 # THE MOD
+			court_grandeur_baseline_add = 6 # THE MOD
 		}
 
 		owner_modifier_description = owner_court_food_quality_lavish
@@ -370,7 +370,7 @@ court_food_quality = {
 			}
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 11 # THE MOD
+			court_grandeur_baseline_add = 8 # THE MOD
 			negate_health_penalty_add = 0.2
 		}
 
@@ -432,7 +432,7 @@ court_lodging_standards = {
 			gold = court_lodging_standards_small_cost 
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 3 # THE MOD
+			court_grandeur_baseline_add = 2 # THE MOD
 		}
 		owner_modifier_description = owner_court_lodgings_small
 
@@ -480,7 +480,7 @@ court_lodging_standards = {
 			}
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 5 # THE MOD
+			court_grandeur_baseline_add = 4 # THE MOD
 		}
 
 		owner_modifier_description = owner_court_lodgings_middling
@@ -530,7 +530,7 @@ court_lodging_standards = {
 			}
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 8 # THE MOD
+			court_grandeur_baseline_add = 6 # THE MOD
 		}
 
 		owner_modifier_description = owner_court_lodgings_spacious
@@ -579,7 +579,7 @@ court_lodging_standards = {
 			}
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 11 # THE MOD
+			court_grandeur_baseline_add = 8 # THE MOD
 		}
 
 		owner_modifier_description = owner_court_lodgings_grand
@@ -634,7 +634,7 @@ court_servants = {
 			gold = court_servants_few_cost 
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 3 # THE MOD
+			court_grandeur_baseline_add = 2 # THE MOD
 			hostile_scheme_resistance_add = 4
 			personal_scheme_power_add = 4
 		}
@@ -691,7 +691,7 @@ court_servants = {
 			}
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 5 # THE MOD
+			court_grandeur_baseline_add = 4 # THE MOD
 			hostile_scheme_resistance_add = 8
 			personal_scheme_power_add = 8
 		}
@@ -748,7 +748,7 @@ court_servants = {
 			}
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 8 # THE MOD
+			court_grandeur_baseline_add = 6 # THE MOD
 			hostile_scheme_resistance_add = 12
 			personal_scheme_power_add = 12
 		}
@@ -805,7 +805,7 @@ court_servants = {
 			}
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 11 # THE MOD
+			court_grandeur_baseline_add = 8 # THE MOD
 			hostile_scheme_resistance_add = 16
 			personal_scheme_power_add = 16
 		}

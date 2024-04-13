@@ -253,7 +253,7 @@ bribe_acceptance_value = {
 	multiply = 5
 }
 
-sway_opinion_increase_per_success = 25
+sway_opinion_increase_per_success = 15 # THE MOD
 sway_max_value = 100
 
 # Claim Throne values

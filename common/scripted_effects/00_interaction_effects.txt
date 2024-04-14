@@ -1618,7 +1618,7 @@ education_flags_tooltips_effect = {
 				}
 			}
 		}
-		scope:actor = { remove_short_term_gold = monumental_gold_value }
+		scope:actor = { remove_short_term_gold = medium_gold_value } # THE MOD
 		custom_tooltip = is_sent_to_university
 		add_character_flag = {
 			flag = studying_at_university

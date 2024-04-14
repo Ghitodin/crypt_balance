@@ -545,7 +545,7 @@ educate_child_interaction = {
 			}
 		}
 		is_valid = {
-			scope:actor.gold >= scope:actor.monumental_gold_value
+			scope:actor.gold >= scope:actor.medium_gold_value # THE MOD
 		}
 		flag = send_to_university
 		localization = EDUCATION_UNIVERSITY
@@ -1774,7 +1774,7 @@ offer_ward_interaction = {
 			}
 		}
 		is_valid = {
-			scope:actor.gold >= scope:actor.monumental_gold_value
+			scope:actor.gold >= scope:actor.medium_gold_value # THE MOD
 		}
 		starts_enabled = { always = yes	}
 		flag = send_to_university
@@ -2929,7 +2929,7 @@ offer_guardianship_interaction = {
 			}
 		}
 		is_valid = {
-			scope:actor.gold >= scope:actor.monumental_gold_value
+			scope:actor.gold >= scope:actor.medium_gold_value # THE MOD
 		}
 		starts_enabled = { always = yes	}
 		flag = send_to_university

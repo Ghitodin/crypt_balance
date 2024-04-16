@@ -12,18 +12,18 @@
 
 # Outbreak
 
-outbreak_chance_base_extra_low = 0.0005
-outbreak_chance_base_very_low = 0.001
-outbreak_chance_base_low = 0.01
-outbreak_chance_base_medium = 0.02
-outbreak_chance_base_high = 0.04
-outbreak_chance_base_very_high = 0.12
+outbreak_chance_base_extra_low = 0.0001 # THE MOD
+outbreak_chance_base_very_low = 0.0002 # THE MOD 
+outbreak_chance_base_low = 0.002 # THE MOD 
+outbreak_chance_base_medium = 0.004 # THE MOD
+outbreak_chance_base_high = 0.008 # THE MOD
+outbreak_chance_base_very_high = 0.024 # THE MOD
 
-outbreak_increase_add_low = 0.004
-outbreak_increase_add_medium = 0.008
-outbreak_increase_add_high = 0.016
-outbreak_increase_add_very_high = 0.032
-outbreak_increase_add_extra_high = 0.064
+outbreak_increase_add_low = 0.0008 # THE MOD
+outbreak_increase_add_medium = 0.0016 # THE MOD 
+outbreak_increase_add_high = 0.0032 # THE MOD
+outbreak_increase_add_very_high = 0.0064 # THE MOD
+outbreak_increase_add_extra_high = 0.0128 # THE MOD
 
 outbreak_decrease_add_low = -0.003
 outbreak_decrease_add_medium = -0.008
@@ -31,15 +31,15 @@ outbreak_decrease_add_high = -0.016
 outbreak_decrease_add_very_high = -0.032
 outbreak_decrease_add_unlikely = -0.064
 
-outbreak_increase_mult_low = 0.1
-outbreak_increase_mult_medium = 0.2
-outbreak_increase_mult_high = 0.4
-outbreak_increase_mult_very_high = 0.8
+outbreak_increase_mult_low = 0.02 # THE MOD
+outbreak_increase_mult_medium = 0.04 # THE MOD
+outbreak_increase_mult_high = 0.08 # THE MOD
+outbreak_increase_mult_very_high = 0.16 # THE MOD
 
-outbreak_decrease_mult_low = -0.2
-outbreak_decrease_mult_medium = -0.35
-outbreak_decrease_mult_high = -0.6
-outbreak_decrease_mult_very_high = -0.8
+outbreak_decrease_mult_low = -0.5 # THE MOD
+outbreak_decrease_mult_medium = -0.75 # THE MOD
+outbreak_decrease_mult_high = -0.85 # THE MOD
+outbreak_decrease_mult_very_high = -0.9 # THE MOD
 outbreak_decrease_mult_unlikely = -0.995
 
 # Spread

@@ -68,8 +68,8 @@ light_horsemen = {
 	
 	damage = 22
 	toughness = 15
-	pursuit = 30
-	screen = 30
+	pursuit = 50 # THE MOD
+	screen = 50 # THE MOD
 	
 	terrain_bonus = {
 		plains = { damage = 15 }
@@ -190,7 +190,7 @@ armored_horsemen = {
 	
 	damage = 100
 	toughness = 35
-	pursuit = 20
+	pursuit = 7 # THE MOD
 	screen = 0
 	
 	terrain_bonus = {

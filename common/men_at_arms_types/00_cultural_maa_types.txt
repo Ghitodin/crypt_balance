@@ -127,7 +127,7 @@ gendarme = {
 	
 	damage = 125
 	toughness = 40
-	pursuit = 20
+	pursuit = 7 # THE MOD
 	screen = 10
 	
 	terrain_bonus = {
@@ -163,8 +163,8 @@ chasseur = {
 	
 	damage = 40
 	toughness = 15
-	pursuit = 40
-	screen = 15
+	pursuit = 60 # THE MOD
+	screen = 35 # THE MOD
 	
 	terrain_bonus = {
 		plains = { damage = 10 }
@@ -249,8 +249,8 @@ caballero = {
 	
 	damage = 22
 	toughness = 16
-	pursuit = 20 # THE MOD
-	screen = 50
+	pursuit = 40 # THE MOD
+	screen = 70 # THE MOD
 	
 	terrain_bonus = {
 		hills = { damage = 15 toughness = 10 }
@@ -283,7 +283,7 @@ monaspa = {
 	
 	damage = 110
 	toughness = 30
-	pursuit = 25
+	pursuit = 8 # THE MOD
 	screen = 10
 	
 	terrain_bonus = {
@@ -321,7 +321,7 @@ cataphract = {
 	
 	damage = 120
 	toughness = 35
-	pursuit = 25
+	pursuit = 8 # THE MOD
 	screen = 10
 	
 	terrain_bonus = {
@@ -360,8 +360,8 @@ hobelar = {
 	
 	damage = 22
 	toughness = 15
-	pursuit = 50
-	screen = 30
+	pursuit = 70 # THE MOD
+	screen = 50 # THE MOD
 	
 	terrain_bonus = {
 		forest = { damage = 15 }
@@ -544,8 +544,8 @@ mulaththamun = { #Murabit Cavalry
 	
 	damage = 22
 	toughness = 15
-	pursuit = 30
-	screen = 40
+	pursuit = 50 # THE MOD
+	screen = 60 # THE MOD
 	
 	terrain_bonus = {
 		drylands = { damage = 10 toughness = 5 screen = 10 pursuit = 5 }
@@ -670,8 +670,8 @@ hussar = {
 	
 	damage = 25
 	toughness = 15
-	pursuit = 60
-	screen = 20
+	pursuit = 70 # THE MOD
+	screen = 40 # THE MOD
 	
 	terrain_bonus = {
 		plains = { damage = 15 }
@@ -894,8 +894,8 @@ sahel_horsemen = {
 	
 	damage = 22
 	toughness = 15
-	pursuit = 30
-	screen = 30
+	pursuit = 50 # THE MOD
+	screen = 50 # THE MOD
 	
 	terrain_bonus = {
 		drylands = { damage = 15 toughness = 3 }

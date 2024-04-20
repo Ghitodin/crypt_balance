@@ -26,6 +26,7 @@ extreme_difficulty = {
 }
 
 ai_extreme_difficulty = {
+	maa_damage_mult = 0.2
 	ai_boldness = medium_positive_ai_value
 	ai_war_chance = 0.25
 	ai_war_cooldown = -0.2

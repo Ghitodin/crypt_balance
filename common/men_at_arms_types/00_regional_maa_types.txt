@@ -7,7 +7,7 @@ camel_rider = {
 	type = camel_cavalry
 	
 	damage = 22
-	toughness = 15
+	toughness = 25 # THE MOD
 	pursuit = 20
 	screen = 20
 	
@@ -24,6 +24,7 @@ camel_rider = {
 	
 	counters = {
 		light_cavalry = 1
+		heavy_cavalry = 1 # THE MOD
 	}
 
 	winter_bonus = {

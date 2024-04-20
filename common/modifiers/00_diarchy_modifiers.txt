@@ -89,11 +89,11 @@ mandate_emptied_gaols_modifier = {
 
 liege_authority_boost_has_scapegoat_modifier = {
 	icon = horse_dead_positive
-	courtly_opinion = 30
-	parochial_opinion = 20
-	glory_hound_opinion = 15
-	barons_and_minor_landholders_opinion = 15
-	minority_opinion = 10
+	courtly_opinion = 10 # THE MOD
+	parochial_opinion = 7 # THE MOD
+	glory_hound_opinion = 5 # THE MOD
+	barons_and_minor_landholders_opinion = 5 # THE MOD
+	minority_opinion = 3 # THE MOD
 }
 
 ##################################################

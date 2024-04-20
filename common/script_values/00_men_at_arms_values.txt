@@ -30,7 +30,7 @@
 @light_cavalry_high_maint_cost = @[light_cavalry_low_maint_cost * high_maint_mult]
 
 @heavy_cavalry_recruitment_cost = 200
-@heavy_cavalry_low_maint_cost = 0.7
+@heavy_cavalry_low_maint_cost = 1.05 # THE MOD 
 @heavy_cavalry_high_maint_cost = @[heavy_cavalry_low_maint_cost * high_maint_mult]
 
 @siege_weapons_recruitment_cost = 60

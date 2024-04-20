@@ -52,8 +52,8 @@ holy_site_cathedral_01 = {
 	
 	county_modifier = {
 		tax_mult = 0.2
-		development_growth_factor = 0.2
-		development_growth = 0.15
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.07 # THE MOD
 	}
 	
 	province_modifier = {
@@ -117,8 +117,8 @@ holy_site_mosque_01 = {
 	
 	county_modifier = {
 		tax_mult = 0.2
-		development_growth_factor = 0.2
-		development_growth = 0.15
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.07 # THE MOD
 	}
 	
 	province_modifier = {
@@ -188,8 +188,8 @@ holy_site_fire_temple_01 = {
 	
 	county_modifier = {
 		tax_mult = 0.2
-		development_growth_factor = 0.2
-		development_growth = 0.1
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.05 # THE MOD
 	}
 	
 	province_modifier = {
@@ -260,8 +260,8 @@ holy_site_pagan_grand_temple_01 = {
 	county_modifier = {
 		tax_mult = 0.1
 		levy_size = 0.1
-		development_growth_factor = 0.2
-		development_growth = 0.15
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.07 # THE MOD
 	}
 	
 	#levy = 500 # THE MOD
@@ -332,8 +332,8 @@ holy_site_indian_grand_temple_01 = {
 	
 	county_modifier = {
 		tax_mult = 0.2
-		development_growth_factor = 0.2
-		development_growth = 0.15
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.07 # THE MOD
 	}
 	
 	province_modifier = {
@@ -402,8 +402,8 @@ holy_site_other_grand_temple_01 = {
 	
 	county_modifier = {
 		tax_mult = 0.2
-		development_growth_factor = 0.2
-		development_growth = 0.15
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.07 # THE MOD
 	}
 	
 	province_modifier = {
@@ -462,8 +462,8 @@ holy_site_mahabodhi_temple_01 = {
 	
 	county_modifier = {
 		tax_mult = 0.2
-		development_growth_factor = 0.3
-		development_growth = 0.3
+		development_growth_factor = 0.15 # THE MOD
+		development_growth = 0.15 # THE MOD
 	}
 	
 	province_modifier = {
@@ -518,8 +518,8 @@ holy_site_imam_ali_mosque_01 = {
 	
 	county_modifier = {
 		tax_mult = 0.2
-		development_growth_factor = 0.3
-		development_growth = 0.3
+		development_growth_factor = 0.15 # THE MOD
+		development_growth = 0.15 # THE MOD
 	}
 	
 	province_modifier = {
@@ -579,8 +579,8 @@ holy_site_great_mosque_of_mecca_01 = {
 	
 	county_modifier = {
 		tax_mult = 0.2
-		development_growth_factor = 0.35
-		development_growth = 0.5
+		development_growth_factor = 0.17 # THE MOD
+		development_growth = 0.25 # THE MOD
 	}
 	
 	province_modifier = {
@@ -643,15 +643,15 @@ holy_site_great_mosque_of_cordoba_01 = {
 
 	character_modifier = {
 		different_culture_opinion = 2 # THE MOD
-		character_capital_county_monthly_development_growth_add = 0.1
+		character_capital_county_monthly_development_growth_add = 0.05 # THE MOD
 		monthly_piety = 0.2
 		monthly_dynasty_prestige_mult = 0.05
 	}
 	
 	county_modifier = {
 		tax_mult = 0.10 # THE MOD
-		development_growth_factor = 0.05
-		development_growth = 0.05
+		development_growth_factor = 0.025 # THE MOD
+		development_growth = 0.025 # THE MOD
 	}
 	
 	province_modifier = {
@@ -734,8 +734,8 @@ holy_site_great_mosque_of_djenne_01 = {
 	county_modifier = {
 		tax_mult = 0.15
 		levy_size = 0.15
-		development_growth_factor = 0.2
-		development_growth = 0.3
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.15 # THE MOD
 	}
 	
 	ai_value = {
@@ -814,8 +814,8 @@ holy_site_great_mosque_of_samarra_01 = {
 	
 	county_modifier = {
 		tax_mult = 0.2
-		development_growth_factor = 0.2
-		development_growth = 0.3
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.15 # THE MOD
 	}
 	
 	ai_value = {
@@ -894,8 +894,8 @@ holy_site_cologne_cathedral_01 = {
 	
 	county_modifier = {
 		tax_mult = 0.2
-		development_growth_factor = 0.2
-		development_growth = 0.2
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.1 # THE MOD
 	}
 	
 	province_modifier = {
@@ -982,8 +982,8 @@ holy_site_canterbury_cathedral_01 = {
 	
 	county_modifier = {
 		tax_mult = 0.2
-		development_growth_factor = 0.1
-		development_growth = 0.1
+		development_growth_factor = 0.05 # THE MOD
+		development_growth = 0.05 # THE MOD
 	}
 	
 	province_modifier = {
@@ -1068,8 +1068,8 @@ holy_site_canterbury_cathedral_02 = {
 	
 	county_modifier = {
 		tax_mult = 0.2
-		development_growth_factor = 0.2
-		development_growth = 0.2
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.1 # THE MOD
 	}
 	
 	province_modifier = {
@@ -1154,8 +1154,8 @@ holy_site_canterbury_cathedral_03 = {
 	
 	county_modifier = {
 		tax_mult = 0.3
-		development_growth_factor = 0.30
-		development_growth = 0.3
+		development_growth_factor = 0.15 # THE MOD
+		development_growth = 0.15 # THE MOD
 		county_opinion_add = 5
 	}
 	
@@ -1235,8 +1235,8 @@ holy_site_prophetic_mosque_01 = {
 	
 	county_modifier = {
 		tax_mult = 0.2
-		development_growth_factor = 0.75
-		development_growth = 0.3
+		development_growth_factor = 0.37 # THE MOD
+		development_growth = 0.15 # THE MOD
 		supply_limit_mult = 1
 	}
 	
@@ -1276,8 +1276,8 @@ doges_palace_01 = { # Should technically be burnt down/rebuilt, but this is most
 	cost_gold = 1000
 	
 	county_modifier = {
-		development_growth_factor = 0.3
-		development_growth = 0.5
+		development_growth_factor = 0.15 # THE MOD
+		development_growth = 0.25 # THE MOD
 		hostile_raid_time = 0.5
 	}
 	
@@ -1320,8 +1320,8 @@ walls_of_genoa_01 = {
 	
 	county_modifier = {
 		defender_holding_advantage = 5
-		development_growth_factor = 0.1
-		development_growth = 0.3
+		development_growth_factor = 0.05 # THE MOD
+		development_growth = 0.15 # THE MOD
 		hostile_raid_time = 0.5
 	}
 	
@@ -1369,8 +1369,8 @@ visby_ringmur_01 = {
 	
 	county_modifier = {
 		defender_holding_advantage = 5
-		development_growth_factor = 0.15
-		development_growth = 0.3
+		development_growth_factor = 0.07 # THE MOD
+		development_growth = 0.15 # THE MOD
 		tax_mult = 0.15
 		county_opinion_add = 5
 		hostile_raid_time = 0.5
@@ -1414,8 +1414,8 @@ walls_of_benin_01 = {
 	county_modifier = {
 		levy_size = 0.5
 		defender_holding_advantage = 5
-		development_growth_factor = 0.75
-		development_growth = 0.3
+		development_growth_factor = 0.37 # THE MOD
+		development_growth = 0.15 # THE MOD
 		tax_mult = 0.2
 		hostile_raid_time = 0.5
 	}
@@ -1468,8 +1468,8 @@ theodosian_walls_01 = {
 		travel_danger = -20
 	}
 	county_modifier = {
-		development_growth = 0.4
-		development_growth_factor = 0.2
+		development_growth = 0.2 # THE MOD
+		development_growth_factor = 0.1 # THE MOD
 		levy_size = 0.3
 		tax_mult = 0.3
 		hostile_raid_time = 0.5
@@ -1510,8 +1510,8 @@ aurelian_walls_01 = {
 		tax_mult = 0.15
 	}
 	county_modifier = {
-		development_growth = 0.3
-		development_growth_factor = 0.1
+		development_growth = 0.15 # THE MOD
+		development_growth_factor = 0.05 # THE MOD
 		hostile_raid_time = 0.5
 	}
 	province_modifier = {
@@ -1597,8 +1597,8 @@ iron_pillar_of_delhi_01 = {
 		monthly_dynasty_prestige_mult = 0.05
 	}
 	county_modifier = {
-		development_growth = 0.2
-		development_growth_factor = 0.1
+		development_growth = 0.1 # THE MOD
+		development_growth_factor = 0.05 # THE MOD
 	}
 	
 	ai_value = {
@@ -1637,8 +1637,8 @@ iron_pillar_of_dhar_01 = {
 	}
 	
 	county_modifier = {
-		development_growth = 0.2
-		levy_size = 0.15
+		development_growth = 0.1 # THE MOD
+		levy_size = 0.07 # THE MOD
 	}
 	
 	ai_value = {
@@ -1680,7 +1680,7 @@ the_pyramids_01 = {
 		short_reign_duration_mult = -0.2
 	}
 	county_modifier = {
-		development_growth = 0.2
+		development_growth = 0.1 # THE MOD
 	}
 	
 	ai_value = {
@@ -1825,8 +1825,8 @@ petra_01 = {
 	county_modifier = {
 		tax_mult = 0.1
 		supply_limit_mult = 0.25
-		development_growth = 0.2
-		development_growth_factor = 0.15
+		development_growth = 0.1 # THE MOD
+		development_growth_factor = 0.07 # THE MOD
 	}
 	
 	province_modifier = {
@@ -1876,8 +1876,8 @@ buddhas_of_bamian_01 = {
 	}
 	county_modifier = {
 		tax_mult = 0.1
-		development_growth = 0.3
-		development_growth_factor = 0.75
+		development_growth = 0.15 # THE MOD
+		development_growth_factor = 0.37 # THE MOD
 	}
 	
 	ai_value = {
@@ -1980,8 +1980,8 @@ alhambra_02 = {
 		travel_danger = -20
 	}
 	county_modifier = {
-		development_growth = 0.3
-		development_growth_factor = 0.25
+		development_growth = 0.15 # THE MOD
+		development_growth_factor = 0.12 # THE MOD
 		monthly_county_control_growth_add = 1
 	}
 	
@@ -2073,8 +2073,8 @@ citadel_of_aleppo_02 = {
 		travel_danger = -20
 	}
 	county_modifier = {
-		development_growth = 0.3
-		development_growth_factor = 0.15
+		development_growth = 0.15 # THE MOD
+		development_growth_factor = 0.07 # THE MOD
 	}
 	
 	ai_value = {
@@ -2118,8 +2118,8 @@ house_of_wisdom_01 = {
 	}
 	county_modifier = {
 		tax_mult = 0.2
-		development_growth = 0.3
-		development_growth_factor = 0.2
+		development_growth = 0.15 # THE MOD
+		development_growth_factor = 0.1 # THE MOD
 	}
 	
 	ai_value = {
@@ -2175,8 +2175,8 @@ the_tower_of_london_01 = {
 		travel_danger = -20
 	}
 	county_modifier = {
-		development_growth = 0.2
-		development_growth_factor = 0.1
+		development_growth = 0.1 # THE MOD
+		development_growth_factor = 0.05 # THE MOD
 		tax_mult = 0.05
 	}
 	
@@ -2248,8 +2248,8 @@ notre_dame_01 = {
 	county_modifier = {
 		county_opinion_add = 5
 		tax_mult = 0.2
-		development_growth_factor = 0.3
-		development_growth = 0.3
+		development_growth_factor = 0.15 # THE MOD
+		development_growth = 0.15 # THE MOD
 	}
 	
 	province_modifier = {
@@ -2318,8 +2318,8 @@ brihadeeswarar_temple_01 = {
 	
 	county_modifier = {
 		tax_mult = 0.2
-		development_growth_factor = 0.2
-		development_growth = 0.2
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.1 # THE MOD
 	}
 	
 	ai_value = {
@@ -2375,8 +2375,8 @@ shwedagon_pagoda_01 = {
 	}
 	county_modifier = {
 		tax_mult = 0.2
-		development_growth_factor = 0.2
-		development_growth = 0.3
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.15 # THE MOD
 	}
 	
 	ai_value = {
@@ -2432,8 +2432,8 @@ ananda_temple_01 = {
 		monthly_income = 3
 	}
 	county_modifier = {
-		development_growth_factor = 0.2
-		development_growth = 0.2
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.1 # THE MOD
 	}
 	
 	ai_value = {
@@ -2498,8 +2498,8 @@ the_friday_mosque_01 = {
 	}
 	county_modifier = {
 		tax_mult = 0.2
-		development_growth_factor = 0.25
-		development_growth = 0.3
+		development_growth_factor = 0.12 # THE MOD
+		development_growth = 0.15 # THE MOD
 	}
 	
 	ai_value = {
@@ -2554,8 +2554,8 @@ khajuraho_01 = {
 	}
 	county_modifier = {
 		tax_mult = 0.2
-		development_growth_factor = 0.2
-		development_growth = 0.3
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.15 # THE MOD
 	}
 	
 	ai_value = {
@@ -2604,7 +2604,7 @@ palace_of_aachen_01 = {
 	}
 	
 	county_modifier = {
-		development_growth = 0.3
+		development_growth = 0.15 # THE MOD
 	}
 	
 	ai_value = {
@@ -2661,7 +2661,7 @@ hagia_sophia_01 = {
 	}
 	
 	county_modifier = {
-		development_growth_factor = 0.2
+		development_growth_factor = 0.1 # THE MOD
 	}
 	
 	ai_value = {
@@ -3120,8 +3120,8 @@ generic_university = {
 	}
 	
 	county_modifier = {
-		development_growth_factor = 0.1
-		development_growth = 0.1
+		development_growth_factor = 0.05 # THE MOD
+		development_growth = 0.05 # THE MOD
 	}
 	
 	ai_value = {
@@ -3175,8 +3175,8 @@ al_azhar_university = {
 	}
 	
 	county_modifier = {
-		development_growth_factor = 0.2
-		development_growth = 0.3
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.15 # THE MOD
 	}
 	
 	ai_value = {
@@ -3230,8 +3230,8 @@ sankore_university = {
 	}
 
 	county_modifier = {
-		development_growth_factor = 0.2
-		development_growth = 0.3
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.15 # THE MOD
 
 	}
 	
@@ -3286,8 +3286,8 @@ siena_university = {
 	}
 	
 	county_modifier = {
-		development_growth_factor = 0.2
-		development_growth = 0.3
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.15 # THE MOD
 	}
 	
 	ai_value = {
@@ -3341,8 +3341,8 @@ nalanda_university = {
 	}
 	
 	county_modifier = {
-		development_growth_factor = 0.2
-		development_growth = 0.3
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.15 # THE MOD
 	}
 	
 	ai_value = {
@@ -3376,7 +3376,7 @@ special_sicilian_parliament_01 = {
 		monthly_income = 1
 	}
 	county_modifier = {
-		development_growth_factor = 0.25
+		development_growth_factor = 0.12 # THE MOD
 		monthly_county_control_growth_add = 1
 		county_opinion_add = 25
 	}
@@ -3421,7 +3421,7 @@ special_greenhouse_01 = {
 	}
 
 	county_modifier = {
-		development_growth_factor = 0.25
+		development_growth_factor = 0.12 # THE MOD
 		county_opinion_add = 25
 	}
 	character_modifier = {
@@ -3563,8 +3563,8 @@ golden_gate_of_kiev_01 = {
 		travel_danger = -20
 	}
 	county_modifier = {
-		development_growth = 0.2
-		development_growth_factor = 0.1
+		development_growth = 0.1 # THE MOD
+		development_growth_factor = 0.05 # THE MOD
 		tax_mult = 0.1
 	}
 	
@@ -3692,7 +3692,7 @@ temple_of_uppsala_01 = {
 	county_modifier = {
 		tax_mult = 0.1
 		levy_size = 0.1
-		development_growth_factor = 0.2
+		development_growth_factor = 0.1 # THE MOD
 	}
 	
 	next_building = temple_of_uppsala_02
@@ -3769,7 +3769,7 @@ temple_of_uppsala_02 = {
 	county_modifier = {
 		tax_mult = 0.15
 		levy_size = 0.15
-		development_growth_factor = 0.25
+		development_growth_factor = 0.12 # THE MOD
 	}
 	
 	ai_value = {
@@ -3842,8 +3842,8 @@ lund_cathedral_01 = {
 	}
 	county_modifier = {
 		tax_mult = 0.2
-		development_growth_factor = 0.2
-		development_growth = 0.2
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.1 # THE MOD
 	}
 	
 	ai_value = {
@@ -3973,7 +3973,7 @@ rock_of_gibraltar_01 = {
 	}
 
 	county_modifier = {
-		development_growth_factor = 0.1	
+		development_growth_factor = 0.05 # THE MOD
 	}
 	
 	ai_value = {
@@ -4108,8 +4108,8 @@ city_wall_of_toledo_01 = {
 
 	county_modifier = {
 		defender_holding_advantage = 5
-		development_growth_factor = 0.1
-		development_growth = 0.3
+		development_growth_factor = 0.05 # THE MOD
+		development_growth = 0.15 # THE MOD
 		tax_mult = 0.1
 		hostile_raid_time = 0.5
 	}
@@ -4240,8 +4240,8 @@ holy_site_basilica_santiago_01 = {
 	
 	county_modifier = {
 		tax_mult = 0.3
-		development_growth_factor = 0.2
-		development_growth = 0.2
+		development_growth_factor = 0.1 # THE MOD
+		development_growth = 0.1 # THE MOD
 	}
 	
 	province_modifier = {
@@ -4318,7 +4318,7 @@ imam_reza_shrine_01 = {
 	
 	county_modifier = {
 		tax_mult = 0.15
-		development_growth_factor = 0.55
+		development_growth_factor = 0.27 # THE MOD
 	}
 
 	ai_value = {
@@ -4372,7 +4372,7 @@ soltaniyeh_01 = {
 	}
 
 	county_modifier = {
-		development_growth_factor = 0.1
+		development_growth_factor = 0.05 # THE MOD
 	}
 
 	ai_value = {
@@ -4680,8 +4680,8 @@ maharloo_lake_01 = {
 
 	county_modifier = {
 		county_opinion_add = 5
-		development_growth = 0.1
-		development_growth_factor = 0.6
+		development_growth = 0.05 # THE MOD
+		development_growth_factor = 0.3 # THE MOD
 	}
 	
 	ai_value = {
@@ -4726,7 +4726,7 @@ rainbow_mountains_01 = {
 	}
 	
 	county_modifier = {
-		development_growth_factor = 0.2
+		development_growth_factor = 0.1 # THE MOD
 		tax_mult = 0.1
 	}
 	
@@ -4778,7 +4778,7 @@ mount_damavand_01 = {
 	county_modifier = {
 		mountains_levy_size = 0.5
 		travel_danger = -30
-		development_growth_factor = 0.3
+		development_growth_factor = 0.15 # THE MOD
 	}
 	
 	province_modifier = {
@@ -4886,8 +4886,8 @@ ark_of_bukhara_01 = {
 		stationed_maa_toughness_mult = normal_maa_toughness_tier_1
 	}
 	county_modifier = {
-		development_growth_factor = 0.1
-		development_growth = 0.1
+		development_growth_factor = 0.05 # THE MOD
+		development_growth = 0.05  # THE MOD
 		hostile_raid_time = 0.25
 	}
 
@@ -4988,8 +4988,8 @@ shah_i_zinda_02 = {
 
 	county_modifier = {
 		monthly_county_control_growth_add = 0.5
-		development_growth_factor = 0.1
-		development_growth = 0.2
+		development_growth_factor = 0.05 # THE MOD
+		development_growth = 0.1 # THE MOD
 	}
 
 	ai_value = {
@@ -5133,7 +5133,7 @@ event_tower_of_silence_01 = {
 
 	county_modifier = {
 		county_opinion_add = 5
-		development_growth_factor = 0.10
+		development_growth_factor = 0.05 # THE MOD
 	}
 
 	ai_value = {

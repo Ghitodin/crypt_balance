@@ -1329,7 +1329,7 @@
 	}
 	
 	modifier = { # Unimportant courtier? Fair game, have them.
-		add = 10
+		add = -30 # THE MOD
 
 		scope:secondary_recipient = {
 			is_adult = yes
@@ -1350,7 +1350,7 @@
 	}
 
 	modifier = {
-		add = -10
+		add = -50 # THE MOD
 		scope:secondary_recipient = {
 			is_adult = yes
 			OR = {		
@@ -1360,6 +1360,7 @@
 				has_relation_friend = scope:recipient
 				has_relation_best_friend = scope:recipient
 				is_knight_of = scope:recipient
+				is_courtier_of = scope:recipient # THE MOD
 				AND = {
 					exists = inspiration
 					inspiration = {
@@ -1371,6 +1372,42 @@
 		}
 		desc = MARRY_CARES_ABOUT_COURTIER_REASON
 	}
+	
+	# THE MOD START:
+	modifier = {
+		add = -300
+		scope:secondary_recipient = {
+			is_adult = yes
+			OR = {		
+				is_councillor_of = scope:recipient
+				is_knight_of = scope:recipient
+				is_employer_of = scope:recipient
+				AND = {
+					exists = inspiration
+					inspiration = {
+						exists = inspiration_sponsor
+						inspiration_sponsor = scope:recipient
+					}
+				}
+			}
+		}
+		desc = MARRY_CARES_ABOUT_COURTIER_REASON
+	}
+	# THE MOD END
+	
+	# THE MOD START:
+	modifier = {
+		add = -150
+		scope:secondary_recipient = {
+			OR = {
+				#is_courtier_of = scope:recipient
+				prowess >= 15
+				martial >= 15
+			}
+		}
+		desc = MARRY_CARES_ABOUT_COURTIER_REASON
+	}
+	# THE MOD END
 
 	modifier = {
 		add = -25

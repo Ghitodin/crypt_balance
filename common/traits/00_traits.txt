@@ -11433,7 +11433,7 @@ tourney_participant = {
 
 			65 = {
 				health = 0.10
-				vassal_levy_contribution_add = 0.15
+				vassal_levy_contribution_add = 0.04 # THE MOD
 			}
 
 			100 = {

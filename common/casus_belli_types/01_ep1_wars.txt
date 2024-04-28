@@ -331,10 +331,13 @@ reclaim_relic_artifact_war = {
 	allow_hostages = no
 
 	allowed_for_character = {
-		OR = {
-			highest_held_title_tier >= tier_duchy
-			is_ai = no
-		}
+		AND = { # THE MOD
+			OR = {
+				highest_held_title_tier >= tier_duchy
+				is_ai = no
+			}
+			is_landed = no # THE MOD			
+		} # THE MOD
 	}
 	allowed_against_character = {
 		custom_tooltip = { # The custom_tooltip is here for error suppression

@@ -2260,11 +2260,11 @@ request_excommunication_interaction = {
 	}
 
 	ai_accept = {
-		base = -80 # THE MOD
+		base = -70 # THE MOD
 			
 		modifier = {
 			scope:excommunication_hook = yes
-			add = 50
+			add = 80 # THE MOD
 			desc = SCHEME_WEAK_HOOK_USED
 		}
 		opinion_modifier = {
@@ -2298,7 +2298,7 @@ request_excommunication_interaction = {
 		}
 		modifier = {
 			add = {
-				add = 20 # THE MOD
+				add = 30 # THE MOD
 				multiply = scope:secondary_recipient.num_sinful_traits
 			}
 			scope:secondary_recipient.num_sinful_traits > 0

@@ -8850,7 +8850,8 @@ twin = {
 
 kinslayer_1 = {
 
-	dynasty_opinion = -5
+	dynasty_opinion = -15 # THE MOD
+	general_opinion = -10 # THE MOD
 	category = fame
 	group = kinslayer
 	level = 1
@@ -8896,8 +8897,9 @@ kinslayer_1 = {
 }
 kinslayer_2 = {
 
-	dynasty_opinion = -5
-	close_relative_opinion = -5
+	dynasty_opinion = -15 # THE MOD
+	close_relative_opinion = -15 # THE MOD
+	general_opinion = -10 # THE MOD
 	category = fame
 	group = kinslayer
 	level = 2
@@ -8948,8 +8950,9 @@ kinslayer_2 = {
 }
 kinslayer_3 = {
 
-	dynasty_opinion = -5
-	close_relative_opinion = -10
+	dynasty_opinion = -15 # THE MOD
+	close_relative_opinion = -30 # THE MOD
+	general_opinion = -10 # THE MOD
 	category = fame
 	group = kinslayer
 	level = 3

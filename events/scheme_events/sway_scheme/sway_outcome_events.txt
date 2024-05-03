@@ -19,6 +19,9 @@ sway_outcome.0001 = {
 			type = sway_good_message
 			title = sway_sway_success_message
 			left_icon = scope:target
+			stress_impact = { # THE MOD
+				gregarious = minor_stress_impact_loss # THE MOD
+			} # THE MOD
 			scope:target = {
 				if = {
 					limit = {

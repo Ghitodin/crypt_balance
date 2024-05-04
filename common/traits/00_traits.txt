@@ -2079,7 +2079,7 @@ lustful = {
 	intrigue = 2
 	seduce_scheme_power_add = 10
 
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	opposite_opinion = -10
 	
 	ruler_designer_cost = 25
@@ -2125,7 +2125,7 @@ chaste = {
  	seduce_scheme_power_mult = -0.5
 	learning = 2
 	
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	opposite_opinion = -10
 	
 	ruler_designer_cost = 20
@@ -2179,7 +2179,7 @@ gluttonous = {
 	stress_loss_mult = 0.1
 	
 	attraction_opinion = -5
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	opposite_opinion = -10
 	
 	ruler_designer_cost = 20
@@ -2221,7 +2221,7 @@ temperate = {
 	
 	courtly_opinion = -10
 	
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	opposite_opinion = -10
 	
 	ruler_designer_cost = 40
@@ -2433,7 +2433,7 @@ diligent = {
 		county_opinion_add = 10
 	}
 	
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	opposite_opinion = -10
 
 	flag = can_improve_capital_decision
@@ -2583,7 +2583,7 @@ calm = {
 	scheme_discovery_chance_mult = 0.1
 	
 	opposite_opinion = -10
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	
 	stress_loss_mult = 0.1
 	dread_decay_mult = 0.5
@@ -2980,7 +2980,7 @@ honest = {
 	
 	courtly_opinion = 5
 	opposite_opinion = -10
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	
 	culture_modifier = {
 		parameter = dry_trait_bonuses
@@ -3098,7 +3098,7 @@ brave = {
 	attraction_opinion = 10
 	glory_hound_opinion = 10
 	opposite_opinion = -10
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	
 	culture_modifier = {
 		parameter = trait_county_opinion_modifiers
@@ -3178,7 +3178,7 @@ shy = {
 	epidemic_resistance = 5
 	
 	attraction_opinion = -5
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	parochial_opinion = 10
 	
 	culture_modifier = {
@@ -3232,7 +3232,7 @@ gregarious = {
 	personal_scheme_power_mult = 0.15
 	
 	attraction_opinion = 5
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	courtly_opinion = 5
 	
 	culture_modifier = {
@@ -3503,7 +3503,7 @@ just = {
 	parochial_opinion = 15
 	minority_opinion = 15
 	opposite_opinion = -10
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	flag = initial_legitimacy_boost
 	
 	culture_modifier = {
@@ -3563,7 +3563,7 @@ cynical = {
 	faith_conversion_piety_cost_mult = -0.2
 
 	opposite_opinion = -10
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	zealot_opinion = -15
 
 	culture_modifier = {
@@ -4093,7 +4093,7 @@ eccentric = {
 	stress_gain_mult = 0.5
 	stress_loss_mult = 0.5
 	monthly_lifestyle_xp_gain_mult = 0.2
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 
 	culture_modifier = {
 		parameter = life_is_a_joke_trait_same_culture_opinion 
@@ -4205,7 +4205,7 @@ forgiving = {
 	
 	prisoner_opinion = 15
 	opposite_opinion = -10
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	minority_opinion = 15
 
 	flag = can_abandon_hooks_interaction
@@ -4485,7 +4485,7 @@ drunkard = { # Substance Abuse (Alcohol)
 	health = -0.15
 	stress_loss_mult = 0.2
 
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	character_travel_safety = -10
 	
 	ruler_designer_cost = -10
@@ -4516,7 +4516,7 @@ hashishiyah = { # Substance Abuse (Hashish)
 	learning = -2
 	stress_loss_mult = 0.2
 
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	
 	ruler_designer_cost = 5
 
@@ -5009,7 +5009,7 @@ lunatic_1 = { # Highly event driven, Schizophrenia
 	
 	vassal_opinion = -10
 	attraction_opinion = -10
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	hostile_scheme_resistance_mult = 0.1
 	health = -0.25
 	category = health
@@ -5046,7 +5046,7 @@ lunatic_genetic = { # Highly event driven, Schizophrenia
 	vassal_opinion = -10
 	attraction_opinion = -10
 	hostile_scheme_resistance_mult = 0.1
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 
 	shown_in_encyclopedia = no
 	
@@ -7176,7 +7176,7 @@ clubfooted = {
 	random_creation = 0.5
 	
 	attraction_opinion = -10
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	physical = yes
 	
 	ruler_designer_cost = 0
@@ -7205,7 +7205,7 @@ hunchbacked = {
 	random_creation = 0.5
 	
 	attraction_opinion = -30
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	vassal_opinion = -10
 	
 	ruler_designer_cost = -10
@@ -7233,7 +7233,7 @@ lisping = {
 	birth = 0.5
 	random_creation = 0.5
 	
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	
 	ruler_designer_cost = -5
 	
@@ -7262,7 +7262,7 @@ stuttering = {
 	birth = 0.5
 	random_creation = 0.5
 	
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	
 	ruler_designer_cost = -5
 	
@@ -7542,7 +7542,7 @@ scaly = {
 	
 	attraction_opinion = -30
 	vassal_opinion = -10
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	
 	dread_baseline_add = 10
 	
@@ -7571,7 +7571,7 @@ albino = {
 	random_creation = 0.5
 	
 	general_opinion = -10
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	
 	dread_baseline_add = 15
 	
@@ -8483,7 +8483,7 @@ berserker = {
 	prowess = 5
 	dread_baseline_add = 15
 	
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	
 	ruler_designer_cost = 40
 	
@@ -8510,7 +8510,7 @@ shieldmaiden = {
 	martial = 3
 	prowess = 3
 	
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 
 	ruler_designer_cost = 40
 	
@@ -8555,7 +8555,7 @@ varangian = {
 	martial = 2
 	prowess = 2
 
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	
 	ruler_designer_cost = 40
 	
@@ -9091,7 +9091,7 @@ cannibal = {
 sodomite = {
 	category = fame
 
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	
 	shown_in_ruler_designer = no
 	
@@ -9148,7 +9148,7 @@ incestuous = {
 
 adulterer = {
 
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	category = fame
 	
 	ruler_designer_cost = -5
@@ -9199,7 +9199,7 @@ adulterer = {
 fornicator = {
 	category = fame
 
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	
 	ruler_designer_cost = -5
 	
@@ -9382,7 +9382,7 @@ adventurer = {
 	ignore_negative_culture_opinion = yes
 	ignore_negative_opinion_of_culture = yes
 
-	same_opinion = 10 # THE MOD
+	same_opinion = 5 # THE MOD
 	
 	ai_war_chance = 1
 	
@@ -9613,7 +9613,7 @@ loyal = {
 
 	flag = join_factions_less
 
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	opposite_opinion = -10
 
 	culture_modifier = {
@@ -9654,7 +9654,7 @@ disloyal = {
 
 	ai_honor = -20
 
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	opposite_opinion = -10
 
 	culture_modifier = {
@@ -11634,7 +11634,7 @@ fp3_struggle_detractor = {
 
 	shown_in_ruler_designer = no
 
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	opposite_opinion = -30
 	
 	ai_war_cooldown = -0.5
@@ -11671,7 +11671,7 @@ fp3_struggle_supporter = {
 
 	flag = can_use_install_loyalist_cb
 	
-	same_opinion = 10
+	same_opinion = 5 # THE MOD
 	opposite_opinion = -30
 
 	desc = {

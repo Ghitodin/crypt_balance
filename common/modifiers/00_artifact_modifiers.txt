@@ -367,31 +367,31 @@ artifact_vassal_limit_6_modifier = { vassal_limit = 5 } # THE MOD
 artifact_vassal_limit_7_modifier = { vassal_limit = 5 } # THE MOD
 artifact_vassal_limit_8_modifier = { vassal_limit = 6 } # THE MOD
 #artifact_vassal_opinion_1_modifier = { vassal_opinion = 1 }
-#artifact_vassal_opinion_2_modifier = { vassal_opinion = 2 }
-#artifact_vassal_opinion_3_modifier = { vassal_opinion = 3 }
-#artifact_vassal_opinion_4_modifier = { vassal_opinion = 4 }
+#artifact_vassal_opinion_2_modifier = { vassal_opinion = 1 } # THE MOD
+#artifact_vassal_opinion_3_modifier = { vassal_opinion = 2 } # THE MOD
+#artifact_vassal_opinion_4_modifier = { vassal_opinion = 2 } # THE MOD
 
 artifact_vassal_opinion_penalty_1_modifier = { vassal_opinion = -3 }
 
 artifact_courtly_vassal_opinion_1_modifier = { courtly_opinion = 1 }
-artifact_courtly_vassal_opinion_2_modifier = { courtly_opinion = 3 }
-artifact_courtly_vassal_opinion_3_modifier = { courtly_opinion = 5 }
-artifact_courtly_vassal_opinion_4_modifier = { courtly_opinion = 8 }
+artifact_courtly_vassal_opinion_2_modifier = { courtly_opinion = 2 } # THE MOD
+artifact_courtly_vassal_opinion_3_modifier = { courtly_opinion = 3 } # THE MOD
+artifact_courtly_vassal_opinion_4_modifier = { courtly_opinion = 4 } # THE MOD
 
 artifact_glory_hound_vassal_opinion_1_modifier = { glory_hound_opinion = 1 }
-artifact_glory_hound_vassal_opinion_2_modifier = { glory_hound_opinion = 3 }
-artifact_glory_hound_vassal_opinion_3_modifier = { glory_hound_opinion = 5 }
-artifact_glory_hound_vassal_opinion_4_modifier = { glory_hound_opinion = 8 }
+artifact_glory_hound_vassal_opinion_2_modifier = { glory_hound_opinion = 2 } # THE MOD
+artifact_glory_hound_vassal_opinion_3_modifier = { glory_hound_opinion = 3 } # THE MOD
+artifact_glory_hound_vassal_opinion_4_modifier = { glory_hound_opinion = 4 } # THE MOD
 
 artifact_parochial_vassal_opinion_1_modifier = { parochial_opinion = 1 }
-artifact_parochial_vassal_opinion_2_modifier = { parochial_opinion = 3 }
-artifact_parochial_vassal_opinion_3_modifier = { parochial_opinion = 5 }
-artifact_parochial_vassal_opinion_4_modifier = { parochial_opinion = 8 }
+artifact_parochial_vassal_opinion_2_modifier = { parochial_opinion = 2 } # THE MOD
+artifact_parochial_vassal_opinion_3_modifier = { parochial_opinion = 3 } # THE MOD
+artifact_parochial_vassal_opinion_4_modifier = { parochial_opinion = 4 } # THE MOD
 
 artifact_zealot_vassal_opinion_1_modifier = { zealot_opinion = 1 }
-artifact_zealot_vassal_opinion_2_modifier = { zealot_opinion = 3 }
-artifact_zealot_vassal_opinion_3_modifier = { zealot_opinion = 5 }
-artifact_zealot_vassal_opinion_4_modifier = { zealot_opinion = 8 }
+artifact_zealot_vassal_opinion_2_modifier = { zealot_opinion = 2 } # THE MOD
+artifact_zealot_vassal_opinion_3_modifier = { zealot_opinion = 3 } # THE MOD
+artifact_zealot_vassal_opinion_4_modifier = { zealot_opinion = 4 } # THE MOD
 
 artifact_powerful_vassal_opinion_1_modifier = { powerful_vassal_opinion = 1 } # THE MOD
 artifact_powerful_vassal_opinion_2_modifier = { powerful_vassal_opinion = 1 } # THE MOD

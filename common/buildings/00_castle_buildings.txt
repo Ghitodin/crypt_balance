@@ -606,7 +606,7 @@ castle_02 = {
 	character_culture_modifier = {
 		parameter = castle_grant_prestige
 		monthly_prestige = 0.03
-		monthly_dynasty_prestige = 0.02
+		monthly_dynasty_prestige = 0.01 # THE MOD
 	}
 
 	province_terrain_modifier = {
@@ -940,7 +940,7 @@ castle_03 = {
 	character_culture_modifier = {
 		parameter = castle_grant_prestige
 		monthly_prestige = 0.04
-		monthly_dynasty_prestige = 0.03
+		monthly_dynasty_prestige = 0.01 # THE MOD
 	}
 
 	province_terrain_modifier = {
@@ -1264,7 +1264,7 @@ castle_04 = {
 	character_culture_modifier = {
 		parameter = castle_grant_prestige
 		monthly_prestige = 0.05
-		monthly_dynasty_prestige = 0.04
+		monthly_dynasty_prestige = 0.01 # THE MOD
 	}
 
 	province_terrain_modifier = {

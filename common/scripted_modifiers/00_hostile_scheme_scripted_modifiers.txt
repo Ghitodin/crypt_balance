@@ -250,6 +250,17 @@ hostile_scheme_agent_base_join_chance_modifier = {
 		this = scope:target
 		desc = "SCHEME_NOT_AGAINST_SELF"
 	}
+	
+	# THE MOD START
+	# Different religious group and faith
+	modifier = { 
+		add = -30
+		NOT = { faith.religion = scope:owner.faith.religion }
+	} 
+	modifier = { 
+		add = -15
+		NOT = { faith = scope:owner.faith }
+	} # THE MOD END
 
 	#How much does Agent dislike the Target?
 	opinion_modifier = {
@@ -461,6 +472,17 @@ hostile_murder_agent_base_join_chance_modifier = {
 		this = scope:target
 		desc = SCHEME_NOT_AGAINST_SELF
 	}
+	
+	# THE MOD START
+	# Different religion modifier 
+	modifier = { 
+		add = -30
+		NOT = { faith.religion = scope:owner.faith.religion }
+	} 
+	modifier = { 
+		add = -15
+		NOT = { faith = scope:owner.faith }
+	} # THE MOD END
 	
 	#Target is not diplomatically available
 	modifier = {

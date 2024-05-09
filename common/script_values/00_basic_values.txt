@@ -1301,6 +1301,7 @@ send_gift_opinion = {
 			add = {
 				value = scope:actor.diplomacy
 				multiply = 1.5 # THE MOD
+				max = 30 # THE MOD
 			}
 		}
 		if = {

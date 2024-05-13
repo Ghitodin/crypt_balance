@@ -811,25 +811,25 @@ mythical_legend_owner_cost = {
 
 famed_legend_promoter_cost = {
 	value = monthly_character_income
-	multiply = 0.05
+	multiply = 0.03 # THE MOD
 	add = 0.5
-	multiply = legend_cost_scale_by_era
+	#multiply = legend_cost_scale_by_era # THE MOD
 	multiply = legend_game_rule_multiplier
 }
 
 illustrious_legend_promoter_cost = {
 	value = monthly_character_income
-	multiply = 0.1
+	multiply = 0.06 # THE MOD
 	add = 1
-	multiply = legend_cost_scale_by_era
+	#multiply = legend_cost_scale_by_era # THE MOD
 	multiply = legend_game_rule_multiplier
 }
 
 mythical_legend_promoter_cost = {
 	value = monthly_character_income
-	multiply = 0.2
+	multiply = 0.1 # THE MOD
 	add = 1.5
-	multiply = legend_cost_scale_by_era
+	#multiply = legend_cost_scale_by_era # THE MOD
 	multiply = legend_game_rule_multiplier
 }
 

@@ -2263,10 +2263,10 @@ pardon_interaction = {
 								type = loyalty_hook
 							}
 						}
-						add_hook = {
-							type = loyalty_hook
-							target = scope:recipient
-						}
+						#add_hook = { # THE MOD 
+						#	type = loyalty_hook # THE MOD 
+						#	target = scope:recipient # THE MOD 
+						#} # THE MOD 
 					}
 				}
 			}

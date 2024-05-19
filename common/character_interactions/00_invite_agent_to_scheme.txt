@@ -75,6 +75,7 @@ invite_agent_to_scheme_interaction = {
 			NOT = {
 				scope:recipient = { is_parent_of = scope:scheme.scheme_target }
 			}
+			scope:recipient = { is_parent_of = scope:scheme.scheme_target } # THE MOD
 		}
 		flag = gift
 		localization = SCHEME_AGENT_GOLD

@@ -8,7 +8,7 @@
 			}
 			highest_held_title_tier >= tier_empire
 			NOR = { #Cultures have their special flavor.
-				culture = { has_cultural_parameter = witenagemot_succession_enabled }
+				#culture = { has_cultural_parameter = witenagemot_succession_enabled }
 				culture = { has_cultural_parameter = scandinavian_elective_enabled }
 				culture = { has_cultural_parameter = tribal_elective_enabled } #FP3 addition
 			}

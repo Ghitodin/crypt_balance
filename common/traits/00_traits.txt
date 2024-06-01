@@ -3377,10 +3377,11 @@ content = {
 	intrigue = -1
 	learning = 2
 	
-	opinion_of_liege = 20
+	opinion_of_liege = 5 # THE MOD
 	opinion_of_vassal = 10
-	same_opinion = 20
-	parochial_opinion = 10
+	same_opinion = 5 # THE MOD
+	parochial_opinion = 5 # THE MOD
+	glory_hound_opinion = -5 # THE MOD
 	
 	stress_loss_mult = 0.1
 	

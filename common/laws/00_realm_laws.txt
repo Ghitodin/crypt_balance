@@ -168,8 +168,8 @@ crown_authority = {
 			courtly_opinion = -20 # THE MOD
 			zealot_opinion = -20
 			minority_opinion = -30
-			vassal_tax_contribution_mult = 0.1 # THE MOD
-			vassal_levy_contribution_mult = 0.1 # THE MOD
+			vassal_tax_contribution_mult = 0.05 # THE MOD
+			vassal_levy_contribution_mult = 0.05 # THE MOD
 		}
 		flag = uses_crown_authority
 		#flag = vassal_all_wars_banned    # THE MOD

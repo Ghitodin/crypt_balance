@@ -33,7 +33,7 @@ honored_to_serve_perk = { # THE MOD
 	
 	character_modifier = { # THE MOD
 		happy_powerful_vassal_tax_contribution_mult = 0.08
-		happy_powerful_vassal_levy_contribution_mult = 0.08
+		#happy_powerful_vassal_levy_contribution_mult = 0.08 # THE MOD
 	}
 }
 

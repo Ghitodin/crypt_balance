@@ -100,7 +100,7 @@ large_levies_perk = {
 	parent = honored_to_serve_perk # THE MOD
 	
 	character_modifier = {
-		vassal_levy_contribution_mult = 0.1 # THE MOD
+		vassal_levy_contribution_mult = 0.05 # THE MOD
 	}
 }
 

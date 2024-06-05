@@ -1483,7 +1483,7 @@ administrator = {
 	stewardship = 3
 	diplomacy = 1
 	parochial_opinion = 10
-	vassal_opinion = 5
+	vassal_opinion = 2 # THE MOD
 	epidemic_resistance = 10
 	
 	ruler_designer_cost = 50

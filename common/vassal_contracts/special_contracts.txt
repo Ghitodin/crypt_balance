@@ -631,8 +631,8 @@ marriage_favor_rights = {
 			parent = marriage_favor_rights_default
 			position = { 1 0 }
 
-			vassal_opinion = 20
-			tax_factor = 0.1
+			vassal_opinion = 7 # THE MOD
+			#tax_factor = 0.1 # THE MOD
 			levies_factor = 0.1
 
 			flag = vassal_contract_marriage_favor

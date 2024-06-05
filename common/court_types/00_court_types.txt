@@ -150,7 +150,7 @@ court_warlike = {
 	level_perk = {
 		court_grandeur = 4
 		owner_modifier = {
-			happy_powerful_vassal_levy_contribution_add = 0.1
+			happy_powerful_vassal_levy_contribution_add = 0.05 # THE MOD
 		}
 	}
 	

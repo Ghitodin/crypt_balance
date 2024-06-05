@@ -633,7 +633,7 @@ marriage_favor_rights = {
 
 			vassal_opinion = 7 # THE MOD
 			#tax_factor = 0.1 # THE MOD
-			levies_factor = 0.1
+			#levies_factor = 0.1 # THE MOD
 
 			flag = vassal_contract_marriage_favor
 

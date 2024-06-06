@@ -68,6 +68,6 @@ levy_captaincy_modifier = {
 
 dutiful_realm_knights_modifier = {
 	icon = martial_positive
-	vassal_levy_contribution_mult = 0.15
+	vassal_levy_contribution_mult = 0.03 # THE MOD
 	revolting_siege_morale_loss_mult = 0.25
 }

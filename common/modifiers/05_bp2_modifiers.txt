@@ -350,8 +350,8 @@ bp2_yearly_0641_maa_maintenance_modifier = {
 
 bp2_yearly_0641_cowed_vassal_modifier = {
 	icon = cockroach_positive
-	cowed_vassal_levy_contribution_mult = 0.3
-	cowed_vassal_tax_contribution_mult = 0.3
+	cowed_vassal_levy_contribution_mult = 0.05 # THE MOD
+	cowed_vassal_tax_contribution_mult = 0.05 # THE MOD
 }
 
 bp2_yearly_0641_war_income_modifier = {

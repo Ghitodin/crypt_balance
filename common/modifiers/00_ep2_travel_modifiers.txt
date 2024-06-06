@@ -18,7 +18,7 @@ villager_gifts_modifier = {
 loyal_attitudes_modifier = {
 	icon = piety_positive
 	vassal_opinion = 5 # THE MOD
-	vassal_levy_contribution_add = 0.1
+	vassal_levy_contribution_add = 0.02 # THE MOD
 }
 
 pacifist_mindset_modifier = {

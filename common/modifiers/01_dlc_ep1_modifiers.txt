@@ -321,7 +321,7 @@ inspiration_alchemy_condoned_by_church_modifier = {
 promote_culture_leader_modifier = {
 	icon = social_positive
 	monthly_prestige_gain_mult = 0.2
-	vassal_levy_contribution_mult = 0.1
+	vassal_levy_contribution_mult = 0.02 # THE MOD
 }
 
 ## Court Type Flavor

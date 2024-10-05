@@ -72,6 +72,7 @@ innovation_standing_armies = {
 	
 	character_modifier = {
 		men_at_arms_cap = 1 # THE MOD
+		men_at_arms_title_limit = 1
 	}
 
 	flag = global_regular
@@ -98,11 +99,11 @@ innovation_plate_armor = {
 	
 	maa_upgrade = {
 		type = heavy_infantry
-		toughness = 3
+		toughness = 10
 	}
 	maa_upgrade = {
 		type = heavy_cavalry
-		toughness = 3
+		toughness = 20
 	}
 
 	flag = global_regular

@@ -1,9 +1,26 @@
 ﻿befriend = {
-	
+	# Basic Setup
 	skill = diplomacy
 	desc = befriend_desc_general
+	success_desc = "BEFRIEND_SUCCESS_DESC"
 	icon = icon_scheme_befriend
+	illustration = "gfx/interface/illustrations/event_scenes/corridor.dds"
+	category = personal
+	target_type = character
+	is_secret = no
+	is_basic = yes
+	uses_resistance = no
+	cooldown = { years = 30 }
+
+	# Parameters
+	speed_per_skill_point = -2.5
+	spymaster_speed_per_skill_point = 0	
+	uses_resistance = no
+	base_progress_goal = 365
+	base_maximum_success = 95
+	minimum_success = 5
 	
+	# Core Triggers
 	allow = {
 		can_use_befriend_scheme_trigger = { TARGET = scope:target }
 		is_adult = yes
@@ -27,20 +44,6 @@
 			}
 		}
 	}
-	uses_agents = no
-	is_secret = no
-	hostile = no
-	uses_resistance = no
-
-	power_per_skill_point = 2.0 # THE MOD
-	spymaster_power_per_skill_point = 0	
-	resistance_per_skill_point = 0
-	spymaster_resistance_per_skill_point = 0
-	minimum_progress_chance = 1
-	maximum_progress_chance = 95
-	maximum_success = 50 # THE MOD
-
-	
 	valid = {
 		is_incapable = no
 		scope:target = {
@@ -67,24 +70,18 @@
 		}
 	}
 
-	cooldown = { years = 30 }
-
-	on_ready = {
-		#Outcome system by Mathilda Bjarnehed
-		scheme_owner = {
-			trigger_event = befriend_outcome.0001 #Hidden event rolling success/failure, discover/no discovery and sending on_actions or player choice event
-		}
+	odds_prediction = {
+		add = base_odds_prediction_target_is_char_value
+		add = odds_skill_contribution_diplomacy_value
+		add = odds_befriend_scheme_misc_value
+		min = 0
 	}
 
+	# Base Chances
 	base_success_chance = {
 		base = 5
+		scheme_type_skill_success_chance_modifier = { SKILL = DIPLOMACY }
 		#SCHEME OWNER#
-		compare_modifier = {
-			desc = sway_my_diplomacy
-			target = scope:owner
-			value = diplomacy
-			multiplier = 2
-		}
 		opinion_modifier = {
 			desc = SCHEME_BEFRIEND_THEIR_OPINION
 			who = scope:target
@@ -99,6 +96,9 @@
 			desc = YOU_SPEAK_THE_LANGUAGE
 			scope:owner = { knows_language_of_culture = scope:target.culture }
 		}
+
+		# Countermeasures.
+		apply_opportunistic_scheme_success_chance_adjustments_modifier = yes
 		
 		# Their friend told you what they like
 		modifier = {
@@ -311,6 +311,7 @@
 		
 		#Rank tier difference (landed target/target whose liege doesn't care)
 		modifier = { #3 or more higher rank
+			trigger = { personal_scheme_should_not_evaluate_tier_differences_trigger = yes }
 			add = 50
 			desc = "HIGHER_RANK_THAN_SCHEME_TARGET"
 			scope:target = {
@@ -327,6 +328,7 @@
 			}
 		}
 		modifier = { #2 higher rank
+			trigger = { personal_scheme_should_not_evaluate_tier_differences_trigger = yes }
 			add = 25
 			desc = "HIGHER_RANK_THAN_SCHEME_TARGET"
 			scope:target = {
@@ -343,6 +345,7 @@
 			}
 		}
 		modifier = { #1 higher rank
+			trigger = { personal_scheme_should_not_evaluate_tier_differences_trigger = yes }
 			add = 10
 			desc = "HIGHER_RANK_THAN_SCHEME_TARGET"
 			scope:target = {
@@ -359,6 +362,7 @@
 			}
 		}
 		modifier = { #1 lower rank
+			trigger = { personal_scheme_should_not_evaluate_tier_differences_trigger = yes }
 			add = -10
 			desc = "LOWER_RANK_THAN_SCHEME_TARGET"
 			scope:target = {
@@ -372,6 +376,7 @@
 			}
 		}
 		modifier = { #2 lower rank
+			trigger = { personal_scheme_should_not_evaluate_tier_differences_trigger = yes }
 			add = -25
 			desc = "LOWER_RANK_THAN_SCHEME_TARGET"
 			scope:target = {
@@ -385,6 +390,7 @@
 			}
 		}
 		modifier = { #3 or less lower rank
+			trigger = { personal_scheme_should_not_evaluate_tier_differences_trigger = yes }
 			add = -50
 			desc = "LOWER_RANK_THAN_SCHEME_TARGET"
 			scope:target = {
@@ -399,6 +405,7 @@
 		}
 		#Rank tier difference (unlanded character)
 		modifier = { #3 or more higher rank
+			trigger = { personal_scheme_should_not_evaluate_tier_differences_trigger = yes }
 			add = 15
 			desc = "HIGHER_RANK_THAN_SCHEME_TARGET_LIEGE"
 			scope:target = {
@@ -415,6 +422,7 @@
 			}
 		}
 		modifier = { #2 higher rank
+			trigger = { personal_scheme_should_not_evaluate_tier_differences_trigger = yes }
 			add = 10
 			desc = "HIGHER_RANK_THAN_SCHEME_TARGET_LIEGE"
 			scope:target = {
@@ -431,6 +439,7 @@
 			}
 		}
 		modifier = { #1 higher rank
+			trigger = { personal_scheme_should_not_evaluate_tier_differences_trigger = yes }
 			add = 5
 			desc = "HIGHER_RANK_THAN_SCHEME_TARGET_LIEGE"
 			scope:target = {
@@ -447,6 +456,7 @@
 			}
 		}
 		modifier = { #1 lower rank
+			trigger = { personal_scheme_should_not_evaluate_tier_differences_trigger = yes }
 			add = -5
 			desc = "LOWER_RANK_THAN_SCHEME_TARGET_LIEGE"
 			scope:target = {
@@ -460,6 +470,7 @@
 			}
 		}
 		modifier = { #2 lower rank
+			trigger = { personal_scheme_should_not_evaluate_tier_differences_trigger = yes }
 			add = -10
 			desc = "LOWER_RANK_THAN_SCHEME_TARGET_LIEGE"
 			scope:target = {
@@ -473,6 +484,7 @@
 			}
 		}
 		modifier = { #3 or less lower rank
+			trigger = { personal_scheme_should_not_evaluate_tier_differences_trigger = yes }
 			add = -15
 			desc = "LOWER_RANK_THAN_SCHEME_TARGET_LIEGE"
 			scope:target = {
@@ -611,10 +623,66 @@
 
 		#Family Feud
 		house_feud_sway_scheme_success_modifier = yes
+
+		# Modifiers
+		modifier = {
+			scope:owner = { has_character_modifier = poet_for_diplo_schemes_modifier }
+			desc = poet_for_diplo_schemes_modifier
+			add = 15
+		}
+		# house_head_request_interaction
+		modifier = {
+			add = personal_scheme_variable_list_value
+			scope:owner = {
+				has_variable_list = supporting_personal_schemes
+			}
+			desc = HOUSE_HEAD_SCHEME_SUPPORT_DESC
+		}
+		modifier = {
+			add = -10
+			scope:owner = { has_character_modifier = personal_schemes_distracted_modifier }
+			desc = personal_schemes_distracted_modifier
+		}
+		# Estate
+		modifier = {
+			scope:owner.domicile ?= {
+				has_domicile_parameter = increased_success_personal_schemes_1
+			}
+			add = estate_increased_personal_scheme_success_1_value
+		}
+		modifier = {
+			scope:owner.domicile ?= {
+				has_domicile_parameter = increased_success_personal_schemes_2
+			}
+			add = estate_increased_personal_scheme_success_2_value
+		}
+		modifier = {
+			scope:owner.domicile ?= {
+				has_domicile_parameter = increased_success_personal_schemes_3
+			}
+			add = estate_increased_personal_scheme_success_3_value
+		}
 	}
 
+	# On Actions
+	on_start = {
+		set_variable = {
+			name = apply_countermeasures
+			value = flag:opportunistic
+		}
+	}
+	on_phase_completed = {
+		# Grab our scopes.
+		save_scope_as = scheme
+		scheme_target_character = { save_scope_as = target }
+		scheme_owner = { save_scope_as = owner }
+		#Outcome system by Mathilda Bjarnehed
+		scope:scheme.scheme_owner = {
+			trigger_event = befriend_outcome.0001 #Hidden event rolling success/failure, discover/no discovery and sending on_actions or player choice event
+		}
+	}
 	on_invalidated = {
-		scheme_target = {
+		scheme_target_character = {
 			save_scope_as = target
 		}
 		scheme_owner = {
@@ -653,8 +721,8 @@
 			}
 			scope:target = { save_scope_as = recipient } #For the message
 			scope:owner = {
-				send_interface_message = {
-					type = event_generic_neutral
+				send_interface_toast = {
+					type = event_toast_effect_neutral
 					title = befriend_invalidated_title
 					left_icon = scope:target
 					custom_tooltip = befriend_already_friend
@@ -677,12 +745,11 @@
 			}
 		}
 	}
-
 	on_monthly = {
 		#Fickleness
 		if = {
 			limit = {
-				scheme_target = {
+				scheme_target_character = {
 					has_trait = fickle
 					OR = {
 						NOT = { exists = var:recipient_fickleness_scheme }
@@ -691,7 +758,7 @@
 					}
 				}
 			}
-			scheme_target = {
+			scheme_target_character = {
 				set_variable = {
 					name = recipient_fickleness_scheme
 					value = 10
@@ -700,12 +767,12 @@
 		}
 		if = {
 			limit = {
-				scheme_target = {
+				scheme_target_character = {
 					has_trait = fickle
 					exists = var:recipient_fickleness_scheme
 				}
 			}
-			scheme_target = {
+			scheme_target_character = {
 				random_list = {
 					70 = {
 					}
@@ -745,12 +812,8 @@
 		#Sending an ongoing event
 		if = {
 			limit = {
-				scheme_owner = {
-					is_available = yes
-				}
-				scheme_target = {
-					is_available = yes
-				}
+				scheme_owner = { is_available = yes }
+				scheme_target_character = { is_available = yes }
 				player_target_available_for_personal_scheme_ongoing_events_trigger = {
 					OWNER = scope:owner
 					TARGET = scope:target
@@ -759,7 +822,7 @@
 			# Separate event sets for "Standard" and for a target that dislikes you strongly.
 			if = {
 				limit = {
-					scheme_target = {
+					scheme_target_character = {
 						has_relation_rival = scope:owner
 					}
 				}
@@ -769,7 +832,7 @@
 			}
 			else_if = {
 				limit = {
-					scheme_target = {
+					scheme_target_character = {
 						opinion = {
 							target = scope:owner
 							value >= -20
@@ -787,6 +850,4 @@
 			}
 		}
 	}
-
-	success_desc = "BEFRIEND_SUCCESS_DESC"
 }

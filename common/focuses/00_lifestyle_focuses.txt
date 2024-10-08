@@ -398,6 +398,7 @@ intrigue_skulduggery_focus = {
 			}
 			multiply = 0
 		}
+		}
 	}
 }
 

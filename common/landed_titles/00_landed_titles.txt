@@ -4269,6 +4269,7 @@ e_germany = {
 		}
 	}
 }
+
 	k_saxony = {
 		color = { 120 25 25 }
 
@@ -20759,6 +20760,7 @@ e_west_slavia = { # West Slavs: Polish, Polabian, Czech, etc.
 
 	can_create = {
 		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+		rule_title_creation_imperial_power_projection_title_creation_trigger = no # THE MOD
 	}
 
 	ai_primary_priority = {
@@ -25714,7 +25716,7 @@ e_russia = {	#Kievan Rus
 			}
 		}
 	}
-}
+
 
 e_caspian-pontic_steppe = {
 	color = { 230 180 10 }
@@ -31437,7 +31439,6 @@ e_tartaria = {
 	can_create = {
 		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
 	}
-}
 
 	ai_primary_priority = {
 		if = {
@@ -31447,6 +31448,7 @@ e_tartaria = {
 			add = @better_than_the_alternatives_score
 		}
 	}
+}
 
 	k_zhetysu = {
 		color = { 120 20 20 }
@@ -51574,13 +51576,13 @@ e_arabia = {
 
 		capital = c_jerusalem
 
-		#can_create = { # THE MOD
-			#faith = { religion_tag = christianity_religion } # THE MOD
-		#} # THE MOD
+		#can_create = { THE MOD
+		#	faith = { religion_tag = christianity_religion } THE MOD
+		#} THE MOD
 
-		#can_create_on_partition = { # THE MOD
-			#faith = { religion_tag = christianity_religion } # THE MOD
-		#} # THE MOD
+		#can_create_on_partition = { THE MOD
+		#	faith = { religion_tag = christianity_religion } THE MOD
+		#} THE MOD
 
 		ai_primary_priority = {
 			if = {
@@ -52252,7 +52254,6 @@ e_abyssinia = {
 		}
 	}
 }
-
 	k_abyssinia = {
 		color = { 120 62 20 }
 
@@ -54165,7 +54166,7 @@ e_abyssinia = {
 			}
 		}
 	}
-}
+
 
 e_ajuraan = {
 	color = { 218 86 25 }
@@ -54185,7 +54186,6 @@ e_ajuraan = {
 		}
 	}
 }
-
 	k_ajuraan = {
 		color = { 225 90 30 }
 
@@ -54688,7 +54688,6 @@ e_kanem_bornu = {
 		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
 	}
 }
-
 	k_kanem = {
 		color = { 124 184 124 }
 

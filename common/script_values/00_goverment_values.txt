@@ -2,7 +2,7 @@
 # GOVERNMENT VALUES  #
 ###################
 
-clan_government_levies_default = 0.22 # THE MOD
+clan_government_levies_default = 0.18 # THE MOD
 
 clan_government_levies_player = 0.25
 
@@ -25,23 +25,23 @@ clan_government_tax_collector_aptitude_multiplier = {
 		}
 		if = { # Reordered to maximize performance based on commonality of aptitude
 			limit = { scope:aptitude_value = 1 }
-			add = 1.2 # THE MOD
-		}
-		else_if = {
-			limit = { scope:aptitude_value = 2 }
-			add = 1.25 # THE MOD
-		}
-		else_if = {
-			limit = { scope:aptitude_value = 0 }
 			add = 1.1 # THE MOD
 		}
 		else_if = {
+			limit = { scope:aptitude_value = 2 }
+			add = 1.15 # THE MOD
+		}
+		else_if = {
+			limit = { scope:aptitude_value = 0 }
+			add = 1.05 # THE MOD
+		}
+		else_if = {
 			limit = { scope:aptitude_value = 3 }
-			add = 1.35 # THE MOD
+			add = 1.2 # THE MOD
 		}
 		else_if = {
 			limit = { scope:aptitude_value = 4 }
-			add = 1.45 # THE MOD
+			add = 1.25 # THE MOD
 		}
 	}
 }

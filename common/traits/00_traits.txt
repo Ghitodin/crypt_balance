@@ -13,7 +13,8 @@ education_intrigue_1 = {
 	intrigue = 2
 	category = education
 	monthly_intrigue_lifestyle_xp_gain_mult = 0.1
-	domain_limit = -1
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	ruler_designer_cost = 0
 
@@ -71,7 +72,8 @@ education_intrigue_3 = {
 	category = education
 	monthly_intrigue_lifestyle_xp_gain_mult = 0.2 # THE MOD
 
-	domain_limit = 1
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	ruler_designer_cost = 40
 
@@ -98,7 +100,8 @@ education_intrigue_4 = {
 	category = education
 	monthly_intrigue_lifestyle_xp_gain_mult = 0.25 # THE MOD
 
-	domain_limit = 2
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	ruler_designer_cost = 80
 
@@ -132,7 +135,8 @@ education_intrigue_5 = {
 
 	owned_hostile_scheme_success_chance_max_add = 10
 	flag = agent_acceptance_25
-	domain_limit = 3
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	ruler_designer_cost = 150
 
@@ -161,7 +165,8 @@ education_diplomacy_1 = {
 	diplomacy = 2
 	category = education
 	monthly_diplomacy_lifestyle_xp_gain_mult = 0.1
-	domain_limit = -1
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	ruler_designer_cost = 0
 
@@ -219,7 +224,8 @@ education_diplomacy_3 = {
 	category = education
 	monthly_diplomacy_lifestyle_xp_gain_mult = 0.2 # THE MOD
 
-	domain_limit = 1
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	ruler_designer_cost = 40
 
@@ -246,7 +252,8 @@ education_diplomacy_4 = {
 	category = education
 	monthly_diplomacy_lifestyle_xp_gain_mult = 0.25 # THE MOD
 
-	domain_limit = 2
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	ruler_designer_cost = 80
 
@@ -290,7 +297,8 @@ education_diplomacy_5 = {
 	owned_personal_scheme_success_chance_max_add = 10
 	flag = offer_vassalisation_25
 	flag = better_war_hostages
-	domain_limit = 3
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	ruler_designer_cost = 150
 
@@ -328,7 +336,8 @@ education_stewardship_1 = { #Indulgent wastrel
 	stewardship = 2
 	category = education
 	monthly_stewardship_lifestyle_xp_gain_mult = 0.1
-	domain_limit = -1
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	ruler_designer_cost = 0
 
@@ -386,7 +395,8 @@ education_stewardship_3 = {	#Fortune builder
 	category = education
 	monthly_stewardship_lifestyle_xp_gain_mult = 0.2 # THE MOD
 
-	domain_limit = 1
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	ruler_designer_cost = 40
 
@@ -413,7 +423,8 @@ education_stewardship_4 = {
 	category = education
 	monthly_stewardship_lifestyle_xp_gain_mult = 0.25 # THE MOD
 
-	domain_limit = 2
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	culture_modifier = {
 		parameter = elephant_bonuses_for_rank_4_education
@@ -455,7 +466,8 @@ education_stewardship_5 = {
 
 	vassal_tax_mult = 0.05 # THE MOD
 
-	domain_limit = 3
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	culture_modifier = {
 		parameter = elephant_bonuses_for_rank_4_education
@@ -492,7 +504,8 @@ education_martial_1 = {
 	martial = 2
 	category = education
 	monthly_martial_lifestyle_xp_gain_mult = 0.1
-	domain_limit = -1
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	culture_modifier = {
 		parameter = poorly_educated_leaders_distrusted
@@ -575,7 +588,8 @@ education_martial_3 = { #Skilled tactician
 	category = education
 	monthly_martial_lifestyle_xp_gain_mult = 0.2 # THE MOD
 
-	domain_limit = 1
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	culture_modifier = {
 		parameter = prowess_from_martial_education
@@ -614,7 +628,8 @@ education_martial_4 = { #Brilliant strategist
 	category = education
 	monthly_martial_lifestyle_xp_gain_mult = 0.25 # THE MOD
 
-	domain_limit = 2
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	culture_modifier = {
 		parameter = prowess_from_martial_education
@@ -670,7 +685,8 @@ education_martial_5 = {
 
 	movement_speed = 0.1 # THE MOD
 
-	domain_limit = 3
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	culture_modifier = {
 		parameter = prowess_from_martial_education
@@ -719,7 +735,8 @@ education_learning_1 = {
 	learning = 2
 	category = education
 	monthly_learning_lifestyle_xp_gain_mult = 0.1
-	domain_limit = -1
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	culture_modifier = {
 		parameter = poorly_educated_leaders_distrusted
@@ -809,7 +826,8 @@ education_learning_3 = {
 	category = education
 	monthly_learning_lifestyle_xp_gain_mult = 0.2 # THE MOD
 
-	domain_limit = 1
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	culture_modifier = {
 		parameter = prowess_from_religious_traits
@@ -852,7 +870,8 @@ education_learning_4 = {
 	category = education
 	monthly_learning_lifestyle_xp_gain_mult = 0.25 # THE MOD
 
-	domain_limit = 2
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	culture_modifier = {
 		parameter = prowess_from_religious_traits
@@ -913,7 +932,8 @@ education_learning_5 = {
 	development_growth = 0.05 # THE MOD
 
 	county_fertility_growth_mult = small_county_fertility_growth_gain
-	domain_limit = 3
+	# THE MOD: removed new vanilla education/perk domain modifier
+
 
 	culture_modifier = {
 		parameter = prowess_from_religious_traits

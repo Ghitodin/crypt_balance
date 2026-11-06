@@ -1,4 +1,4 @@
-serve_the_crown_perk = {
+﻿serve_the_crown_perk = {
 	lifestyle = martial_lifestyle
 	tree = authority
 	position = { 1 0 }
@@ -325,7 +325,8 @@ absolute_control_perk = {
 
 	government_character_modifier = {
 		flag = government_uses_domain_limit #True for governments that do not use domain_limit_max or that do not hold _any_ land.
-		domain_limit = 1
+		# THE MOD: removed new vanilla education/perk domain modifier
+
 	}
 
 	effect = {

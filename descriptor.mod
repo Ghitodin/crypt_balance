@@ -1,7 +1,7 @@
 version="2.2-core-1.20.1.2"
 tags={
-    "Balance"
-    "Fixes"
+	"Balance"
+	"Fixes"
 }
 name="Crypt Balance"
 supported_version="1.20.1.2"

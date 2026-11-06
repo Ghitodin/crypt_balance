@@ -1,4 +1,4 @@
-@correct_culture_primary_score = 100
+﻿@correct_culture_primary_score = 100
 
 @better_than_the_alternatives_score = 50
 
@@ -4392,7 +4392,9 @@ e_germany = {
 
 		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
 	
-}
+
+		always = no # THE MOD: forbid ordinary de jure creation
+	}
 
 
 	ai_primary_priority = {
@@ -17897,7 +17899,9 @@ e_west_slavia = { # West Slavs: Polish, Polabian, Czech, etc.
 	can_create = {
 		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
 	
-}
+
+		always = no # THE MOD: forbid ordinary de jure creation
+	}
 
 
 	ai_primary_priority = {

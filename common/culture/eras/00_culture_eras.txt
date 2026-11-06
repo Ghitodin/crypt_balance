@@ -5,14 +5,14 @@ culture_era_tribal = {
 
 culture_era_early_medieval = {	
 	year = 930 # THE MOD
+
 	invalid_for_government = tribal_government
+	invalid_for_government = nomad_government
+	invalid_for_government = herder_government
+	invalid_for_government = wanua_government
 	
 	culture_modifier = {
 		culture_tradition_max_add = 1
-	}
-	
-	character_modifier = {
-		levy_reinforcement_rate = -0.15 # THE MOD
 	}
 
 	custom = more_expensive_court_positions
@@ -29,37 +29,21 @@ culture_era_early_medieval = {
 		toughness = 2
 	}
 
-	# Accolade
-	## Accolade Archers
+	## Gakgung Archers
 	maa_upgrade = {
-		men_at_arms = accolade_maa_archers
-		damage = 6
-	}
-	## Accolade Skirmishers
-	maa_upgrade = {
-		men_at_arms = accolade_maa_skirmishers
-		damage = 6
-	}
-	## Accolade Pikes
-	maa_upgrade = {
-		men_at_arms = accolade_maa_pikes
-		damage = 6
-	}
-	## Accolade Outriders
-	maa_upgrade = {
-		men_at_arms = accolade_maa_outriders
-		pursuit = 6
-	}
-	## Accolade Cameliers
-	maa_upgrade = {
-		men_at_arms = accolade_maa_cameliers
-		pursuit = 6
+		men_at_arms = gakgung_archers
+		damage = 5
+		toughness = 2
 	}
 }
 
 culture_era_high_medieval = {
 	year = 1110 # THE MOD
+
 	invalid_for_government = tribal_government
+	invalid_for_government = nomad_government
+	invalid_for_government = herder_government
+	invalid_for_government = wanua_government
 	
 	culture_modifier = {
 		culture_tradition_max_add = 1
@@ -67,7 +51,6 @@ culture_era_high_medieval = {
 	
 	character_modifier = {
 		mercenary_hire_cost_mult = 0.15
-		levy_reinforcement_rate = -0.25 # THE MOD
 	}
 
 	custom = more_expensive_court_positions
@@ -84,59 +67,28 @@ culture_era_high_medieval = {
 		toughness = 2
 	}
 
-	# Accolade
-	## Accolade Archers
+	## Gakgung Archers
 	maa_upgrade = {
-		men_at_arms = accolade_maa_archers
-		damage = 4
-		toughness = 4
+		men_at_arms = gakgung_archers
+		damage = 6
+		toughness = 2
 	}
-	## Accolade Skirmishers
+
+	## Fire Lancers
 	maa_upgrade = {
-		men_at_arms = accolade_maa_skirmishers
-		damage = 4
-		toughness = 4
-		pursuit = 4
-		screen = 4
-	}
-	## Accolade Pikes
-	maa_upgrade = {
-		men_at_arms = accolade_maa_pikes
-		damage = 4
-		toughness = 4
-	}
-	## Accolade Outriders
-	maa_upgrade = {
-		men_at_arms = accolade_maa_outriders
-		damage = 4
-		toughness = 4
-		pursuit = 4
-		screen = 4
-	}
-	## Accolade Vanguards
-	maa_upgrade = {
-		men_at_arms = accolade_maa_vanguards
-		damage = 10
-		toughness = 10
-	}
-	## Accolade Lancers
-	maa_upgrade = {
-		men_at_arms = accolade_maa_lancers
-		pursuit = 10
-	}
-	## Accolade Cameliers
-	maa_upgrade = {
-		men_at_arms = accolade_maa_cameliers
-		damage = 4
-		toughness = 4
-		pursuit = 4
-		screen = 4
+		men_at_arms = fire_lancers
+		damage = 5
+		screen = 3
 	}
 }
 
 culture_era_late_medieval = {
 	year = 1300 # THE MOD
+
 	invalid_for_government = tribal_government
+	invalid_for_government = nomad_government
+	invalid_for_government = herder_government
+	invalid_for_government = wanua_government
 	
 	culture_modifier = {
 		culture_tradition_max_add = 1
@@ -144,7 +96,6 @@ culture_era_late_medieval = {
 
 	character_modifier = {
 		mercenary_hire_cost_mult = 0.15
-		levy_reinforcement_rate = -0.3 # THE MOD
 	}
 
 	custom = more_expensive_court_positions
@@ -162,58 +113,17 @@ culture_era_late_medieval = {
 		toughness = 2
 	}
 
-	# Accolade
-	## Accolade Archers
+	## Gakgung Archers
 	maa_upgrade = {
-		men_at_arms = accolade_maa_archers
-		damage = 10
-		toughness = 10
+		men_at_arms = gakgung_archers
+		damage = 8
+		toughness = 2
 	}
-	## Accolade Skirmishers
+
+	## Fire Lancers
 	maa_upgrade = {
-		men_at_arms = accolade_maa_skirmishers
-		damage = 6
-		toughness = 6
-		pursuit = 4
-		screen = 4
-	}
-	## Accolade Pikes
-	maa_upgrade = {
-		men_at_arms = accolade_maa_pikes
-		damage = 10
-		toughness = 6
-	}
-	## Accolade Outriders
-	maa_upgrade = {
-		men_at_arms = accolade_maa_outriders
-		damage = 16
-		toughness = 16
-		pursuit = 20
-		screen = 6
-	}
-	## Accolade Vanguards
-	maa_upgrade = {
-		men_at_arms = accolade_maa_vanguards
-		damage = 10
-		toughness = 10
-	}
-	## Accolade Lancers
-	maa_upgrade = {
-		men_at_arms = accolade_maa_lancers
-		screen = 20
-	}
-	## Accolade Crossbowers
-	maa_upgrade = {
-		men_at_arms = accolade_maa_crossbowers
-		damage = 10
-		toughness = 10
-	}
-	## Accolade Cameliers
-	maa_upgrade = {
-		men_at_arms = accolade_maa_cameliers
-		damage = 16
-		toughness = 6
-		pursuit = 20
-		screen = 6
+		men_at_arms = fire_lancers
+		damage = 8
+		screen = 5
 	}
 }

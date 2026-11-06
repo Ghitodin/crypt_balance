@@ -1,30 +1,137 @@
-﻿golden_obligation_value = {
+golden_obligation_value = {
 	if = {
-		limit = { 
-			ransom_cost_value < medium_gold_value 
-			ransom_cost_value > minor_gold_value 
+		limit = {
+			normal_ransom_cost_value < minor_gold_value 
 		}
-		value = 10 # THE MOD
+		value = minor_gold_value
 	}
 	else_if = {
-		limit = {
-			ransom_cost_value < medium_gold_value 
-			ransom_cost_value < minor_gold_value 
+		limit = { 
+			normal_ransom_cost_value < medium_gold_value 
 		}
-		value = 10 # THE MOD
+		value = normal_ransom_cost_value
 	}
 	else = {
-		value = 10 # THE MOD
+		value = medium_gold_value
+	}
+	if = {
+		limit = {
+			trigger_if = {
+				limit = { exists = scope:puppet_or_actor }
+				scope:puppet_or_actor ?= {
+					has_strong_hook = prev
+				}
+			}
+			trigger_else = {
+				scope:actor ?= {
+					has_strong_hook = prev
+				}
+			}
+		}
+		multiply = 1.5
 	}
 }
+
 
 golden_obligation_value_check_current_situation = {
 	add = gold
+	floor = yes
 	max = golden_obligation_value
 }
 
-ransom_cost_value = {
-	value = ransom_cost
+
+ransom_multiplier = {
+	if = {
+		limit = {
+			is_ruler = no
+			exists = liege
+		}
+		if = {
+			limit = { is_primary_heir_of = liege }
+			add = 1
+		}
+		if = {
+			limit = { is_spouse_of = liege }
+			add = 0.5
+		}
+		if = {
+			limit = { is_close_family_of = liege }
+			add = 0.25
+		}
+	}
+	min = 1
+}
+
+
+ransom_herd_value = {
+	value = 0
+	#If we're paying ransom for ourselves or a subject
+	if = {
+		limit = { scope:actor != imprisoner }
+		scope:actor = {
+			if = {
+				limit = { exists = domicile }
+				if = {
+					limit = { primary_title.tier >= tier_empire }
+					add = domicile.massive_herd_value
+				}
+				else_if = {
+					limit = { primary_title.tier >= tier_kingdom }
+					add = domicile.major_herd_value
+				}
+				else_if = {
+					limit = { primary_title.tier >= tier_duchy }
+					add = domicile.medium_herd_value
+					multiply = 1.5
+				}
+				else_if = {
+					limit = { primary_title.tier >= tier_county }
+					add = domicile.medium_herd_value
+				}
+				else = { add = domicile.minor_herd_value }
+			}
+		}
+		#If we're paying ransom for a subject
+		if = {
+			limit = {
+				scope:secondary_recipient ?= {
+					is_ruler = no 
+					liege ?= scope:actor
+				}
+			}
+			multiply = scope:secondary_recipient.ransom_multiplier
+		}
+	}
+	#If the imprisoner is ransoming someone
+	else = {
+		scope:recipient = {
+			if = {
+				limit = { exists = domicile }
+				if = {
+					limit = { primary_title.tier >= tier_empire }
+					add = domicile.massive_herd_value
+				}
+				else_if = {
+					limit = { primary_title.tier >= tier_kingdom }
+					add = domicile.major_herd_value
+				}
+				else_if = {
+					limit = { primary_title.tier >= tier_duchy }
+					add = domicile.medium_herd_value
+					multiply = 1.5
+				}
+				else_if = {
+					limit = { primary_title.tier >= tier_county }
+					add = domicile.medium_herd_value
+				}
+				else = { add = domicile.minor_herd_value }
+			}
+		}
+		if = {
+			limit = { scope:recipient != scope:secondary_recipient }
+			multiply = scope:secondary_recipient.ransom_multiplier
+		}
+	}	
 	# Some cultures are better at ransoming than others.
 	if = {
 		limit = {
@@ -42,87 +149,110 @@ ransom_cost_value = {
 	if = {
 		limit = {
 			NOT = { exists = liege }
-			gold >= 100
+			domicile.herd >= massive_herd_value_static
 		}
-		add = 90
-	}
-	#increase it if the imprisoner has a Haggler Officer employed
-	if = {
-		limit = {
-			exists = scope:imprisoner
-			scope:imprisoner ?= {
-				employs_court_position = person_haggler_camp_officer
-			}
-		}
-		multiply = {
-			value = scope:imprisoner.court_position:person_haggler_camp_officer.aptitude:person_haggler_camp_officer
-			add = 1
-			divide = 15
-			add = 1
-		}
+		add = medium_herd_value_static
 	}
 	if = {
 		limit = {
-			imprisoner ?= {
-				employs_court_position = person_haggler_camp_officer
+			has_game_rule = hard_difficulty
+			OR = {
+				scope:imprisoner ?= { is_ai = no }
+				imprisoner ?= { is_ai = no }
 			}
 		}
-		multiply = {
-			value = imprisoner.court_position:person_haggler_camp_officer.aptitude:person_haggler_camp_officer
-			add = 1
-			divide = 15
-			add = 1
-		}
+		multiply = 0.5
 	}
-	#decrease it if the imprisoned has a Haggler Officer employed
+	else_if = {
+		limit = {
+			has_game_rule = very_hard_difficulty
+			OR = {
+				scope:imprisoner ?= { is_ai = no }
+				imprisoner ?= { is_ai = no }
+			}
+		}
+		multiply = 0.25
+	}
+	round_to = 5
+}
+
+
+ransom_cost_value = {
 	if = {
 		limit = {
 			OR = {
-				AND = {
-					exists = scope:imprisoner
-					scope:recipient ?= scope:imprisoner
+				scope:imprisoner.dynasty ?= {
+					has_dynasty_perk = fp1_pillage_legacy_3
 				}
-				AND = {
-					exists = imprisoner
-					scope:recipient ?= imprisoner
+				imprisoner.dynasty ?= {
+					has_dynasty_perk = fp1_pillage_legacy_3
 				}
 			}
-			scope:actor ?= {
-				employs_court_position = person_haggler_camp_officer
-			}
 		}
-		divide = {
-			value = scope:actor.court_position:person_haggler_camp_officer.aptitude:person_haggler_camp_officer
-			add = 1
-			divide = 10
-			add = 1
-		}
+		value = increased_ransom_cost_value
 	}
-	#decrease it if the imprisoned has a Haggler Officer employed
-	if = {
-		limit = {
-			OR = {
-				AND = {
-					exists = scope:imprisoner
-					scope:actor ?= scope:imprisoner
-				}
-				AND = {
-					exists = imprisoner
-					scope:actor ?= imprisoner
-				}
-			}
-			scope:recipient ?= {
-				employs_court_position = person_haggler_camp_officer
-			}
-		}
-		divide = {
-			value = scope:recipient.court_position:person_haggler_camp_officer.aptitude:person_haggler_camp_officer
-			add = 1
-			divide = 10
-			add = 1
-		}
+	else = {
+		value = normal_ransom_cost_value
 	}
 }
+
+
+normal_ransom_cost_value = {
+	value = ransom_cost
+	# Some cultures are better at ransoming than others.
+	if = {
+		limit = {
+			exists = imprisoner
+			imprisoner.culture = { has_cultural_parameter = can_demand_higher_ransoms_from_lower_tiers }
+			# Kings and emperors are already worth more, so we just boost landless and ducal-tier or below.
+			OR = {
+				NOT = { exists = liege }
+				highest_held_title_tier <= tier_duchy
+			}
+		}
+		multiply = 1.5
+	}
+	# Rich guests can pay a bit more...
+	if = {
+		limit = {
+			OR = {
+				NOT = { exists = liege }
+				scope:recipient ?= this  # when used in golden_obligation_value etc. they are doing on their own behavior so we don't care liege
+			}
+			is_ruler = no
+		}
+		if = {
+			limit = { gold >= 100 }
+			add = 90
+		}
+		else_if = {
+			limit = { gold >= 50 }
+			add = 15
+		}
+	}
+	if = {
+		limit = {
+			has_game_rule = hard_difficulty
+			OR = {
+				scope:imprisoner ?= { is_ai = no }
+				imprisoner ?= { is_ai = no }
+			}
+		}
+		multiply = 0.5
+	}
+	else_if = {
+		limit = {
+			has_game_rule = very_hard_difficulty
+			OR = {
+				scope:imprisoner ?= { is_ai = no }
+				imprisoner ?= { is_ai = no }
+			}
+		}
+		multiply = 0.25
+	}
+	multiply = haggler_ransom_cost_factor
+}
+
 
 current_situation_gold_ransom = {
 	if = {
@@ -145,13 +275,15 @@ current_situation_gold_ransom = {
 	max = ransom_cost_value
 }
 
+
 half_ransom_cost_value = {
 	value = {
-		add = ransom_cost_value
+		add = normal_ransom_cost_value
 		divide = 2
 		min = 1
 	}
 }
+
 
 half_increased_ransom_cost_value = {
 	value = {
@@ -161,12 +293,14 @@ half_increased_ransom_cost_value = {
 	}
 }
 
+
 increased_ransom_cost_value = {
 	value = {
-		add = ransom_cost_value
+		add = normal_ransom_cost_value
 		multiply = 1.5
 	}
 }
+
 
 increased_ransom_cost = {
 	value = {
@@ -175,31 +309,87 @@ increased_ransom_cost = {
 	}
 }
 
-#reverse all ransom_cost_value calculations leaving just the haggler value and show it in all ransom interation windows
+haggler_ransom_cost_factor = {
+	value = 1
+	#increase it if the imprisoner has a Haggler Officer employed
+	if = {
+		limit = {
+			scope:imprisoner ?= { employs_court_position = person_haggler_camp_officer }
+		}
+		multiply = {
+			value = scope:imprisoner.court_position:person_haggler_camp_officer.aptitude:person_haggler_camp_officer
+			add = 1
+			divide = 15
+			add = 1
+		}
+	}
+	else_if = {
+		limit = {
+			imprisoner ?= { employs_court_position = person_haggler_camp_officer }
+		}
+		multiply = {
+			value = imprisoner.court_position:person_haggler_camp_officer.aptitude:person_haggler_camp_officer
+			add = 1
+			divide = 15
+			add = 1
+		}
+	}
+	#decrease it if the imprisoned has a Haggler Officer employed
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					exists = scope:imprisoner
+					scope:recipient ?= scope:imprisoner
+				}
+				AND = {
+					exists = imprisoner
+					scope:recipient ?= imprisoner
+				}
+			}
+			scope:actor ?= { employs_court_position = person_haggler_camp_officer }
+		}
+		divide = {
+			value = scope:actor.court_position:person_haggler_camp_officer.aptitude:person_haggler_camp_officer
+			add = 1
+			divide = 10
+			add = 1
+		}
+	}
+	#decrease it if the imprisoned has a Haggler Officer employed
+	else_if = {
+		limit = {
+			OR = {
+				AND = {
+					exists = scope:imprisoner
+					scope:actor ?= scope:imprisoner
+				}
+				AND = {
+					exists = imprisoner
+					scope:actor ?= imprisoner
+				}
+			}
+			scope:recipient ?= { employs_court_position = person_haggler_camp_officer }
+		}
+		divide = {
+			value = scope:recipient.court_position:person_haggler_camp_officer.aptitude:person_haggler_camp_officer
+			add = 1
+			divide = 10
+			add = 1
+		}
+	}
+}
+
+
 haggler_ransom_cost_modifier = {
 	value = ransom_cost_value
-	# Rich guests can pay a bit more...
-	if = {
-		limit = {
-			NOT = { exists = liege }
-			gold >= 100
-		}
-		subtract = 90
+	divide = haggler_ransom_cost_factor
+	multiply = {
+		value = haggler_ransom_cost_factor
+		subtract = 1
 	}
-	if = {
-		limit = {
-			exists = imprisoner
-			imprisoner.culture = { has_cultural_parameter = can_demand_higher_ransoms_from_lower_tiers }
-			# Kings and emperors are already worth more, so we just boost landless and ducal-tier or below.
-			OR = {
-				NOT = { exists = liege }
-				highest_held_title_tier <= tier_duchy
-			}
-		}
-		divide = 1.5
-	}
-	subtract = ransom_cost
 }
+
 
 grant_title_opinion_sum_baronies = {
 	if = { # if no other titles present, calc for baronies
@@ -220,6 +410,7 @@ grant_title_opinion_sum_baronies = {
 	}
 }
 
+
 grant_title_opinion_sum_counties = {
 	if = { # if no higher titles present, calc for counties
 		limit = {
@@ -238,6 +429,7 @@ grant_title_opinion_sum_counties = {
 		}
 	}
 }
+
 
 grant_title_opinion_sum_duchies = {
 	if = {
@@ -258,6 +450,7 @@ grant_title_opinion_sum_duchies = {
 	}
 }
 
+
 grant_title_opinion_sum_kingdoms = {
 	if = {
 		limit = {
@@ -277,24 +470,26 @@ grant_title_opinion_sum_kingdoms = {
 	}
 }
 
+
 grant_title_opinion_sum_empires = {
 	if = {
 		limit = {
 			any_in_list = {
 				list = titles_to_grant
-				tier = tier_empire
+				tier >= tier_empire
 			}
 		}
 		
 		every_in_list = {
 			list = titles_to_grant
 			limit = {
-				tier = tier_empire
+				tier >= tier_empire
 			}
 			add = 100 # empire grant opinion
 		}
 	}
 }
+
 
 # Used in the corresponding character interaction
 # when granting a title to the member of a faction.
@@ -353,6 +548,21 @@ grant_title_opinion_sum_discontent_calc = {
 	multiply = -1
 }
 
+
+# Liege is root, and this expects scope:liege_temp and scope:rebel_temp
+revoke_refusal_war_rising_strength_value = {
+	value = scope:rebel_temp.current_military_strength
+
+	every_powerful_vassal = {
+		limit = {
+			vassal_would_join_rebel_faction_base_trigger = yes
+			vassal_would_join_rebel_faction_tyranny_trigger = yes
+		}
+		add = current_military_strength
+	}
+}
+
+
 courtly_vassal_lowborn_grant_penalty = {
 	if = {
 		limit = {
@@ -388,113 +598,159 @@ courtly_vassal_lowborn_grant_penalty = {
 	}
 }
 
-number_of_courtly_vassals = {
+
+number_of_disciples = {
 	value = 0
-	every_vassal = {
-		limit = {
-			has_vassal_stance = courtly
-		}
+	every_relation = {
+		type = disciple
 		add = 1
 	}
 }
+
+every_disciple_movement_power_value = {
+	value = 0
+	every_relation = {
+		type = disciple
+		if = {
+			limit = { has_variable = movement_power }
+			add = var:movement_power
+		}
+		else = {
+			add = movement_power_character_value
+		}
+	}
+}
+
+
+number_of_courtly_vassals = {
+	value = 0
+	every_vassal = {
+		vassal_stance = courtly
+		add = 1
+	}
+}
+
 
 number_of_participating_courtly_vassals = {
 	value = 0
 	every_vassal = {
+		vassal_stance = courtly
 		limit = {
-			has_vassal_stance = courtly
 			is_participant_in_activity = root.involved_activity
 		}
 		add = 1
 	}
 }
+
 
 number_of_glory_hound_vassals = {
 	value = 0
 	every_vassal = {
-		limit = {
-			has_vassal_stance = glory_hound
-		}
+		vassal_stance = glory_hound
 		add = 1
 	}
 }
+
 
 number_of_participating_glory_hound_vassals = {
 	value = 0
 	every_vassal = {
+		vassal_stance = glory_hound
 		limit = {
-			has_vassal_stance = glory_hound
 			is_participant_in_activity = root.involved_activity
 		}
 		add = 1
 	}
 }
+
 
 number_of_parochial_vassals = {
 	value = 0
 	every_vassal = {
-		limit = {
-			has_vassal_stance = parochial
-		}
+		vassal_stance = parochial
 		add = 1
 	}
 }
+
 
 number_of_participating_parochial_vassals = {
 	value = 0
 	every_vassal = {
+		vassal_stance = parochial
 		limit = {
-			has_vassal_stance = parochial
 			is_participant_in_activity = root.involved_activity
 		}
 		add = 1
 	}
 }
+
 
 number_of_zealot_vassals = {
 	value = 0
 	every_vassal = {
-		limit = {
-			has_vassal_stance = zealot
-		}
+		vassal_stance = zealot
 		add = 1
 	}
 }
 
+
 number_of_participating_zealot_vassals = {
 	value = 0
 	every_vassal = {
+		vassal_stance = zealot
 		limit = {
-			has_vassal_stance = zealot
 			is_participant_in_activity = root.involved_activity
 		}
 		add = 1
 	}
 }
 
+
 number_of_minority_vassals = {
 	value = 0
 	every_vassal = {
+		vassal_stance = minority
+		add = 1
+	}
+}
+
+
+number_of_belligerent_vassals = {
+	value = 0
+	every_vassal = {
 		limit = {
-			has_vassal_stance = minority
+			has_vassal_stance = belligerent
 		}
 		add = 1
 	}
 }
+
+
+number_of_participating_belligerent_vassals = {
+	value = 0
+	every_vassal = {
+		limit = {
+			has_vassal_stance = belligerent
+			is_participant_in_activity = root.involved_activity
+		}
+		add = 1
+	}
+}
+
 
 number_of_barons_and_minor_landholders_vassals = {
 	value = 0
 	every_vassal = {
-		limit = {
-			has_vassal_stance = barons_and_minor_landholders
-		}
+		vassal_stance = barons_and_minor_landholders
 		add = 1
 	}
 }
 
+
 council_position_locked_value = {
 	value = 25
 }
+
 
 marriage_fertile_age_value = {
 	value = {
@@ -504,6 +760,7 @@ marriage_fertile_age_value = {
 	}
 }
 
+
 marriage_fertile_age_reverse_value = {
 	value = {
 		add = 16
@@ -511,6 +768,7 @@ marriage_fertile_age_reverse_value = {
 		add = scope:secondary_recipient.age
 	}
 }
+
 
 marriage_female_fertility_cutoff_age_value = {
 	value = {
@@ -524,8 +782,7 @@ marriage_female_fertility_cutoff_age_value = {
 		}
 		if = {
 			limit = {
-				exists = dynasty
-				dynasty = {
+				dynasty ?= {
 					has_dynasty_perk = blood_legacy_5
 				}
 			}
@@ -533,6 +790,7 @@ marriage_female_fertility_cutoff_age_value = {
 		}
 	}
 }
+
 
 offer_vassalage_acceptance_value = {
 	value = {
@@ -620,6 +878,7 @@ offer_vassalage_acceptance_value = {
 	}
 }
 
+
 vassal_claim_liege_title_interaction_highlight_value = {
 	value = {
 		add = monumental_prestige_value
@@ -644,11 +903,13 @@ vassal_claim_liege_title_interaction_highlight_value = {
 	}
 }
 
+
 script_current_military_strength = {
 	value = {
 		add = current_military_strength
 	}
 }
+
 
 one_and_a_half_times_current_military_strength = {
 	value = {
@@ -657,12 +918,14 @@ one_and_a_half_times_current_military_strength = {
 	}
 }
 
+
 twice_current_military_strength = {
 	value = {
 		add = current_military_strength
 		multiply = 2
 	}
 }
+
 
 fifty_percent_more_of_current_military_strength = {
 	value = {
@@ -671,12 +934,22 @@ fifty_percent_more_of_current_military_strength = {
 	}
 }
 
+
 eighty_percent_of_current_military_strength = {
 	value = {
 		add = current_military_strength
 		multiply = 0.8
 	}
 }
+
+
+seventy_percent_of_current_military_strength = {
+	value = {
+		add = current_military_strength
+		multiply = 0.7
+	}
+}
+
 
 a_third_of_current_military_strength = {
 	value = {
@@ -685,12 +958,14 @@ a_third_of_current_military_strength = {
 	}
 }
 
+
 forty_percent_of_current_military_strength = {
 	value = {
 		add = current_military_strength
 		multiply = 0.4
 	}
 }
+
 
 fifty_percent_of_current_military_strength = {
 	value = {
@@ -699,12 +974,30 @@ fifty_percent_of_current_military_strength = {
 	}
 }
 
+
+one_quarter_current_military_strength = {
+	value = {
+		add = current_military_strength
+		multiply = 0.25
+	}
+}
+
+
+ten_percent_of_current_military_strength = {
+	value = {
+		add = current_military_strength
+		multiply = 0.1
+	}
+}
+
+
 eighty_percent_of_max_military_strength = {
 	value = {
 		add = max_military_strength
 		multiply = 0.8
 	}
 }
+
 
 fifty_percent_of_max_military_strength = {
 	value = {
@@ -713,6 +1006,7 @@ fifty_percent_of_max_military_strength = {
 	}
 }
 
+
 twenty_percent_of_max_military_strength = {
 	value = {
 		add = max_military_strength
@@ -720,10 +1014,16 @@ twenty_percent_of_max_military_strength = {
 	}
 }
 
-designate_heir_cost = 1000
+
+designate_heir_cost = 500 # THE MOD
+
+
 designate_heir_admin_prestige_cost = 500
+
 designate_heir_admin_influence_cost = 150
+
 designate_heir_laamp_prestige_cost = 150
+
 
 marry_close_family_tiers_acceptance_value = {
 	value = 0
@@ -754,22 +1054,13 @@ marry_close_family_tiers_acceptance_value = {
 				save_temporary_scope_as = tier_comparison_second
 			}				
 		}
-	}	
+	}
 	
 	add = scope:tier_comparison_first.highest_held_title_tier
 	subtract = scope:tier_comparison_second.highest_held_title_tier
-
-	if = {
-		limit = {
-			scope:recipient = { is_close_family_of = scope:secondary_recipient }			
-		}
-		
-		multiply = 30
-	}
-	else = {
-		multiply = 20
-	}
+	multiply = 5
 }
+
 
 elope_close_family_tiers_acceptance_value = {
 	value = 0
@@ -805,5 +1096,245 @@ elope_close_family_tiers_acceptance_value = {
 	add = scope:tier_comparison_first.highest_held_title_tier
 	subtract = scope:tier_comparison_second.highest_held_title_tier
 	multiply = 25
+}
+
+
+duchy_confederation_vassals_value = {
+	value = 0
+	scope:actor.confederation = {
+		every_confederation_member = {
+			limit = {
+				highest_held_title_tier >= tier_county
+			}
+			add = -1
+		}
+	}
+	#First 3 confederates are free
+	add = 3
+	#Multiply by 20 to get impact
+	max = 0
+	multiply = 15
+}
+
+
+duchy_confederation_vassals_value_recipient = {
+	value = 0
+	scope:recipient.confederation = {
+		every_confederation_member = {
+			limit = {
+				highest_held_title_tier >= tier_county
+			}
+			add = -1
+		}
+	}
+	#First 5 confederates are free
+	add = 5
+	#Multiply by 20 to get impact
+	max = 0
+	multiply = 15
+}
+
+
+monastic_donation_value = {
+	value = major_gold_value
+}
+
+monastic_huge_donation_value = {
+	value = major_gold_value
+	multiply = 3
+}
+
+monastic_donation_treasury_value = {
+	value = major_treasury_or_gold_value
+}
+
+monastic_huge_donation_treasury_value = {
+	value = major_treasury_or_gold_value
+	multiply = 3
+}
+
+
+fifty_percent_of_current_gold = {
+	value = gold
+	multiply = 0
+}
+
+
+number_of_theocratic_vassals = {
+	value = 0
+	every_vassal = {
+		limit = { government_has_flag = government_is_theocracy } # Includes Ecc. Gov.
+		add = 1
+	}
+}
+
+
+befriend_interaction_cost_value = {
+	value = 0
+	if = {
+		limit = {
+			scope:puppet_or_actor = {
+				government_has_flag = government_is_nomadic
+				NOR = {
+					has_perk = befriend_perk
+					AND = {
+						exists = dynasty
+						dynasty = {
+							has_dynasty_perk = fp1_adventure_legacy_5
+						}
+						target_is_vassal_or_below = scope:recipient
+					}
+					culture = { has_cultural_parameter = automatic_befriend_access }
+					any_character_struggle = {
+						involvement = involved
+						has_struggle_phase_parameter = struggle_unlocks_befriend_schemes_for_everyone
+					}
+					AND = {
+						government_has_flag = government_is_clan
+						is_in_same_clan_as_trigger = { CHARACTER = scope:recipient }
+						house = { has_house_unity_stage = harmonious }
+					}
+				}
+			}
+		}
+		add = scope:puppet_or_actor.minor_prestige_value
+		if = {
+			limit = {
+				scope:recipient = {
+					is_vassal_of = scope:puppet_or_actor
+				}
+			}
+			add = scope:puppet_or_actor.miniscule_prestige_value
+		}
+		if = {
+			limit = {
+				scope:puppet_or_actor = {
+					is_vassal_of = scope:recipient
+				}
+			}
+			add = scope:puppet_or_actor.minor_prestige_value
+		}
+	}
+}
+
+
+pardon_interaction_influence_cost_value = {
+	value = 0
+	if = {
+		limit = {
+			scope:puppet_or_actor = {
+				has_title = title:e_minister_of_justice
+				NOT = { has_imprisonment_reason = scope:recipient }
+			}
+		}
+		add = {
+			value = 25
+			if = {
+				limit = {
+					scope:puppet_or_actor.top_liege = {
+						has_realm_law = celestial_bureaucracy_0
+					}
+				}
+				add = 75
+			}
+			else_if = {
+				limit = {
+					scope:puppet_or_actor.top_liege = {
+						has_realm_law = celestial_bureaucracy_1
+					}
+				}
+				add = 50
+			}
+			else_if = {
+				limit = {
+					scope:puppet_or_actor.top_liege = {
+						has_realm_law = celestial_bureaucracy_2
+					}
+				}
+				add = 25
+			}
+		}
+	}
+}
+
+
+pardon_interaction_treasury_cost_value = {
+	value = 0
+	if = {
+		limit = {
+			scope:puppet_or_actor = {
+				has_title = title:e_minister_of_justice
+				has_treasury = yes
+				NOT = { has_imprisonment_reason = scope:recipient }
+			}
+		}
+		add = scope:puppet_or_actor.minor_treasury_value
+	}
+}
+
+
+cease_paying_tribute_interaction_cost_value = {
+	value = 0
+	if = {
+		limit = {
+			scope:puppet_or_actor = {
+				OR = {
+					any_land_neighboring_realm_with_tributaries_owner = {
+						this = scope:recipient
+					}
+					scope:recipient = {
+						is_landed = no
+					}
+				}
+			}
+		}
+		add = minor_prestige_value
+	}
+}
+
+
+release_tributary_interaction_prestige_cost_value = {
+	value = minor_prestige_value
+	if = {
+		limit = {
+			scope:puppet_or_actor = { government_has_flag = government_is_mandala }
+		}
+		multiply = 0
+	}
+}
+
+
+release_tributary_interaction_piety_cost_value = {
+	value = medium_piety_value
+	if = {
+		limit = {
+			scope:puppet_or_actor = {
+				NOT = { government_has_flag = government_is_mandala }
+			}
+		}
+		multiply = 0
+	}
+}
+
+
+dynast_claim_title_interaction_cost_value = {
+	value = scope:puppet_or_actor.dynasty.major_dynasty_prestige_value
+}
+
+
+request_clerical_chastity_interaction_cost_value = {
+	value = minor_piety_value
+	if = {
+		limit = { scope:clerical_chastity_piety_stipend = yes }
+		add = medium_piety_value
+	}
+	if = {
+		limit = {
+			scope:puppet_or_actor ?= {
+				domicile ?= { has_domicile_parameter = estate_cheaper_chastity }
+			}
+		}
+		multiply = ecclesiastical_domicile_cheaper_chastity_mult
+	}
 }
 

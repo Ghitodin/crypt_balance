@@ -1,6 +1,7 @@
-﻿#Events handling Sway outcomes
+#Events handling Sway outcomes
 
 namespace = sway_outcome
+
 
 #Note: Outcome events for the Sway scheme are unusual. The default is simply a notification for success or failure
 
@@ -12,16 +13,20 @@ namespace = sway_outcome
 #Standard success
 	#by Petter Vilberg
 sway_outcome.0001 = {
+
 	hidden = yes
 
+
 	immediate = {
+
 		send_interface_message = {
+
 			type = sway_good_message
+
 			title = sway_sway_success_message
+
 			left_icon = scope:target
-			stress_impact = { # THE MOD
-				gregarious = minor_stress_impact_loss # THE MOD
-			} # THE MOD
+
 			scope:target = {
 				if = {
 					limit = {
@@ -48,12 +53,44 @@ sway_outcome.0001 = {
 							opinion = sway_opinion_increase_per_success
 						}
 					}
+					scope:owner = {
+						if = {
+							limit = {
+								rite = { rite_has_parameter = sway_scheme_piety }
+								OR = {
+									liege ?= scope:target
+									target_is_vassal_or_below = scope:target
+								}
+							}
+							add_piety = minor_piety_gain
+						}
+						if = {
+							limit = {
+								has_personal_tenet_flag = tenet_communal_identity_sway_piety
+								rite ?= scope:target.rite
+							}
+							add_piety = miniscule_piety_gain
+						}
+					}
 				}
 			}
+
 			sway_end_effect = yes
-		}
-	}
+
+		
+
+			stress_and_fulfillment_impact = { # THE MOD
+				gregarious = minor_stress_impact_loss # THE MOD
+			} # THE MOD
+
 }
+
+	
+}
+
+
+}
+
 
 #Standard failure
 	#by Petter Vilberg
@@ -65,13 +102,14 @@ sway_outcome.0002 = {
 			type = sway_bad_message
 			title = sway_sway_failed_message
 			left_icon = scope:target
-			stress_impact = {
+			stress_and_fulfillment_impact = {
 				gregarious = minor_stress_impact_gain
 			}
 			sway_end_effect = yes
 		}
 	}
 }
+
 
 
 #################################
@@ -152,6 +190,18 @@ sway_outcome.1001 = {
 								opinion = 50
 							}
 						}
+						scope:owner = {
+							if = {
+								limit = {
+									rite = { rite_has_parameter = sway_scheme_piety }
+									OR = {
+										liege ?= scope:target
+										target_is_vassal_or_below = scope:target
+									}
+								}
+								add_piety = minor_piety_gain
+							}
+						}
 					}
 				}
 			}
@@ -181,9 +231,22 @@ sway_outcome.1001 = {
 				opinion = 30
 			}
 		}
+		scope:owner = {
+			if = {
+				limit = {
+					rite = { rite_has_parameter = sway_scheme_piety }
+					OR = {
+						liege ?= scope:target
+						target_is_vassal_or_below = scope:target
+					}
+				}
+				add_piety = minor_piety_gain
+			}
+		}
 		sway_end_effect = yes
 	}
 }
+
 
 #Learning Duel to get an extra bonus
 	#by Petter Vilberg
@@ -279,6 +342,18 @@ sway_outcome.1002 = {
 								opinion = 50
 							}
 						}
+						scope:owner = {
+							if = {
+								limit = {
+									rite = { rite_has_parameter = sway_scheme_piety }
+									OR = {
+										liege ?= scope:target
+										target_is_vassal_or_below = scope:target
+									}
+								}
+								add_piety = minor_piety_gain
+							}
+						}
 					}
 				}
 			}
@@ -310,9 +385,22 @@ sway_outcome.1002 = {
 				opinion = 30
 			}
 		}
+		scope:owner = {
+			if = {
+				limit = {
+					rite = { rite_has_parameter = sway_scheme_piety }
+					OR = {
+						liege ?= scope:target
+						target_is_vassal_or_below = scope:target
+					}
+				}
+				add_piety = minor_piety_gain
+			}
+		}
 		sway_end_effect = yes
 	}
 }
+
 
 
 #They're warming up to me, can I take it further?
@@ -368,6 +456,18 @@ sway_outcome.1003 = {
 					target = scope:owner
 					modifier = scheme_sway_opinion
 					opinion = 30
+				}
+			}
+			scope:owner = {
+				if = {
+					limit = {
+						rite = { rite_has_parameter = sway_scheme_piety }
+						OR = {
+							liege ?= scope:target
+							target_is_vassal_or_below = scope:target
+						}
+					}
+					add_piety = minor_piety_gain
 				}
 			}
 		}
@@ -555,6 +655,7 @@ sway_outcome.1003 = {
 	}
 }
 
+
 #A disloyal vassal can be compelled to reconsider during the Anarchy at Samarra Struggle 
 	#by Ola Jentzsch
 
@@ -691,6 +792,18 @@ sway_outcome.1004 = {
 			}
 			remove_trait = disloyal 
 		}
+		scope:owner = {
+			if = {
+				limit = {
+					rite = { rite_has_parameter = sway_scheme_piety }
+					OR = {
+						liege ?= scope:target
+						target_is_vassal_or_below = scope:target
+					}
+				}
+				add_piety = minor_piety_gain
+			}
+		}
 	}
 
 	option = {
@@ -725,6 +838,7 @@ sway_outcome.1004 = {
 		}
 	}
 }
+
 
 
 #################################
@@ -780,7 +894,10 @@ sway_outcome.2001 = {
 		desc = sway_outcome.2001.end
 	}
 	theme = sway_scheme
-	left_portrait = scope:target
+	left_portrait = {
+		character = scope:target
+		animation = eyeroll
+	}
 	widget = {
 		gui = "event_window_widget_scheme"
 		container = "custom_widgets_container"
@@ -805,10 +922,8 @@ sway_outcome.2001 = {
 			any_consort = {
 				this = scope:target
 			}
-			AND = {
-				exists = betrothed
-				betrothed = scope:target
-			}
+			betrothed ?= scope:target
+
 		}
 	}
 
@@ -833,6 +948,7 @@ sway_outcome.2001 = {
 		}
 	}
 }
+
 
 
 #They think you're plotting against them
@@ -896,3 +1012,4 @@ sway_outcome.2002 = {
 		}
 	}
 }
+

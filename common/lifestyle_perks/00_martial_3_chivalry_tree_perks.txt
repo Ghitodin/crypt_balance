@@ -1,9 +1,9 @@
-﻿stalwart_leader_perk = {
+stalwart_leader_perk = {
 	lifestyle = martial_lifestyle
 	tree = chivalry
 	position = { 1 0 }
 	icon = node_martial
-	
+
 	auto_selection_weight = {
 		value = 11
 		if = {
@@ -25,7 +25,7 @@
 			multiply = 0
 		}
 	}
-	
+
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
 		trait_track_foot_xp_gain_mult = 0.2
@@ -35,25 +35,37 @@
 		prowess = 4
 		trait_track_foot_xp_gain_mult = 0.05
 	}
-	
+
 	effect = {
 		custom_description_no_bullet = {
 			text = stalwart_leader_perk_effect
 		}
-		custom_description_no_bullet = {
-			text = unlock_dueling_rivals_effect
+		if = {
+			limit = { government_has_flag = government_is_nomadic }
+			custom_description_no_bullet = { text = unlock_dueling_for_everyone_effect }
 		}
+		else_if = {
+			limit = {
+				culture = { has_cultural_parameter = stalwart_leader_non_admin_duels }
+			}
+			custom_description_no_bullet = { text = unlocks_stalwart_leader_non_admin_duels_effect }
+		}
+		else = {
+			custom_description_no_bullet = { text = unlock_dueling_rivals_effect }
+		}
+
 		if = {
 			limit = {
 				government_has_flag = government_is_landless_adventurer
 				has_ep2_dlc_trigger = yes
-			}	
+			}
 			custom_tooltip = {
 				text = adventurer_stalwart_leader_perk_effect
 			}
 		}
 	}
 }
+
 
 courtship_perk = {
 	lifestyle = martial_lifestyle
@@ -62,7 +74,7 @@ courtship_perk = {
 	icon = node_martial
 
 	parent = stalwart_leader_perk
-	
+
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
 		courting_scheme_phase_duration_add = monumental_scheme_phase_duration_bonus_value
@@ -80,6 +92,7 @@ courtship_perk = {
 	}
 }
 
+
 promising_prospects_perk = {
 	lifestyle = martial_lifestyle
 	tree = chivalry
@@ -91,9 +104,10 @@ promising_prospects_perk = {
 	effect = {
 		custom_description_no_bullet = {
 			text = promising_prospects_perk_effect
-		}	
+		}
 	}
 }
+
 
 loyalty_and_respect_perk = {
 	lifestyle = martial_lifestyle
@@ -112,8 +126,25 @@ loyalty_and_respect_perk = {
 				text = loyalty_and_respect_perk_stats_effect
 			}
 		}
+		if = {
+			limit = {
+				government_has_flag = government_is_nomadic
+			}
+			custom_description_no_bullet = {
+				text = loyalty_and_respect_perk_obedience_effect
+			}
+		}
+		if = {
+			limit = {
+				government_has_mechanic = administrative
+				government_allows = merit
+			}
+			custom_description_no_bullet = {
+				text = candidate_pool_loyalty_and_respect_perk_effect
+			}
+		}
 	}
-	
+
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
 		trait_track_wit_xp_gain_mult = 0.25
@@ -124,34 +155,57 @@ loyalty_and_respect_perk = {
 	}
 }
 
+
 chivalric_dominance_perk = {
 	lifestyle = martial_lifestyle
+
 	tree = chivalry
+
 	position = { 2 1 }
+
 	icon = node_martial
 
+
 	parent = stalwart_leader_perk
+
 
 	government_character_modifier = {
 		flag = government_is_administrative
 		invert_check = yes
 		knight_effectiveness_mult = 0.15 # THE MOD
 	}
+
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
 		invert_check = yes
 		accolade_glory_gain_mult = 0.1
 	}
-	
+
+
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
 		trait_track_horse_xp_gain_mult = 0.25
 	}
+
 	government_character_modifier = {
 		flag = government_is_administrative
 		same_heritage_county_advantage_add = 5
 	}
+
+
+	effect = {
+		if = {
+			limit = {
+				has_pam_dlc_trigger = yes
+				actor_incite_holy_war_shown_trigger = yes
+			}
+			custom_description_no_bullet = { text = chivalric_dominance_perk_incite_war_effect }
+		}
+	}
+
+
 }
+
 
 never_back_down_perk = {
 	lifestyle = martial_lifestyle
@@ -168,29 +222,46 @@ never_back_down_perk = {
 	}
 }
 
+
 kingsguard_perk = {
 	lifestyle = martial_lifestyle
+
 	tree = chivalry
+
 	position = { 2 3 }
+
 	icon = node_martial
 
+
 	parent = never_back_down_perk
-	
+
+
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
 		trait_track_bow_xp_gain_mult = 0.25
 	}
+
 
 	government_character_modifier = {
 		flag = government_is_administrative
 		invert_check = yes
 		knight_limit = 2 # THE MOD
 	}
+
 	government_character_modifier = {
 		flag = government_is_administrative
 		knight_limit = 2
 	}
+
+	government_character_modifier = {
+		flag = government_is_theocracy
+		enemy_hostile_scheme_success_chance_add = -5
+		character_travel_safety = 10
+	}
+
+
 }
+
 
 peacemaker_perk = {
 	lifestyle = martial_lifestyle
@@ -202,22 +273,30 @@ peacemaker_perk = {
 	parent = kingsguard_perk
 
 	effect = {
-		custom_description_no_bullet = {
-			text = peacemaker_perk_effect
+		custom_description_no_bullet = { text = peacemaker_perk_effect }
+		if = {
+			limit = {
+				government_has_flag = government_is_mandala
+				house ?= { has_house_aspiration_parameter = aspect_of_serenity }
+				is_house_head = yes
+			}
+			custom_description_no_bullet = { text = mandala_peacemaker_perk_serenity_effect }
 		}
 	}
 }
+
 
 gallant_perk = {
 	lifestyle = martial_lifestyle
 	tree = chivalry
 	position = { 1 5 }
 	icon = trait_gallant
-	
+
 	parent = peacemaker_perk
-	
+
 	trait = gallant
 	effect = {
 		add_trait_force_tooltip = gallant
 	}
 }
+

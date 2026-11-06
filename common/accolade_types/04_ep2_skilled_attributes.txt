@@ -1,4 +1,4 @@
-﻿##################################################
+###############################################
 # INDEX
 #
 # Politicker		-	politicker_attribute
@@ -12,58 +12,94 @@
 ##################################################
 # CONTROL VALUES
 
-@skill_accolade_qualifying_value = high_skill_rating
-
 @accolade_trait_additive_plus_1_value = 250
+
 @accolade_trait_additive_plus_2_value = 150
+
 @accolade_trait_additive_plus_3_value = 50
+
 @accolade_trait_additive_minus_1_value = -50
+
 @accolade_trait_additive_minus_2_value = -150
+
 @accolade_trait_additive_minus_3_value = -250
 
-@lifestyle_bonus_tier_1_value = 0.05 # THE MOD 
-@lifestyle_bonus_tier_2_value = 0.08 # THE MOD
-@lifestyle_bonus_tier_3_value = 0.10 # THE MOD
 
-@army_maintenance_mult_bonus_tier_1 = -0.03 # THE MOD
-@army_maintenance_mult_bonus_tier_2 = -0.05 # THE MOD
-@army_maintenance_mult_bonus_tier_3 = -0.08 # THE MOD
+@lifestyle_bonus_tier_1_value = 0.15
 
-@dread_base_bonus_tier_1_value = 1.5 # THE MOD 
-@dread_base_bonus_tier_2_value = 3 # THE MOD
-@dread_base_bonus_tier_3_value = 6 # THE MOD
+@lifestyle_bonus_tier_2_value = 0.25
 
-@tourney_participant_xp_mult_bonus_tier_1_value = 0.03 # THE MOD
-@tourney_participant_xp_mult_bonus_tier_2_value = 0.06 # THE MOD
-@tourney_participant_xp_mult_bonus_tier_3_value = 0.1 # THE MOD
+@lifestyle_bonus_tier_3_value = 0.35
+
+
+@army_maintenance_mult_bonus_tier_1 = -0.1
+
+@army_maintenance_mult_bonus_tier_2 = -0.15
+
+@army_maintenance_mult_bonus_tier_3 = -0.25
+
+
+@dread_base_bonus_tier_1_value = 5
+
+@dread_base_bonus_tier_2_value = 10
+
+@dread_base_bonus_tier_3_value = 20
+
+
+@tourney_participant_xp_mult_bonus_tier_1_value = 0.1
+
+@tourney_participant_xp_mult_bonus_tier_2_value = 0.2
+
+@tourney_participant_xp_mult_bonus_tier_3_value = 0.3
+
 
 @intrigue_scheme_phase_duration_bonus_tier_1_value = -5
+
 @intrigue_scheme_phase_duration_bonus_tier_2_value = -10
+
 @intrigue_scheme_phase_duration_bonus_tier_3_value = -15
 
-@knight_effectiveness_per_dread_tier_2_value = 0.001 # THE MOD
-@knight_effectiveness_per_dread_tier_3_value = 0.002 # THE MOD
+
+@knight_effectiveness_per_dread_tier_2_value = 0.003
+
+@knight_effectiveness_per_dread_tier_3_value = 0.005
+
 
 @piety_per_knight_add_bonus_tier_1_value = 0.03 # THE MOD
+
+
 @piety_per_knight_add_bonus_tier_2_value = 0.07 # THE MOD
+
+
 @piety_per_knight_add_bonus_tier_3_value = 0.1 # THE MOD
+
+
 
 ##################################################
 # SKILL TYPE ACCOLADES
 
 # Politicker
 politicker_attribute = {
+
 	adjective = accolade_politicking
+
 	noun = accolade_politicker
+
+	icon = "gfx/interface/icons/knight_badge/icons/accolade_trait_courtly_blue.dds"
+
+	portrait_pose = "map_love"
+
 	accolade_categories = { skilled skill social personality diplomacy vassal_manager courtly subtle }
 
-	potential = {
-		prowess >= accolade_prowess_requirement_value
-		OR = {
-			diplomacy >= @skill_accolade_qualifying_value
-			has_trait = diplomat
-		}
+
+	squire_perfect_fit = {
+		politicker_attribute_trigger = yes
 	}
+
+	squire_acceptable_fit = {
+		politicker_attribute_acceptable_trigger = yes
+	}
+
 	
 	weight = {
 		# These are less interesting, so we weight them down for the AI.
@@ -154,89 +190,102 @@ politicker_attribute = {
 		}
 	}
 
+
 	ranks = {
+
 		# Rank 1
-		100 = {
+		1 = {
+
 			liege_modifier = {
-				courtly_opinion = 1 # THE MOD
-				barons_and_minor_landholders_opinion = 1 # THE MOD
-				minority_opinion = 2 # THE MOD
-			}
-		}
-		# Rank 2
-		300 = {
-			liege_modifier = {
-				courtly_opinion = 1 # THE MOD
-				barons_and_minor_landholders_opinion = 1 # THE MOD
-				minority_opinion = 2 # THE MOD
-			}
-		}
-		# Rank 3
-		600 = {
-			liege_modifier = {
-				courtly_opinion = 2 # THE MOD
-				barons_and_minor_landholders_opinion = 2 # THE MOD
-				minority_opinion = 3 # THE MOD
-				#diplomacy = 1 # THE MOD
-			}
-			accolade_parameters = {
-				accolade_influences_regency
-			}
-		}
-		# Rank 4
-		1000 = {
-			liege_modifier = {
-				courtly_opinion = 2 # THE MOD
-				barons_and_minor_landholders_opinion = 2 # THE MOD
-				minority_opinion = 3 # THE MOD
-				diplomacy = 1
-			}
-			accolade_parameters = {
-				accolade_influences_regency
-			}
-		}
-		# Rank 5
-		1500 = {
-			liege_modifier = {
-				courtly_opinion = 3 # THE MOD
-				barons_and_minor_landholders_opinion = 3 # THE MOD
-				minority_opinion = 3 # THE MOD
-				diplomacy = 1 # THE MOD
-			}
-			accolade_parameters = {
-				accolade_tour_end_bonus
-				accolade_influences_regency_high
-			}
-		}
-		# Rank 6
-		2100 = {
-			liege_modifier = {
-				courtly_opinion = 3 # THE MOD
-				barons_and_minor_landholders_opinion = 3 # THE MOD
-				minority_opinion = 3 # THE MOD
-				diplomacy = 1 # THE MOD
-			}
-			accolade_parameters = {
-				accolade_tour_end_bonus
-				accolade_influences_regency_high
-			}
-		}
-	}
+
+				courtly_opinion = 3
+
+				barons_and_minor_landholders_opinion = 3
+
+				minority_opinion = 5
+
+			
 }
+
+		
+}
+
+		# Rank 2
+		2 = {
+
+			liege_modifier = {
+
+				courtly_opinion = 6
+
+				barons_and_minor_landholders_opinion = 6
+
+				minority_opinion = 8
+
+				diplomacy = 1
+
+			
+}
+
+			accolade_parameters = {
+				accolade_influences_regency
+			}
+
+		
+}
+
+		# Rank 3
+		3 = {
+
+			liege_modifier = {
+
+				courtly_opinion = 10
+
+				barons_and_minor_landholders_opinion = 10
+
+				minority_opinion = 10
+
+				diplomacy = 2
+
+			
+}
+
+			accolade_parameters = {
+				accolade_tour_end_bonus
+				accolade_influences_regency_high
+			}
+
+		
+}
+
+	
+}
+
+
+}
+
 
 # Tactician
 tactician_attribute = {
+
 	adjective = accolade_strategic
+
 	noun = accolade_tactician
+
+	icon = "gfx/interface/icons/knight_badge/icons/accolade_trait_militant_blue.dds"
+
+	portrait_pose = "marshal"
+
 	accolade_categories = { skilled skill warlike leader subtle martial }
 
-	potential = {
-		prowess >= accolade_prowess_requirement_value
-		OR = {
-			has_trait = strategist
-			martial >= @skill_accolade_qualifying_value
-		}
+
+	squire_perfect_fit = {
+		tactician_attribute_trigger = yes
 	}
+
+	squire_acceptable_fit = {
+		tactician_attribute_acceptable_trigger = yes
+	}
+
 	
 	weight = {
 		# These are less interesting, so we weight them down for the AI.
@@ -319,77 +368,85 @@ tactician_attribute = {
 		}
 	}
 
+
 	ranks = {
+
 		# Rank 1
-		100 = {
+		1 = {
 			liege_modifier = { monthly_martial_lifestyle_xp_gain_mult = @lifestyle_bonus_tier_1_value }
 		}
+
 		# Rank 2
-		300 = {
-			liege_modifier = { monthly_martial_lifestyle_xp_gain_mult = @lifestyle_bonus_tier_1_value }
-		}
-		# Rank 3
-		600 = {
-			liege_modifier = { 
-				monthly_martial_lifestyle_xp_gain_mult = @lifestyle_bonus_tier_2_value
-				#martial = 1 # THE MOD
-			}
-			knight_army_modifier = {
-				counter_efficiency = @lifestyle_bonus_tier_2_value
-			}
-		}
-		# Rank 4
-		1000 = {
-			liege_modifier = { 
-				monthly_martial_lifestyle_xp_gain_mult = @lifestyle_bonus_tier_2_value
-				martial = 1
-			}
-			knight_army_modifier = {
-				counter_efficiency = @lifestyle_bonus_tier_2_value
-			}
-		}
-		# Rank 5
-		1500 = {
-			liege_modifier = { 
-				monthly_martial_lifestyle_xp_gain_mult = @lifestyle_bonus_tier_3_value
-				martial = 1 # THE MOD
-			}
-			knight_army_modifier = {
-				counter_efficiency = @lifestyle_bonus_tier_3_value
-			}
-			accolade_parameters = {
-				accolade_organize_army_bonus
-			}
-		}
-		# Rank 6
-		2100 = {
+		2 = {
+
 			liege_modifier = {
-				monthly_martial_lifestyle_xp_gain_mult = @lifestyle_bonus_tier_3_value
-				martial = 1 # THE MOD
+ 
+				monthly_martial_lifestyle_xp_gain_mult = @lifestyle_bonus_tier_2_value
+
+				martial = 1
+
+			
+}
+
+			knight_army_modifier = {
+				counter_efficiency = @lifestyle_bonus_tier_2_value
 			}
+
+		
+}
+
+		# Rank 3
+		3 = {
+
+			liege_modifier = {
+ 
+				monthly_martial_lifestyle_xp_gain_mult = @lifestyle_bonus_tier_3_value
+
+				martial = 2
+
+			
+}
+
 			knight_army_modifier = {
 				counter_efficiency = @lifestyle_bonus_tier_3_value
 			}
+
 			accolade_parameters = {
 				accolade_organize_army_bonus
 			}
-		}
-	}
+
+		
 }
+
+	
+}
+
+
+}
+
 
 # Reeve
 reeve_attribute = {
+
 	adjective = accolade_calculating
+
 	noun = accolade_reeve
+
+	icon = "gfx/interface/icons/knight_badge/icons/accolade_trait_subtle_green.dds"
+
+	portrait_pose = "war_over_win"
+
 	accolade_categories = { skilled skill subtle courtly leader stewardship }
 
-	potential = {
-		prowess >= accolade_prowess_requirement_value
-		OR = {
-			has_trait = administrator
-			stewardship >= @skill_accolade_qualifying_value
-		}
+
+	squire_perfect_fit = {
+		reeve_attribute_trigger = yes
 	}
+
+	squire_acceptable_fit = {
+		reeve_attribute_acceptable_trigger = yes
+	}
+
 	
 	weight = {
 		# These are less interesting, so we weight them down for the AI.
@@ -462,73 +519,88 @@ reeve_attribute = {
 		}
 	}
 
+
 	ranks = {
+
 		# Rank 1
-		100 = {
+		1 = {
+
 			liege_modifier = {
-				parochial_opinion = 3 # THE MOD
-			}
-		}
-		# Rank 2
-		300 = {
-			liege_modifier = {
-				parochial_opinion = 3 # THE MOD
-			}
-		}
-		# Rank 3
-		600 = {
-			liege_modifier = {
-				parochial_opinion = 5 # THE MOD
-				#stewardship = 1
-			}
-			accolade_parameters = { accolade_development_growth_on_tournament_completion_low }
-		}
-		# Rank 4
-		1000 = {
-			liege_modifier = {
-				parochial_opinion = 5 # THE MOD
-				stewardship = 1
-			}
-			accolade_parameters = { accolade_development_growth_on_tournament_completion_low }
-		}
-		# Rank 5
-		1500 = {
-			liege_modifier = {
-				parochial_opinion = 8 # THE MOD
-				stewardship = 1 # THE MOD
-			}
-			accolade_parameters = {
-				accolade_development_growth_on_tournament_completion_high
-				accolade_increase_control_bonus
-			}
-		}
-		# Rank 6
-		2100 = {
-			liege_modifier = {
-				parochial_opinion = 10 # THE MOD
-				stewardship = 1 # THE MOD
-			}
-			accolade_parameters = {
-				accolade_development_growth_on_tournament_completion_high
-				accolade_increase_control_bonus
-			}
-		}
-	}
+
+				parochial_opinion = 10
+
+			
 }
+
+		
+}
+
+		# Rank 2
+		2 = {
+
+			liege_modifier = {
+
+				parochial_opinion = 15
+
+				stewardship = 1
+
+			
+}
+
+			accolade_parameters = { accolade_development_growth_on_tournament_completion_low }
+
+		
+}
+
+		# Rank 3
+		3 = {
+
+			liege_modifier = {
+
+				parochial_opinion = 25
+
+				stewardship = 2
+
+			
+}
+
+			accolade_parameters = {
+				accolade_development_growth_on_tournament_completion_high
+				accolade_increase_control_bonus
+			}
+
+		
+}
+
+	
+}
+
+
+}
+
 
 # Manipulator
 manipulator_attribute = {
+
 	adjective = accolade_manipulative
+
 	noun = accolade_manipulator
+
+	icon = "gfx/interface/icons/knight_badge/icons/accolade_trait_amoral_purple.dds"
+
+	portrait_pose = "spymaster"
+
 	accolade_categories = { skilled skill subtle courtly aggressive amoral intrigue }
 
-	potential = {
-		prowess >= accolade_prowess_requirement_value
-		OR = {
-			intrigue >= @skill_accolade_qualifying_value
-			has_trait = schemer
-		}
+
+	squire_perfect_fit = {
+		manipulator_attribute_trigger = yes
 	}
+
+	squire_acceptable_fit = {
+		manipulator_attribute_acceptable_trigger = yes
+	}
+
 	
 	weight = {
 		# These are less interesting, so we weight them down for the AI.
@@ -612,69 +684,81 @@ manipulator_attribute = {
 		}
 	}
 
+
 	ranks = {
+
 		# Rank 1
-		100 = {
+		1 = {
 			liege_modifier = {
 				intrigue_scheme_phase_duration = @intrigue_scheme_phase_duration_bonus_tier_1_value
 			}
 		}
+
 		# Rank 2
-		300 = {
+		2 = {
+
 			liege_modifier = {
-				intrigue_scheme_phase_duration = @intrigue_scheme_phase_duration_bonus_tier_1_value
-			}
-		}
-		# Rank 3
-		600 = {
-			liege_modifier = {
+
 				intrigue_scheme_phase_duration = @intrigue_scheme_phase_duration_bonus_tier_2_value
+
 				knight_effectiveness_per_dread = @knight_effectiveness_per_dread_tier_2_value
-				#intrigue = 1 # THE MOD
-			}
-		}
-		# Rank 4
-		1000 = {
-			liege_modifier = {
-				intrigue_scheme_power = @intrigue_scheme_power_bonus_tier_2_value
-				knight_effectiveness_per_dread = @knight_effectiveness_per_dread_tier_2_value
+
 				intrigue = 1
-			}
-		}
-		# Rank 5
-		1500 = {
-			liege_modifier = {
-				intrigue_scheme_phase_duration = @intrigue_scheme_phase_duration_bonus_tier_3_value
-				knight_effectiveness_per_dread = @knight_effectiveness_per_dread_tier_2_value # THE MOD
-				dread_baseline_add = @dread_base_bonus_tier_2_value # THE MOD
-				intrigue = 1 # THE MOD
-			}
-		}
-		# Rank 6
-		2100 = {
-			liege_modifier = {
-				intrigue_scheme_phase_duration = @intrigue_scheme_phase_duration_bonus_tier_3_value
-				knight_effectiveness_per_dread = @knight_effectiveness_per_dread_tier_3_value
-				dread_baseline_add = @dread_base_bonus_tier_3_value
-				intrigue = 1 # THE MOD
-			}
-		}
-	}
+
+			
 }
+
+		
+}
+
+		# Rank 3
+		3 = {
+
+			liege_modifier = {
+
+				intrigue_scheme_phase_duration = @intrigue_scheme_phase_duration_bonus_tier_3_value
+
+				knight_effectiveness_per_dread = @knight_effectiveness_per_dread_tier_3_value
+
+				dread_baseline_add = @dread_base_bonus_tier_3_value
+
+				intrigue = 2
+
+			
+}
+
+		
+}
+
+	
+}
+
+
+}
+
 
 # Mentor
 mentor_attribute = {
+
 	adjective = accolade_sagely
+
 	noun = accolade_mentor
+
+	icon = "gfx/interface/icons/knight_badge/icons/accolade_trait_leadership_blue.dds"
+
+	portrait_pose = "personality_rational"
+
 	accolade_categories = { skilled skill subtle courtly ethical leader learning }
 
-	potential = {
-		prowess >= accolade_prowess_requirement_value
-		OR = {
-			learning >= @skill_accolade_qualifying_value
-			has_trait = whole_of_body
-		}
+
+	squire_perfect_fit = {
+		mentor_attribute_trigger = yes
 	}
+
+	squire_acceptable_fit = {
+		mentor_attribute_acceptable_trigger = yes
+	}
+
 	
 	weight = {
 		# These are less interesting, so we weight them down for the AI.
@@ -775,97 +859,85 @@ mentor_attribute = {
 		}
 	}
 
+
 	ranks = {
+
 		# Rank 1
-		100 = {
+		1 = {
 			liege_modifier = {
 				knight_limit = 1
 			}
 		}
+
 		# Rank 2
-		300 = {
+		2 = {
+
 			liege_modifier = {
+
 				knight_limit = 1
-			}
-		}
-		# Rank 3
-		600 = {
-			liege_modifier = {
-				knight_limit = 1
-				#learning = 1 # THE MOD
-			}
-			accolade_parameters = {
-				accolade_train_commanders_bonus
-				accolade_wise_educator
-			}
-		}
-		# Rank 4
-		1000 = {
-			liege_modifier = {
-				knight_limit = 1
+
 				learning = 1
-			}
+
+			
+}
+
 			accolade_parameters = {
 				accolade_train_commanders_bonus
 				accolade_wise_educator
 			}
-		}
-		# Rank 5
-		1500 = {
-			liege_modifier = {
-				knight_limit = 1 # THE MOD
-				learning = 1 # THE MOD
-			}
-			accolade_parameters = {
-				accolade_train_commanders_bonus_high
-				accolade_wise_educator_high
-			}
-		}
-		# Rank 6
-		2100 = {
-			liege_modifier = {
-				knight_limit = 1 # THE MOD
-				learning = 1 # THE MOD
-			}
-			accolade_parameters = {
-				accolade_train_commanders_bonus_high
-				accolade_wise_educator_high
-			}
-		}
-	}
+
+		
 }
+
+		# Rank 3
+		3 = {
+
+			liege_modifier = {
+
+				knight_limit = 2
+
+				learning = 2
+
+			
+}
+
+			accolade_parameters = {
+				accolade_train_commanders_bonus_high
+				accolade_wise_educator_high
+			}
+
+		
+}
+
+	
+}
+
+
+}
+
 
 # Contender
 contender_attribute = {
+
 	adjective = accolade_fearsome
+
 	noun = accolade_contender
+
+	icon = "gfx/interface/icons/knight_badge/icons/accolade_trait_aggressive_blue.dds"
+
+	portrait_pose = "menacing_wooden_sword"
+
 	accolade_categories = { skilled skill champion forceful warlike prowess }
 
-	potential = {
-		OR = {
-			prowess >= 20
-			has_trait_xp = {
-				trait = tourney_participant
-				track = bow
-				value >= 50
-			}
-			has_trait_xp = {
-				trait = tourney_participant
-				track = horse
-				value >= 50
-			}
-			has_trait_xp = {
-				trait = tourney_participant
-				track = foot
-				value >= 50
-			}
-			has_trait_xp = {
-				trait = tourney_participant
-				track = wit
-				value >= 50
-			}
-		}
+
+	squire_perfect_fit = {
+		contender_attribute_trigger = yes
 	}
+
+	squire_acceptable_fit = {
+		contender_attribute_acceptable_trigger = yes
+	}
+
 	
 	weight = {
 		# These are less interesting, so we weight them down for the AI.
@@ -958,67 +1030,58 @@ contender_attribute = {
 		}
 	}
 
+
 	ranks = {
+
 		# Rank 1
-		100 = {
+		1 = {
 			accolade_parameters = {
 				accolade_tournament_xp_gain_contender_only_low
 			}
 			liege_modifier = {
 				tourney_participant_xp_gain_mult = @tourney_participant_xp_mult_bonus_tier_1_value
+				belligerent_opinion = 3
 			}
 		}
+
 		# Rank 2
-		300 = {
+		2 = {
 			accolade_parameters = {
-				accolade_tournament_xp_gain_contender_only_low
+				accolade_tournament_xp_gain_contender_only
+				accolade_tournament_xp_gain_all_knights
 			}
 			liege_modifier = {
-				tourney_participant_xp_gain_mult = @tourney_participant_xp_mult_bonus_tier_1_value
+				tourney_participant_xp_gain_mult = @tourney_participant_xp_mult_bonus_tier_2_value
+				belligerent_opinion = 6
 			}
 		}
+
 		# Rank 3
-		600 = {
-			accolade_parameters = {
-				accolade_tournament_xp_gain_contender_only
-				accolade_tournament_xp_gain_all_knights
-			}
+		3 = {
+
 			liege_modifier = {
-				tourney_participant_xp_gain_mult = @tourney_participant_xp_mult_bonus_tier_2_value
-			}
-		}
-		# Rank 4
-		1000 = {
+
+				monthly_prestige_gain_per_knight_mult = 0.01 # THE MOD
+
+
+				tourney_participant_xp_gain_mult = @tourney_participant_xp_mult_bonus_tier_3_value
+
+				belligerent_opinion = 10
+
+			
+}
+
 			accolade_parameters = {
-				accolade_tournament_xp_gain_contender_only
-				accolade_tournament_xp_gain_all_knights
-			}
-			liege_modifier = {
-				tourney_participant_xp_gain_mult = @tourney_participant_xp_mult_bonus_tier_2_value
+				accolade_tournament_xp_gain_contender_only_high
+				accolade_tournament_xp_gain_all_knights_high
 			}
 
-		}
-		# Rank 5
-		1500 = {
-			liege_modifier = {
-				monthly_prestige_gain_per_knight_mult = 0.01 # THE MOD
-				tourney_participant_xp_gain_mult = @tourney_participant_xp_mult_bonus_tier_3_value
-			}
-			accolade_parameters = {
-				accolade_tournament_xp_gain_contender_only_high
-				accolade_tournament_xp_gain_all_knights_high
-			}
-		}
-		# Rank 6
-		2100 = {
-			liege_modifier = {
-				monthly_prestige_gain_per_knight_mult = 0.01 # THE MOD
-				tourney_participant_xp_gain_mult = @tourney_participant_xp_mult_bonus_tier_3_value
-			}
-			accolade_parameters = {
-				accolade_tournament_xp_gain_contender_only_high
-				accolade_tournament_xp_gain_all_knights_high
-			}
-		}
-	}
+		
 }
+
+	
+}
+
+
+}
+

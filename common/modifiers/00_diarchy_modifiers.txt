@@ -43,7 +43,7 @@ mandate_focused_on_own_training_modifier = {
 }
 
 mandate_strained_self_training_modifier = {
-	icon = martial_negative
+	icon = martial_mixed
 	prowess = minor_skill_bonus
 	health = minor_health_penalty
 }
@@ -57,7 +57,7 @@ mandate_induced_fines_to_liege_modifier = {
 }
 
 mandate_induced_fines_split_modifier = {
-	icon = stewardship_negative
+	icon = stewardship_mixed
 	tax_mult = 0.2
 	county_opinion_add = -50
 }
@@ -90,10 +90,16 @@ mandate_emptied_gaols_modifier = {
 liege_authority_boost_has_scapegoat_modifier = {
 	icon = horse_dead_positive
 	courtly_opinion = 10 # THE MOD
+
 	parochial_opinion = 7 # THE MOD
+
 	glory_hound_opinion = 5 # THE MOD
+
+	belligerent_opinion = 15
 	barons_and_minor_landholders_opinion = 5 # THE MOD
+
 	minority_opinion = 3 # THE MOD
+
 }
 
 ##################################################

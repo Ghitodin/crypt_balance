@@ -1,4 +1,4 @@
-﻿##########
+##########
 # Duchy Capital Buildings
 # These are built in the first barony of the first county of any duchy
 # Holding the associated duchy is required both to build, and for the buildings to be enabled
@@ -7,63 +7,62 @@
 # SPECIAL DUCHY BUILDINGS
 # We place these at the top to make them more visible in the building interface.
 
-##################
-### Graveyards ###
-##################
 
-burial_site_01 = {
+
+###################
+### DRAGON KILN ###
+###################
+dragon_kiln_01 = {
 	construction_time = slow_construction_time
-	
-	type_icon = "icon_building_graveyard.dds"
+	effect_desc = {
+		desc = unlocks_building_desc
+		desc = dragon_kiln_effect_desc
+	}
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
-		scope:holder = { has_dlc_feature = legends_of_the_dead }
+		county.holder.culture = { has_cultural_parameter = unlock_dragon_kiln_buildings }
 	}
-
+	
 	can_construct_showing_failures_only = {
-		culture = {
-			has_innovation = innovation_manorialism
+		custom_tooltip = {
+			text = dragon_kiln_terrain_requirement_tt
+			OR = {
+				terrain = mountains
+				terrain = desert_mountains
+				terrain = hills
+				culture = { has_cultural_parameter = can_build_quarries_everywhere }
+			}
 		}
+		culture = { has_cultural_parameter = unlock_dragon_kiln_buildings }
 	}
-
+	
 	is_enabled = {
 		county.holder = { has_title = prev.duchy }
 	}
 	show_disabled = yes
-
-	cost_gold = expensive_building_tier_3_cost
-
-	character_modifier = {
-		monthly_piety = 0.3
-		court_grandeur_baseline_add = 2
-		owned_legend_spread_mult = 0.2
-		legitimacy_gain_mult = 0.1
-		learning = 1 # THE MOD
-		monthly_learning_lifestyle_xp_gain_mult = 0.07 # THE MOD
-		stress_gain_mult = -0.1 # THE MOD
-		clergy_opinion = 3 # THE MOD
-	}
-	duchy_capital_county_modifier = {
-		monthly_county_control_growth_factor = 0.1
-		county_opinion_add = 5
-		epidemic_resistance = 20
-	}
-	# THE MOD START
-	province_modifier = { 
-		monthly_income = good_building_tax_tier_3
-	} 
-	# THE MOD END
 	
-	next_building = burial_site_02
+	cost_gold = expensive_building_tier_3_cost
+	
+	character_modifier = {
+		court_grandeur_baseline_add = 4
+		character_capital_county_monthly_development_growth_add = 0.2
+	}
+	province_modifier = {
+		monthly_income = good_building_tax_tier_4
+	}
+	
+	next_building = dragon_kiln_02
 
-	type_icon = "icon_building_graveyard.dds"
-
+	type_icon = "icon_building_dragon_kiln.dds"
+	
 	type = duchy_capital
-
+	
+	flag = duchy_building
+	
 	ai_value = {
-		base = 15 # THE MOD
+		base = 44
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
@@ -79,14 +78,673 @@ burial_site_01 = {
 	}
 }
 
-burial_site_02 = {
+
+dragon_kiln_02 = {
+	construction_time = slow_construction_time
+	effect_desc = {
+		desc = unlocks_building_desc
+		desc = dragon_kiln_effect_desc
+	}
+	
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		county.holder.culture = { has_innovation = innovation_windmills }
+	}
+	
+	is_enabled = {
+		county.holder = { has_title = prev.duchy }
+	}
+	show_disabled = yes
+	
+	cost_gold = expensive_building_tier_4_cost
+	
+	character_modifier = {
+		court_grandeur_baseline_add = 8
+		character_capital_county_monthly_development_growth_add = 0.4
+	}
+	province_modifier = {
+		monthly_income = good_building_tax_tier_5
+	}
+	
+	next_building = dragon_kiln_03
+	
+	type = duchy_capital
+	
+	flag = duchy_building
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+}
+
+
+dragon_kiln_03 = {
+	construction_time = slow_construction_time
+	effect_desc = {
+		desc = unlocks_building_desc
+		desc = dragon_kiln_effect_desc
+	}
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+
+	can_construct_showing_failures_only = {
+		county.holder.culture = { has_innovation = innovation_cranes }
+	}
+	
+	is_enabled = {
+		county.holder = { has_title = prev.duchy }
+	}
+	show_disabled = yes
+	
+	cost_gold = expensive_building_tier_5_cost
+	
+	character_modifier = {
+		#Add a court grandeur bonus
+		court_grandeur_baseline_add = 12
+		character_capital_county_monthly_development_growth_add = 0.6
+	}
+	province_modifier = {
+		monthly_income = good_building_tax_tier_6
+	}
+	
+	type = duchy_capital
+	
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+	
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+}
+
+
+# Examination Hall
+
+examination_hall_01 = {
+	construction_time = slow_construction_time
+	effect_desc = examination_hall_effects_desc
+
+	can_construct_potential = {
+		building_examination_hall_requirement_terrain = yes
+		building_requirement_castle_city_church = { LEVEL = 01 }
+	}
+	
+	is_enabled = {
+		scope:holder = {
+			government_has_flag = government_has_merit
+		}
+	}
+	show_disabled = yes
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+		county = { NOT = { has_county_modifier = backwater_county_modifier } }
+	}
+
+	can_construct = {
+		scope:holder = {
+			highest_held_title_tier >= tier_duchy
+		}
+	}
+
+	cost_gold = expensive_building_tier_3_cost
+
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.1
+	}
+
+	character_modifier = {
+		monthly_merit_mult = 0.15
+		monthly_influence = 0.5
+		monthly_lifestyle_xp_gain_mult = 0.04
+	}
+
+	type_icon = "icon_building_examination_hall.dds"
+
+	next_building = examination_hall_02
+
+	type = duchy_capital
+	
+	flag = duchy_building
+
+	ai_value = {
+		base = 22
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				scope:holder.primary_title.tier >= tier_kingdom
+				scope:holder.learning >= 18
+			}
+		}
+		modifier = { # Fill all building slots before going for duchy buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		modifier = { # Less likely when the AI should build regular buildings first
+			factor = 0.1
+			scope:holder = { ai_should_focus_on_building_in_their_capital = yes }
+		}
+	}
+}
+
+
+examination_hall_02 = {
+	construction_time = slow_construction_time
+	effect_desc = examination_hall_effects_desc
+
+	can_construct_potential = {
+		building_examination_hall_requirement_terrain  = yes
+		building_requirement_castle_city_church = { LEVEL = 01 }
+	}
+	
+	is_enabled = {
+		scope:holder = {
+			government_has_flag = government_has_merit
+		}
+	}
+	show_disabled = yes
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+		county = { NOT = { has_county_modifier = backwater_county_modifier } }
+	}
+
+	can_construct = {
+		scope:holder = {
+			highest_held_title_tier >= tier_duchy
+		}
+	}
+
+	cost_gold = expensive_building_tier_4_cost
+
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.2
+	}
+
+	character_modifier = {
+		monthly_merit_mult = 0.15
+		monthly_influence = 1
+		monthly_lifestyle_xp_gain_mult = 0.08
+	}
+
+	next_building = examination_hall_03
+
+	type = duchy_capital
+	
+	flag = duchy_building
+
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+}
+
+
+examination_hall_03 = {
+	construction_time = slow_construction_time
+	effect_desc = examination_hall_effects_desc
+
+	can_construct_potential = {
+		building_examination_hall_requirement_terrain  = yes
+		building_requirement_castle_city_church = { LEVEL = 02 }
+	}
+	
+	is_enabled = {
+		scope:holder = {
+			government_has_flag = government_has_merit
+		}
+	}
+	show_disabled = yes
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+		county = { NOT = { has_county_modifier = backwater_county_modifier } }
+	}
+
+	can_construct = {
+		scope:holder = {
+			highest_held_title_tier >= tier_duchy
+		}
+	}
+
+	cost_gold = expensive_building_tier_5_cost
+
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.3
+	}
+
+	character_modifier = {
+		monthly_merit_mult = 0.15
+		monthly_influence = 1.5
+		monthly_lifestyle_xp_gain_mult = 0.12
+	}
+
+	type = duchy_capital
+	
+	flag = duchy_building
+
+	ai_value = {
+		base = 20
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+}
+
+
+##################
+# Tower of Silence
+##################
+tower_of_silence_01 = {
+
+	construction_time = slow_construction_time
+
+	type_icon = "icon_building_tower_of_silence.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		scope:holder = {
+			rite = { rite_has_parameter = can_build_towers_of_silence_active }
+		}
+	}
+
+	is_enabled = {
+		custom_tooltip = {
+			text = tower_of_silence_01.tt.county_not_tos_users
+			county.rite = { rite_has_parameter = can_build_towers_of_silence_active }
+		}
+		custom_tooltip = {
+			text = tower_of_silence_01.tt.liege_not_approve_of_burial
+			scope:holder.liege ?= {
+				rite = {
+					NOT = { rite_has_parameter = can_build_towers_of_silence_active }
+				}
+			}
+		}
+		county.holder = {
+			has_title = prev.duchy
+			rite = { rite_has_parameter = can_build_towers_of_silence_active }
+		}
+	}
+	show_disabled = yes
+
+	cost_gold = expensive_building_tier_5_cost
+
+	character_modifier = {
+		same_faith_opinion = 10
+		zealot_opinion = 10
+		zealot_tax_contribution_mult = 0.2
+		zealot_levy_contribution_mult = 0.2
+		monthly_piety = 1
+		owned_legend_spread_mult = 0.2
+		legitimacy_gain_mult = 0.3
+	}
+
+	duchy_capital_county_modifier = {
+		county_opinion_add = 30
+		monthly_county_control_growth_add = 0.25
+		epidemic_resistance = 10
+	}
+
+	on_complete = {
+		#Regular Mandala Boon
+		mandala_built_piety_duchy_building_t3_effect = yes
+	}
+
+	ai_value = {
+		base = 100
+		ai_pious_building_preference_modifier = yes
+		# Fill all building slots before going for duchy buildings
+		modifier = {
+			factor = 0
+			free_building_slots > 0
+		}
+		modifier = { # Less likely when the AI should build regular buildings first
+			factor = 0.1
+			scope:holder = { ai_should_focus_on_building_in_their_capital = yes }
+		}	
+	}
+
+	type = duchy_capital
+
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+}
+
+
+###################
+# Charnel Grounds #
+###################
+
+charnel_grounds_01 = {
 	construction_time = slow_construction_time
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
-		scope:holder = { has_dlc_feature = legends_of_the_dead }
+		rite = {
+			rite_has_parameter = sky_burials_active
+		}
 	}
+	
+	can_construct_showing_failures_only = {
+		rite = {
+			rite_has_parameter = sky_burials_active
+		}
+	}
+	
+	is_enabled = {
+		county.holder = { has_title = prev.duchy }
+	}
+
+	show_disabled = no
+	
+	cost_gold = expensive_building_tier_3_cost
+	
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.1
+		county_opinion_add = 5
+		epidemic_resistance = 20
+	}
+	character_modifier = {
+		monthly_piety = 0.3
+		stress_gain_mult = -0.1
+		clergy_opinion = 5
+		legitimacy_gain_mult = 0.1
+	}
+	province_modifier = {
+		monthly_income = good_building_tax_tier_1
+	}
+
+	on_complete = {
+		#Regular Mandala Boon
+		mandala_built_piety_duchy_building_t1_effect = yes
+	}
+
+	next_building = charnel_grounds_02
+
+	type_icon = "icon_building_tower_of_silence_2.dds"
+	
+	type = duchy_capital
+	
+	flag = duchy_building
+	
+	ai_value = {
+		base = 20
+		ai_pious_building_preference_modifier = yes
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+		modifier = { # Fill all building slots before going for duchy buildings
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+}
+
+
+charnel_grounds_02 = {
+	construction_time = slow_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+		rite = {
+			rite_has_parameter = sky_burials_active
+		}
+	}
+	
+	can_construct_showing_failures_only = {
+		rite = {
+			rite_has_parameter = sky_burials_active
+		}
+	}
+	
+	is_enabled = {
+		county.holder = { has_title = prev.duchy }
+	}
+
+	show_disabled = no
+	
+	cost_gold = expensive_building_tier_4_cost
+	
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.2
+		county_opinion_add = 10
+		epidemic_resistance = 30
+	}
+	character_modifier = {
+		monthly_piety = 0.5
+		stress_gain_mult = -0.15
+		clergy_opinion = 10
+		legitimacy_gain_mult = 0.15
+	}
+	province_modifier = {
+		monthly_income = good_building_tax_tier_2
+	}
+
+	on_complete = {
+		#Regular Mandala Boon
+		mandala_built_piety_duchy_building_t2_effect = yes
+	}
+	
+	next_building = charnel_grounds_03
+	
+	type = duchy_capital
+	
+	flag = duchy_building
+	
+	ai_value = {
+		base = 20
+		ai_pious_building_preference_modifier = yes
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+}
+
+
+charnel_grounds_03 = {
+	construction_time = slow_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+		rite = {
+			rite_has_parameter = sky_burials_active
+		}
+	}
+	
+	can_construct_showing_failures_only = {
+		rite = {
+			rite_has_parameter = sky_burials_active
+		}
+	}
+	
+	is_enabled = {
+		county.holder = { has_title = prev.duchy }
+	}
+
+	show_disabled = no
+	
+	cost_gold = expensive_building_tier_5_cost
+	
+	duchy_capital_county_modifier = {
+		development_growth_factor = 0.3
+		county_opinion_add = 15
+		epidemic_resistance = 40
+	}
+	character_modifier = {
+		monthly_piety = 1
+		stress_gain_mult = -0.2
+		clergy_opinion = 15
+		legitimacy_gain_mult = 0.2
+	}
+	province_modifier = {
+		monthly_income = good_building_tax_tier_3
+	}
+
+	on_complete = {
+		#Regular Mandala Boon
+		mandala_built_piety_duchy_building_t3_effect = yes
+	}
+	
+	type = duchy_capital
+	
+	flag = duchy_building
+	flag = fully_upgraded_duchy_capital_building
+	
+	ai_value = {
+		base = 20
+		ai_pious_building_preference_modifier = yes
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+	}
+}
+
+
+##################
+### Graveyards ###
+##################
+
+burial_site_01 = {
+
+	construction_time = slow_construction_time
+
+	
+	type_icon = "icon_building_graveyard.dds"
+
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+		has_dlc_feature = legends_of_the_dead
+	}
+
+
+	can_construct_showing_failures_only = {
+		culture = {
+			has_innovation = innovation_manorialism
+		}
+	}
+
+
+	is_enabled = {
+		county.holder = { has_title = prev.duchy }
+	}
+
+	show_disabled = yes
+
+
+	cost_gold = expensive_building_tier_3_cost
+
+
+	character_modifier = {
+
+		monthly_piety = 0.3
+
+		court_grandeur_baseline_add = 2
+
+		owned_legend_spread_mult = 0.2
+
+		legitimacy_gain_mult = 0.1
+
+	
+
+		stress_gain_mult = -0.1 # THE MOD
+
+}
+
+	duchy_capital_county_modifier = {
+		monthly_county_control_growth_factor = 0.1
+		county_opinion_add = 5
+		epidemic_resistance = 20
+	}
+
+
+	on_complete = {
+		#Regular Mandala Boon
+		mandala_built_piety_duchy_building_t1_effect = yes
+	}
+
+
+	next_building = burial_site_02
+
+
+	type = duchy_capital
+
+	
+	flag = duchy_building
+
+
+	ai_value = {
+
+		base = 15 # THE MOD
+
+
+		ai_pious_building_preference_modifier = yes
+
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+
+		modifier = { # Fill all building slots before going for duchy buildings
+			factor = 0
+			free_building_slots > 0
+		}
+
+		modifier = { # Less likely when the AI should build regular buildings first
+			factor = 0.1
+			scope:holder = { ai_should_focus_on_building_in_their_capital = yes }
+		}
+
+	
+}
+
+
+}
+
+
+burial_site_02 = {
+
+	construction_time = slow_construction_time
+
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+		has_dlc_feature = legends_of_the_dead
+	}
+
 
 	can_construct_showing_failures_only = {
 		culture = {
@@ -94,54 +752,85 @@ burial_site_02 = {
 		}
 	}
 
+
 	is_enabled = {
 		county.holder = { has_title = prev.duchy }
 	}
+
 	show_disabled = yes
+
 
 	cost_gold = expensive_building_tier_4_cost
 
+
 	character_modifier = {
+
 		monthly_piety = 0.5
+
 		court_grandeur_baseline_add = 4
+
 		owned_legend_spread_mult = 0.3
+
 		legitimacy_gain_mult = 0.15
-		learning = 2 # THE MOD
-		monthly_learning_lifestyle_xp_gain_mult = 0.09 # THE MOD
+
+	
+
 		stress_gain_mult = -0.15 # THE MOD
-		clergy_opinion = 4 # THE MOD
-	}
+
+}
+
 	duchy_capital_county_modifier = {
 		county_opinion_add = 10
 		monthly_county_control_growth_factor = 0.2
 		epidemic_resistance = 30
 	}
-	# THE MOD START
-	province_modifier = { 
-		monthly_income = good_building_tax_tier_4
-	} # THE MOD END
-	
+
+
+	on_complete = {
+		#Regular Mandala Boon
+		mandala_built_piety_duchy_building_t2_effect = yes
+	}
+
+
 	next_building = burial_site_03
+
 
 	type = duchy_capital
 
+	
+	flag = duchy_building
+
+
 	ai_value = {
+
 		base = 15 # THE MOD
+
+
+		ai_pious_building_preference_modifier = yes
+
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
 		}
-	}
+
+	
 }
 
+
+}
+
+
 burial_site_03 = {
+
 	construction_time = slow_construction_time
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
-		scope:holder = { has_dlc_feature = legends_of_the_dead }
+		has_dlc_feature = legends_of_the_dead
 	}
+
 
 	can_construct_showing_failures_only = {
 		culture = {
@@ -149,53 +838,82 @@ burial_site_03 = {
 		}
 	}
 
+
 	is_enabled = {
 		county.holder = { has_title = prev.duchy }
 	}
+
 	show_disabled = yes
+
 
 	cost_gold = expensive_building_tier_5_cost
 
+
 	character_modifier = {
+
 		monthly_piety = 1
+
 		court_grandeur_baseline_add = 6
+
 		owned_legend_spread_mult = 0.4
+
 		legitimacy_gain_mult = 0.2
-		learning = 3 # THE MOD
-		monthly_learning_lifestyle_xp_gain_mult = 0.12 # THE MOD
+
+	
+
 		stress_gain_mult = -0.2 # THE MOD
-		clergy_opinion = 5 # THE MOD
-	}
+
+}
+
 	duchy_capital_county_modifier = {
 		county_opinion_add = 10
 		monthly_county_control_growth_factor = 0.4
 		epidemic_resistance = 40
 	}
-	# THE MOD START
-	province_modifier = { 
-		monthly_income = good_building_tax_tier_5
-	} 
-	# THE MOD END
-	
+
+
+	on_complete = {
+		#Regular Mandala Boon
+		mandala_built_piety_duchy_building_t3_effect = yes
+	}
+
+
 	type = duchy_capital
+
+
+	flag = duchy_building
 
 	flag = fully_upgraded_duchy_capital_building
 
+
 	ai_value = {
+
 		base = 15 # THE MOD
+
+
+		ai_pious_building_preference_modifier = yes
+
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
 		}
-	}
+
+	
 }
+
+
+}
+
 
 ###############
 ### Regular ###
 ###############
 royal_garden_01 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = royal_garden_effect_desc
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
@@ -207,19 +925,24 @@ royal_garden_01 = {
 			terrain = wetlands
 		}
 	}
+
 	
 	can_construct_showing_failures_only = {
 		culture = {
 			has_innovation = innovation_manorialism
 		}
 	}
+
 	
 	is_enabled = {
 		county.holder = { has_title = prev.duchy }
 	}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_3_cost
+
 	
 	character_modifier = {
 		monthly_prestige_gain_mult = 0.05
@@ -228,56 +951,83 @@ royal_garden_01 = {
 		court_grandeur_baseline_add = 4
 		#character_capital_county_monthly_development_growth_add = 0.2
 	}
+
 	duchy_capital_county_modifier = {
 		county_opinion_add = 5
 	}
+
 	province_modifier = {
 		monthly_income = good_building_tax_tier_2
 	}
+
 	
 	next_building = royal_garden_02
 
+
 	type_icon = "icon_building_royal_gardens.dds"
+
 	
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
+
 		base = 15 # THE MOD
+
+
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
 		}
+
 		modifier = { # Fill all building slots before going for duchy buildings
 			factor = 0
 			free_building_slots > 0
 		}
+
 		modifier = { # Less likely when the AI should build regular buildings first
 			factor = 0.1
 			scope:holder = { ai_should_focus_on_building_in_their_capital = yes }
 		}
-	}
+
+	
 }
 
+
+}
+
+
 royal_garden_02 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = royal_garden_effect_desc
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		county.holder.culture = { has_cultural_parameter = enable_garden_duchy_building }
 		culture = { has_innovation = innovation_windmills }
 	}
+
 	
 	is_enabled = {
 		county.holder = { has_title = prev.duchy }
 	}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_4_cost
+
 	
 	character_modifier = {
 		monthly_prestige_gain_mult = 0.10
@@ -286,46 +1036,70 @@ royal_garden_02 = {
 		court_grandeur_baseline_add = 8
 		#character_capital_county_monthly_development_growth_add = 0.4
 	}
+
 	duchy_capital_county_modifier = {
 		county_opinion_add = 10
 	}
+
 	province_modifier = {
 		monthly_income = good_building_tax_tier_3
 	}
+
 	
 	next_building = royal_garden_03
+
 	
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
+
 		base = 15 # THE MOD
+
+
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
 		}
-	}
+
+	
 }
 
+
+}
+
+
 royal_garden_03 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = royal_garden_effect_desc
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		county.holder.culture = { has_cultural_parameter = enable_garden_duchy_building }
 		culture = { has_innovation = innovation_cranes }
 	}
+
 	
 	is_enabled = {
 		county.holder = { has_title = prev.duchy }
 	}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_5_cost
+
 	
 	character_modifier = {
 		monthly_prestige_gain_mult = 0.15
@@ -334,36 +1108,55 @@ royal_garden_03 = {
 		court_grandeur_baseline_add = 12
 		#character_capital_county_monthly_development_growth_add = 0.6
 	}
+
 	duchy_capital_county_modifier = {
 		county_opinion_add = 15
 	}
+
 	province_modifier = {
 		monthly_income = good_building_tax_tier_4
 	}
+
 	
 	type = duchy_capital
+
 	
+	flag = duchy_building
+
 	flag = fully_upgraded_duchy_capital_building
+
 	
 	ai_value = {
+
 		base = 15 # THE MOD
+
+
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
 		}
-	}
+
+	
 }
+
+
+}
+
 
 # REGULAR DUCHY BUILDINGS
 
 military_academy_01 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = academies_effect_desc
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -371,57 +1164,90 @@ military_academy_01 = {
 			has_innovation = innovation_burhs
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_3_cost
+
 	
 	character_modifier = {
+
 		knight_limit = 1 # THE MOD
+
+
 		knight_effectiveness_mult = 0.10 # THE MOD
+
+
 		army_maintenance_mult = -0.025
+
 		men_at_arms_recruitment_cost = -0.1
-		#men_at_arms_limit = 1 # THE MOD
-		prowess = 2 #THE MOD
-	}
+
+		men_at_arms_limit = 1
+
+	
+}
+
 	
 	next_building = military_academy_02
+
 	
 	type_icon = "icon_building_military_academy.dds"
 
+
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
+
 		base = 30 # THE MOD
+
+
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
 		}
+
 		modifier = { # Fill all building slots before going for duchy buildings
 			factor = 0
 			free_building_slots > 0
 		}
+
 		modifier = { # Less likely when the AI should build regular buildings first
 			factor = 0.1
 			scope:holder = { ai_should_focus_on_building_in_their_capital = yes }
 		}
-	}
+
+	
 }
 
+
+}
+
+
 military_academy_02 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = academies_effect_desc
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -429,47 +1255,77 @@ military_academy_02 = {
 			has_innovation = innovation_castle_baileys
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_4_cost
+
 	
 	character_modifier = {
+
 		knight_limit = 2 # THE MOD
+
+
 		knight_effectiveness_mult = 0.15 # THE MOD
+
+
 		army_maintenance_mult = -0.035
+
 		men_at_arms_recruitment_cost = -0.2
-		#men_at_arms_limit = 2 # THE MOD
-		prowess = 4 #THE MOD
-	}
+
+		men_at_arms_limit = 2
+
+	
+}
+
 	
 	next_building = military_academy_03
+
 	
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
+
 		base = 30 # THE MOD
+
+
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
 		}
-	}
+
+	
 }
 
+
+}
+
+
 military_academy_03 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = academies_effect_desc
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -477,46 +1333,74 @@ military_academy_03 = {
 			has_innovation = innovation_royal_armory
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_5_cost
+
 	
 	character_modifier = {
+
 		knight_limit = 3 # THE MOD
+
+
 		knight_effectiveness_mult = 0.2 # THE MOD
+
+
 		army_maintenance_mult = -0.05
+
 		men_at_arms_recruitment_cost = -0.3
-		#men_at_arms_limit = 3 # THE MOD
-		prowess = 6 #THE MOD
-	}
+
+		men_at_arms_limit = 3
+
+	
+}
+
 	
 	type = duchy_capital
+
 	
+	flag = duchy_building
+
 	flag = fully_upgraded_duchy_capital_building
 
+
 	ai_value = {
+
 		base = 30 # THE MOD
+
+
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
 		}
-	}
+
+	
 }
 
+
+}
+
+
 march_01 = {
+
 	construction_time = slow_construction_time
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -524,35 +1408,64 @@ march_01 = {
 			has_innovation = innovation_burhs
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_3_cost
+
 	
 	duchy_capital_county_modifier = {
+
 		supply_limit_mult = 0.25
+
 		levy_reinforcement_rate = 0.25
+
 		garrison_size = 0.25
-		hostile_raid_time = 0.2
+
+		hostile_raid_time = 0.25
+
 		defender_holding_advantage = 5
-		additional_fort_level = normal_building_fort_level_tier_3 # THE MOD
+
+		additional_fort_level = normal_building_fort_level_tier_2
+
 		travel_danger = -10
+
 		mountains_tax_mult = 0.15
+
 		desert_mountains_tax_mult = 0.15
+
 		hills_tax_mult = 0.15
-	}
+
+	
+}
+
+
+	effect_desc = marches_effect_desc
+
+
+	flag = raid_protection_1
+
 	
 	next_building = march_02
 
+
 	type_icon = "icon_building_march.dds"
+
 	
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
 		base = 20
@@ -570,15 +1483,21 @@ march_01 = {
 			scope:holder = { ai_should_focus_on_building_in_their_capital = yes }
 		}
 	}
+
+
 }
 
+
 march_02 = {
+
 	construction_time = slow_construction_time
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -586,33 +1505,61 @@ march_02 = {
 			has_innovation = innovation_castle_baileys
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_4_cost
+
 	
 	duchy_capital_county_modifier = {
+
 		supply_limit_mult = 0.5
+
 		levy_reinforcement_rate = 0.5
+
 		garrison_size = 0.5
-		hostile_raid_time = 0.3
+
+		hostile_raid_time = 0.5
+
 		defender_holding_advantage = 10
-		additional_fort_level = normal_building_fort_level_tier_5 # THE MOD
+
+		additional_fort_level = normal_building_fort_level_tier_4
+
 		travel_danger = -20
+
 		mountains_tax_mult = 0.2
+
 		desert_mountains_tax_mult = 0.2
+
 		hills_tax_mult = 0.2
-	}
+
+	
+}
+
+
+	effect_desc = marches_effect_2_desc
+
+
+	flag = raid_protection_2
+
 	
 	next_building = march_03
+
 	
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
 		base = 20
@@ -622,15 +1569,21 @@ march_02 = {
 		}
 		culture_likely_to_fortify_modifier = yes
 	}
+
+
 }
 
+
 march_03 = {
+
 	construction_time = slow_construction_time
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -638,33 +1591,59 @@ march_03 = {
 			has_innovation = innovation_royal_armory
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_5_cost
+
 	
 	duchy_capital_county_modifier = {
+
 		supply_limit_mult = 1
+
 		levy_reinforcement_rate = 1
+
 		garrison_size = 1
-		hostile_raid_time = 0.4
+
+		hostile_raid_time = 0.75
+
 		defender_holding_advantage = 15
-		additional_fort_level = normal_building_fort_level_tier_7 # THE MOD
+
+		additional_fort_level = normal_building_fort_level_tier_6
+
 		travel_danger = -30
+
 		mountains_tax_mult = 0.3
+
 		desert_mountains_tax_mult = 0.3
+
 		hills_tax_mult = 0.3
-	}
+
+	
+}
+
+
+	effect_desc = marches_effect_2_desc
+
 	
 	type = duchy_capital
+
 	
+	flag = raid_protection_2
+
+	flag = duchy_building
+
 	flag = fully_upgraded_duchy_capital_building
+
 	
 	ai_value = {
 		base = 20
@@ -674,15 +1653,21 @@ march_03 = {
 		}
 		culture_likely_to_fortify_modifier = yes
 	}
+
+
 }
 
+
 siege_works_01 = {
+
 	construction_time = slow_construction_time
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -690,60 +1675,94 @@ siege_works_01 = {
 			has_innovation = innovation_burhs
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_3_cost
+
 	
 	character_modifier = {
 		siege_weapon_recruitment_cost_mult = -0.15
 		siege_weapon_maintenance_mult = -0.15
 	}
+
 	province_modifier = {
-		stationed_siege_weapon_siege_value_mult = 0.6 # THE MOD
+
+		stationed_siege_weapon_siege_value_mult = very_high_maa_siege_value_tier_1
+
 		stationed_siege_weapon_toughness_add = 5
-	}
+
+	
+}
+
 	duchy_capital_county_modifier = {
-		additional_fort_level = normal_building_fort_level_tier_1 # THE MOD
-	}
+
+		additional_fort_level = normal_building_fort_level_tier_2
+
+	
+}
+
 	
 	next_building = siege_works_02
 
+
 	type_icon = "icon_building_siege_works.dds"
+
 	
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
+
 		base = 15 # THE MOD
+
+
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
 		}
+
 		culture_likely_to_fortify_modifier = yes
+
 		modifier = { # Fill all building slots before going for duchy buildings
 			factor = 0
 			free_building_slots > 0
 		}
+
 		modifier = { # Less likely when the AI should build regular buildings first
 			factor = 0.1
 			scope:holder = { ai_should_focus_on_building_in_their_capital = yes }
 		}
-	}
+
+	
 }
 
+
+}
+
+
 siege_works_02 = {
+
 	construction_time = slow_construction_time
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -751,51 +1770,82 @@ siege_works_02 = {
 			has_innovation = innovation_castle_baileys
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_4_cost
+
 	
 	character_modifier = {
 		siege_weapon_recruitment_cost_mult = -0.3
 		siege_weapon_maintenance_mult = -0.3
 	}
+
 	
 	province_modifier = {
-		stationed_siege_weapon_siege_value_mult = 1 # THE MOD
+
+		stationed_siege_weapon_siege_value_mult = very_high_maa_siege_value_tier_2
+
 		stationed_siege_weapon_toughness_add = 10
-	}
+
+	
+}
+
 	duchy_capital_county_modifier = {
-		additional_fort_level = normal_building_fort_level_tier_2 # THE MOD
-	}
+
+		additional_fort_level = normal_building_fort_level_tier_4
+
+	
+}
+
 	
 	next_building = siege_works_03
+
 	
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
+
 		base = 15 # THE MOD
+
+
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
 		}
+
 		culture_likely_to_fortify_modifier = yes
-	}
+
+	
 }
 
+
+}
+
+
 siege_works_03 = {
+
 	construction_time = slow_construction_time
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -803,57 +1853,88 @@ siege_works_03 = {
 			has_innovation = innovation_royal_armory
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_5_cost
+
 	
 	character_modifier = {
 		siege_weapon_recruitment_cost_mult = -0.45
 		siege_weapon_maintenance_mult = -0.45
 	}
+
 	
 	province_modifier = {
-		stationed_siege_weapon_siege_value_mult = 1.5 # THE MOD
+
+		stationed_siege_weapon_siege_value_mult = very_high_maa_siege_value_tier_3
+
 		stationed_siege_weapon_toughness_add = 15
-	}
+
+	
+}
+
 	duchy_capital_county_modifier = {
-		additional_fort_level = normal_building_fort_level_tier_3 # THE MOD
-	}
+
+		additional_fort_level = normal_building_fort_level_tier_6
+
+	
+}
+
 
 	
 	type = duchy_capital
+
 	
+	flag = duchy_building
+
 	flag = fully_upgraded_duchy_capital_building
+
 	
 	ai_value = {
+
 		base = 15 # THE MOD
+
+
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
 		}
+
 		culture_likely_to_fortify_modifier = yes
-	}
+
+	
 }
 
+
+}
+
+
 royal_armory_01 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = {
 		triggered_desc = {
 			trigger = { has_dlc_feature = tours_and_tournaments }
 			desc = tournament_melee_cost_discount_effect_toto_desc
 		}
 	}
+
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -861,30 +1942,39 @@ royal_armory_01 = {
 			has_innovation = innovation_burhs
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_3_cost
+
 	
 	duchy_capital_county_modifier = {
 		levy_size = 0.2
 	}
+
 	
 	character_modifier = {
+
 		army_maintenance_mult = -0.025
-		martial = 1 # THE MOD
-	}
+
+	
+}
+
 	
 	province_modifier = {
 		stationed_maa_damage_mult = normal_maa_damage_tier_1
 		stationed_maa_toughness_mult = normal_maa_toughness_tier_1
 	}
+
 
 	character_culture_modifier = {
 		parameter = better_armory_buildings
@@ -892,43 +1982,64 @@ royal_armory_01 = {
 		knight_effectiveness_mult = 0.15
 	}
 
+
 	duchy_capital_county_culture_modifier = {
 		parameter = better_armory_buildings
 		build_gold_cost = -0.1
 		holding_build_gold_cost = -0.1
 	}
 
+
 	province_culture_modifier = {
 		parameter = better_armory_buildings
 		stationed_maa_damage_mult = normal_maa_damage_tier_1
 		stationed_maa_toughness_mult = normal_maa_toughness_tier_1
 	}
+
 	
 	next_building = royal_armory_02
 
+
 	type_icon = "icon_building_royal_armory.dds"
+
 	
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
+
 		base = 30 # THE MOD
+
+
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
 		}
+
 		modifier = { # Fill all building slots before going for duchy buildings
 			factor = 0
 			free_building_slots > 0
 		}
+
 		modifier = { # Less likely when the AI should build regular buildings first
 			factor = 0.1
 			scope:holder = { ai_should_focus_on_building_in_their_capital = yes }
 		}
-	}
+
+	
 }
 
+
+}
+
+
 royal_armory_02 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = {
 		triggered_desc = {
 			trigger = { has_dlc_feature = tours_and_tournaments }
@@ -936,10 +2047,12 @@ royal_armory_02 = {
 		}
 	}
 
+
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -948,35 +2061,45 @@ royal_armory_02 = {
 		}
 	}
 
+
 	character_culture_modifier = {
 		parameter = better_armory_buildings
 		prowess = 3
 		knight_effectiveness_mult = 0.3
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_4_cost
+
 	
 	duchy_capital_county_modifier = {
 		levy_size = 0.3
 	}
+
 	
 	character_modifier = {
+
 		army_maintenance_mult = -0.05
-		martial = 2 # THE MOD
-	}
+
+	
+}
+
 	
 	province_modifier = {
 		stationed_maa_damage_mult = normal_maa_damage_tier_2
 		stationed_maa_toughness_mult = normal_maa_toughness_tier_2
 	}
+
 
 	duchy_capital_county_culture_modifier = {
 		parameter = better_armory_buildings
@@ -984,37 +2107,56 @@ royal_armory_02 = {
 		holding_build_gold_cost = -0.15
 	}
 
+
 	province_culture_modifier = {
 		parameter = better_armory_buildings
 		stationed_maa_damage_mult = normal_maa_damage_tier_2
 		stationed_maa_toughness_mult = normal_maa_toughness_tier_2
 	}
+
 	
 	next_building = royal_armory_03
+
 	
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
+
 		base = 30 # THE MOD
+
+
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
 		}
-	}
+
+	
 }
 
+
+}
+
+
 royal_armory_03 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = {
 		triggered_desc = {
 			trigger = { has_dlc_feature = tours_and_tournaments }
 			desc = tournament_activity_cost_max_discount_effect_desc
 		}
 	}
+
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -1023,63 +2165,89 @@ royal_armory_03 = {
 		}
 	}
 
+
 	character_culture_modifier = {
 		parameter = better_armory_buildings
 		prowess = 4
 		knight_effectiveness_mult = 0.45
 	}
+
 	
 	duchy_capital_county_culture_modifier = {
 		parameter = better_armory_buildings
 		build_gold_cost = -0.2
 		holding_build_gold_cost = -0.2
 	}
+
 	
 	character_modifier = {
+
 		army_maintenance_mult = -0.1
-		martial = 3 # THE MOD
-	}
+
+	
+}
+
 	
 	province_modifier = {
 		stationed_maa_damage_mult = normal_maa_damage_tier_3
 		stationed_maa_toughness_mult = normal_maa_toughness_tier_3
 	}
 
+
 	province_culture_modifier = {
 		parameter = better_armory_buildings
 		stationed_maa_damage_mult = normal_maa_damage_tier_3
 		stationed_maa_toughness_mult = normal_maa_toughness_tier_3
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_5_cost
+
 	
 	duchy_capital_county_modifier = {
 		levy_size = 0.4
 	}
+
 	
 	type = duchy_capital
+
 	
+	flag = duchy_building
+
 	flag = fully_upgraded_duchy_capital_building
+
 	
 	ai_value = {
+
 		base = 30 # THE MOD
+
+
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
 		}
-	}
+
+	
 }
 
+
+}
+
+
 jousting_lists_01 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = {
 		triggered_desc = {
 			trigger = { has_dlc_feature = tours_and_tournaments }
@@ -1090,10 +2258,12 @@ jousting_lists_01 = {
 			desc = tournament_horse_cost_discount_effect_toto_desc
 		}
 	}
+
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -1101,43 +2271,71 @@ jousting_lists_01 = {
 			has_innovation = innovation_burhs
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_3_cost
+
 	
 	character_modifier = {
 		men_at_arms_maintenance = -0.06
 	}
+
 	
 	province_modifier = {
-		stationed_heavy_cavalry_damage_mult = very_high_maa_damage_tier_2 # THE MOD
-		stationed_heavy_cavalry_toughness_mult = very_high_maa_toughness_tier_2 # THE MOD
-		stationed_heavy_cavalry_screen_mult = very_high_maa_screen_tier_2 # THE MOD
-		stationed_heavy_cavalry_pursuit_mult = very_high_maa_pursuit_tier_2 # THE MOD
-		stationed_light_cavalry_damage_mult = high_maa_damage_tier_2 # THE MOD
-		stationed_light_cavalry_toughness_mult = high_maa_toughness_tier_2 # THE MOD
-		stationed_light_cavalry_screen_mult = high_maa_screen_tier_2 # THE MOD
-		stationed_light_cavalry_pursuit_mult = high_maa_pursuit_tier_2 # THE MOD
-		stationed_elephant_cavalry_damage_mult = very_high_maa_damage_tier_2 # THE MOD
-		stationed_elephant_cavalry_toughness_mult = very_high_maa_toughness_tier_2 # THE MOD
-		stationed_camel_cavalry_damage_mult = high_maa_damage_tier_2 # THE MOD
-		stationed_camel_cavalry_toughness_mult = high_maa_toughness_tier_2 # THE MOD
-		stationed_camel_cavalry_screen_mult = high_maa_screen_tier_2 # THE MOD
-		stationed_camel_cavalry_pursuit_mult = high_maa_pursuit_tier_2 # THE MOD
-	}
+
+		stationed_heavy_cavalry_damage_mult = very_high_maa_damage_tier_1
+
+		stationed_heavy_cavalry_toughness_mult = very_high_maa_toughness_tier_1
+
+		stationed_heavy_cavalry_screen_mult = very_high_maa_screen_tier_1
+
+		stationed_heavy_cavalry_pursuit_mult = very_high_maa_pursuit_tier_1
+
+		stationed_light_cavalry_damage_mult = high_maa_damage_tier_1
+
+		stationed_light_cavalry_toughness_mult = high_maa_toughness_tier_1
+
+		stationed_light_cavalry_screen_mult = high_maa_screen_tier_1
+
+		stationed_light_cavalry_pursuit_mult = high_maa_pursuit_tier_1
+
+		stationed_elephant_cavalry_damage_mult = very_high_maa_damage_tier_1
+
+		stationed_elephant_cavalry_toughness_mult = very_high_maa_toughness_tier_1
+
+		stationed_camel_cavalry_damage_mult = high_maa_damage_tier_1
+
+		stationed_camel_cavalry_toughness_mult = high_maa_toughness_tier_1
+
+		stationed_camel_cavalry_screen_mult = high_maa_screen_tier_1
+
+		stationed_camel_cavalry_pursuit_mult = high_maa_pursuit_tier_1
+
+	
+}
+
 	
 	next_building = jousting_lists_02
 
+
 	type_icon = "icon_building_jousting_lists.dds"
+
 	
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
 		base = 20
@@ -1179,10 +2377,15 @@ jousting_lists_01 = {
 			scope:holder = { ai_should_focus_on_building_in_their_capital = yes }
 		}
 	}
+
+
 }
 
+
 jousting_lists_02 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = {
 		triggered_desc = {
 			trigger = { has_dlc_feature = tours_and_tournaments }
@@ -1193,10 +2396,12 @@ jousting_lists_02 = {
 			desc = tournament_horse_cost_discount_effect_toto_desc
 		}
 	}
+
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -1204,41 +2409,68 @@ jousting_lists_02 = {
 			has_innovation = innovation_castle_baileys
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_4_cost
+
 	
 	character_modifier = {
 		men_at_arms_maintenance = -0.08
 	}
+
 	
 	province_modifier = {
-		stationed_heavy_cavalry_damage_mult = very_high_maa_damage_tier_3 # THE MOD
-		stationed_heavy_cavalry_toughness_mult = very_high_maa_toughness_tier_3 # THE MOD
-		stationed_heavy_cavalry_screen_mult = very_high_maa_screen_tier_3 # THE MOD
-		stationed_heavy_cavalry_pursuit_mult = very_high_maa_pursuit_tier_3 # THE MOD
-		stationed_light_cavalry_damage_mult = high_maa_damage_tier_3 # THE MOD
-		stationed_light_cavalry_toughness_mult = high_maa_toughness_tier_3 # THE MOD
-		stationed_light_cavalry_screen_mult = high_maa_screen_tier_3 # THE MOD
-		stationed_light_cavalry_pursuit_mult = high_maa_pursuit_tier_3 # THE MOD
-		stationed_elephant_cavalry_damage_mult = very_high_maa_damage_tier_3 # THE MOD
-		stationed_elephant_cavalry_toughness_mult = very_high_maa_toughness_tier_3 # THE MOD
-		stationed_camel_cavalry_damage_mult = high_maa_damage_tier_3 # THE MOD
-		stationed_camel_cavalry_toughness_mult = high_maa_toughness_tier_3 # THE MOD
-		stationed_camel_cavalry_screen_mult = high_maa_screen_tier_3 # THE MOD
-		stationed_camel_cavalry_pursuit_mult = high_maa_pursuit_tier_3 # THE MOD
-	}
+
+		stationed_heavy_cavalry_damage_mult = very_high_maa_damage_tier_2
+
+		stationed_heavy_cavalry_toughness_mult = very_high_maa_toughness_tier_2
+
+		stationed_heavy_cavalry_screen_mult = very_high_maa_screen_tier_2
+
+		stationed_heavy_cavalry_pursuit_mult = very_high_maa_pursuit_tier_2
+
+		stationed_light_cavalry_damage_mult = high_maa_damage_tier_2
+
+		stationed_light_cavalry_toughness_mult = high_maa_toughness_tier_2
+
+		stationed_light_cavalry_screen_mult = high_maa_screen_tier_2
+
+		stationed_light_cavalry_pursuit_mult = high_maa_pursuit_tier_2
+
+		stationed_elephant_cavalry_damage_mult = very_high_maa_damage_tier_2
+
+		stationed_elephant_cavalry_toughness_mult = very_high_maa_toughness_tier_2
+
+		stationed_camel_cavalry_damage_mult = high_maa_damage_tier_2
+
+		stationed_camel_cavalry_toughness_mult = high_maa_toughness_tier_2
+
+		stationed_camel_cavalry_screen_mult = high_maa_screen_tier_2
+
+		stationed_camel_cavalry_pursuit_mult = high_maa_pursuit_tier_2
+
+	
+}
+
 	
 	next_building = jousting_lists_03
+
 	
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
 		base = 20
@@ -1247,10 +2479,15 @@ jousting_lists_02 = {
 			scope:holder.capital_province = this
 		}
 	}
+
+
 }
 
+
 jousting_lists_03 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = {
 		triggered_desc = {
 			trigger = { has_dlc_feature = tours_and_tournaments }
@@ -1261,10 +2498,12 @@ jousting_lists_03 = {
 			desc = tournament_horse_cost_discount_effect_toto_desc
 		}
 	}
+
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -1272,41 +2511,67 @@ jousting_lists_03 = {
 			has_innovation = innovation_royal_armory
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_5_cost
+
 	
 	character_modifier = {
 		men_at_arms_maintenance = -0.1
 	}
+
 	
 	province_modifier = {
-		stationed_heavy_cavalry_damage_mult = very_high_maa_damage_tier_4 # THE MOD
-		stationed_heavy_cavalry_toughness_mult = very_high_maa_toughness_tier_4 # THE MOD
-		stationed_heavy_cavalry_screen_mult = very_high_maa_screen_tier_4 # THE MOD
-		stationed_heavy_cavalry_pursuit_mult = very_high_maa_pursuit_tier_4 # THE MOD
-		stationed_light_cavalry_damage_mult = high_maa_damage_tier_4 # THE MOD
-		stationed_light_cavalry_toughness_mult = high_maa_toughness_tier_4 # THE MOD
-		stationed_light_cavalry_screen_mult = high_maa_screen_tier_4 # THE MOD
-		stationed_light_cavalry_pursuit_mult = high_maa_pursuit_tier_4 # THE MOD
-		stationed_elephant_cavalry_damage_mult = very_high_maa_damage_tier_4 # THE MOD
-		stationed_elephant_cavalry_toughness_mult = very_high_maa_toughness_tier_4 # THE MOD
-		stationed_camel_cavalry_damage_mult = high_maa_damage_tier_4 # THE MOD
-		stationed_camel_cavalry_toughness_mult = high_maa_toughness_tier_4 # THE MOD
-		stationed_camel_cavalry_screen_mult = high_maa_screen_tier_4 # THE MOD
-		stationed_camel_cavalry_pursuit_mult = high_maa_pursuit_tier_4 # THE MOD
-	}
+
+		stationed_heavy_cavalry_damage_mult = very_high_maa_damage_tier_3
+
+		stationed_heavy_cavalry_toughness_mult = very_high_maa_toughness_tier_3
+
+		stationed_heavy_cavalry_screen_mult = very_high_maa_screen_tier_3
+
+		stationed_heavy_cavalry_pursuit_mult = very_high_maa_pursuit_tier_3
+
+		stationed_light_cavalry_damage_mult = high_maa_damage_tier_3
+
+		stationed_light_cavalry_toughness_mult = high_maa_toughness_tier_3
+
+		stationed_light_cavalry_screen_mult = high_maa_screen_tier_3
+
+		stationed_light_cavalry_pursuit_mult = high_maa_pursuit_tier_3
+
+		stationed_elephant_cavalry_damage_mult = very_high_maa_damage_tier_3
+
+		stationed_elephant_cavalry_toughness_mult = very_high_maa_toughness_tier_3
+
+		stationed_camel_cavalry_damage_mult = high_maa_damage_tier_3
+
+		stationed_camel_cavalry_toughness_mult = high_maa_toughness_tier_3
+
+		stationed_camel_cavalry_screen_mult = high_maa_screen_tier_3
+
+		stationed_camel_cavalry_pursuit_mult = high_maa_pursuit_tier_3
+
+	
+}
+
 	
 	type = duchy_capital
+
 	
+	flag = duchy_building
+
 	flag = fully_upgraded_duchy_capital_building
+
 	
 	ai_value = {
 		base = 20
@@ -1315,10 +2580,15 @@ jousting_lists_03 = {
 			scope:holder.capital_province = this
 		}
 	}
+
+
 }
 
+
 blacksmiths_01 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = {
 		desc = unlocks_building_desc
 		triggered_desc = {
@@ -1332,10 +2602,12 @@ blacksmiths_01 = {
 		desc = blacksmiths_effect_desc
 	}
 
+
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -1343,37 +2615,51 @@ blacksmiths_01 = {
 			has_innovation = innovation_burhs
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_3_cost
+
 	
 	character_modifier = {
 		men_at_arms_maintenance = -0.06
 	}
+
 	
 	province_modifier = {
-		stationed_pikemen_damage_mult = normal_maa_damage_tier_4 # THE MOD
-		stationed_pikemen_toughness_mult = very_high_maa_toughness_tier_2 # THE MOD
-		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_4 # THE MOD
-		stationed_heavy_infantry_toughness_mult = very_high_maa_toughness_tier_2 # THE MOD
-	}
+
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_1
+
+		stationed_pikemen_toughness_mult = very_high_maa_toughness_tier_1
+
+		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_1
+
+		stationed_heavy_infantry_toughness_mult = very_high_maa_toughness_tier_1
+
+	
+}
+
 
 	character_culture_modifier = {
 		parameter = better_blacksmith_buildings
 		prowess = 2
 	}
 
+
 	duchy_capital_county_culture_modifier = {
 		parameter = better_blacksmith_buildings
 		supply_limit_mult = 0.25
 	}
+
 
 	province_culture_modifier = {
 		parameter = better_blacksmith_buildings
@@ -1383,21 +2669,42 @@ blacksmiths_01 = {
 		stationed_heavy_infantry_toughness_mult = normal_maa_toughness_tier_1
 	}
 
+
+	province_culture_modifier = {
+		parameter = coking_smith_bonuses
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_1
+		stationed_pikemen_toughness_mult = normal_maa_toughness_tier_1
+		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_1
+		stationed_heavy_infantry_toughness_mult = normal_maa_toughness_tier_1
+	}
+
 	
 	next_building = blacksmiths_02
 
+
 	type_icon = "icon_building_blacksmiths.dds"
+
 	
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
+
 		base = 25 # THE MOD
+
+
 		ai_anti_synergy_cavalry_modifier = yes
+
 		ai_anti_synergy_light_infantry_modifier = yes
+
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
 		}
+
 		modifier = { # Don't build unsuitable MaA-boosting duchy buildings
 			factor = 0
 			scope:holder = {
@@ -1413,19 +2720,28 @@ blacksmiths_01 = {
 				}
 			}
 		}
+
 		modifier = { # Fill all building slots before going for duchy buildings
 			factor = 0
 			free_building_slots > 0
 		}
+
 		modifier = { # Less likely when the AI should build regular buildings first
 			factor = 0.1
 			scope:holder = { ai_should_focus_on_building_in_their_capital = yes }
 		}
-	}
+
+	
 }
 
+
+}
+
+
 blacksmiths_02 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = {
 		desc = unlocks_building_desc
 		triggered_desc = {
@@ -1438,10 +2754,12 @@ blacksmiths_02 = {
 		}
 		desc = blacksmiths_effect_desc
 	}
+
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -1450,6 +2768,7 @@ blacksmiths_02 = {
 		}
 	}
 
+
 	character_culture_modifier = {
 		parameter = better_blacksmith_buildings
 		pikemen_toughness_mult = 0.05
@@ -1457,10 +2776,12 @@ blacksmiths_02 = {
 		prowess = 3
 	}
 
+
 	duchy_capital_county_culture_modifier = {
 		parameter = better_blacksmith_buildings
 		supply_limit_mult = 0.5
 	}
+
 
 	province_culture_modifier = {
 		parameter = better_blacksmith_buildings
@@ -1469,43 +2790,79 @@ blacksmiths_02 = {
 		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_2
 		stationed_heavy_infantry_toughness_mult = normal_maa_toughness_tier_2
 	}
-	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
+
+
+	province_culture_modifier = {
+		parameter = coking_smith_bonuses
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_2
+		stationed_pikemen_toughness_mult = normal_maa_toughness_tier_2
+		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_2
+		stationed_heavy_infantry_toughness_mult = normal_maa_toughness_tier_2
 	}
+
+	
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_4_cost
+
 	
 	character_modifier = {
 		men_at_arms_maintenance = -0.08
 	}
+
 	
 	province_modifier = {
-		stationed_pikemen_damage_mult = normal_maa_damage_tier_5 # THE MOD
-		stationed_pikemen_toughness_mult = very_high_maa_toughness_tier_3 # THE MOD
-		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_5 # THE MOD
-		stationed_heavy_infantry_toughness_mult = very_high_maa_toughness_tier_3 # THE MOD
-	}
+
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_2
+
+		stationed_pikemen_toughness_mult = very_high_maa_toughness_tier_2
+
+		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_2
+
+		stationed_heavy_infantry_toughness_mult = very_high_maa_toughness_tier_2
+
+	
+}
+
 	
 	next_building = blacksmiths_03
+
 	
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
+
 		base = 25 # THE MOD
+
+
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
 		}
-	}
+
+	
 }
 
+
+}
+
+
 blacksmiths_03 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = {
 		desc = unlocks_building_desc
 		triggered_desc = {
@@ -1518,10 +2875,12 @@ blacksmiths_03 = {
 		}
 		desc = blacksmiths_effect_desc
 	}
+
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -1530,38 +2889,52 @@ blacksmiths_03 = {
 		}
 	}
 
+
 	character_culture_modifier = {
 		parameter = better_blacksmith_buildings
 		prowess = 4
 		pikemen_toughness_mult = 0.08
 		heavy_infantry_toughness_mult = 0.08
 	}
+
 	
 	duchy_capital_county_culture_modifier = {
 		parameter = better_blacksmith_buildings
 		supply_limit_mult = 0.75
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_5_cost
+
 	
 	character_modifier = {
 		men_at_arms_maintenance = -0.1
 	}
+
 	
 	province_modifier = {
-		stationed_pikemen_damage_mult = normal_maa_damage_tier_7 # THE MOD
-		stationed_pikemen_toughness_mult = very_high_maa_toughness_tier_5 # THE MOD
-		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_7 # THE MOD
-		stationed_heavy_infantry_toughness_mult = very_high_maa_toughness_tier_5 # THE MOD
-	}
+
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_3
+
+		stationed_pikemen_toughness_mult = very_high_maa_toughness_tier_3
+
+		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_3
+
+		stationed_heavy_infantry_toughness_mult = very_high_maa_toughness_tier_3
+
+	
+}
+
 
 	province_culture_modifier = {
 		parameter = better_blacksmith_buildings
@@ -1570,32 +2943,58 @@ blacksmiths_03 = {
 		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_3
 		stationed_heavy_infantry_toughness_mult = normal_maa_toughness_tier_3
 	}
+
+
+	province_culture_modifier = {
+		parameter = coking_smith_bonuses
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_3
+		stationed_pikemen_toughness_mult = normal_maa_toughness_tier_3
+		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_3
+		stationed_heavy_infantry_toughness_mult = normal_maa_toughness_tier_3
+	}
+
 	
 	type = duchy_capital
+
 	
+	flag = duchy_building
+
 	flag = fully_upgraded_duchy_capital_building
+
 	
 	ai_value = {
+
 		base = 25 # THE MOD
+
+
 		modifier = {
 			factor = 2
 			scope:holder.capital_province = this
 		}
-	}
+
+	
 }
 
+
+}
+
+
 archery_ranges_01 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = {
 		triggered_desc = {
 			trigger = { has_dlc_feature = tours_and_tournaments }
 			desc = tournament_archery_cost_discount_effect_toto_desc
 		}
 	}
+
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -1603,39 +3002,63 @@ archery_ranges_01 = {
 			has_innovation = innovation_burhs
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_3_cost
+
 	
 	character_modifier = {
 		men_at_arms_maintenance = -0.06
 	}
+
 	
 	province_modifier = {
-		stationed_archers_damage_mult = very_high_maa_damage_tier_2 # THE MOD
-		stationed_archers_toughness_mult = low_maa_toughness_tier_2 # THE MOD
-		stationed_skirmishers_screen_mult = high_maa_screen_tier_2 # THE MOD
-		stationed_skirmishers_damage_mult = very_high_maa_damage_tier_2 # THE MOD
-		stationed_skirmishers_toughness_mult = high_maa_toughness_tier_2 # THE MOD
-		stationed_skirmishers_pursuit_mult = high_maa_pursuit_tier_2 # THE MOD
-		stationed_archer_cavalry_screen_mult = high_maa_screen_tier_2 # THE MOD
-		stationed_archer_cavalry_damage_mult = high_maa_damage_tier_2 # THE MOD
-		stationed_archer_cavalry_toughness_mult = low_maa_toughness_tier_2 # THE MOD
-		stationed_archer_cavalry_pursuit_mult = high_maa_pursuit_tier_2 # THE MOD
-	}
+
+		stationed_archers_damage_mult = very_high_maa_damage_tier_1
+
+		stationed_archers_toughness_mult = low_maa_toughness_tier_1
+
+		stationed_skirmishers_screen_mult = high_maa_screen_tier_1
+
+		stationed_skirmishers_damage_mult = very_high_maa_damage_tier_1
+
+		stationed_skirmishers_toughness_mult = high_maa_toughness_tier_1
+
+		stationed_skirmishers_pursuit_mult = high_maa_pursuit_tier_1
+
+		stationed_archer_cavalry_screen_mult = high_maa_screen_tier_1
+
+		stationed_archer_cavalry_damage_mult = high_maa_damage_tier_1
+
+		stationed_archer_cavalry_toughness_mult = low_maa_toughness_tier_1
+
+		stationed_archer_cavalry_pursuit_mult = high_maa_pursuit_tier_1
+
+	
+}
+
 	
 	next_building = archery_ranges_02
 
+
 	type_icon = "icon_building_royal_hunting_grounds.dds"
+
 	
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
 		base = 20
@@ -1682,20 +3105,27 @@ archery_ranges_01 = {
 			scope:holder = { ai_should_focus_on_building_in_their_capital = yes }
 		}
 	}
+
+
 }
 
+
 archery_ranges_02 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = {
 		triggered_desc = {
 			trigger = { has_dlc_feature = tours_and_tournaments }
 			desc = tournament_archery_cost_discount_effect_toto_desc
 		}
 	}
+
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -1703,37 +3133,60 @@ archery_ranges_02 = {
 			has_innovation = innovation_castle_baileys
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_4_cost
+
 	
 	character_modifier = {
 		men_at_arms_maintenance = -0.08
 	}
+
 	
 	province_modifier = {
-		stationed_archers_damage_mult = very_high_maa_damage_tier_3 # THE MOD
-		stationed_archers_toughness_mult = low_maa_toughness_tier_3 # THE MOD
-		stationed_skirmishers_screen_mult = high_maa_screen_tier_3 # THE MOD
-		stationed_skirmishers_damage_mult = very_high_maa_damage_tier_3 # THE MOD
-		stationed_skirmishers_toughness_mult = high_maa_toughness_tier_3 # THE MOD
-		stationed_skirmishers_pursuit_mult = high_maa_pursuit_tier_3 # THE MOD
-		stationed_archer_cavalry_screen_mult = high_maa_screen_tier_3 # THE MOD
-		stationed_archer_cavalry_damage_mult = high_maa_damage_tier_3 # THE MOD
-		stationed_archer_cavalry_toughness_mult = low_maa_toughness_tier_3 # THE MOD
-		stationed_archer_cavalry_pursuit_mult = high_maa_pursuit_tier_3 # THE MOD
-	}
+
+		stationed_archers_damage_mult = very_high_maa_damage_tier_2
+
+		stationed_archers_toughness_mult = low_maa_toughness_tier_2
+
+		stationed_skirmishers_screen_mult = high_maa_screen_tier_2
+
+		stationed_skirmishers_damage_mult = very_high_maa_damage_tier_2
+
+		stationed_skirmishers_toughness_mult = high_maa_toughness_tier_2
+
+		stationed_skirmishers_pursuit_mult = high_maa_pursuit_tier_2
+
+		stationed_archer_cavalry_screen_mult = high_maa_screen_tier_2
+
+		stationed_archer_cavalry_damage_mult = high_maa_damage_tier_2
+
+		stationed_archer_cavalry_toughness_mult = low_maa_toughness_tier_2
+
+		stationed_archer_cavalry_pursuit_mult = high_maa_pursuit_tier_2
+
+	
+}
+
 	
 	next_building = archery_ranges_03
+
 	
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
 		base = 20
@@ -1742,20 +3195,27 @@ archery_ranges_02 = {
 			scope:holder.capital_province = this
 		}
 	}
+
+
 }
 
+
 archery_ranges_03 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = {
 		triggered_desc = {
 			trigger = { has_dlc_feature = tours_and_tournaments }
 			desc = tournament_archery_cost_discount_effect_toto_desc
 		}
 	}
+
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -1763,37 +3223,59 @@ archery_ranges_03 = {
 			has_innovation = innovation_royal_armory
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_5_cost
+
 	
 	character_modifier = {
 		men_at_arms_maintenance = -0.1
 	}
+
 	
 	province_modifier = {
-		stationed_archers_damage_mult = very_high_maa_damage_tier_4 # THE MOD
-		stationed_archers_toughness_mult = low_maa_toughness_tier_4 # THE MOD
-		stationed_skirmishers_screen_mult = high_maa_screen_tier_4 # THE MOD
-		stationed_skirmishers_damage_mult = very_high_maa_damage_tier_4 # THE MOD
-		stationed_skirmishers_toughness_mult = high_maa_toughness_tier_4 # THE MOD
-		stationed_skirmishers_pursuit_mult = high_maa_pursuit_tier_4 # THE MOD
-		stationed_archer_cavalry_screen_mult = high_maa_screen_tier_4 # THE MOD
-		stationed_archer_cavalry_damage_mult = high_maa_damage_tier_4 # THE MOD
-		stationed_archer_cavalry_toughness_mult = low_maa_toughness_tier_4 # THE MOD
-		stationed_archer_cavalry_pursuit_mult = high_maa_pursuit_tier_4 # THE MOD
-	}
+
+		stationed_archers_damage_mult = very_high_maa_damage_tier_3
+
+		stationed_archers_toughness_mult = low_maa_toughness_tier_3
+
+		stationed_skirmishers_screen_mult = high_maa_screen_tier_3
+
+		stationed_skirmishers_damage_mult = very_high_maa_damage_tier_3
+
+		stationed_skirmishers_toughness_mult = high_maa_toughness_tier_3
+
+		stationed_skirmishers_pursuit_mult = high_maa_pursuit_tier_3
+
+		stationed_archer_cavalry_screen_mult = high_maa_screen_tier_3
+
+		stationed_archer_cavalry_damage_mult = high_maa_damage_tier_3
+
+		stationed_archer_cavalry_toughness_mult = low_maa_toughness_tier_3
+
+		stationed_archer_cavalry_pursuit_mult = high_maa_pursuit_tier_3
+
+	
+}
+
 	
 	type = duchy_capital
+
 	
+	flag = duchy_building
+
 	flag = fully_upgraded_duchy_capital_building
+
 	
 	ai_value = {
 		base = 20
@@ -1802,15 +3284,21 @@ archery_ranges_03 = {
 			scope:holder.capital_province = this
 		}
 	}
+
+
 }
 
+
 tax_assessor_01 = {
+
 	construction_time = slow_construction_time
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -1818,33 +3306,41 @@ tax_assessor_01 = {
 			has_innovation = innovation_manorialism
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_3_cost
-	
-	# THE MOD START
-	character_modifier = {
-		stewardship = 1 # THE MOD
-		monthly_prestige_gain_mult = 0.05
-	}
-	# THE MOD END
+
 	
 	duchy_capital_county_modifier = {
+
 		tax_mult = 0.2 # THE MOD
-	}
+
+	
+
+}
+
 	
 	next_building = tax_assessor_02
 
+
 	type_icon = "icon_building_tax_assessor.dds"
+
 	
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
 		base = 20
@@ -1876,15 +3372,29 @@ tax_assessor_01 = {
 			scope:holder = { ai_should_focus_on_building_in_their_capital = yes }
 		}
 	}
+
+
+
+	
+	# THE MOD START
+	character_modifier = {
+		stewardship = 1 # THE MOD
+		monthly_prestige_gain_mult = 0.05
+	}
+
 }
 
+
 tax_assessor_02 = {
+
 	construction_time = slow_construction_time
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -1892,31 +3402,38 @@ tax_assessor_02 = {
 			has_innovation = innovation_windmills
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_4_cost
-	
-	# THE MOD START
-	character_modifier = {
-		stewardship = 2 # THE MOD
-		monthly_prestige_gain_mult = 0.07
-	}
-	# THE MOD END
+
 	
 	duchy_capital_county_modifier = {
+
 		tax_mult = 0.3 # THE MOD
-	}
+
+	
+
+}
+
 	
 	next_building = tax_assessor_03
+
 	
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
 		base = 20
@@ -1925,15 +3442,29 @@ tax_assessor_02 = {
 			scope:holder.capital_province = this
 		}
 	}
+
+
+
+	
+	# THE MOD START
+	character_modifier = {
+		stewardship = 2 # THE MOD
+		monthly_prestige_gain_mult = 0.07
+	}
+
 }
 
+
 tax_assessor_03 = {
+
 	construction_time = slow_construction_time
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -1941,31 +3472,37 @@ tax_assessor_03 = {
 			has_innovation = innovation_cranes
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_5_cost
-	
-	# THE MOD START
-	character_modifier = {
-		stewardship = 3 # THE MOD
-		monthly_prestige_gain_mult = 0.1
-	}
-	# THE MOD END
+
 	
 	duchy_capital_county_modifier = {
+
 		tax_mult = 0.4 # THE MOD
-	}
+
+	
+
+}
+
 	
 	type = duchy_capital
+
 	
+	flag = duchy_building
+
 	flag = fully_upgraded_duchy_capital_building
+
 	
 	ai_value = {
 		base = 20
@@ -1974,16 +3511,31 @@ tax_assessor_03 = {
 			scope:holder.capital_province = this
 		}
 	}
+
+
+
+	
+	# THE MOD START
+	character_modifier = {
+		stewardship = 3 # THE MOD
+		monthly_prestige_gain_mult = 0.1
+	}
+
 }
 
+
 leisure_palace_01 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = leisure_palace_effect_desc
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -1991,38 +3543,63 @@ leisure_palace_01 = {
 			has_innovation = innovation_manorialism
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_3_cost
+
 	
 	character_modifier = {
-		intrigue = 1 # THE MOD
+
 		monthly_prestige_gain_mult = 0.05
+
 		stress_loss_mult = 0.1 # THE MOD
+
+
+
 		owned_hostile_scheme_success_chance_add = 10 # THE MOD
+
+
+		owned_personal_scheme_success_chance_add = 5
+
+	
+
 		#owned_personal_scheme_success_chance_add = 10 # THE MOD
 		monthly_dynasty_prestige_mult = 0.03 # THE MOD
-		short_reign_duration_mult = -0.1 # THE MOD
-	}
+
+}
+
 	
 	duchy_capital_county_modifier = {
+
 		monthly_county_control_growth_factor = 0.2
+
 		monthly_county_control_growth_add = 0.2
-		tax_mult = 0.04 # THE MOD
-	}
+
+	
+}
+
 	
 	next_building = leisure_palace_02
 
+
 	type_icon = "icon_building_leisure_palace.dds"
+
 	
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
 		base = 10
@@ -2050,16 +3627,23 @@ leisure_palace_01 = {
 			scope:holder = { ai_should_focus_on_building_in_their_capital = yes }
 		}
 	}
+
+
 }
 
+
 leisure_palace_02 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = leisure_palace_effect_desc
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -2067,36 +3651,59 @@ leisure_palace_02 = {
 			has_innovation = innovation_windmills
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_4_cost
+
 	
 	character_modifier = {
-		intrigue = 2 # THE MOD
+
 		monthly_prestige_gain_mult = 0.1
+
 		stress_loss_mult = 0.15 # THE MOD
+
+
+
 		owned_hostile_scheme_success_chance_add = 15
+
+		owned_personal_scheme_success_chance_add = 15
+
+	
+
 		#owned_personal_scheme_success_chance_add = 15
 		monthly_dynasty_prestige_mult = 0.04 # THE MOD
-		short_reign_duration_mult = -0.15 # THE MOD
-	}
+
+}
+
 	
 	duchy_capital_county_modifier = {
+
 		monthly_county_control_growth_factor = 0.4
+
 		monthly_county_control_growth_add = 0.3
-		tax_mult = 0.08 # THE MOD
-	}
+
+	
+}
+
 	
 	next_building = leisure_palace_03
+
 	
 	type = duchy_capital
+
+	
+	flag = duchy_building
+
 	
 	ai_value = {
 		base = 20
@@ -2105,16 +3712,23 @@ leisure_palace_02 = {
 			scope:holder.capital_province = this
 		}
 	}
+
+
 }
 
+
 leisure_palace_03 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = leisure_palace_effect_desc
+
 	
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -2122,36 +3736,54 @@ leisure_palace_03 = {
 			has_innovation = innovation_cranes
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_5_cost
+
 	
 	character_modifier = {
-		intrigue = 3 # THE MOD
+
 		monthly_prestige_gain_mult = 0.15
+
 		stress_loss_mult = 0.2 # THE MOD
+
+
+
 		owned_hostile_scheme_success_chance_add = 20 # THE MOD
-		#owned_personal_scheme_success_chance_add = 20 # THE MOD
-		tax_mult = 0.1 # THE MOD
+
+
+		owned_personal_scheme_success_chance_add = 25
+
+	
+
 		monthly_dynasty_prestige_mult = 0.05 # THE MOD
-		short_reign_duration_mult = -0.2 # THE MOD
-	}
+
+}
+
 	
 	duchy_capital_county_modifier = {
 		monthly_county_control_growth_factor = 0.6
 		monthly_county_control_growth_add = 0.4
 	}
+
 	
 	type = duchy_capital
+
 	
+	flag = duchy_building
+
 	flag = fully_upgraded_duchy_capital_building
+
 	
 	ai_value = {
 		base = 20
@@ -2160,11 +3792,17 @@ leisure_palace_03 = {
 			scope:holder.capital_province = this
 		}
 	}
+
+
 }
 
+
 royal_forest_01 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = royal_reserves_desc
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
@@ -2178,6 +3816,7 @@ royal_forest_01 = {
 			terrain = wetlands
 		}
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -2185,16 +3824,71 @@ royal_forest_01 = {
 			has_innovation = innovation_manorialism
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_3_cost
+
+	
+	duchy_capital_county_modifier = {
+		county_opinion_add = 5
+		development_growth_factor = 0.1
+	}
+
+	province_modifier = {
+
+		monthly_income = good_building_tax_tier_2
+
+	
+}
+
+	
+	next_building = royal_forest_02
+
+
+	type_icon = "icon_building_royal_forest.dds"
+
+	
+	type = duchy_capital
+
+	
+	flag = duchy_building
+
+	
+	ai_value = {
+
+		base = 15 # THE MOD
+
+
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+
+		modifier = { # Fill all building slots before going for duchy buildings
+			factor = 0
+			free_building_slots > 0
+		}
+
+		modifier = { # Less likely when the AI should build regular buildings first
+			factor = 0.1
+			scope:holder = { ai_should_focus_on_building_in_their_capital = yes }
+		}
+
+	
+}
+
+
+
 	
 	# THE MOD START
 	character_modifier = {
@@ -2204,47 +3898,22 @@ royal_forest_01 = {
 		owned_personal_scheme_success_chance_add = 10 # THE MOD
 		monthly_dynasty_prestige_mult = 0.03 # THE MOD
 	}
-	# THE MOD END
-	
-	duchy_capital_county_modifier = {
-		county_opinion_add = 5
-		development_growth_factor = 0.1
-	}
-	province_modifier = {
-		monthly_income = good_building_tax_tier_3 # THE MOD
-	}
-	
-	next_building = royal_forest_02
 
-	type_icon = "icon_building_royal_forest.dds"
-	
-	type = duchy_capital
-	
-	ai_value = {
-		base = 15 # THE MOD
-		modifier = {
-			factor = 2
-			scope:holder.capital_province = this
-		}
-		modifier = { # Fill all building slots before going for duchy buildings
-			factor = 0
-			free_building_slots > 0
-		}
-		modifier = { # Less likely when the AI should build regular buildings first
-			factor = 0.1
-			scope:holder = { ai_should_focus_on_building_in_their_capital = yes }
-		}
-	}
 }
 
+
 royal_forest_02 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = royal_reserves_desc
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -2252,16 +3921,58 @@ royal_forest_02 = {
 			has_innovation = innovation_windmills
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_4_cost
+
+	
+	duchy_capital_county_modifier = {
+		county_opinion_add = 10
+		development_growth_factor = 0.2
+	}
+
+	province_modifier = {
+
+		monthly_income = good_building_tax_tier_3
+
+	
+}
+
+	
+	next_building = royal_forest_03
+
+	
+	type = duchy_capital
+
+	
+	flag = duchy_building
+
+	
+	ai_value = {
+
+		base = 15 # THE MOD
+
+
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+
+	
+}
+
+
+
 	
 	# THE MOD START
 	character_modifier = {
@@ -2271,37 +3982,22 @@ royal_forest_02 = {
 		owned_personal_scheme_success_chance_add = 15 # THE MOD
 		monthly_dynasty_prestige_mult = 0.04 # THE MOD
 	}
-	# THE MOD END
-	
-	duchy_capital_county_modifier = {
-		county_opinion_add = 10
-		development_growth_factor = 0.2
-	}
-	province_modifier = {
-		monthly_income = good_building_tax_tier_4 # THE MOD
-	}
-	
-	next_building = royal_forest_03
-	
-	type = duchy_capital
-	
-	ai_value = {
-		base = 15 # THE MOD
-		modifier = {
-			factor = 2
-			scope:holder.capital_province = this
-		}
-	}
+
 }
 
+
 royal_forest_03 = {
+
 	construction_time = slow_construction_time
+
 	effect_desc = royal_reserves_desc
+
 
 	can_construct_potential = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		building_requirement_tribal = no
 	}
+
 	
 	can_construct_showing_failures_only = {
 		
@@ -2309,16 +4005,57 @@ royal_forest_03 = {
 			has_innovation = innovation_cranes
 		}
 	}
+
 	
-	is_enabled = { # THE MOD
-		AND = {
-			county.holder = { has_title = prev.duchy }
-			county = county.holder.capital_county
-		}
-	}
+	is_enabled = {
+
+		county.holder = { has_title = prev.duchy }
+
+	
+}
+
 	show_disabled = yes
+
 	
 	cost_gold = expensive_building_tier_5_cost
+
+	
+	duchy_capital_county_modifier = {
+		county_opinion_add = 15
+		development_growth_factor = 0.3
+	}
+
+	province_modifier = {
+
+		monthly_income = good_building_tax_tier_4
+
+	
+}
+
+	
+	type = duchy_capital
+
+	
+	flag = duchy_building
+
+	flag = fully_upgraded_duchy_capital_building
+
+	
+	ai_value = {
+
+		base = 15 # THE MOD
+
+
+		modifier = {
+			factor = 2
+			scope:holder.capital_province = this
+		}
+
+	
+}
+
+
+
 	
 	# THE MOD START
 	character_modifier = {
@@ -2328,28 +4065,9 @@ royal_forest_03 = {
 		owned_personal_scheme_success_chance_add = 20 # THE MOD
 		monthly_dynasty_prestige_mult = 0.05 # THE MOD
 	}
-	# THE MOD END
-	
-	duchy_capital_county_modifier = {
-		county_opinion_add = 15
-		development_growth_factor = 0.3
-	}
-	province_modifier = {
-		monthly_income = good_building_tax_tier_5 # THE MOD
-	}
-	
-	type = duchy_capital
-	
-	flag = fully_upgraded_duchy_capital_building
-	
-	ai_value = {
-		base = 15 # THE MOD
-		modifier = {
-			factor = 2
-			scope:holder.capital_province = this
-		}
-	}
+
 }
+
 
 ##########
 # Megalith
@@ -2364,8 +4082,8 @@ great_megalith_01 = {
 		building_requirement_tribal = no
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		scope:holder = {
-			faith = {
-				has_doctrine_parameter = can_build_megaliths
+			rite = {
+				rite_has_parameter = can_build_megaliths
 			}
 		}
 	}
@@ -2373,7 +4091,7 @@ great_megalith_01 = {
 	is_enabled = {
 		custom_tooltip = {
 			text = province_is_of_a_megalith_faith_tt
-			county.faith = { has_doctrine_parameter = can_build_megaliths }
+			county.rite = { rite_has_parameter = can_build_megaliths }
 		}
 		county.holder = { has_title = prev.duchy }
 	}
@@ -2411,76 +4129,7 @@ great_megalith_01 = {
 	
 	type = duchy_capital
 
+	flag = duchy_building
 	flag = fully_upgraded_duchy_capital_building
 }
 
-
-##################
-# Tower of Silence
-##################
-tower_of_silence_01 = {
-
-	construction_time = very_quick_construction_time
-
-	type_icon = "icon_building_tower_of_silence.dds"
-
-	can_construct_potential = {
-		building_requirement_tribal = no
-		building_requirement_castle_city_church = { LEVEL = 01 }
-		scope:holder = {
-			faith = { has_doctrine_parameter = can_build_towers_of_silence_active }
-		}
-	}
-
-	is_enabled = {
-		custom_tooltip = {
-			text = tower_of_silence_01.tt.county_not_tos_users
-			county.faith = { has_doctrine_parameter = can_build_towers_of_silence_active }
-		}
-		custom_tooltip = {
-			text = tower_of_silence_01.tt.liege_not_approve_of_burial
-			scope:holder.liege ?= {
-				faith = {
-					NOT = { has_doctrine_parameter = can_build_towers_of_silence_active }
-				}
-			}
-		}
-		county.holder = {
-			has_title = prev.duchy
-			faith = { has_doctrine_parameter = can_build_towers_of_silence_active }
-		}
-	}
-	show_disabled = yes
-
-	cost_gold = normal_building_tier_1_cost
-
-	character_modifier = {
-		same_faith_opinion = 10
-		zealot_opinion = 10
-		zealot_tax_contribution_mult = 0.2
-		zealot_levy_contribution_mult = 0.2
-		monthly_piety = 0.5
-	}
-
-	duchy_capital_county_modifier = {
-		county_opinion_add = 30
-		monthly_county_control_growth_add = 0.25
-	}
-
-	ai_value = {
-		base = 100
-		# Fill all building slots before going for duchy buildings
-		modifier = {
-			factor = 0
-			free_building_slots > 0
-		}
-		modifier = { # Less likely when the AI should build regular buildings first
-			factor = 0.1
-			scope:holder = { ai_should_focus_on_building_in_their_capital = yes }
-		}
-	}
-
-	type = duchy_capital
-
-	flag = fully_upgraded_duchy_capital_building
-}

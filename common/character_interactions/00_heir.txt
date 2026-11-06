@@ -1,5 +1,3 @@
-﻿@designate_heir_cost = 500 # THE MOD
-# Set one of your children as heir
 
 
 
@@ -14,46 +12,27 @@ designate_heir_interaction = {
 	desc = designate_heir_interaction_desc
 
 	is_shown = {
-		trigger_if = {
-			limit = {
-				scope:actor = {
-					government_allows = administrative
-					any_held_title = {
-						is_noble_family_title = yes
-					}
-				}
-			}
-			scope:recipient = {
-				is_close_family_of = scope:actor
-			}
-		}
-		trigger_else = {
-			scope:recipient = {
-				is_child_of = scope:actor
-			}
-			scope:actor = {
-				OR = { # THE MOD
-					can_designate_heir_trigger = yes
-					has_perk = meritocracy_perk
-				}
-			}
+		# Is candidate (recipient) valid?
+		scope:recipient = {
+			is_child_of = scope:puppet_or_actor
 		}
 		NOR = {
-			scope:recipient = scope:actor.designated_heir
-			scope:recipient = scope:actor
+			scope:recipient = scope:puppet_or_actor.designated_heir
+			scope:recipient = scope:puppet_or_actor
 		}
-		trigger_if = {
-			limit = {
-				scope:actor = { NOT = { primary_title = title:e_byzantium } }
-			}
-			custom_description = {
-				text = "dynasty_member_leads_election"
-				scope:actor = {
+
+		scope:puppet_or_actor = {
+			trigger_if = {
+				limit = {
+					is_roman_emperor_primary_title_trigger = no
+				}
+				custom_description = {
+					text = "dynasty_member_leads_election"
 					NAND = {
-						primary_title = {
+						primary_title ?= {
 							has_title_law_flag = elective_succession_law
 						}
-						dynasty = primary_heir.dynasty
+						dynasty ?= primary_heir.dynasty
 					}
 				}
 			}
@@ -63,53 +42,93 @@ designate_heir_interaction = {
 	cost = {
 		prestige = {
 			value = {
-				add = {
-					if = {
-						limit = {
-							scope:actor = {
-								government_allows = administrative
-								any_held_title = {
-									is_noble_family_title = yes
-								}
-							}
-						}
-						value = designate_heir_admin_prestige_cost
-					}
-					else = {
-						value = designate_heir_cost
-					}
-					desc = BASE
+				# this not initalized in GUI
+				if = {
+					limit = { NOT = { exists = scope:puppet_or_actor } }
+					scope:actor = { save_temporary_scope_as = puppet_or_actor }
 				}
 				if = {
 					limit = {
-						scope:actor = {
-							government_has_flag = government_is_landless_adventurer
-						}
+						scope:puppet_or_actor = { government_has_flag = government_is_mandala }
+					}
+					multiply = 0
+				}
+				else_if = {
+					limit = {
+						scope:puppet_or_actor = { government_has_flag = government_is_landless_adventurer }
 					}
 					multiply = {
 						value = 0
 						desc = "[adventurer|E]"
 					}
 				}
+				else = {
+					add = {
+						if = {
+							limit = {
+								scope:puppet_or_actor = {
+									government_has_mechanic = administrative
+									government_has_flag = government_has_influence
+								}
+							}
+							value = designate_heir_admin_prestige_cost
+						}
+						else = {
+							value = designate_heir_cost
+						}
+						desc = BASE
+					}
+				}
+			}
+			if = {
+				limit = { scope:puppet_or_actor != scope:actor }
+				multiply = 0
 			}
 		}
 		influence = {
 			value = {
 				add = 0
+				# this not initalized in GUI
+				if = {
+					limit = { NOT = { exists = scope:puppet_or_actor } }
+					scope:actor = { save_temporary_scope_as = puppet_or_actor }
+				}
 				if = {
 					limit = {
-						scope:actor = {
-							government_allows = administrative
-							any_held_title = {
-								is_noble_family_title = yes
-							}
+						scope:puppet_or_actor = {
+							government_has_mechanic = administrative
+							government_has_flag = government_has_influence
 						}
 					}
 					add = {
 						value = designate_heir_admin_influence_cost
-						desc = "[administrative_government|E]"
+						desc = "[government_bureaucratic_gov|E]"
 					}
 				}
+			}
+			if = {
+				limit = { scope:puppet_or_actor != scope:actor }
+				multiply = 0
+			}
+		}
+		piety = {
+			value = {
+				add = 0
+				# this not initalized in GUI
+				if = {
+					limit = { NOT = { exists = scope:puppet_or_actor } }
+					scope:actor = { save_temporary_scope_as = puppet_or_actor }
+				}
+				if = {
+					limit = {
+						scope:puppet_or_actor = { government_has_flag = government_is_mandala }
+					}
+					add = designate_heir_cost
+				}
+			}
+			if = {
+				limit = { scope:puppet_or_actor != scope:actor }
+				multiply = 0
 			}
 		}
 	}
@@ -118,7 +137,6 @@ designate_heir_interaction = {
 		trigger_if = {
 			limit = { exists = scope:recipient }
 			scope:recipient = {
-				is_busy_in_events_localised = yes
 				is_eunuch_trigger = no
 				NOR = {
 					has_trait = disinherited
@@ -126,42 +144,58 @@ designate_heir_interaction = {
 					has_trait = order_member
 					has_trait = bastard
 				}
+				house ?= scope:puppet_or_actor.house
 			}
 		}
-		scope:actor = {
+		scope:puppet_or_actor = {
+			OR = { # THE MOD
+ can_designate_heir_trigger = yes
+ has_perk = meritocracy_perk
+ }
 			trigger_if = {
 				limit = {
-					government_allows = administrative
-					any_held_title = {
-						is_noble_family_title = yes
-					}
+					government_has_mechanic = administrative
+					government_has_flag = government_has_influence
 				}
 				prestige >= designate_heir_admin_prestige_cost
 				influence >= designate_heir_admin_influence_cost
+
+				custom_tooltip = {
+					text = valid_co_emperor_candidate_liege_trigger
+					scope:recipient.top_liege = scope:puppet_or_actor.top_liege
+				}
 			}
 			trigger_else_if = {
 				limit = {
-					NOT = { government_has_flag = government_is_landless_adventurer }
+					NOR = {
+						government_has_flag = government_is_mandala
+						government_has_flag = government_is_landless_adventurer
+					}
 				}
 				prestige >= designate_heir_cost
 			}
 			trigger_else = {}
-		}
-		trigger_if = {
-			limit = {
-				scope:actor = {
+			trigger_if = {
+				limit = {
 					government_has_flag = government_is_landless_adventurer
+					exists = scope:recipient
 				}
-				exists = scope:recipient
+				scope:recipient = {
+					is_adult = yes
+				}
 			}
-			scope:recipient = {
-				is_adult = yes
+			trigger_if = {
+				limit = {
+					government_has_flag = government_is_mandala
+				}
+				piety >= designate_heir_cost
 			}
-		}
-		custom_tooltip = {
-			text = designate_heir_interaction.tt.currently_coruling
-			scope:actor = {
-				NOT = { has_diarchy_active_parameter = diarchy_is_co_rulership }
+			trigger_if = {
+				limit = { NOT = { scope:puppet_or_actor.primary_heir ?= scope:recipient } }
+				custom_tooltip = {
+					text = designate_heir_interaction.tt.currently_coruling
+					NOT = { has_diarchy_active_parameter = diarchy_is_co_rulership }
+				}
 			}
 		}
 	}
@@ -173,16 +207,20 @@ designate_heir_interaction = {
 	}
 
 	on_accept = {
-		scope:actor = {
+		scope:puppet_or_actor = {
 			send_interface_toast = {
 				type = event_toast_effect_neutral
 				title = designate_heir_interaction_notification
 
-				left_icon = scope:actor					
+				left_icon = scope:puppet_or_actor
 				right_icon = scope:recipient
 
 				set_designated_heir = scope:recipient
 			}
+		}
+		notify_puppeteer_of_outcome_effect = {
+			TYPE = event_toast_effect_neutral
+			TITLE = designate_heir_interaction_notification_puppeteer
 		}
 	}
 

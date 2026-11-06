@@ -88,10 +88,12 @@
 ###########################
 
 # Base
+@low_development_growth_base = 0.01
 @normal_development_growth_base = 0.02
 @good_development_growth_base = 0.04
 
 # Scaling Increase
+@low_development_growth_addition_per_tier = 0.01
 @normal_development_growth_addition_per_tier = 0.02
 @good_development_growth_addition_per_tier = 0.04
 
@@ -127,9 +129,13 @@
 
 # Base Damage Mult
 @low_damage_mult_base = 0.03 # THE MOD
+
 @normal_damage_mult_base = 0.05 # THE MOD
+
 @high_damage_mult_base = 0.10  # THE MOD
+
 @very_high_damage_mult_base = 0.15  # THE MOD
+
 
 # Scaling Increase Damage Mult
 @low_damage_mult_addition_per_tier = 0.025
@@ -140,9 +146,13 @@
 
 # Base Toughness Mult
 @low_toughness_mult_base = 0.03 # THE MOD
+
 @normal_toughness_mult_base = 0.05 # THE MOD
+
 @high_toughness_mult_base = 0.10 # THE MOD
+
 @very_high_toughness_mult_base = 0.15 # THE MOD
+
 
 # Scaling Increase Toughness Mult
 @low_toughness_mult_addition_per_tier = 0.025
@@ -153,9 +163,13 @@
 
 # Base Screen Mult
 @low_screen_mult_base = 0.03 # THE MOD
+
 @normal_screen_mult_base = 0.05 # THE MOD
+
 @high_screen_mult_base = 0.10 # THE MOD
+
 @very_high_screen_mult_base = 0.15 # THE MOD
+
 
 # Scaling Increase Toughness Mult
 @low_screen_mult_addition_per_tier = 0.025
@@ -166,9 +180,13 @@
 
 # Base Pursuit Mult
 @low_pursuit_mult_base = 0.03 # THE MOD
+
 @normal_pursuit_mult_base = 0.05 # THE MOD
+
 @high_pursuit_mult_base = 0.10 # THE MOD
+
 @very_high_pursuit_mult_base = 0.15 # THE MOD
+
 
 # Scaling Increase Pursuit Mult
 @low_pursuit_mult_addition_per_tier = 0.025
@@ -278,6 +296,7 @@
 ##############
 
 # Base
+@poor_advantage_base = 1
 @normal_advantage_base = 2
 @good_advantage_base = 3
 
@@ -572,6 +591,15 @@ building_disable_inefficient_value_add = 5
 @great_fort_level_tier_7 = @[great_fort_level_tier_6 + great_fort_level_scale_addition_per_tier + 5]
 @great_fort_level_tier_8 = @[great_fort_level_tier_7 + great_fort_level_scale_addition_per_tier + 6]
 
+@poor_advantage_tier_1 = @[poor_advantage_base]
+@poor_advantage_tier_2 = @[poor_advantage_tier_1 + poor_advantage_tier_1]
+@poor_advantage_tier_3 = @[poor_advantage_tier_2 + poor_advantage_tier_1]
+@poor_advantage_tier_4 = @[poor_advantage_tier_3 + poor_advantage_tier_1]
+@poor_advantage_tier_5 = @[poor_advantage_tier_4 + poor_advantage_tier_1]
+@poor_advantage_tier_6 = @[poor_advantage_tier_5 + poor_advantage_tier_1]
+@poor_advantage_tier_7 = @[poor_advantage_tier_6 + poor_advantage_tier_1]
+@poor_advantage_tier_8 = @[poor_advantage_tier_7 + poor_advantage_tier_1]
+
 @normal_advantage_tier_1 = @[normal_advantage_base]
 @normal_advantage_tier_2 = @[normal_advantage_tier_1 + normal_advantage_scale_addition_per_tier]
 @normal_advantage_tier_3 = @[normal_advantage_tier_2 + normal_advantage_scale_addition_per_tier]
@@ -641,6 +669,15 @@ building_disable_inefficient_value_add = 5
 @good_maa_maintenance_tier_7 = @[good_maa_maintenance_tier_6 + normal_maa_maintenance_addition_per_tier]
 @good_maa_maintenance_tier_8 = @[good_maa_maintenance_tier_7 + normal_maa_maintenance_addition_per_tier]
 
+@low_development_growth_tier_1 = @[low_development_growth_base]
+@low_development_growth_tier_2 = @[low_development_growth_tier_1 + low_development_growth_addition_per_tier]
+@low_development_growth_tier_3 = @[low_development_growth_tier_2 + low_development_growth_addition_per_tier]
+@low_development_growth_tier_4 = @[low_development_growth_tier_3 + low_development_growth_addition_per_tier]
+@low_development_growth_tier_5 = @[low_development_growth_tier_4 + low_development_growth_addition_per_tier]
+@low_development_growth_tier_6 = @[low_development_growth_tier_5 + low_development_growth_addition_per_tier]
+@low_development_growth_tier_7 = @[low_development_growth_tier_6 + low_development_growth_addition_per_tier]
+@low_development_growth_tier_8 = @[low_development_growth_tier_7 + low_development_growth_addition_per_tier]
+
 @normal_development_growth_tier_1 = @[normal_development_growth_base]
 @normal_development_growth_tier_2 = @[normal_development_growth_tier_1 + normal_development_growth_addition_per_tier]
 @normal_development_growth_tier_3 = @[normal_development_growth_tier_2 + normal_development_growth_addition_per_tier]
@@ -697,6 +734,8 @@ building_disable_inefficient_value_add = 5
 
 @tribal_cost_tier_1 = @[tribal_cost_base]
 @tribal_cost_tier_2 = @[tribal_cost_tier_1 + tribal_cost_scale_addition_per_tier]
+@tribal_cost_tier_3 = @[tribal_cost_tier_2 + tribal_cost_scale_addition_per_tier]
+@tribal_cost_tier_4 = @[tribal_cost_tier_3 + tribal_cost_scale_addition_per_tier]
 
 # Low Damage Mult
 @low_maa_damage_tier_1 = @[low_damage_mult_base]
@@ -1277,6 +1316,8 @@ main_building_tier_4_cost = @[main_cost_tier_4]
 # Tribal Buildings
 tribal_building_tier_1_cost = @[tribal_cost_tier_1]
 tribal_building_tier_2_cost = @[tribal_cost_tier_2]
+tribal_building_tier_3_cost = @[tribal_cost_tier_3]
+tribal_building_tier_4_cost = @[tribal_cost_tier_4]
 
 ##############
 # Tax Values #
@@ -1322,6 +1363,26 @@ excellent_building_tax_tier_6 = @[excellent_tax_tier_6]
 excellent_building_tax_tier_7 = @[excellent_tax_tier_7]
 excellent_building_tax_tier_8 = @[excellent_tax_tier_8]
 
+# Poor Tax, negative
+poor_building_tax_negative_tier_1 = @[poor_tax_tier_1 * -0.5]
+poor_building_tax_negative_tier_2 = @[poor_tax_tier_2 * -0.5]
+poor_building_tax_negative_tier_3 = @[poor_tax_tier_3 * -0.5]
+poor_building_tax_negative_tier_4 = @[poor_tax_tier_4 * -0.5]
+poor_building_tax_negative_tier_5 = @[poor_tax_tier_5 * -0.5]
+poor_building_tax_negative_tier_6 = @[poor_tax_tier_6 * -0.5]
+poor_building_tax_negative_tier_7 = @[poor_tax_tier_7 * -0.5]
+poor_building_tax_negative_tier_8 = @[poor_tax_tier_8 * -0.5]
+
+# Poor Tax, halved
+poor_building_tax_halved_tier_1 = @[poor_tax_tier_1 * 0.5]
+poor_building_tax_halved_tier_2 = @[poor_tax_tier_2 * 0.5]
+poor_building_tax_halved_tier_3 = @[poor_tax_tier_3 * 0.5]
+poor_building_tax_halved_tier_4 = @[poor_tax_tier_4 * 0.5]
+poor_building_tax_halved_tier_5 = @[poor_tax_tier_5 * 0.5]
+poor_building_tax_halved_tier_6 = @[poor_tax_tier_6 * 0.5]
+poor_building_tax_halved_tier_7 = @[poor_tax_tier_7 * 0.5]
+poor_building_tax_halved_tier_8 = @[poor_tax_tier_8 * 0.5]
+
 # Cultural Tradition Extra - Poor Tax
 poor_building_extra_tax_tier_1 = @[poor_tax_tier_1 / 4]
 poor_building_extra_tax_tier_2 = @[poor_tax_tier_2 / 4]
@@ -1352,6 +1413,15 @@ special_mine_building_tax_tier_6 = @[special_mine_tax_tier_6]
 special_mine_building_tax_tier_7 = @[special_mine_tax_tier_7]
 special_mine_building_tax_tier_8 = @[special_mine_tax_tier_8]
 
+gold_mine_generic_building_tax_tier_1 = @[special_mine_tax_tier_1 / 2]
+gold_mine_generic_building_tax_tier_2 = @[special_mine_tax_tier_2 / 2]
+gold_mine_generic_building_tax_tier_3 = @[special_mine_tax_tier_3 / 2]
+gold_mine_generic_building_tax_tier_4 = @[special_mine_tax_tier_4 / 2]
+gold_mine_generic_building_tax_tier_5 = @[special_mine_tax_tier_5 / 2]
+gold_mine_generic_building_tax_tier_6 = @[special_mine_tax_tier_6 / 2]
+gold_mine_generic_building_tax_tier_7 = @[special_mine_tax_tier_7 / 2]
+gold_mine_generic_building_tax_tier_8 = @[special_mine_tax_tier_8 / 2]
+
 copper_mine_building_tax_tier_1 = @[copper_mine_tax_tier_1]
 copper_mine_building_tax_tier_2 = @[copper_mine_tax_tier_2]
 copper_mine_building_tax_tier_3 = @[copper_mine_tax_tier_3]
@@ -1361,6 +1431,15 @@ copper_mine_building_tax_tier_6 = @[copper_mine_tax_tier_6]
 copper_mine_building_tax_tier_7 = @[copper_mine_tax_tier_7]
 copper_mine_building_tax_tier_8 = @[copper_mine_tax_tier_8]
 
+copper_mine_generic_building_tax_tier_1 = @[copper_mine_tax_tier_1 / 2]
+copper_mine_generic_building_tax_tier_2 = @[copper_mine_tax_tier_2 / 2]
+copper_mine_generic_building_tax_tier_3 = @[copper_mine_tax_tier_3 / 2]
+copper_mine_generic_building_tax_tier_4 = @[copper_mine_tax_tier_4 / 2]
+copper_mine_generic_building_tax_tier_5 = @[copper_mine_tax_tier_5 / 2]
+copper_mine_generic_building_tax_tier_6 = @[copper_mine_tax_tier_6 / 2]
+copper_mine_generic_building_tax_tier_7 = @[copper_mine_tax_tier_7 / 2]
+copper_mine_generic_building_tax_tier_8 = @[copper_mine_tax_tier_8 / 2]
+
 silver_mine_building_tax_tier_1 = @[silver_mine_tax_tier_1]
 silver_mine_building_tax_tier_2 = @[silver_mine_tax_tier_2]
 silver_mine_building_tax_tier_3 = @[silver_mine_tax_tier_3]
@@ -1369,6 +1448,15 @@ silver_mine_building_tax_tier_5 = @[silver_mine_tax_tier_5]
 silver_mine_building_tax_tier_6 = @[silver_mine_tax_tier_6]
 silver_mine_building_tax_tier_7 = @[silver_mine_tax_tier_7]
 silver_mine_building_tax_tier_8 = @[silver_mine_tax_tier_8]
+
+silver_mine_generic_building_tax_tier_1 = @[silver_mine_tax_tier_1 / 2]
+silver_mine_generic_building_tax_tier_2 = @[silver_mine_tax_tier_2 / 2]
+silver_mine_generic_building_tax_tier_3 = @[silver_mine_tax_tier_3 / 2]
+silver_mine_generic_building_tax_tier_4 = @[silver_mine_tax_tier_4 / 2]
+silver_mine_generic_building_tax_tier_5 = @[silver_mine_tax_tier_5 / 2]
+silver_mine_generic_building_tax_tier_6 = @[silver_mine_tax_tier_6 / 2]
+silver_mine_generic_building_tax_tier_7 = @[silver_mine_tax_tier_7 / 2]
+silver_mine_generic_building_tax_tier_8 = @[silver_mine_tax_tier_8 / 2]
 
 normal_building_maa_maintenance_tier_1 = @[normal_maa_maintenance_tier_1]
 normal_building_maa_maintenance_tier_2 = @[normal_maa_maintenance_tier_2]
@@ -1387,6 +1475,15 @@ good_building_maa_maintenance_tier_5 = @[good_maa_maintenance_tier_5]
 good_building_maa_maintenance_tier_6 = @[good_maa_maintenance_tier_6]
 good_building_maa_maintenance_tier_7 = @[good_maa_maintenance_tier_7]
 good_building_maa_maintenance_tier_8 = @[good_maa_maintenance_tier_8]
+
+low_building_development_growth_tier_1 = @[low_development_growth_tier_1]
+low_building_development_growth_tier_2 = @[low_development_growth_tier_2]
+low_building_development_growth_tier_3 = @[low_development_growth_tier_3]
+low_building_development_growth_tier_4 = @[low_development_growth_tier_4]
+low_building_development_growth_tier_5 = @[low_development_growth_tier_5]
+low_building_development_growth_tier_6 = @[low_development_growth_tier_6]
+low_building_development_growth_tier_7 = @[low_development_growth_tier_7]
+low_building_development_growth_tier_8 = @[low_development_growth_tier_8]
 
 normal_building_development_growth_tier_1 = @[normal_development_growth_tier_1]
 normal_building_development_growth_tier_2 = @[normal_development_growth_tier_2]
@@ -1655,6 +1752,16 @@ great_building_fort_level_tier_8 = @[great_fort_level_tier_8]
 # Advantage #
 #############
 
+# Poor advantage
+poor_building_advantage_tier_1 = @[poor_advantage_tier_1]
+poor_building_advantage_tier_2 = @[poor_advantage_tier_2]
+poor_building_advantage_tier_3 = @[poor_advantage_tier_3]
+poor_building_advantage_tier_4 = @[poor_advantage_tier_4]
+poor_building_advantage_tier_5 = @[poor_advantage_tier_5]
+poor_building_advantage_tier_6 = @[poor_advantage_tier_6]
+poor_building_advantage_tier_7 = @[poor_advantage_tier_7]
+poor_building_advantage_tier_8 = @[poor_advantage_tier_8]
+
 # Normal advantage
 normal_building_advantage_tier_1 = @[normal_advantage_tier_1]
 normal_building_advantage_tier_2 = @[normal_advantage_tier_2]
@@ -1795,3 +1902,9 @@ building_garrison_reinforcement_factor_tier_6 = @[garrison_reinforcement_factor_
 building_garrison_reinforcement_factor_tier_7 = @[garrison_reinforcement_factor_tier_7]
 building_garrison_reinforcement_factor_tier_8 = @[garrison_reinforcement_factor_tier_8]
 
+####################################
+# Rebuilding Great Building Values #
+####################################
+
+standard_rebuild_value = 500
+ai_rebuild_value = 100

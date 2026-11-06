@@ -1,5 +1,5 @@
 ﻿wedding_nagging_spouse_modifier = {
-	icon = wedding_negative
+	icon = wedding_mixed
 	stress_gain_mult = 0.2
 	fertility = 0.2
 	monthly_lifestyle_xp_gain_mult = 0.1
@@ -23,7 +23,7 @@ wedding_purified_modifier = {
 }
 
 wedding_insecure_marriage_modifier = {
-	icon = wedding_negative
+	icon = wedding_mixed
 	enemy_personal_scheme_phase_duration_add = medium_scheme_phase_duration_malus_value
 	stress_gain_mult = 0.5
 }
@@ -53,6 +53,7 @@ gwedding_gracious_host_modifier = {
 	monthly_prestige_gain_mult = 0.03
 	monthly_dynasty_prestige_mult = 0.03
 	courtly_opinion = 3 # THE MOD
+
 }
 
 gwedding_magnificent_host_modifier = {
@@ -62,23 +63,27 @@ gwedding_magnificent_host_modifier = {
 	monthly_stewardship_lifestyle_xp_gain_mult = 0.1
 	monthly_diplomacy_lifestyle_xp_gain_mult = 0.1
 	courtly_opinion = 5 # THE MOD
+
 }
 
 gwedding_grand_wedding_modifier = {
 	icon = wedding_positive
 	courtly_opinion = 2 # THE MOD
+
 	monthly_prestige_gain_mult = 0.01
 }
 
 gwedding_grandiose_wedding_modifier = {
 	icon = wedding_positive
 	courtly_opinion = 3 # THE MOD
+
 	monthly_prestige_gain_mult = 0.02
 }
 
 gwedding_magnificent_wedding_modifier = {
 	icon = wedding_positive
 	courtly_opinion = 5 # THE MOD
+
 	monthly_prestige_gain_mult = 0.03
 	monthly_dynasty_prestige_mult = 0.03
 }
@@ -95,7 +100,7 @@ wedding_fertility_delay_modifier = {
 }
 
 wedding_wants_to_be_faithful_modifier = {
-	icon = wedding_positive
+	icon = wedding_mixed
 	seduce_scheme_phase_duration_add = major_scheme_phase_duration_malus_value
 	stress_loss_mult = 0.2
 }
@@ -149,7 +154,7 @@ wedding_clean_slate_modifier = {
 }
 
 wedding_web_of_secrets_modifier = {
-	icon = intrigue_positive
+	icon = intrigue_mixed
 	spouse_opinion = -10
 	enemy_hostile_scheme_success_chance_add = -20
 }
@@ -160,25 +165,25 @@ wedding_trust_compromised_modifier = {
 }
 
 gwedding_hosted_murder_wedding_modifier = {
-	icon = wedding_negative
+	icon = wedding_mixed
 	dread_decay_mult = -0.25
 	diplomacy = -8
 }
 
 wedding_barred_doors_modifier = {
-	icon = wedding_negative
+	icon = wedding_mixed
 	diplomacy = -2
 	stress_loss_mult = 0.1
 }
 
 wedding_old_news_modifier = {
-	icon = wedding_positive
+	icon = wedding_mixed
 	fertility = -0.2
 	stress_loss_mult = 0.1
 }
 
 wedding_consorts_envy_modifier = {
-	icon = iwedding_positive
+	icon = wedding_positive
 	scheme_phase_duration = medium_scheme_phase_duration_bonus_value
 	scheme_success_chance = 10
 }
@@ -186,7 +191,9 @@ wedding_consorts_envy_modifier = {
 wedding_peasants_connections_county_modifier = {
 	icon = county_modifier_opinion_positive
 	county_opinion_add = 5 # THE MOD
+
 	development_growth_factor = 0.2
+	county_fertility_growth_mult = tiny_county_fertility_growth_gain
 }
 
 wedding_enforced_security_modifier = {
@@ -203,14 +210,14 @@ wedding_peasants_overrun_modifier = {
 }
 
 wedding_parade_mayhem_modifier = {
-	icon = stress_positive
+	icon = stress_mixed
 	stress_gain_mult = -0.2
 	courtly_opinion = -5
 	attraction_opinion = 10
 }
 
 wedding_political_mentality_modifier = {
-	icon = diplomacy_positive
+	icon = diplomacy_mixed
 	diplomacy = 1
 	spouse_opinion = -5
 }
@@ -239,24 +246,30 @@ ep2_wedding_ewan_0041_attraction_modifier = {
 }
 
 ep2_wedding_ewan_0051_snooty_modifier = {
-	icon = bird_positive
+	icon = bird_mixed
 	courtly_opinion = 15 # THE MOD
+
 	parochial_opinion = -10
 }
 
 ep2_wedding_ewan_0051_approachable_modifier = {
-	icon = dog_positive
+	icon = dog_mixed
 	parochial_opinion = 15 # THE MOD
+
 	minority_opinion = 5 # THE MOD
+
 	barons_and_minor_landholders_opinion = 5 # THE MOD
+
 	courtly_opinion = -10
 }
 
 ruler_married_here_county_modifier = {
 	icon = county_modifier_opinion_positive
 	county_opinion_add = 5 # THE MOD
+
 	development_growth_factor = medium_development_growth_gain
 	development_growth = 0.1
+	county_fertility_growth_mult = small_county_fertility_growth_gain
 }
 
 wedding_thinking_outside_box_modifier = {
@@ -266,13 +279,14 @@ wedding_thinking_outside_box_modifier = {
 }
 
 wedding_severe_host_modifier = {
-	icon = social_negative
+	icon = social_mixed
 	courtly_opinion = -5
 	monthly_income_mult = 0.01
 }
 
 wedding_social_drinker_modifier = {
-	icon = social_positive
+	icon = social_mixed
 	courtly_opinion = 3 # THE MOD
+
 	monthly_income_mult = -0.01
 }

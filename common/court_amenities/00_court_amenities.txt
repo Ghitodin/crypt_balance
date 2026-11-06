@@ -11,12 +11,30 @@
 	
 		cost = { 
 			round = no
-			gold = court_fashion_acceptable_cost 
+			gold = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = no
+					}
+					add = court_fashion_acceptable_cost
+				}
+			}
+			treasury = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = yes
+					}
+					add = court_fashion_acceptable_cost
+				}
+			}
 		}
 		owner_modifier = {
 			monthly_prestige_gain_mult = 0.01
 			court_grandeur_baseline_add = 2 # THE MOD
-		}
+		
+}
 		courtier_guest_modifier = {
 			monthly_prestige = 0.2
 		}
@@ -52,17 +70,36 @@
 	court_fashion_decent = {
 		cost = { 
 			round = no
-			gold = court_fashion_decent_cost 
+			gold = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = no
+					}
+					add = court_fashion_decent_cost
+				}
+			}
+			treasury = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = yes
+					}
+					add = court_fashion_decent_cost
+				}
+			}
 		}
 		can_pick = {
-			NOT = {
-				government_has_flag = government_is_tribal
+			custom_tooltip = {
+				text = government_is_tribal_tt
+				NOT = { government_has_flag = government_is_tribal }
 			}
 		}
 		owner_modifier = {
 			monthly_prestige_gain_mult = 0.02
 			court_grandeur_baseline_add = 4 # THE MOD
-		}
+		
+}
 		courtier_guest_modifier = {
 			monthly_prestige = 0.4
 		}
@@ -99,17 +136,36 @@
 	court_fashion_good = {
 		cost = { 
 			round = no
-			gold = court_fashion_good_cost 
+			gold = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = no
+					}
+					add = court_fashion_good_cost
+				}
+			}
+			treasury = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = yes
+					}
+					add = court_fashion_good_cost
+				}
+			}
 		}
 		can_pick = {
-			NOT = {
-				government_has_flag = government_is_tribal
+			custom_tooltip = {
+				text = government_is_tribal_tt
+				NOT = { government_has_flag = government_is_tribal }
 			}
 		}
 		owner_modifier = { 
 			monthly_prestige_gain_mult = 0.03
 			court_grandeur_baseline_add = 6 # THE MOD
-		}
+		
+}
 		courtier_guest_modifier = {
 			monthly_prestige = 0.8
 		}
@@ -145,17 +201,36 @@
 	court_fashion_fantastic = {
 		cost = { 
 			round = no
-			gold = court_fashion_fantastic_cost 
+			gold = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = no
+					}
+					add = court_fashion_fantastic_cost
+				}
+			}
+			treasury = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = yes
+					}
+					add = court_fashion_fantastic_cost
+				}
+			}
 		}
 		can_pick = {
-			NOT = {
-				government_has_flag = government_is_tribal
+			custom_tooltip = {
+				text = government_is_tribal_tt
+				NOT = { government_has_flag = government_is_tribal }
 			}
 		}
 		owner_modifier = {
 			monthly_prestige_gain_mult = 0.04
 			court_grandeur_baseline_add = 7 # THE MOD	
-		}
+		
+}
 		courtier_guest_modifier = {
 			monthly_prestige = 1.6
 		}
@@ -204,11 +279,29 @@ court_food_quality = {
 	court_food_quality_modest = {
 		cost = { 
 			round = no
-			gold = court_food_quality_modest_cost
+			gold = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = no
+					}
+					add = court_food_quality_modest_cost
+				}
+			}
+			treasury = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = yes
+					}
+					add = court_food_quality_modest_cost
+				}
+			}
 		}
 		owner_modifier = {
 			court_grandeur_baseline_add = 2 # THE MOD
-		}
+		
+}
 
 		courtier_guest_modifier = {
 			stress_loss_mult = 0.1
@@ -252,16 +345,35 @@ court_food_quality = {
 	court_food_quality_decent = {
 		cost = { 
 			round = no
-			gold = court_food_quality_decent_cost 
+			gold = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = no
+					}
+					add = court_food_quality_decent_cost
+				}
+			}
+			treasury = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = yes
+					}
+					add = court_food_quality_decent_cost
+				}
+			}
 		}
 		can_pick = {
-			NOT = {
-				government_has_flag = government_is_tribal
+			custom_tooltip = {
+				text = government_is_tribal_tt
+				NOT = { government_has_flag = government_is_tribal }
 			}
 		}
 		owner_modifier = {
 			court_grandeur_baseline_add = 4 # THE MOD
-		}
+		
+}
 
 		owner_modifier_description = owner_court_food_quality_decent
 
@@ -307,16 +419,35 @@ court_food_quality = {
 	court_food_quality_lavish = {
 		cost = { 
 			round = no
-			gold = court_food_quality_lavish_cost 
+			gold = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = no
+					}
+					add = court_food_quality_lavish_cost
+				}
+			}
+			treasury = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = yes
+					}
+					add = court_food_quality_lavish_cost
+				}
+			}
 		}
 		can_pick = {
-			NOT = {
-				government_has_flag = government_is_tribal
+			custom_tooltip = {
+				text = government_is_tribal_tt
+				NOT = { government_has_flag = government_is_tribal }
 			}
 		}
 		owner_modifier = { 
 			court_grandeur_baseline_add = 6 # THE MOD
-		}
+		
+}
 
 		owner_modifier_description = owner_court_food_quality_lavish
 
@@ -362,15 +493,34 @@ court_food_quality = {
 	court_food_quality_exotic = {
 		cost = { 
 			round = no
-			gold = court_food_quality_exotic_cost
+			gold = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = no
+					}
+					add = court_food_quality_exotic_cost
+				}
+			}
+			treasury = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = yes
+					}
+					add = court_food_quality_exotic_cost
+				}
+			}
 		}
 		can_pick = {
-			NOT = {
-				government_has_flag = government_is_tribal
+			custom_tooltip = {
+				text = government_is_tribal_tt
+				NOT = { government_has_flag = government_is_tribal }
 			}
 		}
 		owner_modifier = {
 			court_grandeur_baseline_add = 7 # THE MOD
+
 			negate_health_penalty_add = 0.2
 		}
 
@@ -429,11 +579,29 @@ court_lodging_standards = {
 	court_lodging_standards_small = {
 		cost = {
 			round = no
-			gold = court_lodging_standards_small_cost 
+			gold = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = no
+					}
+					add = court_lodging_standards_small_cost
+				}
+			}
+			treasury = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = yes
+					}
+					add = court_lodging_standards_small_cost
+				}
+			}
 		}
 		owner_modifier = {
 			court_grandeur_baseline_add = 2 # THE MOD
-		}
+		
+}
 		owner_modifier_description = owner_court_lodgings_small
 
 		courtier_guest_modifier = {
@@ -472,16 +640,35 @@ court_lodging_standards = {
 	court_lodging_standards_middling = {
 		cost = {
 			round = no
-			gold = court_lodging_standards_middling_cost
+			gold = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = no
+					}
+					add = court_lodging_standards_middling_cost
+				}
+			}
+			treasury = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = yes
+					}
+					add = court_lodging_standards_middling_cost
+				}
+			}
 		}
 		can_pick = {
-			NOT = {
-				government_has_flag = government_is_tribal
+			custom_tooltip = {
+				text = government_is_tribal_tt
+				NOT = { government_has_flag = government_is_tribal }
 			}
 		}
 		owner_modifier = {
 			court_grandeur_baseline_add = 4 # THE MOD
-		}
+		
+}
 
 		owner_modifier_description = owner_court_lodgings_middling
 
@@ -522,16 +709,35 @@ court_lodging_standards = {
 	court_lodging_standards_spacious = {
 		cost = { 
 			round = no
-			gold = court_lodging_standards_spacious_cost 
+			gold = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = no
+					}
+					add = court_lodging_standards_spacious_cost
+				}
+			}
+			treasury = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = yes
+					}
+					add = court_lodging_standards_spacious_cost
+				}
+			}
 		}
 		can_pick = {
-			NOT = {
-				government_has_flag = government_is_tribal
+			custom_tooltip = {
+				text = government_is_tribal_tt
+				NOT = { government_has_flag = government_is_tribal }
 			}
 		}
 		owner_modifier = {
 			court_grandeur_baseline_add = 6 # THE MOD
-		}
+		
+}
 
 		owner_modifier_description = owner_court_lodgings_spacious
 
@@ -571,16 +777,35 @@ court_lodging_standards = {
 	court_lodging_standards_grand = {
 		cost = { 
 			round = no
-			gold = court_lodging_standards_grand_cost 
+			gold = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = no
+					}
+					add = court_lodging_standards_grand_cost
+				}
+			}
+			treasury = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = yes
+					}
+					add = court_lodging_standards_grand_cost
+				}
+			}
 		}
 		can_pick = {
-			NOT = {
-				government_has_flag = government_is_tribal
+			custom_tooltip = {
+				text = government_is_tribal_tt
+				NOT = { government_has_flag = government_is_tribal }
 			}
 		}
 		owner_modifier = {
 			court_grandeur_baseline_add = 7 # THE MOD
-		}
+		
+}
 
 		owner_modifier_description = owner_court_lodgings_grand
 
@@ -631,10 +856,28 @@ court_servants = {
 	court_servants_few = {
 		cost = {
 			round = no
-			gold = court_servants_few_cost 
+			gold = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = no
+					}
+					add = court_servants_few_cost
+				}
+			}
+			treasury = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = yes
+					}
+					add = court_servants_few_cost
+				}
+			}
 		}
 		owner_modifier = {
 			court_grandeur_baseline_add = 2 # THE MOD
+
 			enemy_hostile_scheme_phase_duration_add = 4
 			personal_scheme_phase_duration_add = -4
 		}
@@ -683,15 +926,34 @@ court_servants = {
 	court_servants_some = {
 		cost = { 
 			round = no
-			gold = court_court_servants_some_cost
+			gold = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = no
+					}
+					add = court_court_servants_some_cost
+				}
+			}
+			treasury = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = yes
+					}
+					add = court_court_servants_some_cost
+				}
+			}
 		}
 		can_pick = {
-			NOT = {
-				government_has_flag = government_is_tribal
+			custom_tooltip = {
+				text = government_is_tribal_tt
+				NOT = { government_has_flag = government_is_tribal }
 			}
 		}
 		owner_modifier = {
 			court_grandeur_baseline_add = 4 # THE MOD
+
 			enemy_hostile_scheme_phase_duration_add = 8
 			personal_scheme_phase_duration_add = -8
 		}
@@ -740,15 +1002,34 @@ court_servants = {
 	court_servants_many = {
 		cost = { 
 			round = no
-			gold = court_court_servants_many_cost 
+			gold = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = no
+					}
+					add = court_court_servants_many_cost
+				}
+			}
+			treasury = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = yes
+					}
+					add = court_court_servants_many_cost
+				}
+			}
 		}
 		can_pick = {
-			NOT = {
-				government_has_flag = government_is_tribal
+			custom_tooltip = {
+				text = government_is_tribal_tt
+				NOT = { government_has_flag = government_is_tribal }
 			}
 		}
 		owner_modifier = {
 			court_grandeur_baseline_add = 6 # THE MOD
+
 			enemy_hostile_scheme_phase_duration_add = 12
 			personal_scheme_phase_duration_add = -12
 		}
@@ -797,15 +1078,34 @@ court_servants = {
 	court_servants_endless = {
 		cost = { 
 			round = no
-			gold = court_servants_endless_cost 
+			gold = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = no
+					}
+					add = court_servants_endless_cost
+				}
+			}
+			treasury = {
+				value = 0
+				if = {
+					limit = {
+						has_treasury = yes
+					}
+					add = court_servants_endless_cost
+				}
+			}
 		}
 		can_pick = {
-			NOT = {
-				government_has_flag = government_is_tribal
+			custom_tooltip = {
+				text = government_is_tribal_tt
+				NOT = { government_has_flag = government_is_tribal }
 			}
 		}
 		owner_modifier = {
 			court_grandeur_baseline_add = 7 # THE MOD
+
 			enemy_hostile_scheme_phase_duration_add = 16
 			personal_scheme_phase_duration_add = -16
 		}

@@ -1,12 +1,20 @@
-﻿# LEGENDS LEGACIES
+# LEGENDS LEGACIES
 
-ce1_heroic_legacy_1 = { # Heroes of Old
+ce1_heroic_legacy_1 = {
+ # Heroes of Old
 	legacy = ce1_heroic_track
 
+
 	can_be_picked = {
+
 		has_dlc_feature = legends_of_the_dead
+
+	
+
 		NOT = { has_dlc_feature = legends_of_the_dead } # THE MOD
-	}
+
+}
+
 
 	effect = {
 		show_as_tooltip = {
@@ -23,6 +31,7 @@ ce1_heroic_legacy_1 = { # Heroes of Old
 		}
 		custom_tooltip = ce1_heroic_legacy_1_useable_once
 	}
+
 
 	ai_chance = {
 		value = 11
@@ -41,7 +50,10 @@ ce1_heroic_legacy_1 = { # Heroes of Old
 			multiply = 0
 		}
 	}
+
+
 }
+
 
 ce1_heroic_legacy_2 = { # Mythical ancestors
 	legacy = ce1_heroic_track
@@ -56,6 +68,7 @@ ce1_heroic_legacy_2 = { # Mythical ancestors
 	}
 }
 
+
 ce1_heroic_legacy_3 = { # Golden Legend
 	legacy = ce1_heroic_track
 
@@ -64,14 +77,15 @@ ce1_heroic_legacy_3 = { # Golden Legend
 	}
 
 	effect = {
-		# Tell the player about their increased sainthood chance
+		# Tell the player about their increased herald chance
 		custom_description_no_bullet = { text = ce1_heroic_legacy_3_effect }
 	}
 
 	traits = {
-		saint = 100
+		herald = 100
 	}
 }
+
 
 ce1_heroic_legacy_4 = { # Down in History
 	legacy = ce1_heroic_track
@@ -90,6 +104,7 @@ ce1_heroic_legacy_4 = { # Down in History
 	}
 }
 
+
 ce1_heroic_legacy_5 = { # Living Legends
 	legacy = ce1_heroic_track
 
@@ -107,18 +122,28 @@ ce1_heroic_legacy_5 = { # Living Legends
 	}
 }
 
-ce1_legitimacy_legacy_1 = { # Sons of our Fathers
+
+ce1_legitimacy_legacy_1 = {
+ # Sons of our Fathers
 	legacy = ce1_legitimacy_legacy_track
 
+
 	can_be_picked = {
+
 		has_dlc_feature = legends_of_the_dead
+
+	
+
 		NOT = { has_dlc_feature = legends_of_the_dead } # THE MOD
-	}
+
+}
+
 
 	character_modifier = {
 		county_opinion_add = 5
 		monthly_county_control_growth_add = 0.1
 	}
+
 
 	ai_chance = {
 		value = 11
@@ -137,7 +162,10 @@ ce1_legitimacy_legacy_1 = { # Sons of our Fathers
 			multiply = 0
 		}
 	}
+
+
 }
+
 
 ce1_legitimacy_legacy_2 = { # Lasting Line
 	legacy = ce1_legitimacy_legacy_track
@@ -150,6 +178,7 @@ ce1_legitimacy_legacy_2 = { # Lasting Line
 		custom_description_no_bullet = { text = ce1_legitimacy_legacy_2_effect }
 	}
 }
+
 
 ce1_legitimacy_legacy_3 = { # Rightful Rulers
 	legacy = ce1_legitimacy_legacy_track
@@ -167,6 +196,7 @@ ce1_legitimacy_legacy_3 = { # Rightful Rulers
 	}
 }
 
+
 ce1_legitimacy_legacy_4 = { # Divine Mandate
 	legacy = ce1_legitimacy_legacy_track
 
@@ -178,6 +208,7 @@ ce1_legitimacy_legacy_4 = { # Divine Mandate
 		custom_description_no_bullet = { text = ce1_legitimacy_legacy_4_effect }
 	}
 }
+
 
 ce1_legitimacy_legacy_5 = { # Dieu et Mon Droit
 	legacy = ce1_legitimacy_legacy_track
@@ -199,3 +230,4 @@ ce1_legitimacy_legacy_5 = { # Dieu et Mon Droit
 		education_learning_5 = 100
 	}
 }
+

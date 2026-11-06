@@ -1,4 +1,4 @@
-﻿
+
 ### STEWARDSHIP - WEALTH PERKS
 
 
@@ -31,7 +31,7 @@ golden_obligations_perk = {
 		}
 		if = { # Conquerors go for the best stuff for war!
 			limit = {
-				ai_has_conqueror_personality = yes
+				has_variable = conqueror
 			}
 			add = 10000
 		}
@@ -50,56 +50,79 @@ golden_obligations_perk = {
 }
 
 
+
 # Heregeld
 heregeld_perk = {
 	lifestyle = stewardship_lifestyle
+
 	tree = wealth
+
 	position = { 0 1.25 }
+
 	icon = node_stewardship
+
 	
 	parent = golden_obligations_perk
+
 	
 	name = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { is_landless_adventurer = yes }
+				trigger = { has_government = landless_adventurer_government }
 				desc = heregeld_perk_adventurer_name
 			}
 			desc = heregeld_perk_name
 		}
 	}
+
 	
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
+
 		invert_check = yes
+
 		vassal_tax_contribution_mult = 0.07 # THE MOD
-	}
+
+		tributary_tax_mult = 0.1
+
+	
+}
+
 	
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
 		provisions_capacity_mult = 0.5
 	}
+
+
 }
+
 
 
 # Detailed Ledgers
 detailed_ledgers_perk = {
 	lifestyle = stewardship_lifestyle
+
 	tree = wealth
+
 	position = { 0 2.5 }
+
 	icon = node_stewardship
+
 	
 	parent = heregeld_perk
+
 	
 	name = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { is_landless_adventurer = yes }
+				trigger = { has_government = landless_adventurer_government }
 				desc = detailed_ledgers_perk_adventurer_name
 			}
 			desc = detailed_ledgers_perk_name
 		}
 	}
+
 	
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
@@ -107,38 +130,82 @@ detailed_ledgers_perk = {
 		republic_government_opinion = 7 # THE MOD
 		republic_government_tax_contribution_mult = 0.07 # THE MOD
 	}
+
 	
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
-		provisions_loss_mult = -0.25
+		provisions_loss_mult = -0.2
 	}
+
+	
+	government_character_modifier = {
+		flag = government_is_nomadic
+		monthly_income_from_herd_mult = 0.1
+	}
+
+	
+	government_character_modifier = {
+		flag = government_is_administrative
+		administrative_government_tax_contribution_mult = 0.1
+	}
+
+
+	government_character_modifier = {
+		flag = government_has_treasury
+		monthly_treasury_from_salary_budget_mult = 0.1
+	}
+
+
+	#Ecclesiastical governments have a treasury but no salary budget, so the block above does nothing for them
+	government_character_modifier = {
+		flag = government_is_ecclesiastical
+		domicile_monthly_gold_add = 1
+	}
+
+
+	effect = {
+		if = {
+			limit = { government_has_flag = government_is_mandala }	
+			custom_description_no_bullet = { text = mandala_detailed_ledgers_perk_effect }
+		}
+	}
+
+
 }
+
 
 
 # War Profiteer
 war_profiteer_perk = {
 	lifestyle = stewardship_lifestyle
+
 	tree = wealth
+
 	position = { 2 1.25 }
+
 	icon = node_stewardship
+
 	
 	parent = golden_obligations_perk
+
 	
 	name = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { is_landless_adventurer = yes }
+				trigger = { has_government = landless_adventurer_government }
 				desc = war_profiteer_perk_adventurer_name
 			}
 			desc = war_profiteer_perk_name
 		}
 	}
+
 	
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
 		invert_check = yes
 		monthly_war_income_mult = 0.07 # THE MOD
 	}
+
 	
 	effect = {
 		if = {
@@ -150,33 +217,43 @@ war_profiteer_perk = {
 			}
 		}
 	}
+
+
 }
+
 
 
 # Fearful Troops
 fearful_troops_perk = {
 	lifestyle = stewardship_lifestyle
+
 	tree = wealth
+
 	position = { 2 2.5 }
+
 	icon = node_stewardship
+
 	
 	parent = war_profiteer_perk
+
 	
 	name = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { is_landless_adventurer = yes }
+				trigger = { has_government = landless_adventurer_government }
 				desc = fearful_troops_perk_adventurer_name
 			}
 			desc = fearful_troops_perk_name
 		}
 	}
+
 	
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
 		invert_check = yes
 		men_at_arms_maintenance_per_dread_mult = -0.002 # THE MOD
 	}
+
 	
 	effect = {
 		if = {
@@ -188,7 +265,10 @@ fearful_troops_perk = {
 			}
 		}
 	}
+
+
 }
+
 
 
 # It Is MY Domain
@@ -203,15 +283,19 @@ it_is_my_domain_perk = {
 	name = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { is_landless_adventurer = yes }
+				trigger = { has_government = landless_adventurer_government }
 				desc = it_is_my_domain_perk_adventurer_name
+			}
+			triggered_desc = {
+				trigger = { government_has_flag = government_is_mandala }
+				desc = it_is_my_domain_perk_mandala_name
 			}
 			desc = it_is_my_domain_perk_name
 		}
 	}
 	
 	government_character_modifier = {
-		flag = government_is_administrative
+		flag = government_uses_domicile_but_not_adventurer
 		domicile_monthly_gold_mult = 0.1
 	}
 	
@@ -236,30 +320,43 @@ it_is_my_domain_perk = {
 }
 
 
+
 # Golden Aplomb
 golden_aplomb_perk = {
 	lifestyle = stewardship_lifestyle
+
 	tree = wealth
+
 	position = { 4 2.5 }
+
 	icon = node_stewardship
+
 	
 	parent = it_is_my_domain_perk
+
 	
 	name = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { is_landless_adventurer = yes }
+				trigger = { has_government = landless_adventurer_government }
 				desc = golden_aplomb_perk_adventurer_name
 			}
 			desc = golden_aplomb_perk_name
 		}
 	}
+
 	
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
 		invert_check = yes
 		monthly_income_per_stress_level_mult = 0.07 # THE MOD
 	}
+
+	government_character_modifier = {
+		flag = government_is_theocracy
+		stewardship_per_piety_level = 1
+	}
+
 	
 	effect = {
 		if = {
@@ -271,7 +368,10 @@ golden_aplomb_perk = {
 			}
 		}
 	}
+
+
 }
+
 
 
 # At Any Cost
@@ -288,7 +388,7 @@ at_any_cost_perk = {
 	name = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { is_landless_adventurer = yes }
+				trigger = { has_government = landless_adventurer_government }
 				desc = at_any_cost_perk_adventurer_name
 			}
 			desc = at_any_cost_perk_name
@@ -322,6 +422,7 @@ at_any_cost_perk = {
 }
 
 
+
 # Avaricious
 avaricious_perk = {
 	lifestyle = stewardship_lifestyle
@@ -336,3 +437,4 @@ avaricious_perk = {
 		add_trait_force_tooltip = avaricious
 	}
 }
+

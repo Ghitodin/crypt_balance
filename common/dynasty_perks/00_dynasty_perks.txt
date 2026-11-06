@@ -1,13 +1,24 @@
-﻿# BLOOD LEGACIES
+# BLOOD LEGACIES
 
-blood_legacy_1 = { # Noble Veins
+blood_legacy_1 = {
+ # Noble Veins
 	legacy = blood_legacy_track
 
+
 	character_modifier = {
+
 		name = blood_legacy_1_modifier
+
 		positive_random_genetic_chance = 0.15 # THE MOD
+
+
 		positive_inactive_inheritance_chance = 0.15 # THE MOD
-	}
+
+
+	
+
+}
+
 	
 	ai_chance = {
 		value = 11
@@ -18,25 +29,54 @@ blood_legacy_1 = { # Noble Veins
 			multiply = 0
 		}
 	}
+
+
 }
 
-blood_legacy_2 = { # Convergent Blood
+
+
+blood_legacy_2 = {
+ # Convergent Blood
 	legacy = blood_legacy_track
 
+
 	character_modifier = {
+
 		genetic_trait_strengthen_chance = 0.15 # THE MOD
-	}
+
+
+	
+
 }
 
-blood_legacy_3 = { # Resilient Bloodline
+
+}
+
+
+
+blood_legacy_3 = {
+ # Resilient Bloodline
 	legacy = blood_legacy_track
 
+
 	character_modifier = {
+
 		name = blood_legacy_3_modifier
+
 		negative_random_genetic_chance = -0.15 # THE MOD
+
+
 		negative_inactive_inheritance_chance = -0.15 # THE MOD
-	}
+
+
+	
+
 }
+
+
+}
+
+
 
 
 blood_legacy_4 = { # Architected Ancestry
@@ -61,6 +101,8 @@ blood_legacy_4 = { # Architected Ancestry
 	}
 }
 
+
+
 blood_legacy_5 = { # Octogenarians
 	legacy = blood_legacy_track
 
@@ -68,6 +110,8 @@ blood_legacy_5 = { # Octogenarians
 		life_expectancy = 5
 	}
 }
+
+
 
 # WARFARE LEGACIES
 
@@ -91,6 +135,8 @@ warfare_legacy_1 = { # House of Warriors
 	}
 }
 
+
+
 warfare_legacy_2 = { # Generational Belligerence
 	legacy = warfare_legacy_track
 
@@ -106,6 +152,8 @@ warfare_legacy_2 = { # Generational Belligerence
 	}
 }
 
+
+
 warfare_legacy_3 = { # Squire Traditions
 	legacy = warfare_legacy_track
 
@@ -120,6 +168,8 @@ warfare_legacy_3 = { # Squire Traditions
 	}
 }
 
+
+
 warfare_legacy_4 = { # Inherited Tactics
 	legacy = warfare_legacy_track
 
@@ -129,21 +179,31 @@ warfare_legacy_4 = { # Inherited Tactics
 	}
 }
 
-warfare_legacy_5 = { # Private Army
+
+
+warfare_legacy_5 = {
+ # Private Army
 	legacy = warfare_legacy_track
 
+
 	character_modifier = {
-		#men_at_arms_cap = 1 # THE MOD
-	}
+
+	
+}
+
 	effect = {
+
 		custom_description_no_bullet = {
 			text = warfare_legacy_5_unlock_effect
 		}
-		#custom_description_no_bullet = { # THE MOD
-			#text = warfare_legacy_5_effect
-		#}
-	}
+
+	
 }
+
+
+}
+
+
 
 # LAW LEGACIES
 
@@ -171,6 +231,8 @@ law_legacy_1 = { # Mostly Fair
 	}
 }
 
+
+
 law_legacy_2 = { # Faithful Magistrates
 	legacy = law_legacy_track
 
@@ -180,6 +242,8 @@ law_legacy_2 = { # Faithful Magistrates
 		title_creation_cost_mult = -0.2
 	}
 }
+
+
 
 law_legacy_3 = { # Power and Prosperity
 	legacy = law_legacy_track
@@ -191,27 +255,57 @@ law_legacy_3 = { # Power and Prosperity
 	}
 }
 
-law_legacy_4 = { # Delegated Authority
+
+
+law_legacy_4 = {
+ # Delegated Authority
 	legacy = law_legacy_track
 
+
 	character_modifier = {
+
 		name = law_legacy_4_name
+
 		powerful_vassal_opinion = 3 # THE MOD
+
+
 		happy_powerful_vassal_tax_contribution_mult = 0.05 # THE MOD
+
+
 		happy_powerful_vassal_levy_contribution_mult = 0.05 # THE MOD
-	}
+
+
+	
+
 }
 
-law_legacy_5 = { # Home Estates
+
+}
+
+
+
+law_legacy_5 = {
+ # Home Estates
 	legacy = law_legacy_track
 
+
 	character_modifier = {
+
 		name = law_legacy_5_name
+
 		#domain_limit = 1 # THE MOD
 		controlled_province_advantage = 5
+
+	
+
 		additional_fort_level = 2 # THE MOD
-	}
+
 }
+
+
+}
+
+
 
 # GUILE LEGACIES
 
@@ -234,6 +328,8 @@ guile_legacy_1 = { # Ominous Reputation
 	}
 }
 
+
+
 guile_legacy_2 = { # Long Reach
 	legacy = guile_legacy_track
 
@@ -249,6 +345,8 @@ guile_legacy_2 = { # Long Reach
 	}
 }
 
+
+
 guile_legacy_3 = { # Natural Schemers
 	legacy = guile_legacy_track
 
@@ -257,6 +355,8 @@ guile_legacy_3 = { # Natural Schemers
 		owned_scheme_secrecy_add = 15
 	}
 }
+
+
 
 guile_legacy_4 = { # Venial
 	legacy = guile_legacy_track
@@ -268,6 +368,8 @@ guile_legacy_4 = { # Venial
 	}
 }
 
+
+
 guile_legacy_5 = { # Family Connections
 	legacy = guile_legacy_track
 
@@ -277,6 +379,8 @@ guile_legacy_5 = { # Family Connections
 		}
 	}
 }
+
+
 
 # ERUDITION LEGACIES
 
@@ -305,27 +409,51 @@ erudition_legacy_1 = { # Vibrant Court
 	}
 }
 
-erudition_legacy_2 = { # Ordained Rulership
+
+
+erudition_legacy_2 = {
+ # Ordained Rulership
 	legacy = erudition_legacy_track
+
 
 	character_modifier = {
 		name = erudition_legacy_2_modifier_name
 		monthly_piety_gain_mult = 0.1
 	}
 
-	doctrine_character_modifier = {
+
+	faith_character_modifier = {
+
 		name = erudition_legacy_2_modifier_name
+
 		doctrine = doctrine_theocracy_lay_clergy
+
 		zealot_opinion = 5
+
+	
+
 		courtly_opinion = -3 # THE MOD
-	}
-	doctrine_character_modifier = {
-		name = erudition_legacy_2_modifier_name
-		doctrine = doctrine_theocracy_temporal
-		clergy_opinion = 5
-		courtly_opinion = -3 # THE MOD
-	}
+
 }
+
+	faith_character_modifier = {
+
+		name = erudition_legacy_2_modifier_name
+
+		doctrine = doctrine_theocracy_temporal
+
+		clergy_opinion = 5
+
+	
+
+		courtly_opinion = -3 # THE MOD
+
+}
+
+
+}
+
+
 
 erudition_legacy_3 = { # Treasured Knowledge
 	legacy = erudition_legacy_track
@@ -333,8 +461,11 @@ erudition_legacy_3 = { # Treasured Knowledge
 	character_modifier = {
 		monthly_learning_lifestyle_xp_gain_mult = 0.1
 		development_growth_factor = 0.2
+		county_fertility_decline_mult = -0.1
 	}
 }
+
+
 
 erudition_legacy_4 = { # True Believers
 	legacy = erudition_legacy_track
@@ -346,25 +477,27 @@ erudition_legacy_4 = { # True Believers
 	}
 	
 	character_modifier = {
-		faith_creation_piety_cost_mult = -0.2
+		rite_creation_piety_cost_mult = -0.1
 	}
 
-	doctrine_character_modifier = {
+	faith_character_modifier = {
 		name = erudition_legacy_4_modifier_name
 		doctrine = doctrine_no_head
 		domain_tax_same_faith_mult = 0.05
 	}
-	doctrine_character_modifier = {
+	faith_character_modifier = {
 		name = erudition_legacy_4_modifier_name
 		doctrine = doctrine_spiritual_head
 		religious_head_opinion = 15
 	}
-	doctrine_character_modifier = {
+	faith_character_modifier = {
 		name = erudition_legacy_4_modifier_name
 		doctrine = doctrine_temporal_head
 		tolerance_advantage_mod = 5
 	}
 }
+
+
 
 erudition_legacy_5 = { # Bureaucrats
 	legacy = erudition_legacy_track
@@ -380,21 +513,33 @@ erudition_legacy_5 = { # Bureaucrats
 #	}
 }
 
+
+
 # GLORY LEGACIES
 
-glory_legacy_1 = { # Desirable Match
+glory_legacy_1 = {
+ # Desirable Match
 	legacy = glory_legacy_track
+
 	
 	character_modifier = {
+
 		ai_amenity_target_baseline = 0.2
+
 		glory_hound_opinion = 3 # THE MOD
-	}
+
+
+	
+
+}
+
 
 	effect = {
 		custom_description_no_bullet = {
 			text = glory_legacy_1_perk_effect
 		}
 	}
+
 	
 	ai_chance = {
 		value = 11
@@ -405,20 +550,36 @@ glory_legacy_1 = { # Desirable Match
 			multiply = 0
 		}
 	}
+
+
 }
 
-glory_legacy_2 = { # Renowned Name
+
+
+glory_legacy_2 = {
+ # Renowned Name
 	legacy = glory_legacy_track
 
+
 	character_modifier = {
+
 		name = glory_legacy_2_name
-		active_accolades = 1
+
+		accolades = 1
+
 		monthly_prestige_gain_mult = 0.1
-		#mercenary_hire_cost_mult = -0.1 # THE MOD
+
 		knight_limit = 1
+
 		monthly_court_grandeur_change_mult = 1
-	}
+
+	
 }
+
+
+}
+
+
 
 glory_legacy_3 = { # Earning Respect
 	legacy = glory_legacy_track
@@ -428,6 +589,8 @@ glory_legacy_3 = { # Earning Respect
 		personal_scheme_phase_duration_add = medium_scheme_phase_duration_bonus_value
 	}
 }
+
+
 
 glory_legacy_4 = { # Assertive Rulers
 	legacy = glory_legacy_track
@@ -445,15 +608,26 @@ glory_legacy_4 = { # Assertive Rulers
 	}
 }
 
-glory_legacy_5 = { # Righteousness
+
+
+glory_legacy_5 = {
+ # Righteousness
 	legacy = glory_legacy_track
 
+
 	character_modifier = {
+
 		name = glory_legacy_5_name
-		#general_opinion = 10 # THE MOD
+
 		max_sway_schemes_add = 1
-	}
+
+	
 }
+
+
+}
+
+
 
 # KIN LEGACIES
 
@@ -476,6 +650,8 @@ kin_legacy_1 = { # Bounteous Loins
 	}
 }
 
+
+
 kin_legacy_2 = { # Studious Youth
 	legacy = kin_legacy_track
 
@@ -489,6 +665,8 @@ kin_legacy_2 = { # Studious Youth
 		}
 	}
 }
+
+
 
 kin_legacy_3 = { # Constant Care
 	legacy = kin_legacy_track
@@ -504,6 +682,8 @@ kin_legacy_3 = { # Constant Care
 		negate_health_penalty_add = 0.5
 	}
 }
+
+
 
 kin_legacy_4 = { # Close Bonds
 	legacy = kin_legacy_track
@@ -523,6 +703,8 @@ kin_legacy_4 = { # Close Bonds
 	}
 }
 
+
+
 kin_legacy_5 = { # Graceful Aging
 	legacy = kin_legacy_track
 
@@ -536,3 +718,5 @@ kin_legacy_5 = { # Graceful Aging
 		no_prowess_loss_from_age = yes
 	}
 }
+
+

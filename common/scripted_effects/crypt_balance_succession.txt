@@ -1,0 +1,25 @@
+# THE MOD
+crypt_balance_enforce_succession_effect = {
+ if = {
+  limit = { crypt_balance_partition_government_trigger = yes is_landed = yes }
+  if = {
+   limit = { NOT = { has_realm_law = confederate_partition_succession_law } }
+   add_realm_law_skip_effects = confederate_partition_succession_law
+  }
+  every_held_title = {
+if = { limit = { has_title_law = princely_elective_succession_law } remove_title_law = princely_elective_succession_law }
+if = { limit = { has_title_law = saxon_elective_succession_law } remove_title_law = saxon_elective_succession_law }
+if = { limit = { has_title_law = scandinavian_elective_succession_law } remove_title_law = scandinavian_elective_succession_law }
+if = { limit = { has_title_law = gaelic_elective_succession_law } remove_title_law = gaelic_elective_succession_law }
+if = { limit = { has_title_law = tribal_elective_succession_law } remove_title_law = tribal_elective_succession_law }
+   if = {
+    limit = { tier = tier_empire NOT = { has_title_law = feudal_elective_succession_law } }
+    add_title_law = feudal_elective_succession_law
+   }
+   else_if = {
+    limit = { tier != tier_empire has_title_law = feudal_elective_succession_law }
+    remove_title_law = feudal_elective_succession_law
+   }
+  }
+ }
+}

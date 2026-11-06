@@ -1,9 +1,14 @@
-﻿@ep2_wedding_ewan_0052_dolt_pay_out_value = root.massive_gold_value
+@ep2_wedding_ewan_0052_dolt_pay_out_value = root.massive_gold_value
+
 @ep2_wedding_ewan_0061_high_skill_value = extremely_high_skill_rating
+
 @ep2_wedding_ewan_0061_old_value = 80
+
 @ep2_wedding_ewan_0061_very_old = 90
 
+
 namespace = ep2_wedding_ewan
+
 
 ##################################################
 # #Banquet Phase
@@ -30,7 +35,8 @@ namespace = ep2_wedding_ewan
 # MISC SCRIPTED TRIGGERS & EFFECTS
 
 # Filter out characters who aren't appropriate to be giving their unasked opinions on the activity's setup options.
-scripted_trigger ep2_wedding_ewan_0000_activity_option_opinion_characters_standard_filter_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0000_activity_option_opinion_characters_standard_filter_trigger = {
 	# Filter out players immediately.
 	is_ai = yes
 	# Now let's make sure it's no one who wouldn't be having this conversation or who we might want to reserve for something else.
@@ -44,23 +50,27 @@ scripted_trigger ep2_wedding_ewan_0000_activity_option_opinion_characters_standa
 	}
 }
 
+
 # Standard stress loss for hosts agreeing with criticisms.
-scripted_effect ep2_wedding_ewan_0000_host_takes_criticism_stress_gain_effect = {
+scripted_effect
+ ep2_wedding_ewan_0000_host_takes_criticism_stress_gain_effect = {
 	# Host reacts a bit differently to feedback.
 	if = {
 		limit = { this = scope:activity.activity_host }
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			gregarious = miniscule_stress_impact_loss
 			humble = minor_stress_impact_loss
 			arrogant = miniscule_stress_impact_gain
 		}
 	}
 	else = {
-		stress_impact = { gregarious = miniscule_stress_impact_loss }
+		stress_and_fulfillment_impact = { gregarious = miniscule_stress_impact_loss }
 	}
 }
 
-scripted_effect ep2_wedding_ewan_0000_opinion_swap_effect = {
+
+scripted_effect
+ ep2_wedding_ewan_0000_opinion_swap_effect = {
 	# Progress heavily towards friendship.
 	progress_towards_friend_effect = {
 		CHARACTER = $FAVOURED_CHAR$
@@ -74,7 +84,9 @@ scripted_effect ep2_wedding_ewan_0000_opinion_swap_effect = {
 	}
 }
 
-scripted_effect ep2_wedding_ewan_0000_host_approves_effect = {
+
+scripted_effect
+ ep2_wedding_ewan_0000_host_approves_effect = {
 	# If you're the host, gain some prestige for ignoring them.
 	if = {
 		limit = { this = scope:activity.activity_host }
@@ -90,7 +102,9 @@ scripted_effect ep2_wedding_ewan_0000_host_approves_effect = {
 	}
 }
 
-scripted_effect ep2_wedding_ewan_0000_award_lifestyle_xp_per_conversationalist_effect = {
+
+scripted_effect
+ ep2_wedding_ewan_0000_award_lifestyle_xp_per_conversationalist_effect = {
 	$TARGET$ = {
 		# Diplomacy.
 		if = {
@@ -250,6 +264,7 @@ scripted_effect ep2_wedding_ewan_0000_award_lifestyle_xp_per_conversationalist_e
 
 
 
+
 ##################################################
 # BANQUET PHASE
 
@@ -260,7 +275,8 @@ scripted_effect ep2_wedding_ewan_0000_award_lifestyle_xp_per_conversationalist_e
 ##################################################
 
 # Character likes T1 entertainment.
-scripted_trigger ep2_wedding_ewan_0001_entertainment_t1_likes_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0001_entertainment_t1_likes_trigger = {
 	OR = {
 		# Thinks too much entertainment is frivolous.
 		has_trait = diligent
@@ -281,8 +297,10 @@ scripted_trigger ep2_wedding_ewan_0001_entertainment_t1_likes_trigger = {
 		has_trait = paranoid
 	}
 }
+
 # Character hates T1 entertainment.
-scripted_trigger ep2_wedding_ewan_0001_entertainment_t1_hates_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0001_entertainment_t1_hates_trigger = {
 	OR = {
 		# Likes a good joke/acrobat/actor.
 		has_trait = lazy
@@ -299,8 +317,10 @@ scripted_trigger ep2_wedding_ewan_0001_entertainment_t1_hates_trigger = {
 		has_trait = trusting
 	}
 }
+
 # Character likes T2 entertainment.
-scripted_trigger ep2_wedding_ewan_0001_entertainment_t2_likes_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0001_entertainment_t2_likes_trigger = {
 	OR = {
 		# Accepting of the average.
 		has_trait = content
@@ -315,8 +335,10 @@ scripted_trigger ep2_wedding_ewan_0001_entertainment_t2_likes_trigger = {
 		has_trait = cynical
 	}
 }
+
 # Character hates T2 entertainment.
-scripted_trigger ep2_wedding_ewan_0001_entertainment_t2_hates_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0001_entertainment_t2_hates_trigger = {
 	OR = {
 		# Hates the average.
 		has_trait = ambitious
@@ -331,8 +353,10 @@ scripted_trigger ep2_wedding_ewan_0001_entertainment_t2_hates_trigger = {
 		has_trait = zealous
 	}
 }
+
 # Character likes T3 entertainment.
-scripted_trigger ep2_wedding_ewan_0001_entertainment_t3_likes_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0001_entertainment_t3_likes_trigger = {
 	OR = {
 		# Loves excellent entertainment.
 		has_trait = lazy
@@ -349,8 +373,10 @@ scripted_trigger ep2_wedding_ewan_0001_entertainment_t3_likes_trigger = {
 		has_trait = trusting
 	}
 }
+
 # Character hates T3 entertainment.
-scripted_trigger ep2_wedding_ewan_0001_entertainment_t3_hates_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0001_entertainment_t3_hates_trigger = {
 	OR = {
 		# So much entertainment is frivolous.
 		has_trait = diligent
@@ -369,6 +395,7 @@ scripted_trigger ep2_wedding_ewan_0001_entertainment_t3_hates_trigger = {
 		has_trait = paranoid
 	}
 }
+
 
 #	Connect with various types of characters over the entertainment.
 ep2_wedding_ewan.0001 = {
@@ -814,7 +841,7 @@ ep2_wedding_ewan.0001 = {
 						any_attending_character = {
 							ep2_wedding_ewan_0000_activity_option_opinion_characters_standard_filter_trigger = yes
 							ep2_wedding_ewan_0001_entertainment_t1_hates_trigger = yes
-							NOT = { this = scope:char_temp }
+							this != scope:char_temp
 						}
 					}
 				}
@@ -837,7 +864,7 @@ ep2_wedding_ewan.0001 = {
 						any_attending_character = {
 							ep2_wedding_ewan_0000_activity_option_opinion_characters_standard_filter_trigger = yes
 							ep2_wedding_ewan_0001_entertainment_t2_hates_trigger = yes
-							NOT = { this = scope:char_temp }
+							this != scope:char_temp
 						}
 					}
 				}
@@ -854,7 +881,7 @@ ep2_wedding_ewan.0001 = {
 						any_attending_character = {
 							ep2_wedding_ewan_0000_activity_option_opinion_characters_standard_filter_trigger = yes
 							ep2_wedding_ewan_0001_entertainment_t3_hates_trigger = yes
-							NOT = { this = scope:char_temp }
+							this != scope:char_temp
 						}
 					}
 				}
@@ -1006,7 +1033,7 @@ ep2_wedding_ewan.0001 = {
 	option = {
 		name = {
 			trigger = {
-				NOT = { this = scope:activity.activity_host }
+				this != scope:activity.activity_host
 			}
 			text = ep2_wedding_ewan.0001.a
 		}
@@ -1043,7 +1070,7 @@ ep2_wedding_ewan.0001 = {
 	option = {
 		name = {
 			trigger = {
-				NOT = { this = scope:activity.activity_host }
+				this != scope:activity.activity_host
 			}
 			text = ep2_wedding_ewan.0001.b
 		}
@@ -1081,7 +1108,7 @@ ep2_wedding_ewan.0001 = {
 		name = ep2_wedding_ewan.0001.c
 		flavor = ep2_wedding_ewan.0001.c.tt
 		trigger = { has_activity_intent = murder_attendee_intent }
-		custom_tooltip = available_because_intent_tt
+		reason = activity_intent
 
 		scope:intent_target = {
 			# They're unsettled by your staring.
@@ -1094,7 +1121,7 @@ ep2_wedding_ewan.0001 = {
 			}
 		}
 
-		stress_impact = { vengeful = minor_stress_impact_loss }
+		stress_and_fulfillment_impact = { vengeful = minor_stress_impact_loss }
 		ai_chance = {
 			base = 1
 			ai_value_modifier = {
@@ -1112,7 +1139,7 @@ ep2_wedding_ewan.0001 = {
 		ep2_wedding_ewan_0000_host_approves_effect = yes
 
 		# We give base stress loss for this'un too.
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			base = minor_stress_impact_loss
 			shy = minor_stress_impact_loss
 		}
@@ -1126,6 +1153,7 @@ ep2_wedding_ewan.0001 = {
 	}
 }
 
+
 ##################################################
 # Food Fit for a...
 # by Ewan Cowhig Croft
@@ -1133,7 +1161,8 @@ ep2_wedding_ewan.0001 = {
 ##################################################
 
 # Character likes T1 food.
-scripted_trigger ep2_wedding_ewan_0011_food_t1_likes_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0011_food_t1_likes_trigger = {
 	OR = {
 		# Has more sedate food preferences.
 		has_trait = temperate
@@ -1148,8 +1177,10 @@ scripted_trigger ep2_wedding_ewan_0011_food_t1_likes_trigger = {
 		has_trait = stubborn
 	}
 }
+
 # Character hates T1 food.
-scripted_trigger ep2_wedding_ewan_0011_food_t1_hates_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0011_food_t1_hates_trigger = {
 	OR = {
 		# Likes plenty of exotic foods.
 		has_trait = gluttonous
@@ -1163,8 +1194,10 @@ scripted_trigger ep2_wedding_ewan_0011_food_t1_hates_trigger = {
 		has_trait = fickle
 	}
 }
+
 # Character likes T2 food.
-scripted_trigger ep2_wedding_ewan_0011_food_t2_likes_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0011_food_t2_likes_trigger = {
 	OR = {
 		# Accepting of the average.
 		has_trait = content
@@ -1178,8 +1211,10 @@ scripted_trigger ep2_wedding_ewan_0011_food_t2_likes_trigger = {
 		has_trait = cynical
 	}
 }
+
 # Character hates T2 food.
-scripted_trigger ep2_wedding_ewan_0011_food_t2_hates_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0011_food_t2_hates_trigger = {
 	OR = {
 		# Hates the average.
 		has_trait = ambitious
@@ -1193,8 +1228,10 @@ scripted_trigger ep2_wedding_ewan_0011_food_t2_hates_trigger = {
 		has_trait = zealous
 	}
 }
+
 # Character likes T3 food.
-scripted_trigger ep2_wedding_ewan_0011_food_t3_likes_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0011_food_t3_likes_trigger = {
 	OR = {
 		# Likes plenty of exotic foods.
 		has_trait = gluttonous
@@ -1209,8 +1246,10 @@ scripted_trigger ep2_wedding_ewan_0011_food_t3_likes_trigger = {
 		has_trait = fickle
 	}
 }
+
 # Character hates T3 food.
-scripted_trigger ep2_wedding_ewan_0011_food_t3_hates_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0011_food_t3_hates_trigger = {
 	OR = {
 		# Has more sedate food preferences.
 		has_trait = temperate
@@ -1226,10 +1265,14 @@ scripted_trigger ep2_wedding_ewan_0011_food_t3_hates_trigger = {
 	}
 }
 
+
 #	Connect with various types of characters over the food.
 ep2_wedding_ewan.0011 = {
+
 	type = activity_event
+
 	title = ep2_wedding_ewan.0011.t
+
 	desc = {
 		first_valid = {
 			triggered_desc = {
@@ -1569,21 +1612,27 @@ ep2_wedding_ewan.0011 = {
 			}
 		}
 	}
+
 	theme = feast_activity
+
 	left_portrait = {
 		character = scope:char_1
 		animation = drink_goblet
 	}
+
 	center_portrait = {
 		character = root
 		animation = thinking
 	}
+
 	right_portrait = {
 		character = scope:char_2
 		animation = disapproval
 	}
 
+
 	cooldown = { years = 1 }
+
 
 	trigger = {
 		scope:activity = {
@@ -1605,7 +1654,7 @@ ep2_wedding_ewan.0011 = {
 						any_attending_character = {
 							ep2_wedding_ewan_0000_activity_option_opinion_characters_standard_filter_trigger = yes
 							ep2_wedding_ewan_0011_food_t1_hates_trigger = yes
-							NOT = { this = scope:char_temp }
+							this != scope:char_temp
 						}
 					}
 				}
@@ -1628,7 +1677,7 @@ ep2_wedding_ewan.0011 = {
 						any_attending_character = {
 							ep2_wedding_ewan_0000_activity_option_opinion_characters_standard_filter_trigger = yes
 							ep2_wedding_ewan_0011_food_t2_hates_trigger = yes
-							NOT = { this = scope:char_temp }
+							this != scope:char_temp
 						}
 					}
 				}
@@ -1645,13 +1694,14 @@ ep2_wedding_ewan.0011 = {
 						any_attending_character = {
 							ep2_wedding_ewan_0000_activity_option_opinion_characters_standard_filter_trigger = yes
 							ep2_wedding_ewan_0011_food_t3_hates_trigger = yes
-							NOT = { this = scope:char_temp }
+							this != scope:char_temp
 						}
 					}
 				}
 			}
 		}
 	}
+
 
 	immediate = {
 		scope:activity = {
@@ -1820,11 +1870,12 @@ ep2_wedding_ewan.0011 = {
 		}
 	}
 
+
 	# Agree with scope:char_1.
 	option = {
 		name = {
 			trigger = {
-				NOT = { this = scope:activity.activity_host }
+				this != scope:activity.activity_host
 			}
 			text = ep2_wedding_ewan.0011.a
 		}
@@ -1856,12 +1907,13 @@ ep2_wedding_ewan.0011 = {
 			}
 		}
 	}
+
 	
 	# Agree with scope:char_2.
 	option = {
 		name = {
 			trigger = {
-				NOT = { this = scope:activity.activity_host }
+				this != scope:activity.activity_host
 			}
 			text = ep2_wedding_ewan.0011.b
 		}
@@ -1893,13 +1945,18 @@ ep2_wedding_ewan.0011 = {
 			}
 		}
 	}
+
 	
 	# Mischief: spill something on someone.
 	option = {
+
 		name = ep2_wedding_ewan.0011.c
+
 		# Check for target directly, rather than just the intent, because there isn't a pre-defined intent target and we may have failed to acquire someone suitable.
 		trigger = { exists = scope:intent_target }
-		custom_tooltip = available_because_intent_tt
+
+		reason = activity_intent
+
 
 		# You try to trip a server onto someone.
 		duel = {
@@ -1949,12 +2006,20 @@ ep2_wedding_ewan.0011 = {
 			}
 		}
 
+
 		# We give base stress loss for this'un too.
-		stress_impact = {
+		stress_and_fulfillment_impact = {
+
 			base = minor_stress_impact_loss # THE MOD
+
+
 			deceitful = minor_stress_impact_loss
+
 			honest = miniscule_stress_impact_gain
-		}
+
+		
+}
+
 		ai_chance = {
 			base = 1
 			ai_value_modifier = {
@@ -1963,21 +2028,34 @@ ep2_wedding_ewan.0011 = {
 				ai_rationality = -0.25
 			}
 		}
-	}
+
+	
+}
+
 	
 	# Nod along without paying attention.
 	option = {
+
 		name = ep2_wedding_ewan.0011.d
+
 
 		# Opinion with the activty_host, or else prestige.
 		ep2_wedding_ewan_0000_host_approves_effect = yes
 
+
 		# We give base stress loss for this'un too.
-		stress_impact = {
+		stress_and_fulfillment_impact = {
+
 			base = miniscule_stress_impact_loss # THE MOD
+
+
 			shy = minor_stress_impact_loss
+
 			eccentric = minor_stress_impact_gain
-		}
+
+		
+}
+
 		ai_chance = {
 			base = 1
 			ai_value_modifier = {
@@ -1985,8 +2063,13 @@ ep2_wedding_ewan.0011 = {
 				ai_sociability = -2
 			}
 		}
-	}
+
+	
 }
+
+
+}
+
 
 ##################################################
 # Shimmering, Shining
@@ -1995,7 +2078,8 @@ ep2_wedding_ewan.0011 = {
 ##################################################
 
 # Character likes T1 decorations.
-scripted_trigger ep2_wedding_ewan_0021_decoration_t1_likes_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0021_decoration_t1_likes_trigger = {
 	OR = {
 		# Appreciate it for being low-key.
 		has_trait = content
@@ -2010,8 +2094,10 @@ scripted_trigger ep2_wedding_ewan_0021_decoration_t1_likes_trigger = {
 		has_trait = greedy
 	}
 }
+
 # Character hates T1 decorations.
-scripted_trigger ep2_wedding_ewan_0021_decoration_t1_hates_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0021_decoration_t1_hates_trigger = {
 	OR = {
 		# Hates it for being low-key.
 		has_trait = ambitious
@@ -2024,8 +2110,10 @@ scripted_trigger ep2_wedding_ewan_0021_decoration_t1_hates_trigger = {
 		has_trait = just
 	}
 }
+
 # Character likes T2 decorations.
-scripted_trigger ep2_wedding_ewan_0021_decoration_t2_likes_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0021_decoration_t2_likes_trigger = {
 	OR = {
 		# Accepting of the average.
 		has_trait = content
@@ -2040,8 +2128,10 @@ scripted_trigger ep2_wedding_ewan_0021_decoration_t2_likes_trigger = {
 		has_trait = cynical
 	}
 }
+
 # Character hates T2 decorations.
-scripted_trigger ep2_wedding_ewan_0021_decoration_t2_hates_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0021_decoration_t2_hates_trigger = {
 	OR = {
 		# Hates the average.
 		has_trait = ambitious
@@ -2056,8 +2146,10 @@ scripted_trigger ep2_wedding_ewan_0021_decoration_t2_hates_trigger = {
 		has_trait = zealous
 	}
 }
+
 # Character likes T3 decorations.
-scripted_trigger ep2_wedding_ewan_0021_decoration_t3_likes_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0021_decoration_t3_likes_trigger = {
 	OR = {
 		# Loves an over-the-top wedding.
 		has_trait = ambitious
@@ -2071,8 +2163,10 @@ scripted_trigger ep2_wedding_ewan_0021_decoration_t3_likes_trigger = {
 		has_trait = generous
 	}
 }
+
 # Character hates T3 decorations.
-scripted_trigger ep2_wedding_ewan_0021_decoration_t3_hates_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0021_decoration_t3_hates_trigger = {
 	OR = {
 		# Think this might all be a bit much.
 		has_trait = content
@@ -2085,10 +2179,14 @@ scripted_trigger ep2_wedding_ewan_0021_decoration_t3_hates_trigger = {
 	}
 }
 
+
 #	Connect with various types of characters over the venue & its decorations.
 ep2_wedding_ewan.0021 = {
+
 	type = activity_event
+
 	title = ep2_wedding_ewan.0021.t
+
 	desc = {
 		first_valid = {
 			triggered_desc = {
@@ -2442,21 +2540,27 @@ ep2_wedding_ewan.0021 = {
 			}
 		}
 	}
+
 	theme = feast_activity
+
 	left_portrait = {
 		character = scope:char_1
 		animation = admiration
 	}
+
 	center_portrait = {
 		character = root
 		animation = thinking
 	}
+
 	right_portrait = {
 		character = scope:char_2
 		animation = disapproval
 	}
 
+
 	cooldown = { years = 1 }
+
 
 	trigger = {
 		scope:activity = {
@@ -2478,7 +2582,7 @@ ep2_wedding_ewan.0021 = {
 						any_attending_character = {
 							ep2_wedding_ewan_0000_activity_option_opinion_characters_standard_filter_trigger = yes
 							ep2_wedding_ewan_0021_decoration_t1_hates_trigger = yes
-							NOT = { this = scope:char_temp }
+							this != scope:char_temp
 						}
 					}
 				}
@@ -2501,7 +2605,7 @@ ep2_wedding_ewan.0021 = {
 						any_attending_character = {
 							ep2_wedding_ewan_0000_activity_option_opinion_characters_standard_filter_trigger = yes
 							ep2_wedding_ewan_0021_decoration_t2_hates_trigger = yes
-							NOT = { this = scope:char_temp }
+							this != scope:char_temp
 						}
 					}
 				}
@@ -2518,13 +2622,14 @@ ep2_wedding_ewan.0021 = {
 						any_attending_character = {
 							ep2_wedding_ewan_0000_activity_option_opinion_characters_standard_filter_trigger = yes
 							ep2_wedding_ewan_0021_decoration_t3_hates_trigger = yes
-							NOT = { this = scope:char_temp }
+							this != scope:char_temp
 						}
 					}
 				}
 			}
 		}
 	}
+
 
 	immediate = {
 		# Try to grab our actors.
@@ -2666,11 +2771,12 @@ ep2_wedding_ewan.0021 = {
 		}
 	}
 
+
 	# Agree with scope:char_1.
 	option = {
 		name = {
 			trigger = {
-				NOT = { this = scope:activity.activity_host }
+				this != scope:activity.activity_host
 			}
 			text = ep2_wedding_ewan.0021.a
 		}
@@ -2702,12 +2808,13 @@ ep2_wedding_ewan.0021 = {
 			}
 		}
 	}
+
 	
 	# Agree with scope:char_2.
 	option = {
 		name = {
 			trigger = {
-				NOT = { this = scope:activity.activity_host }
+				this != scope:activity.activity_host
 			}
 			text = ep2_wedding_ewan.0021.b
 		}
@@ -2739,12 +2846,13 @@ ep2_wedding_ewan.0021 = {
 			}
 		}
 	}
+
 	
 	# Seduce: try to chat your target up.
 	option = {
 		name = ep2_wedding_ewan.0021.c
 		trigger = { has_activity_intent = woo_attendee_intent }
-		custom_tooltip = available_because_intent_tt
+		reason = activity_intent
 
 		# Sprinkle a bit of opinion in there.
 		reverse_add_opinion = {
@@ -2773,7 +2881,7 @@ ep2_wedding_ewan.0021 = {
 			}
 		}
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			chaste = miniscule_stress_impact_gain
 			lustful = minor_stress_impact_loss
 		}
@@ -2785,19 +2893,29 @@ ep2_wedding_ewan.0021 = {
 			}
 		}
 	}
+
 	
 	# Don't get involved.
 	option = {
+
 		name = ep2_wedding_ewan.0021.d
+
 
 		# Opinion with the activty_host, or else prestige.
 		ep2_wedding_ewan_0000_host_approves_effect = yes
 
+
 		# We give base stress loss for this'un too.
-		stress_impact = {
+		stress_and_fulfillment_impact = {
+
 			base = miniscule_stress_impact_loss # THE MOD
+
+
 			shy = minor_stress_impact_loss
-		}
+
+		
+}
+
 		ai_chance = {
 			base = 1
 			ai_value_modifier = {
@@ -2805,8 +2923,13 @@ ep2_wedding_ewan.0021 = {
 				ai_sociability = -2
 			}
 		}
-	}
+
+	
 }
+
+
+}
+
 
 ##################################################
 # A Sociable Supper
@@ -2814,7 +2937,8 @@ ep2_wedding_ewan.0021 = {
 # 0031 - 0040
 ##################################################
 
-scripted_trigger ep2_wedding_ewan_0031_appropriate_ruler_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0031_appropriate_ruler_trigger = {
 	# Are they an appropriately landed ruler?
 	highest_held_title_tier >= {
 		# Grab root's tier.
@@ -2841,8 +2965,10 @@ scripted_trigger ep2_wedding_ewan_0031_appropriate_ruler_trigger = {
 	is_ai = no
 }
 
-scripted_effect ep2_wedding_ewan_0031_social_climber_stress_effect = {
-	stress_impact = {
+
+scripted_effect
+ ep2_wedding_ewan_0031_social_climber_stress_effect = {
+	stress_and_fulfillment_impact = {
 		gregarious = minor_stress_impact_loss
 		ambitious = minor_stress_impact_loss
 		shy = miniscule_stress_impact_gain
@@ -2850,7 +2976,9 @@ scripted_effect ep2_wedding_ewan_0031_social_climber_stress_effect = {
 	}
 }
 
-scripted_effect ep2_wedding_ewan_0031_make_friend_effect = {
+
+scripted_effect
+ ep2_wedding_ewan_0031_make_friend_effect = {
 	# Become friends.
 	set_relation_friend = {
 		target = $TARGET$
@@ -2865,10 +2993,14 @@ scripted_effect ep2_wedding_ewan_0031_make_friend_effect = {
 	}
 }
 
+
 #	Meet one of your neighbouring rulers and form a fast friendship.
 ep2_wedding_ewan.0031 = {
+
 	type = activity_event
+
 	title = ep2_wedding_ewan.0031.t
+
 	desc = {
 		desc = ep2_wedding_ewan.0031.desc.intro
 		# Our first character.
@@ -2928,19 +3060,33 @@ ep2_wedding_ewan.0031 = {
 		}
 		desc = ep2_wedding_ewan.0031.desc.outro
 	}
+
 	theme = feast_activity
+
 	left_portrait = {
 		character = scope:char_1
 		animation = boredom
 	}
+
 	right_portrait = {
 		character = scope:char_2
 		animation = happiness
 	}
 
+
 	cooldown = { years = 1 }
 
+
 	trigger = {
+		trigger_if = {
+			limit = {
+				is_ai = yes
+			}
+			static_group_filter = {
+				group = ep2_wedding_ewan.0031
+				match = 0.1
+			}
+		}
 		scope:activity = {
 			any_attending_character = {
 				count >= 2
@@ -2949,15 +3095,6 @@ ep2_wedding_ewan.0031 = {
 		}
 	}
 
-	weight_multiplier = {
-		base = 1
-		
-		# We don't want the AI to spam-befriend people via this event too much, so we weight it down for them.
-		modifier = {
-			add = -0.75
-			is_ai = yes
-		}
-	}
 
 	immediate = {
 		# Let's pick some characters!
@@ -3110,12 +3247,13 @@ ep2_wedding_ewan.0031 = {
 		random_in_list = {
 			list = contending_characters_list
 			limit = {
-				NOT = { this = scope:char_1 }
+				this != scope:char_1
 				# No trait checks needed here — there's only one character remaining in the list now.
 			}
 			save_scope_as = char_2
 		}
 	}
+
 
 	# Neighbouring ruler.
 	option = {
@@ -3137,6 +3275,7 @@ ep2_wedding_ewan.0031 = {
 			opinion_modifier = { opinion_target = scope:conversationalist_neighbour }
 		}
 	}
+
 	
 	# Fellow vassal.
 	option = {
@@ -3158,6 +3297,7 @@ ep2_wedding_ewan.0031 = {
 			opinion_modifier = { opinion_target = scope:conversationalist_covassal }
 		}
 	}
+
 	
 	# Direct vassal.
 	option = {
@@ -3179,6 +3319,7 @@ ep2_wedding_ewan.0031 = {
 			opinion_modifier = { opinion_target = scope:conversationalist_vassal }
 		}
 	}
+
 	
 	# Liege.
 	option = {
@@ -3200,6 +3341,7 @@ ep2_wedding_ewan.0031 = {
 			opinion_modifier = { opinion_target = scope:conversationalist_liege }
 		}
 	}
+
 	
 	# Distant ruler.
 	option = {
@@ -3221,6 +3363,7 @@ ep2_wedding_ewan.0031 = {
 			opinion_modifier = { opinion_target = scope:conversationalist_other_ruler }
 		}
 	}
+
 	
 	# Backup option.
 	option = {
@@ -3242,24 +3385,39 @@ ep2_wedding_ewan.0031 = {
 			opinion_modifier = { opinion_target = scope:conversationalist_backup }
 		}
 	}
+
 	
 	# Recreation: this isn't the time for such ladder-climbing.
 	option = {
+
 		name = ep2_wedding_ewan.0031.g
+
 		trigger = { has_activity_intent = reduce_stress_intent }
-		custom_tooltip = available_because_intent_tt
+
+		reason = activity_intent
+
 
 		# Decent middling prestige.
 		add_prestige = medium_prestige_gain
 
+
 		# We give base stress loss for this'un too.
-		stress_impact = {
+		stress_and_fulfillment_impact = {
+
 			base = medium_stress_impact_loss # THE MOD
+
+
 			shy = medium_stress_impact_loss
+
 			lazy = medium_stress_impact_loss
+
 			gregarious = miniscule_stress_impact_gain
+
 			ambitious = miniscule_stress_impact_gain
-		}
+
+		
+}
+
 		ai_chance = {
 			base = 1
 			ai_value_modifier = {
@@ -3268,7 +3426,10 @@ ep2_wedding_ewan.0031 = {
 				ai_boldness = -1
 			}
 		}
-	}
+
+	
+}
+
 	
 	# Mmm. They're not that interesting.
 	option = {
@@ -3280,7 +3441,7 @@ ep2_wedding_ewan.0031 = {
 		# Consolation prestige.
 		add_prestige = minor_prestige_gain
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			shy = minor_stress_impact_loss
 			gregarious = miniscule_stress_impact_gain
 		}
@@ -3289,7 +3450,10 @@ ep2_wedding_ewan.0031 = {
 			ai_value_modifier = { ai_sociability = -2 }
 		}
 	}
+
+
 }
+
 
 ##################################################
 # Speech! Speech!
@@ -3297,12 +3461,13 @@ ep2_wedding_ewan.0031 = {
 # 0041 - 0050
 ##################################################
 
-scripted_effect ep2_wedding_ewan_0041_offended_couple_effect = {
+scripted_effect
+ ep2_wedding_ewan_0041_offended_couple_effect = {
 	# You hath offended them.
 	if = {
 		limit = {
 			# Double-check we're not double-dipping on opinion.
-			NOT = { scope:host = scope:spouse_1 }
+			scope:host != scope:spouse_1
 		}
 		reverse_add_opinion = {
 			target = scope:spouse_1
@@ -3313,7 +3478,7 @@ scripted_effect ep2_wedding_ewan_0041_offended_couple_effect = {
 	if = {
 		limit = {
 			# Double-check we're not double-dipping on opinion.
-			NOT = { scope:host = scope:spouse_2 }
+			scope:host != scope:spouse_2
 		}
 		reverse_add_opinion = {
 			target = scope:spouse_2
@@ -3323,7 +3488,9 @@ scripted_effect ep2_wedding_ewan_0041_offended_couple_effect = {
 	}
 }
 
-scripted_effect ep2_wedding_ewan_0041_duel_with_highest_social_skill_effect = {
+
+scripted_effect
+ ep2_wedding_ewan_0041_duel_with_highest_social_skill_effect = {
 	duel = {
 		skill = $SKILL$
 		value = high_skill_rating
@@ -3362,10 +3529,14 @@ scripted_effect ep2_wedding_ewan_0041_duel_with_highest_social_skill_effect = {
 	}
 }
 
+
 #	Make a speech to the happy couple, adjusting the meaning to your intent.
 ep2_wedding_ewan.0041 = {
+
 	type = activity_event
+
 	title = ep2_wedding_ewan.0041.t
+
 	desc = {
 		desc = ep2_wedding_ewan.0041.desc.intro
 		first_valid = {
@@ -3399,27 +3570,29 @@ ep2_wedding_ewan.0041 = {
 		}
 		desc = ep2_wedding_ewan.0041.desc.outro
 	}
+
 	theme = feast_activity
+
 	left_portrait = {
 		character = root
 		animation = admiration
 	}
+
 	right_portrait = {
 		character = scope:spouse_1
 		animation = personality_honorable
 	}
+
 	center_portrait = {
 		character = scope:spouse_2
 		animation = happiness
 	}
+
 	lower_right_portrait = scope:intent_target
+
 
 	cooldown = { years = 1 }
 
-	widget = {
-		gui = "event_window_widget_activity_intent"
-		container = "custom_widgets_container"
-	}
 
 	trigger = {
 		NOR = {
@@ -3428,6 +3601,7 @@ ep2_wedding_ewan.0041 = {
 		}
 	}
 
+
 	immediate = {
 		# Save the spouses for ease of reference.
 		scope:activity.special_guest:spouse_1 = { save_scope_as = spouse_1 }
@@ -3435,6 +3609,7 @@ ep2_wedding_ewan.0041 = {
 		# And, if we've got one, our intent target.
 		intent_target ?= { save_scope_as = intent_target }
 	}
+
 
 	# Praise the happy couple, as expected.
 	option = {
@@ -3452,7 +3627,7 @@ ep2_wedding_ewan.0041 = {
 			opinion = 30
 		}
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			just = miniscule_stress_impact_loss
 			compassionate = minor_stress_impact_loss
 		}
@@ -3464,12 +3639,13 @@ ep2_wedding_ewan.0041 = {
 			}
 		}
 	}
+
 	
 	# Recreation: praise the party.
 	option = {
 		name = ep2_wedding_ewan.0041.b
 		trigger = { has_activity_intent = reduce_stress_intent }
-		custom_tooltip = available_because_intent_tt
+		reason = activity_intent
 
 		# If you're the host, gain prestige.
 		if = {
@@ -3488,7 +3664,7 @@ ep2_wedding_ewan.0041 = {
 		# Annoy the spouses.
 		ep2_wedding_ewan_0041_offended_couple_effect = yes
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			arbitrary = miniscule_stress_impact_loss
 			gregarious = minor_stress_impact_loss
 		}
@@ -3500,12 +3676,13 @@ ep2_wedding_ewan.0041 = {
 			}
 		}
 	}
+
 	
 	# Murder: stare at your target to cause them stress.
 	option = {
 		name = ep2_wedding_ewan.0041.c
 		trigger = { has_activity_intent = murder_attendee_intent }
-		custom_tooltip = available_because_intent_tt
+		reason = activity_intent
 
 		scope:intent_target = {
 			# They're a bit freaked out.
@@ -3520,7 +3697,7 @@ ep2_wedding_ewan.0041 = {
 		# Annoy the spouses.
 		ep2_wedding_ewan_0041_offended_couple_effect = yes
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			arbitrary = miniscule_stress_impact_loss
 			greedy = miniscule_stress_impact_loss
 		}
@@ -3532,12 +3709,13 @@ ep2_wedding_ewan.0041 = {
 			}
 		}
 	}
+
 	
 	# Seduce: make eyes at your seduction target.
 	option = {
 		name = ep2_wedding_ewan.0041.d
 		trigger = { has_activity_intent = woo_attendee_intent }
-		custom_tooltip = available_because_intent_tt
+		reason = activity_intent
 
 		# You try to keep it juuuuust about down-low.
 		duel = {
@@ -3613,7 +3791,7 @@ ep2_wedding_ewan.0041 = {
 		# Annoy the spouses.
 		ep2_wedding_ewan_0041_offended_couple_effect = yes
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			arbitrary = miniscule_stress_impact_loss
 			lustful = miniscule_stress_impact_loss
 		}
@@ -3625,12 +3803,13 @@ ep2_wedding_ewan.0041 = {
 			}
 		}
 	}
+
 	
 	# Diplomacy: opinion gain with every landed ruler attending.
 	option = {
 		name = ep2_wedding_ewan.0041.e
 		trigger = { has_activity_intent = diplomatic_intent }
-		custom_tooltip = available_because_intent_tt
+		reason = activity_intent
 
 		# Try to give a big, impressive speech.
 		duel = {
@@ -3651,7 +3830,7 @@ ep2_wedding_ewan.0041 = {
 						every_attending_character = {
 							limit = {
 								is_ruler = yes
-								NOT = { this = root }
+								this != root
 							}
 							custom = custom.every_landed_activity_guest
 							reverse_add_opinion = {
@@ -3683,7 +3862,7 @@ ep2_wedding_ewan.0041 = {
 		# Annoy the spouses.
 		ep2_wedding_ewan_0041_offended_couple_effect = yes
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			arbitrary = miniscule_stress_impact_loss
 			ambitious = miniscule_stress_impact_loss
 		}
@@ -3695,12 +3874,13 @@ ep2_wedding_ewan.0041 = {
 			}
 		}
 	}
+
 	
 	# Matchmaking: talk up your char of choice.
 	option = {
 		name = ep2_wedding_ewan.0041.f
 		trigger = { has_activity_intent = matchmaking_intent }
-		custom_tooltip = available_because_intent_tt
+		reason = activity_intent
 
 		# Gain opinion with scope:activity_intent.
 		reverse_add_opinion = {
@@ -3718,7 +3898,7 @@ ep2_wedding_ewan.0041 = {
 		# Annoy the spouses.
 		ep2_wedding_ewan_0041_offended_couple_effect = yes
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			arbitrary = miniscule_stress_impact_loss
 			compassionate = miniscule_stress_impact_loss
 		}
@@ -3730,12 +3910,13 @@ ep2_wedding_ewan.0041 = {
 			}
 		}
 	}
+
 	
 	# Mischief: try to start some rumours.
 	option = {
 		name = ep2_wedding_ewan.0041.g
 		trigger = { has_activity_intent = banquet_mischief_intent }
-		custom_tooltip = available_because_intent_tt
+		reason = activity_intent
 
 		# We take your highest of diplomacy or intrigue and let you duel against it.
 		if = {
@@ -3748,7 +3929,7 @@ ep2_wedding_ewan.0041 = {
 		# Annoy the spouses.
 		ep2_wedding_ewan_0041_offended_couple_effect = yes
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			arbitrary = miniscule_stress_impact_loss
 			deceitful = miniscule_stress_impact_loss
 		}
@@ -3760,6 +3941,7 @@ ep2_wedding_ewan.0041 = {
 			}
 		}
 	}
+
 	
 	# Shy: awkwardly sit back down without saying anything.
 	option = {
@@ -3780,7 +3962,7 @@ ep2_wedding_ewan.0041 = {
 		}
 
 		# SWEET RELIEF.
-		stress_impact = { shy = massive_stress_impact_loss }
+		stress_and_fulfillment_impact = { shy = massive_stress_impact_loss }
 		ai_chance = {
 			base = 1
 			ai_value_modifier = {
@@ -3789,13 +3971,17 @@ ep2_wedding_ewan.0041 = {
 			}
 		}
 	}
+
 	
 	# Say something sweet but perfunctory.
 	option = {
+
 		name = ep2_wedding_ewan.0041.i
+
 		trigger = {
 			NOT = { has_trait = shy }
 		}
+
 
 		# They're pleased, but not _as_pleased.
 		reverse_add_opinion = {
@@ -3803,18 +3989,27 @@ ep2_wedding_ewan.0041 = {
 			modifier = kindness_opinion
 			opinion = 10
 		}
+
 		reverse_add_opinion = {
 			target = scope:spouse_2
 			modifier = kindness_opinion
 			opinion = 10
 		}
 
+
 		# We most give base stress loss for this'un.
-		stress_impact = {
+		stress_and_fulfillment_impact = {
+
 			base = minor_stress_loss # THE MOD
+
+
 			lazy = miniscule_stress_impact_loss
+
 			compassionate = miniscule_stress_impact_loss
-		}
+
+		
+}
+
 		ai_chance = {
 			base = 1
 			ai_value_modifier = {
@@ -3822,8 +4017,13 @@ ep2_wedding_ewan.0041 = {
 				ai_energy = -1
 			}
 		}
-	}
+
+	
 }
+
+
+}
+
 
 ##################################################
 # And Another Thing
@@ -3832,7 +4032,8 @@ ep2_wedding_ewan.0041 = {
 ##################################################
 
 # Zealous same-faith chars don't mind hearing these things.
-scripted_trigger ep2_wedding_ewan_0051_boring_zeal_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0051_boring_zeal_trigger = {
 	has_trait = zealous
 	NOT = {
 		faith = root.faith
@@ -3840,27 +4041,33 @@ scripted_trigger ep2_wedding_ewan_0051_boring_zeal_trigger = {
 	}
 }
 
+
 # Make sure a rakish character wouldn't get in legal trouble talking about this (fornication is included in adultery logic).
-scripted_trigger ep2_wedding_ewan_0051_legal_rake_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0051_legal_rake_trigger = {
 	has_trait = rakish
 	save_temporary_scope_as = char_temp
 	NOT = {
-		trait_is_criminal_in_faith_trigger = {
-			TRAIT = adulterer
-			FAITH = scope:char_temp.faith
+		trait_is_criminal_in_rite_trigger = {
+			TRAIT = trait:adulterer
+			RITE = scope:char_temp.rite
 			GENDER_CHARACTER = scope:char_temp
 		}
 	}
 }
 
+
 # Profligates fall for someone else's scam, so paranoid profligates are immune to this *specific* form of money loss.
-scripted_trigger ep2_wedding_ewan_0051_foolish_profligate_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0051_foolish_profligate_trigger = {
 	has_trait = profligate
 	NOT = { has_trait = paranoid }
 }
 
+
 # Pick someone with nothing interesting to say.
-scripted_trigger ep2_wedding_ewan_0051_dolt_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0051_dolt_trigger = {
 	# We don't want important characters.
 	highest_held_title_tier <= tier_barony
 	# Must be verifiably a yawn.
@@ -3898,7 +4105,7 @@ scripted_trigger ep2_wedding_ewan_0051_dolt_trigger = {
 		# Idea is hyper-focused on disproportionately screwing someone over.
 		has_trait = vengeful
 		# Idea is long-winded.
-		has_trait = poet
+		has_trait = lifestyle_poet
 		# Stress traits want you to go in on their stress-related emporium.
 		## Pub.
 		has_trait = drunkard
@@ -3920,48 +4127,66 @@ scripted_trigger ep2_wedding_ewan_0051_dolt_trigger = {
 	}
 }
 
+
 # Triggers for whether you get the option to invest in a specific stress trait pitch.
-scripted_trigger ep2_wedding_ewan_0051_interested_stress_pitch_trait_drunkard_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0051_interested_stress_pitch_trait_drunkard_trigger = {
 	has_trait = drunkard
 	scope:stress_pitch ?= flag:drunkard
 }
-scripted_trigger ep2_wedding_ewan_0051_interested_stress_pitch_trait_hashishiyah_trigger = {
+
+scripted_trigger
+ ep2_wedding_ewan_0051_interested_stress_pitch_trait_hashishiyah_trigger = {
 	has_trait = hashishiyah
 	scope:stress_pitch ?= flag:hashishiyah
 }
-scripted_trigger ep2_wedding_ewan_0051_interested_stress_pitch_trait_rakish_trigger = {
+
+scripted_trigger
+ ep2_wedding_ewan_0051_interested_stress_pitch_trait_rakish_trigger = {
 	has_trait = rakish
 	scope:stress_pitch ?= flag:rakish
 }
-scripted_trigger ep2_wedding_ewan_0051_interested_stress_pitch_trait_reclusive_trigger = {
+
+scripted_trigger
+ ep2_wedding_ewan_0051_interested_stress_pitch_trait_reclusive_trigger = {
 	has_trait = reclusive
 	scope:stress_pitch ?= flag:reclusive
 }
-scripted_trigger ep2_wedding_ewan_0051_interested_stress_pitch_trait_flagellant_trigger = {
+
+scripted_trigger
+ ep2_wedding_ewan_0051_interested_stress_pitch_trait_flagellant_trigger = {
 	OR = {
 		has_trait = flagellant
 		# *sigh* And we acknowledge ulterior motives.
 		has_trait = deviant
-		any_secret = { secret_type = secret_deviant }
+		any_secret = { type = secret_deviant }
 	}
 	scope:stress_pitch ?= flag:flagellant
 }
-scripted_trigger ep2_wedding_ewan_0051_interested_stress_pitch_trait_profligate_trigger = {
+
+scripted_trigger
+ ep2_wedding_ewan_0051_interested_stress_pitch_trait_profligate_trigger = {
 	has_trait = profligate
 	scope:stress_pitch ?= flag:profligate
 }
-scripted_trigger ep2_wedding_ewan_0051_interested_stress_pitch_trait_journaller_trigger = {
+
+scripted_trigger
+ ep2_wedding_ewan_0051_interested_stress_pitch_trait_journaller_trigger = {
 	has_trait = journaller
 	scope:stress_pitch ?= flag:journaller
 }
-scripted_trigger ep2_wedding_ewan_0051_interested_stress_pitch_trait_athletic_trigger = {
+
+scripted_trigger
+ ep2_wedding_ewan_0051_interested_stress_pitch_trait_athletic_trigger = {
 	has_trait = athletic
 	scope:stress_pitch ?= flag:athletic
 }
 
+
 # Stress for not being a dick to a boring, boring person.
-scripted_effect ep2_wedding_ewan_0051_compassion_to_dolt_effect = {
-	stress_impact = {
+scripted_effect
+ ep2_wedding_ewan_0051_compassion_to_dolt_effect = {
+	stress_and_fulfillment_impact = {
 		compassionate = minor_stress_impact_loss
 		patient = minor_stress_impact_loss
 		calm = minor_stress_impact_loss
@@ -3972,9 +4197,11 @@ scripted_effect ep2_wedding_ewan_0051_compassion_to_dolt_effect = {
 	}
 }
 
+
 # Loss stress when indulging a stress coping trait.
-scripted_effect ep2_wedding_ewan_0051_stress_trait_stress_effect = {
-	stress_impact = {
+scripted_effect
+ ep2_wedding_ewan_0051_stress_trait_stress_effect = {
+	stress_and_fulfillment_impact = {
 		$STRESS_TRAIT$ = massive_stress_impact_loss
 		trusting = miniscule_stress_impact_loss
 		diligent = miniscule_stress_impact_loss
@@ -3983,8 +4210,10 @@ scripted_effect ep2_wedding_ewan_0051_stress_trait_stress_effect = {
 	}
 }
 
+
 # You start a business based around a shared stress coping trait.
-scripted_effect ep2_wedding_ewan_0051_start_business_together_effect = {
+scripted_effect
+ ep2_wedding_ewan_0051_start_business_together_effect = {
 	# Up-front costs for the both of you.
 	remove_short_term_gold = major_gold_value
 	scope:dolt = { remove_short_term_gold = major_gold_value }
@@ -4041,14 +4270,17 @@ scripted_effect ep2_wedding_ewan_0051_start_business_together_effect = {
 	}
 }
 
+
 # Your business is incompatible with your faith.
-scripted_effect ep2_wedding_ewan_0051_business_piety_consequences_effect = {
+scripted_effect
+ ep2_wedding_ewan_0051_business_piety_consequences_effect = {
 	if = {
 		limit = { this ?= faith.religious_head }
 		add_piety = medium_piety_loss
 	}
 	else = { add_piety = minor_piety_loss }
 }
+
 
 #	Someone is pitching questionable ideas at you, and you can go along with them or not, but they keep coming at you.
 ep2_wedding_ewan.0051 = {
@@ -4167,7 +4399,7 @@ ep2_wedding_ewan.0051 = {
 					# Poet
 					triggered_desc = {
 						trigger = {
-							scope:dolt = { has_trait = poet }
+							scope:dolt = { has_trait = lifestyle_poet }
 						}
 						desc = ep2_wedding_ewan.0051.desc.poet
 					}
@@ -4341,7 +4573,7 @@ ep2_wedding_ewan.0051 = {
 							ep2_wedding_ewan_0051_boring_zeal_trigger = yes
 							has_trait = fickle
 							has_trait = vengeful
-							has_trait = poet
+							has_trait = lifestyle_poet
 						}
 					}
 				}
@@ -4436,7 +4668,7 @@ ep2_wedding_ewan.0051 = {
 			}
 		}
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			callous = minor_stress_impact_loss
 			sadistic = minor_stress_impact_loss
 			impatient = minor_stress_impact_loss
@@ -4472,7 +4704,7 @@ ep2_wedding_ewan.0051 = {
 			opinion = -20
 		}
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			callous = minor_stress_impact_loss
 			sadistic = minor_stress_impact_loss
 			impatient = minor_stress_impact_loss
@@ -4521,7 +4753,7 @@ ep2_wedding_ewan.0051 = {
 		}
 
 		# Lotta stress loss for this one too.
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			lazy = major_stress_impact_loss
 			compassionate = miniscule_stress_impact_gain
 		}
@@ -4634,10 +4866,10 @@ ep2_wedding_ewan.0051 = {
 		# Account for secret deviants.
 		if = {
 			limit = {
-				any_secret = { secret_type = secret_deviant }
+				any_secret = { type = secret_deviant }
 			}
 			random_secret = {
-				limit = { secret_type = secret_deviant }
+				type = secret_deviant
 				save_scope_as = secret
 			}
 			custom_tooltip = ep2_wedding_ewan.0051.i.tt.deviant
@@ -4824,6 +5056,7 @@ ep2_wedding_ewan.0051 = {
 	}
 }
 
+
 #	Investment success — your venture turned out to be worthwhile after all!
 ep2_wedding_ewan.0052 = {
 	type = character_event
@@ -4959,7 +5192,7 @@ ep2_wedding_ewan.0052 = {
 			limit = {
 				scope:stress_pitch = flag:hashishiyah
 				# Diligent virtue excluded because you can definitely do work _and_ have a hashish indulging habit, but it's hard to see lots of people _on_ hashish as anything but a den of folks lazing around on cushions chatting about nothing in particular. The horror.
-				faith = { trait_is_sin = lazy }
+				rite = { trait_is_sin_rite = lazy }
 			}
 			ep2_wedding_ewan_0051_business_piety_consequences_effect = yes
 		}
@@ -4967,10 +5200,10 @@ ep2_wedding_ewan.0052 = {
 		else_if = {
 			limit = {
 				scope:stress_pitch = flag:rakish
-				faith = {
+				rite = {
 					OR = {
-						trait_is_sin = lustful
-						trait_is_virtue = chaste
+						trait_is_sin_rite = lustful
+						trait_is_virtue_rite = chaste
 					}
 				}
 			}
@@ -4980,10 +5213,10 @@ ep2_wedding_ewan.0052 = {
 		else_if = {
 			limit = {
 				scope:stress_pitch = flag:reclusive
-				faith = {
+				rite = {
 					OR = {
-						trait_is_sin = shy
-						trait_is_virtue = gregarious
+						trait_is_sin_rite = shy
+						trait_is_virtue_rite = gregarious
 					}
 				}
 			}
@@ -4993,7 +5226,7 @@ ep2_wedding_ewan.0052 = {
 		else_if = {
 			limit = {
 				scope:stress_pitch = flag:profligate
-				faith = { trait_is_virtue = greedy }
+				rite = { trait_is_virtue_rite = greedy }
 			}
 			ep2_wedding_ewan_0051_business_piety_consequences_effect = yes
 		}
@@ -5001,7 +5234,7 @@ ep2_wedding_ewan.0052 = {
 		else_if = {
 			limit = {
 				scope:stress_pitch = flag:athletic
-				faith = { trait_is_virtue = lazy }
+				rite = { trait_is_virtue_rite = lazy }
 			}
 			ep2_wedding_ewan_0051_business_piety_consequences_effect = yes
 		}
@@ -5042,7 +5275,7 @@ ep2_wedding_ewan.0052 = {
 			}
 		}
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			greedy = minor_stress_impact_loss
 			callous = miniscule_stress_impact_loss
 			sadistic = miniscule_stress_impact_loss
@@ -5078,7 +5311,7 @@ ep2_wedding_ewan.0052 = {
 			}
 		}
 
-		stress_impact = { arrogant = massive_stress_impact_loss }
+		stress_and_fulfillment_impact = { arrogant = massive_stress_impact_loss }
 		ai_chance = {
 			base = 1
 			ai_value_modifier = {
@@ -5117,6 +5350,7 @@ ep2_wedding_ewan.0052 = {
 		}
 	}
 }
+
 
 #	Investment failure — semi-predictably, your venture dun goofed.
 ep2_wedding_ewan.0053 = {
@@ -5263,7 +5497,7 @@ ep2_wedding_ewan.0053 = {
 			}
 		}
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			vengeful = major_stress_impact_loss
 			wrathful = miniscule_stress_impact_loss
 			forgiving = medium_stress_impact_gain
@@ -5293,7 +5527,7 @@ ep2_wedding_ewan.0053 = {
 			}
 		}
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			forgiving = minor_stress_impact_loss
 			wrathful = minor_stress_impact_gain
 			vengeful = medium_stress_impact_gain
@@ -5308,6 +5542,7 @@ ep2_wedding_ewan.0053 = {
 	}
 }
 
+
 ##################################################
 # To My Beloved GetRelation
 # by Ewan Cowhig Croft
@@ -5315,7 +5550,9 @@ ep2_wedding_ewan.0053 = {
 ##################################################
 
 # Find an old coot to chatter on.
-scripted_trigger ep2_wedding_ewan_0061_suitable_doddering_relative_trigger = {
+scripted_trigger
+ ep2_wedding_ewan_0061_suitable_doddering_relative_trigger = {
+	is_ai = yes
 	# Right, make sure that they're old enough for a good ramble.
 	age >= 60
 	# Must be sufficiently older than our target also.
@@ -5338,7 +5575,7 @@ scripted_trigger ep2_wedding_ewan_0061_suitable_doddering_relative_trigger = {
 		has_trait = gregarious
 		has_trait = ambitious
 		has_trait = diplomat
-		has_trait = poet
+		has_trait = lifestyle_poet
 		## You love giving terrible speeches.
 		has_trait = sadistic
 		## It seemed like a good idea at the time.
@@ -5362,8 +5599,10 @@ scripted_trigger ep2_wedding_ewan_0061_suitable_doddering_relative_trigger = {
 	}
 }
 
+
 # Talk scope:oldling down without hurting HerHis feelings.
-scripted_effect ep2_wedding_ewan_0061_diplomatically_stop_speech_effect = {
+scripted_effect
+ ep2_wedding_ewan_0061_diplomatically_stop_speech_effect = {
 	# Hook + prestige if we can.
 	if = {
 		limit = {
@@ -5382,8 +5621,10 @@ scripted_effect ep2_wedding_ewan_0061_diplomatically_stop_speech_effect = {
 	else = { add_prestige = medium_prestige_gain }
 }
 
+
 # How much does root prod scope:oldling into continuing, at the cost of scope:relative's mental health?
-scripted_effect ep2_wedding_ewan_0061_humiliation_rewards_effect = {
+scripted_effect
+ ep2_wedding_ewan_0061_humiliation_rewards_effect = {
 	# If this is the player, we give stress to scope:relative.
 	## The AI restriction is to stop scope:relative from being harassed into alcoholism/death if they accidentally invite too many dicks to their wedding.
 	if = {
@@ -5399,10 +5640,14 @@ scripted_effect ep2_wedding_ewan_0061_humiliation_rewards_effect = {
 	}
 }
 
+
 #	Embarrassing older relation speech.
 ep2_wedding_ewan.0061 = {
+
 	type = activity_event
+
 	title = ep2_wedding_ewan.0061.t
+
 	desc = {
 		desc = ep2_wedding_ewan.0061.desc.intro
 		random_valid = {
@@ -5451,7 +5696,7 @@ ep2_wedding_ewan.0061 = {
 			# Poet
 			triggered_desc = {
 				trigger = {
-					scope:oldling = { has_trait = poet }
+					scope:oldling = { has_trait = lifestyle_poet }
 				}
 				desc = ep2_wedding_ewan.0061.desc.poet
 			}
@@ -5499,21 +5744,27 @@ ep2_wedding_ewan.0061 = {
 		}
 		desc = ep2_wedding_ewan.0061.desc.outro
 	}
+
 	theme = feast_activity
+
 	left_portrait = {
 		character = scope:oldling
 		animation = toast_goblet
 	}
+
 	center_portrait = {
 		character = root
 		animation = worry
 	}
+
 	right_portrait = {
 		character = scope:relative
 		animation = fear
 	}
 
+
 	cooldown = { years = 1 }
+
 
 	trigger = {
 		NOR = {
@@ -5522,6 +5773,7 @@ ep2_wedding_ewan.0061 = {
 		}
 		# Either special guest must have a relative who matches the criteria.
 		scope:activity = {
+			NOT = { exists = var:had_event_ewan_0061 }
 			any_attending_character = {
 				OR = {
 					ep2_wedding_ewan_0061_suitable_doddering_relative_trigger = { TARGET = scope:activity.special_guest:spouse_1 }
@@ -5531,11 +5783,16 @@ ep2_wedding_ewan.0061 = {
 		}
 	}
 
+
 	immediate = {
 		# Save some scopes for loc and general sanity.
 		scope:activity = {
 			special_guest:spouse_1 = { save_scope_as = spouse_1 }
 			special_guest:spouse_2 = { save_scope_as = spouse_2 }
+			set_variable = {
+				name = had_event_ewan_0061
+				years = 5
+			}
 		}
 		# Alright, let's pick a doddering old relative!
 		scope:activity = {
@@ -5575,6 +5832,7 @@ ep2_wedding_ewan.0061 = {
 		}
 	}
 
+
 	# Diplomacy: gently interrupt them.
 	option = {
 		name = ep2_wedding_ewan.0061.a
@@ -5590,7 +5848,7 @@ ep2_wedding_ewan.0061 = {
 			opinion = 40
 		}
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			compassionate = minor_stress_impact_loss
 			callous = miniscule_stress_impact_gain
 			sadistic = miniscule_stress_impact_gain
@@ -5603,6 +5861,7 @@ ep2_wedding_ewan.0061 = {
 			}
 		}
 	}
+
 	
 	# Politely clap to stop them.
 	option = {
@@ -5652,7 +5911,7 @@ ep2_wedding_ewan.0061 = {
 			opinion = 40
 		}
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			compassionate = minor_stress_impact_loss
 			callous = miniscule_stress_impact_gain
 			sadistic = miniscule_stress_impact_gain
@@ -5665,6 +5924,7 @@ ep2_wedding_ewan.0061 = {
 			}
 		}
 	}
+
 	
 	# Grin and suffer through it.
 	option = {
@@ -5688,7 +5948,7 @@ ep2_wedding_ewan.0061 = {
 			}
 		}
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			compassionate = minor_stress_impact_loss
 			lazy = minor_stress_impact_loss
 			patient = minor_stress_impact_loss
@@ -5702,12 +5962,17 @@ ep2_wedding_ewan.0061 = {
 			}
 		}
 	}
+
 	
 	# Mischief: cheer and whoop for more.
 	option = {
+
 		name = ep2_wedding_ewan.0061.d
+
 		trigger = { has_activity_intent = banquet_mischief_intent }
-		custom_tooltip = available_because_intent_tt
+
+		reason = activity_intent
+
 
 		# Same as the .e rolls, but we remove the minor result and just roll between success & crit success.
 		duel = {
@@ -5754,6 +6019,7 @@ ep2_wedding_ewan.0061 = {
 				}
 			}
 		}
+
 		# Plus scope:oldling appreciates the cheering.
 		reverse_add_opinion = {
 			target = scope:oldling
@@ -5761,14 +6027,24 @@ ep2_wedding_ewan.0061 = {
 			opinion = 40
 		}
 
+
 		# We give base stress loss for this'un too.
-		stress_impact = {
+		stress_and_fulfillment_impact = {
+
 			base = medium_stress_impact_loss # THE MOD
+
+
 			deceitful = miniscule_stress_impact_loss
+
 			callous = miniscule_stress_impact_loss
+
 			sadistic = miniscule_stress_impact_loss
+
 			compassionate = miniscule_stress_impact_gain
-		}
+
+		
+}
+
 		ai_chance = {
 			base = 1
 			ai_value_modifier = {
@@ -5776,14 +6052,20 @@ ep2_wedding_ewan.0061 = {
 				ai_compassion = -0.5
 			}
 		}
-	}
+
+	
+}
+
 
 	# Prod them to continue.
 	option = {
+
 		name = ep2_wedding_ewan.0061.e
+
 		trigger = {
 			NOT = { has_activity_intent = banquet_mischief_intent }
 		}
+
 
 		# Commence the haranguing.
 		duel = {
@@ -5850,6 +6132,7 @@ ep2_wedding_ewan.0061 = {
 				}
 			}
 		}
+
 		# Plus scope:oldling appreciates the prompts.
 		reverse_add_opinion = {
 			target = scope:oldling
@@ -5857,13 +6140,23 @@ ep2_wedding_ewan.0061 = {
 			opinion = 10
 		}
 
-		stress_impact = {
+
+		stress_and_fulfillment_impact = {
+
 			base = minor_stress_loss # THE MOD
+
+
 			deceitful = minor_stress_impact_loss
+
 			callous = minor_stress_impact_loss
+
 			sadistic = minor_stress_impact_loss
+
 			compassionate = miniscule_stress_impact_gain
-		}
+
+		
+}
+
 		ai_chance = {
 			base = 1
 			ai_value_modifier = {
@@ -5871,18 +6164,30 @@ ep2_wedding_ewan.0061 = {
 				ai_compassion = -0.5
 			}
 		}
-	}
+
+	
+}
+
 
 	# Stop paying attention.
 	option = {
+
 		name = ep2_wedding_ewan.0061.f
 
+
 		# Effect is stress loss.
-		stress_impact = {
+		stress_and_fulfillment_impact = {
+
 			base = minor_stress_loss # THE MOD
+
+
 			lazy = medium_stress_impact_loss
+
 			diligent = miniscule_stress_impact_gain
-		}
+
+		
+}
+
 		ai_chance = {
 			base = 1
 			ai_value_modifier = {
@@ -5890,8 +6195,13 @@ ep2_wedding_ewan.0061 = {
 				ai_sociability = -0.5
 			}
 		}
-	}
+
+	
 }
+
+
+}
+
 
 ##################################################
 # Oath in Moment
@@ -5918,7 +6228,7 @@ ep2_wedding_ewan.0071 = {
 		# DLC check.
 		has_ep2_dlc_trigger = yes
 		# Vassals only please.
-		is_independent_ruler = no
+		top_liege != this
 		# Decent prestige level, as you can't be a nobody.
 		prestige_level >= medium_prestige_level
 		# Dynastic cooldowns.
@@ -6012,17 +6322,21 @@ ep2_wedding_ewan.0071 = {
 			# AI get one cooldown...
 			if = {
 				limit = { is_ai = yes }
-				set_variable = {
-					name = ep2_wedding_ewan_0071_ai_cooldown
-					value = yes
-					years = 100
+				dynasty = {
+					set_variable = {
+						name = ep2_wedding_ewan_0071_ai_cooldown
+						value = yes
+						years = 100
+					}
 				}
 			}
 			# ... and the player gets another, so that the AI doesn't block them.
-			set_variable = {
-				name = ep2_wedding_ewan_0071_player_cooldown
-				value = yes
-				years = 100
+			dynasty = {
+				set_variable = {
+					name = ep2_wedding_ewan_0071_player_cooldown
+					value = yes
+					years = 100
+				}
 			}
 		}
 	}
@@ -6046,7 +6360,7 @@ ep2_wedding_ewan.0071 = {
 			}
 		}
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			humble = major_stress_impact_loss
 			arbitrary = minor_stress_impact_gain
 			arrogant = minor_stress_impact_gain
@@ -6089,7 +6403,7 @@ ep2_wedding_ewan.0071 = {
 			opinion = -15
 		}
 
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			arbitrary = minor_stress_impact_loss
 			arrogant = minor_stress_impact_loss
 			humble = medium_stress_impact_gain
@@ -6103,3 +6417,4 @@ ep2_wedding_ewan.0071 = {
 		}
 	}
 }
+

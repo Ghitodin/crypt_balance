@@ -2,6 +2,18 @@
 	icon = piety_positive
 	monthly_piety = 1
 	zealot_opinion = 5 # THE MOD
+
+}
+
+holy_site_elevated_modifier = {
+	icon = piety_positive
+	zealot_same_faith_opinion = 30
+}
+
+holy_site_demoted_modifier = {
+	icon = piety_negative
+	zealot_same_faith_opinion = -20
+	parochial_same_faith_opinion = -20
 }
 
 sin_owner_modifier = {
@@ -22,7 +34,7 @@ excommunication_recently_lifted = {
 }
 
 vow_of_poverty_modifier = {
-	icon = piety_positive
+	icon = piety_mixed
 	monthly_piety = 2
 	clergy_opinion = 5
 	zealot_opinion = 5
@@ -108,6 +120,16 @@ bush_spirit_blessing = {
 	prowess = 4
 }
 
+preserved_wilderness_modifier = {
+	icon = outdoors_positive
+	travel_danger = -10
+}
+
+preserved_wilderness_travel_modifier = {
+	icon = travel_positive
+	travel_speed_mult = 0.1
+}
+
 
 bhakti_hinduism_ganga = { # God of purity, attonement, moksha
 	icon = health_positive
@@ -128,7 +150,7 @@ bhakti_hinduism_kali = { # Goddess of destruction of evil forces
 }
 
 bhakti_hinduism_kubera = { # Deformed god of wealth, material riches, justice
-	icon = stewardship_positive
+	icon = stewardship_mixed
 	stewardship = 2
 	domain_tax_mult = 0.05
 	attraction_opinion = -10
@@ -227,6 +249,24 @@ bhakti_germanic_generic_freyr = {	# A god of peace, the harvest, and benign rule
 	monthly_county_control_growth_add = 0.1
 }
 
+bhakti_buddhism_amitabha = { # Buddha of Infinite Light, lord of the Pure Land
+	icon = piety_positive
+	monthly_piety_gain_mult = 0.2
+	stress_gain_mult = -0.25
+}
+
+bhakti_buddhism_avalokiteshvara = { # Bodhisattva of boundless compassion
+	icon = diplomacy_positive
+	diplomacy = 2
+	same_faith_opinion = 5
+}
+
+bhakti_buddhism_bhaisajyaguru = { # The Medicine Buddha, healer of body and mind
+	icon = health_positive
+	health = 0.25
+	fertility = 0.1
+}
+
 
 false_convert_modifier = {	# Some members of the populace here are probably false converts.
 	icon = county_modifier_opinion_negative
@@ -246,8 +286,14 @@ meditating_in_seclusion_modifier = {
 	intrigue = -1
 }
 
-astrology_great_battle = {
+
+visit_local_shrine_modifier = {
 	icon = magic_positive
+	monthly_piety = 1
+}
+
+astrology_great_battle = {
+	icon = magic_mixed
 	martial = 2
 	learning = -2
 	monthly_martial_lifestyle_xp_gain_mult = 0.25
@@ -256,7 +302,7 @@ astrology_great_battle = {
 }
 
 astrology_new_friends = {
-	icon = magic_positive
+	icon = magic_mixed
 	diplomacy = 2
 	martial = -2
 	monthly_diplomacy_lifestyle_xp_gain_mult = 0.25
@@ -265,7 +311,7 @@ astrology_new_friends = {
 }
 
 astrology_hard_work = {
-	icon = magic_positive
+	icon = magic_mixed
 	stewardship = 2
 	intrigue = -2
 	monthly_stewardship_lifestyle_xp_gain_mult = 0.25
@@ -274,7 +320,7 @@ astrology_hard_work = {
 }
 
 astrology_betrayal = {
-	icon = magic_positive
+	icon = magic_mixed
 	intrigue = 2
 	diplomacy = -2
 	monthly_intrigue_lifestyle_xp_gain_mult = 0.25
@@ -283,7 +329,7 @@ astrology_betrayal = {
 }
 
 astrology_new_beginnings = {
-	icon = magic_positive
+	icon = magic_mixed
 	learning = 2
 	stewardship = -2
 	monthly_learning_lifestyle_xp_gain_mult = 0.25
@@ -303,11 +349,16 @@ literally_debated_modifier = {
 
 feud_with_the_church_modifier = {
 	icon = learning_positive
-	faith_creation_piety_cost_mult = -0.25
+	rite_creation_piety_cost_mult = -0.15
 }
 
 sun_trial_suspicious_modifier = {
 	icon = stress_negative
 	stress_gain_mult = 0.05
 	monthly_piety_gain_mult = -0.05
+}
+
+demand_church_succession_fertility_modifier = {
+	icon = fertility_positive
+	fertility = 0.15
 }

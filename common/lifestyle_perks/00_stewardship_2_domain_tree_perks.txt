@@ -1,4 +1,4 @@
-﻿
+
 ### STEWARDSHIP - DOMAIN PERKS
 
 
@@ -35,7 +35,7 @@ tax_man_perk = {
 	name = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { is_landless_adventurer = yes }
+				trigger = { has_government = landless_adventurer_government }
 				desc = tax_man_perk_adventurer_name
 			}
 			triggered_desc = {
@@ -56,6 +56,11 @@ tax_man_perk = {
 		domicile_build_gold_cost = -0.1
 	}
 	
+	government_character_modifier = {
+		flag = government_is_nomadic
+		domicile_monthly_herd_add = 3
+	}
+	
 	effect = {
 		if = {
 			limit = {
@@ -69,24 +74,31 @@ tax_man_perk = {
 }
 
 
+
 # Defensive Measures
 defensive_measures_perk = {
 	lifestyle = stewardship_lifestyle
+
 	tree = domain
+
 	position = { 0 1 }
+
 	icon = node_stewardship
+
 	
 	parent = tax_man_perk
+
 
 	name = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { is_landless_adventurer = yes }
+				trigger = { has_government = landless_adventurer_government }
 				desc = defensive_measures_perk_adventurer_name
 			}
 			desc = defensive_measures_perk_name
 		}
 	}
+
 	
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
@@ -94,12 +106,14 @@ defensive_measures_perk = {
 		garrison_size = 0.1 # THE MOD
 		additional_fort_level = 1
 	}
+
 	
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
 		domicile_travel_speed = 0.25
 		character_travel_speed_mult = 0.25
 	}
+
 
 	effect = {
 		if = {
@@ -109,33 +123,48 @@ defensive_measures_perk = {
 			custom_description_no_bullet = { text = unlocks_truce_purchasing_interaction_desc }
 		}
 	}
+
+
 }
+
 
 
 # Efficient Muster Rolls
 organized_muster_rolls_perk = {
 	lifestyle = stewardship_lifestyle
+
 	tree = domain
+
 	position = { 0 2 }
+
 	icon = node_stewardship
+
 	
 	parent = defensive_measures_perk
+
 
 	name = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { is_landless_adventurer = yes }
+				trigger = { has_government = landless_adventurer_government }
 				desc = organized_muster_rolls_perk_adventurer_name
 			}
 			desc = organized_muster_rolls_perk_name
 		}
 	}
+
 	
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
 		invert_check = yes
 		levy_reinforcement_rate = 0.2 # THE MOD
 	}
+
+	government_character_modifier = {
+		flag = government_is_nomadic
+		herd_conversion = 0.02
+	}
+
 
 	effect = {
 		if = {
@@ -147,7 +176,10 @@ organized_muster_rolls_perk = {
 			}
 		}
 	}
+
+
 }
+
 
 
 # Cutting Corners
@@ -160,8 +192,12 @@ cutting_corners_perk = {
 	name = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { is_landless_adventurer = yes }
+				trigger = { has_government = landless_adventurer_government }
 				desc = cutting_corners_perk_adventurer_name
+			}
+			triggered_desc = {
+				trigger = { government_has_flag = government_is_nomadic }
+				desc = cutting_corners_perk_nomadic_name
 			}
 			desc = cutting_corners_perk_name
 		}
@@ -201,6 +237,14 @@ cutting_corners_perk = {
 		build_prestige_cost = -0.05
 		domicile_build_gold_cost = -0.05
 	}
+	government_character_modifier = {
+		flag = government_is_nomadic
+		domicile_build_gold_cost = -0.1
+	}
+	government_character_modifier = {
+		flag = government_is_theocracy
+		church_holding_build_gold_cost = -0.1
+	}
 
 	effect = {
 		if = {
@@ -215,24 +259,31 @@ cutting_corners_perk = {
 }
 
 
+
 # Professional Workforce
 professional_workforce_perk = {
 	lifestyle = stewardship_lifestyle
+
 	tree = domain
+
 	position = { 2 1 }
+
 	icon = node_stewardship
+
 	
 	parent = cutting_corners_perk
+
 
 	name = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { is_landless_adventurer = yes }
+				trigger = { has_government = landless_adventurer_government }
 				desc = professional_workforce_perk_adventurer_name
 			}
 			desc = professional_workforce_perk_name
 		}
 	}
+
 	
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
@@ -240,6 +291,18 @@ professional_workforce_perk = {
 		build_speed = -0.15 # THE MOD
 		holding_build_speed = -0.15 # THE MOD
 	}
+
+	
+	government_character_modifier = {
+		flag = government_uses_domicile_but_not_adventurer
+		domicile_build_speed = -0.3
+	}
+
+	government_character_modifier = {
+		flag = government_is_theocracy
+		church_holding_build_speed = -0.1
+	}
+
 
 	effect = {
 		if = {
@@ -251,33 +314,48 @@ professional_workforce_perk = {
 			}
 		}
 	}
+
+
 }
+
 
 
 # Centralization
 centralization_perk = {
 	lifestyle = stewardship_lifestyle
+
 	tree = domain
+
 	position = { 2 2 }
+
 	icon = node_stewardship
+
 	
 	parent = professional_workforce_perk
+
 
 	name = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { is_landless_adventurer = yes }
+				trigger = { has_government = landless_adventurer_government }
 				desc = centralization_perk_adventurer_name
 			}
 			desc = centralization_perk_name
 		}
 	}
+
 	
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
 		invert_check = yes
 		character_capital_county_monthly_development_growth_add = 0.2 # THE MOD
 	}
+
+	government_character_modifier = {
+		flag = government_is_nomadic
+		herd_gain_mult = 0.15
+	}
+
 
 	effect = {
 		if = {
@@ -289,34 +367,45 @@ centralization_perk = {
 			}
 		}
 	}
+
+
 }
+
 
 
 # Popular Figurehead
 popular_figurehead_perk = {
 	lifestyle = stewardship_lifestyle
+
 	tree = domain
+
 	position = { 1 3 }
+
 	icon = node_stewardship
+
 	
 	parent = organized_muster_rolls_perk
+
 	parent = centralization_perk
+
 
 	name = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { is_landless_adventurer = yes }
+				trigger = { has_government = landless_adventurer_government }
 				desc = popular_figurehead_perk_adventurer_name
 			}
 			desc = popular_figurehead_perk_name
 		}
 	}
+
 	
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
 		invert_check = yes
 		county_opinion_add = 20 # THE MOD
 	}
+
 
 	effect = {
 		if = {
@@ -328,41 +417,79 @@ popular_figurehead_perk = {
 			}
 		}
 	}
+
+
 }
+
 
 
 # Divided Attention
 divided_attention_perk = {
 	lifestyle = stewardship_lifestyle
+
 	tree = domain
+
 	position = { 1 4 }
+
 	icon = node_stewardship
+
 	
 	parent = popular_figurehead_perk
+
 
 	name = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { is_landless_adventurer = yes }
+				trigger = { has_government = landless_adventurer_government }
 				desc = divided_attention_perk_adventurer_name
 			}
 			desc = divided_attention_perk_name
 		}
 	}
+
 	
 	government_character_modifier = {
 		flag = government_is_administrative
 		domicile_build_speed = -0.1
 	}
+
 	government_character_modifier = {
-		flag = government_is_landless_adventurer
-		invert_check = yes
-		domain_limit = 1 # THE MOD
+		flag = government_uses_domain_limit #True for governments that do not use domain_limit_max or that do not hold _any_ land.
+		domain_limit = 1
 	}
+
+	government_character_modifier = {
+		flag = government_is_nomadic
+		domain_limit_min = 1
+		domain_limit_max = 1
+	}
+
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
 		domicile_monthly_gold_add = 0.5
 	}
+
+	government_character_modifier = {
+		flag = government_is_mandala
+		domain_limit_max = 1
+	}
+
+	government_character_modifier = {
+		flag = government_is_japan_feudal
+		domain_limit_max = 1
+	}
+
+	government_character_modifier = {
+		flag = government_is_japan_administrative
+		domain_limit_max = 1
+	}
+
+
+	government_character_modifier = {
+		flag = government_is_wanua
+		domain_limit_max = 1
+	}
+
 
 	effect = {
 		if = {
@@ -374,7 +501,10 @@ divided_attention_perk = {
 			}
 		}
 	}
+
+
 }
+
 
 
 # Architect
@@ -391,3 +521,4 @@ architect_perk = {
 		add_trait_force_tooltip = architect
 	}
 }
+

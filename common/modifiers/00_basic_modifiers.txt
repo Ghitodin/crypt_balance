@@ -87,7 +87,7 @@ count_modifier = {
 }
 
 duke_modifier = {
-	domain_limit = 4 # THE MOD
+	domain_limit = 3 # THE MOD
  # THE MOD
  # THE MOD
  # THE MOD

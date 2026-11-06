@@ -1,4 +1,4 @@
-confederate_partition_succession_law = {
+﻿confederate_partition_succession_law = {
 	law_group_type = succession_order_laws
 	index = 0
 
@@ -80,6 +80,7 @@ confederate_partition_succession_law = {
 		}
 	}
 }
+
 
 
 partition_succession_law = {
@@ -177,6 +178,7 @@ partition_succession_law = {
 }
 
 
+
 high_partition_succession_law = {
 	law_group_type = succession_order_laws
 	index = 2
@@ -247,6 +249,7 @@ high_partition_succession_law = {
 		}
 	}
 }
+
 
 
 single_heir_succession_law = {
@@ -351,6 +354,7 @@ single_heir_succession_law = {
 }
 
 
+
 single_heir_succession_kurultai_law = {
 	law_group_type = succession_order_laws
 	index = 4
@@ -395,6 +399,7 @@ single_heir_succession_kurultai_law = {
 		government_has_flag = government_is_nomadic
 	}
 }
+
 
 
 single_heir_succession_law_youngest = {
@@ -479,6 +484,7 @@ single_heir_succession_law_youngest = {
 		}
 	}
 }
+
 
 
 single_heir_dynasty_house = { # LAST CALL
@@ -569,6 +575,7 @@ single_heir_dynasty_house = { # LAST CALL
 }
 
 
+
 acclamation_succession_law = {
 	law_group_type = succession_order_laws
 	index = 7
@@ -619,6 +626,7 @@ acclamation_succession_law = {
 		}
 	}
 }
+
 
 
 appointment_succession_law = {
@@ -694,6 +702,7 @@ appointment_succession_law = {
 }
 
 
+
 #The prowess succession of LAAMPs is determined in code
 landless_adventurer_succession_law = {
 	law_group_type = succession_order_laws
@@ -731,6 +740,7 @@ landless_adventurer_succession_law = {
 		government_has_flag = government_is_landless_adventurer
 	}
 }
+
 
 
 
@@ -775,6 +785,7 @@ theocratic_elective_succession_law = {
 }
 
 
+
 clerical_appointment_law = {
 	law_group_type = succession_order_laws
 	index = 11
@@ -814,6 +825,7 @@ clerical_appointment_law = {
 }
 
 
+
 bishop_theocratic_succession_law = {
 	law_group_type = succession_order_laws
 	index = 12
@@ -837,6 +849,7 @@ bishop_theocratic_succession_law = {
 		can_have_bishop_theocratic_succession_law_trigger = yes
 	}
 }
+
 
 
 holy_order_succession_law = {
@@ -868,6 +881,7 @@ holy_order_succession_law = {
 	}
 }
 
+
 cultural_holy_order_succession_law = {
 	law_group_type = succession_order_laws
 	index = 14
@@ -894,6 +908,7 @@ cultural_holy_order_succession_law = {
 		can_have_cultural_holy_order_succession_law_trigger = yes
 	}
 }
+
 
 monastic_holy_order_succession_law = {
 	law_group_type = succession_order_laws
@@ -927,6 +942,7 @@ monastic_holy_order_succession_law = {
 	}
 }
 
+
 female_monastic_holy_order_succession_law = {
 	law_group_type = succession_order_laws
 	index = 16
@@ -953,6 +969,7 @@ female_monastic_holy_order_succession_law = {
 		can_have_female_monastic_holy_order_succession_law_trigger = yes
 	}
 }
+
 
 male_monastic_holy_order_succession_law = {
 	law_group_type = succession_order_laws
@@ -982,6 +999,7 @@ male_monastic_holy_order_succession_law = {
 }
 
 
+
 mercenary_company_succession_law = {
 	law_group_type = succession_order_laws
 	index = 18
@@ -1004,6 +1022,7 @@ mercenary_company_succession_law = {
 		can_have_mercenary_succession_law_trigger = yes
 	}
 }
+
 
 
 city_succession_law = {
@@ -1030,9 +1049,12 @@ city_succession_law = {
 }
 
 
+
 clan_antagonistic_partition_succession_law = {
 	law_group_type = succession_order_laws
+
 	index = 20
+
 
 	can_keep = {
 		government_has_flag = government_is_clan
@@ -1040,12 +1062,14 @@ clan_antagonistic_partition_succession_law = {
 			has_house_unity_stage = antagonistic
 		}
 	}
+
 	can_pass = {
 		government_has_flag = government_is_clan
 		house ?= {
 			has_house_unity_stage = antagonistic
 		}
 	}
+
 	can_have = {
 		government_has_flag = government_is_clan
 		house ?= {
@@ -1053,14 +1077,17 @@ clan_antagonistic_partition_succession_law = {
 		}
 	}
 
+
 	should_start_with = {
 		government_has_flag = government_is_clan
 		house ?= { has_house_unity_stage = antagonistic }
 	}
 
+
 	potential = {
 		government_has_flag = government_is_clan
 	}
+
 
 	requires_approve = {
 		NOT = {
@@ -1068,15 +1095,20 @@ clan_antagonistic_partition_succession_law = {
 		}
 	}
 
-	succession = {
-		order_of_succession = inheritance
-		traversal_order = children
-		rank = oldest
-		title_division = partition
-	}
+ succession = { # THE MOD: equal partition and compulsory new titles at every unity stage
+  order_of_succession = inheritance
+  traversal_order = children
+  rank = oldest
+  title_division = partition
+  create_primary_tier_titles = yes
+ }
+
+
 
 	flag = same_house_vassals_gain_claim_on_primary_title
+
 	flag = house_unity_stage_antagonistic
+
 
 	modifier = {
 		dynasty_house_opinion = -10
@@ -1087,13 +1119,18 @@ clan_antagonistic_partition_succession_law = {
 		eligible_child_except_player_heir_opinion = 5
 	}
 
+
 	widget_name = "widget_clan_law"
+
 }
+
 
 
 clan_competitive_partition_succession_law = {
 	law_group_type = succession_order_laws
+
 	index = 21
+
 
 	can_keep = {
 		government_has_flag = government_is_clan
@@ -1101,26 +1138,31 @@ clan_competitive_partition_succession_law = {
 			has_house_unity_stage = competitive
 		}
 	}
+
 	can_pass = {
 		government_has_flag = government_is_clan
 		house ?= {
 			has_house_unity_stage = competitive
 		}
 	}
+
 	can_have = {
 		government_has_flag = government_is_clan
 		house ?= {
 			has_house_unity_stage = competitive
 		}
 	}
+
 	should_start_with = {
 		government_has_flag = government_is_clan
 		house ?= { has_house_unity_stage = competitive }
 	}
 
+
 	potential = {
 		government_has_flag = government_is_clan
 	}
+
 
 	requires_approve = {
 		NOT = {
@@ -1128,15 +1170,20 @@ clan_competitive_partition_succession_law = {
 		}
 	}
 
-	succession = {
-		order_of_succession = inheritance
-		traversal_order = children
-		rank = oldest
-		title_division = partition
-	}
+ succession = { # THE MOD: equal partition and compulsory new titles at every unity stage
+  order_of_succession = inheritance
+  traversal_order = children
+  rank = oldest
+  title_division = partition
+  create_primary_tier_titles = yes
+ }
+
+
 
 	flag = same_house_vassals_gain_claim_on_primary_title
+
 	flag = house_unity_stage_competitive
+
 
 	modifier = {
 		glory_hound_opinion = 10
@@ -1146,13 +1193,18 @@ clan_competitive_partition_succession_law = {
 		eligible_child_except_player_heir_opinion = 5
 	}
 
+
 	widget_name = "widget_clan_law"
+
 }
+
 
 
 clan_impassive_partition_succession_law = {
 	law_group_type = succession_order_laws
+
 	index = 22
+
 
 	can_keep = {
 		government_has_flag = government_is_clan
@@ -1164,18 +1216,21 @@ clan_impassive_partition_succession_law = {
 			}
 		}
 	}
+
 	can_pass = {
 		government_has_flag = government_is_clan
 		house ?= {
 			has_house_unity_stage = impassive
 		}
 	}
+
 	can_have = {
 		government_has_flag = government_is_clan
 		house ?= {
 			has_house_unity_stage = impassive
 		}
 	}
+
 	should_start_with = {
 		government_has_flag = government_is_clan
 		house ?= {
@@ -1187,9 +1242,11 @@ clan_impassive_partition_succession_law = {
 		}
 	}
 
+
 	potential = {
 		government_has_flag = government_is_clan
 	}
+
 
 	requires_approve = {
 		NOT = {
@@ -1197,28 +1254,36 @@ clan_impassive_partition_succession_law = {
 		}
 	}
 
+
 	flag = house_unity_stage_impassive
 
-	succession = {
-		order_of_succession = inheritance
-		traversal_order = children
-		rank = oldest
-		title_division = partition
-		primary_heir_minimum_share = 0.25
-	}
+ succession = { # THE MOD: equal partition and compulsory new titles at every unity stage
+  order_of_succession = inheritance
+  traversal_order = children
+  rank = oldest
+  title_division = partition
+  create_primary_tier_titles = yes
+ }
+
+
 	modifier = {
 		glory_hound_opinion = 5
 		parochial_opinion = 5
 		player_heir_opinion = 15
 	}
 
+
 	widget_name = "widget_clan_law"
+
 }
+
 
 
 clan_friendly_partition_succession_law = {
 	law_group_type = succession_order_laws
+
 	index = 23
+
 
 	can_keep = {
 		government_has_flag = government_is_clan
@@ -1226,26 +1291,31 @@ clan_friendly_partition_succession_law = {
 			has_house_unity_stage = friendly
 		}
 	}
+
 	can_pass = {
 		government_has_flag = government_is_clan
 		house ?= {
 			has_house_unity_stage = friendly
 		}
 	}
+
 	can_have = {
 		government_has_flag = government_is_clan
 		house ?= {
 			has_house_unity_stage = friendly
 		}
 	}
+
 	should_start_with = {
 		government_has_flag = government_is_clan
 		house ?= { has_house_unity_stage = friendly }
 	}
 
+
 	potential = {
 		government_has_flag = government_is_clan
 	}
+
 
 	requires_approve = {
 		NOT = {
@@ -1253,28 +1323,36 @@ clan_friendly_partition_succession_law = {
 		}
 	}
 
+
 	flag = house_unity_stage_friendly
 
-	succession = {
-		order_of_succession = inheritance
-		traversal_order = children
-		rank = oldest
-		title_division = partition
-		primary_heir_minimum_share = 0.5
-	}
+ succession = { # THE MOD: equal partition and compulsory new titles at every unity stage
+  order_of_succession = inheritance
+  traversal_order = children
+  rank = oldest
+  title_division = partition
+  create_primary_tier_titles = yes
+ }
+
+
 	modifier = {
 		parochial_opinion = 10
 		courtly_opinion = 5
 		player_heir_opinion = 25
 	}
 
+
 	widget_name = "widget_clan_law"
+
 }
+
 
 
 clan_harmonious_partition_succession_law = {
 	law_group_type = succession_order_laws
+
 	index = 24
+
 
 	can_keep = {
 		government_has_flag = government_is_clan
@@ -1282,27 +1360,32 @@ clan_harmonious_partition_succession_law = {
 			has_house_unity_stage = harmonious
 		}
 	}
+
 	can_pass = {
 		government_has_flag = government_is_clan
 		house ?= {
 			has_house_unity_stage = harmonious
 		}
 	}
+
 	can_have = {
 		government_has_flag = government_is_clan
 		house ?= {
 			has_house_unity_stage = harmonious
 		}
 	}
+
 	should_start_with = {
 		government_has_flag = government_is_clan
 		house ?= {
 			has_house_unity_stage = harmonious
 		}
 	}
+
 	potential = {
 		government_has_flag = government_is_clan
 	}
+
 
 	requires_approve = {
 		NOT = {
@@ -1310,23 +1393,29 @@ clan_harmonious_partition_succession_law = {
 		}
 	}
 
+
 	flag = house_unity_stage_harmonious
 
-	succession = {
-		order_of_succession = inheritance
-		traversal_order = children
-		rank = oldest
-		title_division = partition
-		primary_heir_minimum_share = 0.75
-	}
+ succession = { # THE MOD: equal partition and compulsory new titles at every unity stage
+  order_of_succession = inheritance
+  traversal_order = children
+  rank = oldest
+  title_division = partition
+  create_primary_tier_titles = yes
+ }
+
+
 	modifier = {
 		parochial_opinion = 15
 		courtly_opinion = 10
 		player_heir_opinion = 40
 	}
 
+
 	widget_name = "widget_clan_law"
+
 }
+
 
 
 herder_succession_law = {
@@ -1354,6 +1443,7 @@ herder_succession_law = {
 		can_have_herder_succession_law_trigger = yes
 	}
 }
+
 
 
 celestial_appointment_succession_law = {
@@ -1430,6 +1520,7 @@ celestial_appointment_succession_law = {
 		is_independent_ruler = no
 	}
 }
+
 
 
 celestial_military_appointment_succession_law = {
@@ -1509,6 +1600,7 @@ celestial_military_appointment_succession_law = {
 }
 
 
+
 japanese_regency_succession_law = {
 	law_group_type = succession_order_laws
 	index = 28
@@ -1554,6 +1646,7 @@ japanese_regency_succession_law = {
 		government_has_flag = government_is_japan_administrative
 	}
 }
+
 
 
 japanese_appointment_succession_law = {
@@ -1624,6 +1717,7 @@ japanese_appointment_succession_law = {
 		is_independent_ruler = no
 	}
 }
+
 
 
 japanese_military_appointment_succession_law = {
@@ -1704,6 +1798,7 @@ japanese_military_appointment_succession_law = {
 }
 
 
+
 mandala_succession_law = {
 	law_group_type = succession_order_laws
 	index = 31
@@ -1738,6 +1833,7 @@ mandala_succession_law = {
 		realm_law_is_mandala = yes
 	}
 }
+
 
 
 meritocratic_appointment_succession_law = {
@@ -1822,6 +1918,7 @@ meritocratic_appointment_succession_law = {
 }
 
 
+
 meritocratic_military_appointment_succession_law = {	
 	law_group_type = succession_order_laws
 	index = 33
@@ -1904,6 +2001,7 @@ meritocratic_military_appointment_succession_law = {
 }
 
 
+
 meritocratic_regency_succession_law = {
 	law_group_type = succession_order_laws
 	index = 34
@@ -1951,6 +2049,7 @@ meritocratic_regency_succession_law = {
 		tgp_realm_has_ceremonial_liege_trigger = yes
 	}
 }
+
 
 
 
@@ -2055,6 +2154,7 @@ male_only_law = {
 		prestige = change_succession_law_prestige_cost
 	}
 }
+
 
 
 male_preference_law = {
@@ -2178,6 +2278,7 @@ male_preference_law = {
 }
 
 
+
 equal_law = {
 	law_group_type = succession_gender_laws
 	index = 2
@@ -2285,6 +2386,7 @@ equal_law = {
 }
 
 
+
 female_preference_law = {
 	law_group_type = succession_gender_laws
 	index = 3
@@ -2385,6 +2487,7 @@ female_preference_law = {
 }
 
 
+
 female_only_law = {
 	law_group_type = succession_gender_laws
 	index = 4
@@ -2478,6 +2581,7 @@ female_only_law = {
 
 
 
+
 same_faith_only_law = {
 	law_group_type = succession_faith
 	index = 0
@@ -2498,6 +2602,7 @@ same_faith_only_law = {
 
 
 
+
 same_faith_theocratic_succession_law = {
 	law_group_type = succession_rel_head
 	index = 0
@@ -2515,6 +2620,7 @@ same_faith_theocratic_succession_law = {
 	}
 }
 
+
 same_faith_succession_law = {
 	law_group_type = succession_rel_head
 	index = 1
@@ -2530,4 +2636,5 @@ same_faith_succession_law = {
 		faith = same_faith
 	}
 }
+
 

@@ -234,6 +234,7 @@ convert_clan_to_feudalism_through_liege_decision = {
 	}
 
 	ai_potential = {
+		crypt_balance_faith_prefers_clan_trigger = no
 		prestige >= 150
 	}
 
@@ -324,6 +325,7 @@ convert_feudalism_to_clan_through_liege_decision = {
 	}
 
 	ai_potential = {
+		crypt_balance_faith_prefers_clan_trigger = yes
 		prestige >= 150
 	}
 

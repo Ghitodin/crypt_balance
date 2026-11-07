@@ -1,0 +1,47 @@
+convert_clan_realm_to_feudalism_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	decision_group_type = major
+	desc = convert_clan_realm_to_feudalism_decision_desc
+	ai_check_interval = 36
+
+	is_shown = {
+		has_government = clan_government
+		crypt_balance_faith_prefers_clan_trigger = no
+	}
+
+	effect = {
+		change_government = feudal_government
+	}
+
+	ai_potential = {
+		NOT = { has_title = title:e_mongol_empire }
+	}
+
+	ai_will_do = {
+		base = 1000
+	}
+}
+
+convert_feudal_realm_to_clan_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	decision_group_type = major
+	desc = convert_feudal_realm_to_clan_decision_desc
+	ai_check_interval = 26
+
+	is_shown = {
+		has_government = feudal_government
+		crypt_balance_faith_prefers_clan_trigger = yes
+	}
+
+	effect = {
+		change_government = clan_government
+	}
+
+	ai_will_do = {
+		base = 1000
+	}
+}

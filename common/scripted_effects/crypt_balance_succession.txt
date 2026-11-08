@@ -3,15 +3,30 @@ crypt_balance_enforce_succession_effect = {
 	if = {
 		limit = { crypt_balance_partition_government_trigger = yes is_landed = yes }
 		every_held_title = {
-			limit = { tier = tier_empire }
-			if = { limit = { has_title_law = princely_elective_succession_law } remove_title_law = princely_elective_succession_law }
+			limit = {
+				tier = tier_empire
+				can_title_have_law_general_trigger = yes
+			}
 			if = { limit = { has_title_law = saxon_elective_succession_law } remove_title_law = saxon_elective_succession_law }
 			if = { limit = { has_title_law = scandinavian_elective_succession_law } remove_title_law = scandinavian_elective_succession_law }
 			if = { limit = { has_title_law = gaelic_elective_succession_law } remove_title_law = gaelic_elective_succession_law }
 			if = { limit = { has_title_law = tribal_elective_succession_law } remove_title_law = tribal_elective_succession_law }
-			if = {
-				limit = { NOT = { has_title_law = feudal_elective_succession_law } }
-				add_title_law = feudal_elective_succession_law
+			if = { # THE MOD: the HRE retains its college of prince-electors.
+				limit = { this = title:e_hre }
+				if = {
+					limit = { has_title_law = feudal_elective_succession_law }
+					remove_title_law = feudal_elective_succession_law
+				}
+				if = {
+					limit = { NOT = { has_title_law = princely_elective_succession_law } }
+					add_title_law = princely_elective_succession_law
+				}
+			}
+			else = {
+				if = {
+					limit = { NOT = { has_title_law = feudal_elective_succession_law } }
+					add_title_law = feudal_elective_succession_law
+				}
 			}
 		}
 	}

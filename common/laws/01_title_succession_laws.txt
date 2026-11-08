@@ -4,19 +4,34 @@ feudal_elective_succession_law = {
 	index = 0
 
 	can_have = {
-		government_has_flag = government_is_feudal
-		highest_held_title_tier >= tier_duchy
-		NOR = { #Cultures have their special flavor.
-			culture = { has_cultural_parameter = witenagemot_succession_enabled }
-			culture = { has_cultural_parameter = scandinavian_elective_enabled }
-			culture = { has_cultural_parameter = tribal_elective_enabled } #FP3 addition
+		OR = {
+			government_has_flag = government_is_feudal
+			AND = { # THE MOD: mandatory imperial elections also apply to clans and tribes.
+				crypt_balance_partition_government_trigger = yes
+				highest_held_title_tier >= tier_empire
+			}
 		}
+		highest_held_title_tier >= tier_duchy
 	}
 	can_pass = {
 		can_change_title_law_trigger = yes
 	}
 	can_title_have = {
 		can_title_have_law_general_trigger = yes
+		OR = {
+			AND = { # THE MOD: ordinary imperial titles may use this law in all cultures.
+				tier = tier_empire
+				holder = { crypt_balance_partition_government_trigger = yes }
+			}
+			holder = {
+				government_has_flag = government_is_feudal
+				NOR = { # Cultures have their special flavor.
+					culture = { has_cultural_parameter = witenagemot_succession_enabled }
+					culture = { has_cultural_parameter = scandinavian_elective_enabled }
+					culture = { has_cultural_parameter = tribal_elective_enabled }
+				}
+			}
+		}
 	}
 	succession = {
 		order_of_succession = election
@@ -32,7 +47,13 @@ feudal_elective_succession_law = {
 	}
 
 # THE MOD: forced elections on ordinary imperial governments
-can_remove_from_title = { NOT = { tier = tier_empire holder = { crypt_balance_partition_government_trigger = yes } } }
+can_remove_from_title = {
+    NOT = {
+        tier = tier_empire
+        this != title:e_hre
+        holder = { crypt_balance_partition_government_trigger = yes }
+    }
+}
 }
 
 
@@ -45,6 +66,7 @@ princely_elective_succession_law = {
 		OR = {
 			government_has_flag = government_is_feudal
 			government_has_flag = government_is_clan
+			has_government = tribal_government # THE MOD
 		}
 		highest_held_title_tier >= tier_empire
 	}

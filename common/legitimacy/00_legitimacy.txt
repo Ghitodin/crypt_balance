@@ -27,12 +27,12 @@ count_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = 0.25
+			short_reign_duration_mult = 0.08 # THE MOD
 
 			monthly_dynasty_prestige = -0.03 # THE MOD
 
 
-			county_opinion_add = -10
+			county_opinion_add = -3 # THE MOD
 
 		
 }
@@ -61,7 +61,7 @@ count_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = -0.1
+			short_reign_duration_mult = -0.03 # THE MOD
 
 		
 }
@@ -76,7 +76,7 @@ count_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = -0.25
+			short_reign_duration_mult = -0.08 # THE MOD
 
 		
 }
@@ -95,9 +95,9 @@ count_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = -0.5
+			short_reign_duration_mult = -0.15 # THE MOD
 
-			county_opinion_add = 10
+			county_opinion_add = 3 # THE MOD
 
 		
 }
@@ -114,7 +114,7 @@ count_legitimacy = {
 
 		flag = reduced_swing_scales_cost
 
-		flag = reduced_title_creation_cost
+		#flag = reduced_title_creation_cost # THE MOD
 
 	
 }
@@ -126,12 +126,12 @@ count_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = -0.75
+			short_reign_duration_mult = -0.25 # THE MOD
 
 			monthly_dynasty_prestige = 0.08 # THE MOD
 
 
-			county_opinion_add = 20
+			county_opinion_add = 6 # THE MOD
 
 		
 }
@@ -148,7 +148,7 @@ count_legitimacy = {
 
 		flag = very_reduced_swing_scales_cost
 
-		flag = very_reduced_title_creation_cost
+		#flag = very_reduced_title_creation_cost # THE MOD
 
 	
 }
@@ -160,12 +160,12 @@ count_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = -1
+			short_reign_duration_mult = -0.3 # THE MOD
 
 			monthly_dynasty_prestige = 0.15 # THE MOD
 
 
-			county_opinion_add = 30
+			county_opinion_add = 10 # THE MOD
 
 		
 }
@@ -182,7 +182,7 @@ count_legitimacy = {
 
 		flag = extra_swing_scales_cost
 
-		flag = extra_reduced_title_creation_cost
+		#flag = extra_reduced_title_creation_cost # THE MOD
 
 	
 }
@@ -216,12 +216,12 @@ duke_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = 0.5
+			short_reign_duration_mult = 0.15 # THE MOD
 
 			monthly_dynasty_prestige = -0.03 # THE MOD
 
 
-			county_opinion_add = -10
+			county_opinion_add = -3 # THE MOD
 
 		
 }
@@ -252,9 +252,9 @@ duke_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = 0.1
+			short_reign_duration_mult = 0.03 # THE MOD
 
-			county_opinion_add = -5
+			county_opinion_add = -2 # THE MOD
 
 		
 }
@@ -285,7 +285,7 @@ duke_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = -0.15
+			short_reign_duration_mult = -0.05 # THE MOD
 
 		
 }
@@ -300,7 +300,7 @@ duke_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = -0.35
+			short_reign_duration_mult = -0.15 # THE MOD
 
 		
 }
@@ -321,7 +321,7 @@ duke_legitimacy = {
 
 		flag = reduced_swing_scales_cost
 
-		flag = reduced_title_creation_cost
+		#flag = reduced_title_creation_cost # THE MOD
 
 	
 }
@@ -333,9 +333,9 @@ duke_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = -0.65
+			short_reign_duration_mult = -0.2 # THE MOD
 
-			county_opinion_add = 10
+			county_opinion_add = 3 # THE MOD
 
 		
 }
@@ -356,7 +356,7 @@ duke_legitimacy = {
 
 		flag = very_reduced_swing_scales_cost
 
-		flag = very_reduced_title_creation_cost
+		#flag = very_reduced_title_creation_cost # THE MOD
 
 	
 }
@@ -368,12 +368,12 @@ duke_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = -1
+			short_reign_duration_mult = -0.3 # THE MOD
 
 			monthly_dynasty_prestige = 0.08 # THE MOD
 
 
-			county_opinion_add = 20
+			county_opinion_add = 6 # THE MOD
 
 		
 }
@@ -394,7 +394,7 @@ duke_legitimacy = {
 
 		flag = extra_reduced_swing_scales_cost
 
-		flag = extra_reduced_title_creation_cost
+		#flag = extra_reduced_title_creation_cost # THE MOD
 
 	
 }
@@ -428,12 +428,12 @@ king_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = 0.75
+			short_reign_duration_mult = 0.25 # THE MOD
 
 			monthly_dynasty_prestige = -0.07 # THE MOD
 
 
-			county_opinion_add = -20
+			county_opinion_add = -6 # THE MOD
 
 		
 }
@@ -465,12 +465,12 @@ king_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = 0.5
+			short_reign_duration_mult = 0.15 # THE MOD
 
 			monthly_dynasty_prestige = -0.03 # THE MOD
 
 
-			county_opinion_add = -10
+			county_opinion_add = -3 # THE MOD
 
 		
 }
@@ -501,7 +501,7 @@ king_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = 0.25
+			short_reign_duration_mult = 0.08 # THE MOD
 
 		
 }
@@ -522,7 +522,7 @@ king_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = -0.10
+			short_reign_duration_mult = -0.03 # THE MOD
 
 		
 }
@@ -537,7 +537,7 @@ king_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = -0.25
+			short_reign_duration_mult = -0.08 # THE MOD
 
 		
 }
@@ -558,7 +558,7 @@ king_legitimacy = {
 
 		flag = reduced_swing_scales_cost
 
-		flag = reduced_title_creation_cost
+		#flag = reduced_title_creation_cost # THE MOD
 
 	
 }
@@ -570,9 +570,9 @@ king_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = -0.5
+			short_reign_duration_mult = -0.15 # THE MOD
 
-			county_opinion_add = 10
+			county_opinion_add = 3 # THE MOD
 
 			monthly_dynasty_prestige = 0.08 # THE MOD
 
@@ -596,7 +596,7 @@ king_legitimacy = {
 
 		flag = very_reduced_swing_scales_cost
 
-		flag = very_reduced_title_creation_cost
+		#flag = very_reduced_title_creation_cost # THE MOD
 
 	
 }
@@ -630,12 +630,12 @@ emperor_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = 1
+			short_reign_duration_mult = 0.3 # THE MOD
 
 			monthly_dynasty_prestige = -0.1 # THE MOD
 
 
-			county_opinion_add = -30
+			county_opinion_add = -10 # THE MOD
 
 		
 }
@@ -666,12 +666,12 @@ emperor_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = 0.65
+			short_reign_duration_mult = 0.2 # THE MOD
 
 			monthly_dynasty_prestige = -0.06 # THE MOD
 
 
-			county_opinion_add = -20
+			county_opinion_add = -6 # THE MOD
 
 		
 }
@@ -702,12 +702,12 @@ emperor_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = 0.35
+			short_reign_duration_mult = 0.1 # THE MOD
 
 			monthly_dynasty_prestige = -0.03 # THE MOD
 
 
-			county_opinion_add = -10
+			county_opinion_add = -3 # THE MOD
 
 		
 }
@@ -738,7 +738,7 @@ emperor_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = 0.15
+			short_reign_duration_mult = 0.05 # THE MOD
 
 		
 }
@@ -761,7 +761,7 @@ emperor_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = -0.1
+			short_reign_duration_mult = -0.03 # THE MOD
 
 		
 }
@@ -778,9 +778,9 @@ emperor_legitimacy = {
 
 		modifier = {
 
-			short_reign_duration_mult = -0.25
+			short_reign_duration_mult = -0.08 # THE MOD
 
-			county_opinion_add = 10
+			county_opinion_add = 3 # THE MOD
 
 		
 }
@@ -799,7 +799,7 @@ emperor_legitimacy = {
 
 		flag = very_reduced_scheme_agent_join_chance_in_realm
 
-		flag = reduced_title_creation_cost
+		#flag = reduced_title_creation_cost # THE MOD
 
 		flag = reduced_swing_scales_cost
 

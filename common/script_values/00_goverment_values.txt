@@ -190,23 +190,23 @@ high_nomad_tax = 0.15
 extortionate_nomad_tax = 0.2
 
 # Default Tributary values
-normal_tributary_tax = 0.25
-high_tributary_tax = 0.50
+normal_tributary_tax = 0.10 # THE MOD
+high_tributary_tax = 0.20 # THE MOD
 normal_prestige_transfer = 0.1
 high_prestige_transfer = 0.25
 
 # Celestial Tributary values
-low_celestial_tributary_tax = 0.05
-normal_celestial_tributary_tax = 0.1
-high_celestial_tributary_tax = 0.25
+low_celestial_tributary_tax = 0.02 # THE MOD
+normal_celestial_tributary_tax = 0.04 # THE MOD
+high_celestial_tributary_tax = 0.10 # THE MOD
 low_celestial_prestige_transfer = 0.05
 normal_celestial_prestige_transfer = 0.1
 high_celestial_prestige_transfer = 0.25
 
 # Hegemonic Tributary values
-low_hegemonic_tributary_tax = 0.1
-normal_hegemonic_tributary_tax = 0.15
-high_hegemonic_tributary_tax = 0.3
+low_hegemonic_tributary_tax = 0.04 # THE MOD
+normal_hegemonic_tributary_tax = 0.06 # THE MOD
+high_hegemonic_tributary_tax = 0.12 # THE MOD
 low_hegemonic_prestige_transfer = 0.1
 normal_hegemonic_prestige_transfer = 0.15
 high_hegemonic_prestige_transfer = 0.3

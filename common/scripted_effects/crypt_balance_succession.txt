@@ -1,33 +1,18 @@
-﻿# THE MOD
+﻿# THE MOD: retain mandatory elections for ordinary imperial titles.
 crypt_balance_enforce_succession_effect = {
- if = {
-  limit = { crypt_balance_partition_government_trigger = yes is_landed = yes }
-  if = {
-   limit = { NOT = { has_government = clan_government } NOT = { has_realm_law = confederate_partition_succession_law } }
-   add_realm_law_skip_effects = confederate_partition_succession_law
-  }
-  # THE MOD: use native clan law; all unity stages now partition identically
-  if = { limit = { has_government = clan_government }
-if = { limit = { house ?= { has_house_unity_stage = antagonistic } } if = { limit = { NOT = { has_realm_law = clan_antagonistic_partition_succession_law } } add_realm_law_skip_effects = clan_antagonistic_partition_succession_law } }
-else_if = { limit = { house ?= { has_house_unity_stage = competitive } } if = { limit = { NOT = { has_realm_law = clan_competitive_partition_succession_law } } add_realm_law_skip_effects = clan_competitive_partition_succession_law } }
-else_if = { limit = { house ?= { has_house_unity_stage = friendly } } if = { limit = { NOT = { has_realm_law = clan_friendly_partition_succession_law } } add_realm_law_skip_effects = clan_friendly_partition_succession_law } }
-else_if = { limit = { house ?= { has_house_unity_stage = harmonious } } if = { limit = { NOT = { has_realm_law = clan_harmonious_partition_succession_law } } add_realm_law_skip_effects = clan_harmonious_partition_succession_law } }
-else = { if = { limit = { NOT = { has_realm_law = clan_impassive_partition_succession_law } } add_realm_law_skip_effects = clan_impassive_partition_succession_law } }
-  }
-  every_held_title = {
-if = { limit = { has_title_law = princely_elective_succession_law } remove_title_law = princely_elective_succession_law }
-if = { limit = { has_title_law = saxon_elective_succession_law } remove_title_law = saxon_elective_succession_law }
-if = { limit = { has_title_law = scandinavian_elective_succession_law } remove_title_law = scandinavian_elective_succession_law }
-if = { limit = { has_title_law = gaelic_elective_succession_law } remove_title_law = gaelic_elective_succession_law }
-if = { limit = { has_title_law = tribal_elective_succession_law } remove_title_law = tribal_elective_succession_law }
-   if = {
-    limit = { tier = tier_empire NOT = { has_title_law = feudal_elective_succession_law } }
-    add_title_law = feudal_elective_succession_law
-   }
-   else_if = {
-    limit = { tier != tier_empire has_title_law = feudal_elective_succession_law }
-    remove_title_law = feudal_elective_succession_law
-   }
-  }
- }
+	if = {
+		limit = { crypt_balance_partition_government_trigger = yes is_landed = yes }
+		every_held_title = {
+			limit = { tier = tier_empire }
+			if = { limit = { has_title_law = princely_elective_succession_law } remove_title_law = princely_elective_succession_law }
+			if = { limit = { has_title_law = saxon_elective_succession_law } remove_title_law = saxon_elective_succession_law }
+			if = { limit = { has_title_law = scandinavian_elective_succession_law } remove_title_law = scandinavian_elective_succession_law }
+			if = { limit = { has_title_law = gaelic_elective_succession_law } remove_title_law = gaelic_elective_succession_law }
+			if = { limit = { has_title_law = tribal_elective_succession_law } remove_title_law = tribal_elective_succession_law }
+			if = {
+				limit = { NOT = { has_title_law = feudal_elective_succession_law } }
+				add_title_law = feudal_elective_succession_law
+			}
+		}
+	}
 }

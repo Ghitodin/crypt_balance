@@ -58,11 +58,11 @@
 	}
 	flag = partition_succession_law
 	modifier = {
-		glory_hound_opinion = 10
-		parochial_opinion = 5
+		#glory_hound_opinion = 10 # THE MOD
+		#parochial_opinion = 5 # THE MOD
 		belligerent_opinion = -10
-		dynasty_house_opinion = 5
-		eligible_child_opinion = 10
+		#dynasty_house_opinion = 5 # THE MOD
+		#eligible_child_opinion = 10 # THE MOD
 	}
 	pass_cost = {
 		prestige = change_succession_law_prestige_cost
@@ -144,14 +144,16 @@ partition_succession_law = {
 		traversal_order = children
 		rank = oldest
 		title_division = partition
+		create_primary_tier_titles = yes # THE MOD
+		#primary_heir_minimum_share = 0.6
 	}
 	flag = partition_succession_law
 	modifier = {
-		glory_hound_opinion = 10
-		parochial_opinion = 5
+		#glory_hound_opinion = 10 # THE MOD
+		#parochial_opinion = 5 # THE MOD
 		belligerent_opinion = -10
-		player_heir_opinion = 10
-		eligible_child_except_player_heir_opinion = 5
+		#player_heir_opinion = 10 # THE MOD
+		#eligible_child_except_player_heir_opinion = 5 # THE MOD
 	}
 	pass_cost = {
 		prestige = change_succession_law_prestige_cost
@@ -213,13 +215,14 @@ high_partition_succession_law = {
 		traversal_order = children
 		rank = oldest
 		title_division = partition
-		primary_heir_minimum_share = 0.5
+		create_primary_tier_titles = yes # THE MOD
+		#primary_heir_minimum_share = 0.65
 	}
 	flag = partition_succession_law
 	modifier = {
-		glory_hound_opinion = 5
+		#glory_hound_opinion = 5 # THE MOD
 		belligerent_opinion = -10
-		player_heir_opinion = 15
+		#player_heir_opinion = 15 # THE MOD
 	}
 	pass_cost = {
 		prestige = change_succession_law_prestige_cost
@@ -304,14 +307,16 @@ single_heir_succession_law = {
 		order_of_succession = inheritance
 		traversal_order = children
 		rank = oldest
-		title_division = single_heir
+		title_division = partition # THE MOD
+		create_primary_tier_titles = yes # THE MOD
+		#primary_heir_minimum_share = 0.7
 	}
 	flag = advanced_succession_law
 	modifier = {
-		glory_hound_opinion = -10
-		parochial_opinion = -5
-		player_heir_opinion = 20
-		eligible_child_except_player_heir_opinion = -5
+		#glory_hound_opinion = -10 # THE MOD
+		#parochial_opinion = -5 # THE MOD
+		#player_heir_opinion = 20 # THE MOD
+		#eligible_child_except_player_heir_opinion = -5 # THE MOD
 	}
 	pass_cost = {
 		prestige = change_succession_law_prestige_cost
@@ -441,16 +446,18 @@ single_heir_succession_law_youngest = {
 	succession = {
 		order_of_succession = inheritance
 		traversal_order = children
-		rank = youngest
-		title_division = single_heir
+		rank = oldest # THE MOD
+		title_division = partition # THE MOD
+		create_primary_tier_titles = yes # THE MOD
+		#primary_heir_minimum_share = 0.7
 	}
 
 	flag = advanced_succession_law
 	modifier = {
-		glory_hound_opinion = -10
-		parochial_opinion = -5
-		player_heir_opinion = 20
-		eligible_child_except_player_heir_opinion = -5
+		#glory_hound_opinion = -10 # THE MOD
+		#parochial_opinion = -5 # THE MOD
+		#player_heir_opinion = 20 # THE MOD
+		#eligible_child_except_player_heir_opinion = -5 # THE MOD
 	}
 	pass_cost = {
 		prestige = change_succession_law_prestige_cost
@@ -492,6 +499,10 @@ single_heir_dynasty_house = { # LAST CALL
 	index = 6
 
 	can_keep = {
+		trigger_if = {
+			limit = { has_realm_law = single_heir_dynasty_house }
+			has_variable = kek # THE MOD
+		}
 		can_keep_single_heir_dynasty_house_trigger = yes
 		# Vassal Contract allows it
 		custom_description = {
@@ -503,10 +514,12 @@ single_heir_dynasty_house = { # LAST CALL
 		}
 	}
 	can_have = {
+		has_variable = kek # THE MOD
 		NOT = { government_has_flag = government_is_nomadic }
 		can_have_single_heir_dynasty_house_trigger = yes
 	}
 	can_pass = {
+		has_variable = kek # THE MOD
 		can_change_single_heir_dynasty_house_succession_law_trigger = yes
 		trigger_if = {
 			limit = {
@@ -516,21 +529,24 @@ single_heir_dynasty_house = { # LAST CALL
 		}
 	}
 	should_start_with = {
+		has_variable = kek # THE MOD
 		historical_succession_access_single_heir_dynasty_house_trigger = yes
 		NOT = { government_has_mechanic = administrative }
 	}
 	succession = {
 		order_of_succession = inheritance
-		traversal_order = dynasty_house
+		traversal_order = children # THE MOD
 		rank = oldest
-		title_division = single_heir
+		title_division = partition # THE MOD
+		create_primary_tier_titles = yes # THE MOD
+		primary_heir_minimum_share = 0.5 # THE MOD
 	}
 
 	flag = advanced_succession_law
 	modifier = {
-		glory_hound_opinion = -5
-		eligible_child_except_player_heir_opinion = -15
-		dynasty_house_opinion = 5
+		#glory_hound_opinion = -5 # THE MOD
+		#eligible_child_except_player_heir_opinion = -15 # THE MOD
+		#dynasty_house_opinion = 5 # THE MOD
 	}
 	pass_cost = {
 		prestige = change_succession_law_prestige_cost

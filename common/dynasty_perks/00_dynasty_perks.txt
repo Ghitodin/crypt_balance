@@ -1,4 +1,4 @@
-# BLOOD LEGACIES
+﻿# BLOOD LEGACIES
 
 blood_legacy_1 = {
  # Noble Veins

@@ -1,3 +1,5 @@
+﻿@crypt_balance_buy_duchy_claim_piety = 1500
+@crypt_balance_buy_county_claim_piety = 750
 ###################
 # Claim Throne
 # by Petter Vilberg
@@ -1154,7 +1156,7 @@ scope:target = { tier < tier_kingdom } # THE MOD
 					}
 				}
 				piety >= {
-					value = minor_buy_claim_piety_value
+					value = @crypt_balance_buy_county_claim_piety
 					if = {
 						limit = {
 							government_has_mechanic = administrative
@@ -1171,7 +1173,7 @@ scope:target = { tier < tier_kingdom } # THE MOD
 					}
 				}
 				piety >= {
-					value = medium_buy_claim_piety_value
+					value = @crypt_balance_buy_duchy_claim_piety
 					if = {
 						limit = {
 							government_has_mechanic = administrative
@@ -1273,7 +1275,7 @@ scope:target = { tier < tier_kingdom } # THE MOD
 							}
 						}
 
-						add = 750 # THE MOD
+						subtract = @crypt_balance_buy_county_claim_piety
 
 
 
@@ -1288,7 +1290,7 @@ scope:target = { tier < tier_kingdom } # THE MOD
 							}
 						}
 
-						add = 1500 # THE MOD
+						subtract = @crypt_balance_buy_duchy_claim_piety
 
 
 
@@ -1331,7 +1333,6 @@ scope:target = { tier < tier_kingdom } # THE MOD
 
 				
 
-					add_piety = massive_buy_claim_piety_loss
 
 }
 

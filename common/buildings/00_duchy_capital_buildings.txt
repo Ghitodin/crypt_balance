@@ -1,4 +1,4 @@
-##########
+﻿##########
 # Duchy Capital Buildings
 # These are built in the first barony of the first county of any duchy
 # Holding the associated duchy is required both to build, and for the buildings to be enabled

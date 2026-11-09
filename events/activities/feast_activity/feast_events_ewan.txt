@@ -1,4 +1,4 @@
-@prank_modifiers_default_duration_years_value = 15
+﻿@prank_modifiers_default_duration_years_value = 15
 
 
 namespace = feast_events_ewan

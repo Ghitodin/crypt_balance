@@ -1,4 +1,4 @@
-# ADVENTURE LEGACIES
+﻿# ADVENTURE LEGACIES
 
 fp1_adventure_legacy_1 = {
  # Wanderlust

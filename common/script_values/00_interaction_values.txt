@@ -1,4 +1,4 @@
-golden_obligation_value = {
+﻿golden_obligation_value = {
 	value = 10 # THE MOD
 }
 

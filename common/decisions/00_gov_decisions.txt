@@ -1,4 +1,4 @@
-convert_clan_realm_to_feudalism_decision = {
+﻿convert_clan_realm_to_feudalism_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
 	}

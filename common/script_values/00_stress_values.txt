@@ -164,32 +164,12 @@ generous_title_grant_value = {
 }
 
 # Half-strength trait bonuses for hunts and feasts.
-crypt_balance_half_activity_stress_loss_impact = {
-	value = activity_stress_loss_impact
-	multiply = 0.5
-}
+crypt_balance_half_activity_stress_loss_impact = -7.5
 
-crypt_balance_half_feast_stress_loss_value = {
-	value = feast_stress_loss_value
-	multiply = 0.5
-}
+crypt_balance_half_major_stress_loss = -20
 
-crypt_balance_half_major_stress_loss = {
-	value = major_stress_loss
-	multiply = 0.5
-}
+crypt_balance_half_medium_stress_impact_loss = -15
 
-crypt_balance_half_medium_stress_impact_loss = {
-	value = medium_stress_impact_loss
-	multiply = 0.5
-}
+crypt_balance_half_miniscule_stress_impact_loss = -2.5
 
-crypt_balance_half_miniscule_stress_impact_loss = {
-	value = miniscule_stress_impact_loss
-	multiply = 0.5
-}
-
-crypt_balance_half_minor_stress_impact_loss = {
-	value = minor_stress_impact_loss
-	multiply = 0.5
-}
+crypt_balance_half_minor_stress_impact_loss = -7.5

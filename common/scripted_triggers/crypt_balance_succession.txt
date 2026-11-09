@@ -1,4 +1,4 @@
-# THE MOD
+﻿# THE MOD
 crypt_balance_partition_government_trigger = {
  OR = {
   has_government = feudal_government

@@ -1,4 +1,4 @@
-
+﻿
 
 # Prowess Modifiers
 artifact_prowess_1_modifier = { prowess_no_portrait = 1 }

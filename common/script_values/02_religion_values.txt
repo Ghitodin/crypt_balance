@@ -1,4 +1,4 @@
-#Needs to be loaded after
+﻿#Needs to be loaded after
 # 	* medium_gold_value (01_dynamic_values)
 
 #Religious war CB levels

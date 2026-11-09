@@ -1,4 +1,4 @@
-@ep2_wedding_ewan_0052_dolt_pay_out_value = root.massive_gold_value
+﻿@ep2_wedding_ewan_0052_dolt_pay_out_value = root.massive_gold_value
 
 @ep2_wedding_ewan_0061_high_skill_value = extremely_high_skill_rating
 

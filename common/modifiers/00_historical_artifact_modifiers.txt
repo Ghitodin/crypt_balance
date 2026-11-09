@@ -1,4 +1,4 @@
-joyeuse_modifier = {
+﻿joyeuse_modifier = {
 	court_grandeur_baseline_add = 6
 	knight_limit = 3
 	heavy_cavalry_toughness_mult = 0.1

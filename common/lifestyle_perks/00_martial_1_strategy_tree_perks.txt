@@ -1,4 +1,4 @@
-bellum_justum_perk = {
+﻿bellum_justum_perk = {
 	lifestyle = martial_lifestyle
 	tree = strategy
 	position = { 2 0 }

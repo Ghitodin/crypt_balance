@@ -1,4 +1,4 @@
-faithful_perk = {
+﻿faithful_perk = {
 	lifestyle = learning_lifestyle
 
 	tree = theology

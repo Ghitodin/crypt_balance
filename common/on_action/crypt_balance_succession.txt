@@ -1,4 +1,4 @@
-# THE MOD: additive hooks; current game on-actions remain in place
+﻿# THE MOD: additive hooks; current game on-actions remain in place
 on_game_start_after_lobby = { on_actions = { crypt_balance_succession_global } }
 yearly_global_pulse = { on_actions = { crypt_balance_succession_global } }
 on_title_gain = { on_actions = { crypt_balance_succession_character } }

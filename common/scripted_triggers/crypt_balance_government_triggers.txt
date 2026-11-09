@@ -1,9 +1,11 @@
-crypt_balance_faith_prefers_clan_trigger = {
-	faith = {
-		OR = {
-			has_doctrine = special_doctrine_is_islamic_faith
-			has_doctrine = tenet_islamic_syncretism
-			has_doctrine = tenet_sun_worship
+﻿crypt_balance_faith_prefers_clan_trigger = {
+	OR = {
+		faith ?= { has_doctrine = special_doctrine_is_islamic_faith }
+		rite ?= {
+			OR = {
+				rite_has_tenet = tenet_islamic_syncretism
+				rite_has_tenet = tenet_sun_worship
+			}
 		}
 	}
 }

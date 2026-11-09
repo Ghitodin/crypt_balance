@@ -1,4 +1,4 @@
-# Determines who can command troops; filters who shows up in the list
+﻿# Determines who can command troops; filters who shows up in the list
 # Root is the potential commander
 # scope:army_owner is who owns the army to command
 can_command_troops = {

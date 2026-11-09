@@ -1,4 +1,4 @@
-# LEGENDS LEGACIES
+﻿# LEGENDS LEGACIES
 
 ce1_heroic_legacy_1 = {
  # Heroes of Old

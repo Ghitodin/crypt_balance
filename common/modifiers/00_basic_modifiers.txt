@@ -1,4 +1,4 @@
-base_modifier = {
+﻿base_modifier = {
 }
 
 # Skill modifiers, applied to each character

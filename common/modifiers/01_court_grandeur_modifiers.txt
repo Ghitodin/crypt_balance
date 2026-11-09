@@ -1,4 +1,4 @@
-# Modifiers used by code, they are applied cumulatively
+﻿# Modifiers used by code, they are applied cumulatively
 
 court_grandeur_level_0 = {}
 

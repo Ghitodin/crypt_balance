@@ -1,7 +1,9 @@
 ﻿l_russian:
  convert_clan_realm_to_feudalism_decision: "Принять феодализм"
+ convert_clan_realm_to_feudalism_decision_tooltip: "Принять феодализм в соответствии с вашей верой"
  convert_clan_realm_to_feudalism_decision_desc: "Привести форму правления в соответствие с верой и перейти от клана к феодализму."
  convert_clan_realm_to_feudalism_decision_confirm: "Принять феодализм"
  convert_feudal_realm_to_clan_decision: "Принять клановую форму правления"
+ convert_feudal_realm_to_clan_decision_tooltip: "Принять клановую форму правления в соответствии с вашей верой"
  convert_feudal_realm_to_clan_decision_desc: "Привести форму правления в соответствие с верой и перейти от феодализма к клану."
  convert_feudal_realm_to_clan_decision_confirm: "Принять клановую форму правления"

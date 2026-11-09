@@ -1,4 +1,4 @@
-
+﻿
 unshackled_lust_perk_effect = {
 	global = NO_PENALTY_FOR_LACK_OF_ATTRACTION
 	first = I_SUFFER_NO_PENALTY_FOR_LACK_OF_ATTRACTION

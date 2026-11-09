@@ -1,4 +1,4 @@
-thoughtful_perk = {
+﻿thoughtful_perk = {
 	lifestyle = diplomacy_lifestyle
 
 	tree = foreign_affairs

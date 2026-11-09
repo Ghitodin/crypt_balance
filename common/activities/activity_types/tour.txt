@@ -907,15 +907,7 @@
 			}
 			tour_type_taxation = {
 				is_valid = {
-					custom_tooltip = {
-						# text = CB_TRIBAL_COST # THE MOD We disable for everyone, not only tribal rulers
-						AND = { # THE MOD
-							NOT = {
-								government_has_flag = government_is_tribal
-							}
-							government_has_flag = government_is_tribal # THE MOD
-						} # THE MOD
-					}
+					always = no # Crypt Balance disables taxation tours.
 				}
 				ai_will_do = {
 					value = 50

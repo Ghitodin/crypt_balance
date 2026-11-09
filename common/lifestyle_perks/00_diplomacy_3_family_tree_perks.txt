@@ -1,4 +1,4 @@
-befriend_perk = {
+﻿befriend_perk = {
 	lifestyle = diplomacy_lifestyle
 
 	tree = family

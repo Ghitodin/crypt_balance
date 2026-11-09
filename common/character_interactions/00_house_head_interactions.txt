@@ -1,4 +1,4 @@
-#Interactions relating to the head of the house
+﻿#Interactions relating to the head of the house
 
 call_house_member_to_war_interaction = {
 

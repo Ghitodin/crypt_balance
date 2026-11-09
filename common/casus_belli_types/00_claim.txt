@@ -1,4 +1,4 @@
-claim_cb = {
+﻿claim_cb = {
 
 	icon = claim_cb
 

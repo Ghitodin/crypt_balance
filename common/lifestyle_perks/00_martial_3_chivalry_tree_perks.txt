@@ -1,4 +1,4 @@
-stalwart_leader_perk = {
+﻿stalwart_leader_perk = {
 	lifestyle = martial_lifestyle
 	tree = chivalry
 	position = { 1 0 }

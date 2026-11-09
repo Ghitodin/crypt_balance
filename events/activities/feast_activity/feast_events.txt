@@ -1816,12 +1816,12 @@ feast.7151 = {
 				}
 				stress_and_fulfillment_impact = {
 					base = exotic_feast_stress_loss_value
-					gluttonous = crypt_balance_half_feast_stress_loss_value
-					gregarious = crypt_balance_half_feast_stress_loss_value
-					lifestyle_reveler = crypt_balance_half_feast_stress_loss_value
-					drunkard = crypt_balance_half_feast_stress_loss_value
-					comfort_eater = crypt_balance_half_feast_stress_loss_value
-					generous = crypt_balance_half_feast_stress_loss_value
+					gluttonous = feast_stress_loss_value
+					gregarious = feast_stress_loss_value
+					lifestyle_reveler = feast_stress_loss_value
+					drunkard = feast_stress_loss_value
+					comfort_eater = feast_stress_loss_value
+					generous = feast_stress_loss_value
 					greedy = activity_stress_gain_impact
 				}
 			}
@@ -1833,12 +1833,12 @@ feast.7151 = {
 				}
 				stress_and_fulfillment_impact = {
 					base = lavish_feast_stress_loss_value
-					gluttonous = crypt_balance_half_feast_stress_loss_value
-					gregarious = crypt_balance_half_feast_stress_loss_value
-					lifestyle_reveler = crypt_balance_half_feast_stress_loss_value
-					drunkard = crypt_balance_half_feast_stress_loss_value
-					comfort_eater = crypt_balance_half_feast_stress_loss_value
-					generous = crypt_balance_half_feast_stress_loss_value
+					gluttonous = feast_stress_loss_value
+					gregarious = feast_stress_loss_value
+					lifestyle_reveler = feast_stress_loss_value
+					drunkard = feast_stress_loss_value
+					comfort_eater = feast_stress_loss_value
+					generous = feast_stress_loss_value
 					greedy = activity_stress_gain_impact
 				}
 			}
@@ -1850,12 +1850,12 @@ feast.7151 = {
 				}
 				stress_and_fulfillment_impact = {
 					base = medium_feast_stress_loss_value
-					gluttonous = crypt_balance_half_feast_stress_loss_value
-					gregarious = crypt_balance_half_feast_stress_loss_value
-					lifestyle_reveler = crypt_balance_half_feast_stress_loss_value
-					drunkard = crypt_balance_half_feast_stress_loss_value
-					comfort_eater = crypt_balance_half_feast_stress_loss_value
-					generous = crypt_balance_half_feast_stress_loss_value
+					gluttonous = feast_stress_loss_value
+					gregarious = feast_stress_loss_value
+					lifestyle_reveler = feast_stress_loss_value
+					drunkard = feast_stress_loss_value
+					comfort_eater = feast_stress_loss_value
+					generous = feast_stress_loss_value
 					greedy = activity_stress_gain_impact
 				}
 			}
@@ -1867,12 +1867,12 @@ feast.7151 = {
 				}
 				stress_and_fulfillment_impact = {
 					base = meager_feast_stress_loss_value
-					gluttonous = crypt_balance_half_feast_stress_loss_value
-					gregarious = crypt_balance_half_feast_stress_loss_value
-					lifestyle_reveler = crypt_balance_half_feast_stress_loss_value
-					drunkard = crypt_balance_half_feast_stress_loss_value
-					comfort_eater = crypt_balance_half_feast_stress_loss_value
-					generous = crypt_balance_half_feast_stress_loss_value
+					gluttonous = feast_stress_loss_value
+					gregarious = feast_stress_loss_value
+					lifestyle_reveler = feast_stress_loss_value
+					drunkard = feast_stress_loss_value
+					comfort_eater = feast_stress_loss_value
+					generous = feast_stress_loss_value
 					greedy = activity_stress_gain_impact
 				}
 			}

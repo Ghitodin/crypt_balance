@@ -1,4 +1,4 @@
-
+﻿
 
 diplomacy_foreign_affairs_focus = {
 	lifestyle = diplomacy_lifestyle

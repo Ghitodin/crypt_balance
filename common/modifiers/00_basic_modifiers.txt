@@ -421,10 +421,19 @@ hard_difficulty = {
 	embarkation_cost_mult = -1
 	mercenary_hire_cost_mult = -0.3
 	men_at_arms_maintenance = -0.25
+	knight_limit = 2 # THE MOD
+	knight_effectiveness_mult = 0.25 # THE MOD
+	men_at_arms_cap = 1 # THE MOD
+	men_at_arms_limit = 1 # THE MOD
 }
 
 hard_difficulty_player = {
 	mercenary_hire_cost_mult = 0.5
+	monthly_income_mult = -0.15 # THE MOD
+	stress_gain_mult = 0.3 # THE MOD
+	stress_loss_mult = -0.3 # THE MOD
+	knight_limit = -1 # THE MOD
+	knight_effectiveness_mult = -0.15 # THE MOD
 }
 
 very_hard_difficulty = {

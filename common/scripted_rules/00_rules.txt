@@ -620,6 +620,10 @@ is_hard_blocked_from_schemes = {
 # root: the arranging AI character
 # scope:secondary_actor: the character to be married
 ai_wants_matrilineal_marriage = {
+	NAND = { # THE MOD: keep patrilineal preference in Muslim realms with male-only succession.
+		religion = religion:islam_religion
+		has_realm_law = male_only_law
+	}
 	scope:secondary_actor = {
 		is_female = yes
 	}

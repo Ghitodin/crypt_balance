@@ -95,6 +95,7 @@ duke_modifier = {
 
 	knight_limit = 2
 	vassal_limit = 20
+	accolades = 1 # THE MOD
 	tax_slot_add = 1
 	mercenary_hire_cost_mult = 0.1
 	enemy_scheme_secrecy_add = -10
@@ -131,7 +132,7 @@ emperor_modifier = {
 
 	ai_amenity_target_baseline = 0.3
 
-	accolades = 2
+	accolades = 1
 	tax_slot_add = 2
 	mercenary_hire_cost_mult = 0.3 # THE MOD
 

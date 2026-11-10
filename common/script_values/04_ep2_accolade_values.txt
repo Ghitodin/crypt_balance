@@ -119,61 +119,61 @@ maa_accolade_minimum_martial_value = medium_skill_rating
 accolade_agent_acceptance_chance_bonus = accolade_medium_value
 accolade_agent_acceptance_chance_bonus_high = accolade_high_value
 accolade_invite_courtiers_value = accolade_high_value
-accolade_imprisonment_chance_value = 5 # THE MOD
+accolade_imprisonment_chance_value = 2 # THE MOD
 
-accolade_imprisonment_chance_value_high = 10 # THE MOD
+accolade_imprisonment_chance_value_high = 3 # THE MOD
 
-accolade_wise_educator_prestige = 50 # THE MOD
+accolade_wise_educator_prestige = 15 # THE MOD
 
-accolade_wise_educator_prestige_high = 100 # THE MOD
+accolade_wise_educator_prestige_high = 25 # THE MOD
 
 accolade_wise_educator_prowess = 1
-accolade_wise_educator_prowess_high = 2 # THE MOD
+accolade_wise_educator_prowess_high = 1 # THE MOD
 
-accolade_white_peace_prestige_value = major_prestige_value
+accolade_white_peace_prestige_value = 10
 accolade_seduction_vulnerability_value = 5 # THE MOD
 
 accolade_politicker_join_scheme_value = 8 # THE MOD Const not used for now
 
-accolade_charmer_fertility_value = 0.08 # THE MOD
+accolade_charmer_fertility_value = 0.05 # THE MOD
 
-accolade_charmer_fertility_high_value = 0.2 # THE MOD
+accolade_charmer_fertility_high_value = 0.07 # THE MOD
 
 accolade_charmer_attraction_opinion_value = accolade_medium_value
 accolade_charmer_attraction_opinion_high_value = accolade_high_value
-accolade_piety_reduction_value = 0.85 # THE MOD
+accolade_piety_reduction_value = 0.95 # THE MOD
 
-accolade_piety_reduction_value_high = 0.7 # THE MOD
+accolade_piety_reduction_value_high = 0.93 # THE MOD
 
 
 ###############
 # SKILLED ATTRIBUTES
 ###############
 
-accolade_scales_of_power_value = -10
-accolade_scales_of_power_value_high = -15
+accolade_scales_of_power_value = -1
+accolade_scales_of_power_value_high = -2
 
-accolade_development_growth_on_tournament_completion_value = 50
+accolade_development_growth_on_tournament_completion_value = 5
 accolade_development_level_on_tournament_completion_value = 1
-accolade_county_control_gain_value = medium_county_control_gain
+accolade_county_control_gain_value = 5
 
-accolade_contender_trait_xp_low_value = 10
-accolade_contender_trait_xp_medium_value = 15
-accolade_contender_trait_xp_high_value = 20
+accolade_contender_trait_xp_low_value = 3
+accolade_contender_trait_xp_medium_value = 5
+accolade_contender_trait_xp_high_value = 7
 
-accolade_all_knights_trait_xp_low_value = 5
-accolade_all_knights_trait_xp_high_value = 10
+accolade_all_knights_trait_xp_low_value = 2
+accolade_all_knights_trait_xp_high_value = 3
 
 
 ###############
 # MAA ATTRIBUTES
 ###############
 
-accolade_hostile_knight_death_in_battle_low_value = 0.1 # THE MOD
+accolade_hostile_knight_death_in_battle_low_value = 0.03 # THE MOD
 
-accolade_hostile_knight_death_in_battle_medium_value = 0.2 # THE MOD
+accolade_hostile_knight_death_in_battle_medium_value = 0.05 # THE MOD
 
-accolade_hostile_knight_death_in_battle_high_value = 0.3 # THE MOD
+accolade_hostile_knight_death_in_battle_high_value = 0.07 # THE MOD
 
 
 accolade_hostile_knight_death_in_battle_actual_low_value = {
@@ -201,14 +201,14 @@ accolade_tournament_invite_acceptance_value = 7 # THE MOD
 
 accolade_feast_wedding_invite_acceptance_value = 7 # THE MOD
 
-acclaimed_knight_prestige_from_victory_value = miniscule_prestige_value
-acclaimed_knight_prestige_from_victory_value_high = minor_prestige_value
+acclaimed_knight_prestige_from_victory_value = 10
+acclaimed_knight_prestige_from_victory_value_high = 20
 
-accolade_defends_family_low_value = -0.1 # THE MOD 
+accolade_defends_family_low_value = -0.03 # THE MOD 
 
-accolade_defends_family_medium_value = -0.2 # THE MOD
+accolade_defends_family_medium_value = -0.05 # THE MOD
 
-accolade_defends_family_high_value = -0.3 # THE MOD
+accolade_defends_family_high_value = -0.07 # THE MOD
 
 
 accolade_defends_family_actual_low_value = {
@@ -1074,18 +1074,6 @@ half_maa_regiments_max_count = {
 
 accolade_mercenary_maa_size_value = {
 	value = 1
-	if = {
-		limit = {
-			scope:accolade_rank_value = 5
-		}
-		add = 0.5
-	}
-	if = {
-		limit = {
-			scope:accolade_rank_value = 6
-		}
-		add = 0.5
-	}
 	if = {
 		limit = {
 			scope:accolade_owner = {

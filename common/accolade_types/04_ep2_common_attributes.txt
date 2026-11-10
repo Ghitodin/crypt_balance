@@ -210,7 +210,7 @@ marauder_attribute = {
 
 			knight_army_modifier = {
 
-				uncontrolled_province_advantage = 2
+				uncontrolled_province_advantage = 1
 
 			
 }
@@ -230,7 +230,7 @@ marauder_attribute = {
 
 			knight_army_modifier = {
 
-				uncontrolled_province_advantage = 3
+				uncontrolled_province_advantage = 1
 
 			
 }
@@ -242,7 +242,7 @@ marauder_attribute = {
  # Rank 3
 			knight_army_modifier = {
 
-				uncontrolled_province_advantage = 5
+				uncontrolled_province_advantage = 1
 
 			
 }
@@ -457,11 +457,11 @@ idealist_attribute = {
  # rank 1
 			liege_modifier = {
 
-				courtly_opinion = 5
+				courtly_opinion = 2
 
-				minority_opinion = 3
+				minority_opinion = 1
 
-				barons_and_minor_landholders_opinion = 3
+				barons_and_minor_landholders_opinion = 1
 
 			
 }
@@ -473,11 +473,11 @@ idealist_attribute = {
  # Rank 2
 			liege_modifier = {
 
-				courtly_opinion = 8
+				courtly_opinion = 2
 
-				minority_opinion = 6
+				minority_opinion = 2
 
-				barons_and_minor_landholders_opinion = 6
+				barons_and_minor_landholders_opinion = 2
 
 			
 }
@@ -489,11 +489,11 @@ idealist_attribute = {
  # Rank 3
 			liege_modifier = {
 
-				courtly_opinion = 10
+				courtly_opinion = 3
 
-				minority_opinion = 10
+				minority_opinion = 3
 
-				barons_and_minor_landholders_opinion = 10
+				barons_and_minor_landholders_opinion = 3
 
 			
 }
@@ -669,7 +669,7 @@ charmer_attribute = {
 		# glory_requirement =  { modifiers and unlocks }
 		1 = { # rank 1
 			liege_modifier = {
-				seduce_scheme_phase_duration_add = minor_scheme_phase_duration_bonus_value
+				seduce_scheme_phase_duration_add = -2
 			}
 			accolade_parameters = {
 				accolade_court_seduction_vulnerability
@@ -677,7 +677,7 @@ charmer_attribute = {
 		}
 		2 = { # Rank 2
 			liege_modifier = {
-				seduce_scheme_phase_duration_add = medium_scheme_phase_duration_bonus_value
+				seduce_scheme_phase_duration_add = -3
 			}
 			accolade_parameters = {
 				accolade_court_seduction_vulnerability
@@ -686,7 +686,7 @@ charmer_attribute = {
 		}
 		3 = { # Rank 3
 			liege_modifier = {
-				seduce_scheme_phase_duration_add = major_scheme_phase_duration_bonus_value
+				seduce_scheme_phase_duration_add = -5
 			}
 			accolade_parameters = {
 				accolade_court_seduction_vulnerability
@@ -909,7 +909,7 @@ thug_attribute = {
  # rank 1
 			liege_modifier = {
 
-				dread_per_tyranny_add = 0.2
+				dread_per_tyranny_add = 0.03
 
 			
 }
@@ -921,7 +921,7 @@ thug_attribute = {
  # Rank 2
 			liege_modifier = {
 
-				dread_per_tyranny_add = 0.4
+				dread_per_tyranny_add = 0.05
 
 			
 }
@@ -937,7 +937,7 @@ thug_attribute = {
  # Rank 3
 			liege_modifier = {
 
-				dread_per_tyranny_add = 0.8
+				dread_per_tyranny_add = 0.07
 
 			
 }
@@ -1108,12 +1108,9 @@ disciplinarian_attribute = {
  # rank 1
 			liege_modifier = {
 
-				levy_reinforcement_rate = 0.1
-
+				levy_reinforcement_rate = 0.02
 				vassal_herd_contribution_mult = 0.02
-
-			
-}
+			}
 
 		
 }
@@ -1122,18 +1119,15 @@ disciplinarian_attribute = {
  # Rank 2
 			liege_modifier = {
 
-				levy_reinforcement_rate = 0.2
+				levy_reinforcement_rate = 0.03
 
-				levy_maintenance = -0.1
-
-				vassal_herd_contribution_mult = 0.05
-
-			
-}
+				levy_maintenance = -0.03
+				vassal_herd_contribution_mult = 0.04
+			}
 
 			knight_army_modifier = {
 
-				hostile_county_attrition = -0.4
+				hostile_county_attrition = -0.03
 
 			
 }
@@ -1145,18 +1139,15 @@ disciplinarian_attribute = {
  # Rank 3
 			liege_modifier = {
 
-				levy_reinforcement_rate = 0.3
+				levy_reinforcement_rate = 0.05
 
-				levy_maintenance = -0.2
-
-				vassal_herd_contribution_mult = 0.1
-
-			
-}
+				levy_maintenance = -0.05
+				vassal_herd_contribution_mult = 0.06
+			}
 
 			knight_army_modifier = {
 
-				hostile_county_attrition = -0.8
+				hostile_county_attrition = -0.05
 
 			
 }
@@ -1407,7 +1398,7 @@ fanatic_attribute = {
  # rank 1
 			liege_modifier = {
 
-				zealot_opinion = 10
+				zealot_opinion = 3
 
 			
 }
@@ -1419,33 +1410,27 @@ fanatic_attribute = {
  # Rank 2
 			liege_modifier = {
 
-				zealot_opinion = 15
+				zealot_opinion = 4
 
 			
 }
-
 			accolade_parameters = {
 				acclaimed_knight_piety_from_battle
 			}
-
-		
-}
+		}
 
 		3 = {
  # Rank 3
 			liege_modifier = {
 
-				zealot_opinion = 25
+				zealot_opinion = 5
 
 			
 }
-
 			accolade_parameters = {
 				acclaimed_knight_piety_from_battle_high
 			}
-
-		
-}
+		}
 
 	
 }
@@ -1635,52 +1620,37 @@ valiant_attribute = {
 		1 = {
  # rank 1
 			knight_army_modifier = {
-
-				army_damage_mult = 0.1
-
-			
-}
-
-		
-}
+				army_damage_mult = 0.02
+			}
+		}
 
 		2 = {
  # Rank 2
-			knight_army_modifier = {
-
-				army_damage_mult = 0.2
-
-			
-}
 
 			liege_modifier = {
 
-				glory_hound_opinion = 15
+				glory_hound_opinion = 3
 
 			
 }
-
-		
-}
+			knight_army_modifier = {
+				army_damage_mult = 0.04
+			}
+		}
 
 		3 = {
  # Rank 3
-			knight_army_modifier = {
-
-				army_damage_mult = 0.3
-
-			
-}
 
 			liege_modifier = {
 
-				glory_hound_opinion = 25
+				glory_hound_opinion = 5
 
 			
 }
-
-		
-}
+			knight_army_modifier = {
+				army_damage_mult = 0.06
+			}
+		}
 
 	
 }
@@ -1853,7 +1823,7 @@ stalwart_attribute = {
  # rank 1
            liege_modifier = {
 
-                character_travel_safety = 5
+                character_travel_safety = 2
 
             
 }
@@ -1863,41 +1833,31 @@ stalwart_attribute = {
 
         2 = {
  # Rank 2
-            knight_army_modifier = {
-
-                army_toughness_mult = 0.1
-
-            
-}
 
             liege_modifier = {
 
-                character_travel_safety = 10
+                character_travel_safety = 3
 
             
 }
-
-        
-}
+            knight_army_modifier = {
+                army_toughness_mult = 0.03
+            }
+        }
 
         3 = {
  # Rank 3
-            knight_army_modifier = {
-
-                army_toughness_mult = 0.15
-
-            
-}
 
             liege_modifier = {
 
-                character_travel_safety = 15
+                character_travel_safety = 5
 
             
 }
-
-        
-}
+            knight_army_modifier = {
+                army_toughness_mult = 0.05
+            }
+        }
 
     
 }
@@ -2082,7 +2042,7 @@ scoundrel_attribute = {
  # rank 1
             liege_modifier = {
 
-               mercenary_hire_cost_mult = -0.1
+               mercenary_hire_cost_mult = -0.03
 
             
 }
@@ -2094,10 +2054,9 @@ scoundrel_attribute = {
  # Rank 2
             liege_modifier = {
 
-                martial_per_stress_level = 1 # THE MOD
 
 
-                mercenary_hire_cost_mult = -0.2
+                mercenary_hire_cost_mult = -0.04
 
             
 }
@@ -2109,13 +2068,11 @@ scoundrel_attribute = {
  # Rank 3
             liege_modifier = {
 
-                martial_per_stress_level = 2 # THE MOD
 
 
-                mercenary_hire_cost_mult = -0.3
-
-            
-}
+                mercenary_hire_cost_mult = -0.05
+                martial = 1
+            }
 
         
 }

@@ -6771,7 +6771,7 @@ theocratic_lay_clergy_trigger = {
 			# Cardinals
 			exists = clerical_elector_title
 			# Archdioceses
-			primary_title ?= { has_clerical_region = yes }
+			any_held_title = { has_clerical_region = yes } # THE MOD
 			# Other landless explicit clergy
 			AND = {
 				is_landed = no

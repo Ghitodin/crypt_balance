@@ -207,16 +207,15 @@ likable_perk = {
 
 		invert_check = yes
 
-		direct_vassal_opinion = 5 # THE MOD
 
 		liege_opinion = 10 # THE MOD
 
 		tributary_opinion = 10
 
 		suzerain_opinion = 20
-
-	
-}
+		courtly_opinion = 5 # THE MOD
+		belligerent_opinion = -3 # THE MOD
+	}
 
 
 }

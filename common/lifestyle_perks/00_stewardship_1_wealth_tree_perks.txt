@@ -129,6 +129,7 @@ detailed_ledgers_perk = {
 		invert_check = yes
 		republic_government_opinion = 7 # THE MOD
 		republic_government_tax_contribution_mult = 0.07 # THE MOD
+		feudal_government_opinion = -3 # THE MOD
 	}
 
 	

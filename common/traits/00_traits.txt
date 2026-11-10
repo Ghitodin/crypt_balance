@@ -3820,6 +3820,7 @@ content = {
 		brave = @neg_compat_low
 		vengeful = @neg_compat_low
 	}
+	glory_hound_opinion = -5 # THE MOD
 }
 
 arbitrary = {
@@ -4077,6 +4078,7 @@ zealous = {
 		lifestyle_mystic = @neg_compat_low
 		eccentric = @neg_compat_low
 	}
+	courtly_opinion = -4 # THE MOD
 }
 
 paranoid = {
@@ -8894,15 +8896,15 @@ pilgrim = {
 	rite_modifier = {
 		parameter = basic_pilgrimage_rewards
 		monthly_piety_gain_mult = 0.05
-		zealot_opinion = 5
+		zealot_opinion = 3
 	}
 
 	rite_modifier = {
 		parameter = mandatory_pilgrimage
 		monthly_piety_gain_mult = 0.35 #offset the -0.25 and add 0.1
-		same_faith_opinion = 5
-		zealot_opinion = 5
-		clergy_opinion = 5
+		same_faith_opinion = 2
+		zealot_opinion = 3
+		clergy_opinion = 3
 	}
 
 	track = {
@@ -8915,15 +8917,15 @@ pilgrim = {
 			rite_modifier = {
 				parameter = basic_pilgrimage_rewards
 				monthly_piety_gain_mult = 0.1
-				zealot_opinion = 10
+				zealot_opinion = 5
 				learning = 1
 			}
 
 			rite_modifier = {
 				parameter = mandatory_pilgrimage
 				monthly_piety_gain_mult = 0.4 #offset the -0.25 and add 0.15
-				zealot_opinion = 20
-				clergy_opinion = 10
+				zealot_opinion = 5
+				clergy_opinion = 5
 			}
 
 			ai_zeal = 10
@@ -8937,7 +8939,7 @@ pilgrim = {
 			rite_modifier = {
 				parameter = basic_pilgrimage_rewards
 				monthly_piety_gain_mult = 0.1
-				zealot_opinion = 20
+				zealot_opinion = 7
 				different_culture_opinion = 5
 				learning = 2
 			}
@@ -8945,8 +8947,8 @@ pilgrim = {
 			rite_modifier = {
 				parameter = mandatory_pilgrimage
 				monthly_piety_gain_mult = 0.4 #offset the -0.25 and add 0.15
-				zealot_opinion = 40
-				clergy_opinion = 10
+				zealot_opinion = 7
+				clergy_opinion = 7
 			}
 
 			ai_zeal = 15
@@ -9037,7 +9039,7 @@ hajjaj = {
 		parameter = mandatory_hajj
 		monthly_piety_gain_mult = 0.35 #offset the -0.25 and add 0.1
 		same_faith_opinion = 5 #offset the -5
-		zealot_opinion = 10
+		zealot_opinion = 5
 	}
 
 	ruler_designer_cost = 30
@@ -11982,6 +11984,8 @@ kinslayer_1 = {
 			desc = trait_kinslayer_1_character_desc
 		}
 	}
+	clergy_opinion = -10 # THE MOD
+	general_opinion = -10 # THE MOD
 }
 kinslayer_2 = {
 
@@ -12036,6 +12040,8 @@ kinslayer_2 = {
 			desc = trait_kinslayer_2_character_desc
 		}
 	}
+	clergy_opinion = -10 # THE MOD
+	general_opinion = -10 # THE MOD
 }
 kinslayer_3 = {
 
@@ -12097,6 +12103,8 @@ kinslayer_3 = {
 			desc = trait_kinslayer_3_character_desc
 		}
 	}
+	clergy_opinion = -10 # THE MOD
+	general_opinion = -10 # THE MOD
 }
 
 deviant = {
@@ -15824,6 +15832,7 @@ consecrated_blood = {
 	}
 
 	ai_zeal = 10
+	courtly_opinion = -3 # THE MOD
 }
 
 education_martial_prowess_1 = {

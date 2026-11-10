@@ -57,13 +57,6 @@
 		create_primary_tier_titles = yes
 	}
 	flag = partition_succession_law
-	modifier = {
-		#glory_hound_opinion = 10 # THE MOD
-		#parochial_opinion = 5 # THE MOD
-		belligerent_opinion = -10
-		#dynasty_house_opinion = 5 # THE MOD
-		#eligible_child_opinion = 10 # THE MOD
-	}
 	pass_cost = {
 		prestige = change_succession_law_prestige_cost
 	}
@@ -148,13 +141,6 @@ partition_succession_law = {
 		#primary_heir_minimum_share = 0.6
 	}
 	flag = partition_succession_law
-	modifier = {
-		#glory_hound_opinion = 10 # THE MOD
-		#parochial_opinion = 5 # THE MOD
-		belligerent_opinion = -10
-		#player_heir_opinion = 10 # THE MOD
-		#eligible_child_except_player_heir_opinion = 5 # THE MOD
-	}
 	pass_cost = {
 		prestige = change_succession_law_prestige_cost
 	}
@@ -219,11 +205,6 @@ high_partition_succession_law = {
 		#primary_heir_minimum_share = 0.65
 	}
 	flag = partition_succession_law
-	modifier = {
-		#glory_hound_opinion = 5 # THE MOD
-		belligerent_opinion = -10
-		#player_heir_opinion = 15 # THE MOD
-	}
 	pass_cost = {
 		prestige = change_succession_law_prestige_cost
 	}
@@ -312,12 +293,6 @@ single_heir_succession_law = {
 		#primary_heir_minimum_share = 0.7
 	}
 	flag = advanced_succession_law
-	modifier = {
-		#glory_hound_opinion = -10 # THE MOD
-		#parochial_opinion = -5 # THE MOD
-		#player_heir_opinion = 20 # THE MOD
-		#eligible_child_except_player_heir_opinion = -5 # THE MOD
-	}
 	pass_cost = {
 		prestige = change_succession_law_prestige_cost
 		piety = {
@@ -384,12 +359,6 @@ single_heir_succession_kurultai_law = {
 	}
 	flag = advanced_succession_law
 	flag = can_designate_heirs
-	modifier = {
-		belligerent_opinion = 10
-		glory_hound_opinion = 5
-		player_heir_opinion = 20
-		eligible_child_except_player_heir_opinion = -20
-	}
 	pass_cost = {
 	}
 	revoke_cost = {
@@ -453,12 +422,6 @@ single_heir_succession_law_youngest = {
 	}
 
 	flag = advanced_succession_law
-	modifier = {
-		#glory_hound_opinion = -10 # THE MOD
-		#parochial_opinion = -5 # THE MOD
-		#player_heir_opinion = 20 # THE MOD
-		#eligible_child_except_player_heir_opinion = -5 # THE MOD
-	}
 	pass_cost = {
 		prestige = change_succession_law_prestige_cost
 		piety = {
@@ -543,11 +506,6 @@ single_heir_dynasty_house = { # LAST CALL
 	}
 
 	flag = advanced_succession_law
-	modifier = {
-		#glory_hound_opinion = -5 # THE MOD
-		#eligible_child_except_player_heir_opinion = -15 # THE MOD
-		#dynasty_house_opinion = 5 # THE MOD
-	}
 	pass_cost = {
 		prestige = change_succession_law_prestige_cost
 		piety = {
@@ -681,12 +639,6 @@ appointment_succession_law = {
 	}
 	flag = advanced_succession_law
 	flag = appointment_type_succession
-	modifier = {
-		glory_hound_opinion = -10
-		parochial_opinion = -5
-		player_heir_opinion = 20
-		eligible_child_except_player_heir_opinion = -5
-	}
 	pass_cost = {
 		prestige = change_succession_law_prestige_cost
 	}
@@ -791,13 +743,6 @@ theocratic_elective_succession_law = {
 		should_use_theocratic_elective_succession_law_trigger = yes
 	}
 
-	modifier = {
-		rite_creation_piety_cost_mult = 3 # Steers the Pope toward Bulls and Councils rather than editing rites directly
-		character_travel_speed = 15
-		character_travel_safety = 15 # He has to reach coronations and councils across Europe
-		enemy_hostile_scheme_success_chance_max_add = -20
-		enemy_hostile_scheme_success_chance_growth_add = -2 # The Curia around him makes murder harder
-	}
 }
 
 
@@ -1126,14 +1071,6 @@ clan_antagonistic_partition_succession_law = {
 	flag = house_unity_stage_antagonistic
 
 
-	modifier = {
-		dynasty_house_opinion = -10
-		glory_hound_opinion = 15
-		zealot_opinion = 10
-		belligerent_opinion = -10
-		player_heir_opinion = 10
-		eligible_child_except_player_heir_opinion = 5
-	}
 
 
 	widget_name = "widget_clan_law"
@@ -1201,13 +1138,6 @@ clan_competitive_partition_succession_law = {
 	flag = house_unity_stage_competitive
 
 
-	modifier = {
-		glory_hound_opinion = 10
-		zealot_opinion = 5
-		belligerent_opinion = -5
-		player_heir_opinion = 10
-		eligible_child_except_player_heir_opinion = 5
-	}
 
 
 	widget_name = "widget_clan_law"
@@ -1282,11 +1212,6 @@ clan_impassive_partition_succession_law = {
  }
 
 
-	modifier = {
-		glory_hound_opinion = 5
-		parochial_opinion = 5
-		player_heir_opinion = 15
-	}
 
 
 	widget_name = "widget_clan_law"
@@ -1351,11 +1276,6 @@ clan_friendly_partition_succession_law = {
  }
 
 
-	modifier = {
-		parochial_opinion = 10
-		courtly_opinion = 5
-		player_heir_opinion = 25
-	}
 
 
 	widget_name = "widget_clan_law"
@@ -1421,11 +1341,6 @@ clan_harmonious_partition_succession_law = {
  }
 
 
-	modifier = {
-		parochial_opinion = 15
-		courtly_opinion = 10
-		player_heir_opinion = 40
-	}
 
 
 	widget_name = "widget_clan_law"
@@ -1505,12 +1420,6 @@ celestial_appointment_succession_law = {
 	flag = advanced_succession_law
 	flag = appointment_type_succession
 	flag = appointment_with_level_requirement
-	modifier = {
-		glory_hound_opinion = -10
-		courtly_opinion = 5
-		player_heir_opinion = 20
-		eligible_child_except_player_heir_opinion = -5
-	}
 	pass_cost = {
 		prestige = change_succession_law_prestige_cost
 	}
@@ -1583,12 +1492,6 @@ celestial_military_appointment_succession_law = {
 	flag = advanced_succession_law
 	flag = appointment_type_succession
 	flag = appointment_with_level_requirement
-	modifier = {
-		glory_hound_opinion = 5
-		courtly_opinion = -10
-		player_heir_opinion = 20
-		eligible_child_except_player_heir_opinion = -5
-	}
 	pass_cost = {
 		prestige = change_succession_law_prestige_cost
 	}
@@ -1702,12 +1605,6 @@ japanese_appointment_succession_law = {
 	}
 	flag = advanced_succession_law
 	flag = appointment_type_succession
-	modifier = {
-		glory_hound_opinion = -10
-		parochial_opinion = -5
-		player_heir_opinion = 20
-		eligible_child_except_player_heir_opinion = -5
-	}
 	pass_cost = {
 		prestige = change_succession_law_prestige_cost
 	}
@@ -1781,12 +1678,6 @@ japanese_military_appointment_succession_law = {
 	}
 	flag = advanced_succession_law
 	flag = appointment_type_succession
-	modifier = {
-		glory_hound_opinion = 5
-		courtly_opinion = -10
-		player_heir_opinion = 20
-		eligible_child_except_player_heir_opinion = -5
-	}
 	pass_cost = {
 		prestige = change_succession_law_prestige_cost
 	}
@@ -1898,12 +1789,6 @@ meritocratic_appointment_succession_law = {
 	flag = advanced_succession_law
 	flag = appointment_type_succession
 	flag = appointment_with_level_requirement
-	modifier = {
-		glory_hound_opinion = -10
-		courtly_opinion = 5
-		player_heir_opinion = 20
-		eligible_child_except_player_heir_opinion = -5
-	}
 	pass_cost = {
 		prestige = change_succession_law_prestige_cost
 	}
@@ -1981,12 +1866,6 @@ meritocratic_military_appointment_succession_law = {
 	flag = advanced_succession_law
 	flag = appointment_type_succession
 	flag = appointment_with_level_requirement
-	modifier = {
-		glory_hound_opinion = -10
-		courtly_opinion = 5
-		player_heir_opinion = 20
-		eligible_child_except_player_heir_opinion = -5
-	}
 	pass_cost = {
 		prestige = change_succession_law_prestige_cost
 	}

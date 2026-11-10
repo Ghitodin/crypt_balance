@@ -70,7 +70,7 @@ open_minded_perk = {
 		flag = government_is_theocracy
 		invert_check = yes
 		different_culture_opinion = 5 # THE MOD
-
+		same_culture_opinion = -3 # THE MOD
 	}
 
 	
@@ -84,8 +84,9 @@ open_minded_perk = {
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
 		invert_check = yes
-		minority_opinion = 15
+		minority_opinion = 5
 		cultural_head_acceptance_gain_mult = 0.1 # THE MOD
+		zealot_opinion = -3 # THE MOD
 	}
 
 	
@@ -135,6 +136,7 @@ apostate_perk = {
 	character_modifier = {
 		different_faith_opinion = 5 # THE MOD
 		faith_conversion_piety_cost_mult = -0.75
+		same_faith_opinion = -3 # THE MOD
 	}
 
 	

@@ -46,7 +46,8 @@
 	
 
 		courtly_opinion = -4 # THE MOD
-}
+		clergy_opinion = 7 # THE MOD
+	}
 
 
 	government_character_modifier = {
@@ -386,8 +387,9 @@ church_and_state_perk = {
 
 	government_character_modifier = {
 		flag = government_is_nomadic
-		zealot_opinion = 50
-		same_faith_opinion = 15
+		zealot_opinion = 7
+		same_faith_opinion = 5
+		courtly_opinion = -4 # THE MOD
 	}
 
 	government_character_modifier = {
@@ -462,6 +464,7 @@ defender_of_the_faith_perk = {
 		tolerance_advantage_mod = 10
 		prowess_per_piety_level = 2
 		clergy_opinion = 12 # THE MOD
+		courtly_opinion = -4 # THE MOD
 	}
 
 	faith_character_modifier = {

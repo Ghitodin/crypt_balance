@@ -273,11 +273,8 @@ law_legacy_4 = {
 
 
 		happy_powerful_vassal_levy_contribution_mult = 0.05 # THE MOD
-
-
-	
-
-}
+		barons_and_minor_landholders_opinion = -3 # THE MOD
+	}
 
 
 }
@@ -527,11 +524,8 @@ glory_legacy_1 = {
 		ai_amenity_target_baseline = 0.2
 
 		glory_hound_opinion = 3 # THE MOD
-
-
-	
-
-}
+		parochial_opinion = -3 # THE MOD
+	}
 
 
 	effect = {

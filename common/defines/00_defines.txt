@@ -634,17 +634,11 @@ NCharacterOpinion = {
 
 
 
-	PIOUS = {
- -10 0 5 10 20 30 40 55 75 
-}
+	PIOUS = { -10 0 2 3 4 5 6 7 8 } # THE MOD
 
-	PRESTIGIOUS = {
- -10 0 5 10 20 30 
-}
+	PRESTIGIOUS = { -10 0 2 3 4 5 } # THE MOD
 
-	PIOUS_MAGNIFICENCE = {
- -5 0 3 5 10 15 20 25 35 
-}
+	PIOUS_MAGNIFICENCE = { -5 0 2 3 4 5 6 7 8 } # THE MOD
 
 	# TODO_PAM_DESIGN TIT-76476 Balance these numbers - These are opinion bonus on secular rulers towards theocratic clergy based on clergy piety level
 	PIOUS_CLERGY = { -5 0 3 5 10 15 20 25 35 } # secular opinion bonus towards clergy in theocratic clergy faiths

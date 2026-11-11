@@ -204,10 +204,10 @@ fear_tax_perk = {
 	government_character_modifier = {
 		flag = has_unique_government_perks
 		invert_check = yes
-		intimidated_vassal_tax_contribution_mult = 0.15
-		intimidated_vassal_levy_contribution_mult = 0.15
-		cowed_vassal_tax_contribution_mult = 0.3
-		cowed_vassal_levy_contribution_mult = 0.3
+		intimidated_vassal_tax_contribution_mult = 0.08
+		intimidated_vassal_levy_contribution_mult = 0.08
+		cowed_vassal_tax_contribution_mult = 0.12
+		cowed_vassal_levy_contribution_mult = 0.12
 	}
 	
 	government_character_modifier = {
@@ -247,7 +247,7 @@ forever_infamous_perk = {
 	}
 	
 	character_modifier = {
-		dread_decay_mult = -10
+		dread_decay_mult = -0.5
 	}
 	
 	effect = {

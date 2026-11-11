@@ -7,7 +7,7 @@ intimidated_from_faction_modifier = {
 				limit = {
 					$POWER$ < $THRESHOLD$
 				}
-				add = -50 # Notable deterrent, but Intimidated vassals should still join Factions if they hate you enough.
+				add = -25 # Intimidation discourages joining factions below their power threshold.
 			}
 		}
 		has_dread_level_towards = {
@@ -22,10 +22,10 @@ intimidated_from_faction_modifier = {
 				limit = {
 					$POWER$ < $THRESHOLD$
 				}
-				add = -1000 # Effectively a full blocker — Terrified vassals should never join Factions until they are powerful enough
+				add = -100 # Terror strongly discourages joining factions below their power threshold.
 			}
 			else = {
-				add = -100
+				add = -50
 			}
 		}
 		has_dread_level_towards = {

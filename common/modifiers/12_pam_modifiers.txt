@@ -302,8 +302,8 @@ pam_patron_saint_paul = {
 
 pam_patron_saint_john = {
 	icon = piety_positive
-	stewardship_per_piety_level = 1
-	stress_loss_per_piety_level = 0.1
+	stewardship = 1
+	stress_loss_per_piety_level = 0.05
 }
 
 pam_patron_saint_matthew = {

@@ -19,7 +19,7 @@
 @ecclesiastical_domicile_church_holding_build_gold_cost = -0.1
 @ecclesiastical_domicile_church_holding_build_speed = -0.1
 @ecclesiastical_domicile_clergy_opinion = 5
-@ecclesiastical_domicile_development_growth = 0.05
+@ecclesiastical_domicile_development_growth = 0.02
 @ecclesiastical_domicile_development_growth_factor = 0.05
 @ecclesiastical_domicile_domicile_external_slots_capacity_add = 6
 @ecclesiastical_domicile_main_domicile_monthly_gold_add_1 = 2
@@ -71,7 +71,7 @@
 @ecclesiastical_domicile_holy_order_hire_cost_mult_main = -0.15
 @ecclesiastical_domicile_learning_per_piety_level_main = 1
 @ecclesiastical_domicile_monthly_lifestyle_xp_gain_mult_main = 0.15
-@ecclesiastical_domicile_development_growth_factor_main = 0.1
+@ecclesiastical_domicile_development_growth_factor_main = 0.04
 @ecclesiastical_domicile_treasury_from_vassals_mult_main = 0.05
 @ecclesiastical_domicile_diplomacy_per_piety_level_main = 1
 @ecclesiastical_domicile_stewardship_per_piety_level_main = 1
@@ -2698,7 +2698,7 @@ church_school_01 = {
 	character_modifier = {
 		monthly_lifestyle_xp_gain_mult = 0.05
 		lifestyle_scholar_xp_gain_mult = @ecclesiastical_domicile_scholar_xp_mini
-		development_growth_factor = 0.02
+		development_growth_factor = 0.008
 		study_scripture_scheme_phase_duration_add = @ecclesiastical_domicile_study_scripture_speed_external
 		domicile_monthly_gold_add = @ecclesiastical_domicile_gold_add_external
 	}
@@ -2760,7 +2760,7 @@ church_school_02 = {
 	character_modifier = {
 		monthly_lifestyle_xp_gain_mult = 0.05
 		lifestyle_scholar_xp_gain_mult = @ecclesiastical_domicile_scholar_xp_mini
-		development_growth_factor = 0.035
+		development_growth_factor = 0.012
 		study_scripture_scheme_phase_duration_add = @ecclesiastical_domicile_study_scripture_speed_external
 		domicile_monthly_gold_add = @ecclesiastical_domicile_gold_add_external
 	}
@@ -2821,7 +2821,7 @@ church_school_03 = {
 	character_modifier = {
 		monthly_lifestyle_xp_gain_mult = 0.05
 		lifestyle_scholar_xp_gain_mult = @ecclesiastical_domicile_scholar_xp_mini
-		development_growth_factor = 0.05
+		development_growth_factor = 0.018
 		study_scripture_scheme_phase_duration_add = @ecclesiastical_domicile_study_scripture_speed_external
 		domicile_monthly_gold_add = @ecclesiastical_domicile_gold_add_external
 	}

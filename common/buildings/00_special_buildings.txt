@@ -2116,7 +2116,7 @@ theodosian_walls_01 = {
 		travel_danger = -20
 	}
 	county_modifier = {
-		development_growth = 0.2 # THE MOD
+		development_growth = 0.1 # THE MOD
 
 		development_growth_factor = 0.1 # THE MOD
 
@@ -2161,7 +2161,7 @@ aurelian_walls_01 = {
 		tax_mult = 0.15
 	}
 	county_modifier = {
-		development_growth = 0.15 # THE MOD
+		development_growth = 0.1 # THE MOD
 
 		development_growth_factor = 0.05 # THE MOD
 

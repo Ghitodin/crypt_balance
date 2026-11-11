@@ -1,0 +1,6 @@
+﻿l_english:
+ rule_crypt_balance_byzantium_government_867: "Byzantine Government in 867"
+ setting_crypt_balance_byzantium_867_administrative: "Administrative"
+ setting_crypt_balance_byzantium_867_administrative_desc: "The Byzantine Empire uses the standard game setup: administrative with Roads to Power, feudal without it."
+ setting_crypt_balance_byzantium_867_feudal: "Feudal"
+ setting_crypt_balance_byzantium_867_feudal_desc: "In 867, the Byzantine Emperor and landed administrative vassals start as feudal rulers. The imperial title uses Feudal Elective, and the empire's administrative family titles are removed."

@@ -1,0 +1,6 @@
+﻿l_russian:
+ rule_crypt_balance_byzantium_government_867: "Форма правления Византии в 867 году"
+ setting_crypt_balance_byzantium_867_administrative: "Бюрократическая"
+ setting_crypt_balance_byzantium_867_administrative_desc: "Обычный старт Византии: бюрократическое правление с Roads to Power, феодальное без этого дополнения."
+ setting_crypt_balance_byzantium_867_feudal: "Феодальная"
+ setting_crypt_balance_byzantium_867_feudal_desc: "В 867 году император и его административные вассалы с земельными владениями начинают игру с феодальным правлением. Для имперского титула действуют феодальные выборы, а административные семейные титулы империи убираются."

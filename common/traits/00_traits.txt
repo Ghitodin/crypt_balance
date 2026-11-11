@@ -1034,7 +1034,6 @@ family_first = {
 	dynasty_house_opinion = 10
 	close_relative_opinion = 15
 	stress_loss_mult = 0.2
-	domain_limit = 1
 
 	ruler_designer_cost = 50
 
@@ -1706,7 +1705,8 @@ avaricious = {
 	category = lifestyle
 
 	stewardship = 2
-	tax_mult = 0.15
+	tax_mult = 0.10
+	vassal_opinion = -5
 
 	culture_modifier = {
 		parameter = maritime_mercantilism_avaricious_bonus
@@ -1922,7 +1922,6 @@ theologian = {
 	learning = 2
 	diplomacy = 1
 	monthly_piety_gain_mult = 0.1
-	domain_limit = 1
 
 	ruler_designer_cost = 50
 

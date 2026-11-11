@@ -344,28 +344,6 @@ personal_touch_perk = {
 	parent = local_arbitration_perk
 	parent = realm_charts_perk
 
-	government_character_modifier = {
-		flag = government_uses_domain_limit
-		domain_limit = 1 #Apart from its immediate use this increases the places in which many of the other perks can apply.
-	}
-
-	government_character_modifier = {
-		flag = government_is_nomadic
-		domain_limit_max = 1
-	}
-	government_character_modifier = {
-		flag = government_is_mandala
-		domain_limit_max = 1
-	}
-	government_character_modifier = {
-		flag = government_is_japan_administrative
-		domain_limit_max = 1
-	}
-	government_character_modifier = {
-		flag = government_is_japan_feudal
-		domain_limit_max = 1
-	}
-
 	name = {
 		first_valid = {
 			triggered_desc = {

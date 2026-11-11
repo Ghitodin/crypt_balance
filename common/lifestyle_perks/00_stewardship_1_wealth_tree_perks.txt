@@ -418,7 +418,7 @@ at_any_cost_perk = {
 	government_character_modifier = {
 		flag = government_is_landless_adventurer
 		invert_check = yes
-		domain_tax_mult = 0.1
+		domain_tax_mult = 0.05
 	}
 }
 
@@ -436,6 +436,14 @@ avaricious_perk = {
 	trait = avaricious
 	effect = {
 		add_trait_force_tooltip = avaricious
+		if = {
+			limit = { has_trait = generous }
+			remove_trait = generous
+		}
+		if = {
+			limit = { NOT = { has_trait = greedy } }
+			add_trait_force_tooltip = greedy
+		}
 	}
 }
 

@@ -133,6 +133,7 @@ fp3_luxurious_bathhouse_modifier = {
 	stress_loss_mult = 0.25
 	courtier_and_guest_opinion = 15
 	courtly_opinion = 5 # THE MOD
+	zealot_opinion = -3 # THE MOD
 }
 
 fp3_less_luxurious_bathhouse_modifier = {
@@ -653,6 +654,7 @@ fp3_house_modifier_rebuilding_efforts = {
 	build_speed = -0.1
 	tax_mult = 0.1
 	parochial_opinion = 10 # THE MOD
+	glory_hound_opinion = -5 # THE MOD
 }
 
 fp3_house_modifier_frontier_ambitions = {
@@ -662,6 +664,7 @@ fp3_house_modifier_frontier_ambitions = {
 	levy_size = 0.2
 	men_at_arms_maintenance = -0.1
 	men_at_arms_recruitment_cost = -0.2
+	parochial_opinion = -5 # THE MOD
 }
 
 fp3_house_modifier_destroyed_the_caliphate = {

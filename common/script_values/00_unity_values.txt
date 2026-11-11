@@ -103,7 +103,7 @@ unity_antagonistic_invasion_cooldown_value = {
 }
 
 clan_powerful_vassal_no_alliance_opinion_penalty_value = {
-	value = -1 # The mod
+	value = -2 # THE MOD
 
 }
 clan_vassal_no_alliance_opinion_penalty_value = {

@@ -2529,7 +2529,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 
 		add = {
 
-			value = 10
+			value = 5 # THE MOD
 
 			if = {
 
@@ -2540,7 +2540,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 					}
 				}
 
-				add = 15
+				add = 5 # THE MOD
 
 			
 }
@@ -2554,7 +2554,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 					}
 				}
 
-				add = 20
+				add = 5 # THE MOD
 
 			
 }
@@ -2568,7 +2568,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 					}
 				}
 
-				add = 25
+				add = 5 # THE MOD
 
 			
 }
@@ -2693,7 +2693,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 
 		add = {
 
-			subtract = 10
+			subtract = 2 # THE MOD
 
 			if = {
  #Even less so if lower opinion.
@@ -2701,7 +2701,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 					scope:opinion_of_holder <= medium_negative_opinion
 				}
 
-				subtract = 15 #-25 total
+				subtract = 3 # THE MOD
 
 			
 }
@@ -2712,7 +2712,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 					scope:opinion_of_holder <= high_negative_opinion
 				}
 
-				subtract = 25 #-50 total
+				subtract = 4 # THE MOD
 
 			
 }
@@ -2723,7 +2723,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 					scope:opinion_of_holder <= very_high_negative_opinion
 				}
 
-				subtract = 50 #-100 total
+				subtract = 4 # THE MOD
 
 			
 }
@@ -2734,7 +2734,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 					has_relation_rival = scope:holder
 				}
 
-				subtract = 50 #-150 total
+				subtract = 7 # THE MOD
 
 			
 }
@@ -2765,7 +2765,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 
 		add = {
 
-			value = 10
+			value = 3 # THE MOD
 
 			if = {
  #Even more so if higher opinion.
@@ -2776,7 +2776,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 					}
 				}
 
-				add = 15 #25 total
+				add = 4 # THE MOD
 
 			
 }
@@ -2790,7 +2790,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 					}
 				}
 
-				add = 25 #50 total
+				add = 5 # THE MOD
 
 			
 }
@@ -2804,7 +2804,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 					}
 				}
 
-				add = 50 #100 total
+				add = 6 # THE MOD
 
 			
 }
@@ -2818,7 +2818,7 @@ elector_voting_pattern_opinion_feudal_elective_modifier = {
 					}
 				}
 
-				add = 50 #150 total
+				add = 6 # THE MOD
 
 			
 }

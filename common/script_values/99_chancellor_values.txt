@@ -345,6 +345,7 @@ chancellor_domestic_affairs_monthly_increase = {
 
 chancellor_domestic_affairs_tyranny_base = {
 	add = diplomacy
+	divide = 2 # THE MOD
 	#multiply = 2
 	min = 1
 }

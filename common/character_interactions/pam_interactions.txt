@@ -26008,10 +26008,12 @@ ecclesiastical_de_jure_shifting_interaction = {
 	cooldown = { years = 3 }
 
 	is_available = {
+		always = no # THE MOD
 		has_pam_dlc_trigger = yes
 	}
 
 	is_shown = {
+		always = no # THE MOD
 		scope:puppet_or_actor ?= {
 			highest_held_title_tier >= tier_kingdom
 			is_landed = yes
@@ -26036,6 +26038,7 @@ ecclesiastical_de_jure_shifting_interaction = {
 	}
 
 	is_valid_showing_failures_only = {
+		always = no # THE MOD
 		scope:puppet_or_actor = {
 			is_at_war = no
 			clergy_interaction_generic_piety_level_or_puppet_req_trigger = yes

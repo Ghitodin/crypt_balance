@@ -511,7 +511,7 @@ metsanvartija = {
 horse_archers = {
 	type = archer_cavalry
 	
-	damage = 36
+	damage = 30
 	toughness = 18
 	pursuit = 40
 	screen = 30

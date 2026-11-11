@@ -162,7 +162,7 @@ wagoners_and_consigners_modifier = {
 grand_cathedral_bonus_modifier = {
 	icon = county_modifier_development_positive
 	development_growth_factor = 0.15
-	tax_mult = 0.25
+	tax_mult = 0.125
 	build_piety_cost = -0.5
 }
 
@@ -309,7 +309,7 @@ pam_patron_saint_john = {
 pam_patron_saint_matthew = {
 	icon = piety_positive
 	stewardship = medium_skill_bonus
-	domain_tax_mult = 0.1
+	domain_tax_mult = 0.05
 }
 
 pam_patron_saint_mark = {
@@ -461,12 +461,12 @@ pam_grand_cathedral_02_started_modifier = {
 pam_grand_cathedral_02_completed_modifier = {
 	icon = piety_positive
 	character_spiritual_fulfillment_gain_mult = 0.3
-	same_faith_opinion = 15
+	same_faith_opinion = 5
 	holy_order_hire_cost_mult = -0.25
-	legitimacy_gain_mult = 0.15
+	legitimacy_gain_mult = 0.075
 	monthly_piety_gain_mult = 0.08
 	monthly_prestige_gain_mult = 0.08
-	monthly_dynasty_prestige_mult = 0.15
+	monthly_dynasty_prestige_mult = 0.075
 }
 
 pam_grand_cathedral_family_contributed_south_modifier = {
@@ -978,12 +978,12 @@ consecrated_king_modifier = {
 }
 consecrated_king_modifier_small = {
 	icon = piety_positive
-	zealot_opinion = 10
-	same_faith_opinion = 5
-	glory_hound_same_faith_opinion = 5
-	clergy_opinion = 10
+	zealot_opinion = 4
+	same_faith_opinion = 2
+	glory_hound_same_faith_opinion = 2
+	clergy_opinion = 4
 	levy_reinforcement_rate_same_faith = 0.1
-	domain_tax_same_faith_mult = 0.05
+	domain_tax_same_faith_mult = 0.025
 	different_faith_opinion = -10
 	different_faith_county_opinion_mult = 0.1
 }

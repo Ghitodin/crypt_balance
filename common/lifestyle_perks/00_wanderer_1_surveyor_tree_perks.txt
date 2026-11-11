@@ -68,8 +68,8 @@ local_inspection_perk = {
 
 	government_character_modifier = {
 		flag = government_is_settled
-		domain_tax_mult = 0.10
-		barons_and_minor_landholders_tax_contribution_mult = 0.1
+		domain_tax_mult = 0.05
+		barons_and_minor_landholders_tax_contribution_mult = 0.05
 	}
 
 	name = {

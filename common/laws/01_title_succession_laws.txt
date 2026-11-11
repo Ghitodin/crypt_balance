@@ -46,14 +46,9 @@ feudal_elective_succession_law = {
 		prestige = change_title_succession_law_prestige_cost
 	}
 
-# THE MOD: forced elections on ordinary imperial governments
-can_remove_from_title = {
-    NOT = {
-        tier = tier_empire
-        this != title:e_hre
-        holder = { crypt_balance_partition_government_trigger = yes }
-    }
-}
+	can_remove_from_title = {
+		crypt_balance_mandatory_feudal_elective_title_trigger = no
+	}
 }
 
 
@@ -110,6 +105,7 @@ saxon_elective_succession_law = {
 		culture = { has_cultural_parameter = witenagemot_succession_enabled }
 	}
 	can_title_have = {
+		crypt_balance_mandatory_feudal_elective_title_trigger = no
 		can_title_have_law_general_trigger = yes
 	}
 	succession = {
@@ -145,6 +141,7 @@ scandinavian_elective_succession_law = {
 		culture = { has_cultural_parameter = scandinavian_elective_enabled }
 	}
 	can_title_have = {
+		crypt_balance_mandatory_feudal_elective_title_trigger = no
 		can_title_have_law_general_trigger = yes
 	}
 	succession = {
@@ -186,6 +183,7 @@ gaelic_elective_succession_law = {
 		}
 	}
 	can_title_have = {
+		crypt_balance_mandatory_feudal_elective_title_trigger = no
 		can_title_have_law_general_trigger = yes
 	}
 	succession = {
@@ -221,6 +219,7 @@ tribal_elective_succession_law = { #FOR FP3
 		culture = { has_cultural_parameter = tribal_elective_enabled }
 	}
 	can_title_have = {
+		crypt_balance_mandatory_feudal_elective_title_trigger = no
 		can_title_have_law_general_trigger = yes
 	}
 	succession = {
@@ -316,6 +315,7 @@ confederation_elective_succession_law = {
 	index = 9
 
 	can_title_have = {
+		crypt_balance_mandatory_feudal_elective_title_trigger = no
 		tier >= tier_kingdom
 	}
 	should_show_for_title = {

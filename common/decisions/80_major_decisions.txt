@@ -1557,6 +1557,7 @@ adopt_special_succession_decision = {
 			any_held_title = {
 
 				title_tier >= kingdom
+				crypt_balance_mandatory_feudal_elective_title_trigger = no
 
 				NOR = {
 					has_title_law_flag = elective_succession_law
@@ -1634,6 +1635,7 @@ adopt_special_succession_decision = {
 				highest_held_title_tier >= tier_empire
 				any_held_title = {
 					title_tier >= empire
+					crypt_balance_mandatory_feudal_elective_title_trigger = no
 					NOR = {
 						custom_description = {
 							text = found_kingdom_decision_advanced_succesion

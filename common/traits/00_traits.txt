@@ -134,7 +134,7 @@ education_intrigue_5 = {
 	monthly_diplomacy_lifestyle_xp_gain_mult = 0.1 # THE MOD
 
 	owned_hostile_scheme_success_chance_max_add = 10
-	flag = agent_acceptance_25
+	#flag = agent_acceptance_25 # THE MOD
 	# THE MOD: removed new vanilla education/perk domain modifier
 
 
@@ -295,8 +295,8 @@ education_diplomacy_5 = {
 	monthly_martial_lifestyle_xp_gain_mult = 0.1 # THE MOD
 
 	owned_personal_scheme_success_chance_max_add = 10
-	flag = offer_vassalisation_25
-	flag = better_war_hostages
+	#flag = offer_vassalisation_25 # THE MOD
+	#flag = better_war_hostages # THE MOD
 	# THE MOD: removed new vanilla education/perk domain modifier
 
 
@@ -16645,7 +16645,6 @@ tourney_participant = {
 
 			100 = {
 				prowess_per_stress_level = 4
-				men_at_arms_limit = 2
 				#men_at_arms_limit = 2 # THE MOD
 				knight_limit = 1 # THE MOD
 			

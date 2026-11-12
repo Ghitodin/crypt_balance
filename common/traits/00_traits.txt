@@ -17473,7 +17473,7 @@ knight_errant = {
 
 	knight_limit = 2
 	knight_effectiveness_per_prowess = 0.01
-	glory_hound_opinion = 15
+	glory_hound_opinion = 5 # THE MOD
 
 	culture_modifier = {
 		parameter = knight_errant_trait_bonuses
@@ -17484,7 +17484,6 @@ knight_errant = {
 		50 = { # Defender
 			prowess_per_prestige_level = 1
 			knight_limit = 1
-			men_at_arms_limit = 1
 			culture_modifier = {
 				parameter = knight_errant_trait_bonuses
 				tourney_participant_xp_gain_mult = 0.15
@@ -17493,7 +17492,6 @@ knight_errant = {
 		100 = { # Rightdoer
 			prowess_per_prestige_level = 2
 			knight_limit = 2
-			men_at_arms_limit = 2
 			culture_modifier = {
 				parameter = knight_errant_trait_bonuses
 				tourney_participant_xp_gain_mult = 0.25

@@ -8242,24 +8242,18 @@ ecclesiastic_grant_claim_interaction = {
 	can_be_picked_title = {
 		scope:target = {
 			tier >= tier_county
+			tier <= tier_duchy
 			is_landless_type_title = no
 		}
 		NOT = {
 			scope:puppet_or_actor = { has_claim_on = scope:target }
 		}
-		trigger_if = {
-			limit = {
-				scope:secondary_recipient ?= {
-					this != scope:puppet_or_actor.religious_head_or_challenger
-				}
-			}
-			custom_tooltip = {
-				text = clergy_claims_hof_only_tt
-				scope:target = { tier < tier_kingdom }
-			}
-		}
 	}
 	is_valid_showing_failures_only = {
+		trigger_if = {
+			limit = { exists = scope:target }
+			scope:target = { tier <= tier_duchy }
+		}
 		scope:puppet_or_actor = {
 			clergy_interaction_generic_piety_level_or_puppet_req_trigger = yes
 			
@@ -8396,7 +8390,7 @@ ecclesiastic_grant_claim_interaction = {
 		trigger_if = {
 			limit = { scope:is_puppet_action ?= yes }
 			scope:puppet_or_actor = {
-				piety >= pam_ecclesiastic_grant_claim_cost_value
+				piety >= crypt_balance_ecclesiastic_grant_claim_cost_value
 			}
 		}
 	}
@@ -8409,10 +8403,10 @@ ecclesiastic_grant_claim_interaction = {
 			limit = { scope:is_puppet_action ?= yes }
 			scope:puppet_or_actor = {
 				if = {
-					limit = { pam_ecclesiastic_grant_claim_cost_value > 0 }
+					limit = { crypt_balance_ecclesiastic_grant_claim_cost_value > 0 }
 					add_piety = {
 						value = {
-							add = pam_ecclesiastic_grant_claim_cost_value
+							add = crypt_balance_ecclesiastic_grant_claim_cost_value
 							max = piety
 							multiply = -1
 						}
@@ -8453,7 +8447,7 @@ ecclesiastic_grant_claim_interaction = {
 
 	cost = {
 		piety = {
-			value = pam_ecclesiastic_grant_claim_cost_value
+			value = crypt_balance_ecclesiastic_grant_claim_cost_value
 			if = {
 				limit = { scope:is_puppet_action ?= yes }
 				multiply = 0

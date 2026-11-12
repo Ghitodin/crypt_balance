@@ -1308,3 +1308,13 @@ request_clerical_chastity_interaction_cost_value = {
 	}
 }
 
+crypt_balance_ecclesiastic_grant_claim_cost_value = {
+	value = pam_ecclesiastic_grant_claim_cost_value
+	if = {
+		limit = { scope:target.tier = tier_county }
+		multiply = 2
+	}
+	else = {
+		multiply = 3
+	}
+}

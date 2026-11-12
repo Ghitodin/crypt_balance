@@ -399,7 +399,6 @@ pam_palais_de_papes_01 = {
 	}
 
 	province_modifier = {
-		monthly_income = 3
 	}
 
 	on_complete = {

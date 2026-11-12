@@ -1516,6 +1516,42 @@ marriage_ai_accept_modifier = { ###MARRIAGE SCRIPTED MODIFIERS###
 		add = -150
 		desc = ABANDONED_SPOUSE_MODIFIER
 	}
+	# THE MOD: Cubic military strength modifier for marriages that create an alliance.
+	modifier = {
+		add = {
+			value = 1
+			subtract = {
+				value = scope:recipient.max_military_strength
+				divide = { value = scope:puppet_or_actor.max_military_strength min = 1 }
+			}
+			multiply = 4
+			multiply = {
+				value = 1
+				subtract = {
+					value = scope:recipient.max_military_strength
+					divide = { value = scope:puppet_or_actor.max_military_strength min = 1 }
+				}
+			}
+			multiply = 4
+			multiply = {
+				value = 1
+				subtract = {
+					value = scope:recipient.max_military_strength
+					divide = { value = scope:puppet_or_actor.max_military_strength min = 1 }
+				}
+			}
+			multiply = 4
+			max = 50
+		}
+		scope:recipient = {
+			yields_alliance = {
+				candidate = scope:secondary_recipient
+				target = scope:puppet_or_actor
+				target_candidate = scope:secondary_actor
+			}
+		}
+		desc = offer_vassalization_interaction_aibehavior_power_tt
+	}
 	#########
 	# HOOKS #
 	#########

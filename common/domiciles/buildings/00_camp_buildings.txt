@@ -127,6 +127,7 @@ camp_main_02 = {
 
 	character_modifier = {
 		domicile_external_slots_capacity_add = 1
+		men_at_arms_cap = 1
 		enemy_hostile_scheme_phase_duration_add = miniscule_scheme_phase_duration_malus_value
 		character_travel_safety_mult = 0.02
 		provisions_capacity_add = 100

@@ -5,3 +5,5 @@
  THEY_CAN_USE_THE_CLAIM_THRONE_INTERACTION_REWORKED:0 "[CHARACTER.GetShortUIName|U] can designate his [heir|E]"
  crypt_balance_papal_war_restriction: "Papal War Restriction"
  crypt_balance_papal_war_restriction_desc: "The Pope cannot declare ordinary offensive wars."
+ crypt_balance_fill_vacant_chaplain_interaction: "I Need a New [actor.GetCouncillorPosition( 'councillor_court_chaplain' ).GetPositionName]"
+ crypt_balance_fill_vacant_chaplain_interaction_desc: "Fill the vacant council seat for free. If no courtier is eligible, a new cleric will join your court."

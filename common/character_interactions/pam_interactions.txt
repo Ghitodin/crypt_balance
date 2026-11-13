@@ -2437,14 +2437,11 @@ request_realm_priest_replacement_interaction = {
 	}
 
 	is_available = {
-		# Temporal/Conditional use council Appoint, which fires on_fired_from_position instead
-		NOT = { faith = { has_doctrine_parameter = clerical_appointment_ruler_can_replace_ecc } }
 		government_allows = council
 		# Nomads have no Court Chaplain position to replace, so they cannot request a new Realm Priest
 		NOT = { government_has_flag = government_is_nomadic }
 		# The Minister of Rites is appointed through the ministry, not by petitioning the clergy
 		tgp_has_access_to_ministry_trigger = no
-		has_pam_dlc_trigger = yes
 	}
 
 	is_shown = {
@@ -2456,102 +2453,8 @@ request_realm_priest_replacement_interaction = {
 		}
 	}
 
-	cooldown_against_recipient = { years = 5 }
-
-	is_valid_showing_failures_only = {
-		scope:actor = {
-			trigger_if = {
-				limit = {
-					NOT = {
-						government_has_flag = government_is_theocracy
-					}
-				}
-				custom_tooltip = {
-					text = piety_level_or_external_puppet_req_tt
-					OR = {
-						exists = puppet:external_theological_agent_puppet
-						piety_level >= 3
-					}
-				}
-			}
-			trigger_else = {
-				piety_level >= 1
-			}
-			pam_antipope_clerical_request_trigger = { RECIPIENT = scope:recipient }
-			custom_tooltip = {
-				text = pam_blocked_by_promised_pilgrimage_tt
-				NOT = { has_character_modifier = promised_pilgrimage_to_clergy_modifier }
-			}
-		}
-		custom_tooltip = {
-			text = recipient_will_not_replace_self_tt
-			scope:recipient != scope:actor.cp:councillor_court_chaplain
-		}
-	}
-
-	can_send = {
-		custom_tooltip = {
-			text = recipient_will_not_replace_self_tt
-			scope:recipient != scope:actor.cp:councillor_court_chaplain
-		}
-	}
-
-	cost = {
-		piety = {
-			value = 0
-			# Change the piety loss amount based on the candidate's education level
-			if = {
-				limit = {
-					scope:secondary_recipient ?= { has_education_rank_trigger = { RANK = 1 OPERATOR = equals } }
-				}
-				add = minor_piety_value
-			}
-			if = {
-				limit = {
-					scope:secondary_recipient ?= { has_education_rank_trigger = { RANK = 2 OPERATOR = equals } }
-				}
-				add = medium_piety_value
-			}
-			if = {
-				limit = {
-					scope:secondary_recipient ?= { has_education_rank_trigger = { RANK = 3 OPERATOR = equals } }
-				}
-				add = major_piety_value
-			}
-			if = {
-				limit = {
-					scope:secondary_recipient ?= { has_education_rank_trigger = { RANK = 4 OPERATOR = equals } }
-				}
-				add = massive_piety_value
-			}
-			if = {
-				limit = {
-					scope:secondary_recipient ?= { has_education_rank_trigger = { RANK = 5 OPERATOR = equals } }
-				}
-				add = monumental_piety_value
-			}
-			#Costs more to send for your monk relatives
-			if = {
-				limit = {
-					scope:secondary_recipient = {
-						NOR = {
-							is_vassal_or_below_of = scope:actor
-							is_courtier_of = scope:actor
-						}
-					}
-				}
-				multiply = 1.5
-			}
-			if = {
-				limit = {
-					scope:actor = {
-						domicile ?= { has_domicile_parameter = estate_cheaper_realm_priest }
-					}
-				}
-				multiply = ecclesiastical_domicile_cheaper_realm_priest_mult
-			}
-		}
-	}
+	auto_accept = yes
+	use_diplomatic_range = no
 
 	on_accept = {
 		scope:actor = {
@@ -2567,7 +2470,7 @@ request_realm_priest_replacement_interaction = {
 				}
 				add_courtier = scope:secondary_recipient # Move the character to the court first if he's from another court and not a ruler.
 			}
-			cp:councillor_court_chaplain = {
+			cp:councillor_court_chaplain ?= {
 				save_scope_as = old_chaplain
 			}
 			# Flag so on_fired_from_position does not treat this as the crown acting
@@ -2591,25 +2494,14 @@ request_realm_priest_replacement_interaction = {
 						opinion = 40
 					}
 				}
-				if = {
-					limit = {
-						scope:use_hook = yes
-						has_usable_hook = scope:recipient
-					}
-					use_hook = scope:recipient
-				}
 			}
-			scope:old_chaplain = {
+			scope:old_chaplain ?= {
 				add_opinion = { # Make sure your kicked realm priest is pissed
 					target = scope:actor
 					modifier = fp3_resentful_opinion
 					opinion = -40
 				}
 			}
-		}
-		pam_offer_pilgrimage_effect = {
-			ACTOR = scope:actor
-			CLERIC = scope:recipient
 		}
 		# Catalysts
 		if = {
@@ -2622,397 +2514,6 @@ request_realm_priest_replacement_interaction = {
 			situation:the_christian_church = { trigger_situation_catalyst = catalyst_the_christian_church_requested_realm_priest_replacement }
 		}
 	}
-
-	on_decline = {
-
-	}
-
-	auto_accept = {
-		# Using a hook should make him auto accept
-		custom_description = {
-			text = "spending_hook"
-			subject = scope:actor
-			object = scope:recipient
-			scope:use_hook = yes
-			scope:actor = { has_strong_hook = scope:recipient }
-		}
-	}
-
-	ai_accept = {
-		base = 0
-
-		celestial_hierarchy_acceptance_modifier = {
-			ACTOR = scope:puppet_or_actor
-			RECIPIENT = scope:recipient
-		}
-
-		# Weak hook: extra points
-		modifier = {
-			scope:use_hook = yes
-			add = 200
-			scope:actor = { NOT = { has_strong_hook = scope:recipient } }
-			desc = SCHEME_WEAK_HOOK_USED
-		}
-
-		modifier = {
-			add = pam_offer_pilgrimage_acceptance_value
-			scope:offer_pilgrimage = yes
-			desc = OFFER_PILGRIMAGE_INTERACTION_OPTION_REASON
-		}
-
-		# Respect the liege
-		modifier = {
-			add = 100
-			scope:recipient = { target_is_liege_or_above = scope:actor }
-			desc = LIEGE_REASON
-		}
-
-		modifier = {
-			add = ecclesiastical_domicile_acceptance_minor_value_1
-			desc = ESTATE_REALM_PRIEST_REASON
-			scope:actor = {
-				domicile ?= {
-					has_domicile_parameter = estate_easier_realm_priest_replacement_1
-				}
-			}
-		}
-		modifier = {
-			add = ecclesiastical_domicile_acceptance_minor_value_2
-			desc = ESTATE_REALM_PRIEST_REASON
-			scope:actor = {
-				domicile ?= {
-					has_domicile_parameter = estate_easier_realm_priest_replacement_2
-				}
-			}
-		}
-		modifier = {
-			add = ecclesiastical_domicile_acceptance_minor_value_3
-			desc = ESTATE_REALM_PRIEST_REASON
-			scope:actor = {
-				domicile ?= {
-					has_domicile_parameter = estate_easier_realm_priest_replacement_3
-				}
-			}
-		}
-		modifier = {
-			add = ecclesiastical_domicile_acceptance_micro_value_1
-			desc = ESTATE_SEMINARY_REASON
-			scope:actor = {
-				domicile ?= {
-					has_domicile_parameter = estate_confessor_seminary_1
-				}
-			}
-		}
-		modifier = {
-			add = ecclesiastical_domicile_acceptance_micro_value_2
-			desc = ESTATE_SEMINARY_REASON
-			scope:actor = {
-				domicile ?= {
-					has_domicile_parameter = estate_confessor_seminary_2
-				}
-			}
-		}
-		modifier = {
-			add = ecclesiastical_domicile_acceptance_micro_value_3
-			desc = ESTATE_SEMINARY_REASON
-			scope:actor = {
-				domicile ?= {
-					has_domicile_parameter = estate_confessor_seminary_3
-				}
-			}
-		}
-		ecclesiastical_domicile_cathedral_awe_modifier = yes
-
-		# Actor is from the recipient's house
-		modifier = {
-			add = 10
-			exists = scope:actor.house
-			scope:recipient = {
-				OR = {
-					is_close_family_of = scope:actor
-					is_extended_family_of = scope:actor
-				}
-			}
-			desc = YOU_ARE_MY_HOUSE_MEMBER
-		}
-
-		# Candidate is from the recipient's house
-		modifier = {
-			add = 10
-			exists = scope:secondary_recipient
-			exists = scope:secondary_recipient.house
-			scope:recipient = {
-				OR = {
-					is_close_family_of = scope:secondary_recipient
-					is_extended_family_of = scope:secondary_recipient
-				}
-			}
-			desc = THEY_ARE_MY_HOUSE_MEMBER
-		}
-
-		# I have sinful traits
-		modifier = {
-			add = {
-				add = -10
-				multiply = scope:actor.num_sinful_traits
-			}
-			scope:actor.num_sinful_traits > 0
-			desc = I_AM_SINFUL
-		}
-
-		# Candidate has sinful traits
-		modifier = {
-			exists = scope:secondary_recipient
-			add = {
-				add = -10
-				multiply = scope:secondary_recipient.num_sinful_traits
-			}
-			scope:secondary_recipient.num_sinful_traits > 0
-			desc = THEY_ARE_SINFUL
-		}
-
-		# I have virtuous traits
-		modifier = {
-			add = {
-				add = 10
-				multiply = scope:actor.num_virtuous_traits
-			}
-			scope:actor.num_virtuous_traits > 0
-			desc = I_AM_VIRTUOUS
-		}
-
-		# Candidate has virtuous traits
-		modifier = {
-			exists = scope:secondary_recipient
-			add = {
-				add = 10
-				multiply = scope:secondary_recipient.num_virtuous_traits
-			}
-			scope:secondary_recipient.num_virtuous_traits > 0
-			desc = THEY_ARE_VIRTUOUS
-		}
-
-		# Religious superior's opinion of the actor matters!
-		opinion_modifier = {
-			opinion_target = scope:actor
-			who = scope:recipient
-			multiplier = 1
-			desc = AI_OPINION_REASON
-		}
-
-		# Religious Superior likes candidate more than the realm priest
-		modifier = {
-			add = 20
-			exists = scope:secondary_recipient
-			scope:recipient = {
-				save_temporary_opinion_value_as = {
-					name = secondary_recipient_opinion
-					target = scope:secondary_recipient
-				}
-				save_temporary_opinion_value_as = {
-					name = realm_priest_opinion
-					target = scope:actor.cp:councillor_court_chaplain
-				}
-			}
-			scope:secondary_recipient_opinion > {
-			   add = scope:realm_priest_opinion
-			   add = 20
-			}
-			desc = AI_OPINION_REASON_CANDIDATE_OVER_REALM_PRIEST
-		}
-
-		# Religious Superior likes realm priest more than the candidate
-		modifier = {
-			add = -20
-			exists = scope:secondary_recipient
-			scope:recipient = {
-				save_temporary_opinion_value_as = {
-					name = secondary_recipient_opinion
-					target = scope:secondary_recipient
-				}
-				save_temporary_opinion_value_as = {
-					name = realm_priest_opinion
-					target = scope:actor.cp:councillor_court_chaplain
-				}
-			}
-			scope:realm_priest_opinion > {
-			   add = scope:secondary_recipient_opinion
-			   add = 20
-			}
-			desc = AI_OPINION_REASON_REALM_PRIEST_OVER_CANDIDATE
-		}
-
-		modifier = { # A trait in common with the candidate
-			add = 5
-			exists = scope:secondary_recipient
-			scope:recipient = {
-				number_of_personality_traits_in_common = {
-					target = scope:secondary_recipient
-					value = 1
-				}
-			}
-			desc = AI_COMMON_TRAITS
-		}
-
-		modifier = { # Two trait in common
-			add = 10
-			exists = scope:secondary_recipient
-			scope:recipient = {
-				number_of_personality_traits_in_common = {
-					target = scope:secondary_recipient
-					value = 2
-				}
-			}
-			desc = AI_COMMON_TRAITS
-		}
-
-		modifier = { # Three traits in common
-			add = 15
-			exists = scope:secondary_recipient
-			scope:recipient = {
-				number_of_personality_traits_in_common = {
-					target = scope:secondary_recipient
-					value = 3
-				}
-			}
-			desc = AI_COMMON_TRAITS
-		}
-
-		# Modifier based on Piety Level of the actor
-		modifier = {
-			add = {
-				add = 5
-				multiply = scope:actor.piety_level
-			}
-			scope:actor.piety_level > 1
-			desc = I_AM_PIOUS
-		}
-
-		# Modifier based on Piety Level of the candidate
-		modifier = {
-			exists = scope:secondary_recipient
-			add = {
-				add = 5
-				multiply = scope:secondary_recipient.piety_level
-			}
-			scope:secondary_recipient.piety_level > 1
-			desc = THEY_ARE_PIOUS
-		}
-
-		# More likely to accept if you have an alliance
-		modifier = {
-			add = 40
-			scope:actor = { is_allied_to = scope:recipient }
-			desc = AI_HAS_ALLIANCE
-		}
-
-		# Fs
-		modifier = {
-			add = 25
-			scope:recipient = {
-				has_relation_friend = scope:actor
-			}
-			desc = WE_ARE_FRIENDS
-		}
-
-		# BFFs
-		modifier = {
-			add = 50
-			scope:recipient = {
-				has_relation_best_friend = scope:actor
-			}
-			desc = WE_ARE_BEST_FRIENDS
-		}
-
-		# Take dread into account
-		modifier = {
-			add = 50
-			scope:recipient = {
-				target_is_liege_or_above = scope:actor
-				has_dread_level_towards = {
-					target = scope:actor
-					level = 1
-				}
-			}
-			desc = INTIMIDATED_REASON
-		}
-
-		modifier = {
-			add = 100
-			scope:recipient = {
-				target_is_liege_or_above = scope:actor
-				has_dread_level_towards = {
-					target = scope:actor
-					level = 2
-				}
-			}
-			desc = COWED_REASON
-		}
-
-		# Below 10 Learning for negative, Above 10 Learning for positive
-		modifier = {
-			add = {
-				value = scope:secondary_recipient.learning
-				subtract = 10
-				multiply = 2
-			}
-			trigger = {
-				scope:secondary_recipient ?= {
-					learning != 10
-				}
-			}
-			desc = THEY_HAVE_LEARNING_SKILL_REASON
-		}
-
-		# Is a monk
-		modifier = {
-			add = 25
-			scope:secondary_recipient ?= {
-				has_trait = erudite
-			}
-			desc = THEY_HAVE_ERUDITE_TRAIT
-		}
-	}
-
-	send_option = {
-		is_shown = {
-			scope:recipient != scope:actor
-		}
-		is_valid = {
-			scope:actor = {
-				has_usable_hook = scope:recipient
-			}
-			trigger_if = {
-				limit = {
-					scope:recipient = {
-						is_ai = no
-					}
-				}
-				scope:actor = { is_ai = no }
-			}
-		}
-		flag = use_hook
-		localization = EDUCATION_HOOK
-	}
-
-	send_option = {
-		is_shown = {
-			pam_offer_pilgrimage_option_shown_trigger = { ACTOR = scope:actor }
-		}
-		is_valid = {
-			pam_offer_pilgrimage_option_valid_trigger = { ACTOR = scope:actor }
-		}
-		flag = offer_pilgrimage
-		localization = OFFER_PILGRIMAGE_INTERACTION_OPTION
-	}
-
-	should_use_extra_icon = {
-		scope:actor = { has_usable_hook = scope:recipient }
-	}
-
-	extra_icon = "gfx/interface/icons/character_interactions/hook_icon.dds"
-
-	send_options_exclusive = no
 
 	ai_targets = {
 		ai_recipients = realm_priest_superior
@@ -3030,11 +2531,13 @@ request_realm_priest_replacement_interaction = {
 	ai_will_do = {
 		base = 0
 		opinion_modifier = { # I dislike my realm priest
+			trigger = { exists = scope:actor.cp:councillor_court_chaplain }
 			opinion_target = scope:actor.cp:councillor_court_chaplain
 			who = scope:actor
 			multiplier = -1
 		}
 		opinion_modifier = { # My realm priest dislikes me
+			trigger = { exists = scope:actor.cp:councillor_court_chaplain }
 			opinion_target = scope:actor
 			who = scope:actor.cp:councillor_court_chaplain
 			multiplier = -1
@@ -3044,6 +2547,53 @@ request_realm_priest_replacement_interaction = {
 			desc = request_realm_priest_replacement_ai_different_rite
 			exists = scope:actor.cp:councillor_court_chaplain
 			scope:actor.cp:councillor_court_chaplain.rite != scope:actor.rite
+		}
+	}
+}
+
+crypt_balance_fill_vacant_chaplain_interaction = {
+	category = interaction_category_religion
+	icon = icon_request_priest
+	common_interaction = yes
+	desc = crypt_balance_fill_vacant_chaplain_interaction_desc
+	auto_accept = yes
+
+	is_available = {
+		government_allows = council
+		NOT = { government_has_flag = government_is_nomadic }
+		tgp_has_access_to_ministry_trigger = no
+		NOT = { exists = cp:councillor_court_chaplain }
+	}
+
+	is_shown = { scope:recipient = scope:actor }
+
+	can_send = { NOT = { exists = scope:actor.cp:councillor_court_chaplain } }
+
+	on_accept = {
+		scope:actor = {
+			random_courtier = {
+				limit = {
+					can_be_court_chaplain_trigger = { COURT_OWNER = scope:actor }
+					is_councillor = no
+				}
+				save_scope_as = crypt_balance_new_chaplain
+			}
+			if = {
+				limit = { NOT = { exists = scope:crypt_balance_new_chaplain } }
+				create_character = {
+					template = priest_character_template
+					employer = scope:actor
+					faith = scope:actor.faith
+					rite = scope:actor.rite
+					culture = scope:actor.culture
+					gender_female_chance = scope_actor_faith_clergy_gender_female_chance
+					save_scope_as = crypt_balance_new_chaplain
+				}
+			}
+			assign_councillor_type = {
+				type = councillor_court_chaplain
+				target = scope:crypt_balance_new_chaplain
+			}
 		}
 	}
 }

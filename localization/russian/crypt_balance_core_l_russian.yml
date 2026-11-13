@@ -5,3 +5,5 @@
  THEY_CAN_USE_THE_CLAIM_THRONE_INTERACTION_REWORKED:0 "[CHARACTER.GetShortUIName|U] может назначить своего [heir|El]а"
  crypt_balance_papal_war_restriction: "Ограничение папских войн"
  crypt_balance_papal_war_restriction_desc: "Папа не может объявлять обычные наступательные войны."
+ crypt_balance_fill_vacant_chaplain_interaction: "Мне нужен новый [actor.GetCouncillorPosition( 'councillor_court_chaplain' ).GetPositionName]"
+ crypt_balance_fill_vacant_chaplain_interaction_desc: "Бесплатно заполнить вакантное место в совете. Если среди придворных нет подходящего кандидата, ко двору присоединится новый священнослужитель."

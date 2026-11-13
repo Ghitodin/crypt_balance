@@ -20611,9 +20611,9 @@ ep3_laamp_decision_event.1104 = {
 	}
 
 	trigger = {
-		has_variable = zealous_missionary_start
+		has_character_flag = zealous_missionary_start
 		NOT = {
-			has_variable = zealous_missionary_timer
+			has_character_flag = zealous_missionary_timer
 		}
 	}
 

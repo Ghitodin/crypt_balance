@@ -1,0 +1,61 @@
+on_game_start_after_lobby = { on_actions = { crypt_balance_start_existing_camp_upkeep } }
+yearly_global_pulse = { on_actions = { crypt_balance_start_existing_camp_upkeep } }
+quarterly_playable_pulse = { on_actions = { crypt_balance_start_camp_upkeep } }
+on_government_change = { on_actions = { crypt_balance_start_camp_upkeep } }
+on_title_gain = { on_actions = { crypt_balance_start_camp_upkeep } }
+on_title_lost = { on_actions = { crypt_balance_start_camp_upkeep } }
+
+crypt_balance_start_existing_camp_upkeep = {
+	effect = {
+		every_ruler = {
+			limit = { is_landless_adventurer = yes }
+			trigger_event = { on_action = crypt_balance_start_camp_upkeep }
+		}
+	}
+}
+
+crypt_balance_start_camp_upkeep = {
+	trigger = {
+		is_landless_adventurer = yes
+		is_landed = no
+		exists = domicile
+		NOT = { has_character_flag = crypt_balance_camp_upkeep_scheduled }
+	}
+	effect = {
+		add_character_flag = crypt_balance_camp_upkeep_scheduled
+		trigger_event = {
+			on_action = crypt_balance_pay_camp_upkeep
+			months = 1
+		}
+	}
+}
+
+crypt_balance_pay_camp_upkeep = {
+	effect = {
+		if = {
+			limit = {
+				is_landless_adventurer = yes
+				is_landed = no
+				exists = domicile
+			}
+			save_scope_value_as = {
+				name = crypt_balance_camp_upkeep
+				value = crypt_balance_monthly_camp_upkeep_value
+			}
+			domicile = {
+				change_provisions = {
+					value = scope:crypt_balance_camp_upkeep
+					max = provisions
+					multiply = -1
+				}
+			}
+			trigger_event = {
+				on_action = crypt_balance_pay_camp_upkeep
+				months = 1
+			}
+		}
+		else = {
+			remove_character_flag = crypt_balance_camp_upkeep_scheduled
+		}
+	}
+}

@@ -1,0 +1,11 @@
+crypt_balance_monthly_camp_upkeep_value = {
+	value = 0
+	every_maa_regiment = {
+		limit = { is_personal_maa_regiment = yes }
+		add = maa_current_troops_count
+	}
+	divide = 100
+	floor = yes
+	multiply = 5
+	add = 25
+}

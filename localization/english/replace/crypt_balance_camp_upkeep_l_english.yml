@@ -1,0 +1,2 @@
+﻿l_english:
+ DOMICILE_PROVISIONS_TITLE: "#T [provisions|E]: [DOMICILE.GetProvisions|0]/[DOMICILE.GetMaxProvisions|0]#!\n#bold Monthly upkeep:#! #N −[DOMICILE.GetOwner.MakeScope.ScriptValue('crypt_balance_monthly_camp_upkeep_value')|0]#!"

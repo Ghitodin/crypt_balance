@@ -1,0 +1,2 @@
+﻿l_russian:
+ DOMICILE_PROVISIONS_TITLE: "#T [Concept( 'provisions', 'Припасы лагеря' )|E]: [DOMICILE.GetProvisions|0]/[DOMICILE.GetMaxProvisions|0]#!\n#bold Расход в месяц:#! #N −[DOMICILE.GetOwner.MakeScope.ScriptValue('crypt_balance_monthly_camp_upkeep_value')|0]#!"

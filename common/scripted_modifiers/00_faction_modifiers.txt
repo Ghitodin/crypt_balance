@@ -1020,7 +1020,7 @@ common_faction_modifiers = {
 	}
 	modifier = { # Hard
 		desc = "FACTION_REASON_DIFFICULTY_HARD"
-		add = -30 # THE MOD
+		add = -55 # THE MOD
 		has_game_rule = hard_difficulty
 		$FACTION_TARGET$ = {
 			is_ai = yes

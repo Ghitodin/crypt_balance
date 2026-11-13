@@ -1,0 +1,4 @@
+﻿crypt_balance_landed_opinion_of_adventurer = {
+	opinion = -20
+	stacking = no
+}

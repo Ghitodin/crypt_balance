@@ -1,0 +1,60 @@
+﻿on_game_start_after_lobby = { on_actions = { crypt_balance_refresh_adventurer_opinions } }
+yearly_global_pulse = { on_actions = { crypt_balance_refresh_adventurer_opinions } }
+
+on_government_change = { on_actions = { crypt_balance_sync_adventurer_status } }
+on_title_gain = { on_actions = { crypt_balance_sync_adventurer_status } }
+on_title_lost = { on_actions = { crypt_balance_sync_adventurer_status } }
+
+crypt_balance_refresh_adventurer_opinions = {
+	effect = {
+		every_ruler = {
+			limit = {
+				government_has_flag = government_is_landless_adventurer
+				is_landed = no
+			}
+			crypt_balance_apply_adventurer_opinion_effect = yes
+		}
+	}
+}
+
+crypt_balance_sync_adventurer_status = {
+	effect = {
+		if = {
+			limit = {
+				government_has_flag = government_is_landless_adventurer
+				is_landed = no
+			}
+			crypt_balance_apply_adventurer_opinion_effect = yes
+		}
+		else_if = {
+			limit = { has_variable = crypt_balance_adventurer_opinion_active }
+			save_temporary_scope_as = crypt_balance_former_adventurer
+			every_ruler = {
+				limit = {
+					has_opinion_modifier = {
+						target = scope:crypt_balance_former_adventurer
+						modifier = crypt_balance_landed_opinion_of_adventurer
+					}
+				}
+				remove_opinion = {
+					target = scope:crypt_balance_former_adventurer
+					modifier = crypt_balance_landed_opinion_of_adventurer
+				}
+			}
+			remove_variable = crypt_balance_adventurer_opinion_active
+		}
+
+		save_temporary_scope_as = crypt_balance_opinion_holder
+		every_ruler = {
+			limit = {
+				government_has_flag = government_is_landless_adventurer
+				is_landed = no
+				this != scope:crypt_balance_opinion_holder
+			}
+			save_temporary_scope_as = crypt_balance_opinion_target
+			scope:crypt_balance_opinion_holder = {
+				crypt_balance_sync_opinion_of_adventurer_effect = { ADVENTURER = scope:crypt_balance_opinion_target }
+			}
+		}
+	}
+}

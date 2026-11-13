@@ -1,0 +1,33 @@
+on_game_start_after_lobby = { on_actions = { crypt_balance_refresh_papal_war_restriction } }
+yearly_global_pulse = { on_actions = { crypt_balance_refresh_papal_war_restriction } }
+quarterly_playable_pulse = { on_actions = { crypt_balance_apply_papal_war_restriction } }
+on_title_gain = { on_actions = { crypt_balance_apply_papal_war_restriction } }
+on_title_lost = { on_actions = { crypt_balance_remove_papal_war_restriction } }
+
+crypt_balance_refresh_papal_war_restriction = {
+	effect = {
+		title:k_papal_state.holder ?= {
+			trigger_event = { on_action = crypt_balance_apply_papal_war_restriction }
+		}
+	}
+}
+
+crypt_balance_apply_papal_war_restriction = {
+	trigger = {
+		has_title = title:k_papal_state
+		NOT = { has_character_modifier = crypt_balance_papal_war_restriction }
+	}
+	effect = {
+		add_character_modifier = crypt_balance_papal_war_restriction
+	}
+}
+
+crypt_balance_remove_papal_war_restriction = {
+	trigger = {
+		scope:title = title:k_papal_state
+		has_character_modifier = crypt_balance_papal_war_restriction
+	}
+	effect = {
+		remove_character_modifier = crypt_balance_papal_war_restriction
+	}
+}

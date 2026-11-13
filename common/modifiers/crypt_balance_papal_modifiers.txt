@@ -1,0 +1,4 @@
+crypt_balance_papal_war_restriction = {
+	icon = diplomacy_negative
+	ai_war_chance = -1000
+}

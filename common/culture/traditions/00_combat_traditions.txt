@@ -2678,11 +2678,6 @@ tradition_longbow_competitions = {
 		unlock_maa_longbowmen = yes
 		archer_era_improvement = yes
 	}
-	character_modifier = {
-		archers_max_size_add = 2 # THE MOD
-		heavy_cavalry_max_size_add = -2
-		pikemen_max_size_add = -2
-	}
 	
 	cost = {
 		prestige = {

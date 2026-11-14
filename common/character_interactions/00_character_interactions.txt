@@ -149,7 +149,7 @@ offer_vassalization_interaction = {
 	ai_max_reply_days = 10
 
 	ai_accept = {
-		base = -50
+		base = -70 # THE MOD
 
 		# Military power difference modifier.
 		offer_vassalization_interaction_ai_acceptance_general = yes

@@ -898,7 +898,7 @@ offer_vassalization_interaction_ai_acceptance_diplomacy = {
 			}
 			NOT = { scope:send_tribute ?= { always = yes } } # i.e. not in mpo_offer_submission_or_ruin
 		}
-		add = -20
+		add = -200 # THE MOD
 	}
 	modifier = { # Encircled
 		desc = offer_vassalization_interaction_aibehavior_encircled_tt

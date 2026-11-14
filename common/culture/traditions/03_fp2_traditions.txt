@@ -252,7 +252,7 @@ tradition_fp2_malleable_subjects = {
 	}
 
 	culture_modifier = {
-		mercenary_count_mult = 2
+		mercenary_count_mult = 0.5 # THE MOD
 		cultural_acceptance_gain_mult = 0.25
 	}
 

@@ -1336,8 +1336,8 @@ tradition_frugal_armorsmiths = {
 	
 	character_modifier = {
 		levy_size = 0.1
-		knight_limit = 5
-		men_at_arms_limit = 3
+		knight_limit = 2 # THE MOD
+		men_at_arms_limit = 2 # THE MOD
 		army_maintenance_mult = -0.25
 		men_at_arms_recruitment_cost = -0.25
 		knight_effectiveness_mult = -0.4
@@ -2679,7 +2679,7 @@ tradition_longbow_competitions = {
 		archer_era_improvement = yes
 	}
 	character_modifier = {
-		archers_max_size_add = 4
+		archers_max_size_add = 2 # THE MOD
 		heavy_cavalry_max_size_add = -2
 		pikemen_max_size_add = -2
 	}

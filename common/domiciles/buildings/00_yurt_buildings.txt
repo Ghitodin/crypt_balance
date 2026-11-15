@@ -945,7 +945,7 @@ herd_conversion_main_yurt_01 = {
 	}
 
 	character_modifier = {
-		herd_conversion = 0.001667
+		herd_conversion = 0.002
 	}
 
 	ai_value = {
@@ -973,7 +973,7 @@ herd_conversion_main_yurt_02 = {
 	}
 
 	character_modifier = {
-		herd_conversion = 0.001667
+		herd_conversion = 0.001
 	}
 
 	ai_value = {
@@ -1001,7 +1001,7 @@ herd_conversion_main_yurt_03 = {
 	}
 
 	character_modifier = {
-		herd_conversion = 0.001667
+		herd_conversion = 0.002
 		herd_capacity_mult = 0.02
 	}
 
@@ -1031,7 +1031,7 @@ herd_conversion_main_yurt_04 = {
 	}
 
 	character_modifier = {
-		herd_conversion = 0.001667
+		herd_conversion = 0.002
 		herd_capacity_mult = 0.02
 	}
 
@@ -1061,7 +1061,7 @@ herd_conversion_main_yurt_05 = {
 	}
 
 	character_modifier = {
-		herd_conversion = 0.001667
+		herd_conversion = 0.001
 		herd_capacity_mult = 0.02
 	}
 
@@ -1091,7 +1091,7 @@ herd_conversion_main_yurt_06 = {
 	}
 
 	character_modifier = {
-		herd_conversion = 0.001667
+		herd_conversion = 0.002
 		herd_capacity_mult = 0.04
 	}
 
@@ -5920,7 +5920,7 @@ herd_conversion_yurt_01 = {
 	}
 
 	character_modifier = {
-		herd_conversion = 0.001667
+		herd_conversion = 0.002
 		supply_capacity_add = 100
 	}
 
@@ -5949,7 +5949,7 @@ herd_conversion_yurt_02 = {
 	}
 
 	character_modifier = {
-		herd_conversion = 0.001667
+		herd_conversion = 0.001
 		supply_capacity_add = 50
 	}
 
@@ -5978,7 +5978,7 @@ herd_conversion_yurt_03 = {
 	}
 
 	character_modifier = {
-		herd_conversion = 0.001667
+		herd_conversion = 0.002
 		supply_capacity_add = 50
 	}
 
@@ -6007,7 +6007,7 @@ herd_conversion_yurt_04 = {
 	}
 
 	character_modifier = {
-		herd_conversion = 0.001667
+		herd_conversion = 0.002
 		supply_capacity_add = 50
 	}
 
@@ -6036,7 +6036,7 @@ herd_conversion_yurt_05 = {
 	}
 
 	character_modifier = {
-		herd_conversion = 0.001667
+		herd_conversion = 0.001
 		supply_capacity_add = 50
 	}
 
@@ -6065,7 +6065,7 @@ herd_conversion_yurt_06 = {
 	}
 
 	character_modifier = {
-		herd_conversion = 0.001667
+		herd_conversion = 0.002
 		supply_capacity_add = 100
 	}
 

@@ -1795,14 +1795,6 @@ nomadic_authority_1 = {
 	confirmation_title = nomadic_authority_1_pass_phrase
 	confirmation_button_text = nomadic_authority_confirmation_button_text
 
-	modifier = {
-		belligerent_opinion = -25
-		glory_hound_opinion = -20
-		domain_limit_min = 1
-		domain_limit_max = 2
-		vassal_limit_min = 1
-		vassal_limit_max = 1
-	}
 	flag = can_have_tributaries
 	flag = title_revocation_allowed
 	flag = uses_nomadic_authority
@@ -1832,13 +1824,10 @@ nomadic_authority_2 = {
 	confirmation_button_text = nomadic_authority_confirmation_button_text
 
 	modifier = {
-		belligerent_opinion = 10
-		glory_hound_opinion = 10
-		max_migration_distance_mult = 0.25
-		domain_limit_min = 1
-		domain_limit_max = 1
-		vassal_limit_min = 1
-		vassal_limit_max = 2 # 3
+		domain_limit = 1
+		vassal_limit = 5
+		max_migration_distance_mult = 0.10
+		vassal_opinion = -5
 	}
 	flag = can_change_succession_laws
 	flag = imprisonment_toggle_on
@@ -1918,13 +1907,10 @@ nomadic_authority_3 = {
 	confirmation_button_text = nomadic_authority_confirmation_button_text
 
 	modifier = {
-		belligerent_opinion = 10
-		glory_hound_opinion = 10
-		max_migration_distance_mult = 0.5
-		domain_limit_min = 2
-		domain_limit_max = 3
-		vassal_limit_min = 8
-		vassal_limit_max = 12 # 15
+		domain_limit = 1
+		vassal_limit = 5
+		max_migration_distance_mult = 0.15
+		vassal_opinion = -5
 	}
 	flag = vassal_retraction_allowed
 	flag = diarchs_want_to_subsidise_without_this_flag
@@ -2014,12 +2000,10 @@ nomadic_authority_4 = {
 	confirmation_button_text = nomadic_authority_confirmation_button_text
 
 	modifier = {
-		belligerent_opinion = 20
-		glory_hound_opinion = 10
-		max_migration_distance_mult = 1
-		domain_limit_min = 2
-		vassal_limit_min = 5
-		vassal_limit_max = 15
+		domain_limit = 1
+		vassal_limit = 5
+		max_migration_distance_mult = 0.15
+		vassal_opinion = -10
 	}
 	flag = migration_to_empires
 	flag = authority_level_3
@@ -2108,12 +2092,10 @@ nomadic_authority_5 = {
 	confirmation_button_text = nomadic_authority_confirmation_button_text
 
 	modifier = {
-		belligerent_opinion = 25
-		glory_hound_opinion = 15
-		max_migration_distance_mult = 10
-		max_migration_distance_mult = 2
-		vassal_limit_min = 985
-		vassal_limit_max = 970
+		domain_limit = 1
+		vassal_limit = 5
+		max_migration_distance_mult = 0.10
+		vassal_opinion = -10
 	}
 	flag = max_authority_level
 	flag = authority_level_4

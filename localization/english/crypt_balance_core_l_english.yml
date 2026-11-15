@@ -8,3 +8,4 @@
  crypt_balance_fill_vacant_chaplain_interaction: "I Need a New [actor.GetCouncillorPosition( 'councillor_court_chaplain' ).GetPositionName]"
  crypt_balance_fill_vacant_chaplain_interaction_desc: "Fill the vacant council seat for free. If no courtier is eligible, a new cleric will join your court."
  crypt_balance_tribute_war_reparations_tt: "The defeated ruler pays a one-time indemnity to the victor"
+ crypt_balance_install_claimant_hook: "$strong_favor_hook$"

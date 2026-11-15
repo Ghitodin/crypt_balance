@@ -645,7 +645,29 @@
 			resolve_title_and_vassal_change = scope:change_two
 		}
 
+		# THE MOD: An installed independent ruler owes a strong favor.
 		if = {
+			limit = {
+				scope:claimant != scope:attacker
+				scope:claimant = {
+					is_landed = yes
+					is_independent_ruler = yes
+				}
+				scope:attacker = {
+					can_add_hook = {
+						type = crypt_balance_install_claimant_hook
+						target = scope:claimant
+					}
+				}
+			}
+			scope:attacker = {
+				add_hook = {
+					type = crypt_balance_install_claimant_hook
+					target = scope:claimant
+				}
+			}
+		}
+		else_if = {
 			limit = {
 				scope:claimant != scope:attacker
 				scope:attacker = {

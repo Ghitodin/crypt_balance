@@ -1,0 +1,4 @@
+﻿crypt_balance_install_claimant_hook = {
+	strong = yes
+	expiration_days = 2555
+}

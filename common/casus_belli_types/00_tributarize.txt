@@ -270,11 +270,14 @@
 		scope:attacker = { show_pow_release_message_effect = yes }
 
 		# THE MOD: The defeated ruler pays two years of income in reparations.
-		scope:defender = {
-			pay_short_term_gold = {
-				gold = 2
-				target = scope:attacker
-				yearly_income = yes
+		custom_tooltip = crypt_balance_tribute_war_reparations_tt
+		hidden_effect = {
+			scope:defender = {
+				pay_short_term_gold = {
+					gold = 2
+					target = scope:attacker
+					yearly_income = yes
+				}
 			}
 		}
 
@@ -430,11 +433,14 @@
 		scope:attacker = { show_pow_release_message_effect = yes }
 
 		# THE MOD: The defeated ruler pays two years of income in reparations.
-		scope:attacker = {
-			pay_short_term_gold = {
-				gold = 2
-				target = scope:defender
-				yearly_income = yes
+		custom_tooltip = crypt_balance_tribute_war_reparations_tt
+		hidden_effect = {
+			scope:attacker = {
+				pay_short_term_gold = {
+					gold = 2
+					target = scope:defender
+					yearly_income = yes
+				}
 			}
 		}
 

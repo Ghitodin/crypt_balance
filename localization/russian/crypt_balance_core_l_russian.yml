@@ -7,3 +7,4 @@
  crypt_balance_papal_war_restriction_desc: "Папа не может объявлять обычные наступательные войны."
  crypt_balance_fill_vacant_chaplain_interaction: "Мне нужен новый [actor.GetCouncillorPosition( 'councillor_court_chaplain' ).GetPositionName]"
  crypt_balance_fill_vacant_chaplain_interaction_desc: "Бесплатно заполнить вакантное место в совете. Если среди придворных нет подходящего кандидата, ко двору присоединится новый священнослужитель."
+ crypt_balance_tribute_war_reparations_tt: "Проигравший правитель выплачивает победителю разовую контрибуцию"

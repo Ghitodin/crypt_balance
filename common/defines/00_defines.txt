@@ -168,7 +168,7 @@ NCharacter = {
 	PROVISIONS_LOW_WARNING = 500		# when travel planner should warn about provisions running low
 
 
-	BASE_HERD_CONVERSION_RATE = 0.15 	# base herd conversion rate
+	BASE_HERD_CONVERSION_RATE = 0.05 	# base herd conversion rate
 
 	BASE_HERD_CAPACITY = { 				# base herd capacity for different title tiers
 		0 		# Unlanded
@@ -180,7 +180,7 @@ NCharacter = {
 		20000 	# Hegemony
 	}
 
-	GOLD_FROM_HERD_FACTOR = 0.0005 		# The amount of herd that provides monthly gold income
+	GOLD_FROM_HERD_FACTOR = 0.000125 		# The amount of herd that provides monthly gold income
 
 
 	BASE_HERDER_GAIN_PER_COUNTY = 1.0 		# Base monthly herd gain for herders | ( NCountyData::MAX_COUNTY_FERTILITY / CountyFertility) * BASE_HERDER_GAIN_PER_COUNTY
@@ -983,7 +983,7 @@ NArmy = {
 
 	NOMADIC_HORDE_CONVERSION_BASE_DISCOUNT = 0.5 	# Base discount rate applied to MaA cost when converting Horde regiments into permanent MaA as a Nomad
 
-	NOMADIC_RIDERS_MAX_SIZE = 500 					# Max size of Horde Riders when they are raised
+	NOMADIC_RIDERS_MAX_SIZE = 200 					# Max size of Horde Riders when they are raised
 
 
 }

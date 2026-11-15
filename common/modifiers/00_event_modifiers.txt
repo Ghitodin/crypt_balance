@@ -135,7 +135,7 @@ dynasty_of_many_crowns_nomad = {
 	icon = martial_positive
 	herd_capacity_mult = 0.2
 	martial = 2
-	herd_conversion = 0.1
+	herd_conversion = 0.03
 }
 
 ireland_laudabiliter_modifier = { #Unlocks cb vs Ireland lands.

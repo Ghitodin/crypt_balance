@@ -1246,7 +1246,7 @@ tradition_strength_in_numbers = {
 	}
 	character_modifier = {
 		supply_limit_mult = 0.5
-		herd_conversion = 0.04
+		herd_conversion = 0.015
 	}
 	
 	cost = {

@@ -66,10 +66,10 @@ asawira = { #Iranian knights in early caliphal armies. Can be restored as a mili
 tarkhan = {
 	type = heavy_cavalry
 	
-	damage = 85
-	toughness = 30
-	pursuit = 30
-	screen = 10
+	damage = 77
+	toughness = 27
+	pursuit = 27
+	screen = 9
 	
 	terrain_bonus = {
 		oasis = { damage = 30 }

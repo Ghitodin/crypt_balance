@@ -7594,7 +7594,7 @@ pleasure_dome = {
 		court_grandeur_baseline_add = 12
 		monthly_income_from_herd_mult = 0.15
 		herd_capacity_mult = 0.25
-		herd_conversion = 0.005
+		herd_conversion = 0.001667
 	}
 
 	province_modifier = {

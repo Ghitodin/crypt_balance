@@ -82,10 +82,10 @@ torch_bearers = {
 kheshig = {
 	type = archer_cavalry
 	
-	damage = 94
-	toughness = 60
-	pursuit = 24
-	screen = 36
+	damage = 66
+	toughness = 42
+	pursuit = 17
+	screen = 25
 	
 	terrain_bonus = {
 		steppe = { damage = 90 screen = 20 }
@@ -122,10 +122,10 @@ kheshig = {
 steppe_raiders = {
 	type = light_cavalry
 	
-	damage = 22
-	toughness = 15
-	pursuit = 30
-	screen = 30
+	damage = 19
+	toughness = 13
+	pursuit = 26
+	screen = 26
 	
 	terrain_bonus = {
 		steppe = { damage = 15 }
@@ -165,10 +165,10 @@ steppe_raiders = {
 heavy_horse_archers = {
 	type = archer_cavalry
 	
-	damage = 92
-	toughness = 42
-	pursuit = 24
-	screen = 24
+	damage = 60
+	toughness = 27
+	pursuit = 16
+	screen = 16
 	
 	terrain_bonus = {
 		steppe = { damage = 80 }
@@ -220,9 +220,9 @@ heavy_horse_archers = {
 nomad_lancers = {
 	type = heavy_cavalry
 	
-	damage = 90
-	toughness = 30
-	pursuit = 20
+	damage = 77
+	toughness = 26
+	pursuit = 17
 	screen = 0
 	
 	terrain_bonus = {

@@ -917,6 +917,38 @@ common_join_faction_blockers = {
 }
 
 common_faction_modifiers = {
+	# THE MOD: Each tier of nomadic dominance adds ten points to faction willingness.
+	modifier = {
+		desc = CRYPT_BALANCE_FACTION_REASON_NOMADIC_DOMINANCE
+		root = { is_vassal_or_below_of = $FACTION_TARGET$ }
+		$FACTION_TARGET$ = { government_has_flag = government_is_nomadic }
+		add = {
+			value = 0
+			$FACTION_TARGET$ = {
+				if = {
+					limit = { has_realm_law = nomadic_authority_5 }
+					add = 50
+				}
+				else_if = {
+					limit = { has_realm_law = nomadic_authority_4 }
+					add = 40
+				}
+				else_if = {
+					limit = { has_realm_law = nomadic_authority_3 }
+					add = 30
+				}
+				else_if = {
+					limit = { has_realm_law = nomadic_authority_2 }
+					add = 20
+				}
+				else_if = {
+					limit = { has_realm_law = nomadic_authority_1 }
+					add = 10
+				}
+			}
+		}
+	}
+
 	# +/- 40 join weight at -/+100 opinion
 	opinion_modifier = {
 		who = root

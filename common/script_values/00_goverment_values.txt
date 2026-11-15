@@ -173,9 +173,36 @@ ghazi_prestige_cost_increments_tooltip = {
 #Nomadic government values
 exempt_herd_tax = 0
 low_herd_tax = 0.05
-normal_herd_tax = 0.1
-high_herd_tax = 0.25
-extortionate_herd_tax = 0.4
+normal_herd_tax = {
+	value = 0.1
+	if = {
+		limit = {
+			exists = scope:liege
+			scope:subject ?= { is_vassal_of = scope:liege }
+		}
+		subtract = 0.05
+	}
+}
+high_herd_tax = {
+	value = 0.25
+	if = {
+		limit = {
+			exists = scope:liege
+			scope:subject ?= { is_vassal_of = scope:liege }
+		}
+		subtract = 0.10
+	}
+}
+extortionate_herd_tax = {
+	value = 0.4
+	if = {
+		limit = {
+			exists = scope:liege
+			scope:subject ?= { is_vassal_of = scope:liege }
+		}
+		subtract = 0.20
+	}
+}
 
 herd_tax_exempt_level = 0
 herd_tax_low_level = 1

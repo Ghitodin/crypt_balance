@@ -1851,12 +1851,10 @@ tradition_stalwart_defenders = {
 	parameters = {
 		can_end_defensive_wars_earlier = yes
 		more_fame_for_successful_defensive_wars = yes
-		more_gold_for_successful_defensive_wars = yes
 		next_level_fortification = yes
 		stalwart_defenders_internal_yurt_unlock = yes
 	}
 	character_modifier = {
-		defender_advantage = 5
 		controlled_province_advantage = 5
 		nomadic_horde_toughness_mult = 0.15
 	}

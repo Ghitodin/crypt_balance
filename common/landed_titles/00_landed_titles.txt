@@ -1949,6 +1949,7 @@ e_hre = {
 	definite_form = yes
 
 	can_create = {
+		always = no # THE MOD: founded through the restoration decision
 		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
 	}
 

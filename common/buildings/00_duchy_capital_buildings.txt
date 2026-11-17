@@ -1190,6 +1190,7 @@ military_academy_01 = {
 		army_maintenance_mult = -0.025
 
 		men_at_arms_recruitment_cost = -0.1
+		prowess = 2 # THE MOD
 
 
 	
@@ -1280,6 +1281,7 @@ military_academy_02 = {
 		army_maintenance_mult = -0.035
 
 		men_at_arms_recruitment_cost = -0.2
+		prowess = 3 # THE MOD
 
 
 	
@@ -1357,6 +1359,7 @@ military_academy_03 = {
 		army_maintenance_mult = -0.05
 
 		men_at_arms_recruitment_cost = -0.3
+		prowess = 4 # THE MOD
 
 
 	

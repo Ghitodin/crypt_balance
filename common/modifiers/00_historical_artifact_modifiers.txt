@@ -6,63 +6,26 @@
 	monthly_dynasty_prestige_mult = 0.05
 }
 
-
-
 ark_of_covenant_modifier = {
-
 	court_grandeur_baseline_add = 6
-
-	domain_tax_same_faith_mult = 0.15
-
-	clergy_opinion = 5 # THE MOD
-
-
-
+	clergy_opinion = 5
 	same_heritage_county_advantage_add = 5
-
 	monthly_dynasty_prestige_mult = 0.05
-
-	monthly_piety = 1 # THE MOD
-
-
-
-
+	monthly_piety = 1
 }
-
-
 
 koh_i_noor = {
-
 	court_grandeur_baseline_add = 6
-
 	monthly_dynasty_prestige_mult = 0.05
-
 	attraction_opinion = 10
-
-	general_opinion = 3 # THE MOD
-
-
-
+	general_opinion = 3
 	monthly_prestige = 1
-
-
 }
-
-
 
 al_taj_modifier = {
-
 	monthly_prestige = 1
-
-	floodplains_development_growth_factor = 0.2
-
-
-
 	same_faith_opinion = 4 # THE MOD
-
 }
-
-
 
 al_dawat_modifier = {
 	court_grandeur_baseline_add = 3
@@ -70,14 +33,10 @@ al_dawat_modifier = {
 	monthly_dynasty_prestige = 0.15
 }
 
-
-
 al_hafir_modifier = {
 	court_grandeur_baseline_add = 5
 	monthly_prestige = 0.5
 }
-
-
 
 al_sayf_al_khass_modifier = {
 	court_grandeur_baseline_add = 3
@@ -86,15 +45,10 @@ al_sayf_al_khass_modifier = {
 	monthly_piety_gain_per_knight_mult = 0.01
 }
 
-
-
 qadib_al_mulk_modifier = {
-	floodplains_tax_mult = 0.2
 	monthly_prestige = 0.2
 	learning_per_piety_level = 1
 }
-
-
 
 banner_thankfulness = {
 	court_grandeur_baseline_add = 6
@@ -106,123 +60,62 @@ banner_thankfulness = {
 	light_cavalry_damage_mult = 0.1
 }
 
-
-
 alexander_the_great_armor_modifier = {
-
 	court_grandeur_baseline_add = 6
-
-	powerful_vassal_opinion = 5 # THE MOD
-
-
-
+	powerful_vassal_opinion = 5
 	happy_powerful_vassal_levy_contribution_mult = 0.2
-
 	light_cavalry_max_size_add = 1
-
 	light_cavalry_pursuit_mult = 0.2
-
 	light_cavalry_maintenance_mult = -0.25
-
-
 }
-
-
 
 turquoise_throne_modifier = {
 	court_grandeur_baseline_add = 6
 	stewardship_per_prestige_level = 1
 	diplomacy_per_prestige_level = 1
 	monthly_dynasty_prestige_mult = 0.05
-	character_capital_county_monthly_development_growth_add = 0.05
 }
-
-
 
 peacock_throne_modifier = {
 	court_grandeur_baseline_add = 6
 	learning_per_prestige_level = 1
 	diplomacy_per_prestige_level = 1
 	monthly_dynasty_prestige_mult = 0.05
-	character_capital_county_monthly_development_growth_add = 0.05
 }
-
-
 
 spear_prophet_modifier = {
-
 	court_grandeur_baseline_add = 6
-
 	monthly_piety_gain_per_knight_mult = 0.03
-
 	levy_reinforcement_rate_same_faith = 0.5
-
-	clan_government_opinion_same_faith = 3 # THE MOD
-
-
-	knight_effectiveness_mult = 0.1 # THE MOD
-
-
-
-
+	clan_government_opinion_same_faith = 3
+	knight_effectiveness_mult = 0.1
 }
 
-
-
 mantle_prophet_modifier = {
-	domain_tax_same_faith_mult = 0.1
 	monthly_piety_gain_mult = 0.25
 	monthly_prestige = 0.25
 	monthly_dynasty_prestige_mult = 0.05
 }
 
-
-
 reichskrone_modifier = {
-
 	monthly_dynasty_prestige_mult = 0.05
-
-	vassal_limit = 15 # THE MOD
-
-
-
+	vassal_limit = 15
 	monthly_prestige_gain_per_happy_powerful_vassal_mult = 0.02
-
-	courtier_and_guest_opinion = 5 # THE MOD
-
-
-
-
+	courtier_and_guest_opinion = 5
 }
-
-
 
 cintamani_modifier = {
 	court_grandeur_baseline_add = 3
-	domain_tax_same_faith_mult = 0.04
 	monthly_piety = 0.5
 }
 
-
-
 banner_of_edessa_modifier = {
-
 	court_grandeur_baseline_add = 3
-
-	clergy_opinion = 3 # THE MOD
-
-
-
+	clergy_opinion = 3
 	monthly_piety = 1
-
 	church_holding_build_gold_cost = -0.2
-
 	church_holding_holding_build_gold_cost = -0.2
-
-
 }
-
-
 
 tizona_modifier = {
 	court_grandeur_baseline_add = 3
@@ -232,16 +125,12 @@ tizona_modifier = {
 	light_cavalry_toughness_mult = 0.25
 }
 
-
-
 tizona_no_court_modifier = {
 	monthly_prestige = 0.5
 	monthly_dynasty_prestige_mult = 0.05
 	men_at_arms_maintenance = -0.1
 	light_cavalry_toughness_mult = 0.25
 }
-
-
 
 easteregg_henry_longsword_modifier = {
 	prowess_no_portrait = 2
@@ -250,68 +139,43 @@ easteregg_henry_longsword_modifier = {
 	knight_effectiveness_mult = 0.1
 }
 
-
-
 muhammed_sword_modifier = {
 	court_grandeur_baseline_add = 4
 	monthly_piety = 0.2
 	monthly_dynasty_prestige_mult = 0.02
 }
 
-
-
 muhammed_sword_1_modifier = {
 	levy_reinforcement_rate_same_faith = 0.25
 }
 
-
-
 muhammed_sword_2_modifier = {
-
-	same_faith_opinion = 2 # THE MOD
-
-
-
-
+	same_faith_opinion = 2
 }
-
-
 
 muhammed_sword_3_modifier = {
 	army_toughness_mult = 0.01
 }
 
-
-
 muhammed_sword_4_modifier = {
 	tolerance_advantage_mod = 6
 }
-
-
 
 muhammed_sword_5_modifier = {
 	monthly_piety_from_buildings_mult = 0.2
 }
 
-
-
 muhammed_sword_6_modifier = {
 	same_culture_mercenary_hire_cost_mult = -0.1
 }
-
-
 
 muhammed_sword_7_modifier = {
 	desert_advantage = 4
 }
 
-
-
 muhammed_sword_8_modifier = {
 	levy_size = 0.04
 }
-
-
 
 goujian_sword_modifier = {
 	court_grandeur_baseline_add = 4
@@ -320,55 +184,37 @@ goujian_sword_modifier = {
 	han_opinion = 5
 }
 
-
-
 goujian_sword_1_modifier = {
-	domain_tax_mult = 0.02
+	prowess_no_portrait = 2
 }
-
-
 
 goujian_sword_2_modifier = {
 	same_faith_opinion = 3
 }
 
-
-
 goujian_sword_3_modifier = {
 	monthly_piety = 0.5
 }
-
-
 
 goujian_sword_4_modifier = {
 	monthly_prestige = 0.25
 }
 
-
-
 goujian_sword_5_modifier = {
 	monthly_piety_from_buildings_mult = 0.15
 }
-
-
 
 goujian_sword_6_modifier = {
 	confucianism_religion_opinion = 3
 }
 
-
-
 goujian_sword_7_modifier = {
 	monthly_influence_mult = 0.05
 }
 
-
-
 goujian_sword_8_modifier = {
 	courtier_and_guest_opinion = 5
 }
-
-
 
 mmaagha_kamalu_modifier = {
 	court_grandeur_baseline_add = 4
@@ -377,27 +223,19 @@ mmaagha_kamalu_modifier = {
 	martial_per_piety_level = 1
 }
 
-
-
 bronze_head_modifier = {
 	court_grandeur_baseline_add = 4
 	monthly_prestige = 0.7
 	monthly_dynasty_prestige = 0.10
 	happy_powerful_vassal_tax_contribution_mult = 0.05
-	development_growth_factor = 0.05
 }
-
-
 
 crystal_carving_modifier = {
 	court_grandeur_baseline_add = 4
 	monthly_prestige = 0.7
 	monthly_dynasty_prestige = 0.10
-	domain_tax_mult = 0.02
 	owned_hostile_scheme_success_chance_add = 5
 }
-
-
 
 attila_sword_modifier = {
 	court_grandeur_baseline_add = 4
@@ -406,33 +244,17 @@ attila_sword_modifier = {
 	monthly_prestige_gain_per_dread_add = 0.02
 }
 
-
-
 justinian_crown_modifier = {
-
-	court_grandeur_baseline_add = 5 # THE MOD
-
-
-
+	court_grandeur_baseline_add = 5
 	monthly_dynasty_prestige_mult = 0.05
-
 	vassal_limit = 10
-
-	#domain_limit = 1 # THE MOD
-
 }
-
-
 
 babr_e_bayan_modifier = {
 	court_grandeur_baseline_add = 6
 	monthly_dynasty_prestige_mult = 0.05
 	army_maintenance_mult = -0.05
-	drylands_tax_mult = 0.2
-	desert_mountains_tax_mult = 0.2
 }
-
-
 
 great_diamond_modifier = {
 	court_grandeur_baseline_add = 5
@@ -441,16 +263,12 @@ great_diamond_modifier = {
 	attraction_opinion = 5
 }
 
-
-
 al_jabal_modifier = {
 	court_grandeur_baseline_add = 5
 	monthly_dynasty_prestige_mult = 0.04
 	monthly_prestige = 1
 	attraction_opinion = 5
 }
-
-
 
 al_yatima_modifier = {
 	court_grandeur_baseline_add = 5
@@ -459,68 +277,31 @@ al_yatima_modifier = {
 	attraction_opinion = 5
 }
 
-
-
 cup_jamshid_modifier = {
 	court_grandeur_baseline_add = 5
 	negate_health_penalty_add = 1
 	enemy_hostile_scheme_success_chance_add = -10
 }
 
-
-
 david_harp_modifier = {
-
 	court_grandeur_baseline_add = 6
-
 	monthly_prestige_gain_mult = 0.04
-
-	knight_effectiveness_mult = 0.1 # THE MOD
-
-
-	knight_limit = 1 # THE MOD
-
-
-
+	knight_effectiveness_mult = 0.1
+	knight_limit = 1
 	monthly_piety_gain_per_knight_mult = 0.03
-
 	max_courting_schemes_add = 1
-
 	courting_scheme_phase_duration_add = major_scheme_phase_duration_bonus_value
-
-	attraction_opinion = 5 # THE MOD
-
-
-
-
+	attraction_opinion = 5
 }
-
-
 
 iron_crown_modifier = {
-
 	court_grandeur_baseline_add = 6
-
 	monthly_dynasty_prestige_mult = 0.05
-
 	monthly_prestige_gain_mult = 0.04
-
-	lombard_opinion = 3 # THE MOD
-
-
-	italian_opinion = 3 # THE MOD
-
-
-	vassal_limit = 5 # THE MOD
-
-
-
-	character_capital_county_monthly_development_growth_add = 0.02
-
-
+	lombard_opinion = 3
+	italian_opinion = 3
+	vassal_limit = 5
 }
-
-
 
 nikephoros_crown_modifier = {
 	monthly_martial_lifestyle_xp_gain_mult = 0.15
@@ -528,42 +309,24 @@ nikephoros_crown_modifier = {
 	heavy_cavalry_maintenance_mult = -0.1
 }
 
-
-
 shankha_conch_modifier = {
 	court_grandeur_baseline_add = 4
 	monthly_piety = 0.5
 	fertility = 0.2
-	jungle_development_growth_factor = 0.2
 }
-
-
 
 skull_cap_charlemagne_modifier = {
-
 	court_grandeur_baseline_add = 4
-
-	powerful_vassal_opinion = 4 # THE MOD
-
-
-	knight_effectiveness_mult = 0.05 # THE MOD
-
-
-
+	powerful_vassal_opinion = 4
+	knight_effectiveness_mult = 0.05
 	men_at_arms_maintenance = -0.05
-
-
 }
-
-
 
 essen_crown_modifier = {
 	child_opinion = 10
 	monthly_prestige = 0.2
 	monthly_dynasty_prestige = 0.06
 }
-
-
 
 dhammapada_modifier = {
 	monthly_piety = 0.5
@@ -572,16 +335,12 @@ dhammapada_modifier = {
 	monthly_dynasty_prestige_mult = 0.05
 }
 
-
-
 vinaya_pitaka_modifier = {
 	monthly_piety = 0.5
 	court_grandeur_baseline_add = 3
 	monthly_dynasty_prestige_mult = 0.05
 	max_sway_schemes_add = 1
 }
-
-
 
 sutta_pitaka_modifier = {
 	monthly_piety = 0.5
@@ -590,48 +349,21 @@ sutta_pitaka_modifier = {
 	monthly_learning_lifestyle_xp_gain_mult = 0.15
 }
 
-
-
 abhidhamma_pitaka_modifier = {
-
 	monthly_piety = 0.5
-
 	court_grandeur_baseline_add = 3
-
 	monthly_dynasty_prestige_mult = 0.05
-
-	direct_vassal_opinion = 2 # THE MOD
-
-
-
-
+	direct_vassal_opinion = 2
 }
-
-
 
 durendal_modifier = {
-
 	court_grandeur_baseline_add = 3
-
-	monthly_prestige = 0.4 # THE MOD
-
-
-
+	monthly_prestige = 0.4
 	monthly_dynasty_prestige_mult = 0.05
-
-	knight_effectiveness_mult = 0.05 # THE MOD
-
-
-	attraction_opinion = 5 # THE MOD
-
-
-
+	knight_effectiveness_mult = 0.05
+	attraction_opinion = 5
 	defender_advantage = 3
-
-
 }
-
-
 
 nagelring_modifier = {
 	court_grandeur_baseline_add = 3
@@ -639,8 +371,6 @@ nagelring_modifier = {
 	monthly_dynasty_prestige_mult = 0.05
 	knight_limit = 1
 }
-
-
 
 kladenets_modifier = {
 	court_grandeur_baseline_add = 3
@@ -650,8 +380,6 @@ kladenets_modifier = {
 	heavy_infantry_toughness_mult = 0.1
 }
 
-
-
 szczerbiec_modifier = {
 	court_grandeur_baseline_add = 3
 	monthly_prestige = 0.5
@@ -659,8 +387,6 @@ szczerbiec_modifier = {
 	light_cavalry_toughness_mult = 0.1
 	light_cavalry_damage_mult = 0.1
 }
-
-
 
 legbiter_modifier = {
 	court_grandeur_baseline_add = 3
@@ -670,16 +396,12 @@ legbiter_modifier = {
 	embarkation_cost_mult = 0.15
 }
 
-
-
 quernbiter_modifier = {
 	court_grandeur_baseline_add = 3
 	monthly_prestige = 0.5
 	monthly_dynasty_prestige_mult = 0.05
 	coastal_advantage = 4
 }
-
-
 
 dragvandil_modifier = {
 	court_grandeur_baseline_add = 3
@@ -689,26 +411,13 @@ dragvandil_modifier = {
 	owned_personal_scheme_success_chance_add = 5
 }
 
-
-
 curtana_modifier = {
-
 	court_grandeur_baseline_add = 3
-
 	monthly_prestige = 0.5
-
 	monthly_dynasty_prestige_mult = 0.05
-
 	seduce_scheme_phase_duration_add = major_scheme_phase_duration_bonus_value
-
-	knight_effectiveness_mult = 0.05 # THE MOD
-
-
-
-
+	knight_effectiveness_mult = 0.05
 }
-
-
 
 colada_modifier = {
 	court_grandeur_baseline_add = 3
@@ -718,16 +427,12 @@ colada_modifier = {
 	light_cavalry_screen_mult = 0.1
 }
 
-
-
 colada_non_court_modifier = {
 	monthly_prestige = 0.5
 	monthly_dynasty_prestige_mult = 0.05
 	light_cavalry_pursuit_mult = 0.1
 	light_cavalry_screen_mult = 0.1
 }
-
-
 
 angelicas_ring_modifier = {
 	court_grandeur_baseline_add = 3
@@ -737,16 +442,12 @@ angelicas_ring_modifier = {
 	attraction_opinion = 10
 }
 
-
-
 olifant_modifier = {
 	court_grandeur_baseline_add = 3
 	monthly_prestige = 0.5
 	monthly_dynasty_prestige_mult = 0.05
 	movement_speed = 0.05
 }
-
-
 
 aram_modifier = {
 	court_grandeur_baseline_add = 3
@@ -757,8 +458,6 @@ aram_modifier = {
 	steppe_advantage = 4
 }
 
-
-
 sledovik_modifier = {
 	court_grandeur_baseline_add = 3
 	monthly_piety = 0.25
@@ -767,63 +466,40 @@ sledovik_modifier = {
 	winter_advantage = 2
 }
 
-
-
 kantele_modifier = {
 	court_grandeur_baseline_add = 3
 	monthly_piety = 0.25
 	owned_personal_scheme_success_chance_add = 10
 	embarkation_cost_mult = -0.2
-	development_growth_factor = 0.2
 	fertility = 0.2
 }
 
-
-
 excalibur_modifier = {
-
 	court_grandeur_baseline_add = 1
-
 	monthly_prestige = 0.1
-
 	monthly_dynasty_prestige = 0.03
-
-	knight_effectiveness_mult = 0.01 # THE MOD
-
-
-
-
+	knight_effectiveness_mult = 0.01
 }
-
-
 
 edmund_head_modifier = {
 	court_grandeur_baseline_add = 1
 	monthly_piety = 0.3
 }
 
-
-
 makarakundala_modifier = {
 	court_grandeur_baseline_add = 1
 	monthly_piety = 0.3
 }
-
-
 
 ibeji_modifier = {
 	court_grandeur_baseline_add = 1
 	monthly_piety = 0.3
 }
 
-
-
 caligraphy_modifier = {
 	court_grandeur_baseline_add = 2
 	monthly_dynasty_prestige = 0.04
 }
-
-
 
 throne_charlemagne_modifier = {
 	court_grandeur_baseline_add = 4
@@ -831,15 +507,11 @@ throne_charlemagne_modifier = {
 	monthly_prestige = 0.5
 }
 
-
-
 throne_solomon_modifier = {
 	court_grandeur_baseline_add = 3
 	monthly_dynasty_prestige = 0.04
 	monthly_prestige = 0.25
 }
-
-
 
 byz_throne_modifier = {
 	court_grandeur_baseline_add = 4
@@ -848,40 +520,23 @@ byz_throne_modifier = {
 	monthly_prestige = 0.5
 }
 
-
-
 throne_scone_modifier = {
-
 	court_grandeur_baseline_add = 3
-
 	monthly_dynasty_prestige = 0.04
-
 	monthly_prestige = 0.25
-
-	scottish_opinion = 3 # THE MOD
-
-
-	gaelic_opinion = 3 # THE MOD
-
-
-
+	scottish_opinion = 3
+	gaelic_opinion = 3
 	pikemen_maintenance_mult = -0.05	
-
-
 }
-
-
 
 banner_kaviani_modifier = {
 	court_grandeur_baseline_add = 3
 	monthly_dynasty_prestige = 0.04
 	monthly_prestige = 0.25
-	county_opinion_add = 5
+	popular_opinion_add = 5
 	same_heritage_county_advantage_add = 4
 	persian_opinion = 5
 }
-
-
 
 pentapyrgion_modifier = {
 	court_grandeur_baseline_add = 3
@@ -891,31 +546,22 @@ pentapyrgion_modifier = {
 	happy_powerful_vassal_levy_contribution_mult = 0.04
 }
 
-
-
 monomachus_crown_modifier = {
 	monthly_prestige = 0.25
 	martial_per_stress_level = 1
 	intrigue_per_stress_level = 1
 }
 
-
-
 ruyi_modifier = {
 	court_grandeur_baseline_add = 2
-	domain_tax_mult = 0.03
 	city_holding_holding_build_gold_cost = -0.15
 	city_holding_build_gold_cost = -0.15
 }
-
-
 
 jewelled_danda_modifier = {
 	monthly_dynasty_prestige = 0.05
 	tyranny_gain_mult = -0.2
 }
-
-
 
 khanda_modifier = {
 	court_grandeur_baseline_add = 2
@@ -923,8 +569,6 @@ khanda_modifier = {
 	monthly_piety_gain_per_knight_add = 0.02
 	enemy_personal_scheme_success_chance_add = -5
 }
-
-
 
 rustam_dagger_modifier = {
 	court_grandeur_baseline_add = 2
@@ -935,28 +579,14 @@ rustam_dagger_modifier = {
 	heavy_infantry_toughness_mult = 0.05
 }
 
-
-
 spear_ascalon_modifier = {
-
 	court_grandeur_baseline_add = 3
-
 	monthly_dynasty_prestige = 0.05
-
 	monthly_piety = 0.5
-
 	martial_per_piety_level = 1
-
 	tolerance_advantage_mod = 4
-
-	same_faith_opinion = 3 # THE MOD
-
-
-
-
+	same_faith_opinion = 3
 }
-
-
 
 zomorrodnegar_modifier = {
 	court_grandeur_baseline_add = 3
@@ -965,78 +595,47 @@ zomorrodnegar_modifier = {
 	monthly_piety_gain_per_knight_add = 0.03
 	tyranny_gain_mult = -0.15
 	monthly_piety_from_buildings_mult = 0.2
-	drylands_development_growth_factor = 0.2
 }
-
-
 
 kaves_apron_modifier = {
 	court_grandeur_baseline_add = 3
 	monthly_dynasty_prestige_mult = 0.05
 	monthly_prestige = 0.5
-	county_opinion_add = 5
+	popular_opinion_add = 5
 	army_maintenance_mult = -0.05
 }
 
-
-
 aruval_modifier = {
-
 	court_grandeur_baseline_add = 3
-
 	monthly_dynasty_prestige = 0.1
-
 	monthly_piety = 0.5
-
 	knight_limit = 1
-
-	knight_effectiveness_mult = 0.07 # THE MOD
-
-
-
+	knight_effectiveness_mult = 0.07
 	monthly_piety_gain_per_knight_add = 0.01
-
 	jungle_levy_size = 0.1
-
 	jungle_advantage = 4
-
-
 }
-
-
 
 navaratna_modifier = {
 	court_grandeur_baseline_add = 3
 	monthly_dynasty_prestige = 0.05
 	monthly_prestige = 0.5
-	character_capital_county_monthly_development_growth_add = 0.02
 	church_holding_build_gold_cost = -0.1
 	church_holding_holding_build_gold_cost = -0.1
 }
 
-
-
 ikenga_modifier = {
 	court_grandeur_baseline_add = 1
 	monthly_piety = 0.3
-	development_growth_factor = 0.1
-	jungle_tax_mult = 0.1
 	jungle_construction_gold_cost = -0.1
 }
-
-
 
 afarganyu_modifier = {
 	court_grandeur_baseline_add = 2
 	monthly_piety = 0.3
 	church_holding_build_gold_cost = -0.2
 	church_holding_holding_build_gold_cost = -0.2
-	drylands_development_growth_factor = 0.1
-	desert_mountains_development_growth_factor = 0.1
-	desert_mountains_tax_mult = 0.2
 }
-
-
 
 siddhachakra_modifier = {
 	court_grandeur_baseline_add = 2
@@ -1044,24 +643,17 @@ siddhachakra_modifier = {
 	monthly_piety_gain_per_happy_powerful_vassal_add = 0.05
 }
 
-
-
 kakusandha_modifier = {
 	court_grandeur_baseline_add = 2
 	monthly_piety = 0.3
-	development_growth_factor = 0.1
 	clergy_opinion = 10
 }
-
-
 
 konagamana_modifier = {
 	court_grandeur_baseline_add = 2
 	monthly_piety = 0.3
 	vassal_tax_contribution_mult = 0.05
 }
-
-
 
 kassapa_modifier = {
 	court_grandeur_baseline_add = 2
@@ -1071,77 +663,36 @@ kassapa_modifier = {
 	church_holding_holding_build_gold_cost = -0.2
 }
 
-
-
 chalice_of_dona_urraca_modifier = {
-
 	court_grandeur_baseline_add = 1
-
 	monthly_piety = 0.2
-
-	clergy_opinion = 5 # THE MOD
-
-
-
+	clergy_opinion = 5
 	church_holding_build_gold_cost = -0.10
-
 	church_holding_holding_build_gold_cost = -0.10
-
-
 }
-
-
 
 former_bells_of_santiago_modifier = {
-
 	court_grandeur_baseline_add = 3
-
-	islam_religion_opinion = 6 # THE MOD
-
-
-	christianity_religion_opinion = -15 # THE MOD
-
-
-
+	islam_religion_opinion = 6
+	christianity_religion_opinion = -15
 	monthly_piety_gain_per_happy_powerful_vassal_add = 0.1
-
 	negate_health_penalty_add = 0.5
-
-
 }
-
-
 
 bells_of_santiago_modifier = {
-
 	court_grandeur_baseline_add = 3
-
-	same_faith_opinion = 4 # THE MOD
-
-
-	christianity_religion_opinion = 3 # THE MOD
-
-
-	islam_religion_opinion = -15 # THE MOD
-
-
-
+	same_faith_opinion = 4
+	christianity_religion_opinion = 3
+	islam_religion_opinion = -15
 	monthly_piety_gain_per_happy_powerful_vassal_add = 0.1
-
 	monthly_dynasty_prestige = 0.5
-
-
 }
-
-
 
 votive_crown_modifier = {
 	monthly_piety_gain_mult = 0.15
 	monthly_prestige_gain_mult = -0.1
 	diplomacy_per_piety_level = 1
 }
-
-
 
 statue_constantine_modifier = {
 	christianity_religion_opinion = 5
@@ -1151,16 +702,12 @@ statue_constantine_modifier = {
 	heavy_infantry_maintenance_mult = -0.1
 }
 
-
-
 tree_automa_modifier = {
 	monthly_prestige = 0.5
 	different_culture_opinion = 10
 	court_grandeur_baseline_add = 8
 	diplomacy_per_prestige_level = 1
 }
-
-
 
 statue_four_tetrarchs_modifier = {
 	monthly_influence = 0.3
@@ -1169,16 +716,12 @@ statue_four_tetrarchs_modifier = {
 	diplomacy_per_influence_level = 1
 }
 
-
-
 statue_roman_woman_modifier = {
 	monthly_prestige = 0.5
 	monthly_influence_mult = 0.05
 	attraction_opinion = 5 
 	owned_personal_scheme_success_chance_add = 10
 }
-
-
 
 hydraulic_organ_modifier = {
 	courtly_opinion = 10
@@ -1188,8 +731,6 @@ hydraulic_organ_modifier = {
 	court_grandeur_baseline_add = 5
 }
 
-
-
 double_moon_modifier = {
 	attraction_opinion = 2
 	monthly_diplomacy_lifestyle_xp_gain_mult = 0.05
@@ -1198,11 +739,7 @@ double_moon_modifier = {
 	seduce_scheme_phase_duration_add = miniscule_scheme_phase_duration_bonus_value
 }
 
-
-
 heirloom_seal_modifier = {
-	domain_tax_mult = 0.05
-	character_capital_county_monthly_development_growth_add = 0.1
 	han_opinion = 5
 	court_grandeur_baseline_add = 6
 	monthly_prestige_gain_per_legitimacy_level_add = 0.15
@@ -1210,15 +747,11 @@ heirloom_seal_modifier = {
 	monthly_influence = 0.3
 }
 
-
-
 insence_burner_modifier = {
 	court_grandeur_baseline_add = 5
 	monthly_dynasty_prestige_mult = 0.04
 	monthly_prestige = 1
 }
-
-
 
 #base_relic_modifier = {
 #	court_grandeur_baseline_add = 1
@@ -1232,23 +765,16 @@ sakanoue_sword_modifier = {
 	archer_cavalry_toughness_mult = 0.2
 }
 
-
-
 higekiri_sword_modifier = {
 	prowess_no_portrait = 2
 	monthly_prestige = 0.2
 	dread_decay_mult = -0.15
 }
 
-
-
 hizamaru_sword_modifier = {
 	prowess_no_portrait = 2
 	monthly_prestige = 0.2
-	monthly_county_control_growth_factor = 0.15
 }
-
-
 
 dojigiri_sword_modifier = {
 	prowess_no_portrait = 2
@@ -1256,15 +782,11 @@ dojigiri_sword_modifier = {
 	monthly_dynasty_prestige_mult = 0.05
 }
 
-
-
 mikazuki_munechika_sword_modifier = {
 	prowess_no_portrait = 2
 	monthly_prestige = 0.2
 	knight_effectiveness_mult = 0.1
 }
-
-
 
 odenta_sword_modifier = {
 	prowess_no_portrait = 2
@@ -1273,15 +795,11 @@ odenta_sword_modifier = {
 	vassal_opinion = 5
 }
 
-
-
 hamayumi_bow_modifier = {
 	court_grandeur_baseline_add = 3
 	monthly_piety = 0.5
 	stress_gain_mult = -0.15
 }
-
-
 
 seven_branched_sword_modifier = {
 	court_grandeur_baseline_add = 6
@@ -1290,16 +808,12 @@ seven_branched_sword_modifier = {
 	diplomacy = 1
 }
 
-
-
 gyerimro_dagger_modifier = {
 	court_grandeur_baseline_add = 6
 	monthly_prestige = 0.25
 	cultural_head_fascination_mult = 0.1
 	diplomacy = 1
 }
-
-
 
 karakawa_armor_modifier = {
 	prowess_no_portrait = 1
@@ -1308,15 +822,11 @@ karakawa_armor_modifier = {
 	enemy_hard_casualty_modifier = 0.03
 }
 
-
-
 nukemaru_sword_modifier = {
 	prowess_no_portrait = 2
 	monthly_prestige = 0.2
 	heavy_infantry_damage_mult = 0.1
 }
-
-
 
 kogarasumaru_sword_modifier = {
 	prowess_no_portrait = 2
@@ -1324,16 +834,11 @@ kogarasumaru_sword_modifier = {
 	dread_baseline_add = 15
 }
 
-
-
 eight_fold_chest_modifier = {
 	court_grandeur_baseline_add = 6
-	domain_tax_same_faith_mult = 0.15
 	monthly_piety = 0.3
 	buddhism_religion_opinion = 5
 }
-
-
 
 artifact_chinese_armillary_sphere = {
 	legitimacy_gain_mult = 0.08
@@ -1343,8 +848,6 @@ artifact_chinese_armillary_sphere = {
 	court_grandeur_baseline_add = 3
 }
 
-
-
 complete_essentials_for_the_military_classics = {
 	monthly_martial_lifestyle_xp_gain_mult = 0.15
 	court_grandeur_baseline_add = 4
@@ -1352,12 +855,8 @@ complete_essentials_for_the_military_classics = {
 	heavy_infantry_toughness_mult = 0.05
 }
 
-
-
 statue_amitabha_buddha_modifier = {
 	court_grandeur_baseline_add = 5
 	buddhism_religion_opinion = 5
 	monthly_piety = 0.3
 }
-
-

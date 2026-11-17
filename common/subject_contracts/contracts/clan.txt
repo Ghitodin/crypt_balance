@@ -6,8 +6,8 @@
 				if = {
 					limit = { exists = scope:tax_collector }
 					add = clan_government_levies_default
-					multiply = clan_government_tax_collector_aptitude_multiplier # THE MOD
-}
+					multiply = clan_government_tax_collector_aptitude_multiplier
+				}
 			}
 
 			tax = {
@@ -16,8 +16,8 @@
 					limit = { exists = scope:tax_collector }
 					add = {
 						value = clan_government_tax_default
-					multiply = clan_government_tax_collector_aptitude_multiplier # THE MOD
-}
+						multiply = clan_government_tax_collector_aptitude_multiplier
+					}
 				}
 			}
 		}

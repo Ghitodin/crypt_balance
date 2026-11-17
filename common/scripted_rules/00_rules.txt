@@ -5,14 +5,12 @@ can_command_troops = {
 	can_be_commander_basic_trigger = { ARMY_OWNER = scope:army_owner }
 }
 
-
 # Determines who can command troops; will still show up in the list, with a breakdown explaining why they can't command
 # Root is the potential commander
 # scope:army_owner is who owns the army to command
 can_command_troops_now = {
 	can_be_commander_now_trigger = { ARMY_OWNER = scope:army_owner }
 }
-
 
 # Determines if a barony should be handed to a GHW beneficiary, or instead have a baron generated. If true, goes to a beneficiary
 # Root is barony province
@@ -21,13 +19,11 @@ ghw_give_barony_to_beneficiary = {
 	has_holding_type = castle_holding
 }
 
-
 # Determines if a rite can be edited, on top of the piety requirement, and the doctrine requirements
 # Root is the rite editor
 can_edit_rite = {
 	can_edit_rite_trigger = yes
 }
-
 
 # Determines if a rite can be created, on top of the piety requirement, and the doctrine requirements
 # Also handles reforming a rite, check for the unreformed doctrine to enable those additional checks
@@ -35,7 +31,6 @@ can_edit_rite = {
 can_create_rite = {
 	can_create_rite_trigger = yes
 }
-
 
 # Determines if a character can convert faith via the convert faith UI, on top of the piety requirement
 # Root is the character that would convert
@@ -96,7 +91,6 @@ faith_conversion = {
 	}
 }
 
-
 # Determines if a character can convert rite via the convert rite UI, on top of the piety requirement
 # Root is the character that would convert
 # scope:new_rite is the rite they want to convert to
@@ -137,20 +131,15 @@ rite_conversion = {
 	}
 }
 
-
 # Determines if a character can change faith at all, like a Head of Faith cannot
 # Checked for every faith change: converting, creating a faith, and script effects such as set_character_faith
 # Root is the character whose faith would change
 can_change_faith = {
 	custom_tooltip = {
 		text = can_change_faith_holds_church_seat_tt
-		NOR = {
-			has_title = title:k_papal_state
-			has_title = title:k_orthodox
-		}
+		is_proto_hof_trigger = no
 	}
 }
-
 
 # Determines if the mother of a character should spread the house to a bastard.
 # Requirements: One of both parents should exists. One of both parents should have a house.
@@ -158,7 +147,6 @@ can_change_faith = {
 should_mother_give_house_to_bastard = {
 	should_mother_give_house_to_bastard_trigger = yes
 }
-
 
 # Determines if a character may be appointed as a knight. Checked during automatic knight assignment
 # Root is the potential knight
@@ -174,7 +162,6 @@ can_be_knight = {
 	}
 }
 
-
 # Is a character allowed to be a player
 # (they might get changed once a player takes control, such as becoming a landless adventurer)
 is_character_allowed_to_be_player = {
@@ -183,9 +170,18 @@ is_character_allowed_to_be_player = {
 			scope:will_override_government = no
 		}
 
-		custom_description = {
-			text = "GAME_OVER_CANNOT_PLAY_REPUBLIC"
-			NOT = { government_has_flag = government_is_republic }
+		trigger_if = {
+			limit = {
+				NOT = { has_dlc_feature = playable_republics }
+			}
+			custom_description = {
+				text = "GAME_OVER_CANNOT_PLAY_REPUBLIC"
+				NOT = { government_has_flag = government_is_republic }
+			}
+			custom_description = {
+				text = "GAME_OVER_CANNOT_PLAY_MERCHANT"
+				NOT = { government_has_flag = government_is_merchant }
+			}
 		}
 
 		custom_description = {
@@ -230,19 +226,22 @@ is_character_allowed_to_be_player = {
 		# We cannot become landless adventurers
 		trigger_if = {
 			limit = {
-				NOT = { has_dlc_feature = roads_to_power }
+				NOT = { has_dlc_feature = landless_adventurer }
 			}
 			custom_description = {
 				text = "GAME_OVER_CANNOT_PLAY_ADVENTURER"
 				NOT = { government_has_flag = government_is_landless_adventurer }
 			}
+		}
+
+		trigger_if = {
+			limit = {
+				NOT = { has_dlc_feature = roads_to_power }
+			}
 			custom_description = {
 				text = "GAME_OVER_CANNOT_PLAY_BARON"
 				NOT = { highest_held_title_tier = tier_barony }
 			}
-
-			# This is a generic "catch all", we should have caught it before this
-			is_playable_character = yes
 		}
 
 		# This character is not playable
@@ -278,7 +277,6 @@ is_character_allowed_to_be_player = {
 	}
 }
 
-
 # Determines if a secret is considered available for blackmail for use in the GUI (icon/tooltip listing a secret you know as usable for blackmail)
 # Scopes the same as a secret_type's is_valid, plus:
 # root -> the secret
@@ -291,7 +289,6 @@ is_secret_available_for_blackmail = {
 	 	BLACKMAILER = scope:blackmailer
 	}
 }
-
 
 # Is this character allowed to join factions in general. See also passes_faction_soft_block.
 # Root: Character being evaluated
@@ -371,7 +368,6 @@ passes_faction_hard_block = {
 	}
 }
 
-
 # Is this character allowed to join factions. It is a soft block because factions can set a toggle to ignore this block on the faction type.
 # Root: Character being evaluated
 passes_faction_soft_block = {
@@ -381,13 +377,11 @@ passes_faction_soft_block = {
 	}
 }
 
-
 # Is this faction dangerous
 # Root = Faction being evaluated
 is_dangerous_faction = {
 	is_dangerous_faction_trigger = yes
 }
-
 
 # Is the alliance reason still valid
 # Root = First character of alliance reason
@@ -425,10 +419,7 @@ is_alliance_valid = {
 		}
 		#childhood friendship with hostage event, where they swear to be friends forever
 		AND = {
-			OR = {
-				has_relation_friend = scope:second
-				has_relation_best_friend = scope:second
-			}
+			has_relation_friend = scope:second
 			OR = {
 				any_memory = {
 					memory_type = hostage_oath_of_friendship
@@ -448,13 +439,10 @@ is_alliance_valid = {
 	}
 }
 
-
 # Can the character designate an heir? Used for the Realm screen
 can_designate_heir = {
 	OR = { can_designate_heir_trigger = yes has_perk = meritocracy_perk } # THE MOD
-
 }
-
 
 
 # Does the character care about having a council position? Used for powerful vassals that have no council position for whether they should get the opinion penalty
@@ -464,12 +452,10 @@ cares_about_powerful_vassal_council_position = {
 	is_designated_diarch = no
 }
 
-
 # Does the character approve of succession law changes? Used for the succession law change GUI to designate oppose vs. approve for powerful vassals
-approves_of_succession_law_change = {
-	opposes_succession_law_change_trigger = no
+approves_of_law_change = {
+	opposes_law_change_trigger = no
 }
-
 
 # Does the character get a second chance when rolling a natural death
 has_natural_death_second_chance = {
@@ -482,7 +468,6 @@ has_natural_death_second_chance = {
 	}
 }
 
-
 # Can the character refund their perks? Scope is the character
 can_refund_perks = {
 	perk_points_assigned >= 1
@@ -493,7 +478,6 @@ can_refund_perks = {
 		}
 	}
 }
-
 
 # Can the character join the defender in a holy war? Only characters' of the defender's faith are considered. Player characters are not considered.
 # Scope is the potential joiner
@@ -514,7 +498,7 @@ can_defensively_join_holy_war = {
 		has_relation_rival = scope:defender
 	}
 	OR = {
-		primary_title.tier >= tier_duchy # Of significant size
+		highest_held_title_tier >= tier_duchy # Of significant size
 		current_military_strength >= scope:defender.current_military_strength # Avoid having too many small counts join in
 	}
 	OR = {
@@ -541,7 +525,6 @@ can_defensively_join_holy_war = {
 	}
 }
 
-
 # Can a character be fire from being a councillor
 # root = council owner
 # scope:councillor = councillor attempting to be fired
@@ -561,7 +544,6 @@ can_fire_councillor = {
 	}
 }
 
-
 # Can this character go on raids?
 # root: the potential raider
 can_raid = {
@@ -569,13 +551,11 @@ can_raid = {
 	can_raid_trigger = yes
 }
 
-
 # Can this character start a new raid right now? (can_raid will always get checked first)
 # root: the potential raider
 can_start_raid = {
 	is_at_war = no
 }
-
 
 # Can this character start bartering right now? (can_barter will always get checked first)
 # root: the potential bartering character
@@ -585,11 +565,9 @@ can_start_bartering = {
 	is_at_war = no
 }
 
-
 # Can this character cross water (sea, rivers) while on raid?
 # root: the potential raider
 can_raid_across_water = { can_raid_across_water_trigger = yes }
-
 
 # Can this character traverse rivers using boats?
 # root: the owner of the army
@@ -607,13 +585,11 @@ can_traverse_river = {
 	}
 }
 
-
 #Is this character hard blocked from backing a scheme?
 #Scope it to potential backer
 is_hard_blocked_from_schemes = {
 	is_incapable = yes
 }
-
 
 # Will AI for this character try to arrange matrilineal marriages?
 # Note that the AI can still arrange patrilineal marriages based on the SPOUSE_SCORE_LINEALITY_MISMATCH_SCORE AI define
@@ -809,7 +785,6 @@ ai_wants_matrilineal_marriage = {
 	}
 }
 
-
 # Does the AI want to have a grand wedding instead of an instant marriage
 # root: the arranging AI character
 # scope:actor: the arranging AI character
@@ -898,11 +873,10 @@ ai_wants_grand_wedding_promise = {
 	# Only do Grand Weddings for rulers of your tier or above
 	exists = scope:recipient.primary_title
 	OR = {
-		scope:recipient.primary_title.tier >= primary_title.tier
-		scope:recipient.primary_title.tier >= tier_kingdom
+		scope:recipient.highest_held_title_tier >= primary_title.tier
+		scope:recipient.highest_held_title_tier >= tier_kingdom
 	}
 }
-
 
 # Is this character blocked from having buildings enabled?
 #Scope it to potential backer
@@ -918,7 +892,6 @@ buildings_enabled = {
 	}
 }
 
-
 # Can this character potentially call its ally to war (note, war doesn't necessarily exist yet)
 # Used by the AI to account for allies when determining wars to declare
 # Also used in the war declaration screen to filter out allies that definitely cannot be called
@@ -931,7 +904,6 @@ can_potentially_call_ally = {
 	}
 }
 
-
 # Is this character allowed to hybridize their culture with the target culture?
 # root: Character
 # scope:culture: The culture they want to hybridize with
@@ -941,7 +913,6 @@ can_hybridize_culture = {
 		CHARACTER = root
 	}
 }
-
 
 # Is this character allowed to diverge their culture?
 # root: Character
@@ -955,7 +926,6 @@ can_diverge_culture = {
 	}
 }
 
-
 # Is this character allowed to add a tradition to their culture?
 # root: Character
 can_add_tradition = {
@@ -967,12 +937,10 @@ can_add_tradition = {
 	}
 }
 
-
 # Is this character allowed to replace a pillar of their culture?
 # root: Character
 can_replace_pillar = {
 }
-
 
 # Can we rename a character?
 # Root is the renamer (E.G., the player)
@@ -981,7 +949,6 @@ can_name_after_birth = {
 	scope:child = { is_adult = no }
 	allow_naming_on_birth_of_child_trigger = { CHILD = scope:child }
 }
-
 
 # Can a language be adopted as the court language
 # Only used by the AI
@@ -998,7 +965,6 @@ can_adopt_court_language = {
 	in_diplomatic_range = scope:target
 	NOT = { has_title = title:k_papal_state } # The Papacy always keeps Latin, so never let the AI shop around
 }
-
 
 
 # Should AI for this character repair the artifact
@@ -1019,7 +985,6 @@ ai_should_repair_artifact = {
 		}
 	}
 }
-
 
 # Can this character be a guest at any activity at all held by the host, checked in the UI and in the invite to activity special interaction type
 # root = character
@@ -1062,14 +1027,12 @@ can_be_activity_guest = {
 	}
 }
 
-
 # Is target character displayed as loyal diarch
 # If both or neither loyal and disloyal, we show unknown loyalty
 # root - Diarch or potential diarch character
 is_diarch_visibly_loyal = {
 	diarch_loyalty >= diarch_loyalty_visibly_loyal_threshold
 }
-
 
 # Is target character displayed as disloyal diarch
 # If both or neither loyal and disloyal, we show unknown loyalty
@@ -1078,26 +1041,22 @@ is_diarch_visibly_disloyal = {
 	diarch_loyalty <= diarch_loyalty_visibly_disloyal_threshold
 }
 
-
 # Can the target diarch fulfil their diarch duties
 # root - the diarch whos ability is being tested
 is_diarch_able = { is_diarch_able_trigger = yes }
-
 
 # Can target character even be considered serving as diarch, or are they
 # completely unable to fulfil their diarch duties and should be replaced
 # root - the diarch whos ability is being tested
 is_diarch_valid = { is_diarch_valid_trigger = yes }
 
-
 # If ruler should go into diarchy
 # Used in code when people become landed or receive incapacitating traits
 # root - the liege who is tested for diarchy
 should_have_diarchy = {
 	basic_eligible_for_diarchy_trigger = yes
-	regency_for_personal_reasons_trigger = yes
+	entrenched_regency_for_personal_reasons_trigger = yes
 }
-
 
 # Does target character fulfil the basic requirements to be an Acclaimed Knight
 # root - Acclaimed Knight, or potential candidate
@@ -1105,7 +1064,6 @@ can_be_acclaimed_knight = {
 	is_knight = yes
 	highest_held_title_tier <= tier_barony
 }
-
 
 # Can target character be considered a valuable hostage
 # It's checked on an already taken hostages, so regular links to warden and home court
@@ -1126,12 +1084,10 @@ is_hostage_valid = {
 	}
 }
 
-
 # root = the character creating a legend
 can_create_legend = {
 	age >= 12
 }
-
 
 # root = the character promoting a legend
 # scope:legend = the legend to promote
@@ -1160,7 +1116,6 @@ can_promote_legend = {
 	}
 }
 
-
 # If the ai character wants to create their own legend as well as just supporting another one
 # root = the character creating a legend
 # scope:num_legends = The number of existing legends this character could support
@@ -1169,7 +1124,6 @@ ai_wants_to_create_own_legend = {
 	highest_held_title_tier >= tier_kingdom
 	scope:num_legends <= 5
 }
-
 
 # If the powerful house is dominant
 # It's evaluated only for powerful families that are not the current top liege
@@ -1180,7 +1134,6 @@ is_dominant_family = {
 		value >= dominant_family_threshold_value
 	}
 }
-
 
 ### Brief: is_hireable_ruler_trigger
 # Can the scoped character be hired by another ruler in war? Referenced
@@ -1193,6 +1146,9 @@ is_dominant_family = {
 # Code also checks if the character is available by looking at what
 # wars they are involved in, where root only will be available if they
 # are not in a war already.
+# When counting hired rulers, Code differentiates between mercenaries and
+# other rulers (e.g. allies) depending on whether the character has the
+# 'joined_as_mercenary' variable set to the employer.
 #
 # Supported scopes:
 #	root ( character )
@@ -1202,7 +1158,6 @@ is_hireable_ruler_trigger = {
 	has_government = landless_adventurer_government
 	current_military_strength >= 100
 }
-
 
 ### Brief: can_hire_hireable_ruler_trigger
 # Can the scoped ruler hire the target hireable ruler? Referenced in
@@ -1222,7 +1177,6 @@ can_hire_hireable_ruler_trigger = {
 		is_war_leader = root
 	}
 }
-
 
 # Supported scopes:
 #	root ( province )
@@ -1268,6 +1222,7 @@ can_move_domicile = {
 					scope:owner.domicile.domicile_location != scope:province_temp
 				}
 			}
+			# Camp
 			trigger_if = {
 				limit = { is_domicile_type = camp }
 				# Cannot move domicile to places you've been exiled from.
@@ -1282,11 +1237,79 @@ can_move_domicile = {
 				}
 				scope:owner = { is_available = yes }
 			}
+			# Company or Republic
+			trigger_if = {
+				limit = {
+					is_domicile_type = merchant_company
+				}
+				trigger_if = {
+					limit = {
+						scope:owner = {
+							government_has_flag = government_is_republic
+						}
+					}
+					trigger_if = {
+						limit = {
+							scope:owner = { is_independent_ruler = no }
+							scope:owner.liege = {
+								gdp_is_assembly_head_trigger = yes
+							}
+						}
+						custom_tooltip = {
+							text = can_move_domicile_estate_republic_tt
+							root = scope:owner.liege.capital_province
+						}
+					}
+					trigger_else_if = {
+						limit = {
+							scope:owner = {
+								gdp_is_assembly_head_trigger = yes
+							}
+						}
+						custom_tooltip = {
+							text = can_move_domicile_estate_republic_tt
+							root = scope:owner.capital_county.title_province
+						}
+					}
+					trigger_else = {
+						custom_tooltip = {
+							text = can_move_domicile_estate_republic_tt
+							always = no
+						}
+					}
+				}
+				trigger_if = {
+					limit = {
+						scope:owner = { government_has_flag = government_is_merchant }
+					}
+					custom_tooltip = {
+						text = can_move_domicile_company_market_capital_tt
+						scope:province_temp = { gdp_is_market_capital_province_trigger = yes }
+					}
+					custom_tooltip = {
+						text = can_move_domicile_company_range_tt
+						scope:province_temp = {
+							squared_distance = {
+								target = scope:owner.domicile.domicile_location
+								value <= scope:owner.merchant_company_move_range_value
+							}
+						}
+					}
+				}
+				# Cannot move estate to its current location
+				custom_tooltip = {
+					text = can_move_domicile_consortery_same_location_tt
+					scope:owner.domicile.domicile_location != scope:province_temp
+				}
+				scope:owner = {
+					has_raised_armies = no
+					is_available = yes
+				}
+			}
 		}
 	}
 	trigger_else = { exists = county } #This will exclude sea provinces, impassable provinces, river provinces, etc
 }
-
 
 # Supported scopes:
 #	root ( character )
@@ -1314,10 +1337,12 @@ is_kurultai_succession_chaotic = {
 		has_chaotic_succession_trigger_action = yes
 	}
 	trigger_else = {
-		always = no
+		custom_tooltip = {
+			text = kurultai_succession_is_stable_tooltip
+			always = no
+		}
 	}
 }
-
 
 # Supported scopes:
 #	root ( character )
@@ -1358,7 +1383,7 @@ ai_wants_to_migrate = {
 				has_realm_law = nomadic_authority_4
 				has_realm_law = nomadic_authority_5
 			}
-			primary_title.tier < tier_kingdom
+			highest_held_title_tier < tier_kingdom
 		}
 		always = yes
 	}
@@ -1382,7 +1407,6 @@ ai_wants_to_migrate = {
 	}
 }
 
-
 # Used when checking if a character can raze holdings at all
 #
 # Supported scopes:
@@ -1399,7 +1423,6 @@ can_raze = {
 		top_liege = { government_has_flag = can_raze_holdings }
 	}
 }
-
 
 # Used when checking if a character can raze a holding in a province they own
 #
@@ -1471,7 +1494,6 @@ can_raze_own_holding = {
 	}
 }
 
-
 # Used to restrict a character from creating titles, in addition to any title-specific limitation from the can_create block in the title definition.
 # For modder usage; new general title formation requirements in vanilla should be done in code.
 #
@@ -1483,7 +1505,6 @@ can_raze_own_holding = {
 can_create_title = {
 	always = yes
 }
-
 
 # Used to restrict a character from destroying titles, in addition to any title-specific limitation from the can_destroy block in the title definition.
 # For modder usage; new general title destruction requirements in vanilla should be done in code.
@@ -1497,25 +1518,31 @@ can_destroy_title = {
 	always = yes
 }
 
-
 # check if the AI ruler in scope should evaluate creating the target title. Available scope:
 #	root: the ruler that could create the title
 # 	scope:title the title to create
 ai_should_create_title = {
 	# emperors should not create kingdoms / empires
 	nand = {
-		root.primary_title.tier = tier_empire
+		root.highest_held_title_tier = tier_empire
 		scope:title.tier >= tier_kingdom
 		scope:title.tier <= tier_empire
 	}
 
 	# hegemons should not create empires / hegemonies
 	nand = {
-		root.primary_title.tier = tier_hegemony
+		root.highest_held_title_tier = tier_hegemony
 		scope:title.tier >= tier_empire
 	}
-}
 
+	# Republics may not create higher tier titles (they have a special law to gain higher tier titles instead)
+	trigger_if = {
+		limit = {
+			government_has_flag = government_is_republic
+		}
+		highest_held_title_tier > scope:title.tier
+	}
+}
 
 # Check if an AI ruler should increase the size of their Title MaA (or otherwise try and increase Personal MaA).
 # (Still has to pass the `ai_men_at_arms_expense_*_min/_max/_ideal` check too)
@@ -1555,7 +1582,6 @@ ai_should_hire_title_maa = {
 	}
 }
 
-
 can_build_in_tributaries = {
 	is_tributary = no
 	OR = {
@@ -1580,7 +1606,6 @@ can_build_in_tributaries = {
 		}
 	}
 }
-
 
 can_build_in_liege_tributaries = {
 	is_tributary = no
@@ -1607,7 +1632,6 @@ can_build_in_liege_tributaries = {
 	}
 }
 
-
 can_build_in_same_realm = {
 	OR = {
 		has_title = title:e_minister_of_works
@@ -1615,3 +1639,50 @@ can_build_in_same_realm = {
 	}
 }
 
+# Should a character be able to construct a trade post in a holding they do not control themselves?
+#
+# Scopes:
+#	root: the character trying to build a trade post
+#   province: the province where the trade post would be built
+#
+can_build_external_trade_post = {
+	# Does your government allow you to build trade posts at all?
+	trigger_if = {
+		limit = {
+			government_has_flag = government_has_trade_posts
+		}
+		# Diplomatic range is checked against the county holder
+		custom_tooltip = {
+			text = county_is_not_in_diplomatic_range_desc
+			in_diplomatic_range = scope:province.county.holder
+		}
+		# You are not at your trade post limit
+		custom_tooltip = {
+			text = trade_post_limit_reached_desc
+			trade_post_count < trade_post_limit
+		}
+	}
+	# We explicitly block everyone else - we do this to simplify the tooltip and not show irrelevant information
+	trigger_else = {
+		custom_tooltip = {
+			text = government_does_not_allow_trade_posts_desc
+			always = no
+		}
+	}
+}
+
+# Should a character be allowed to become or stay a trader?
+#
+can_be_trader = {
+	gdp_can_be_trader_trigger = yes
+}
+
+# Should this character be able to hire mercenaries?
+#
+can_hire_mercenaries = {
+}
+
+# Should this character be able to hire holy orders?
+#
+can_hire_holy_orders = {
+}

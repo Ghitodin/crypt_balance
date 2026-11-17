@@ -7,8 +7,7 @@
 living_simply_modifier = {
 	icon = spoon_positive
 	stress_loss_mult = 0.25
-	religious_vassal_opinion = 5 # THE MOD
-
+	religious_vassal_opinion = 5
 }	
 
 villager_gifts_modifier = {
@@ -18,10 +17,8 @@ villager_gifts_modifier = {
 
 loyal_attitudes_modifier = {
 	icon = piety_positive
-	vassal_opinion = 5 # THE MOD
-
-	vassal_levy_contribution_add = 0.02 # THE MOD
-
+	vassal_opinion = 5
+	vassal_levy_contribution_add = 0.02
 }
 
 pacifist_mindset_modifier = {
@@ -33,8 +30,7 @@ pacifist_mindset_modifier = {
 
 told_good_story_modifier = {
 	icon = social_positive
-	vassal_opinion = 3 # THE MOD
-
+	vassal_opinion = 3
 	diplomacy = 1
 }
 
@@ -67,8 +63,7 @@ trained_in_warrior_culture_modifier = {
 
 training_hard_modifier = {
 	icon = martial_positive
-	prowess = 6 # THE MOD
-
+	prowess = 6
 }
 	
 philosophical_musings_modifier = {
@@ -133,8 +128,7 @@ broadened_horizons_modifier = {
 
 firm_convictions_modifier = {
 	icon = social_positive
-	religious_vassal_opinion = 7 # THE MOD
-
+	religious_vassal_opinion = 7
 }
 
 more_supplies_modifier = {

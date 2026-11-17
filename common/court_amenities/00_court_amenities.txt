@@ -32,9 +32,8 @@
 		}
 		owner_modifier = {
 			monthly_prestige_gain_mult = 0.01
-			court_grandeur_baseline_add = 2 # THE MOD
-		
-}
+			court_grandeur_baseline_add = 2
+		}
 		courtier_guest_modifier = {
 			monthly_prestige = 0.2
 		}
@@ -97,9 +96,8 @@
 		}
 		owner_modifier = {
 			monthly_prestige_gain_mult = 0.02
-			court_grandeur_baseline_add = 4 # THE MOD
-		
-}
+			court_grandeur_baseline_add = 4
+		}
 		courtier_guest_modifier = {
 			monthly_prestige = 0.4
 		}
@@ -163,9 +161,8 @@
 		}
 		owner_modifier = { 
 			monthly_prestige_gain_mult = 0.03
-			court_grandeur_baseline_add = 6 # THE MOD
-		
-}
+			court_grandeur_baseline_add = 6
+		}
 		courtier_guest_modifier = {
 			monthly_prestige = 0.8
 		}
@@ -228,9 +225,8 @@
 		}
 		owner_modifier = {
 			monthly_prestige_gain_mult = 0.04
-			court_grandeur_baseline_add = 7 # THE MOD	
-		
-}
+			court_grandeur_baseline_add = 7	
+		}
 		courtier_guest_modifier = {
 			monthly_prestige = 1.6
 		}
@@ -299,9 +295,8 @@ court_food_quality = {
 			}
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 2 # THE MOD
-		
-}
+			court_grandeur_baseline_add = 2
+		}
 
 		courtier_guest_modifier = {
 			stress_loss_mult = 0.1
@@ -371,9 +366,8 @@ court_food_quality = {
 			}
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 4 # THE MOD
-		
-}
+			court_grandeur_baseline_add = 4
+		}
 
 		owner_modifier_description = owner_court_food_quality_decent
 
@@ -445,9 +439,8 @@ court_food_quality = {
 			}
 		}
 		owner_modifier = { 
-			court_grandeur_baseline_add = 6 # THE MOD
-		
-}
+			court_grandeur_baseline_add = 6
+		}
 
 		owner_modifier_description = owner_court_food_quality_lavish
 
@@ -519,8 +512,7 @@ court_food_quality = {
 			}
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 7 # THE MOD
-
+			court_grandeur_baseline_add = 7
 			negate_health_penalty_add = 0.2
 		}
 
@@ -599,9 +591,8 @@ court_lodging_standards = {
 			}
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 2 # THE MOD
-		
-}
+			court_grandeur_baseline_add = 2
+		}
 		owner_modifier_description = owner_court_lodgings_small
 
 		courtier_guest_modifier = {
@@ -666,9 +657,8 @@ court_lodging_standards = {
 			}
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 4 # THE MOD
-		
-}
+			court_grandeur_baseline_add = 4
+		}
 
 		owner_modifier_description = owner_court_lodgings_middling
 
@@ -735,9 +725,8 @@ court_lodging_standards = {
 			}
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 6 # THE MOD
-		
-}
+			court_grandeur_baseline_add = 6
+		}
 
 		owner_modifier_description = owner_court_lodgings_spacious
 
@@ -803,9 +792,8 @@ court_lodging_standards = {
 			}
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 7 # THE MOD
-		
-}
+			court_grandeur_baseline_add = 7
+		}
 
 		owner_modifier_description = owner_court_lodgings_grand
 
@@ -876,8 +864,7 @@ court_servants = {
 			}
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 2 # THE MOD
-
+			court_grandeur_baseline_add = 2
 			enemy_hostile_scheme_phase_duration_add = 4
 			personal_scheme_phase_duration_add = -4
 		}
@@ -952,8 +939,7 @@ court_servants = {
 			}
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 4 # THE MOD
-
+			court_grandeur_baseline_add = 4
 			enemy_hostile_scheme_phase_duration_add = 8
 			personal_scheme_phase_duration_add = -8
 		}
@@ -1028,8 +1014,7 @@ court_servants = {
 			}
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 6 # THE MOD
-
+			court_grandeur_baseline_add = 6
 			enemy_hostile_scheme_phase_duration_add = 12
 			personal_scheme_phase_duration_add = -12
 		}
@@ -1104,8 +1089,7 @@ court_servants = {
 			}
 		}
 		owner_modifier = {
-			court_grandeur_baseline_add = 7 # THE MOD
-
+			court_grandeur_baseline_add = 7
 			enemy_hostile_scheme_phase_duration_add = 16
 			personal_scheme_phase_duration_add = -16
 		}

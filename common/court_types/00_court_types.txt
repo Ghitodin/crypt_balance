@@ -111,11 +111,8 @@ court_diplomatic = {
 	}
 }
 
-
 court_warlike = {
-
 	background = "gfx/interface/icons/culture_pillars/ethos_stoic.dds"
-
 
 	is_shown = {
 		NOR = {
@@ -128,7 +125,6 @@ court_warlike = {
 			culture = { has_cultural_pillar = ethos_stoic }
 		}
 	}
-
 	
 	is_valid = {
 		NOR = {
@@ -141,14 +137,12 @@ court_warlike = {
 			culture = { has_cultural_pillar = ethos_stoic }
 		}
 	}
-
 	
 	cost = {
 		prestige = {
 			add = 500
 		}
 	}
-
 	
 	level_perk = {
 		court_grandeur = 1
@@ -156,22 +150,13 @@ court_warlike = {
 			knight_effectiveness_mult = 0.1
 		}
 	}
-
 	
 	level_perk = {
-
 		court_grandeur = 4
-
 		owner_modifier = {
-
 			happy_powerful_vassal_levy_contribution_add = 0.1
-
-		
-}
-
-	
-}
-
+		}
+	}
 	
 	level_perk = {
 		court_grandeur = 7
@@ -179,25 +164,14 @@ court_warlike = {
 			counter_efficiency = 0.1
 		}
 	}
-
 	
 	level_perk = {
-
 		court_grandeur = 10
-
 		owner_modifier = {
-
 			men_at_arms_limit = 1
-
-		
-
 			martial_per_prestige_level = 1 # THE MOD
-
-}
-
-	
-}
-
+		}
+	}
 
 	ai_will_do = {
 		value = 0
@@ -247,10 +221,7 @@ court_warlike = {
 			}
 		}
 	}
-
-
 }
-
 
 court_administrative = {
 	background = "gfx/interface/icons/culture_pillars/ethos_bureaucratic.dds"
@@ -306,7 +277,7 @@ court_administrative = {
 	level_perk = {
 		court_grandeur = 7
 		owner_modifier = {
-			character_capital_county_monthly_development_growth_add = 0.2
+			character_capital_county_monthly_prosperity_growth_add = 0.2
 		}
 	}
 	
@@ -352,7 +323,6 @@ court_administrative = {
 		}
 	}
 }
-
 
 court_intrigue = {
 	background = "gfx/interface/icons/culture_pillars/ethos_communal.dds"
@@ -460,7 +430,6 @@ court_intrigue = {
 	}
 }
 
-
 court_scholarly = {
 	background = "gfx/interface/icons/culture_pillars/ethos_spiritual.dds"
 	
@@ -565,7 +534,6 @@ court_scholarly = {
 		}
 	}
 }
-
 
 court_tribal = {
 	background = "gfx/interface/icons/culture_pillars/ethos_stoic.dds"
@@ -687,7 +655,6 @@ court_tribal = {
 		}
 	}
 }
-
 
 court_nomadic = {
 	background = "gfx/interface/icons/culture_pillars/ethos_bellicose.dds"
@@ -831,4 +798,3 @@ court_nomadic = {
 		}
 	}
 }
-

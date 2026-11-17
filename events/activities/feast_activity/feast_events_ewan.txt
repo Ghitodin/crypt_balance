@@ -1,8 +1,6 @@
 ﻿@prank_modifiers_default_duration_years_value = 15
 
-
 namespace = feast_events_ewan
-
 
 ##################################################
 # #Murder
@@ -40,15 +38,12 @@ namespace = feast_events_ewan
 # 0001 - 0010
 ##################################################
 
-scripted_trigger
- feast_events_ewan_0001_has_suitable_active_scheme_trigger = {
+scripted_trigger feast_events_ewan_0001_has_suitable_active_scheme_trigger = {
 	scheme_type = murder
 	scheme_target_character = scope:intent_target
 }
 
-
-scripted_effect
- feast_events_ewan_0001_kill_intent_target_effect = {
+scripted_effect feast_events_ewan_0001_kill_intent_target_effect = {
 	save_temporary_scope_as = temp_scope
 	unknown_murder_effect = {
 		VICTIM = scope:intent_target
@@ -57,9 +52,7 @@ scripted_effect
 	}
 }
 
-
-scripted_effect
- feast_events_ewan_0001_failure_effect = {
+scripted_effect feast_events_ewan_0001_failure_effect = {
 	add_prestige = medium_prestige_loss
 	add_secret = {
 		type = secret_murder_attempt
@@ -72,9 +65,7 @@ scripted_effect
 	}
 }
 
-
-scripted_effect
- feast_events_ewan_0001_attempted_murder_stress_effect = {
+scripted_effect feast_events_ewan_0001_attempted_murder_stress_effect = {
 	stress_and_fulfillment_impact = {
 		brave = miniscule_stress_impact_loss
 		vengeful = miniscule_stress_impact_loss
@@ -84,7 +75,6 @@ scripted_effect
 		craven = major_stress_impact_gain
 	}
 }
-
 
 #	Ambush your target when they go out for a walk.
 feast_events_ewan.0001 = {
@@ -522,7 +512,6 @@ feast_events_ewan.0001 = {
 
 
 
-
 ##################################################
 # SEDUCE
 
@@ -818,7 +807,6 @@ feast_events_ewan.0201 = {
 		}
 	}
 }
-
 
 
 
@@ -1130,7 +1118,6 @@ feast_events_ewan.0401 = {
 
 
 
-
 ##################################################
 # MISCHIEF
 
@@ -1140,8 +1127,7 @@ feast_events_ewan.0401 = {
 # 0601 - 0610
 ##################################################
 
-scripted_effect
- feast_events_ewan_0601_add_or_upgrade_mischievous_effect = {
+scripted_effect feast_events_ewan_0601_add_or_upgrade_mischievous_effect = {
 	# What tier are we trying to skip in at?
 	save_scope_value_as = {
 		name = modifier_tier
@@ -1280,7 +1266,6 @@ scripted_effect
 		}
 	}
 }
-
 
 #	Stuff a gross item (e.g., dead rat) in a refined foodstuff (e.g., jug of wine).
 feast_events_ewan.0601 = {
@@ -1530,7 +1515,6 @@ feast_events_ewan.0601 = {
 
 
 
-
 ##################################################
 # RELAX
 
@@ -1542,11 +1526,8 @@ feast_events_ewan.0601 = {
 
 #	Sit back and enjoy the vibes.
 feast_events_ewan.0801 = {
-
 	type = activity_event
-
 	title = feast_events_ewan.0801.t
-
 	desc = {
 		desc = feast_events_ewan.0801.desc.intro
 		random_valid = {
@@ -1728,29 +1709,23 @@ feast_events_ewan.0801 = {
 		}
 		desc = feast_events_ewan.0801.desc.outro
 	}
-
 	theme = feast_activity
-
 	left_portrait = {
 		character = root
 		animation = happiness
 	}
-
 	
 	center_portrait = {
 		character = scope:fellow_guest_1
 		animation = toast_goblet
 	}
-
 	
 	right_portrait = {
 		character = scope:fellow_guest_2
 		animation = personality_compassionate
 	}
 
-
 	cooldown = { years = 1 }
-
 
 	trigger = {
 		# Correct intent for vibes time.
@@ -1764,9 +1739,9 @@ feast_events_ewan.0801 = {
 			this != scope:host
 		}
 	}
-
 	
 	immediate = {
+		save_scope_as = event_participant
 		involved_activity = {
 			random_attending_character = {
 				limit = {
@@ -1795,7 +1770,6 @@ feast_events_ewan.0801 = {
 		}
 	}
 
-
 	weight_multiplier = {
 		base = 1
 		
@@ -1812,25 +1786,16 @@ feast_events_ewan.0801 = {
 		}
 	}
 
-
 	# Soak in the atmosphere.
 	option = {
-
 		name = feast_events_ewan.0801.a
-
 
 		# Effects handled in stress loss.
 
 		stress_and_fulfillment_impact = {
-
-			base = medium_stress_impact_loss # THE MOD
-
-
+			base = medium_stress_impact_loss
 			reclusive = major_stress_impact_gain
-
-		
-}
-
+		}
 		ai_chance = {
 			# Higher base weight because the AI wants to lose stress when it selects this intent.
 			base = 100
@@ -1840,16 +1805,11 @@ feast_events_ewan.0801 = {
 				ai_boldness = -0.5
 			}
 		}
-
-	
-}
-
+	}
 	
 	# Hang out with those you have something in common with.
 	option = {
-
 		name = feast_events_ewan.0801.b
-
 		# Make sure some other character does have at least one trait in common with us. Just in case.
 		## Haha, they don't know I'm Arbitrary - Stubborn - Shy.
 		trigger = {
@@ -1862,7 +1822,6 @@ feast_events_ewan.0801 = {
 				}
 			}
 		}
-
 
 		scope:activity = {
 			every_attending_character = {
@@ -1882,18 +1841,11 @@ feast_events_ewan.0801 = {
 			}
 		}
 
-
 		# Lil bit of stress loss here too, since however you cut it you're hanging out with folks you can get along with.
 		stress_and_fulfillment_impact = {
-
-			base = -10 # THE MOD
-
-
+			base = -10
 			gregarious = miniscule_stress_impact_loss
-
-		
-}
-
+		}
 		ai_chance = {
 			base = 1
 			ai_value_modifier = {
@@ -1902,10 +1854,7 @@ feast_events_ewan.0801 = {
 
 			}
 		}
-
-	
-}
-
+	}
 	
 	# Hob-knob with the most important people at the feast.
 	option = {
@@ -1927,7 +1876,4 @@ feast_events_ewan.0801 = {
 			}
 		}
 	}
-
-
 }
-

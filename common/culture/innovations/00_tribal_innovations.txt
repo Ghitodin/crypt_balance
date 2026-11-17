@@ -1,158 +1,49 @@
 ﻿#### Local Types ####
 @administration_1 = "gfx/interface/icons/culture_innovations/innovation_administration_01.dds"
-
-
-
 @administration_2 = "gfx/interface/icons/culture_innovations/innovation_administration_02.dds"
-
-
-
 @administration_3 = "gfx/interface/icons/culture_innovations/innovation_administration_03.dds"
-
-
-
 @civil_construction_1 = "gfx/interface/icons/culture_innovations/innovation_civil_construction_01.dds"
-
-
-
 @civil_construction_2 = "gfx/interface/icons/culture_innovations/innovation_civil_construction_02.dds"
-
-
-
 @leadership_1 = "gfx/interface/icons/culture_innovations/innovation_leadership_01.dds"
-
-
-
 @leadership_2 = "gfx/interface/icons/culture_innovations/innovation_leadership_02.dds"
-
-
-
 @raised_banner = "gfx/interface/icons/culture_innovations/innovation_raised_banner.dds"
-
-
-
 @fortifications = "gfx/interface/icons/culture_innovations/innovation_fortifications.dds"
-
-
-
 @siege_weapons = "gfx/interface/icons/culture_innovations/innovation_siege_weapons.dds"
-
-
-
 @levy_building = "gfx/interface/icons/culture_innovations/innovation_levy_building.dds"
-
-
-
 @maa_01 = "gfx/interface/icons/culture_innovations/innovation_maa_01.dds"
-
-
-
 @maa_02 = "gfx/interface/icons/culture_innovations/innovation_maa_02.dds"
-
-
-
 @weapons_and_armor_01 = "gfx/interface/icons/culture_innovations/innovation_weapons_and_armor_01.dds"
-
-
-
 @weapons_and_armor_02 = "gfx/interface/icons/culture_innovations/innovation_weapons_and_armor_02.dds"
-
-
-
 @knight = "gfx/interface/icons/culture_innovations/innovation_knight.dds"
-
-
-
 @hird = "gfx/interface/icons/culture_innovations/innovation_hird.dds"
-
-
-
 @longboats = "gfx/interface/icons/culture_innovations/innovation_longboats.dds"
-
-
-
 @majesty_01 = "gfx/interface/icons/culture_innovations/innovation_majesty_01.dds"
-
-
-
 @majesty_02 = "gfx/interface/icons/culture_innovations/innovation_majesty_02.dds"
-
-
-
 @majesty_03 = "gfx/interface/icons/culture_innovations/innovation_majesty_03.dds"
-
-
-
 @nobility_01 = "gfx/interface/icons/culture_innovations/innovation_nobility_01.dds"
-
-
-
 @nobility_02 = "gfx/interface/icons/culture_innovations/innovation_nobility_02.dds"
-
-
-
 @nobility_03 = "gfx/interface/icons/culture_innovations/innovation_nobility_03.dds"
-
-
-
 @nobility_04 = "gfx/interface/icons/culture_innovations/innovation_nobility_04.dds"
-
-
-
 @gunpowder = "gfx/interface/icons/culture_innovations/innovation_gunpowder.dds"
-
-
-
 @innovation_farm = "gfx/interface/icons/culture_innovations/innovation_farm.dds"
-
-
-
 @coins = "gfx/interface/icons/culture_innovations/innovation_welfare_01.dds"
-
-
-
 @misc_inventions = "gfx/interface/icons/culture_innovations/innovation_misc_inventions.dds"
-
-
-
 @quilted_armor = "gfx/interface/icons/culture_innovations/innovation_quilted_armor.dds"
-
-
-
 @currency = "gfx/interface/icons/culture_innovations/innovation_currency.dds"
-
-
-
 @farm = "gfx/interface/icons/culture_innovations/innovation_farm.dds"
-
-
-
 @plenary_assemblies = "gfx/interface/icons/culture_innovations/innovation_plenary_assemblies.dds"
-
-
-
 @siege_crossbow = "gfx/interface/icons/culture_innovations/innovation_auh_ballista.dds"
-
-
-
-
-
+@sericulture = "gfx/interface/icons/culture_innovations/innovation_sericulture.dds"
+@weaver = "gfx/interface/icons/culture_innovations/gdp_innovation_persian_weaver.dds"
+@wine = "gfx/interface/icons/culture_innovations/gdp_innovation_wine.dds"
+@navigator = "gfx/interface/icons/culture_innovations/gdp_innovation_navigator.dds"
+@miner = "gfx/interface/icons/culture_innovations/gdp_innovation_miner.dds"
+@merchant = "gfx/interface/icons/culture_innovations/gdp_innovation_merchant_deal.dds"
+@stockfisk = "gfx/interface/icons/culture_innovations/gdp_innovation_stockfish.dds"
 @camel = "gfx/interface/icons/culture_innovations/innovation_camel.dds"
-
-
-
 @elephant = "gfx/interface/icons/culture_innovations/innovation_elephant.dds"
-
-
-
 @special_maa_01 = "gfx/interface/icons/culture_innovations/innovation_special_maa_01.dds"
-
-
-
 @special_maa_02 = "gfx/interface/icons/culture_innovations/innovation_special_maa_02.dds"
-
-
-
 
 
 #culture_group_military
@@ -202,9 +93,6 @@ innovation_motte = { # Earthworks in-game
 	}
 }
 
-
-
-
 innovation_catapult = {
 	skill = learning
 	group = culture_group_military
@@ -212,6 +100,7 @@ innovation_catapult = {
 	icon = @siege_weapons
 
 	custom = unlock_siege_maa_first_level
+	custom = unlock_catapult_buildings
 
 	asset = {
 		trigger = {
@@ -233,16 +122,12 @@ innovation_catapult = {
 	}
 }
 
-
-
-
 innovation_barracks = {
 	skill = martial
 	group = culture_group_military
 	culture_era = culture_era_tribal
 	icon = @levy_building
-
-	custom = unlock_tribal_military_buildings
+	custom = unlock_barracks_buildings
 
 	character_modifier = {
 		herd_capacity_mult = 0.05
@@ -256,38 +141,23 @@ innovation_barracks = {
 	}
 }
 
-
-
-
 innovation_mustering_grounds = {
 	skill = martial
-
 	group = culture_group_military
-
 	culture_era = culture_era_tribal
-
 	icon = @leadership_2
 
-
 	character_modifier = {
-		men_at_arms_cap = 1 # THE MOD
+		men_at_arms_cap = 1
 	}
 
-
 	flag = global_regular
-
 	flag = tribal_era_regular
-
 	
 	ai_weight_for_fascination = {
 		value = 100
 	}
-
-
 }
-
-
-
 
 innovation_bannus = {
 	skill = martial
@@ -312,9 +182,6 @@ innovation_bannus = {
 	}
 }
 
-
-
-
 innovation_quilted_armor = {
 	skill = martial
 	group = culture_group_military
@@ -325,6 +192,8 @@ innovation_quilted_armor = {
 	custom = eligible_accolade_vanguard_attribute
 
 	character_modifier = {
+		skirmishers_toughness_mult = 0.05
+		heavy_infantry_toughness_mult = 0.05
 		nomadic_horde_toughness_mult = 0.02
 	}
 
@@ -336,19 +205,19 @@ innovation_quilted_armor = {
 	}
 }
 
-
-
-
-innovation_development_01 = {
-	skill = stewardship
-	group = culture_group_civic
+innovation_pattern_welding = {
+	skill = martial
+	group = culture_group_military
 	culture_era = culture_era_tribal
-	icon = @civil_construction_1
-
-	custom = reduce_develop_county_penalty_01
+	icon = @weapons_and_armor_01
 
 	character_modifier = {
-		county_fertility_growth_mult = 0.05
+		skirmishers_damage_mult = 0.05
+		skirmishers_maintenance_mult = 0.05
+		light_cavalry_damage_mult = 0.05
+		light_cavalry_maintenance_mult = 0.05
+		heavy_infantry_damage_mult = 0.05
+		heavy_infantry_maintenance_mult = 0.05
 	}
 
 	flag = global_regular
@@ -359,8 +228,30 @@ innovation_development_01 = {
 	}
 }
 
+innovation_prosperity_01 = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_tribal
+	icon = @civil_construction_1
 
+	custom = reduce_develop_county_penalty_01
+	custom = unlock_prosperity_01_buildings
 
+	character_modifier = {
+		county_fertility_growth_mult = 0.05
+	}
+
+	province_modifier = {
+		monthly_province_size_change_when_below_baseline_mult = 0.1
+	}
+
+	flag = global_regular
+	flag = tribal_era_regular
+	
+	ai_weight_for_fascination = {
+		value = 100
+	}
+}
 
 innovation_currency_01 = {
 	skill = stewardship
@@ -369,7 +260,7 @@ innovation_currency_01 = {
 	icon = @currency
 
 	character_modifier = {
-		development_growth_factor = 0.1
+		prosperity_growth_factor = 0.05
 		monthly_income_from_herd_mult = 0.05
 	}
 
@@ -381,43 +272,27 @@ innovation_currency_01 = {
 	}
 }
 
-
-
-
 #culture_group_civic
 innovation_gavelkind = {
 	skill = diplomacy
-
 	group = culture_group_civic
-
 	culture_era = culture_era_tribal
-
 	icon = @administration_3
 
-
 	unlock_law = confederate_partition_succession_law
-
 	
+
 	county_modifier = { # THE MOD
 	#   domain_limit = 1
 	    building_slot_add = 1 # THE MOD
 	}
-
-
 	flag = global_regular
-
 	flag = tribal_era_regular
-
 	
 	ai_weight_for_fascination = {
 		value = 100
 	}
-
-
 }
-
-
-
 
 innovation_crop_rotation = {
 	skill = stewardship
@@ -431,6 +306,10 @@ innovation_crop_rotation = {
 		county_fertility_growth_mult = 0.05
 	}
 
+	county_modifier = {
+		trade_category_cereals_production_mult = 0.1
+	}
+
 	flag = global_regular
 	flag = tribal_era_regular
 	
@@ -438,9 +317,6 @@ innovation_crop_rotation = {
 		value = 100
 	}
 }
-
-
-
 
 innovation_city_planning = {
 	skill = stewardship
@@ -448,14 +324,15 @@ innovation_city_planning = {
 	culture_era = culture_era_tribal
 	icon = @civil_construction_2
 
-	unlock_building = city_01
-	unlock_building = temple_01
-	unlock_building = monastic_schools_01
-	unlock_building = megalith_01
-	unlock_building = market_villages_01
+	custom = unlock_city_planning_holdings
 
 	character_modifier = {
 		herd_capacity_mult = 0.05
+		urban_housing_district_district_build_gold_cost = -0.05
+	}
+
+	county_modifier = {
+		urban_tax_mult = 0.015
 	}
 
 	flag = global_regular
@@ -465,9 +342,6 @@ innovation_city_planning = {
 		value = 100
 	}
 }
-
-
-
 
 innovation_casus_belli = {
 	skill = diplomacy
@@ -486,9 +360,6 @@ innovation_casus_belli = {
 	}
 }
 
-
-
-
 innovation_plenary_assemblies = {
 	skill = diplomacy
 	group = culture_group_civic
@@ -497,7 +368,7 @@ innovation_plenary_assemblies = {
 
 	unlock_law = crown_authority_1
 
-	unlock_building = tribe_02
+	custom = unlock_plenary_assemblies_building
 
 	character_modifier = {
 		vassal_herd_contribution_mult = 0.02
@@ -511,50 +382,36 @@ innovation_plenary_assemblies = {
 	}
 }
 
-
-
-
 innovation_ledger = {
 	skill = stewardship
-
 	group = culture_group_civic
-
 	culture_era = culture_era_tribal
-
 	icon = @administration_2
+	custom = unlock_ledger_buildings
 
 	character_modifier = {
 		monthly_income_from_herd_mult = 0.05
 		men_at_arms_limit = 1 # THE MOD
 	}
 
-
 	flag = global_regular
-
 	flag = tribal_era_regular
-
 	
 	ai_weight_for_fascination = {
 		value = 100
 	}
-
-
+	county_modifier = {
+		prosperity_growth_factor = 0.05
+	}
 }
-
-
-
 
 ### culture_group_regional ###
 
 innovation_table_of_princes = {
 	skill = diplomacy
-
 	group = culture_group_civic
-
 	culture_era = culture_era_tribal
-
 	icon = @nobility_01
-
 	
 	potential = {
 		OR = {
@@ -563,32 +420,20 @@ innovation_table_of_princes = {
 			this = culture:slovien
 		}
 	}
-
+	
 	
 	flag = global_regional
-
 	flag = tribal_era_regional
-
 	
 	ai_weight_for_fascination = {
 		value = 100
 	}
-
-
-
-	
-	# THE MOD
-	#unlock_law = single_heir_dynasty_house
-	#custom = unlock_single_heir_dynasty_house_changing
 	character_modifier = {
 		short_reign_duration_mult = -0.07
 		title_creation_cost_mult = -0.15
 		monthly_prestige_gain_mult = 0.05
 	}
 }
-
-
-
 
 innovation_longboats = {
 	skill = martial
@@ -614,9 +459,6 @@ innovation_longboats = {
 	}
 }
 
-
-
-
 innovation_elephantry = {
 	skill = stewardship
 	group = culture_group_military
@@ -624,21 +466,22 @@ innovation_elephantry = {
 	region = world_innovation_elephants
 	icon = @elephant
 
-	unlock_building = elephant_pens_01
+	unlock_building = elephantry_barracks_1
+
+	parameters = {
+		royal_elephant_stables = yes
+	}
 
 	custom = eligible_accolade_elephantry_attribute
 	custom = domicile_building_parameter_camp_reinforce_elephant_regiments_anywhere
 
 	flag = global_regional
 	flag = tribal_era_regional
-	
+
 	ai_weight_for_fascination = {
 		value = 100
 	}
 }
-
-
-
 
 innovation_war_camels = {
 	skill = stewardship
@@ -648,7 +491,11 @@ innovation_war_camels = {
 	icon = @camel
 
 	unlock_maa = camel_rider
-	unlock_building = camel_farms_01
+	unlock_building = camelry_compound_1
+
+	parameters = {
+		royal_camel_stables = yes
+	}
 
 	custom = eligible_accolade_camelry_attribute
 
@@ -660,8 +507,27 @@ innovation_war_camels = {
 	}
 }
 
+innovation_carpet_weaving = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_tribal
+	region = world_innovation_carpets
+	icon = @weaver
 
+	custom = unlock_carpet_weaving_buildings
 
+	county_modifier = {
+		artisan_tax_mult = 0.05
+		trade_good_textiles_production_mult = 0.15
+	}
+
+	flag = global_regional
+	flag = tribal_era_regional
+	
+	ai_weight_for_fascination = {
+		value = 100
+	}
+}
 
 innovation_wootz_steel = {
 	skill = learning
@@ -682,9 +548,6 @@ innovation_wootz_steel = {
 		value = 100
 	}
 }
-
-
-
 
 innovation_african_canoes = {
 	skill = martial
@@ -709,5 +572,93 @@ innovation_african_canoes = {
 	}
 }
 
+innovation_mead_brewing = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_tribal
+	region = world_innovation_mead
+	icon = @wine
 
+	county_modifier = {
+		artisan_tax_mult = 0.05
+		trade_good_beer_production_mult = 0.15
+	}
 
+	parameters = {
+		unlocks_mead_brewery = yes
+	}
+
+	flag = global_regional
+	flag = tribal_era_regional
+
+	ai_weight_for_fascination = {
+		value = 50
+	}
+}
+
+innovation_stockfisk = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_tribal
+	icon = @stockfisk
+
+	potential = {
+		has_cultural_pillar = heritage_north_germanic
+	}
+
+	county_modifier = {
+		trade_good_fish_production_mult = 0.25
+		maritime_tax_mult = 0.05
+	}
+
+	flag = global_regional
+	flag = tribal_era_regional
+
+	ai_weight_for_fascination = {
+		value = 100
+	}
+}
+
+innovation_damascus_steel = {
+	skill = learning
+	group = culture_group_civic
+	culture_era = culture_era_tribal
+	region = custom_damascus_steel_region
+	icon = @weapons_and_armor_02
+
+	parameters = {
+		damascus_steel_smithing = yes
+	}
+
+	flag = global_regional
+	flag = tribal_era_regional
+
+	ai_weight_for_fascination = {
+		value = 100
+	}
+}
+
+innovation_calicoes_and_muslin = {
+	skill = stewardship
+	group = culture_group_civic
+	culture_era = culture_era_tribal
+	icon = @weaver
+
+	potential = {
+		OR = {
+			has_cultural_pillar = heritage_dravidian
+			has_cultural_pillar = heritage_indo_aryan
+		}
+	}
+
+	county_modifier = {
+		trade_good_textiles_production_mult = 0.25
+	}
+
+	flag = global_regional
+	flag = tribal_era_regional
+
+	ai_weight_for_fascination = {
+		value = 100
+	}
+}

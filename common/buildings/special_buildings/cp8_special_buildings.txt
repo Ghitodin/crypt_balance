@@ -14,9 +14,9 @@ goguryeo_tomb_01 = {
 		name = "building_special_goguryeo_tomb_01_entity"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_goguryeo_tomb.dds"
+	type_icon = "special_buildings/goguryeo_tomb.dds"
 	can_construct_potential = { building_requirement_tribal = no }
-	can_construct = { building_requirement_tribal = no }
+	can_construct = { building_requirement_tribal = no building_monument_tribal_trigger = yes }
 	cost_gold = 1000
 	character_modifier = {
 		monthly_dynasty_prestige_mult = 0.05
@@ -24,17 +24,19 @@ goguryeo_tomb_01 = {
 		monthly_piety = 0.15
 	}
 	county_modifier = {
-		county_opinion_add = 5
+		popular_opinion_add = building_miniscule_popular_opinion_gain
 		defender_holding_advantage = normal_building_advantage_tier_1
 	}
 	ai_value = {
-		base = 100
+		base = 10
+		ai_opinion_baseline_building_modifier = { VALUE = 5 }
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_popular_opinion_need_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
 	flag = travel_point_of_interest_wonder
 	flag = holy_building #Gives funeral bonus
 }
@@ -54,9 +56,9 @@ buddha_kamakura_01 = {
 		name = "building_special_buddha_kamakura_01_entity"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_buddha_kamakura.dds"
+	type_icon = "special_buildings/buddha_kamakura.dds"
 	can_construct_potential = { building_requirement_tribal = no }
-	can_construct = { building_requirement_tribal = no }
+	can_construct = { building_requirement_tribal = no building_monument_tribal_trigger = yes }
 
 	cost_gold = 2000
 	character_modifier = {
@@ -64,10 +66,8 @@ buddha_kamakura_01 = {
 		monthly_prestige_gain_per_happy_powerful_vassal_add = 0.15
 	}
 	county_modifier = {
-		tax_mult = 0.1
-		development_growth = 0.1
-		development_growth_factor = 0.1
-		county_opinion_add = 10
+		religious_tax_mult = 0.1
+		popular_opinion_add = building_minor_popular_opinion_gain
 	}
 	province_modifier = {
 		stationed_maa_damage_mult = low_maa_damage_tier_2
@@ -86,14 +86,32 @@ buddha_kamakura_01 = {
 		}
 	}
 
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+	}
 	ai_value = {
-		base = 100
+		base = 10
+		ai_opinion_baseline_building_modifier = { VALUE = 10 }
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_popular_opinion_need_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_religious
 	flag = holy_building #Gives funeral bonus
 }
@@ -111,14 +129,14 @@ pyramid_lingapura_01 = {
 	can_construct_potential = {
 		building_requirement_tribal = no
 	}
-	can_construct = { building_requirement_tribal = no }
+	can_construct = { building_requirement_tribal = no building_monument_tribal_trigger = yes }
 
 	asset = {
 		type = pdxmesh
 		name = "building_special_pyramid_lingapura_01_mesh"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_pyramid_lingapura.dds"
+	type_icon = "special_buildings/pyramid_lingapura.dds"
 	cost_gold = 1000
 	character_modifier = {
 		monthly_piety = 0.25
@@ -127,11 +145,9 @@ pyramid_lingapura_01 = {
 		tributary_piety_contribution_mult = 0.1
 	}
 	county_modifier = {
-		tax_mult = 0.2
-		development_growth = 0.15
+		religious_tax_mult = 0.2
 	}
 	province_modifier = {
-		monthly_income = 1
 	}
 
 
@@ -143,13 +159,28 @@ pyramid_lingapura_01 = {
 	}
 
 	ai_value = {
-		base = 100
+		base = 10
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_religious
 	flag = holy_building
 }
@@ -181,18 +212,16 @@ maijishan_grottoes_01 = {
 		name = "building_special_maijishan_grottoes_01_mesh"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_maijishan_grottoes.dds"
+	type_icon = "special_buildings/maijishan_grottoes.dds"
 	can_construct_potential = { building_requirement_tribal = no }
-	can_construct = { building_requirement_tribal = no }
+	can_construct = { building_requirement_tribal = no building_monument_tribal_trigger = yes }
 	cost_gold = 1000
 	character_modifier = {
 		monthly_piety_gain_mult = 0.1
 		learning_per_influence_level = 1
 	}
 	county_modifier = {
-		tax_mult = 0.1
-		development_growth = 0.2
-		development_growth_factor = 0.2
+		religious_tax_mult = 0.1
 		build_gold_cost = -0.15
 	}
 	on_complete = {
@@ -200,13 +229,28 @@ maijishan_grottoes_01 = {
 		mandala_built_piety_duchy_building_t3_effect = yes
 	}
 	ai_value = {
-		base = 100
+		base = 10
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_religious
 	flag = holy_building
 }
@@ -227,9 +271,9 @@ three_pagodas_dali_01 = {
 		name = "building_special_three_pagodas_dali_01_mesh"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_three_pagodas_dali.dds"
+	type_icon = "special_buildings/three_pagodas_dali.dds"
 	can_construct_potential = { building_requirement_tribal = no }
-	can_construct = { building_requirement_tribal = no }
+	can_construct = { building_requirement_tribal = no building_monument_tribal_trigger = yes }
 	cost_gold = 1000
 	character_modifier = {
 		monthly_piety = 0.2
@@ -238,12 +282,10 @@ three_pagodas_dali_01 = {
 		knight_limit = 2
 	}
 	county_modifier = {
-		tax_mult = 0.2
-		development_growth_factor = 0.2
-		development_growth = 0.15
+		religious_tax_mult = 0.2
 	}
 	province_modifier = {
-		monthly_income = 1
+		province_size_baseline_add = special_building_province_size_baseline
 	}
 
 	is_enabled = {
@@ -260,13 +302,40 @@ three_pagodas_dali_01 = {
 
 
 	ai_value = {
-		base = 100
+		base = 10
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_good_tea_sell_price_mult = special_building_need_sell_price
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_tea
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_religious
 	flag = holy_building
 }
@@ -279,9 +348,9 @@ iron_lion_cangzhou_01 = {
 		name = "building_special_iron_lion_cangzhou_01_entity"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_iron_lion_cangzhou.dds"
+	type_icon = "special_buildings/iron_lion_cangzhou.dds"
 	can_construct_potential = { building_requirement_tribal = no }
-	can_construct = { building_requirement_tribal = no }
+	can_construct = { building_requirement_tribal = no building_monument_tribal_trigger = yes }
 	cost_gold = 1000
 	character_modifier = {
 		monthly_prestige_gain_mult = 0.05
@@ -290,23 +359,40 @@ iron_lion_cangzhou_01 = {
 		character_travel_safety = 2
 	}
 	county_modifier = {
-		tax_mult = 0.1
-		development_growth = 0.3
-		development_growth_factor = 0.1
+		religious_tax_mult = 0.1
+		urban_tax_mult = 0.1
 		hostile_raid_time = 0.5
-		county_opinion_add = 10
+		popular_opinion_add = building_minor_popular_opinion_gain
 	}
 	province_modifier = {
 		travel_danger = -20
 	}
+	market_modifier = {
+		trade_good_iron_sell_price_mult = special_building_need_sell_price
+	}
 	ai_value = {
-		base = 100
+		base = 10
+		ai_opinion_baseline_building_modifier = { VALUE = 10 }
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_popular_opinion_need_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
+
+	trade_good_need = {
+		trade_good = trade_good_iron
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_religious
 }
 ##########
@@ -331,9 +417,9 @@ dengfeng_observatory_01 = {
 		name = "building_special_dengfeng_observatory_01_mesh"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_dengfeng_observatory.dds"
+	type_icon = "special_buildings/dengfeng_observatory.dds"
 	can_construct_potential = { building_requirement_tribal = no }
-	can_construct = { building_requirement_tribal = no }
+	can_construct = { building_requirement_tribal = no building_monument_tribal_trigger = yes }
 	cost_gold = 1000
 	county_holder_character_modifier = {
 		learning = 2
@@ -341,17 +427,44 @@ dengfeng_observatory_01 = {
 		monthly_learning_lifestyle_xp_gain_mult = 0.05
 	}
 	county_modifier = {
-		development_growth_factor = 0.2
-		development_growth = 0.2
+		civic_tax_mult = 0.1
+	}
+	province_modifier = {
+		province_size_baseline_add = special_building_province_size_baseline
 	}
 	ai_value = {
-		base = 100
+		base = 10
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
+
+	character_culture_modifier = {
+		parameter = roman_law_university_bonuses
+		trade_competitiveness_mult = roman_law_university_competitiveness_value
+	}
+
+	province_culture_modifier = {
+		parameter = roman_law_university_bonuses
+		popular_opinion_add = roman_law_university_popular_opinion_value
+	}
+	market_modifier = {
+		trade_category_books_sell_price_mult = special_building_need_sell_price
+	}
+	trade_good_need = {
+		trade_good_category = trade_category_books
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_learning
 	flag = special_university
 }
@@ -372,9 +485,9 @@ muara_takus_01 = {
 		name = "building_special_muara_takus_01_mesh"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_muara_takus.dds"
+	type_icon = "special_buildings/muara_takus.dds"
 	can_construct_potential = { building_requirement_tribal = no }
-	can_construct = { building_requirement_tribal = no }
+	can_construct = { building_requirement_tribal = no building_monument_tribal_trigger = yes }
 	cost_gold = 1000
 	character_modifier = {
 		monthly_piety = 0.5
@@ -385,13 +498,7 @@ muara_takus_01 = {
 	}
 	
 	county_modifier = {
-		tax_mult = 0.2
-		development_growth_factor = 0.2
-		development_growth = 0.2
-	}
-	
-	province_modifier = {
-		monthly_income = 1
+		religious_tax_mult = 0.2
 	}
 
 	is_enabled = {
@@ -402,13 +509,28 @@ muara_takus_01 = {
 	}
 
 	ai_value = {
-		base = 100
+		base = 10
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_religious
 	flag = holy_building
 }
@@ -429,9 +551,9 @@ stone_pagoda_01 = {
 		name = "building_special_stone_pagoda_01_mesh"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_stone_pagoda.dds"
+	type_icon = "special_buildings/stone_pagoda.dds"
 	can_construct_potential = { building_requirement_tribal = no }
-	can_construct = { building_requirement_tribal = no }
+	can_construct = { building_requirement_tribal = no building_monument_tribal_trigger = yes }
 	cost_gold = 1000
 	character_modifier = {
 		monthly_piety = 1
@@ -439,13 +561,10 @@ stone_pagoda_01 = {
 		legitimacy_gain_mult = 0.1
 	}
 	county_modifier = {
-		tax_mult = 0.2
-		development_growth_factor = 0.15
-		development_growth = 0.15
+		religious_tax_mult = 0.2
 	}
 	
 	province_modifier = {
-		monthly_income = 0.5
 	}
 
 	is_enabled = {
@@ -456,13 +575,28 @@ stone_pagoda_01 = {
 	}
 
 	ai_value = {
-		base = 100
+		base = 10
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_religious
 	flag = holy_building
 }
@@ -475,11 +609,11 @@ thuriang_kilns_01 = {
 		name = "building_special_thuriang_kilns_01_entity"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_thuriang_kilns.dds"
+	type_icon = "special_buildings/thuriang_kilns.dds"
 	can_construct_potential = { building_requirement_tribal = no }
 	can_construct = {
 		scope:holder.culture = {
-			has_innovation = innovation_development_03
+			has_innovation = innovation_prosperity_03
 		}
 	}
 	cost_gold = 1000
@@ -488,21 +622,35 @@ thuriang_kilns_01 = {
 		different_culture_opinion = 5
 	}
 	county_modifier = {
-		tax_mult = 0.15
-		development_growth_factor = 0.2
-		development_growth = 0.2
+		artisan_tax_mult = 0.15
 	}
 	province_modifier = {
-		monthly_income = 2
+		trade_good_ceramics_production_add = special_building_ceramics_output
+	}
+	market_modifier = {
+		trade_good_wood_sell_price_mult = special_building_need_sell_price
+		trade_good_ceramics_buy_price_mult = special_building_production_buy_price
 	}
 	ai_value = {
-		base = 100
+		base = 10
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
+	trade_good_need = {
+		trade_good = trade_good_wood
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_economic
 }
 ##########
@@ -514,14 +662,13 @@ yuelu_academy_01 = {
 		name = "building_special_yuelu_academy_01_mesh"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_yuelu_academy.dds"
+	type_icon = "special_buildings/yuelu_academy.dds"
 	can_construct_potential = {
 		building_requirement_tribal = no
 		building_university_requirement = yes
 	}
 	
-	can_construct = {
-	}
+	can_construct = { building_monument_tribal_trigger = yes }
 
 	cost_gold = 1000
 	county_holder_character_modifier = {
@@ -533,12 +680,12 @@ yuelu_academy_01 = {
 	}
 
 	county_modifier = {
-		development_growth_factor = 0.2
-		development_growth = 0.2
+		civic_tax_mult = 0.1
 	}
-
+	province_modifier = {
+		province_size_baseline_add = special_building_province_size_baseline
+	}
 	effect_desc = {
-		desc = unlocks_building_desc
 		triggered_desc = {
 			trigger = { has_dlc_feature = tours_and_tournaments }
 			desc = university_toto_effect_desc
@@ -551,13 +698,38 @@ yuelu_academy_01 = {
 	}
 
 	ai_value = {
-		base = 100
+		base = 10
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
+
+	character_culture_modifier = {
+		parameter = roman_law_university_bonuses
+		trade_competitiveness_mult = roman_law_university_competitiveness_value
+	}
+
+	province_culture_modifier = {
+		parameter = roman_law_university_bonuses
+		popular_opinion_add = roman_law_university_popular_opinion_value
+	}
+	market_modifier = {
+		trade_category_books_sell_price_mult = special_building_need_sell_price
+	}
+	trade_good_need = {
+		trade_good_category = trade_category_books
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_learning
 	flag = special_university
 }
@@ -572,7 +744,7 @@ chocolate_hills_01 = {
 		name = "building_special_chocolate_hills_01_mesh"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_chocolate_hills.dds"
+	type_icon = "special_buildings/chocolate_hills.dds"
 	can_construct_potential = { building_requirement_tribal = no }
 	can_construct = { building_requirement_tribal = no }
 	cost_gold = 1000
@@ -582,16 +754,16 @@ chocolate_hills_01 = {
 	}
 	
 	county_modifier = {
-		tax_mult = 0.1
+		woodland_tax_mult = 0.1
 	}
 	ai_value = {
-		base = 100
+		base = 10
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
 	flag = travel_point_of_interest_natural_feature 
 	flag = is_mountain
 }
@@ -604,31 +776,55 @@ fanfang_guangzhou_01 = {
 		name = "building_special_fanfang_guangzhou_01_entity"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_fanfang_guangzhou.dds"
+	type_icon = "special_buildings/fanfang_guangzhou.dds"
 	can_construct_potential = { building_requirement_tribal = no }
-	can_construct = { building_requirement_tribal = no }
+	can_construct = { building_requirement_tribal = no building_monument_tribal_trigger = yes }
 	cost_gold = 1000
 	character_modifier = {
 		cultural_head_acceptance_gain_mult = 0.2
 		different_culture_opinion = 5
 		monthly_influence_mult = 0.1
 	}
-	county_modifier = {
-		tax_mult = 0.2
-		development_growth_factor = 0.15
-		development_growth = 0.1
-	}
 	province_modifier = {
-		monthly_income = 3
+		monthly_commerce_tax = 3
+		province_size_baseline_add = special_building_province_size_baseline
+	}
+	market_modifier = {
+		trade_good_ceramics_sell_price_mult = special_building_need_sell_price
+		trade_good_spices_sell_price_mult = special_building_need_sell_price
 	}
 	ai_value = {
-		base = 100
+		base = 10
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
+
+	trade_good_need = {
+		trade_good = trade_good_ceramics
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+	trade_good_need = {
+		trade_good = trade_good_spices
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_economic
 }
 ##########
@@ -640,9 +836,9 @@ wilwatikta_palace_01 = {
 		name = "building_special_wilwatikta_palace_01_mesh"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_wilwatikta_palace.dds"
+	type_icon = "special_buildings/wilwatikta_palace.dds"
 	can_construct_potential = { building_requirement_tribal = no }
-	can_construct = { building_requirement_tribal = no }
+	can_construct = { building_requirement_tribal = no building_monument_tribal_trigger = yes }
 	cost_gold = 1000
 	county_holder_character_modifier = {
 		rite_creation_piety_cost_mult = -0.1
@@ -650,24 +846,40 @@ wilwatikta_palace_01 = {
 		tributary_opinion = 5
 	}
 	county_modifier = {
-		development_growth_factor = 0.2
-		development_growth = 0.2
-		monthly_county_control_growth_add = 0.2
+		control_baseline_add = 5
 	}
 	province_modifier = {
 	}
+	market_modifier = {
+		trade_good_textiles_sell_price_mult = special_building_need_sell_price
+	}
 	ai_value = {
-		base = 100
+		base = 10
+		ai_control_baseline_building_modifier = { VALUE = 5 }
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_control_need_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
 	on_complete = {
 		#Regular Mandala Boon
 		mandala_built_piety_duchy_building_t3_effect = yes
 	}
-	type = special
+
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_diplomatic
 }
 ##########
@@ -679,7 +891,7 @@ ha_long_bay_01 = {
 		name = "building_special_ha_long_bay_01_mesh"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_ha_long_bay.dds"
+	type_icon = "special_buildings/ha_long_bay.dds"
 	can_construct_potential = { building_requirement_tribal = no }
 	can_construct = { building_requirement_tribal = no }
 	cost_gold = 1000
@@ -695,17 +907,18 @@ ha_long_bay_01 = {
 	}
 
 	county_modifier = {
+		maritime_tax_mult = 0.1
 		hostile_raid_time = 0.5
-		development_growth_factor = 0.1
+		prosperity_growth_factor = 0.1
 	}
 	ai_value = {
-		base = 100
+		base = 10
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
 	flag = travel_point_of_interest_natural_feature
 }
 ##########
@@ -733,9 +946,9 @@ my_son_sanctuary_01 = {
 		name = "building_special_my_son_sanctuary_01_mesh"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_my_son_sanctuary.dds"
+	type_icon = "special_buildings/my_son_sanctuary.dds"
 	can_construct_potential = { building_requirement_tribal = no }
-	can_construct = { building_requirement_tribal = no }
+	can_construct = { building_requirement_tribal = no building_monument_tribal_trigger = yes }
 	cost_gold = 1000
 	county_holder_character_modifier = {
 		monthly_piety = 0.5
@@ -745,22 +958,32 @@ my_son_sanctuary_01 = {
 		piety_level_impact_mult = 0.1
 	}
 	county_modifier = {
-		tax_mult = 0.2
-		development_growth_factor = 0.2
-		development_growth = 0.15
-	}
-	province_modifier = {
-		monthly_income = 1
+		religious_tax_mult = 0.2
 	}
 
 	ai_value = {
-		base = 100
+		base = 10
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_religious
 	flag = holy_building
 }
@@ -773,7 +996,7 @@ gunung_api_01 = {
 		name = "building_special_gunung_api_01_mesh"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_gunung_api.dds"
+	type_icon = "special_buildings/gunung_api.dds"
 	can_construct_potential = { building_requirement_tribal = no }
 	can_construct = { building_requirement_tribal = no }
 	cost_gold = 1000
@@ -784,18 +1007,20 @@ gunung_api_01 = {
 	}
 	
 	county_modifier = {
-		county_opinion_add = 5
-		development_growth = 0.1
-		development_growth_factor = 0.2
+		popular_opinion_add = building_miniscule_popular_opinion_gain
+		agricultural_tax_mult = 0.1
+		prosperity_growth_factor = 0.2
 	}
 	ai_value = {
-		base = 100
+		base = 10
+		ai_opinion_baseline_building_modifier = { VALUE = 5 }
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_popular_opinion_need_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
 	flag = travel_point_of_interest_natural_feature
 	flag = is_mountain
 }
@@ -808,7 +1033,7 @@ suwalesi_megaliths_01 = {
 		name = "building_special_suwalesi_megaliths_01_mesh"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_suwalesi_megaliths.dds"
+	type_icon = "special_buildings/suwalesi_megaliths.dds"
 	can_construct_potential = { building_requirement_tribal = no }
 	can_construct = { building_requirement_tribal = no }
 	cost_gold = 1000
@@ -819,20 +1044,36 @@ suwalesi_megaliths_01 = {
 	}
 	county_modifier = {
 		travel_danger = -20
-		monthly_county_control_growth_factor = 0.1
+		control_baseline_add = 5
 	}
 	on_complete = {
 		#Regular Mandala Boon
 		mandala_built_piety_duchy_building_t3_effect = yes
 	}
 	ai_value = {
-		base = 100
+		base = 10
+		ai_control_baseline_building_modifier = { VALUE = 5 }
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_control_need_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = basic_resource_need
+
+		modifiers = {
+			character_modifier = {
+				monthly_piety = 0.05
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_wonder
 	flag = holy_building
 }
@@ -856,9 +1097,9 @@ izumo_taisha_01 = {
 		name = "building_special_izumo_taisha_01_mesh"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_izumo_taisha.dds"
+	type_icon = "special_buildings/izumo_taisha.dds"
 	can_construct_potential = { building_requirement_tribal = no }
-	can_construct = { building_requirement_tribal = no }
+	can_construct = { building_requirement_tribal = no building_monument_tribal_trigger = yes }
 	cost_gold = 1000
 	county_holder_character_modifier = {
 		piety_level_impact_mult = 0.1
@@ -868,22 +1109,32 @@ izumo_taisha_01 = {
 	}
 	
 	county_modifier = {
-		tax_mult = 0.2
-		development_growth_factor = 0.2
-		development_growth = 0.15
+		religious_tax_mult = 0.2
 	}
 	
-	province_modifier = {
-		monthly_income = 1
-	}
 	ai_value = {
-		base = 100
+		base = 10
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_religious
 	flag = holy_building
 	flag = wedding_bonus
@@ -912,9 +1163,9 @@ confucius_temple_01 = { #Aka qufu holy site
 		name = "building_special_confucius_temple_01_mesh"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_confucius_temple.dds"
+	type_icon = "special_buildings/confucius_temple.dds"
 	can_construct_potential = { building_requirement_tribal = no }
-	can_construct = { building_requirement_tribal = no }
+	can_construct = { building_requirement_tribal = no building_monument_tribal_trigger = yes }
 
 	cost_gold = 1000
 
@@ -928,18 +1179,32 @@ confucius_temple_01 = { #Aka qufu holy site
 	}
 
 	county_modifier = {
-		tax_mult = 0.1
-		development_growth_factor = 0.1
-		development_growth = 0.1
+		religious_tax_mult = 0.1
+		civic_tax_mult = 0.1
 	}
 	ai_value = {
-		base = 100
+		base = 10
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_religious
 	flag = holy_building
 }
@@ -952,11 +1217,11 @@ citadel_linan_01 = {
 		name = "building_special_citadel_linan_01_mesh"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_citadel_linan.dds"
+	type_icon = "special_buildings/citadel_linan.dds"
 	can_construct_potential = { building_requirement_tribal = no }
 	can_construct = {
 		scope:holder.culture = {
-			has_innovation = innovation_development_02
+			has_innovation = innovation_prosperity_02
 		}
 	}
 	cost_gold = 1500
@@ -966,19 +1231,62 @@ citadel_linan_01 = {
 		cultural_head_fascination_mult = 0.1
 	}
 	county_modifier = {
-		development_growth_factor = 0.1
-		monthly_county_control_growth_factor = 0.1
+		civic_tax_mult = 0.1
+		control_baseline_add = 5
 	}
-	province_modifier = {
+	market_modifier = {
+		trade_good_silk_sell_price_mult = special_building_need_sell_price
+		trade_good_lacquerware_sell_price_mult = special_building_need_sell_price
+		trade_good_ceramics_sell_price_mult = special_building_need_sell_price
 	}
 	ai_value = {
-		base = 100
+		base = 10
+		ai_control_baseline_building_modifier = { VALUE = 5 }
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_control_need_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	type = special
+	trade_good_need = {
+		trade_good = trade_good_silk
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_prestige = special_building_need_prestige
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_lacquerware
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_prestige = special_building_need_prestige
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_ceramics
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_diplomatic
 }
 ##########
@@ -997,7 +1305,7 @@ temples_angkor_01 = {
 		name = "building_special_temples_angkor_01_mesh"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_angkor_wat.dds"
+	type_icon = "special_buildings/angkor_wat.dds"
 	can_construct_potential = { building_requirement_tribal = no }
 	is_enabled = {
 		custom_description = {
@@ -1005,31 +1313,47 @@ temples_angkor_01 = {
 			eastern_or_syncretic_with_eastern_trigger = { CHARACTER = scope:holder }
 		}
 	}
-	can_construct = { building_requirement_tribal = no }
+	can_construct = { building_requirement_tribal = no building_monument_tribal_trigger = yes }
 	cost_gold = 1000
 	next_building = temples_angkor_02 #The Angkor Wat
 	character_modifier = {
 		monthly_dynasty_prestige_mult = 0.05
 	}
 	county_modifier = {
-		development_growth_factor = 0.1
-		development_growth = 0.1
-		monthly_county_control_growth_add = 0.1
+		religious_tax_mult = 0.1
+		control_baseline_add = 5
 	}
 	ai_value = {
-		base = 8
+		base = 9
 		ai_pious_building_preference_modifier = yes
+		ai_control_baseline_building_modifier = { VALUE = 5 }
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_control_need_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
 	on_complete = {
 		#Regular Mandala Boon
 		mandala_built_piety_duchy_building_t3_effect = yes
 	}
 
-	type = special
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_religious
 	flag = holy_building
 }
@@ -1046,9 +1370,11 @@ temples_angkor_02 = {
 		name = "building_special_temples_angkor_02_mesh"
 	}
 	construction_time = very_slow_construction_time
-	type_icon = "icon_structure_angkor_wat.dds"
 	can_construct_potential = { building_requirement_tribal = no }
-	can_construct = { building_requirement_tribal = no }
+	can_construct_showing_failures_only = {
+		holding_district_level_2_trigger = yes
+	}
+	can_construct = { building_requirement_tribal = no building_stonework_high_medieval_trigger = yes }
 	cost_gold = 1000
 	is_enabled = {
 		custom_description = {
@@ -1064,12 +1390,8 @@ temples_angkor_02 = {
 		monthly_dynasty_prestige_mult = 0.05
 	}
 	county_modifier = {
-		development_growth_factor = 0.2
-		development_growth = 0.2
-		monthly_county_control_growth_add = 0.2
-	}
-	province_modifier = {
-		monthly_income = 1
+		religious_tax_mult = 0.15
+		control_baseline_add = 5
 	}
 
 	on_complete = {
@@ -1078,13 +1400,30 @@ temples_angkor_02 = {
 	}
 
 	ai_value = {
-		base = 100
+		base = 10
+		ai_control_baseline_building_modifier = { VALUE = 5 }
 		modifier = { # Fill all building slots before going for special buildings
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_control_need_modifier = yes
+		ai_special_district_modifier = { LEVEL = 2 }
 	}
-	type = special
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+	}
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_religious
 	flag = holy_building
 }

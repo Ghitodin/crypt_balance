@@ -123,9 +123,7 @@ huntsmaster_attribute = {
 			liege_modifier = {
 				trait_track_hunter_xp_gain_mult = @lifestyle_bonus_tier_1_value
 			}
-			accolade_parameters = {
-				acclaimed_knight_trains_hunting
-			}
+			accolade_parameters = { acclaimed_knight_trains_hunting }
 		}
 		# Rank 2
 		2 = {
@@ -133,8 +131,8 @@ huntsmaster_attribute = {
 				trait_track_hunter_xp_gain_mult = @lifestyle_bonus_tier_2_value
 			}
 			accolade_parameters = {
-				acclaimed_knight_reduces_hunting_danger
 				acclaimed_knight_trains_hunting
+				acclaimed_knight_reduces_hunting_danger
 			}
 		}
 		# Rank 3
@@ -143,8 +141,8 @@ huntsmaster_attribute = {
 				trait_track_hunter_xp_gain_mult = @lifestyle_bonus_tier_3_value
 			}
 			accolade_parameters = {
-				acclaimed_knight_reduces_hunting_danger_high
 				acclaimed_knight_trains_hunting
+				acclaimed_knight_reduces_hunting_danger_high
 			}
 		}
 	}
@@ -282,7 +280,7 @@ blademaster_attribute = {
 			liege_modifier = {
 				trait_track_lifestyle_blademaster_xp_gain_mult = @lifestyle_bonus_tier_1_value
 			}
-			accolade_parameters = {
+			accolade_parameters = { 
 				acclaimed_knight_trains_swordfighting
 				accolade_increase_hostile_knight_death_low
 			}
@@ -305,8 +303,8 @@ blademaster_attribute = {
 				knight_effectiveness_mult = 0.06
 			}
 			accolade_parameters = {
-				acclaimed_knight_tournament_invite_acceptance_bonus
 				acclaimed_knight_trains_swordfighting
+				acclaimed_knight_tournament_invite_acceptance_bonus
 				accolade_increase_hostile_knight_death_high
 			}
 		}
@@ -492,9 +490,7 @@ master_of_revels_attribute = {
 			liege_modifier = {
 				lifestyle_reveler_xp_gain_mult = @lifestyle_bonus_tier_1_value
 			}
-			accolade_parameters = {
-				acclaimed_knight_trains_reveling
-			}
+			accolade_parameters = { acclaimed_knight_trains_reveling }
 		}
 		# Rank 2
 		2 = {
@@ -502,8 +498,8 @@ master_of_revels_attribute = {
 				lifestyle_reveler_xp_gain_mult = @lifestyle_bonus_tier_2_value
 			}
 			accolade_parameters = {
-				acclaimed_knight_prestige_from_victory
 				acclaimed_knight_trains_reveling
+				acclaimed_knight_prestige_from_victory
 			}
 		}
 		# Rank 3
@@ -512,9 +508,9 @@ master_of_revels_attribute = {
 				lifestyle_reveler_xp_gain_mult = @lifestyle_bonus_tier_3_value
 			}
 			accolade_parameters = {
+				acclaimed_knight_trains_reveling
 				acclaimed_knight_feast_wedding_invite_acceptance_bonus
 				acclaimed_knight_prestige_from_victory_high
-				acclaimed_knight_trains_reveling
 			}
 		}
 	}
@@ -577,6 +573,7 @@ house_knight_attribute = {
 						has_trait = kinslayer_2
 						has_trait = kinslayer_3
 						has_trait = disinherited
+						has_trait = adopted_no_inheritance
 					}
 				}
 				add = -200
@@ -637,18 +634,12 @@ house_knight_attribute = {
 		# Rank 2
 		2 = {
 			liege_modifier = { monthly_dynasty_prestige_mult = 0.01 }
-			accolade_parameters = {
-				accolade_defends_family_medium
-				acclaimed_knight_inspires_family
-			}
+			accolade_parameters = { acclaimed_knight_inspires_family accolade_defends_family_medium }
 		}
 		# Rank 3
 		3 = {
 			liege_modifier = { monthly_dynasty_prestige_mult = 0.02 }
-			accolade_parameters = {
-				accolade_defends_family_high
-				acclaimed_knight_inspires_family_high
-			}
+			accolade_parameters = { acclaimed_knight_inspires_family_high accolade_defends_family_high }
 		}
 	}
 }

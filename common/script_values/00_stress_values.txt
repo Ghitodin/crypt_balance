@@ -42,16 +42,11 @@ refund_perks_stress_impact = 100
 
 mental_break_opt_out_stress_gain = 25
 hunt_stress_loss_value = -30
-meager_feast_stress_loss_value = -5 # THE MOD
-
-feast_stress_loss_value = -15 # THE MOD
-
-medium_feast_stress_loss_value = -15 # THE MOD
-
-lavish_feast_stress_loss_value = -20 # THE MOD
-
-exotic_feast_stress_loss_value = -25 # THE MOD
-
+meager_feast_stress_loss_value = -5
+feast_stress_loss_value = -15
+medium_feast_stress_loss_value = -15
+lavish_feast_stress_loss_value = -20
+exotic_feast_stress_loss_value = -25
 activity_stress_loss_impact = -15
 activity_stress_gain_impact = 15
 
@@ -162,14 +157,8 @@ generous_title_grant_value = {
 		}
 	}
 }
-
-# Half-strength trait bonuses for hunts and feasts.
 crypt_balance_half_activity_stress_loss_impact = -7.5
-
 crypt_balance_half_major_stress_loss = -20
-
 crypt_balance_half_medium_stress_impact_loss = -15
-
 crypt_balance_half_miniscule_stress_impact_loss = -2.5
-
 crypt_balance_half_minor_stress_impact_loss = -7.5

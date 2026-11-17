@@ -2,13 +2,11 @@
 	value = 10 # THE MOD
 }
 
-
 golden_obligation_value_check_current_situation = {
 	add = gold
 	floor = yes
 	max = golden_obligation_value
 }
-
 
 ransom_multiplier = {
 	if = {
@@ -31,7 +29,6 @@ ransom_multiplier = {
 	}
 	min = 1
 }
-
 
 ransom_herd_value = {
 	value = 0
@@ -146,7 +143,6 @@ ransom_herd_value = {
 	round_to = 5
 }
 
-
 ransom_cost_value = {
 	if = {
 		limit = {
@@ -165,7 +161,6 @@ ransom_cost_value = {
 		value = normal_ransom_cost_value
 	}
 }
-
 
 normal_ransom_cost_value = {
 	value = ransom_cost
@@ -223,6 +218,15 @@ normal_ransom_cost_value = {
 	multiply = haggler_ransom_cost_factor
 }
 
+half_normal_ransom_cost_value = {
+	value = normal_ransom_cost_value
+	divide = 2
+}
+
+quarter_normal_ransom_cost_value = {
+	value = normal_ransom_cost_value
+	divide = 4
+}
 
 current_situation_gold_ransom = {
 	if = {
@@ -245,7 +249,6 @@ current_situation_gold_ransom = {
 	max = ransom_cost_value
 }
 
-
 half_ransom_cost_value = {
 	value = {
 		add = normal_ransom_cost_value
@@ -253,7 +256,6 @@ half_ransom_cost_value = {
 		min = 1
 	}
 }
-
 
 half_increased_ransom_cost_value = {
 	value = {
@@ -263,14 +265,12 @@ half_increased_ransom_cost_value = {
 	}
 }
 
-
 increased_ransom_cost_value = {
 	value = {
 		add = normal_ransom_cost_value
-		multiply = 1.5
+		multiply = 1.25
 	}
 }
-
 
 increased_ransom_cost = {
 	value = {
@@ -278,7 +278,6 @@ increased_ransom_cost = {
 		multiply = 1.5
 	}
 }
-
 haggler_ransom_cost_factor = {
 	value = 1
 	#increase it if the imprisoner has a Haggler Officer employed
@@ -350,7 +349,7 @@ haggler_ransom_cost_factor = {
 	}
 }
 
-
+#Reverses the ransom_cost_value calculations to leave only the haggler value, which all ransom interaction windows show
 haggler_ransom_cost_modifier = {
 	value = ransom_cost_value
 	divide = haggler_ransom_cost_factor
@@ -359,7 +358,6 @@ haggler_ransom_cost_modifier = {
 		subtract = 1
 	}
 }
-
 
 grant_title_opinion_sum_baronies = {
 	if = { # if no other titles present, calc for baronies
@@ -380,7 +378,6 @@ grant_title_opinion_sum_baronies = {
 	}
 }
 
-
 grant_title_opinion_sum_counties = {
 	if = { # if no higher titles present, calc for counties
 		limit = {
@@ -399,7 +396,6 @@ grant_title_opinion_sum_counties = {
 		}
 	}
 }
-
 
 grant_title_opinion_sum_duchies = {
 	if = {
@@ -420,7 +416,6 @@ grant_title_opinion_sum_duchies = {
 	}
 }
 
-
 grant_title_opinion_sum_kingdoms = {
 	if = {
 		limit = {
@@ -440,7 +435,6 @@ grant_title_opinion_sum_kingdoms = {
 	}
 }
 
-
 grant_title_opinion_sum_empires = {
 	if = {
 		limit = {
@@ -459,7 +453,6 @@ grant_title_opinion_sum_empires = {
 		}
 	}
 }
-
 
 # Used in the corresponding character interaction
 # when granting a title to the member of a faction.
@@ -518,7 +511,6 @@ grant_title_opinion_sum_discontent_calc = {
 	multiply = -1
 }
 
-
 # Liege is root, and this expects scope:liege_temp and scope:rebel_temp
 revoke_refusal_war_rising_strength_value = {
 	value = scope:rebel_temp.current_military_strength
@@ -531,7 +523,6 @@ revoke_refusal_war_rising_strength_value = {
 		add = current_military_strength
 	}
 }
-
 
 courtly_vassal_lowborn_grant_penalty = {
 	if = {
@@ -568,7 +559,6 @@ courtly_vassal_lowborn_grant_penalty = {
 	}
 }
 
-
 number_of_disciples = {
 	value = 0
 	every_relation = {
@@ -576,7 +566,6 @@ number_of_disciples = {
 		add = 1
 	}
 }
-
 every_disciple_movement_power_value = {
 	value = 0
 	every_relation = {
@@ -591,7 +580,6 @@ every_disciple_movement_power_value = {
 	}
 }
 
-
 number_of_courtly_vassals = {
 	value = 0
 	every_vassal = {
@@ -599,7 +587,6 @@ number_of_courtly_vassals = {
 		add = 1
 	}
 }
-
 
 number_of_participating_courtly_vassals = {
 	value = 0
@@ -612,7 +599,6 @@ number_of_participating_courtly_vassals = {
 	}
 }
 
-
 number_of_glory_hound_vassals = {
 	value = 0
 	every_vassal = {
@@ -620,7 +606,6 @@ number_of_glory_hound_vassals = {
 		add = 1
 	}
 }
-
 
 number_of_participating_glory_hound_vassals = {
 	value = 0
@@ -633,7 +618,6 @@ number_of_participating_glory_hound_vassals = {
 	}
 }
 
-
 number_of_parochial_vassals = {
 	value = 0
 	every_vassal = {
@@ -641,7 +625,6 @@ number_of_parochial_vassals = {
 		add = 1
 	}
 }
-
 
 number_of_participating_parochial_vassals = {
 	value = 0
@@ -654,7 +637,6 @@ number_of_participating_parochial_vassals = {
 	}
 }
 
-
 number_of_zealot_vassals = {
 	value = 0
 	every_vassal = {
@@ -662,7 +644,6 @@ number_of_zealot_vassals = {
 		add = 1
 	}
 }
-
 
 number_of_participating_zealot_vassals = {
 	value = 0
@@ -675,7 +656,6 @@ number_of_participating_zealot_vassals = {
 	}
 }
 
-
 number_of_minority_vassals = {
 	value = 0
 	every_vassal = {
@@ -683,7 +663,6 @@ number_of_minority_vassals = {
 		add = 1
 	}
 }
-
 
 number_of_belligerent_vassals = {
 	value = 0
@@ -694,7 +673,6 @@ number_of_belligerent_vassals = {
 		add = 1
 	}
 }
-
 
 number_of_participating_belligerent_vassals = {
 	value = 0
@@ -707,7 +685,6 @@ number_of_participating_belligerent_vassals = {
 	}
 }
 
-
 number_of_barons_and_minor_landholders_vassals = {
 	value = 0
 	every_vassal = {
@@ -716,11 +693,9 @@ number_of_barons_and_minor_landholders_vassals = {
 	}
 }
 
-
 council_position_locked_value = {
 	value = 25
 }
-
 
 marriage_fertile_age_value = {
 	value = {
@@ -730,7 +705,6 @@ marriage_fertile_age_value = {
 	}
 }
 
-
 marriage_fertile_age_reverse_value = {
 	value = {
 		add = 16
@@ -738,7 +712,6 @@ marriage_fertile_age_reverse_value = {
 		add = scope:secondary_recipient.age
 	}
 }
-
 
 marriage_female_fertility_cutoff_age_value = {
 	value = {
@@ -760,7 +733,6 @@ marriage_female_fertility_cutoff_age_value = {
 		}
 	}
 }
-
 
 offer_vassalage_acceptance_value = {
 	value = {
@@ -848,7 +820,6 @@ offer_vassalage_acceptance_value = {
 	}
 }
 
-
 vassal_claim_liege_title_interaction_highlight_value = {
 	value = {
 		add = monumental_prestige_value
@@ -873,13 +844,11 @@ vassal_claim_liege_title_interaction_highlight_value = {
 	}
 }
 
-
 script_current_military_strength = {
 	value = {
 		add = current_military_strength
 	}
 }
-
 
 one_and_a_half_times_current_military_strength = {
 	value = {
@@ -888,14 +857,12 @@ one_and_a_half_times_current_military_strength = {
 	}
 }
 
-
 twice_current_military_strength = {
 	value = {
 		add = current_military_strength
 		multiply = 2
 	}
 }
-
 
 fifty_percent_more_of_current_military_strength = {
 	value = {
@@ -904,14 +871,12 @@ fifty_percent_more_of_current_military_strength = {
 	}
 }
 
-
 eighty_percent_of_current_military_strength = {
 	value = {
 		add = current_military_strength
 		multiply = 0.8
 	}
 }
-
 
 seventy_percent_of_current_military_strength = {
 	value = {
@@ -920,14 +885,12 @@ seventy_percent_of_current_military_strength = {
 	}
 }
 
-
 a_third_of_current_military_strength = {
 	value = {
 		add = current_military_strength
 		multiply = 0.3
 	}
 }
-
 
 forty_percent_of_current_military_strength = {
 	value = {
@@ -936,14 +899,12 @@ forty_percent_of_current_military_strength = {
 	}
 }
 
-
 fifty_percent_of_current_military_strength = {
 	value = {
 		add = current_military_strength
 		multiply = 0.5
 	}
 }
-
 
 one_quarter_current_military_strength = {
 	value = {
@@ -952,14 +913,12 @@ one_quarter_current_military_strength = {
 	}
 }
 
-
 ten_percent_of_current_military_strength = {
 	value = {
 		add = current_military_strength
 		multiply = 0.1
 	}
 }
-
 
 eighty_percent_of_max_military_strength = {
 	value = {
@@ -968,14 +927,12 @@ eighty_percent_of_max_military_strength = {
 	}
 }
 
-
 fifty_percent_of_max_military_strength = {
 	value = {
 		add = max_military_strength
 		multiply = 0.5
 	}
 }
-
 
 twenty_percent_of_max_military_strength = {
 	value = {
@@ -984,16 +941,15 @@ twenty_percent_of_max_military_strength = {
 	}
 }
 
-
-designate_heir_cost = 500 # THE MOD
-
-
+designate_heir_cost = 500
 designate_heir_admin_prestige_cost = 500
-
 designate_heir_admin_influence_cost = 150
-
 designate_heir_laamp_prestige_cost = 150
 
+half_current_influence_value = {
+	value = influence
+	multiply = 0.5
+}
 
 marry_close_family_tiers_acceptance_value = {
 	value = 0
@@ -1031,7 +987,6 @@ marry_close_family_tiers_acceptance_value = {
 	multiply = 5
 }
 
-
 elope_close_family_tiers_acceptance_value = {
 	value = 0
 	
@@ -1068,7 +1023,6 @@ elope_close_family_tiers_acceptance_value = {
 	multiply = 25
 }
 
-
 duchy_confederation_vassals_value = {
 	value = 0
 	scope:actor.confederation = {
@@ -1085,7 +1039,6 @@ duchy_confederation_vassals_value = {
 	max = 0
 	multiply = 15
 }
-
 
 duchy_confederation_vassals_value_recipient = {
 	value = 0
@@ -1104,31 +1057,25 @@ duchy_confederation_vassals_value_recipient = {
 	multiply = 15
 }
 
-
 monastic_donation_value = {
 	value = major_gold_value
 }
-
 monastic_huge_donation_value = {
 	value = major_gold_value
 	multiply = 3
 }
-
 monastic_donation_treasury_value = {
 	value = major_treasury_or_gold_value
 }
-
 monastic_huge_donation_treasury_value = {
 	value = major_treasury_or_gold_value
 	multiply = 3
 }
 
-
 fifty_percent_of_current_gold = {
 	value = gold
 	multiply = 0
 }
-
 
 number_of_theocratic_vassals = {
 	value = 0
@@ -1137,7 +1084,6 @@ number_of_theocratic_vassals = {
 		add = 1
 	}
 }
-
 
 befriend_interaction_cost_value = {
 	value = 0
@@ -1187,7 +1133,6 @@ befriend_interaction_cost_value = {
 	}
 }
 
-
 pardon_interaction_influence_cost_value = {
 	value = 0
 	if = {
@@ -1227,7 +1172,6 @@ pardon_interaction_influence_cost_value = {
 	}
 }
 
-
 pardon_interaction_treasury_cost_value = {
 	value = 0
 	if = {
@@ -1241,7 +1185,6 @@ pardon_interaction_treasury_cost_value = {
 		add = scope:puppet_or_actor.minor_treasury_value
 	}
 }
-
 
 cease_paying_tribute_interaction_cost_value = {
 	value = 0
@@ -1262,7 +1205,6 @@ cease_paying_tribute_interaction_cost_value = {
 	}
 }
 
-
 release_tributary_interaction_prestige_cost_value = {
 	value = minor_prestige_value
 	if = {
@@ -1272,7 +1214,6 @@ release_tributary_interaction_prestige_cost_value = {
 		multiply = 0
 	}
 }
-
 
 release_tributary_interaction_piety_cost_value = {
 	value = medium_piety_value
@@ -1286,11 +1227,9 @@ release_tributary_interaction_piety_cost_value = {
 	}
 }
 
-
 dynast_claim_title_interaction_cost_value = {
 	value = scope:puppet_or_actor.dynasty.major_dynasty_prestige_value
 }
-
 
 request_clerical_chastity_interaction_cost_value = {
 	value = minor_piety_value
@@ -1307,7 +1246,6 @@ request_clerical_chastity_interaction_cost_value = {
 		multiply = ecclesiastical_domicile_cheaper_chastity_mult
 	}
 }
-
 crypt_balance_ecclesiastic_grant_claim_cost_value = {
 	value = pam_ecclesiastic_grant_claim_cost_value
 	if = {

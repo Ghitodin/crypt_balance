@@ -13,93 +13,56 @@
 # CONTROL VALUES
 
 @accolade_trait_additive_plus_1_value = 250
-
 @accolade_trait_additive_plus_2_value = 150
-
 @accolade_trait_additive_plus_3_value = 50
-
 @accolade_trait_additive_minus_1_value = -50
-
 @accolade_trait_additive_minus_2_value = -150
-
 @accolade_trait_additive_minus_3_value = -250
 
-
 @lifestyle_bonus_tier_1_value = 0.05
-
 @lifestyle_bonus_tier_2_value = 0.06
-
 @lifestyle_bonus_tier_3_value = 0.07
 
-
 @army_maintenance_mult_bonus_tier_1 = -0.1
-
 @army_maintenance_mult_bonus_tier_2 = -0.15
-
 @army_maintenance_mult_bonus_tier_3 = -0.25
 
-
 @dread_base_bonus_tier_1_value = 5
-
 @dread_base_bonus_tier_2_value = 10
-
 @dread_base_bonus_tier_3_value = 20
 
-
 @tourney_participant_xp_mult_bonus_tier_1_value = 0.03
-
 @tourney_participant_xp_mult_bonus_tier_2_value = 0.06
-
 @tourney_participant_xp_mult_bonus_tier_3_value = 0.07
 
-
 @intrigue_scheme_phase_duration_bonus_tier_1_value = -2
-
 @intrigue_scheme_phase_duration_bonus_tier_2_value = -3
-
 @intrigue_scheme_phase_duration_bonus_tier_3_value = -5
 
-
 @knight_effectiveness_per_dread_tier_2_value = 0.003
-
 @knight_effectiveness_per_dread_tier_3_value = 0.005
 
-
-@piety_per_knight_add_bonus_tier_1_value = 0.03 # THE MOD
-
-
-@piety_per_knight_add_bonus_tier_2_value = 0.07 # THE MOD
-
-
-@piety_per_knight_add_bonus_tier_3_value = 0.1 # THE MOD
-
-
+@piety_per_knight_add_bonus_tier_1_value = 0.03
+@piety_per_knight_add_bonus_tier_2_value = 0.07
+@piety_per_knight_add_bonus_tier_3_value = 0.1
 
 ##################################################
 # SKILL TYPE ACCOLADES
 
 # Politicker
 politicker_attribute = {
-
 	adjective = accolade_politicking
-
 	noun = accolade_politicker
-
 	icon = "gfx/interface/icons/knight_badge/icons/accolade_trait_courtly_blue.dds"
-
 	portrait_pose = "map_love"
-
 	accolade_categories = { skilled skill social personality diplomacy vassal_manager courtly subtle }
-
 
 	squire_perfect_fit = {
 		politicker_attribute_trigger = yes
 	}
-
 	squire_acceptable_fit = {
 		politicker_attribute_acceptable_trigger = yes
 	}
-
 	
 	weight = {
 		# These are less interesting, so we weight them down for the AI.
@@ -190,94 +153,55 @@ politicker_attribute = {
 		}
 	}
 
-
 	ranks = {
-
 		# Rank 1
 		1 = {
-
 			liege_modifier = {
-
 				courtly_opinion = 1
-
 				barons_and_minor_landholders_opinion = 1
-
 				minority_opinion = 2
-
-			
-}
-
-		
-}
-
+			}
+		}
 		# Rank 2
 		2 = {
-
 			liege_modifier = {
-
 				courtly_opinion = 2
-
 				barons_and_minor_landholders_opinion = 2
-
 				minority_opinion = 3
-
-
-			
-}
+			}
 			accolade_parameters = {
 				accolade_influences_regency
 			}
 		}
-
 		# Rank 3
 		3 = {
-
 			liege_modifier = {
-
 				courtly_opinion = 3
-
 				barons_and_minor_landholders_opinion = 3
-
 				minority_opinion = 3
-
 				diplomacy = 1
-
-			
-}
+			}
 			accolade_parameters = {
 				accolade_influences_regency_high
 			}
 		}
-
-	
+	}
 }
-
-
-}
-
 
 # Tactician
 tactician_attribute = {
-
 	adjective = accolade_strategic
-
 	noun = accolade_tactician
-
 	icon = "gfx/interface/icons/knight_badge/icons/accolade_trait_militant_blue.dds"
-
 	portrait_pose = "marshal"
-
 	accolade_categories = { skilled skill warlike leader subtle martial }
-
 
 	squire_perfect_fit = {
 		tactician_attribute_trigger = yes
 	}
-
 	squire_acceptable_fit = {
 		tactician_attribute_acceptable_trigger = yes
 	}
-
 	
 	weight = {
 		# These are less interesting, so we weight them down for the AI.
@@ -360,44 +284,26 @@ tactician_attribute = {
 		}
 	}
 
-
 	ranks = {
-
 		# Rank 1
 		1 = {
 			liege_modifier = { monthly_martial_lifestyle_xp_gain_mult = @lifestyle_bonus_tier_1_value }
 		}
-
 		# Rank 2
 		2 = {
-
-			liege_modifier = {
- 
+			liege_modifier = { 
 				monthly_martial_lifestyle_xp_gain_mult = @lifestyle_bonus_tier_2_value
-
-
-			
-}
-
+			}
 			knight_army_modifier = {
 				counter_efficiency = 0.03
 			}
-
-		
-}
-
+		}
 		# Rank 3
 		3 = {
-
-			liege_modifier = {
- 
+			liege_modifier = { 
 				monthly_martial_lifestyle_xp_gain_mult = @lifestyle_bonus_tier_3_value
-
 				martial = 1
-
-			
-}
-
+			}
 			knight_army_modifier = {
 				counter_efficiency = 0.05
 			}
@@ -405,36 +311,23 @@ tactician_attribute = {
 				accolade_organize_army_bonus
 			}
 		}
-
-	
+	}
 }
-
-
-}
-
 
 # Reeve
 reeve_attribute = {
-
 	adjective = accolade_calculating
-
 	noun = accolade_reeve
-
 	icon = "gfx/interface/icons/knight_badge/icons/accolade_trait_subtle_green.dds"
-
 	portrait_pose = "war_over_win"
-
 	accolade_categories = { skilled skill subtle courtly leader stewardship }
-
 
 	squire_perfect_fit = {
 		reeve_attribute_trigger = yes
 	}
-
 	squire_acceptable_fit = {
 		reeve_attribute_acceptable_trigger = yes
 	}
-
 	
 	weight = {
 		# These are less interesting, so we weight them down for the AI.
@@ -507,83 +400,48 @@ reeve_attribute = {
 		}
 	}
 
-
 	ranks = {
-
 		# Rank 1
 		1 = {
-
 			liege_modifier = {
-
 				parochial_opinion = 3
-
-			
-}
-
-		
-}
-
-		# Rank 2
-		2 = {
-
-			liege_modifier = {
-
-				parochial_opinion = 4
-
-
-			
-}
-			accolade_parameters = {
-				accolade_development_growth_on_tournament_completion_low
 			}
 		}
-
+		# Rank 2
+		2 = {
+			liege_modifier = {
+				parochial_opinion = 4
+			}
+			accolade_parameters = { accolade_prosperity_growth_on_tournament_completion_low }
+		}
 		# Rank 3
 		3 = {
-
 			liege_modifier = {
-
 				parochial_opinion = 5
-
 				stewardship = 1
-
-			
-}
+			}
 			accolade_parameters = {
-				accolade_development_growth_on_tournament_completion_low
+				accolade_prosperity_growth_on_tournament_completion_low
 				accolade_increase_control_bonus
 			}
 		}
-
-	
+	}
 }
-
-
-}
-
 
 # Manipulator
 manipulator_attribute = {
-
 	adjective = accolade_manipulative
-
 	noun = accolade_manipulator
-
 	icon = "gfx/interface/icons/knight_badge/icons/accolade_trait_amoral_purple.dds"
-
 	portrait_pose = "spymaster"
-
 	accolade_categories = { skilled skill subtle courtly aggressive amoral intrigue }
-
 
 	squire_perfect_fit = {
 		manipulator_attribute_trigger = yes
 	}
-
 	squire_acceptable_fit = {
 		manipulator_attribute_acceptable_trigger = yes
 	}
-
 	
 	weight = {
 		# These are less interesting, so we weight them down for the AI.
@@ -667,74 +525,46 @@ manipulator_attribute = {
 		}
 	}
 
-
 	ranks = {
-
 		# Rank 1
 		1 = {
 			liege_modifier = {
 				intrigue_scheme_phase_duration = @intrigue_scheme_phase_duration_bonus_tier_1_value
 			}
 		}
-
 		# Rank 2
 		2 = {
-
 			liege_modifier = {
-
 				intrigue_scheme_phase_duration = @intrigue_scheme_phase_duration_bonus_tier_2_value
 				knight_effectiveness_per_dread = 0.0003
 			}
-
-		
-}
-
+		}
 		# Rank 3
 		3 = {
-
 			liege_modifier = {
-
 				intrigue_scheme_phase_duration = @intrigue_scheme_phase_duration_bonus_tier_3_value
-
-
-				dread_baseline_add = 3
-
-				intrigue = 1
 				knight_effectiveness_per_dread = 0.0005
+				dread_baseline_add = 3
+				intrigue = 1
 			}
-
-		
+		}
+	}
 }
-
-	
-}
-
-
-}
-
 
 # Mentor
 mentor_attribute = {
-
 	adjective = accolade_sagely
-
 	noun = accolade_mentor
-
 	icon = "gfx/interface/icons/knight_badge/icons/accolade_trait_leadership_blue.dds"
-
 	portrait_pose = "personality_rational"
-
 	accolade_categories = { skilled skill subtle courtly ethical leader learning }
-
 
 	squire_perfect_fit = {
 		mentor_attribute_trigger = yes
 	}
-
 	squire_acceptable_fit = {
 		mentor_attribute_acceptable_trigger = yes
 	}
-
 	
 	weight = {
 		# These are less interesting, so we weight them down for the AI.
@@ -835,16 +665,13 @@ mentor_attribute = {
 		}
 	}
 
-
 	ranks = {
-
 		# Rank 1
 		1 = {
 			knight_modifier = {
 				monthly_prestige = 0.05
 			}
 		}
-
 		# Rank 2
 		2 = {
 			knight_modifier = {
@@ -855,17 +682,11 @@ mentor_attribute = {
 				accolade_wise_educator
 			}
 		}
-
 		# Rank 3
 		3 = {
-
 			liege_modifier = {
-
-
 				learning = 1
-
-			
-}
+			}
 			knight_modifier = {
 				monthly_prestige = 0.1
 			}
@@ -874,36 +695,23 @@ mentor_attribute = {
 				accolade_wise_educator_high
 			}
 		}
-
-	
+	}
 }
-
-
-}
-
 
 # Contender
 contender_attribute = {
-
 	adjective = accolade_fearsome
-
 	noun = accolade_contender
-
 	icon = "gfx/interface/icons/knight_badge/icons/accolade_trait_aggressive_blue.dds"
-
 	portrait_pose = "menacing_wooden_sword"
-
 	accolade_categories = { skilled skill champion forceful warlike prowess }
-
 
 	squire_perfect_fit = {
 		contender_attribute_trigger = yes
 	}
-
 	squire_acceptable_fit = {
 		contender_attribute_acceptable_trigger = yes
 	}
-
 	
 	weight = {
 		# These are less interesting, so we weight them down for the AI.
@@ -996,9 +804,7 @@ contender_attribute = {
 		}
 	}
 
-
 	ranks = {
-
 		# Rank 1
 		1 = {
 			accolade_parameters = {
@@ -1009,7 +815,6 @@ contender_attribute = {
 				belligerent_opinion = 1
 			}
 		}
-
 		# Rank 2
 		2 = {
 			accolade_parameters = {
@@ -1021,33 +826,17 @@ contender_attribute = {
 				belligerent_opinion = 2
 			}
 		}
-
 		# Rank 3
 		3 = {
-
 			liege_modifier = {
-
-				monthly_prestige_gain_per_knight_mult = 0.01 # THE MOD
-
-
+				monthly_prestige_gain_per_knight_mult = 0.01
 				tourney_participant_xp_gain_mult = @tourney_participant_xp_mult_bonus_tier_3_value
-
 				belligerent_opinion = 3
-
-			
-}
-
+			}
 			accolade_parameters = {
 				accolade_tournament_xp_gain_contender_only_high
 				accolade_tournament_xp_gain_all_knights_high
 			}
-
-		
+		}
+	}
 }
-
-	
-}
-
-
-}
-

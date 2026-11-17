@@ -7,52 +7,52 @@
 
 fp3_brutal_predations_county_modifier = {
 	icon = county_modifier_opinion_negative
-	county_opinion_add = -10
-	monthly_county_control_growth_factor = -0.2
+	popular_opinion_add = -10
+	monthly_control_change_when_below_baseline_mult = -0.2
 }
 
 fp3_low_frontier_morale_county_modifier = {
 	icon = martial_negative
 	garrison_size = -0.2
 	hostile_raid_time = -0.5
-	monthly_county_control_growth_factor = -0.2
+	monthly_control_change_when_below_baseline_mult = -0.2
 }
 
 fp3_boosted_frontier_morale_county_modifier = {
 	icon = martial_positive
 	garrison_size = 0.2
 	hostile_raid_time = 1
-	monthly_county_control_growth_factor = 0.2
+	monthly_control_change_when_below_baseline_mult = 0.2
 }
 
 fp3_visited_the_frontier_modifier = {
-	icon = health_negative
+	icon = health_negative 
 	health = -0.25
 }
 
 fp3_frontier_heresy_county_modifier = {
-	icon = piety_negative
-	county_opinion_add = -10 
-	monthly_county_control_growth_factor = -0.3
+	icon = piety_negative 
+	popular_opinion_add = -10
+	monthly_control_change_when_below_baseline_mult = -0.3
 }
 
 fp3_garrison_decimated_county_modifier = {
-	icon = dread_negative
-	county_opinion_add = -20
+	icon = dread_negative 
+	popular_opinion_add = -20
 	garrison_size = -0.70
 	hostile_raid_time = -0.5
-	monthly_county_control_growth_factor = -0.2
+	monthly_control_change_when_below_baseline_mult = -0.2
 }
 
 fp3_jinx_modifier = {
-	icon = magic_negative
+	icon = magic_negative 
 	health = -0.25
 	fertility = -0.25
 	stress_gain_mult = 0.25
 }
 
 fp3_call_of_the_wild_modifier = {
-	icon = outdoors_positive
+	icon = outdoors_positive 
 	learning = 1
 	prowess = 1
 	negate_health_penalty_add = 0.25
@@ -66,33 +66,32 @@ fp3_marriage_material_modifier = {
 }
 
 fp3_dutiful_scion_modifier = {
-	icon = family_mixed
-	dynasty_opinion = 5 # THE MOD
-
+	icon = family_mixed 
+	dynasty_opinion = 5
 	diplomacy = 2
 	stewardship = 2
 	stress_gain_mult = 0.25
 }
 
 fp3_worried_sick_modifier = {
-	icon = family_negative
+	icon = family_negative 
 	health = -0.25
 }
 
 fp3_gross_persecutions_county_modifier = {
-	icon = dread_negative
-	county_opinion_add = -30 
-	tax_mult = -0.30
+	icon = dread_negative 
+	popular_opinion_add = -30
+	urban_tax_mult = -0.30
 }
 
 fp3_galvanized_heretics_county_modifier = {
 	icon = piety_negative
-	county_opinion_add = -20
-	monthly_county_control_growth_factor = -0.3
+	popular_opinion_add = -20
+	monthly_control_change_when_below_baseline_mult = -0.3
 }
 
  fp3_promoting_arabic_modifier = {
- 	icon = learning_mixed
+ 	icon = learning_mixed 
  	learning = 1
  	different_culture_opinion = 10
  	same_culture_opinion = -5
@@ -100,14 +99,14 @@ fp3_galvanized_heretics_county_modifier = {
 
 fp3_conversion_curious_county_modifier = {
 	icon = piety_positive
-	monthly_county_control_growth_factor = 0.2
-	development_growth_factor = medium_development_growth_gain
+	monthly_control_change_when_below_baseline_mult = 0.2
+	prosperity_growth_factor = medium_prosperity_growth_gain
+	popular_opinion_add = 5
 }
 
 fp3_teapot_alcoholism_modifier = {
 	icon = drink_positive
-	same_faith_opinion = 3 # THE MOD
-
+	same_faith_opinion = 3
 }
 
 ulema_displeased_drinking = {
@@ -117,27 +116,28 @@ ulema_displeased_drinking = {
 }
 
 fp3_plundered_county_modifier = {
-	icon = county_modifier_development_negative
-	county_opinion_add = -20
-	development_growth_factor = -0.4
+	icon = county_modifier_prosperity_negative
+	popular_opinion_add = -20
+	prosperity_growth_factor = -0.4
 }
 
 fp3_architectural_splendor_county_modifier = {
-	icon = prestige_positive
-	county_opinion_add = 30
-	tax_mult = 0.20
+	icon = prestige_positive 
+	popular_opinion_add = 5
+	civic_tax_mult = 0.20
+	prosperity_growth_factor = small_prosperity_growth_gain
 }
 
 fp3_luxurious_bathhouse_modifier = {
-	icon = treatment_positive
+	icon = treatment_positive 
 	stress_loss_mult = 0.25
 	courtier_and_guest_opinion = 15
-	courtly_opinion = 5 # THE MOD
+	courtly_opinion = 5
 	zealot_opinion = -3 # THE MOD
 }
 
 fp3_less_luxurious_bathhouse_modifier = {
-	icon = treatment_positive
+	icon = treatment_positive 
 	stress_loss_mult = 0.15
 }
 
@@ -154,11 +154,11 @@ fp3_less_lofty_tower_modifier = {
 }
 
 fp3_spiritual_splendor_county_modifier = {
-	icon = piety_positive
-	county_opinion_add = 20
+	icon = piety_positive 
+	popular_opinion_add = 5
 	church_holding_build_gold_cost = -0.25
 	church_holding_build_speed = -0.25
-	development_growth_factor = 0.1
+	prosperity_growth_factor = 0.1
 }
 
 fp3_great_tower_of_silence_modifier = {
@@ -167,7 +167,7 @@ fp3_great_tower_of_silence_modifier = {
 }
 
 fp3_less_great_tower_of_silence_modifier = {
-	icon = bird_positive
+	icon = bird_positive 
 	learning = 1
 }
 
@@ -198,7 +198,7 @@ fp3_honored_by_the_faithful_modifier = {
 }
 
 fp3_rule_by_fear_modifier = {
-	icon = dread_mixed
+	icon = dread_mixed 
 	intimidated_vassal_tax_contribution_mult = 0.2
     cowed_vassal_tax_contribution_mult = 0.3
     close_relative_opinion = -10
@@ -219,15 +219,13 @@ fp3_better_company_modifier = {
 
 fp3_light_of_the_walayah_modifier = {
 	icon = magic_positive
-	same_faith_opinion = 3 # THE MOD
-
+	same_faith_opinion = 3
 	diplomacy_per_piety_level = 1
 }
 
 fp3_azariqa_ascendancy_modifier = {
 	icon = prowess_positive
-	same_faith_opinion = 5 # THE MOD
-
+	same_faith_opinion = 5
 	martial_per_piety_level = 1
 }
 
@@ -240,20 +238,20 @@ fp3_promoted_persian_scripture_modifier = {
 
 fp3_persian_resurgence_county_modifier = {
 	icon = learning_positive
-	monthly_county_control_growth_add = 0.3
+	monthly_control_change_when_below_baseline_add = 0.3
 	church_holding_holding_build_speed = -0.25
 	church_holding_holding_build_gold_cost = -0.25
 }
 
 fp3_forgotten_runestones_county_modifier = {
 	icon = rock_positive
-	county_opinion_add = 10
+	popular_opinion_add = 5
 }
 
 fp3_dismayed_daylamites_county_modifier = {
 	icon = rock_negative
-	county_opinion_add = -20
-	monthly_county_control_growth_factor = -0.1
+	popular_opinion_add = -20
+	monthly_control_change_when_below_baseline_mult = -0.1
 }
 
 fp3_insulted_chinese_noble_modifier = {
@@ -269,7 +267,7 @@ fp3_royal_fire_modifier = {
 
 fp3_bad_tower_of_silence_county_modifier = {
 	icon = bird_negative
-	development_growth_factor = small_development_growth_loss
+	prosperity_growth_factor = small_prosperity_growth_loss
 }
 
 fp3_promoting_zoroastrianism_modifier = {
@@ -287,12 +285,12 @@ fp3_blessed_by_fire_modifier  = {
 fp3_vengeful_nomads_county_modifier = {
 	icon = horse_dead_negative
 	hostile_raid_time = -0.5
-	county_opinion_add = -15
-	monthly_county_control_growth_factor = -0.3
+	popular_opinion_add = -15
+	monthly_control_change_when_below_baseline_mult = -0.3
 }
 
 fp3_nomad_recruits_modifier = {
-	icon = hunt_positive
+	icon = hunt_positive 
 	light_cavalry_recruitment_cost_mult = -0.4
 	archer_cavalry_recruitment_cost_mult = -0.4 
 	light_cavalry_maintenance_mult = -0.4
@@ -301,14 +299,14 @@ fp3_nomad_recruits_modifier = {
 
 fp3_nomad_friction_county_modifier = {
 	icon = horse_dead_negative
-	county_opinion_add = -10
-	monthly_county_control_growth_factor = -0.2
+	popular_opinion_add = -10
+	monthly_control_change_when_below_baseline_mult = -0.2
 }
 
 fp3_resentful_nomads_county_modifier = {
 	icon = economy_negative
 	hostile_raid_time = -0.5
-	monthly_county_control_growth_factor = -0.2
+	monthly_control_change_when_below_baseline_mult = -0.2
 }
 
 fp3_banning_archery_modifier = {
@@ -326,14 +324,14 @@ fp3_crushed_by_failure_modifier = {
 fp3_silk_road_secure_county_modifier = {
 	icon = goods_positive
 	hostile_raid_time = 0.5
-	tax_mult = 0.4
+	artisan_tax_mult = 0.4
 }
 
 fp3_nomad_attacks_county_modifier = {
 	icon = goods_negative
-	tax_mult = -0.4
-	monthly_county_control_growth_factor = -0.2
-	monthly_county_control_decline_add = -0.1
+	all_tax_mult = -0.4
+	monthly_control_change_when_below_baseline_mult = -0.2
+	control_baseline_add = miniscule_control_baseline_loss
 }
 
 fp3_lackluster_diet_modifier = {
@@ -358,7 +356,7 @@ fp3_worshipping_in_solitude_modifier = {
 
 fp3_gnostic_fervor_county_modifier = {
 	icon = magic_positive
-	development_growth_factor = medium_development_growth_gain
+	prosperity_growth_factor = medium_prosperity_growth_gain
 }
 
 fp3_rare_books_modifier = {
@@ -385,7 +383,7 @@ fp3_dabbling_in_alchemy_modifier = {
 }
 
 fp3_alchemical_insights_modifier = {
-	icon = treatment_positive
+	icon = treatment_positive 
 	learning = 2
 	cultural_head_fascination_mult = 0.15
 }
@@ -396,14 +394,10 @@ fp3_reneged_on_promise_modifier = {
 }
 
 fp3_artifact_shahnameh_modifier = {
-	persian_opinion = 5 # THE MOD
-
-	tajik_opinion = 5 # THE MOD
-
-	khwarezmian_opinion = 5 # THE MOD
-
-	afghan_opinion = 5 # THE MOD
-
+	persian_opinion = 5
+	tajik_opinion = 5
+	khwarezmian_opinion = 5
+	afghan_opinion = 5
 	monthly_dynasty_prestige_mult = 0.05
 }
 
@@ -415,7 +409,7 @@ fp3_artifact_persian_epic_modifier = {
 
 fp3_broken_icehouses_county_modifier = {
 	icon = goods_negative
-	development_growth_factor = -0.25
+	prosperity_growth_factor = -0.25
 }
 
 fp3_court_austerity_modifier = {
@@ -439,7 +433,7 @@ fp3_thinking_about_the_afterlife_modifier = {
 }
 
 fp3_sufi_initiate_modifier = {
-	icon = magic_positive
+	icon = magic_positive 
 	learning_per_stress_level = 1
 }
 
@@ -463,8 +457,7 @@ fp3_relentless_skeptic_modifier = {
 
 fp3_promoted_persian_mathematics_modifier = {
 	icon = learning_positive
-	courtly_opinion = -3 # THE MOD
-
+	courtly_opinion = -3
 	zealot_opinion = 5
 }
 
@@ -481,7 +474,7 @@ fp3_fearsome_example_modifier = {
 }
 
 fp3_refused_the_caliph_modifier = {
-	icon = piety_negative
+	icon = piety_negative 
 	monthly_piety = -0.25
 }
 
@@ -499,14 +492,14 @@ fp3_excuses_for_extortion_modifier = {
 
 fp3_locals_intimidated_county_modifier = {
 	icon = dread_mixed
-	county_opinion_add = -30
-	monthly_county_control_growth_add = 0.1
+	popular_opinion_add = -30
+	monthly_control_change_when_below_baseline_add = 0.1
 }
 
 fp3_locals_infuriated_county_modifier = {
 	icon = dread_negative
-	county_opinion_add = -30
-	monthly_county_control_decline_add = -0.1
+	popular_opinion_add = -30
+	control_baseline_add = miniscule_control_baseline_loss
 }
 
 fp3_looking_the_other_way_modifier = {
@@ -593,14 +586,14 @@ fp3_chess_playing_monkey_modifier = {
 
 fp3_wheat_shortage_modifier = {
 	icon = goods_negative
-	county_opinion_add = -15
-	development_growth_factor = tiny_development_growth_loss
+	popular_opinion_add = -15
+	prosperity_growth_factor = tiny_prosperity_growth_loss
 }
 
 fp3_generous_bakers_modifier = {
 	icon = goods_positive
-	county_opinion_add = 15
-	development_growth_factor = small_development_growth_gain
+	popular_opinion_add = 5
+	prosperity_growth_factor = small_prosperity_growth_gain
 }
 
 fp3_impious_tax_collector_modifier = {
@@ -626,8 +619,7 @@ dreaded_beauty = {
 generous_beauty = {
 	icon = prestige_mixed
 	vassal_tax_mult = -0.1
-	vassal_opinion = 3 # THE MOD
-
+	vassal_opinion = 3
 	short_reign_duration_mult = -0.15
 }
 
@@ -652,15 +644,14 @@ fp3_house_modifier_rebuilding_efforts = {
 	icon = stewardship_positive
 	build_gold_cost = -0.1
 	build_speed = -0.1
-	tax_mult = 0.1
-	parochial_opinion = 10 # THE MOD
+	urban_tax_mult = 0.1
+	parochial_opinion = 10
 	glory_hound_opinion = -5 # THE MOD
 }
 
 fp3_house_modifier_frontier_ambitions = {
 	icon = martial_positive
-	glory_hound_opinion = 10 # THE MOD
-
+	glory_hound_opinion = 10
 	levy_size = 0.2
 	men_at_arms_maintenance = -0.1
 	men_at_arms_recruitment_cost = -0.2
@@ -674,23 +665,20 @@ fp3_house_modifier_destroyed_the_caliphate = {
 }
 
 fp3_zoroastrian_brazier_modifier = {
-	zealot_opinion = 3 # THE MOD
-
-	same_faith_opinion = 3 # THE MOD
-
+	zealot_opinion = 3
+	same_faith_opinion = 3
 	monthly_piety = 0.5
 }
 
 fp3_irrigation_insights_modifier = {
 	icon = stewardship_positive
-	development_growth_factor = 0.1
+	prosperity_growth_factor = 0.1
 	county_fertility_growth_mult = 0.1
 }
 
 disturbed_sky_burial = {
 	icon = piety_mixed
-	zealot_opinion = 7 # THE MOD
-
+	zealot_opinion = 7
 	minority_opinion = -10
 }
 
@@ -742,30 +730,25 @@ fp3_established_futuwaa_lodges_modifier = {
 fp3_established_madrasas_modifier = {
 	icon = learning_positive
 	monthly_lifestyle_xp_gain_mult = 0.1
-	zealot_same_faith_opinion = 5 # THE MOD
-
+	zealot_same_faith_opinion = 5
 }
 
 fp3_rekindler_of_iran_modifier = {
 	icon = flame_positive
 	same_heritage_county_advantage_add = 5
-	glory_hound_same_culture_opinion = 5 # THE MOD
-
-	parochial_same_culture_opinion = 7 # THE MOD
-
-	courtly_same_culture_opinion = -5 # THE MOD
-
+	glory_hound_same_culture_opinion = 5
+	parochial_same_culture_opinion = 7
+	courtly_same_culture_opinion = -5
 	cultural_head_fascination_mult = 0.20
-	world_persian_empire_development_growth_factor = 0.2
+	world_persian_empire_prosperity_growth_factor = 0.2
 }
 
 fp3_flame_of_iran_modifier = {
 	icon = flame_positive
 	same_heritage_county_advantage_add = 5
 	glory_hound_same_culture_opinion = 5
-	parochial_same_culture_opinion = -3 # THE MOD
-
-	world_persian_empire_development_growth_factor = 0.2
+	parochial_same_culture_opinion = -3
+	world_persian_empire_prosperity_growth_factor = 0.2
 }
 
 fp3_higher_purpose_modifier = {
@@ -779,9 +762,8 @@ fp3_higher_purpose_modifier = {
 ####Assassination modifier####
 
 scheme_helpful_sympathizer_modifier = {
-	icon = intrigue_positive
-	scheme_success_chance = 7 # THE MOD 
-
+	icon = intrigue_positive 
+	scheme_success_chance = 7 
 }
 
 scheme_untrustworthy_sympathizer_modifier = {
@@ -790,7 +772,7 @@ scheme_untrustworthy_sympathizer_modifier = {
 }
 
 scheme_assassin_recruits_modifier = {
-	icon = prowess_mixed
+	icon = prowess_mixed 
 	scheme_phase_duration = miniscule_scheme_phase_duration_bonus_value
 	scheme_success_chance = 5
 	scheme_secrecy = -5
@@ -841,7 +823,7 @@ fp3_sided_with_different_faith_vassal_tax_dispute = {
 	icon = stewardship_mixed
 	domain_tax_different_faith_mult = 0.3
 	opinion_of_different_faith = 5
-	different_faith_county_opinion_mult = 0.15
+	different_faith_popular_opinion_mult = 0.15
 	clan_government_tax_contribution_mult = -0.02
 }
 
@@ -854,14 +836,10 @@ fp3_sided_with_tax_collector_tax_dispute = {
 
 fp3_incursion_instability = {
 	icon = horse_negative
-	levy_size = -0.1 # THE MOD
-
-	tax_mult = -0.1 # THE MOD
-
-	parochial_opinion = -10 # THE MOD
-
-	county_opinion_add = -5 # THE MOD
-
+	levy_size = -0.1
+	urban_tax_mult = -0.1
+	parochial_opinion = -10
+	popular_opinion_add = -5
 }
 
 ####### FP3 Ending: Honorary titles
@@ -918,14 +896,14 @@ fp3_efficient_tax_collector = {
 
 fp3_zanj_rebellion_work_concessions_modifier = {
 	icon = stewardship_negative
-	tax_mult = -0.5
+	agricultural_tax_mult = -0.5
 }
 
 religious_settler_influx = {
 	icon = flame_positive
-	development_growth = 0.2
-	county_opinion_add = 15
-	tax_mult = 0.1
+	prosperity_growth = 0.2
+	popular_opinion_add = 5
+	urban_tax_mult = 0.1
 	levy_size = 0.1
 }
 
@@ -969,9 +947,11 @@ fp3_treatise_on_strategy_modifier = {
 }
 
 # Civil
-fp3_treatise_on_development_modifier = {
+
+# Civil
+fp3_treatise_on_prosperity_modifier = {
 	icon = prestige_positive
-	development_growth_factor = 0.1
+	prosperity_growth_factor = 0.1
 	learning = 1
 }
 
@@ -983,9 +963,8 @@ fp3_treatise_on_building_modifier = {
 
 fp3_treatise_on_control_modifier = {
 	icon = county_modifier_control_positive
-	monthly_county_control_growth_add = 0.3
-	county_opinion_add = 5 # THE MOD
-
+	monthly_control_change_when_below_baseline_add = 0.3
+	popular_opinion_add = 5
 }
 
 fp3_treatise_on_mathematics_modifier = {
@@ -996,6 +975,6 @@ fp3_treatise_on_mathematics_modifier = {
 
 fp3_treatise_on_taxation_modifier = {
 	icon = stewardship_positive
-	tax_mult = 0.15
+	civic_tax_mult = 0.15
 	stewardship = 1
 }

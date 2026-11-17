@@ -1,36 +1,26 @@
-﻿@crypt_balance_buy_duchy_claim_piety = 1500
-@crypt_balance_buy_county_claim_piety = 750
-###################
+﻿###################
 # Claim Throne
 # by Petter Vilberg
 ###################
+@crypt_balance_buy_duchy_claim_piety = 1500
+@crypt_balance_buy_county_claim_piety = 750
 claim_throne_interaction = {
-
 	icon = icon_scheme_claim_throne
-
 	category = interaction_category_vassal
-
 	interface_priority = 268 # after Start Claimant Faction
-
 
 	ai_targets = {
 		ai_recipients = liege
 	}
 
-
 	auto_accept = yes
-
 	use_diplomatic_range = no
-
 	ignores_pending_interaction_block = yes
-
 
 
 	scheme = claim_throne
 
-
 	desc = claim_throne_interaction_desc
-
 
 	is_available = {
 		trigger_if = {
@@ -58,29 +48,16 @@ claim_throne_interaction = {
 		}
 	}
 
-
 	is_shown = {
-
 		scope:puppet_or_actor ?= {
-
 			highest_held_title_tier > tier_barony
-
 			is_landed = yes
-
 			is_physically_able_adult = yes
-
 			liege ?= scope:recipient
-
 			has_access_to_claim_throne_scheme_trigger = { TARGET = scope:recipient }
-
-		
-}
-
+		}
 		scope:recipient != scope:puppet_or_actor
-
-	
-}
-
+	}
 
 	is_valid_showing_failures_only = {
 		scope:puppet_or_actor = {
@@ -92,7 +69,6 @@ claim_throne_interaction = {
 		}
 	}
 
-
 	is_highlighted = {
 		scope:puppet_or_actor = {
 			is_diarch_of_target = scope:recipient
@@ -102,39 +78,31 @@ claim_throne_interaction = {
 		}
 	}
 
-
 	highlighted_reason = HIGHLIGHTED_IS_DIARCH_REASON
-
 
 	# Scheme Starter Packages
 	options_heading = schemes.t.agent_packages
-
 	send_options_exclusive = yes
-
 	## Balanced agents.
 	send_option = {
 		flag = agent_focus_balance
 		current_description = claim_throne_interaction.tt.agent_focus_balance
 	}
-
 	## Focused on Success Chance.
 	send_option = {
 		flag = agent_focus_success
 		current_description = claim_throne_interaction.tt.agent_focus_success
 	}
-
 	## Focused on Speed.
 	send_option = {
 		flag = agent_focus_speed
 		current_description = claim_throne_interaction.tt.agent_focus_speed
 	}
-
 	## Focused on Secrecy.
 	send_option = {
 		flag = agent_focus_secrecy
 		current_description = claim_throne_interaction.tt.agent_focus_secrecy
 	}
-
 	on_send = {
 		scope:puppet_or_actor = {
 			if = {
@@ -148,7 +116,6 @@ claim_throne_interaction = {
 			}
 		}
 	}
-
 
 	on_accept = {
 		scope:puppet_or_actor = {
@@ -237,6 +204,8 @@ claim_throne_interaction = {
 					}
 				}
 			}
+			#Guelphs & Ghibellines
+			gg_hostile_scheme_catalyst_warning_effect = yes
 		}
 		if = {
 			limit = {
@@ -254,7 +223,7 @@ claim_throne_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = minor_unity_loss
@@ -262,7 +231,6 @@ claim_throne_interaction = {
 			REVERSE_NON_HOUSE_TARGET = no
 		}
 	}
-
 
 	ai_frequency_by_tier = {
 		barony = 0
@@ -272,7 +240,6 @@ claim_throne_interaction = {
 		empire = 0
 		hegemony = 0
 	}
-
 
 	ai_will_do = {
 		base = 100
@@ -365,13 +332,7 @@ claim_throne_interaction = {
 
 		start_hostile_scheme_ai_base_modifiers = yes # At the end so Cowed can block it completely
 	}
-
-
 }
-
-
-
-
 
 
 ###################
@@ -379,22 +340,15 @@ claim_throne_interaction = {
 # by Petter Vilberg
 ###################
 fabricate_hook_interaction = {
-
 	icon = icon_scheme_fabricate_hook
-
 	category = interaction_category_hostile
 
-
 	auto_accept = yes
-
 	ignores_pending_interaction_block = yes
-
 
 	scheme = fabricate_hook
 
-
 	desc = fabricate_hook_interaction_desc
-
 
 	is_available = {
 		trigger_if = {
@@ -417,25 +371,15 @@ fabricate_hook_interaction = {
 		}
 	}
 
-
 	is_shown = {
-
 		scope:puppet_or_actor ?= {
-
 			OR = {
-
-				#has_perk = truth_is_relative_perk # THE MOD
 				has_fulfillment_parameter = sp_fabricate_hook_court_chaplain
-
-				has_fulfillment_parameter = sp_fabricate_hook_hor
-
 				has_personal_tenet_flag = tenet_sacred_shadows_fabricate_hook
-
 				AND = {
 					has_trait = vengeful
 					has_relation_rival = scope:recipient
 				}
-
 				any_character_struggle = {
 					involvement = involved
 					has_struggle_phase_parameter = unlocks_fabricate_hooks_for_all
@@ -443,26 +387,15 @@ fabricate_hook_interaction = {
 						CHAR = scope:recipient
 					}
 				}
-
 				AND = {
-					government_has_flag = government_is_clan
-					is_in_same_clan_as_trigger = { CHARACTER = scope:recipient }
-					house ?= {
-						has_house_unity_parameter = unity_unlock_fabricate_hooks
-					}
-				}
-
-			
-}
-
-		
-}
-
+					government_has_flag = government_uses_house_unity
+					house ?= { has_house_unity_parameter = unity_unlock_fabricate_hooks }
+					scope:recipient.house ?= house
+				}	
+			}
+		}
 		scope:recipient != scope:puppet_or_actor
-
-	
-}
-
+	}
 
 	is_valid = {
 		NOT = { scope:puppet_or_actor = { has_hook = scope:recipient } }
@@ -471,10 +404,6 @@ fabricate_hook_interaction = {
 				custom_tooltip = {
 					text = sp_fabricate_hook_court_chaplain_tt
 					has_fulfillment_parameter = sp_fabricate_hook_court_chaplain
-				}
-				custom_tooltip = {
-					text = sp_fabricate_hook_hor_tt
-					has_fulfillment_parameter = sp_fabricate_hook_hor
 				}
 				custom_tooltip = {
 					text = doctrine_parameter_tenet_sacred_shadows_fabricate_hook
@@ -493,14 +422,13 @@ fabricate_hook_interaction = {
 					}
 				}
 				AND = {
-					government_has_flag = government_is_clan
-					is_in_same_clan_as_trigger = { CHARACTER = scope:recipient }
+					government_has_flag = government_uses_house_unity
 					house ?= { has_house_unity_parameter = unity_unlock_fabricate_hooks }
-				}
+					scope:recipient.house ?= house
+				}	
 			}
 		}
 	}
-
 
 	is_valid_showing_failures_only = {
 		scope:puppet_or_actor = {
@@ -512,36 +440,29 @@ fabricate_hook_interaction = {
 		}
 	}
 
-
 	# Scheme Starter Packages
 	options_heading = schemes.t.agent_packages
-
 	send_options_exclusive = yes
-
 	## Balanced agents.
 	send_option = {
 		flag = agent_focus_balance
 		current_description = fabricate_hook_interaction.tt.agent_focus_balance
 	}
-
 	## Focused on Success Chance.
 	send_option = {
 		flag = agent_focus_success
 		current_description = fabricate_hook_interaction.tt.agent_focus_success
 	}
-
 	## Focused on Speed.
 	send_option = {
 		flag = agent_focus_speed
 		current_description = fabricate_hook_interaction.tt.agent_focus_speed
 	}
-
 	## Focused on Secrecy.
 	send_option = {
 		flag = agent_focus_secrecy
 		current_description = fabricate_hook_interaction.tt.agent_focus_secrecy
 	}
-
 	on_send = {
 		scope:puppet_or_actor = {
 			if = {
@@ -555,13 +476,12 @@ fabricate_hook_interaction = {
 			}
 		}
 	}
-
 	on_accept = {
 		scope:puppet_or_actor = {
 			# Only get stressed/SP penalties if you don't have the parameter
 			if = {
 				limit = {
-					NOT = { sp_hostile_schemes_except_murder_no_stress_or_fulfillment_trigger = yes }
+					NOT = { has_fulfillment_parameter = sp_hostile_schemes_minus_murder_no_sp_or_stress_loss }
 				}
 				stress_and_fulfillment_impact = {
 					just = medium_stress_impact_gain
@@ -643,6 +563,8 @@ fabricate_hook_interaction = {
 					}
 				}
 			}
+			#Guelphs & Ghibellines
+			gg_hostile_scheme_catalyst_warning_effect = yes
 		}
 		if = {
 			limit = {
@@ -660,12 +582,10 @@ fabricate_hook_interaction = {
 		}
 	}
 
-
 	ai_targets = {
 		ai_recipients = liege
 		ai_recipients = vassals
 	}
-
 
 	ai_targets = {
 		ai_recipients = neighboring_rulers
@@ -673,12 +593,10 @@ fabricate_hook_interaction = {
 		max = 10
 	}
 
-
 	ai_targets = {
 		ai_recipients = courtiers
 		max = 5
 	}
-
 
 	ai_targets = {
 		ai_recipients = realm_characters
@@ -686,11 +604,9 @@ fabricate_hook_interaction = {
 		max = 30
 	}
 
-
 	ai_target_quick_trigger = {
 		adult = yes
 	}
-
 
 	ai_frequency_by_tier = {
 		barony = 0
@@ -700,7 +616,6 @@ fabricate_hook_interaction = {
 		empire = 12
 		hegemony = 12
 	}
-
 
 	ai_will_do = {
 		base = 10
@@ -751,10 +666,7 @@ fabricate_hook_interaction = {
 				OR = {
 					liege = scope:puppet_or_actor.liege
 					liege = {
-						OR = {
-							has_relation_rival = scope:puppet_or_actor
-							has_relation_nemesis = scope:puppet_or_actor
-						}
+						has_relation_rival = scope:puppet_or_actor
 					}
 				}
 			}
@@ -769,13 +681,7 @@ fabricate_hook_interaction = {
 		}
 		start_hostile_scheme_ai_base_modifiers = yes # At the end so Cowed can block it completely
 	}
-
-
 }
-
-
-
-
 
 
 ###################
@@ -819,6 +725,7 @@ demand_payment_interaction = {
 					}
 				}
 			}
+			NOT = { government_has_flag = government_is_merchant }
 		}
 		scope:recipient = {
 			is_ai = yes
@@ -898,7 +805,7 @@ demand_payment_interaction = {
 		}
 
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = minor_unity_loss
@@ -943,8 +850,6 @@ demand_payment_interaction = {
 				OR = {
 					has_relation_friend = scope:recipient
 					has_relation_lover = scope:recipient
-					has_relation_best_friend = scope:recipient
-					has_relation_soulmate = scope:recipient
 				}
 			}
 		}
@@ -953,44 +858,20 @@ demand_payment_interaction = {
 
 
 
-
-
-
-
 ##################
 # Buy Claim
 # by Petter Vilberg
 ##################
 buy_claim_interaction = {
-
 	category = interaction_category_diplomacy
-
-
-
 	icon = vassal_claim_liege_title_interaction
 
-
-
-
 	desc = buy_claim_interaction_desc
-
-
-
 	target_type = title
-
-
-
 	target_filter = recipient_domain_titles
-
-
-
 	ignores_pending_interaction_block = yes
 
-
-
-
 	is_shown = {
-
 		scope:puppet_or_actor ?= {
 			is_landless_adventurer = no
 			OR = {
@@ -1014,9 +895,12 @@ buy_claim_interaction = {
 					}
 				}
 			}
-			NOT = { target_is_liege_or_above = scope:recipient }
+			NOR = {
+				government_has_flag = government_is_merchant
+				government_has_flag = government_is_republic
+				target_is_liege_or_above = scope:recipient
+			}
 		}
-
 		NOT = {
 			scope:puppet_or_actor ?= scope:recipient
 			AND = {
@@ -1026,49 +910,25 @@ buy_claim_interaction = {
 				}
 			}
 		}
-
 		scope:recipient = {
-
 			is_playable_character = yes
-
 			primary_title.tier > tier_barony
-
 			NOT = {
 				target_is_liege_or_above = scope:puppet_or_actor
 			}
-
-		
-}
-
-	
-scope:recipient = { # MOD START
- primary_title.tier < tier_kingdom
- faith = scope:actor.faith
- } # MOD END
-
-
-}
-
-
-
+		}
+		scope:recipient = { # MOD START
+		 primary_title.tier < tier_kingdom
+		 faith = scope:actor.faith
+		 } # MOD END
+	}
 
 	can_be_picked_title = {
-
 		scope:target = {
-
 			tier >= tier_county
-
-		
-}
-
-	
-scope:target = { tier < tier_kingdom } # THE MOD
-
-
-}
-
-
-
+		}
+		scope:target = { tier < tier_kingdom } # THE MOD
+	}
 
 	is_valid_showing_failures_only = {
 		trigger_if = { # Can't request on titles you already have a claim on
@@ -1147,7 +1007,17 @@ scope:target = { tier < tier_kingdom } # THE MOD
 				always = no
 			}
 		}
+		trigger_if = { # Can't buy claims on merchant titles
+			limit = {
+				scope:target ?= { has_variable = merchant_creation_reason }
+			}
+			custom_description = {
+				text = buy_claim_no_merchant_title
+				always = no
+			}
+		}
 		scope:puppet_or_actor = { # Variable piety cost depending on tier
+
 			trigger_if = {
 				limit = {
 					exists = scope:target
@@ -1241,62 +1111,33 @@ scope:target = { tier < tier_kingdom } # THE MOD
 		}
 	}
 
-
-
-
 	auto_accept = yes
 
-
-
-
 	on_accept = {
-
 		scope:puppet_or_actor = {
-
 			send_interface_toast = {
-
 				type = event_toast_effect_good
-
 				title = buy_claim_interaction.message
-
 				left_icon = scope:puppet_or_actor
-
 				right_icon = scope:recipient
-
 				add_piety = {
-
 					value = 0
-
 					if = {
-
 						limit = {
 							scope:target = {
 								tier = tier_county
 							}
 						}
-
 						subtract = @crypt_balance_buy_county_claim_piety
-
-
-
-					
-}
-
+					}
 					if = {
-
 						limit = {
 							scope:target = {
 								tier = tier_duchy
 							}
 						}
-
 						subtract = @crypt_balance_buy_duchy_claim_piety
-
-
-
-					
-}
-
+					}
 					if = {
 						limit = {
 							scope:target = {
@@ -1305,7 +1146,6 @@ scope:target = { tier < tier_kingdom } # THE MOD
 						}
 						add = major_buy_claim_piety_loss
 					}
-
 					if = {
 						limit = {
 							scope:target = {
@@ -1314,7 +1154,6 @@ scope:target = { tier < tier_kingdom } # THE MOD
 						}
 						add = massive_buy_claim_piety_loss
 					}
-
 					if = {
 						limit = {
 							scope:target = {
@@ -1323,32 +1162,20 @@ scope:target = { tier < tier_kingdom } # THE MOD
 						}
 						add = monumental_buy_claim_piety_loss
 					}
-
 					if = {
 						limit = {
 							government_has_mechanic = administrative
 						}
 						multiply = 1.5
 					}
-
-				
-
-
-}
-
+				}
 				add_unpressed_claim = scope:target
-
-			
-}
-
+			}
 			stress_and_fulfillment_impact = {
 				just = medium_stress_impact_gain
 				honest = medium_stress_impact_gain
 			}
-
-		
-}
-
+		}
 		if = {
 			limit = {
 				scope:is_puppet_action ?= yes
@@ -1363,7 +1190,6 @@ scope:target = { tier < tier_kingdom } # THE MOD
 				}
 			}
 		}
-
 		scope:recipient = {
 			add_opinion = {
 				target = scope:puppet_or_actor
@@ -1373,29 +1199,16 @@ scope:target = { tier < tier_kingdom } # THE MOD
 			trigger_event = perk_interaction.0002
 		}
 
-
 		# If we're a clan this interaction affects unity
-		add_clan_unity_interaction_effect = {
+		add_house_unity_interaction_effect = {
 			CHARACTER = scope:puppet_or_actor
 			TARGET = scope:recipient
 			VALUE = minor_unity_loss
 			DESC = clan_unity_bought_claim.desc
 			REVERSE_NON_HOUSE_TARGET = no
 		}
-
-	
+	}
 }
-
-
-
-
-
-
-}
-
-
-
-
 
 
 
@@ -1438,6 +1251,12 @@ challenge_to_single_combat_interaction = {
 					scope:actor = { government_has_flag = government_is_nomadic }
 				}
 				desc = challenge_to_single_combat_interaction_desc_nomadic
+			}
+			triggered_desc = {
+				trigger = {
+					scope:actor = { contract_warfare_can_challenge_to_single_combat_trigger = yes }
+				}
+				desc = challenge_to_single_combat_interaction_desc_contract_warfare
 			}
 			desc = challenge_to_single_combat_interaction_desc_non_admin
 		}
@@ -1484,6 +1303,15 @@ challenge_to_single_combat_interaction = {
 				scope:recipient = {
 					culture ?= { has_cultural_parameter = stalwart_leader_non_admin_duels }
 					can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = scope:actor }
+				}
+			}
+			# Contract Warfare culture
+			AND = {
+				scope:actor = { contract_warfare_can_challenge_to_single_combat_trigger = yes }
+				scope:recipient = {
+					can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = scope:actor }
+					highest_held_title_tier <= scope:actor.highest_held_title_tier
+					NOT = { is_liege_or_above_of = scope:actor }
 				}
 			}
 		}
@@ -1579,7 +1407,7 @@ challenge_to_single_combat_interaction = {
 					}
 				}
 			}
-			add_clan_unity_interaction_effect = {
+			add_house_unity_interaction_effect = {
 				CHARACTER = scope:actor
 				TARGET = scope:recipient
 				VALUE = medium_unity_loss
@@ -1855,8 +1683,4 @@ challenge_to_single_combat_interaction = {
 		}
 	}
 }
-
-
-
-
 

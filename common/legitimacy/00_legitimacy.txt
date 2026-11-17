@@ -3,812 +3,407 @@
 ######################
 
 count_legitimacy = {
-
 	is_valid = {
 		highest_held_title_tier = tier_county
 		use_general_legitimacy = yes
 	}
 
-
 	ai_expected_level = default_ai_legitimacy_expectation
-
 
 	below_expectations_opinion = default_legitimacy_opinion_penalty
 
-
 	max = legitimacy_max
-
 
 	# Scales based on Tier and Era
 	## A Tribal era Count requires 4x less than a Late Medieval era Emperor
 	level = {
-
 		threshold = legitimacy_level_1
-
 		modifier = {
-
-			short_reign_duration_mult = 0.08 # THE MOD
-
-			monthly_dynasty_prestige = -0.03 # THE MOD
-
-
-			county_opinion_add = -3 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = 0.08
+			monthly_dynasty_prestige = -0.03
+			popular_opinion_add = -3
+			control_baseline_add = -5
+		}
 		flag = reduced_marriage_acceptance
-
 		flag = increased_claim_cb_cost
-
 		flag = reduced_alliance_acceptance
-
 		flag = reduced_vassalization_acceptance
-
 		flag = reduced_tributarization_acceptance
-
 		flag = increased_factions
-
 		flag = increased_scheme_agent_join_chance_in_realm
-
-	
-}
-
+	}
 	# Gap of at least 50
 	level = {
-
 		threshold = legitimacy_level_2 # 50-200
-
 		modifier = {
-
-			short_reign_duration_mult = -0.03 # THE MOD
-
-		
-}
-
-	
-}
-
+			short_reign_duration_mult = -0.03
+		}
+	}
 	# Gap of at least 100
 	level = {
-
 		threshold = legitimacy_level_3 # 150-600
-
 		modifier = {
-
-			short_reign_duration_mult = -0.08 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = -0.08
+		}
 		flag = reduced_claim_cb_cost
-
 		flag = increased_marriage_acceptance
-
-	
-}
-
+	}
 	# Gap of at least 200
 	level = {
-
 		threshold = legitimacy_level_4 # 350-1400
-
 		modifier = {
-
-			short_reign_duration_mult = -0.15 # THE MOD
-
-			county_opinion_add = 3 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = -0.15
+			popular_opinion_add = 3
+		}
 		flag = increased_marriage_acceptance
-
 		flag = increased_alliance_acceptance
-
 		flag = very_reduced_claim_cb_cost
-
 		flag = reduced_factions
-
 		flag = reduced_scheme_agent_join_chance_in_realm
-
 		flag = reduced_swing_scales_cost
-
-		#flag = reduced_title_creation_cost # THE MOD
-
-	
-}
-
+	}
 	# Gap of at least 350
 	level = {
-
 		threshold = legitimacy_level_5 # 700-2800
-
 		modifier = {
-
-			short_reign_duration_mult = -0.25 # THE MOD
-
-			monthly_dynasty_prestige = 0.08 # THE MOD
-
-
-			county_opinion_add = 6 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = -0.25
+			monthly_dynasty_prestige = 0.08
+			popular_opinion_add = 6
+		}
 		flag = very_increased_marriage_acceptance
-
 		flag = very_increased_alliance_acceptance
-
 		flag = extra_reduced_claim_cb_cost
-
 		flag = very_reduced_factions
-
 		flag = very_reduced_scheme_agent_join_chance_in_realm
-
 		flag = very_reduced_swing_scales_cost
-
-		#flag = very_reduced_title_creation_cost # THE MOD
-
-	
-}
-
+	}
 	# Gap of at least 500
 	level = {
-
 		threshold = legitimacy_level_6 # 1200-4800
-
 		modifier = {
-
-			short_reign_duration_mult = -0.3 # THE MOD
-
-			monthly_dynasty_prestige = 0.15 # THE MOD
-
-
-			county_opinion_add = 10 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = -0.3
+			monthly_dynasty_prestige = 0.15
+			popular_opinion_add = 10
+		}
 		flag = extra_increased_marriage_acceptance
-
 		flag = extra_increased_alliance_acceptance
-
 		flag = extra_reduced_claim_cb_cost
-
 		flag = extra_reduced_factions
-
 		flag = massively_reduced_scheme_agent_join_chance_in_realm
-
 		flag = extra_swing_scales_cost
-
-		#flag = extra_reduced_title_creation_cost # THE MOD
-
-	
+	}
 }
-
-
-}
-
 
 duke_legitimacy = {
-
 	is_valid = {
 		highest_held_title_tier = tier_duchy
 		use_general_legitimacy = yes
 	}
 
-
 	ai_expected_level = default_ai_legitimacy_expectation
-
 
 	below_expectations_opinion = default_legitimacy_opinion_penalty
 
-
 	max = legitimacy_max
-
 
 	# Scales based on Tier and Era
 	## A Tribal era Count requires 4x less than a Late Medieval era Emperor
 	level = {
-
 		threshold = legitimacy_level_1
-
 		modifier = {
-
-			short_reign_duration_mult = 0.15 # THE MOD
-
-			monthly_dynasty_prestige = -0.03 # THE MOD
-
-
-			county_opinion_add = -3 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = 0.15
+			monthly_dynasty_prestige = -0.03
+			popular_opinion_add = -3
+			control_baseline_add = -10
+		}
 		flag = very_reduced_marriage_acceptance
-
 		flag = very_increased_claim_cb_cost
-
 		flag = very_reduced_alliance_acceptance
-
 		flag = very_reduced_vassalization_acceptance
-
 		flag = slightly_reduced_tributarization_acceptance
-
 		flag = very_increased_factions
-
 		flag = very_increased_scheme_agent_join_chance_in_realm
-
 		flag = very_increased_swing_scales_cost
-
-	
-}
-
+	}
 	# Gap of at least 50
 	level = {
-
 		threshold = legitimacy_level_2 # 50-200
-
 		modifier = {
-
-			short_reign_duration_mult = 0.03 # THE MOD
-
-			county_opinion_add = -2 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = 0.03
+			popular_opinion_add = -2
+			control_baseline_add = -5
+		}
 		flag = reduced_marriage_acceptance
-
 		flag = increased_claim_cb_cost
-
 		flag = reduced_alliance_acceptance
-
 		flag = reduced_vassalization_acceptance
-
 		flag = reduced_tributarization_acceptance
-
 		flag = increased_factions
-
 		flag = increased_scheme_agent_join_chance_in_realm
-
 		flag = increased_swing_scales_cost
-
-	
-}
-
+	}
 	# Gap of at least 100
 	level = {
-
 		threshold = legitimacy_level_3 # 150-600
-
 		modifier = {
-
-			short_reign_duration_mult = -0.05 # THE MOD
-
-		
-}
-
-	
-}
-
+			short_reign_duration_mult = -0.05
+		}
+	}
 	# Gap of at least 200
 	level = {
-
 		threshold = legitimacy_level_4 # 350-1400
-
 		modifier = {
-
-			short_reign_duration_mult = -0.15 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = -0.15
+		}
 		flag = increased_marriage_acceptance
-
 		flag = reduced_claim_cb_cost
-
 		flag = increased_alliance_acceptance
-
 		flag = increased_vassalization_acceptance
-
 		flag = increased_tributarization_acceptance
-
 		flag = reduced_factions
-
 		flag = reduced_scheme_agent_join_chance_in_realm
-
 		flag = reduced_swing_scales_cost
-
-		#flag = reduced_title_creation_cost # THE MOD
-
-	
-}
-
+	}
 	# Gap of at least 350
 	level = {
-
 		threshold = legitimacy_level_5 # 700-2800
-
 		modifier = {
-
-			short_reign_duration_mult = -0.2 # THE MOD
-
-			county_opinion_add = 3 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = -0.2
+			popular_opinion_add = 3
+		}
 		flag = very_increased_marriage_acceptance
-
 		flag = very_reduced_claim_cb_cost
-
 		flag = very_increased_alliance_acceptance
-
 		flag = very_increased_vassalization_acceptance
-
 		flag = very_increased_tributarization_acceptance
-
 		flag = very_reduced_factions
-
 		flag = very_reduced_scheme_agent_join_chance_in_realm
-
 		flag = very_reduced_swing_scales_cost
-
-		#flag = very_reduced_title_creation_cost # THE MOD
-
-	
-}
-
+	}
 	# Gap of at least 500
 	level = {
-
 		threshold = legitimacy_level_6 # 1200-4800
-
 		modifier = {
-
-			short_reign_duration_mult = -0.3 # THE MOD
-
-			monthly_dynasty_prestige = 0.08 # THE MOD
-
-
-			county_opinion_add = 6 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = -0.3
+			monthly_dynasty_prestige = 0.08
+			popular_opinion_add = 6
+		}
 		flag = extra_increased_marriage_acceptance
-
 		flag = extra_reduced_claim_cb_cost
-
 		flag = extra_increased_alliance_acceptance
-
 		flag = extra_increased_vassalization_acceptance
-
 		flag = extra_increased_tributarization_acceptance
-
 		flag = extra_reduced_factions
-
 		flag = massively_reduced_scheme_agent_join_chance_in_realm
-
 		flag = extra_reduced_swing_scales_cost
-
-		#flag = extra_reduced_title_creation_cost # THE MOD
-
-	
+	}
 }
-
-
-}
-
 
 king_legitimacy = {
-
 	is_valid = {
 		highest_held_title_tier = tier_kingdom
 		use_general_legitimacy = yes
 	}
 
-
 	ai_expected_level = default_ai_legitimacy_expectation
-
 
 	below_expectations_opinion = default_legitimacy_opinion_penalty
 
-
 	max = legitimacy_max
-
 
 	# Scales based on Tier and Era
 	## A Tribal era Count requires 4x less than a Late Medieval era Emperor
 	level = {
-
 		threshold = legitimacy_level_1
-
 		modifier = {
-
-			short_reign_duration_mult = 0.25 # THE MOD
-
-			monthly_dynasty_prestige = -0.07 # THE MOD
-
-
-			county_opinion_add = -6 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = 0.25
+			monthly_dynasty_prestige = -0.07
+			popular_opinion_add = -6
+			control_baseline_add = -15
+		}
 		flag = very_reduced_marriage_acceptance
-
 		flag = very_increased_claim_cb_cost
-
 		flag = very_reduced_alliance_acceptance
-
 		flag = very_reduced_vassalization_acceptance
-
 		flag = reduced_tributarization_acceptance
-
 		flag = very_increased_factions
-
 		flag = very_increased_scheme_agent_join_chance_in_realm
-
 		flag = very_increased_swing_scales_cost
 
-
-	
-}
-
+	}
 	# Gap of at least 50
 	level = {
-
 		threshold = legitimacy_level_2 # 50-200
-
 		modifier = {
-
-			short_reign_duration_mult = 0.15 # THE MOD
-
-			monthly_dynasty_prestige = -0.03 # THE MOD
-
-
-			county_opinion_add = -3 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = 0.15
+			monthly_dynasty_prestige = -0.03
+			popular_opinion_add = -3
+			control_baseline_add = -10
+		}
 		flag = reduced_marriage_acceptance
-
 		flag = increased_claim_cb_cost
-
 		flag = reduced_alliance_acceptance
-
 		flag = reduced_vassalization_acceptance
-
 		flag = slightly_reduced_tributarization_acceptance
-
 		flag = increased_factions
-
 		flag = increased_scheme_agent_join_chance_in_realm
-
 		flag = increased_swing_scales_cost
-
-	
-}
-
+	}
 	# Gap of at least 100
 	level = {
-
 		threshold = legitimacy_level_3 # 150-600
-
 		modifier = {
-
-			short_reign_duration_mult = 0.08 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = 0.08
+			control_baseline_add = -5
+		}
 		flag = reduced_marriage_acceptance
-
 		flag = reduced_vassalization_acceptance
-
 		flag = increased_claim_cb_cost
-
-	
-}
-
+	}
 	# Gap of at least 200
 	level = {
-
 		threshold = legitimacy_level_4 # 350-1400
-
 		modifier = {
-
-			short_reign_duration_mult = -0.03 # THE MOD
-
-		
-}
-
-	
-}
-
+			short_reign_duration_mult = -0.03
+		}
+	}
 	# Gap of at least 350
 	level = {
-
 		threshold = legitimacy_level_5 # 700-2800
-
 		modifier = {
-
-			short_reign_duration_mult = -0.08 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = -0.08
+		}
 		flag = increased_marriage_acceptance
-
 		flag = reduced_claim_cb_cost
-
 		flag = increased_alliance_acceptance
-
 		flag = increased_vassalization_acceptance
-
 		flag = increased_tributarization_acceptance
-
 		flag = reduced_factions
-
 		flag = reduced_scheme_agent_join_chance_in_realm
-
 		flag = reduced_swing_scales_cost
-
-		#flag = reduced_title_creation_cost # THE MOD
-
-	
-}
-
+	}
 	# Gap of at least 500
 	level = {
-
 		threshold = legitimacy_level_6 # 1200-4800
-
 		modifier = {
-
-			short_reign_duration_mult = -0.15 # THE MOD
-
-			county_opinion_add = 3 # THE MOD
-
-			monthly_dynasty_prestige = 0.08 # THE MOD
-
-
-		
-}
-
+			short_reign_duration_mult = -0.15
+			popular_opinion_add = 3
+			monthly_dynasty_prestige = 0.08
+		}
 		flag = very_increased_marriage_acceptance
-
 		flag = very_reduced_claim_cb_cost
-
 		flag = very_increased_alliance_acceptance
-
 		flag = very_increased_vassalization_acceptance
-
 		flag = very_increased_tributarization_acceptance
-
 		flag = very_reduced_factions
-
 		flag = very_reduced_scheme_agent_join_chance_in_realm
-
 		flag = very_reduced_swing_scales_cost
-
-		#flag = very_reduced_title_creation_cost # THE MOD
-
-	
+	}
 }
-
-
-}
-
 
 emperor_legitimacy = {
-
 	is_valid = {
 		highest_held_title_tier = tier_empire
 		use_general_legitimacy = yes
 	}
 
-
 	ai_expected_level = default_ai_legitimacy_expectation
-
 
 	below_expectations_opinion = default_legitimacy_opinion_penalty
 
-
 	max = legitimacy_max
-
 
 	# Scales based on Tier and Era
 	## A Tribal era Count requires 4x less than a Late Medieval era Emperor
 	level = {
-
 		threshold = legitimacy_level_1
-
 		modifier = {
-
-			short_reign_duration_mult = 0.3 # THE MOD
-
-			monthly_dynasty_prestige = -0.1 # THE MOD
-
-
-			county_opinion_add = -10 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = 0.3
+			monthly_dynasty_prestige = -0.1
+			popular_opinion_add = -10
+			control_baseline_add = -20
+		}
 		flag = massively_reduced_marriage_acceptance
-
 		flag = massively_increased_claim_cb_cost
-
 		flag = massively_reduced_vassalization_acceptance
-
 		flag = massively_reduced_tributarization_acceptance
-
 		flag = massively_reduced_alliance_acceptance
-
 		flag = massively_increased_factions
-
 		flag = massively_increased_scheme_agent_join_chance_in_realm
-
 		flag = massively_increased_swing_scales_cost
-
-	
-}
-
+	}
 	# Gap of at least 50
 	level = {
-
 		threshold = legitimacy_level_2 # 50-200
-
 		modifier = {
-
-			short_reign_duration_mult = 0.2 # THE MOD
-
-			monthly_dynasty_prestige = -0.06 # THE MOD
-
-
-			county_opinion_add = -6 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = 0.2
+			monthly_dynasty_prestige = -0.06
+			popular_opinion_add = -6
+			control_baseline_add = -10
+		}
 		flag = very_reduced_marriage_acceptance
-
 		flag = very_increased_claim_cb_cost
-
 		flag = very_reduced_alliance_acceptance
-
 		flag = very_reduced_vassalization_acceptance
-
 		flag = very_reduced_tributarization_acceptance
-
 		flag = very_increased_factions
-
 		flag = very_increased_scheme_agent_join_chance_in_realm
-
 		flag = very_increased_swing_scales_cost
-
-	
-}
-
+	}
 	# Gap of at least 100
 	level = {
-
 		threshold = legitimacy_level_3 # 150-600
-
 		modifier = {
-
-			short_reign_duration_mult = 0.1 # THE MOD
-
-			monthly_dynasty_prestige = -0.03 # THE MOD
-
-
-			county_opinion_add = -3 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = 0.1
+			monthly_dynasty_prestige = -0.03
+			popular_opinion_add = -3
+			control_baseline_add = -5
+		}
 		flag = reduced_marriage_acceptance
-
 		flag = reduced_alliance_acceptance
-
 		flag = increased_claim_cb_cost
-
 		flag = reduced_vassalization_acceptance
-
 		flag = reduced_tributarization_acceptance
-
 		flag = increased_factions
-
 		flag = increased_scheme_agent_join_chance_in_realm
-
 		flag = increased_swing_scales_cost
-
-	
-}
-
+	}
 	# Gap of at least 200
 	level = {
-
 		threshold = legitimacy_level_4 # 350-1400
-
 		modifier = {
-
-			short_reign_duration_mult = 0.05 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = 0.05
+		}
 		flag = reduced_marriage_acceptance
-
 		flag = reduced_vassalization_acceptance
-
 		flag = slightly_reduced_tributarization_acceptance
-
 		flag = increased_claim_cb_cost
-
-	
-}
-
+	}
 	# Gap of at least 350
 	level = {
-
 		threshold = legitimacy_level_5 # 700-2800
-
 		modifier = {
-
-			short_reign_duration_mult = -0.03 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = -0.03
+		}
 		flag = reduced_scheme_agent_join_chance_in_realm
-
-	
-}
-
+	}
 	# Gap of at least 500
 	level = {
-
 		threshold = legitimacy_level_6 # 1200-4800
-
 		modifier = {
-
-			short_reign_duration_mult = -0.08 # THE MOD
-
-			county_opinion_add = 3 # THE MOD
-
-		
-}
-
+			short_reign_duration_mult = -0.08
+			popular_opinion_add = 3
+		}
 		flag = increased_marriage_acceptance
-
 		flag = reduced_claim_cb_cost
-
 		flag = increased_alliance_acceptance
-
 		flag = increased_vassalization_acceptance
-
 		flag = increased_tributarization_acceptance
-
 		flag = reduced_factions
-
 		flag = very_reduced_scheme_agent_join_chance_in_realm
-
-		#flag = reduced_title_creation_cost # THE MOD
-
 		flag = reduced_swing_scales_cost
-
-	
+	}
 }
-
-
-}
-
 
 hegemon_legitimacy = {
 	is_valid = {
@@ -836,7 +431,7 @@ hegemon_legitimacy = {
 		modifier = {
 			short_reign_duration_mult = 1.25
 			monthly_dynasty_prestige = -0.4
-			county_opinion_add = -40
+			popular_opinion_add = -40
 		}
 		flag = massively_reduced_marriage_acceptance
 		flag = massively_increased_claim_cb_cost
@@ -853,7 +448,7 @@ hegemon_legitimacy = {
 		modifier = {
 			short_reign_duration_mult = 0.75
 			monthly_dynasty_prestige = -0.3
-			county_opinion_add = -30
+			popular_opinion_add = -30
 		}
 		flag = very_reduced_marriage_acceptance
 		flag = very_increased_claim_cb_cost
@@ -870,7 +465,7 @@ hegemon_legitimacy = {
 		modifier = {
 			short_reign_duration_mult = 0.5
 			monthly_dynasty_prestige = -0.2
-			county_opinion_add = -20
+			popular_opinion_add = -20
 		}
 		flag = reduced_marriage_acceptance
 		flag = reduced_alliance_acceptance
@@ -902,7 +497,7 @@ hegemon_legitimacy = {
 		threshold = legitimacy_level_6 # 1200-4800
 		modifier = {
 			short_reign_duration_mult = -0.25
-			county_opinion_add = 10
+			popular_opinion_add = 5
 		}
 		flag = increased_marriage_acceptance
 		flag = reduced_claim_cb_cost
@@ -915,7 +510,6 @@ hegemon_legitimacy = {
 		flag = reduced_swing_scales_cost
 	}
 }
-
 
 mandate_legitimacy = {
 	is_valid = {
@@ -952,7 +546,7 @@ mandate_legitimacy = {
 		modifier = {
 			short_reign_duration_mult = 1.25
 			monthly_dynasty_prestige = -0.4
-			county_opinion_add = -40
+			popular_opinion_add = -40
 		}
 		flag = massively_reduced_marriage_acceptance
 		flag = massively_increased_claim_cb_cost
@@ -969,7 +563,7 @@ mandate_legitimacy = {
 		modifier = {
 			short_reign_duration_mult = 0.75
 			monthly_dynasty_prestige = -0.3
-			county_opinion_add = -30
+			popular_opinion_add = -30
 		}
 		flag = very_reduced_marriage_acceptance
 		flag = very_increased_claim_cb_cost
@@ -986,7 +580,7 @@ mandate_legitimacy = {
 		modifier = {
 			short_reign_duration_mult = 0.5
 			monthly_dynasty_prestige = -0.2
-			county_opinion_add = -20
+			popular_opinion_add = -20
 		}
 		flag = reduced_marriage_acceptance
 		flag = reduced_alliance_acceptance
@@ -1017,7 +611,7 @@ mandate_legitimacy = {
 		threshold = legitimacy_level_6 # 1200-4800
 		modifier = {
 			short_reign_duration_mult = -0.25
-			county_opinion_add = 10
+			popular_opinion_add = 5
 		}
 		flag = reduced_claim_cb_cost
 		flag = increased_marriage_acceptance
@@ -1031,7 +625,7 @@ mandate_legitimacy = {
 		threshold = legitimacy_level_7 # 1650-6600
 		modifier = {
 			tributary_opinion = 20
-			county_opinion_add = 20
+			popular_opinion_add = 10
 			monthly_dynasty_prestige = 0.15
 		}
 		flag = very_reduced_claim_cb_cost
@@ -1046,7 +640,7 @@ mandate_legitimacy = {
 		threshold = legitimacy_level_8
 		modifier = {
 			tributary_opinion = 30
-			county_opinion_add = 25
+			popular_opinion_add = 12.5
 			monthly_dynasty_prestige = 0.25
 		}
 		flag = very_reduced_claim_cb_cost
@@ -1058,7 +652,6 @@ mandate_legitimacy = {
 		flag = reduced_swing_scales_cost
 	}
 }
-
 
 nomadic_legitimacy = {
 	is_valid = {
@@ -1078,7 +671,7 @@ nomadic_legitimacy = {
 		threshold = legitimacy_level_1
 		modifier = {
 			short_reign_duration_mult = 0.75
-			county_opinion_add = -10
+			popular_opinion_add = -10
 			herd_gain_mult = -0.05
 			dread_baseline_add = -30
 		}
@@ -1095,7 +688,7 @@ nomadic_legitimacy = {
 		threshold = legitimacy_level_2 # 50-200
 		modifier = {
 			short_reign_duration_mult = 0.5
-			county_opinion_add = -5
+			popular_opinion_add = -5
 			dread_baseline_add = -15
 		}
 		flag = reduced_marriage_acceptance
@@ -1147,7 +740,7 @@ nomadic_legitimacy = {
 		threshold = legitimacy_level_6 # 1200-4800
 		modifier = {
 			tributary_opinion = 15
-			county_opinion_add = 10
+			popular_opinion_add = 5
 			monthly_dynasty_prestige = 0.25
 			herd_gain_mult = 0.30
 		}
@@ -1162,7 +755,6 @@ nomadic_legitimacy = {
 		flag = increased_obedience_acceptance
 	}
 }
-
 
 mandala_legitimacy = {
 	is_valid = {
@@ -1182,7 +774,7 @@ mandala_legitimacy = {
 		threshold = mandala_legitimacy_level_1
 		modifier = {
 			short_reign_duration_mult = 0.75
-			county_opinion_add = -10
+			popular_opinion_add = -10
 			monthly_piety_gain_mult = -0.05
 		}
 		flag = massively_increased_claim_cb_cost
@@ -1199,7 +791,7 @@ mandala_legitimacy = {
 		threshold = mandala_legitimacy_level_2 # 200-800
 		modifier = {
 			short_reign_duration_mult = 0.5
-			county_opinion_add = -5
+			popular_opinion_add = -5
 		}
 		flag = very_increased_claim_cb_cost
 		flag = very_reduced_marriage_acceptance
@@ -1251,7 +843,7 @@ mandala_legitimacy = {
 		threshold = mandala_legitimacy_level_6 # 1240-4960
 		modifier = {
 			tributary_opinion = 15
-			county_opinion_add = 10
+			popular_opinion_add = 5
 			monthly_piety_gain_mult = 0.2
 			monthly_dynasty_prestige = 0.15
 		}
@@ -1268,7 +860,7 @@ mandala_legitimacy = {
 		threshold = mandala_legitimacy_level_7 # 1650-6600
 		modifier = {
 			tributary_opinion = 20
-			county_opinion_add = 20
+			popular_opinion_add = 10
 			monthly_piety_gain_mult = 0.3
 			monthly_dynasty_prestige = 0.15
 		}
@@ -1285,7 +877,7 @@ mandala_legitimacy = {
 		threshold = mandala_legitimacy_level_8 # 2200-8800
 		modifier = {
 			tributary_opinion = 30
-			county_opinion_add = 25
+			popular_opinion_add = 12.5
 			monthly_piety_gain_mult = 0.35
 			monthly_dynasty_prestige = 0.25
 			faith_conversion_piety_cost_mult = -0.15
@@ -1304,7 +896,7 @@ mandala_legitimacy = {
 		threshold = mandala_legitimacy_level_9 # 3000-12000
 		modifier = {
 			tributary_opinion = 35
-			county_opinion_add = 35
+			popular_opinion_add = 17.5
 			monthly_piety_gain_mult = 0.4
 			monthly_dynasty_prestige = 0.3
 			faith_conversion_piety_cost_mult = -0.3
@@ -1319,4 +911,3 @@ mandala_legitimacy = {
 		flag = extra_reduced_swing_scales_cost
 	}
 }
-

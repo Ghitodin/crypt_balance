@@ -1,6 +1,5 @@
 ﻿namespace = ep2_wedding
 
-
 ############################
 ## Wedding Events - Maintenance
 ## 0001-0999
@@ -90,12 +89,12 @@ ep2_wedding.0001 = {
 			is_alive = yes
 			is_available_allow_travelling = yes
 			age >= 19
-			save_temporary_scope_as = spouse_1
+			save_temporary_scope_as = grand_wedding_countdown_spouse
 			betrothed = {
 				is_alive = yes
 				is_available_allow_travelling = yes
 				age >= 19
-				can_marry_character_trigger = { CHARACTER = scope:spouse_1 }
+				can_marry_character_trigger = { CHARACTER = scope:grand_wedding_countdown_spouse }
 			}
 		}
 		NOT = {
@@ -219,7 +218,6 @@ ep2_wedding.0001 = {
 	}
 }
 
-
 # A betrothed died before organizing the activity - Host
 
 ep2_wedding.0002 = {
@@ -243,7 +241,6 @@ ep2_wedding.0002 = {
 		clean_grand_wedding_betrothal_variables = yes
 	}
 }
-
 
 # Your betrothed died before organizing the activity - Other Betrothed (also if the betrothed was the host)
 
@@ -269,7 +266,6 @@ ep2_wedding.0003 = {
 		}
 	}
 }
-
 
 # ON START - CEREMONY
 
@@ -372,6 +368,8 @@ ep2_wedding.0100 = {
 		animation = dismissal
 	}
 
+	override_effect_2d = legend_glow
+
 	immediate = {
 		scope:host = { save_scope_as = host }
 		scope:activity.special_guest:spouse_1 = { save_scope_as = spouse_1 }
@@ -417,7 +415,6 @@ ep2_wedding.0100 = {
 	}
 }
 
-
 # ON END - CEREMONY
 
 # For the host (not spouse) and guests
@@ -453,16 +450,16 @@ ep2_wedding.0150 = {
 	immediate = {
 		if = {
 			limit = {
-				location.culture = { has_graphical_india_culture_group_trigger = yes }
+				location.culture ?= { has_graphical_india_culture_group_trigger = yes }
 			}
 			play_sound_effect = "event:/DLC/EP2/SFX/Stingers/Grand_Activities/ep2_mx_sting_wedding_india"
 		}
 		else_if = {
 			limit = {
 				OR = {
-					location.culture = { has_graphical_mena_culture_group_trigger = yes }
-					location.culture = { has_graphical_steppe_culture_group_trigger = yes }
-					location.culture = { has_graphical_african_culture_group_trigger = yes }
+					location.culture ?= { has_graphical_mena_culture_group_trigger = yes }
+					location.culture ?= { has_graphical_steppe_culture_group_trigger = yes }
+					location.culture ?= { has_graphical_african_culture_group_trigger = yes }
 				}
 			}
 			play_sound_effect = "event:/DLC/EP2/SFX/Stingers/Grand_Activities/ep2_mx_sting_wedding_mena"
@@ -512,7 +509,6 @@ ep2_wedding.0150 = {
 		name = ep2_wedding.0150.a
 	}
 }
-
 
 # For the spouses
 ep2_wedding.0151 = {
@@ -821,9 +817,7 @@ ep2_wedding.0151 = {
 	}
 }
 
-
-scripted_effect
- ep2_wedding_cleanup_jitter_modifier_effect = {
+scripted_effect ep2_wedding_cleanup_jitter_modifier_effect = {
 	if = {
 		limit = { has_character_modifier = wedding_confident_groom }
 		remove_character_modifier = wedding_confident_groom
@@ -837,7 +831,6 @@ scripted_effect
 		remove_character_modifier = wedding_jitters
 	}
 }
-
 
 # I DON'T: the consequences
 ep2_wedding.0152 = {
@@ -897,7 +890,6 @@ ep2_wedding.0152 = {
 	}
 }
 
-
 ep2_wedding.0153 = {
 	type = character_event
 	title = ep2_wedding.0152.t
@@ -935,7 +927,6 @@ ep2_wedding.0153 = {
 		name = ep2_wedding.0153.a
 	}
 }
-
 
 # ON START - BANQUET
 
@@ -1134,7 +1125,6 @@ ep2_wedding.0200 = {
 	}
 }
 
-
 # ON START - WEDDING NIGHT
 
 ep2_wedding.0300 = {
@@ -1247,7 +1237,6 @@ ep2_wedding.0300 = {
 	}
 }
 
-
 # INVALIDATED
 
 # For the host (not spouse) and the guests - one of the spouses died
@@ -1310,7 +1299,6 @@ ep2_wedding.0900 = {
 	}
 }
 
-
 # For the spouses - the other spouse died
 
 ep2_wedding.0910 = {
@@ -1364,7 +1352,6 @@ ep2_wedding.0910 = {
 	}
 }
 
-
 # If the host who is a spouse dies, notify the heir
 ep2_wedding.0915 = {
 	type = character_event
@@ -1398,7 +1385,6 @@ ep2_wedding.0915 = {
 		}
 	}
 }
-
 
 # A spouse has been imprisoned: for the prisoner
 ep2_wedding.0920 = {
@@ -1457,7 +1443,6 @@ ep2_wedding.0920 = {
 	}
 }
 
-
 # A spouse has been imprisoned: for everyone else
 ep2_wedding.0921 = {
 	type = character_event
@@ -1513,7 +1498,6 @@ ep2_wedding.0921 = {
 		}
 	}
 }
-
 
 # CONCLUSION - HOST
 
@@ -1577,7 +1561,6 @@ ep2_wedding.0950 = {
 	}
 }
 
-
 # CONCLUSION - SPOUSES
 
 ep2_wedding.0960 = {
@@ -1623,7 +1606,6 @@ ep2_wedding.0960 = {
 	}
 }
 
-
 # CONCLUSION - GUESTS
 
 ep2_wedding.0970 = {
@@ -1664,7 +1646,6 @@ ep2_wedding.0970 = {
 	}
 }
 
-
 # INVALIDATION - SPOUSE DISAPPEARS
 ep2_wedding.0997 = {
 	type = character_event
@@ -1696,7 +1677,6 @@ ep2_wedding.0997 = {
 		name = ep2_wedding.0998.a
 	}
 }
-
 
 # FALLBACK INVALIDATION
 ep2_wedding.0998 = {
@@ -1730,7 +1710,6 @@ ep2_wedding.0998 = {
 	}
 }
 
-
 # INVALIDATION - HOST TIER TOO LOW
 ep2_wedding.0999 = {
 	type = character_event
@@ -1751,7 +1730,6 @@ ep2_wedding.0999 = {
 	}
 }
 
-
 # CEREMONY EVENTS
 
 ##################################################
@@ -1762,8 +1740,7 @@ ep2_wedding.0999 = {
 
 # The other party arrives early and criticizes your chosen options.
 
-scripted_trigger
- ep2_wedding_1000_valid_relative_trigger = {
+scripted_trigger ep2_wedding_1000_valid_relative_trigger = {
 	is_alive = yes
 	is_ai = yes
 	is_participant_in_activity = scope:activity
@@ -1771,7 +1748,6 @@ scripted_trigger
 	location = root.location
 	NOT = { has_character_flag = busy_in_wgathering_event }
 }
-
 
 ep2_wedding.1000 = {
 	type = activity_event
@@ -2080,7 +2056,6 @@ ep2_wedding.1000 = {
 	}
 }
 
-
 ##################################################
 # A Magnificent Welcome
 # by Claudia Baldassi
@@ -2191,7 +2166,7 @@ ep2_wedding.1010 = {
 			60 = {
 				modifier = {
 					scope:activity.activity_location.county = {
-						development_level >= medium_development_level
+						prosperity_level >= medium_prosperity_level
 					}
 					add = 15
 				}
@@ -2208,12 +2183,6 @@ ep2_wedding.1010 = {
 						type = court_gardener_court_position
 					}
 					add = 40
-				}
-				modifier = {
-					scope:activity.activity_location = {
-						has_building_or_higher = orchards_01
-					}
-					add = 20
 				}
 				modifier = {
 					scope:activity.activity_location = {
@@ -2274,7 +2243,7 @@ ep2_wedding.1010 = {
 				}
 				modifier = {
 					scope:activity.activity_location.county = {
-						development_level <= bad_development_level
+						prosperity_level <= bad_prosperity_level
 					}
 					add = 30
 				}
@@ -2313,7 +2282,7 @@ ep2_wedding.1010 = {
 			base = 100
 			modifier = {
 				scope:activity.activity_location.county = {
-					development_level >= medium_development_level
+					prosperity_level >= medium_prosperity_level
 				}
 				add = 15
 			}
@@ -2330,12 +2299,6 @@ ep2_wedding.1010 = {
 					type = court_gardener_court_position
 				}
 				add = 40
-			}
-			modifier = {
-				scope:activity.activity_location = {
-					has_building_or_higher = orchards_01
-				}
-				add = 20
 			}
 			modifier = {
 				scope:activity.activity_location = {
@@ -2542,7 +2505,6 @@ ep2_wedding.1010 = {
 		}
 	}
 }
-
 
 ##################################################
 # A Proper Match
@@ -2886,7 +2848,6 @@ ep2_wedding.1080 = {
 		}
 	}
 }
-
 
 ##################################################
 # A Ritual Wash
@@ -3394,7 +3355,6 @@ ep2_wedding.1100 = {
 	}
 }
 
-
 # CEREMONY EVENTS
 
 ##################################################
@@ -3551,7 +3511,6 @@ ep2_wedding.1020 = {
 		scope:spouse_2 = { remove_character_flag = busy_in_ceremony_event }
 	}
 }
-
 
 ##################################################
 # A Good/Bad Omen
@@ -3877,7 +3836,6 @@ ep2_wedding.1030 = {
 	}
 }
 
-
 ##################################################
 # New Family
 # by Claudia Baldassi
@@ -3886,8 +3844,7 @@ ep2_wedding.1030 = {
 
 # Spouse: your child from a previous partner makes a fuss
 
-scripted_trigger
- ep2_wedding_1120_valid_child_trigger = {
+scripted_trigger ep2_wedding_1120_valid_child_trigger = {
 	NOR = {
 		has_trait = child_of_concubine_female
 		has_trait = child_of_concubine_male
@@ -3909,7 +3866,6 @@ scripted_trigger
 	involved_activity ?= { this = scope:activity }
 	save_temporary_scope_as = trouble_child
 }
-
 
 ep2_wedding.1120 = {
 	type = activity_event
@@ -4313,12 +4269,11 @@ ep2_wedding.1120 = {
 	}
 }
 
-
 # Opposite event: it is your spouse who has a complaining child
 
-scripted_trigger
- ep2_wedding_1121_valid_child_trigger = {
-	NOT = {
+scripted_trigger ep2_wedding_1121_valid_child_trigger = {
+	NOR = {
+		this = root
 		any_parent = { this = root }
 	}
 	any_parent = {
@@ -4335,7 +4290,6 @@ scripted_trigger
 	involved_activity ?= scope:activity
 	save_temporary_scope_as = trouble_child
 }
-
 
 ep2_wedding.1121 = {
 	type = activity_event
@@ -4694,7 +4648,6 @@ ep2_wedding.1121 = {
 	}
 }
 
-
 # Follow-up to 1120. NB this is a Banquet Event.
 # You talk with the child who revealed your secret.
 
@@ -5039,7 +4992,6 @@ ep2_wedding.1122 = {
 	}
 }
 
-
 ##################################################
 # Secret Whispers
 # by Claudia Baldassi
@@ -5182,9 +5134,9 @@ ep2_wedding.1130 = {
 						limit = {
 							can_set_relation_nemesis_trigger = { CHARACTER = scope:1130_knows }
 						}
-						set_relation_nemesis = {
-							target = scope:1130_knows
-							reason = nemesis_wedding_spread_voices_secret
+						set_relation_nemesis_effect = {
+							TARGET = scope:1130_knows
+							REASON = nemesis_wedding_spread_voices_secret
 						}
 					}
 				}
@@ -5239,9 +5191,9 @@ ep2_wedding.1130 = {
 						limit = {
 							can_set_relation_rival_trigger = { CHARACTER = scope:1130_knows }
 						}
-						set_relation_rival = {
-							target = scope:1130_knows
-							reason = rival_wedding_spread_voices
+						set_relation_rival_effect = {
+						    TARGET = scope:1130_knows
+						    REASON = rival_wedding_spread_voices
 						}
 					}
 					add_dread = major_dread_gain
@@ -5277,7 +5229,6 @@ ep2_wedding.1130 = {
 		}
 	}
 }
-
 
 # The secret is your partner's.
 
@@ -5508,7 +5459,6 @@ ep2_wedding.1131 = {
 	}
 }
 
-
 # You know a secret about a spouse.
 
 ep2_wedding.1132 = {
@@ -5694,7 +5644,6 @@ ep2_wedding.1132 = {
 		}
 	}
 }
-
 
 ##################################################
 # A Misstep
@@ -6071,7 +6020,6 @@ ep2_wedding.1140 = {
 	}
 }
 
-
 ##################################################
 # Romantic Scouting
 # by Claudia Baldassi
@@ -6422,7 +6370,6 @@ ep2_wedding.1150 = {
 	}
 }
 
-
 ##################################################
 # Gatecrashers
 # by Claudia Baldassi
@@ -6571,7 +6518,6 @@ ep2_wedding.1160 = {
 		remove_character_flag = busy_in_ceremony_event
 	}
 }
-
 
 # Follow-up for the host
 
@@ -6762,7 +6708,6 @@ ep2_wedding.1161 = {
 	}
 }
 
-
 ##################################################
 # The Parade
 # by Claudia Baldassi
@@ -6904,7 +6849,7 @@ ep2_wedding.1170 = {
 	option = {
 		name = ep2_wedding.1170.a
 		flavor = ep2_wedding.1170.a.tt
-		add_gold = minor_gold_value
+		add_gold = tiny_gold_value
 		stress_and_fulfillment_impact = {
 			greedy = medium_stress_impact_loss
 			generous = medium_stress_impact_gain
@@ -7065,7 +7010,6 @@ ep2_wedding.1170 = {
 	}
 }
 
-
 ##################################################
 # A Bad Match
 # by Claudia Baldassi
@@ -7075,28 +7019,20 @@ ep2_wedding.1170 = {
 # Your spouse doesn't really like you...
 
 ep2_wedding.1180 = {
-
 	type = activity_event
-
 	title = ep2_wedding.1180.t
-
 	desc = ep2_wedding.1180.desc
-
 	theme = wedding_ceremony_activity
-
 	left_portrait = {
 		character = root
 		animation = anger
 	}
-
 	right_portrait = {
 		character = scope:other_spouse
 		animation = disgust
 	}
 
-
 	cooldown = { years = 1 }
-
 
 	trigger = {
 		#DLC check.
@@ -7127,7 +7063,6 @@ ep2_wedding.1180 = {
 	}
 
 
-
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -7140,7 +7075,6 @@ ep2_wedding.1180 = {
 		}
 	}
 
-
 	immediate = {
 		add_character_flag = busy_in_ceremony_event
 		betrothed = {
@@ -7149,7 +7083,6 @@ ep2_wedding.1180 = {
 		}
 		scope:activity = { set_variable = has_had_event_1180 }
 	}
-
 
 	# Option A: it doesn't matter
 	option = {
@@ -7183,7 +7116,6 @@ ep2_wedding.1180 = {
 			}
 		}
 	}
-
 
 	# Option B: I'll make you like me!
 	option = {
@@ -7254,18 +7186,13 @@ ep2_wedding.1180 = {
 		}
 	}
 
-
 	# Option C: don't care!
 	option = {
-
 		name = ep2_wedding.1180.c
-
 		trigger = {
 			has_activity_intent = reduce_stress_intent
 		}
-
 		reason = activity_intent
-
 		scope:other_spouse = {
 			add_opinion = {
 				target = root
@@ -7273,31 +7200,19 @@ ep2_wedding.1180 = {
 				opinion = -10
 			}
 		}
-
 		stress_and_fulfillment_impact = {
-
-			base = medium_stress_impact_loss # THE MOD
-
-
-		
-}
-
+			base = medium_stress_impact_loss
+		}
 		ai_chance = {
 			base = 150
 		}
-
-	
-}
-
+	}
 
 	after = {
 		remove_character_flag = busy_in_ceremony_event
 		scope:other_spouse = { remove_character_flag = busy_in_ceremony_event }
 	}
-
-
 }
-
 
 ##################################################
 # Religious Complaints
@@ -7308,28 +7223,20 @@ ep2_wedding.1180 = {
 # Religious guest complains about lavishness, luxury, wastes, and unchaste mingling
 
 ep2_wedding.1190 = {
-
 	type = activity_event
-
 	title = ep2_wedding.1190.t
-
 	desc = ep2_wedding.1190.desc
-
 	theme = wedding_ceremony_activity
-
 	left_portrait = {
 		character = root
 		animation = dismissal
 	}
-
 	right_portrait = {
 		character = scope:grumbler
 		animation = personality_zealous
 	}
 
-
 	cooldown = { years = 1 }
-
 
 	trigger = {
 		#DLC check.
@@ -7364,11 +7271,9 @@ ep2_wedding.1190 = {
 		}
 	}
 
-
 	weight_multiplier = {
 		base = 1
 	}
-
 
 	immediate = {
 		add_character_flag = busy_in_ceremony_event
@@ -7439,7 +7344,6 @@ ep2_wedding.1190 = {
 		}
 	}
 
-
 	# Option A: repent
 	option = {
 		name = ep2_wedding.1190.a
@@ -7499,7 +7403,6 @@ ep2_wedding.1190 = {
 		}
 	}
 
-
 	# Option B: kick them out
 	option = {
 		name = ep2_wedding.1190.b
@@ -7508,11 +7411,11 @@ ep2_wedding.1190 = {
 		}
 		scope:grumbler = {
 			remove_from_activity = scope:activity
-		}
-		progress_towards_rival_effect = {
-			CHARACTER = scope:grumbler
-			REASON = rival_kicked_out_priest
-			OPINION = default_rival_opinion
+			progress_towards_rival_effect = {
+				CHARACTER = root
+				REASON = rival_kicked_out_priest
+				OPINION = default_rival_opinion
+			}
 		}
 		stress_and_fulfillment_impact = {
 			zealous = major_stress_impact_gain
@@ -7543,7 +7446,6 @@ ep2_wedding.1190 = {
 		}
 	}
 
-
 	# Option C: ignore
 	option = {
 		name = ep2_wedding.1190.c
@@ -7567,12 +7469,9 @@ ep2_wedding.1190 = {
 		}
 	}
 
-
 	# Option D: yes, and I will enjoy it too!
 	option = {
-
 		name = ep2_wedding.1190.d
-
 		trigger = {
 			OR = {
 				has_activity_intent = reduce_stress_intent
@@ -7580,9 +7479,7 @@ ep2_wedding.1190 = {
 				has_activity_intent = banquet_mischief_intent
 			}
 		}
-
 		reason = activity_intent
-
 		scope:grumbler = {
 			add_opinion = {
 				target = root
@@ -7590,7 +7487,6 @@ ep2_wedding.1190 = {
 				opinion = -20
 			}
 		}
-
 		if = {
 			limit = {
 				has_activity_intent = woo_attendee_intent
@@ -7609,31 +7505,19 @@ ep2_wedding.1190 = {
 				}
 			}
 		}
-
 		stress_and_fulfillment_impact = {
-
-			base = minor_stress_impact_loss # THE MOD
-
-
-		
-}
-
+			base = minor_stress_impact_loss
+		}
 		ai_chance = {
 			base = 200
 		}
-
-	
-}
-
+	}
 
 	after = {
 		remove_character_flag = busy_in_ceremony_event
 		scope:grumbler = { remove_character_flag = busy_in_ceremony_event }
 	}
-
-
 }
-
 
 ##################################################
 # A Parent's Heart
@@ -7904,9 +7788,9 @@ ep2_wedding.1200 = {
 				has_relation_rival = scope:listener
 				num_of_relation_nemesis = 0
 			}
-			set_relation_nemesis = {
-				target = scope:listener
-				reason = rival_rubbed_it_in
+			set_relation_nemesis_effect = {
+				TARGET = scope:listener
+				REASON = rival_rubbed_it_in
 			}
 		}
 		else = {
@@ -8222,7 +8106,6 @@ ep2_wedding.1200 = {
 		scope:listener = { remove_character_flag = busy_in_ceremony_event }
 	}
 }
-
 
 ##################################################
 # Political Talk
@@ -8674,7 +8557,6 @@ ep2_wedding.1210 = {
 	}
 }
 
-
 ##################################################
 # Poisonous Relations
 # by Claudia Baldassi
@@ -8683,8 +8565,7 @@ ep2_wedding.1210 = {
 
 # In-laws are bullies (or other close relatives)
 
-scripted_trigger
- wedding_1220_valid_relative_trigger = {
+scripted_trigger wedding_1220_valid_relative_trigger = {
 	is_ai = yes
 	is_adult = yes
 	is_close_family_of = $RELATIVE_SPOUSE$
@@ -8726,7 +8607,6 @@ scripted_trigger
 		}
 	}
 }
-
 
 ep2_wedding.1220 = {
 	type = activity_event
@@ -9108,7 +8988,6 @@ ep2_wedding.1220 = {
 
 
 
-
 # BANQUET EVENTS
 
 ##################################################
@@ -9258,7 +9137,6 @@ ep2_wedding.1040 = {
 	}
 }
 
-
 ##################################################
 # A Fiery Dance
 # by Claudia Baldassi
@@ -9267,8 +9145,7 @@ ep2_wedding.1040 = {
 
 # Someone catches fire from the torches
 
-scripted_trigger
- ep2_wedding_extra_victim_valid_trigger = {
+scripted_trigger ep2_wedding_extra_victim_valid_trigger = {
 	is_ai = yes
 	is_adult = yes
 	NOR = {
@@ -9277,7 +9154,6 @@ scripted_trigger
 	}
 	NOT = { has_character_flag = busy_in_banquet_event }
 }
-
 
 ep2_wedding.1050 = {
 	type = activity_event
@@ -9732,7 +9608,6 @@ ep2_wedding.1050 = {
 		}
 	}
 }
-
 
 ##################################################
 # An Exotic Show
@@ -10853,7 +10728,6 @@ ep2_wedding.1070 = {
 	}
 }
 
-
 ##################################################
 # A Match Made In... ?
 # by Claudia Baldassi
@@ -10862,8 +10736,7 @@ ep2_wedding.1070 = {
 
 # Matchmaking Intent: push a couple together
 
-scripted_trigger
- ep2_wedding_1090_good_match_trigger = {
+scripted_trigger ep2_wedding_1090_good_match_trigger = {
 	is_ai = yes
 	location = root.location
 	can_marry_character_trigger = { CHARACTER = root.intent_target }
@@ -10883,7 +10756,6 @@ scripted_trigger
 		age < marriage_female_fertility_cutoff_age_value
 	}
 }
-
 
 ep2_wedding.1090 = {
 	type = activity_event
@@ -11098,7 +10970,6 @@ ep2_wedding.1090 = {
 	}
 }
 
-
 # WEDDING NIGHT EVENTS
 
 ##################################################
@@ -11288,7 +11159,6 @@ ep2_wedding.1060 = {
 		}
 	}
 }
-
 
 # Follow up event: you have emptied the room except for a bare table - spouse reaction
 
@@ -11581,7 +11451,6 @@ ep2_wedding.1061 = {
 	}
 }
 
-
 # Inverted event: it's you who have problems - spouse's reaction
 
 ep2_wedding.1065 = {
@@ -11818,7 +11687,6 @@ ep2_wedding.1065 = {
 		}
 	}
 }
-
 
 # Follow up event: your spouse has emptied the room except for a bare table
 
@@ -12078,7 +11946,6 @@ ep2_wedding.1066 = {
 	}
 }
 
-
 ##################################################
 # One More Goblet
 # by Claudia Baldassi
@@ -12087,8 +11954,7 @@ ep2_wedding.1066 = {
 
 # Non-spouses: someone gets extremely drunk/doesn't want to leave
 
-scripted_trigger
- ep2_wedding_1110_valid_drunk_trigger = {
+scripted_trigger ep2_wedding_1110_valid_drunk_trigger = {
 	is_adult = yes
 	is_ai = yes
 	NOR = {
@@ -12099,7 +11965,6 @@ scripted_trigger
 	}
 	drinks_alcohol_trigger = yes
 }
-
 
 ep2_wedding.1110 = {
 	type = activity_event
@@ -12374,7 +12239,6 @@ ep2_wedding.1110 = {
 	}
 }
 
-
 ##################################################
 # One More Goblet
 # by Claudia Baldassi
@@ -12383,8 +12247,7 @@ ep2_wedding.1110 = {
 
 # Non-spouses: you get extremely drunk/don't want to leave
 
-scripted_trigger
- ep2_wedding_1111_valid_drunk_trigger = {
+scripted_trigger ep2_wedding_1111_valid_drunk_trigger = {
 	is_adult = yes
 	NOR = {
 		this = scope:activity.special_guest:spouse_1
@@ -12393,7 +12256,6 @@ scripted_trigger
 	}
 	drinks_alcohol_trigger = yes
 }
-
 
 ep2_wedding.1111 = {
 	type = activity_event
@@ -12738,15 +12600,13 @@ ep2_wedding.1111 = {
 }
 
 
-
 ##################################################
 # Why Would You Marry Someone Like Me?
 # by Luke Bean
 # ep2_wedding.1300
 ##################################################
 
-scripted_trigger
- ep2_wedding_1300_appearance_insecurity_trigger = {
+scripted_trigger ep2_wedding_1300_appearance_insecurity_trigger = {
 	OR = {
 		AND = {
 			is_female = yes
@@ -12768,16 +12628,13 @@ scripted_trigger
 	}
 }
 
-
-scripted_trigger
- ep2_wedding_1300_voice_insecurity_trigger = {
+scripted_trigger ep2_wedding_1300_voice_insecurity_trigger = {
 	OR = {
 		has_trait = lisping
 		has_trait = stuttering
 		has_trait = wheezing
 	}
 }
-
 
 ep2_wedding.1300 = {
 	type = activity_event
@@ -13458,7 +13315,6 @@ ep2_wedding.1300 = {
 	}
 }
 
-
 ep2_wedding.1301 = { #Spouse response
 	type = activity_event
 	title = ep2_wedding.1301.t
@@ -13817,15 +13673,13 @@ ep2_wedding.1301 = { #Spouse response
 
 
 
-
 ##################################################
 # A Friend Is Monopolizing Your Attention
 # by Luke Bean
 # ep2_wedding.1310
 ##################################################
 
-scripted_trigger
- ep2_wedding_1310_wedding_friend_trigger = {
+scripted_trigger ep2_wedding_1310_wedding_friend_trigger = {
 	any_relation = { type = friend this = root }
 	is_adult = yes
 	is_ai = yes
@@ -13840,7 +13694,6 @@ scripted_trigger
 		}
 	}
 }
-
 
 ep2_wedding.1310 = {
 	type = activity_event
@@ -14318,9 +14171,9 @@ ep2_wedding.1310 = {
 									scope:friend = { can_set_relation_rival_trigger = { CHARACTER = scope:other_guest } }
 								}
 								scope:friend = {
-									set_relation_rival = {
-										target = scope:other_guest
-										reason = rival_bad_time_at_wedding
+									set_relation_rival_effect = {
+									    TARGET = scope:other_guest
+									    REASON = rival_bad_time_at_wedding
 									}
 								}
 							}
@@ -14448,15 +14301,13 @@ ep2_wedding.1310 = {
 	}
 }
 
-
 ######################################
 # A Rival Seeks Forgiveness 
 # by Luke Bean
 # ep2_wedding.1320
 ######################################
 
-scripted_trigger
- ep2_wedding_1320_forgiving_rival_trigger = {
+scripted_trigger ep2_wedding_1320_forgiving_rival_trigger = {
 	is_adult = yes
 	is_ai = yes
 	any_relation = { type = rival this = root }
@@ -14490,7 +14341,6 @@ scripted_trigger
 		}
 	}
 }
-
 
 ep2_wedding.1320 = {
 	type = activity_event
@@ -14816,19 +14666,28 @@ ep2_wedding.1320 = {
 				send_interface_toast = {
 					title = ep2_wedding.1310.b.wound
 					left_icon = scope:rival
-					scope:rival = { increase_wounds_effect = { REASON = fight } }
-					set_relation_nemesis = { reason = nemesis_spurned_reconciliation_at_wedding target = scope:rival }
+					scope:rival = { 
+						increase_wounds_effect = { REASON = fight }
+					}
+					set_relation_nemesis_effect = {
+						TARGET = scope:rival
+						REASON = nemesis_spurned_reconciliation_at_wedding
+					}
 				}
 			}
 			30 = {
 				desc = ep2_wedding.1310.b.wound
 				trigger = {
-					NOT = { can_set_relation_nemesis_trigger = { CHARACTER = scope:rival } }
+					NOT = { 
+						can_set_relation_nemesis_trigger = { CHARACTER = scope:rival }
+					}
 				}
 				send_interface_toast = {
 					title = ep2_wedding.1310.b.wound
 					left_icon = scope:rival
-					scope:rival = { increase_wounds_effect = { REASON = fight } }
+					scope:rival = { 
+						increase_wounds_effect = { REASON = fight }
+					}
 				}
 			}
 		}
@@ -15010,15 +14869,13 @@ ep2_wedding.1320 = {
 	}
 }
 
-
 ##############################################
 # We Were Lovers Before The Wedding 
 # by Luke Bean
 # ep2_wedding.1330
 ##############################################
 
-scripted_trigger
- ep2_wedding_1330_doubts_own_fidelity_trigger = {
+scripted_trigger ep2_wedding_1330_doubts_own_fidelity_trigger = {
 	OR = {
 		has_trait = lustful
 		has_trait = seducer
@@ -15029,7 +14886,6 @@ scripted_trigger
 		}
 	}
 }
-
 
 ep2_wedding.1330 = {
 	type = activity_event
@@ -15527,15 +15383,13 @@ ep2_wedding.1330 = {
 	}
 }
 
-
 ##################################################
 # Condolences On Your Wedding
 # by Luke Bean
 # ep2_wedding.1340
 ##################################################
 
-scripted_trigger
- ep2_wedding_1340_marriage_cynic_trigger = {
+scripted_trigger ep2_wedding_1340_marriage_cynic_trigger = {
 	this != scope:host
 	is_ai = yes 
 	OR = {
@@ -15558,9 +15412,7 @@ scripted_trigger
 	}
 }
 
-
-scripted_trigger
- ep2_wedding_1340_unusual_hobbies_trigger = {
+scripted_trigger ep2_wedding_1340_unusual_hobbies_trigger = {
 	OR = {
 		AND = {
 			has_trait = lustful
@@ -15578,9 +15430,7 @@ scripted_trigger
 	}
 }
 
-
-scripted_effect
- ep2_wedding_1340_add_confidence = {
+scripted_effect ep2_wedding_1340_add_confidence = {
 	if = {
 		limit = {
 			this = { is_female = yes }
@@ -15589,7 +15439,6 @@ scripted_effect
 	}
 	else = { add_character_modifier = wedding_confident_groom }
 }
-
 
 ep2_wedding.1340 = {
 	type = activity_event
@@ -16140,15 +15989,13 @@ ep2_wedding.1340 = {
 	}
 }
 
-
 ##################################################
 # Lost For Words
 # by Luke Bean
 # ep2_wedding.1350
 ##################################################
 
-scripted_trigger
- ep2_wedding_1350_caring_relative_trigger = {
+scripted_trigger ep2_wedding_1350_caring_relative_trigger = {
 	is_ai = yes
 	is_close_family_of = root
 	NOR = {
@@ -16163,7 +16010,6 @@ scripted_trigger
 		value >= 40
 	}
 }
-
 
 ep2_wedding.1350 = {
 	type = activity_event
@@ -16271,7 +16117,6 @@ ep2_wedding.1350 = {
 	}
 }
 
-
 ############################
 ## Wedding Banquet Events
 ## 2000-2999
@@ -16280,8 +16125,7 @@ ep2_wedding.1350 = {
 
 # Diplomatic Intent: You ask a friend of your target's for info about them
 
-scripted_trigger
- ep2_wedding_2000_valid_friend = {
+scripted_trigger ep2_wedding_2000_valid_friend = {
 	feast_default_adult_participant_trigger = yes
 	drinks_alcohol_trigger = yes
 	OR = { #they know the person
@@ -16292,9 +16136,7 @@ scripted_trigger
 	NOT = { is_close_family_of = root }
 }
 
-
-scripted_trigger
- ep2_wedding_2000_is_valiant = {
+scripted_trigger ep2_wedding_2000_is_valiant = {
 	OR = {
 		has_lifestyle = martial_lifestyle
 		prowess >= high_skill_rating
@@ -16310,9 +16152,7 @@ scripted_trigger
 	}
 }
 
-
-scripted_trigger
- ep2_wedding_2000_is_nerd = {
+scripted_trigger ep2_wedding_2000_is_nerd = {
 	OR = {
 		has_lifestyle = learning_lifestyle
 		learning >= high_skill_rating
@@ -16323,9 +16163,7 @@ scripted_trigger
 	}
 }
 
-
-scripted_trigger
- ep2_wedding_2000_is_social = {
+scripted_trigger ep2_wedding_2000_is_social = {
 	OR = {
 		has_lifestyle = diplomacy_lifestyle
 		diplomacy >= high_skill_rating
@@ -16339,9 +16177,7 @@ scripted_trigger
 	}
 }
 
-
-scripted_trigger
- ep2_wedding_2000_is_fishy = {
+scripted_trigger ep2_wedding_2000_is_fishy = {
 	OR = {
 		has_lifestyle = intrigue_lifestyle
 		intrigue >= high_skill_rating
@@ -16358,9 +16194,7 @@ scripted_trigger
 	}
 }
 
-
-scripted_trigger
- ep2_wedding_2000_is_lustful = {
+scripted_trigger ep2_wedding_2000_is_lustful = {
 	OR = {
 		has_trait = lustful
 		has_trait = seducer
@@ -16371,7 +16205,6 @@ scripted_trigger
 		has_trait = deviant
 	}
 }
-
 
 ep2_wedding.2000 = {
 	type = activity_event
@@ -16640,7 +16473,6 @@ ep2_wedding.2000 = {
 	}		
 }
 
-
 ep2_wedding.2001 = {
 	type = activity_event
 	title = ep2_wedding.2001.t
@@ -16867,7 +16699,6 @@ ep2_wedding.2001 = {
 	}
 }
 
-
 ############################
 ## Wedding Night Events
 ## 3000-3999
@@ -16876,8 +16707,7 @@ ep2_wedding.2001 = {
 
 # Both spouses are shy/nervous and bond over something else
 
-scripted_trigger
- ep2_wedding.is_valid_shy = {
+scripted_trigger ep2_wedding.is_valid_shy = {
 	OR = {
 		AND = {
 			age <= 19 #they're young
@@ -16891,7 +16721,6 @@ scripted_trigger
 		has_trait = chaste
 	}
 }
-
 
 ep2_wedding.3000 = {
 	type = activity_event
@@ -17235,7 +17064,6 @@ ep2_wedding.3000 = {
 		}
 	}
 }
-
 
 # Spouse with a secret has a breakdown and confesses their secret
 
@@ -17594,11 +17422,9 @@ ep2_wedding.3010 = {
 	}
 }
 
-
 # You find out that your spouse fancies the other gender
 
-scripted_effect
- ep2_wedding.3020.reveal_secret_effect = {
+scripted_effect ep2_wedding.3020.reveal_secret_effect = {
 	if = {
 		limit = {
 			scope:my_spouse = {
@@ -17619,7 +17445,6 @@ scripted_effect
 		}
 	}
 }
-
 
 ep2_wedding.3020 = {
 	type = activity_event
@@ -17794,7 +17619,6 @@ ep2_wedding.3020 = {
 		}
 	}
 }
-
 
 # Spouse gives you a cute memento to remember this night
 
@@ -18137,7 +17961,6 @@ ep2_wedding.3030 = {
 		}
 	}
 }
-
 
 # Your spouse and you are having a nice time when the bed catches fire
 
@@ -18516,7 +18339,6 @@ ep2_wedding.3040 = {
 	}
 }
 
-
 # Non-spouse: Use the Wedding Night phase where almost no one is around to kill your target 
 # episode 1: CHANDELIER EXTRAVAGANZA
 
@@ -18740,11 +18562,9 @@ ep2_wedding.3050 = {
 	}	
 }
 
-
 # Either you or spouse doesn't want to take part in bedding ceremony
 
-scripted_trigger
- ep2_wedding_3200_is_shy_trigger = {
+scripted_trigger ep2_wedding_3200_is_shy_trigger = {
 	OR = {
 		has_trait = shy
 		has_trait = reclusive
@@ -18754,9 +18574,7 @@ scripted_trigger
 	NOT = { has_trait = gregarious }
 }
 
-
-scripted_trigger
- ep2_wedding_bedding_ceremony_witness_trigger = {
+scripted_trigger ep2_wedding_bedding_ceremony_witness_trigger = {
 	is_adult = yes
 	NOR = {
 		this = root
@@ -18775,9 +18593,7 @@ scripted_trigger
 	}
 }
 
-
-scripted_effect
- ep2_wedding_bedding_ceremony_witness_effect = {
+scripted_effect ep2_wedding_bedding_ceremony_witness_effect = {
 	hidden_effect = {
 		while = {
 			count = 3
@@ -18823,7 +18639,6 @@ scripted_effect
 		}
 	}
 }
-
 
 ep2_wedding.3200 = {
 	type = activity_event
@@ -19287,16 +19102,13 @@ ep2_wedding.3200 = {
 	}
 }
 
-
-scripted_trigger
- wedding_3300_flavor_character_trigger = {
+scripted_trigger wedding_3300_flavor_character_trigger = {
 	is_participant_in_activity = scope:activity
 	NOR = {
 		this = scope:my_spouse
 		this = root
 	}
 }
-
 
 ep2_wedding.3300 = {
 	type = activity_event
@@ -20075,9 +19887,7 @@ ep2_wedding.3300 = {
 	}
 }
 
-
-scripted_trigger
- wedding_3400_shared_trigger = {
+scripted_trigger wedding_3400_shared_trigger = {
 	is_adult = yes
 	is_participant_in_activity = scope:activity
 	NOR = {
@@ -20097,9 +19907,7 @@ scripted_trigger
 	}
 }
 
-
-scripted_trigger
- wedding_3400_suitor_trigger = {
+scripted_trigger wedding_3400_suitor_trigger = {
 	age < 50
 	is_participant_in_activity = scope:activity
 	is_attracted_to_gender_of = $SUITOR$
@@ -20123,9 +19931,7 @@ scripted_trigger
 	}
 }
 
-
-scripted_effect
- wedding_3400_save_relative_effect = {
+scripted_effect wedding_3400_save_relative_effect = {
 	save_scope_as = other_family_spouse
 	random_close_or_extended_family_member = {
 		limit = {
@@ -20155,9 +19961,7 @@ scripted_effect
 	}
 }
 
-
-scripted_effect
- wedding_3400_knowledge_effect = {
+scripted_effect wedding_3400_knowledge_effect = {
 	random_list = {
 		0 = {
 			trigger = { diplomacy < $OTHER$.diplomacy }
@@ -20186,7 +19990,6 @@ scripted_effect
 		}
 	}
 }
-
 
 ep2_wedding.3400 = {
 	type = activity_event
@@ -20679,7 +20482,6 @@ ep2_wedding.3400 = {
 	}
 }
 
-
 ep2_wedding.3410 = {
 	type = activity_event
 	title = ep2_wedding.3410.t
@@ -20826,6 +20628,7 @@ ep2_wedding.3410 = {
 						opinion_target = scope:activity.special_guest:spouse_1
 						multiplier = 1
 					}
+					min = 1
 					scope:activity.special_guest:spouse_1 = { save_scope_as = jealousy_focus }
 					scope:activity.special_guest:spouse_2 = { save_scope_as = jealousy_usurper }
 				}
@@ -20844,6 +20647,7 @@ ep2_wedding.3410 = {
 						opinion_target = scope:activity.special_guest:spouse_2
 						multiplier = 1
 					}
+					min = 1
 					scope:activity.special_guest:spouse_2 = { save_scope_as = jealousy_focus }
 					scope:activity.special_guest:spouse_1 = { save_scope_as = jealousy_usurper }
 				}
@@ -21040,7 +20844,6 @@ ep2_wedding.3410 = {
 		}
 	}
 }
-
 
 ep2_wedding.3420 = {
 	type = activity_event
@@ -22207,9 +22010,7 @@ ep2_wedding.3420 = {
 	}
 }
 
-
-scripted_trigger
- wedding_3500_shared_trigger = {
+scripted_trigger wedding_3500_shared_trigger = {
 	is_adult = yes
 	is_participant_in_activity = scope:activity
 	NOR = {
@@ -22222,17 +22023,13 @@ scripted_trigger
 	}
 }
 
-
-scripted_trigger
- wedding_3500_same_relation_spouse_trigger = {
+scripted_trigger wedding_3500_same_relation_spouse_trigger = {
 	is_$RELATION$_of = scope:my_family_spouse
 	scope:my_family_relative_1 = { is_$RELATION$_of = scope:my_family_spouse }
 	scope:my_family_relative_2 = { is_$RELATION$_of = scope:my_family_spouse }
 }
 
-
-scripted_trigger
- ep2_wedding_3500_relations_spouse_shared_trigger = {
+scripted_trigger ep2_wedding_3500_relations_spouse_shared_trigger = {
 	OR = {
 		wedding_3500_same_relation_spouse_trigger = { RELATION = great_grandchild }
 		wedding_3500_same_relation_spouse_trigger = { RELATION = grandchild }
@@ -22246,16 +22043,12 @@ scripted_trigger
 	}
 }
 
-
-scripted_trigger
- ep2_wedding_3500_same_relation_root_trigger = {
+scripted_trigger ep2_wedding_3500_same_relation_root_trigger = {
 	scope:my_family_relative_1 = { is_$RELATION$_of = root }
 	scope:my_family_relative_2 = { is_$RELATION$_of = root }
 }
 
-
-scripted_trigger
- ep2_wedding_3500_relations_root_shared_trigger = {
+scripted_trigger ep2_wedding_3500_relations_root_shared_trigger = {
 	OR = {
 		ep2_wedding_3500_same_relation_root_trigger = { RELATION = great_grandchild }
 		ep2_wedding_3500_same_relation_root_trigger = { RELATION = grandchild }
@@ -22269,9 +22062,7 @@ scripted_trigger
 	}
 }
 
-
-scripted_effect
- wedding_3500_save_family_effect = {
+scripted_effect wedding_3500_save_family_effect = {
 	scope:activity.special_guest:$SPOUSE$ = { save_scope_as = my_family_spouse }
 	if = {
 		limit = { scope:my_family_spouse = scope:activity.special_guest:spouse_1 }
@@ -22325,9 +22116,7 @@ scripted_effect
 	}
 }
 
-
-scripted_trigger
- ep2_wedding_3500_active_bedroom_trigger = {
+scripted_trigger ep2_wedding_3500_active_bedroom_trigger = {
 	scope:my_family_spouse = {
 		is_eunuch_trigger = no
 		NOT = { has_trait = celibate }
@@ -22338,9 +22127,7 @@ scripted_trigger
 	}
 }
 
-
-scripted_trigger
- ep2_wedding_3500_dislikes_fornicators_trigger = {
+scripted_trigger ep2_wedding_3500_dislikes_fornicators_trigger = {
 	scope:other_family_spouse = {
 		OR = {
 			has_trait = fornicator
@@ -22367,7 +22154,6 @@ scripted_trigger
 		}
 	}
 }
-
 
 ep2_wedding.3500 = {
 	type = activity_event
@@ -22837,15 +22623,13 @@ ep2_wedding.3500 = {
 	}
 }
 
-
 ############################
 ## Wedding Ceremony Events
 ## 4000-4999
 ## by Veronica Pazos
 ############################
 
-scripted_trigger
- ep2_wedding_4000_valid_betrothed = {
+scripted_trigger ep2_wedding_4000_valid_betrothed = {
 	feast_default_adult_participant_trigger = yes #includes is_ai = yes
 	can_marry_character_trigger = { CHARACTER = root.intent_target }
 	NOR = {
@@ -22853,7 +22637,6 @@ scripted_trigger
 		age > root.intent_target.age_plus_10
 	}
 }
-
 
 # Non-spouse: Matchmaking Intent - This wedding is so cool, you guys should also get married
 
@@ -23099,11 +22882,9 @@ ep2_wedding.4000 = {
 	}
 }
 
-
 # Host: Gain Renown Intent - Bring a white animal to the Banquet to flex (it's painted)
 
-scripted_trigger
- ep2_wedding_2010_impressed = {
+scripted_trigger ep2_wedding_2010_impressed = {
 	OR = { #what kind of people would be impressed by a legendary animal?
 		has_trait = gregarious
 		has_trait = brave 
@@ -23113,7 +22894,6 @@ scripted_trigger
 		has_trait = gallant #white animals were a pretty chivalrous thing to find/hunt
 	}
 }
-
  
 ep2_wedding.2010 = {
 	type = activity_event
@@ -23324,7 +23104,6 @@ ep2_wedding.2010 = {
 	}
 }
 
-
 # Follow up: You get called out
  
 ep2_wedding.2011 = {
@@ -23470,11 +23249,9 @@ ep2_wedding.2011 = {
 	}
 }
 
-
 # Spouse/Non-spouse: Someone is dangerously close to a well of wine
 
-scripted_trigger
- ep2_wedding_2020_would_fall_trigger = {
+scripted_trigger ep2_wedding_2020_would_fall_trigger = {
 	is_adult = yes
 	is_alive = yes
 	feast_default_adult_participant_trigger = yes
@@ -23486,7 +23263,6 @@ scripted_trigger
 		has_trait = arbitrary
 	}
 }
-
 
 ep2_wedding.2020 = {
 	type = activity_event
@@ -23734,9 +23510,6 @@ ep2_wedding.2020 = {
 					left_icon = root
 					right_icon = scope:drunk_guest
 					title = ep2_wedding.2020.c.death
-					scope:drunk_guest = {
-						death = { death_reason = death_accident }
-					}
 					known_murder_effect = {
 						VICTIM = scope:drunk_guest
 						MURDERER = root
@@ -23763,4 +23536,3 @@ ep2_wedding.2020 = {
 		}
 	}
 }
-

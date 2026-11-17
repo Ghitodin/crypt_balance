@@ -3,7 +3,7 @@
 ######################
 
 hunt_activity_base_cost = {
-	value = standard_activity_base_cost
+	value = standard_activity_base_gold_cost
 	if = {
 		limit = {
 			has_character_modifier = peregrine_falcon
@@ -22,20 +22,17 @@ hunt_activity_base_cost = {
 	}
 }
 
-
 hunt_normal_option_cost = {
-	value = 10
+	value = 7
 	multiply = activity_cost_scale_by_tier
 	multiply = activity_cost_scale_by_era
 }
-
 
 hunt_good_option_cost = {
-	value = 35
+	value = 23
 	multiply = activity_cost_scale_by_tier
 	multiply = activity_cost_scale_by_era
 }
-
 
 standard_hunting_cooldown_time = {
 	value = 2
@@ -47,28 +44,18 @@ standard_hunting_cooldown_time = {
 	}
 }
 
-
 hunt_secondary_outcome = 1
-
 hunt_participants = 10
 
-
 hunt_event_delay_min = 25
-
 hunt_event_delay_max = 35
 
-
 min_default_hunt_events = 2
-
 max_default_hunt_events = 3
-
 chance_of_extra_hunt_events = 25
 
-
 min_hunt_event_spacing = 2
-
 max_hunt_event_spacing = 4
-
 
 hunt_activity_guest_list_size_value = {
 	value = 4
@@ -86,114 +73,47 @@ hunt_activity_guest_list_size_value = {
 	}
 }
 
-
 hunt_prestige_guest_gain_value = {
-
 	value = hunt_prestige_reward_value
-
-	divide = 3 # THE MOD
-
-
-
-
+	divide = 3
 }
-
 
 hunt_prestige_with_piety_guest_gain_value = {
-
 	value = hunt_prestige_with_piety_reward_value
-
-	divide = 3 # THE MOD
-
-
-
-
+	divide = 3
 }
-
 
 hunt_piety_guest_gain_value = {
-
 	value = hunt_piety_reward_value
-
-	divide = 3 # THE MOD
-
-
-
-
+	divide = 3
 }
 
-
 hunt_activity_success_increase_minor_value = 3
-
 hunt_activity_success_increase_medium_value = 5
-
 hunt_activity_success_increase_major_value = 10
-
 hunt_activity_success_increase_massive_value = 15 # use very sparingly, this is huge
-
 hunt_activity_success_increase_adventurer_initial_medium_value = 30
-
 hunt_activity_success_increase_adventurer_initial_high_value = 50
-
 
 hunt_activity_success_decrease_minor_value = {
 	value = hunt_activity_success_increase_minor_value
 	multiply = -1
 }
-
 hunt_activity_success_decrease_medium_value = {
 	value = hunt_activity_success_increase_medium_value
 	multiply = -1
 }
-
 hunt_activity_success_decrease_major_value = {
 	value = hunt_activity_success_increase_major_value
 	multiply = -1
 }
-
 hunt_activity_success_decrease_massive_value = {
 	value = hunt_activity_success_increase_massive_value
 	multiply = -1
 }
 
-
 hunt_hunting_grounds_success_value = {
 	value = 0
-	add = {
-		if = {
-			limit = { has_building = hunting_grounds_01 }
-			add = 3
-		}
-		if = {
-			limit = { has_building = hunting_grounds_02 }
-			add = 6
-		}
-		if = {
-			limit = { has_building = hunting_grounds_03 }
-			add = 9
-		}
-		if = {
-			limit = { has_building = hunting_grounds_04 }
-			add = 12
-		}
-		if = {
-			limit = { has_building = hunting_grounds_05 }
-			add = 15
-		}
-		if = {
-			limit = { has_building = hunting_grounds_06 }
-			add = 18
-		}
-		if = {
-			limit = { has_building = hunting_grounds_07 }
-			add = 21
-		}
-		if = {
-			limit = { has_building = hunting_grounds_08 }
-			add = 24
-		}
-		desc = hunt_success_chance.hunting_grounds
-	}
 	add = {
 		if = {
 			limit = { has_building = rainbow_mountains_01 }
@@ -217,66 +137,43 @@ hunt_hunting_grounds_success_value = {
 	}
 }
 
-
-hunt_logging_camps_success_value = {
-	value = 0
-	add = {
-		if = {
-			limit = { has_building = logging_camps_01 }
-			add = -3
-		}
-		if = {
-			limit = { has_building = logging_camps_02 }
-			add = -6
-		}
-		if = {
-			limit = { has_building = logging_camps_03 }
-			add = -9
-		}
-		if = {
-			limit = { has_building = logging_camps_04 }
-			add = -12
-		}
-		if = {
-			limit = { has_building = logging_camps_05 }
-			add = -15
-		}
-		if = {
-			limit = { has_building = logging_camps_06 }
-			add = -18
-		}
-		if = {
-			limit = { has_building = logging_camps_07 }
-			add = -21
-		}
-		if = {
-			limit = { has_building = logging_camps_08 }
-			add = -24
-		}
-		desc = hunt_success_chance.logging_camps
-	}
-}
-
-
 hunt_royal_reserves_success_value = {
 	value = 0
 	add = {
 		if = {
-			limit = { has_building = royal_forest_01 }
-			add = 6
+			limit = { has_building_or_higher = royal_forest_05 }
+			add = 18
 		}
 		else_if = {
-			limit = { has_building = royal_forest_02 }
+			limit = { has_building_or_higher = royal_forest_03 }
 			add = 12
 		}
 		else_if = {
-			limit = { has_building = royal_forest_03 }
-			add = 18
+			limit = { has_building_or_higher = royal_forest_01 }
+			add = 6
 		}
 		desc = hunt_success_chance.royal_forest
 	}
 }
 
+hunt_royal_stables_success_value = {
+	value = 0
+	add = {
+		if = {
+			limit = { has_building_or_higher = knights_stables_5 }
+			add = 9
+		}
+		else_if = {
+			limit = { has_building_or_higher = knights_stables_3 }
+			add = 6
+		}
+		else_if = {
+			limit = { has_building_or_higher = knights_stables_1 }
+			add = 3
+		}
+		desc = hunt_success_chance.royal_stables
+	}
+}
 
 hunt_success_chance_roco_amenity_level_value = {
 	value = 0
@@ -328,7 +225,6 @@ hunt_success_chance_roco_amenity_level_value = {
 	}
 	else = { add = 2 }
 }
-
 
 hunt_success_chance_value = {
 	activity_host = {
@@ -889,12 +785,10 @@ hunt_success_chance_value = {
 	max = 80
 }
 
-
 hunt_success_chance_inverse_value = {
 	value = 100
 	subtract = hunt_success_chance_value
 }
-
 
 hunt_province_reference_value = {
 	value = 0
@@ -958,26 +852,10 @@ hunt_province_reference_value = {
 			desc = hunt_success_chance.no_holding
 		}
 	}
-	if = {
-		limit = { 
-			county.development_level >= terrible_development_level 
-			NOT = { scope:special_option ?= flag:hunt_type_nerge }
-		}
-		# Example: development = 15 / 3 * -1 = -5
-		county ?= {
-			add = {
-				value = development_level
-				divide = 3
-				multiply = -1
-				desc = hunt_success_chance.development
-			}
-		}
-	}
 	# BUILDINGS
 	if = { # Hunting Grounds
 		limit = {
 			OR = {
-				has_building_or_higher = hunting_grounds_01
 				has_building_or_higher = rainbow_mountains_01
 				has_building_or_higher = visegrad_castle_01
 				has_building_or_higher = chocolate_hills_01
@@ -986,19 +864,19 @@ hunt_province_reference_value = {
 		}
 		add = hunt_hunting_grounds_success_value
 	}
-	if = { # Logging Camps
-		limit = { 
-			has_building_or_higher = logging_camps_01 
-			NOT = { scope:special_option ?= flag:hunt_type_nerge }
-		}
-		add = hunt_logging_camps_success_value
-	}
 	if = { # Royal Reserves
 		limit = {
 			county.title_province ?= { has_building_or_higher = royal_forest_01 }
 			NOT = { scope:special_option ?= flag:hunt_type_nerge }
 		}
 		county.title_province = { add = hunt_royal_reserves_success_value }
+	}
+	if = { # Royal Stables
+		limit = {
+			has_building_or_higher = knights_stables_1
+			NOT = { scope:special_option ?= flag:hunt_type_nerge }
+		}
+		add = hunt_royal_stables_success_value
 	}
 	if = { # Legendary Hunting Lodge
 		limit = {
@@ -1011,6 +889,16 @@ hunt_province_reference_value = {
 		add = {
 			add = 20
 			desc = hunt_success_chance.legendary_hunting_lodge
+		}
+	}
+	if = { # Village Hunter
+		limit = {
+			has_building_or_higher = village_hunter_1
+			NOT = { scope:special_option ?= flag:hunt_type_nerge }
+		}
+		add = {
+			add = 5
+			desc = hunt_success_chance.village_hunter
 		}
 	}
 	# MODIFIERS
@@ -1087,7 +975,6 @@ hunt_province_reference_value = {
 		}
 	}
 }
-
 
 hunt_melee_danger_value = {
 	value = 25
@@ -1171,7 +1058,6 @@ hunt_melee_danger_value = {
 	}
 }
 
-
 hunt_bow_danger_value = {
 	value = hunt_melee_danger_value
 	multiply = 0.25
@@ -1199,7 +1085,6 @@ hunt_bow_danger_value = {
 		}
 	}
 }
-
 
 hunt_melee_kill_prowess_value = {
 	value = 10
@@ -1259,13 +1144,8 @@ hunt_melee_kill_prowess_value = {
 	}
 }
 
-
 hunt_prestige_melee_value = {
-
-	value = 50 # THE MOD
-
-
-
+	value = 50
 	if = {
 		limit = {
 			OR = {
@@ -1275,7 +1155,6 @@ hunt_prestige_melee_value = {
 		}
 		add = -25
 	}
-
 	else_if = {
 		limit = {
 			OR = {
@@ -1286,7 +1165,6 @@ hunt_prestige_melee_value = {
 		}
 		add = 25
 	}
-
 	else_if = {
 		limit = {
 			OR = {
@@ -1299,7 +1177,6 @@ hunt_prestige_melee_value = {
 		}
 		add = 50
 	}
-
 	else_if = {
 		limit = {
 			OR = {
@@ -1311,39 +1188,31 @@ hunt_prestige_melee_value = {
 		}
 		add = 75
 	}
-
 	if = {
 		limit = { exists = scope:activity.var:female_quarry }
 		divide = 2
 	}
-
-
 }
-
 
 hunt_prestige_melee_group_value = {
 	value = hunt_prestige_melee_value
 	divide = 3
 }
 
-
 hunt_prestige_melee_wound_value = {
 	value = hunt_prestige_melee_value
 	multiply = 0.75
 }
-
 
 hunt_prestige_melee_wound_group_value = {
 	value = hunt_prestige_melee_group_value
 	divide = 2
 }
 
-
 hunt_prestige_bow_value = {
 	value = hunt_prestige_melee_value
 	divide = 2
 }
-
 
 hunt_murder_accomplice_prowess_value = {
 	value = scope:murderer.prowess
@@ -1352,7 +1221,6 @@ hunt_murder_accomplice_prowess_value = {
 		multiply = 0.5
 	}
 }
-
 
 hunt_prestige_animal_level_value = {
 	value = 2
@@ -1401,32 +1269,21 @@ hunt_prestige_animal_level_value = {
 	}
 }
 
-
 hunt_prestige_reward_value = {
-
 	# Standard value for most chars.
 	value = minor_prestige_value
 
-
 	scope:activity = {
-
 		if = {
-
 			limit = {
 				OR = {
 					var:animal_type ?= flag:hare
 					var:animal_type ?= flag:fox
 				}
 			}
-
-			multiply = 1.5 # THE MOD
-
-
-		
-}
-
+			multiply = 1.5
+		}
 		else_if = {
-
 			limit = {
 				OR = {
 					var:animal_type ?= flag:boar
@@ -1436,15 +1293,9 @@ hunt_prestige_reward_value = {
 					var:animal_type ?= flag:aurochs
 				}
 			}
-
-			multiply = 2.5 # THE MOD
-
-
-		
-}
-
+			multiply = 2.5
+		}
 		else_if ={
-
 			limit = {
 				OR = {
 					var:animal_type ?= flag:bear
@@ -1454,45 +1305,30 @@ hunt_prestige_reward_value = {
 					hunt_activity_exotic_bird_trigger = { VAR = var:animal_type }
 				}
 			}
-
-			multiply = 4 # THE MOD
-
-
-		
-}
-
-		else = {
- multiply = 2 
-
-}
-
+			multiply = 4
+		}
+		else = { multiply = 2 }
 		if = {
 			limit = {
 				has_activity_option = { category = hunt_option_party_size option = hunt_party_size_normal }
 			}
 			multiply = 1.25
 		}
-
 		else_if = {
 			limit = {
 				has_activity_option = { category = hunt_option_party_size option = hunt_party_size_many }
 			}
 			multiply = 1.5
 		}
-
-	
-}
-
+	}
 	if = {
 		limit = { scope:activity.var:hunt_success ?= flag:no }
 		divide = 2
 	}
-
 	if = {
 		limit = { exists = scope:activity.var:female_quarry }
 		divide = 2
 	}
-
 	if = {
 		limit = {
 			scope:activity = {
@@ -1502,7 +1338,6 @@ hunt_prestige_reward_value = {
 		}
 		multiply = 2
 	}
-
 	else_if = {
 		limit = {
 			scope:activity = {
@@ -1511,7 +1346,6 @@ hunt_prestige_reward_value = {
 		}
 		multiply = 2
 	}
-
 	if = {
 		limit = {
 			scope:activity.activity_host = {
@@ -1524,7 +1358,6 @@ hunt_prestige_reward_value = {
 		multiply = 1.2
 	}
 
-
 	if = {
 		limit = {
 			scope:activity.activity_host = {
@@ -1534,7 +1367,6 @@ hunt_prestige_reward_value = {
 		multiply = 0.25
 	}
 
-
 	if = {
 		limit = {
 			scope:activity.activity_host = {
@@ -1543,10 +1375,7 @@ hunt_prestige_reward_value = {
 		}
 		multiply = 1.1
 	}
-
-
 }
-
 
 hunt_provisions_reward_value = {
 	value = 50
@@ -1633,47 +1462,30 @@ hunt_provisions_reward_value = {
 	}
 }
 
-
 hunt_prestige_with_piety_reward_value = {
 	value = hunt_prestige_reward_value
 	divide = 2
 }
-
 
 hunt_piety_reward_value = {
 	value = hunt_prestige_reward_value
 	divide = 2
 }
 
-
 hunt_glory_hound_vassal_opinion_value = {
-
-	value = 3 # THE MOD
-
-
+	value = 3
 	add = {
-
-		value = 2 # THE MOD
-
-
+		value = 2
 		multiply = hunt_prestige_animal_level_value
-
-	
+	}
 }
-
-
-}
-
 
 # PARTY SIZE
 
 # These should ALWAYS be synced with the relevant activity option select_travel_entourage_max parameter.
 hunt_entourage_party_size_small_max_value = 5
-
 hunt_entourage_party_size_normal_max_value = 10
-
 hunt_entourage_party_size_many_max_value = 15
-
 
 hunt_entourage_base_set_weighting_value = {
 	if = {
@@ -1756,7 +1568,6 @@ hunt_entourage_base_set_weighting_value = {
 	}
 }
 
-
 hunt_entourage_extras_set_weighting_value = {
 	value = 0
 	if = {
@@ -1783,7 +1594,6 @@ hunt_entourage_extras_set_weighting_value = {
 	}
 }
 
-
 hunt_entourage_sodding_everyone_set_weighting_value = {
 	value = 0
 	if = {
@@ -1804,90 +1614,66 @@ hunt_entourage_sodding_everyone_set_weighting_value = {
 	}
 }
 
-
 ### Nerge Outcome Values
 # Unimpressive Nerge
 unimpressive_nerge_dread_value = -25
 
-
 # Regular Nerge
 regular_nerge_dread_value = 10
-
 regular_nerge_prestige_value = {
 	value = 100
 	multiply = nerge_prestige_multiplier
 }
-
 regular_nerge_gold_value = 25
-
 regular_nerge_legitimacy_value = 10
-
 regular_nerge_guest_prestige_value = 25
-
 
 # Impressive Nerge
 impressive_nerge_dread_value = 30
-
 impressive_nerge_prestige_value = {
 	value = 200
 	multiply = nerge_prestige_multiplier
 }
-
 impressive_nerge_gold_value = 75
-
 impressive_nerge_legitimacy_value = {
 	value = great_nerge_legitimacy_value
 	divide = 2
 }
-
 impressive_nerge_guest_prestige_value = {
 	value = impressive_nerge_prestige_value
 	divide = 2
 }
 
-
 # Great Nerge
 great_nerge_dread_value = 40
-
 great_nerge_prestige_value = {
 	value = 250
 	multiply = nerge_prestige_multiplier
 }
-
 great_nerge_gold_value = 150
-
 great_nerge_legitimacy_value = {
 	value = fantastic_nerge_legitimacy_value
 	divide = 2
 }
-
 great_nerge_guest_prestige_value = {
 	value = great_nerge_prestige_value
 	divide = 2
 }
 
-
 # Fantastic Nerge
 fantastic_nerge_dread_value = 50
-
 fantastic_nerge_prestige_value = {
 	value = 350
 	multiply = nerge_prestige_multiplier
 }
-
 fantastic_nerge_gold_value = 250
-
 fantastic_nerge_legitimacy_value = 200
-
 fantastic_nerge_martial_value = 1
-
 fantastic_nerge_guest_prestige_value = {
 	value = fantastic_nerge_prestige_value
 	divide = 2
 }
-
 fantastic_nerge_guest_martial_value = fantastic_nerge_martial_value
-
 
 nerge_score_multiplier_value = {
 	value = 1
@@ -1995,7 +1781,6 @@ nerge_score_multiplier_value = {
 	}
 }
 
-
 nerge_prestige_multiplier = {
 	value = 1
 	if = {
@@ -2023,4 +1808,3 @@ nerge_prestige_multiplier = {
 		multiply = 1.25
 	}
 }
-

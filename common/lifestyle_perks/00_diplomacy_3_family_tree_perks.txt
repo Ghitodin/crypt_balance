@@ -1,12 +1,8 @@
 ﻿befriend_perk = {
 	lifestyle = diplomacy_lifestyle
-
 	tree = family
-
 	position = { 0 0 }
-
 	icon = node_diplomacy
-
 
 	auto_selection_weight = {
 		value = 11
@@ -31,12 +27,10 @@
 		}
 	}
 
-
 	culture_character_modifier = {
 		parameter = automatic_befriend_access
 		befriend_scheme_phase_duration_add = medium_scheme_phase_duration_bonus_value
 	}
-
 
 	effect = {
 		# Cultures with Ritualised Friendship get a different effect, so we filter them out.
@@ -71,14 +65,10 @@
 		# Everyone gets board games!
 		custom_description_no_bullet = { text = unlocks_board_games_interaction_effect }
 	}
-
-
-
 	character_modifier = { # THE MOD
 		stress_gain_mult = 0.25 # THE MOD
 	} # THE MOD
 }
-
 
 confidants_perk = {
 	lifestyle = diplomacy_lifestyle
@@ -87,6 +77,12 @@ confidants_perk = {
 	icon = node_diplomacy
 
 	parent = befriend_perk
+
+	government_character_modifier = {
+		flag = government_uses_landless_lifestyle_perks
+		invert_check = yes
+		bureaucratic_district_district_build_gold_cost = lifestyle_perk_district_build_cost_discount
+	}
 
 	effect = {
 		custom_description_no_bullet = {
@@ -97,7 +93,6 @@ confidants_perk = {
 		}
 	}
 }
-
 
 flatterer_perk = {
 	lifestyle = diplomacy_lifestyle
@@ -115,7 +110,6 @@ flatterer_perk = {
 		befriend_scheme_phase_duration_add = monumental_scheme_phase_duration_bonus_value
 	}
 }
-
 
 friendly_counsel_perk = {
 	lifestyle = diplomacy_lifestyle
@@ -190,22 +184,15 @@ friendly_counsel_perk = {
 	}
 }
 
-
 familial_familiar_perk = {
 	lifestyle = diplomacy_lifestyle
-
 	tree = family
-
 	position = { 2 0 }
-
 	icon = node_diplomacy
 
-
 	character_modifier = {
-		close_relative_opinion = 10 # THE MOD
-	
-}
-
+		close_relative_opinion = 10
+	}
 
 	effect = {
 		if = {
@@ -218,7 +205,6 @@ familial_familiar_perk = {
 			}
 		}
 	}
-
 
 	auto_selection_weight = {
 		value = 11
@@ -242,10 +228,7 @@ familial_familiar_perk = {
 			multiply = 0
 		}
 	}
-
-
 }
-
 
 groomed_to_rule_perk = {
 	lifestyle = diplomacy_lifestyle
@@ -291,7 +274,6 @@ groomed_to_rule_perk = {
 	}
 }
 
-
 thicker_than_water_perk = {
 	lifestyle = diplomacy_lifestyle
 	tree = family
@@ -301,8 +283,18 @@ thicker_than_water_perk = {
 	parent = groomed_to_rule_perk
 
 	effect = {
-		custom_description_no_bullet = {
-			text = thicker_than_water_perk_effect
+		if = {
+			limit = {
+				NOT = { government_has_flag = government_is_merchant }
+			}
+			custom_description_no_bullet = {
+				text = thicker_than_water_perk_effect
+			}
+		}
+		else = {
+			custom_description_no_bullet = {
+				text = thicker_than_water_perk_merchant_effect
+			}
 		}
 	}
 
@@ -311,7 +303,6 @@ thicker_than_water_perk = {
 		blood_brother_prestige_mult = 0.05
 	}
 }
-
 
 sound_foundations_perk = {
 	lifestyle = diplomacy_lifestyle
@@ -343,7 +334,6 @@ sound_foundations_perk = {
 	}
 }
 
-
 family_man_perk = {
 	lifestyle = diplomacy_lifestyle
 	tree = family
@@ -372,4 +362,3 @@ family_man_perk = {
 		add_trait_force_tooltip = family_first
 	}
 }
-

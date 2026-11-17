@@ -2,14 +2,11 @@
 # GOVERNMENT VALUES  #
 ###################
 
-clan_government_levies_default = 0.18 # THE MOD
-
+clan_government_levies_default = 0.18
 clan_government_levies_player = 0.25
 
-clan_government_tax_default = 0.1 # THE MOD
-
-clan_government_tax_player = 0.1 # THE MOD
-
+clan_government_tax_default = 0.1
+clan_government_tax_player = 0.1
 
 clan_government_tax_collector_aptitude_multiplier = {
 	value =	{
@@ -25,23 +22,23 @@ clan_government_tax_collector_aptitude_multiplier = {
 		}
 		if = { # Reordered to maximize performance based on commonality of aptitude
 			limit = { scope:aptitude_value = 1 }
-			add = 1.1 # THE MOD
+			add = 1.1
 		}
 		else_if = {
 			limit = { scope:aptitude_value = 2 }
-			add = 1.15 # THE MOD
+			add = 1.15
 		}
 		else_if = {
 			limit = { scope:aptitude_value = 0 }
-			add = 1.05 # THE MOD
+			add = 1.05
 		}
 		else_if = {
 			limit = { scope:aptitude_value = 3 }
-			add = 1.2 # THE MOD
+			add = 1.2
 		}
 		else_if = {
 			limit = { scope:aptitude_value = 4 }
-			add = 1.25 # THE MOD
+			add = 1.25
 		}
 	}
 }
@@ -75,15 +72,11 @@ tax_obligation_half_of_slot = {
 }
 
 #Feudal government values
-exempt_feudal_tax = 0.07 # THE MOD
-
-low_feudal_tax = 0.085 # THE MOD
-
+exempt_feudal_tax = 0.07
+low_feudal_tax = 0.085
 normal_feudal_tax = 0.1
-high_feudal_tax = 0.125 # THE MOD
-
-extortionate_feudal_tax = 0.16 # THE MOD
-
+high_feudal_tax = 0.125
+extortionate_feudal_tax = 0.16
 
 feudal_tax_exempt_level = 0
 feudal_tax_low_level = 1
@@ -108,8 +101,7 @@ scutage_contract_levies_tooltip = {
 	multiply = 100
 	multiply = -1
 }
-march_contract_taxes = 0 # THE MOD
-
+march_contract_taxes = 0
 march_contract_taxes_tooltip = {
 	value = march_contract_taxes
 	multiply = 100
@@ -217,23 +209,24 @@ high_nomad_tax = 0.15
 extortionate_nomad_tax = 0.2
 
 # Default Tributary values
-normal_tributary_tax = 0.10 # THE MOD
-high_tributary_tax = 0.20 # THE MOD
+normal_tributary_tax = 0.10
+high_tributary_tax = 0.20
+subjugated_tributary_tax_mult = 0.5
 normal_prestige_transfer = 0.1
 high_prestige_transfer = 0.25
 
 # Celestial Tributary values
-low_celestial_tributary_tax = 0.02 # THE MOD
-normal_celestial_tributary_tax = 0.04 # THE MOD
-high_celestial_tributary_tax = 0.10 # THE MOD
+low_celestial_tributary_tax = 0.02
+normal_celestial_tributary_tax = 0.04
+high_celestial_tributary_tax = 0.10
 low_celestial_prestige_transfer = 0.05
 normal_celestial_prestige_transfer = 0.1
 high_celestial_prestige_transfer = 0.25
 
 # Hegemonic Tributary values
-low_hegemonic_tributary_tax = 0.04 # THE MOD
-normal_hegemonic_tributary_tax = 0.06 # THE MOD
-high_hegemonic_tributary_tax = 0.12 # THE MOD
+low_hegemonic_tributary_tax = 0.04
+normal_hegemonic_tributary_tax = 0.06
+high_hegemonic_tributary_tax = 0.12
 low_hegemonic_prestige_transfer = 0.1
 normal_hegemonic_prestige_transfer = 0.15
 high_hegemonic_prestige_transfer = 0.3
@@ -245,6 +238,11 @@ high_meritocratic_tributary_tax = 0.25
 low_meritocratic_prestige_transfer = 0.05
 normal_meritocratic_prestige_transfer = 0.1
 high_meritocratic_prestige_transfer = 0.25
+
+#maguh_prosperity_value = {
+#	value = 0.01
+#	multiply = clan_government_tax_collector_aptitude_multiplier
+#}
 
 # Barter Goods Tax Values
 low_barter_goods_tax = 0.05

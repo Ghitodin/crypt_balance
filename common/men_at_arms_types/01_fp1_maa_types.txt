@@ -26,9 +26,10 @@ vigmen = {
 	damage = 18
 	toughness = 20
 	pursuit = 0
-	screen = 14  # THE MOD
-
+	screen = 14
 	
+	control_value = 2
+
 	can_recruit = {
 		valid_for_maa_trigger = { PARAMETER = unlock_maa_vigmen }
 	}
@@ -66,6 +67,8 @@ bondi = {
 	pursuit = 12
 	screen = 0
 	
+	control_value = 2
+
 	can_recruit = {
 		valid_for_maa_trigger = { PARAMETER = unlock_maa_bondi }
 	}
@@ -106,6 +109,8 @@ varangian_veterans = {
 	pursuit = 10
 	screen = 0
 	
+	control_value = 6
+
 	can_recruit = {
 		valid_for_maa_trigger = { PARAMETER = unlock_maa_varangian_veterans }
 		NOT = {
@@ -137,8 +142,7 @@ varangian_veterans = {
 
 	max_regiments = 1
 	
-	stack = 75 # THE MOD
-
+	stack = 75
 	ai_quality = { value = @cultural_maa_extra_ai_score }
 	icon = varangian_guard
 }
@@ -150,11 +154,11 @@ jomsviking_pirates = {
 
 	damage = 30
 	toughness = 30
-	pursuit = 22 # THE MOD
-
-	screen = 22 # THE MOD
-
+	pursuit = 22
+	screen = 22
 	
+	control_value = 2
+
 	counters = {
 		heavy_infantry = 1
 		archers = 1

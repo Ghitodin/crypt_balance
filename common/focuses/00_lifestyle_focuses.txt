@@ -2,28 +2,30 @@
 
 diplomacy_foreign_affairs_focus = {
 	lifestyle = diplomacy_lifestyle
-
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 	
 	modifier = {
-		diplomacy = 2 # THE MOD
+		diplomacy = 2
+		general_opinion = 5
 		martial = -1 # THE MOD
 	}
-
 
 	desc = {
 		desc = diplomacy_foreign_affairs_focus_desc
 		desc = line_break
 	}
-
 
 	auto_selection_weight = {
 		value = 11
@@ -41,41 +43,42 @@ diplomacy_foreign_affairs_focus = {
 		}
 		if = {
 			limit = {
-				government_has_flag = government_is_landless_adventurer
+				OR = {
+					government_has_flag = government_is_landless_adventurer
+					government_has_flag = government_is_merchant
+				}
 			}
 			multiply = 0
 		}
 	}
-
-
 }
-
 
 diplomacy_majesty_focus = {
 	lifestyle = diplomacy_lifestyle
-
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 	
 	modifier = {
 		diplomacy = 1
 		martial = -1 # THE MOD
-		monthly_prestige = 0.5 # THE MOD
+		monthly_prestige = 0.5
 	}
-
 
 	desc = {
 		desc = diplomacy_majesty_focus_desc
 		desc = line_break
 	}
-
 
 	auto_selection_weight = {
 		value = 11
@@ -99,41 +102,42 @@ diplomacy_majesty_focus = {
 		}
 		if = {
 			limit = {
-				government_has_flag = government_is_landless_adventurer
+				OR = {
+					government_has_flag = government_is_landless_adventurer
+					government_has_flag = government_is_merchant
+				}
 			}
 			multiply = 0
 		}
 	}
-
-
 }
-
 
 diplomacy_family_focus = {
 	lifestyle = diplomacy_lifestyle
-
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 	
 	modifier = {
-		diplomacy = 1 # THE MOD
+		diplomacy = 1
 		martial = -1 # THE MOD
 		fertility = 0.2
 	}
-
 
 	desc = {
 		desc = diplomacy_family_focus_desc
 		desc = line_break
 	}
-
 
 	auto_selection_weight = {
 		value = 11
@@ -145,15 +149,47 @@ diplomacy_family_focus = {
 		}
 		if = {
 			limit = {
-				government_has_flag = government_is_landless_adventurer
+				OR = {
+					government_has_flag = government_is_landless_adventurer
+					government_has_flag = government_is_merchant
+				}
 			}
 			multiply = 0
 		}
 	}
-
-
 }
 
+diplomacy_merchant_focus = {
+	lifestyle = diplomacy_lifestyle
+
+	is_shown = {
+		government_has_flag = government_is_merchant
+	}
+	is_valid = {
+		government_has_flag = government_is_merchant
+	}
+
+	modifier = {
+		diplomacy = 1
+		general_opinion = 5
+		monthly_prestige = 0.25
+	}
+
+	desc = {
+		desc = diplomacy_merchant_focus_desc
+		desc = line_break
+	}
+
+	auto_selection_weight = {
+		value = 5000
+		if = {
+			limit = {
+				has_education_diplomacy_trigger = yes
+			}
+			add = 50000
+		}
+	}
+}
 
 diplomacy_adventurer_focus = {
 	lifestyle = diplomacy_lifestyle
@@ -166,7 +202,7 @@ diplomacy_adventurer_focus = {
 	}
 	
 	modifier = {
-		general_opinion = 10
+		general_opinion = 5
 		character_travel_speed_mult = 0.3
 		diplomacy_scheme_phase_duration = -15
 	}
@@ -187,31 +223,31 @@ diplomacy_adventurer_focus = {
 	}
 }
 
-
 martial_strategy_focus = {
 	lifestyle = martial_lifestyle
-
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 
 	desc = {
 		desc = martial_strategy_focus_desc
 		desc = line_break
 	}
-
 	
 	modifier = {
 		martial = 3
 		diplomacy = -1 # THE MOD
 	}
-
 
 	auto_selection_weight = {
 		value = 11
@@ -223,42 +259,43 @@ martial_strategy_focus = {
 		}
 		if = {
 			limit = {
-				government_has_flag = government_is_landless_adventurer
+				OR = {
+					government_has_flag = government_is_landless_adventurer
+					government_has_flag = government_is_merchant
+				}
 			}
 			multiply = 0
 		}
 	}
-
-
 }
-
 
 martial_authority_focus = {
 	lifestyle = martial_lifestyle
-
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 
 	desc = {
 		desc = martial_authority_focus_desc
 		desc = line_break
 	}
-
 	
 	modifier = {
 		martial = 1
+		control_baseline_add = 5
 		diplomacy = -1 # THE MOD
-		monthly_county_control_growth_add = 0.3
 		dread_gain_mult = 0.2
 	}
-
 
 	auto_selection_weight = {
 		value = 11
@@ -282,42 +319,43 @@ martial_authority_focus = {
 		}
 		if = {
 			limit = {
-				government_has_flag = government_is_landless_adventurer
+				OR = {
+					government_has_flag = government_is_landless_adventurer
+					government_has_flag = government_is_merchant
+				}
 			}
 			multiply = 0
 		}
 	}
-
-
 }
-
 
 martial_chivalry_focus = {
 	lifestyle = martial_lifestyle
-
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 
 	desc = {
 		desc = martial_chivalry_focus_desc
 		desc = line_break
 	}
-
 	
 	modifier = {
 		diplomacy = -1 # THE MOD
-		advantage = 3 # THE MOD
+		advantage = 3
 		prowess = 3
-		attraction_opinion = 7 # THE MOD
+		attraction_opinion = 7
 	}
-
 
 	auto_selection_weight = {
 		value = 11
@@ -347,15 +385,46 @@ martial_chivalry_focus = {
 		}
 		if = {
 			limit = {
-				government_has_flag = government_is_landless_adventurer
+				OR = {
+					government_has_flag = government_is_landless_adventurer
+					government_has_flag = government_is_merchant
+				}
 			}
 			multiply = 0
 		}
 	}
-
-
 }
 
+martial_merchant_focus = {
+	lifestyle = martial_lifestyle
+
+	is_shown = {
+		government_has_flag = government_is_merchant
+	}
+	is_valid = {
+		government_has_flag = government_is_merchant
+	}
+
+	desc = {
+		desc = martial_merchant_focus_desc
+		desc = line_break
+	}
+
+	modifier = {
+		martial = 1
+		trade_competitiveness_add = 20
+	}
+
+	auto_selection_weight = {
+		value = 5000
+		if = {
+			limit = {
+				has_education_martial_trigger = yes
+			}
+			add = 50000
+		}
+	}
+}
 
 martial_adventurer_focus = {
 	lifestyle = martial_lifestyle
@@ -373,7 +442,7 @@ martial_adventurer_focus = {
 	}
 	
 	modifier = {
-		advantage = 10
+		advantage = lifestyle_perk_advantage_bonus
 		maa_toughness_mult = 0.15
 		martial_scheme_phase_duration = -15
 	}
@@ -389,32 +458,32 @@ martial_adventurer_focus = {
 	}
 }
 
-
 intrigue_skulduggery_focus = {
 	lifestyle = intrigue_lifestyle
-
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 
 	desc = {
 		desc = intrigue_skulduggery_focus_desc
 		desc = line_break
 	}
-
 	
 	modifier = {
-		intrigue = 1 # THE MOD
+		intrigue = 1
 		stewardship = -1 # THE MOD
 		owned_scheme_secrecy_add = 15
 	}
-
 
 	auto_selection_weight = {
 		value = 11
@@ -450,42 +519,43 @@ intrigue_skulduggery_focus = {
 		}
 		if = {
 			limit = {
-				government_has_flag = government_is_landless_adventurer
+				OR = {
+					government_has_flag = government_is_landless_adventurer
+					government_has_flag = government_is_merchant
+				}
 			}
 			multiply = 0
 		}
 	}
-
-
 }
-
 
 intrigue_temptation_focus = {
 	lifestyle = intrigue_lifestyle
-
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 
 	desc = {
 		desc = intrigue_temptation_focus_desc
 		desc = line_break
 	}
-
 	
 	modifier = {
 		stewardship = -1 # THE MOD
-		attraction_opinion = 5 # THE MOD
+		attraction_opinion = 5
 		fertility = 0.2
 		seduce_scheme_phase_duration_add = medium_scheme_phase_duration_bonus_value
 	}
-
 
 	auto_selection_weight = {
 		value = 11
@@ -512,42 +582,43 @@ intrigue_temptation_focus = {
 		}
 		if = {
 			limit = {
-				government_has_flag = government_is_landless_adventurer
+				OR = {
+					government_has_flag = government_is_landless_adventurer
+					government_has_flag = government_is_merchant
+				}
 			}
 			multiply = 0
 		}
 	}
-
-
 }
-
 
 intrigue_intimidation_focus = {
 	lifestyle = intrigue_lifestyle
-
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 
 	desc = {
 		desc = intrigue_intimidation_focus_desc
 		desc = line_break
 	}
-
 	
 	modifier = {
 		intrigue = 2
 		stewardship = -1 # THE MOD
-		dread_baseline_add = 15 # THE MOD
+		dread_baseline_add = 15
 		dread_loss_mult = -0.25
 	}
-
 
 	auto_selection_weight = {
 		value = 11
@@ -587,15 +658,46 @@ intrigue_intimidation_focus = {
 		}
 		if = {
 			limit = {
-				government_has_flag = government_is_landless_adventurer
+				OR = {
+					government_has_flag = government_is_landless_adventurer
+					government_has_flag = government_is_merchant
+				}
 			}
 			multiply = 0
 		}
 	}
-
-
 }
 
+intrigue_merchant_focus = {
+	lifestyle = intrigue_lifestyle
+
+	is_shown = {
+		government_has_flag = government_is_merchant
+	}
+	is_valid = {
+		government_has_flag = government_is_merchant
+	}
+
+	desc = {
+		desc = intrigue_merchant_focus_desc
+		desc = line_break
+	}
+
+	modifier = {
+		intrigue = 1
+		dread_baseline_add = 15
+	}
+
+	auto_selection_weight = {
+		value = 5000
+		if = {
+			limit = {
+				has_education_intrigue_trigger = yes
+			}
+			add = 50000
+		}
+	}
+}
 
 intrigue_adventurer_focus = {
 	lifestyle = intrigue_lifestyle
@@ -630,32 +732,35 @@ intrigue_adventurer_focus = {
 	}
 }
 
-
 stewardship_wealth_focus = {
 	lifestyle = stewardship_lifestyle
-
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 
 	desc = {
 		desc = stewardship_wealth_focus_desc
 		desc = line_break
 	}
-
 	
 	modifier = {
+		monthly_artisan_income_mult = 0.1
+		monthly_civic_income_mult = 0.1
+		monthly_commerce_income_mult = 0.1
+		domain_tax_mult = 0.1
 		diplomacy = -1 # THE MOD
-		monthly_income_mult = 0.1
 		stress_gain_mult = 0.15 # THE MOD
 	}
-
 
 	auto_selection_weight = {
 		value = 11
@@ -679,41 +784,43 @@ stewardship_wealth_focus = {
 		}
 		if = {
 			limit = {
-				government_has_flag = government_is_landless_adventurer
+				OR = {
+					government_has_flag = government_is_landless_adventurer
+					government_has_flag = government_is_merchant
+				}
 			}
 			multiply = 0
 		}
 	}
-
-
 }
-
 
 stewardship_domain_focus = {
 	lifestyle = stewardship_lifestyle
-
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 
 	desc = {
 		desc = stewardship_domain_focus_desc
 		desc = line_break
 	}
-
 	
 	modifier = {
-		stewardship = 2 # THE MOD
+		popular_opinion_add = 5
+		trade_category_all_production_mult = 0.1
 		diplomacy = -1 # THE MOD
 		stress_gain_mult = 0.1 # THE MOD
 	}
-
 
 	auto_selection_weight = {
 		value = 11
@@ -731,34 +838,36 @@ stewardship_domain_focus = {
 		}
 		if = {
 			limit = {
-				government_has_flag = government_is_landless_adventurer
+				OR = {
+					government_has_flag = government_is_landless_adventurer
+					government_has_flag = government_is_merchant
+				}
 			}
 			multiply = 0
 		}
 	}
-
-
 }
-
 
 stewardship_duty_focus = {
 	lifestyle = stewardship_lifestyle
-
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 
 	desc = {
 		desc = stewardship_duty_focus_desc
 		desc = line_break
 	}
-
 	
 	modifier = {
 		diplomacy = -1 # THE MOD
@@ -766,7 +875,6 @@ stewardship_duty_focus = {
 		courtier_and_guest_opinion = 10 # THE MOD
 		stress_gain_mult = 0.1 # THE MOD
 	}
-
 
 	auto_selection_weight = {
 		value = 11
@@ -784,15 +892,46 @@ stewardship_duty_focus = {
 		}
 		if = {
 			limit = {
-				government_has_flag = government_is_landless_adventurer
+				OR = {
+					government_has_flag = government_is_landless_adventurer
+					government_has_flag = government_is_merchant
+				}
 			}
 			multiply = 0
 		}
 	}
-
-
 }
 
+stewardship_merchant_focus = {
+	lifestyle = stewardship_lifestyle
+
+	is_shown = {
+		government_has_flag = government_is_merchant
+	}
+	is_valid = {
+		government_has_flag = government_is_merchant
+	}
+
+	desc = {
+		desc = stewardship_merchant_focus_desc
+		desc = line_break
+	}
+
+	modifier = {
+		stewardship = 1
+		trade_expertise_growth_mult = 0.1
+	}
+
+	auto_selection_weight = {
+		value = 5000
+		if = {
+			limit = {
+				has_education_stewardship_trigger = yes
+			}
+			add = 50000
+		}
+	}
+}
 
 stewardship_adventurer_focus = {
 	lifestyle = stewardship_lifestyle
@@ -826,25 +965,26 @@ stewardship_adventurer_focus = {
 	}
 }
 
-
 learning_medicine_focus = {
 	lifestyle = learning_lifestyle
-
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 
 	desc = {
 		desc = learning_medicine_focus_desc
 		desc = line_break
 	}
-
 	
 	modifier = {
 		learning = 1
@@ -852,7 +992,6 @@ learning_medicine_focus = {
 		negate_health_penalty_add = 0.5 # THE MOD
 	}
 
-
 	auto_selection_weight = {
 		value = 11
 		if = {
@@ -863,41 +1002,41 @@ learning_medicine_focus = {
 		}
 		if = {
 			limit = {
-				government_has_flag = government_is_landless_adventurer
+				OR = {
+					government_has_flag = government_is_landless_adventurer
+					government_has_flag = government_is_merchant
+				}
 			}
 			multiply = 0
 		}
 	}
-
-
 }
-
 
 learning_scholarship_focus = {
 	lifestyle = learning_lifestyle
-
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 
 	desc = {
 		desc = learning_scholarship_focus_desc
 		desc = line_break
 	}
-
 	
 	modifier = {
-		learning = 2 # THE MOD
+		learning = 2
 		intrigue = -1 # THE MOD
-		development_growth_factor = 0.15
 	}
-
 
 	auto_selection_weight = {
 		value = 11
@@ -909,47 +1048,43 @@ learning_scholarship_focus = {
 		}
 		if = {
 			limit = {
-				government_has_flag = government_is_landless_adventurer
+				OR = {
+					government_has_flag = government_is_landless_adventurer
+					government_has_flag = government_is_merchant
+				}
 			}
 			multiply = 0
 		}
 	}
-
-
 }
-
 
 learning_theology_focus = {
 	lifestyle = learning_lifestyle
-
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
-
 
 	desc = {
 		desc = learning_theology_focus_desc
 		desc = line_break
 	}
-
 	
 	modifier = {
 		religious_head_opinion = 10
-
 		piety_standalone_gain_mult = 0.05
-
 		monthly_piety = 1
-
-	
-
 		intrigue = -1 # THE MOD
-}
-
+	}
 
 	auto_selection_weight = {
 		value = 11
@@ -973,15 +1108,47 @@ learning_theology_focus = {
 		}
 		if = {
 			limit = {
-				government_has_flag = government_is_landless_adventurer
+				OR = {
+					government_has_flag = government_is_landless_adventurer
+					government_has_flag = government_is_merchant
+				}
 			}
 			multiply = 0
 		}
 	}
-
-
 }
 
+learning_merchant_focus = {
+	lifestyle = learning_lifestyle
+
+	is_shown = {
+		government_has_flag = government_is_merchant
+	}
+	is_valid = {
+		government_has_flag = government_is_merchant
+	}
+
+	desc = {
+		desc = learning_merchant_focus_desc
+		desc = line_break
+	}
+
+	modifier = {
+		learning = 1
+		health = 0.1
+		monthly_piety = 0.5
+	}
+
+	auto_selection_weight = {
+		value = 5000
+		if = {
+			limit = {
+				has_education_learning_trigger = yes
+			}
+			add = 50000
+		}
+	}
+}
 
 learning_adventurer_focus = {
 	lifestyle = learning_lifestyle
@@ -1015,15 +1182,20 @@ learning_adventurer_focus = {
 	}
 }
 
-
 wanderer_internal_affairs_focus = {
 	lifestyle = wanderer_lifestyle
 
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOR = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
+		}
 	}
 
 	desc = {
@@ -1034,7 +1206,7 @@ wanderer_internal_affairs_focus = {
 	modifier = {
 		stewardship = 1
 		intrigue = 1
-		monthly_county_control_growth_add = 0.3
+		monthly_control_change_when_below_baseline_add = 0.3
 	}
 
 	auto_selection_weight = {
@@ -1059,7 +1231,6 @@ wanderer_internal_affairs_focus = {
 		}
 	}
 }
-
 
 wanderer_journey_focus = {
 	lifestyle = wanderer_lifestyle
@@ -1096,7 +1267,6 @@ wanderer_journey_focus = {
 	}
 }
 
-
 wanderer_destination_focus = {
 	lifestyle = wanderer_lifestyle
 
@@ -1132,4 +1302,3 @@ wanderer_destination_focus = {
 		}
 	}
 }
-

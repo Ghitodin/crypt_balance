@@ -12,31 +12,19 @@
 
 # Outbreak
 
-outbreak_chance_base_extra_low = 0.0001 # THE MOD
-
-outbreak_chance_base_very_low = 0.0002 # THE MOD 
-
-outbreak_chance_base_low = 0.002 # THE MOD 
-
-outbreak_chance_base_medium = 0.004 # THE MOD
-
-outbreak_chance_base_high = 0.008 # THE MOD
-
-outbreak_chance_base_very_high = 0.024 # THE MOD
-
+outbreak_chance_base_extra_low = 0.0001
+outbreak_chance_base_very_low = 0.0002
+outbreak_chance_base_low = 0.002
+outbreak_chance_base_medium = 0.004
+outbreak_chance_base_high = 0.008
+outbreak_chance_base_very_high = 0.024
 
 outbreak_increase_add_very_low = 0.001
-
-outbreak_increase_add_low = 0.0008 # THE MOD
-
-outbreak_increase_add_medium = 0.0016 # THE MOD 
-
-outbreak_increase_add_high = 0.0032 # THE MOD
-
-outbreak_increase_add_very_high = 0.0064 # THE MOD
-
-outbreak_increase_add_extra_high = 0.0128 # THE MOD
-
+outbreak_increase_add_low = 0.0008
+outbreak_increase_add_medium = 0.0016
+outbreak_increase_add_high = 0.0032
+outbreak_increase_add_very_high = 0.0064
+outbreak_increase_add_extra_high = 0.0128
 
 outbreak_decrease_add_low = -0.003
 outbreak_decrease_add_medium = -0.008
@@ -44,23 +32,15 @@ outbreak_decrease_add_high = -0.016
 outbreak_decrease_add_very_high = -0.032
 outbreak_decrease_add_unlikely = -0.064
 
-outbreak_increase_mult_low = 0.02 # THE MOD
+outbreak_increase_mult_low = 0.02
+outbreak_increase_mult_medium = 0.04
+outbreak_increase_mult_high = 0.08
+outbreak_increase_mult_very_high = 0.16
 
-outbreak_increase_mult_medium = 0.04 # THE MOD
-
-outbreak_increase_mult_high = 0.08 # THE MOD
-
-outbreak_increase_mult_very_high = 0.16 # THE MOD
-
-
-outbreak_decrease_mult_low = -0.5 # THE MOD
-
-outbreak_decrease_mult_medium = -0.75 # THE MOD
-
-outbreak_decrease_mult_high = -0.85 # THE MOD
-
-outbreak_decrease_mult_very_high = -0.9 # THE MOD
-
+outbreak_decrease_mult_low = -0.5
+outbreak_decrease_mult_medium = -0.75
+outbreak_decrease_mult_high = -0.85
+outbreak_decrease_mult_very_high = -0.9
 outbreak_decrease_mult_unlikely = -0.995
 
 # Spread
@@ -88,19 +68,22 @@ spread_decrease_mult_medium = -0.5
 spread_decrease_mult_high = -0.75
 spread_decrease_mult_unlikely = -0.991
 
+spread_settlement_size_level_threshold = 4
+spread_increase_mult_per_settlement_size_level = 0.1
+
 
 outbreak_chance_minor_default_value = {
 	value = outbreak_chance_base_low
 	
-	#Buildings
 	add = {
-		value = num_buildings
+		value = province_size_level
 		multiply = outbreak_increase_add_very_low
 	}
+
 	#Tradeports / Coasts
 	if = {
 		limit = {
-			has_building_or_higher = common_tradeport_01
+			has_port_district = yes
 		}
 		add = outbreak_increase_add_high
 	}
@@ -136,6 +119,12 @@ outbreak_chance_minor_mult_value = {
 	# Game rules
 	if = {
 		limit = {
+			has_game_rule = epidemic_frequency_normal
+		}
+		add = 0
+	}
+	else_if = {
+		limit = {
 			has_game_rule = epidemic_frequency_often
 		}
 		add = outbreak_increase_mult_low
@@ -165,28 +154,28 @@ outbreak_chance_minor_mult_value = {
 		add = outbreak_decrease_mult_high
 	}
 
-	#Development
+	#Prosperity
 	if = {
 		limit = {
-			county.development_level <= 20
+			county.prosperity_level <= 20
 		}
 		add = {
-			value = county.development_level
+			value = county.prosperity_level
 			multiply = 0.002
 		}
 	}
 	else_if = {
 		limit = {
-			county.development_level <= 40
+			county.prosperity_level <= 40
 		}
 		add = {
-			value = county.development_level
+			value = county.prosperity_level
 			multiply = 0.003
 		}
 	}
 	else = {
 		add = {
-			value = county.development_level
+			value = county.prosperity_level
 			multiply = 0.004
 		}
 	}
@@ -199,14 +188,6 @@ outbreak_chance_minor_mult_value = {
 			}
 		}
 		add = outbreak_decrease_mult_low
-	}
-	else_if = {
-		limit = {
-			culture = {
-				has_cultural_era_or_later = culture_era_high_medieval
-			}
-		}
-		add = 0
 	}
 	else_if = {
 		limit = {
@@ -273,7 +254,7 @@ outbreak_chance_minor_mult_value = {
 	
 	if = {
 		limit = {
-			county.development_level < 10
+			county.prosperity_level < 10
 		}
 		multiply = 0.5
 	}
@@ -285,15 +266,15 @@ outbreak_chance_minor_mult_value = {
 outbreak_chance_major_default_value = {
 	value = outbreak_chance_base_very_low 
 
-	#Buildings
 	add = {
-		value = num_buildings
+		value = province_size_level
 		multiply = outbreak_increase_add_low
 	}
+
 	#Tradeports / Coasts
 	if = {
 		limit = {
-			has_building_or_higher = common_tradeport_01
+			has_port_district = yes
 		}
 		add = outbreak_increase_add_high
 	}
@@ -328,6 +309,16 @@ outbreak_chance_major_mult_value = {
 
 	# Game rules
 	if = {
+		limit = {
+			has_game_rule = epidemic_frequency_normal
+			NOR = {
+				has_game_rule = easy_difficulty
+				has_game_rule = very_easy_difficulty
+			}
+		}
+		add = 0
+	}
+	else_if = {
 		limit = {
 			has_game_rule = epidemic_frequency_often
 		}
@@ -364,42 +355,34 @@ outbreak_chance_major_mult_value = {
 		add = outbreak_decrease_mult_high
 	}
 
-	#Development
+	#Prosperity
 	if = {
 		limit = {
-			county.development_level <= 20
+			county.prosperity_level <= 20
 		}
 		add = {
-			value = county.development_level
+			value = county.prosperity_level
 			multiply = 0.008
 		}
 	}
 	else_if = {
 		limit = {
-			county.development_level <= 40
+			county.prosperity_level <= 40
 		}
 		add = {
-			value = county.development_level
+			value = county.prosperity_level
 			multiply = 0.010
 		}
 	}
 	else = {
 		add = {
-			value = county.development_level
+			value = county.prosperity_level
 			multiply = 0.012
 		}
 	}
 
 	#Era pacing
 	if = {
-		limit = {
-			culture = {
-				has_cultural_era_or_later = culture_era_late_medieval
-			}
-		}
-		add = 0
-	}
-	else_if = {
 		limit = {
 			culture = {
 				has_cultural_era_or_later = culture_era_high_medieval
@@ -472,7 +455,7 @@ outbreak_chance_major_mult_value = {
 	
 	if = {
 		limit = {
-			county.development_level < 10
+			county.prosperity_level < 10
 		}
 		multiply = 0.1
 	}
@@ -485,15 +468,15 @@ outbreak_chance_major_mult_value = {
 outbreak_chance_apocalyptic_default_value = {
 	value = outbreak_chance_base_extra_low
 	
-	#Buildings
 	add = {
-		value = num_buildings
+		value = province_size_level
 		multiply = outbreak_increase_add_low
 	}
+	
 	#Tradeports / Coasts
 	if = {
 		limit = {
-			has_building_or_higher = common_tradeport_01
+			has_port_district = yes
 		}
 		add = outbreak_increase_add_high
 	}
@@ -529,6 +512,12 @@ outbreak_chance_apocalyptic_mult_value = {
 	# Game rules
 	if = {
 		limit = {
+			has_game_rule = epidemic_frequency_normal
+		}
+		add = 0
+	}
+	else_if = {
+		limit = {
 			has_game_rule = epidemic_frequency_often
 		}
 		add = outbreak_increase_mult_low
@@ -558,28 +547,28 @@ outbreak_chance_apocalyptic_mult_value = {
 		add = outbreak_decrease_mult_high
 	}
 
-	#Development
+	#Prosperity
 	if = {
 		limit = {
-			county.development_level <= 20
+			county.prosperity_level <= 20
 		}
 		add = {
-			value = county.development_level
+			value = county.prosperity_level
 			multiply = 0.008
 		}
 	}
 	else_if = {
 		limit = {
-			county.development_level <= 40
+			county.prosperity_level <= 40
 		}
 		add = {
-			value = county.development_level
+			value = county.prosperity_level
 			multiply = 0.010
 		}
 	}
 	else = {
 		add = {
-			value = county.development_level
+			value = county.prosperity_level
 			multiply = 0.012
 		}
 	}
@@ -600,14 +589,6 @@ outbreak_chance_apocalyptic_mult_value = {
 			}
 		}
 		add = outbreak_decrease_mult_medium
-	}
-	else_if = {
-		limit = {
-			culture = {
-				has_cultural_era_or_later = culture_era_early_medieval
-			}
-		}
-		add = outbreak_decrease_mult_unlikely
 	}
 	else_if = {
 		limit = {
@@ -860,7 +841,7 @@ outbreak_chance_dysentery_mult_value = {
 	
 	if = {
 		limit = {
-			county.development_level < 10
+			county.prosperity_level < 10
 		}
 		multiply = 0.1
 	}
@@ -873,13 +854,13 @@ outbreak_chance_dysentery_mult_value = {
 outbreak_chance_black_plague_default_value = {
 	value = outbreak_chance_base_extra_low
 
-	#Buildings
+	#Districts
 	if = {
 		limit = {
-			num_buildings >= 20
+			num_districts >= 4
 		}
 		add = {
-			value = num_buildings
+			value = num_districts
 			multiply = outbreak_increase_add_medium
 		}
 	}
@@ -887,7 +868,7 @@ outbreak_chance_black_plague_default_value = {
 	#Tradeports / Coasts
 	if = {
 		limit = {
-			has_building_or_higher = common_tradeport_01
+			has_port_district = yes
 		}
 		add = outbreak_increase_add_high
 	}
@@ -934,9 +915,9 @@ outbreak_chance_black_plague_default_value = {
 
 outbreak_chance_black_plague_mult_value = {
 	value = 1
-	#Development
+	#Prosperity
 	add = {
-		value = county.development_level
+		value = county.prosperity_level
 		multiply = 0.08
 	}
 
@@ -1053,7 +1034,7 @@ outbreak_chance_black_plague_mult_value = {
 	
 	if = {
 		limit = {
-			county.development_level < 10
+			county.prosperity_level < 10
 		}
 		multiply = 0.1
 	}
@@ -1138,16 +1119,16 @@ spread_chance_epidemics_default_value = {
 		}
 	}
 	
-	#Buildings
+	#Districts
 	add = {
-		value = num_buildings
+		value = num_districts
 		multiply = spread_increase_mult_low
 	}
 
 	#Tradeports
 	if = {
 		limit = {
-			has_building_or_higher = common_tradeport_08
+			has_building_or_higher = pb_port_04
 		}
 		add = spread_increase_add_high
 		add = spread_increase_add_high
@@ -1160,19 +1141,7 @@ spread_chance_epidemics_default_value = {
 	}
 	else_if = {
 		limit = {
-			has_building_or_higher = common_tradeport_07
-		}
-		add = spread_increase_add_high
-		add = spread_increase_add_medium
-		add = spread_increase_add_medium
-		add = spread_increase_add_medium
-		add = spread_increase_add_low
-		add = spread_increase_add_low
-		add = spread_increase_add_low
-	}
-	else_if = {
-		limit = {
-			has_building_or_higher = common_tradeport_06
+			has_building_or_higher = pb_port_03
 		}
 		add = spread_increase_add_medium
 		add = spread_increase_add_medium
@@ -1183,17 +1152,7 @@ spread_chance_epidemics_default_value = {
 	}
 	else_if = {
 		limit = {
-			has_building_or_higher = common_tradeport_05
-		}
-		add = spread_increase_add_medium
-		add = spread_increase_add_medium
-		add = spread_increase_add_low
-		add = spread_increase_add_low
-		add = spread_increase_add_low
-	}
-	else_if = {
-		limit = {
-			has_building_or_higher = common_tradeport_04
+			has_building_or_higher = pb_port_02
 		}
 		add = spread_increase_add_medium
 		add = spread_increase_add_low
@@ -1202,37 +1161,23 @@ spread_chance_epidemics_default_value = {
 	}
 	else_if = {
 		limit = {
-			has_building_or_higher = common_tradeport_03
+			province_has_district = port_district
 		}
 		add = spread_increase_add_low
-		add = spread_increase_add_low
-		add = spread_increase_add_low
-	}
-	else_if = {
-		limit = {
-			has_building_or_higher = common_tradeport_02
-		}
-		add = spread_increase_add_low
-		add = spread_increase_add_low
-	}
-	else_if = {
-		limit = {
-			has_building_or_higher = common_tradeport_01
-		}
 		add = spread_increase_add_low
 	}
 
 	#Markets
 	if = {
 		limit = {
-			has_building_or_higher = market_villages_02
+			has_building_or_higher = pb_market_03
 		}
 		add = spread_increase_add_low
 		add = spread_increase_add_low
 	}
 	else_if = {
 		limit = {
-			has_building_or_higher = market_villages_01
+			province_has_district = market_district
 		}
 		add = spread_increase_add_low
 	}
@@ -1240,7 +1185,7 @@ spread_chance_epidemics_default_value = {
 	#Guild Halls
 	if = {
 		limit = {
-			has_building_or_higher = guild_halls_08
+			has_building_or_higher = pb_guild_04
 		}
 		add = spread_increase_add_high
 		add = spread_increase_add_high
@@ -1249,7 +1194,7 @@ spread_chance_epidemics_default_value = {
 	}
 	else_if = {
 		limit = {
-			has_building_or_higher = guild_halls_06
+			has_building_or_higher = pb_guild_03
 		}
 		add = spread_increase_add_high
 		add = spread_increase_add_high
@@ -1257,14 +1202,14 @@ spread_chance_epidemics_default_value = {
 	}
 	else_if = {
 		limit = {
-			has_building_or_higher = guild_halls_04
+			has_building_or_higher = pb_guild_02
 		}
 		add = spread_increase_add_high
 		add = spread_increase_add_high
 	}
 	else_if = {
 		limit = {
-			has_building_or_higher = guild_halls_02
+			province_has_district = guild_district
 		}
 		add = spread_increase_add_high
 	}
@@ -1410,6 +1355,20 @@ spread_chance_epidemics_default_value = {
 	}
 }
 
+spread_settlement_size_mult_value = {
+	value = 1
+	if = {
+		limit = {
+			province_size_level > spread_settlement_size_level_threshold
+		}
+		add = {
+			value = province_size_level
+			subtract = spread_settlement_size_level_threshold
+			multiply = spread_increase_mult_per_settlement_size_level
+		}
+	}
+}
+
 spread_chance_epidemics_mult_value = {
 	value = 1
 	min = 0.001
@@ -1421,8 +1380,8 @@ spread_chance_epidemics_mult_value = {
 				is_riverside_province = yes
 			}
 			NOR = {
-				has_building_or_higher = common_tradeport_04
-				num_buildings > 4
+				has_building_or_higher = pb_port_02
+				num_districts > 2
 			}
 		}
 		add = spread_decrease_mult_medium
@@ -1437,8 +1396,8 @@ spread_chance_epidemics_mult_value = {
 				is_coastal = yes
 				is_riverside_province = yes
 			}
-			has_building_or_higher = common_tradeport_06
-			num_buildings > 10
+			has_building_or_higher = pb_port_03
+			num_districts > 4
 		}
 		add = spread_increase_mult_high
 	}
@@ -1455,9 +1414,9 @@ spread_chance_epidemics_mult_value = {
 		add = spread_increase_mult_very_high
 	}
 
-	#Development
+	#Prosperity
 	add = {
-		value = county.development_level
+		value = county.prosperity_level
 		multiply = 0.025
 	}
 
@@ -1596,6 +1555,8 @@ spread_chance_epidemics_mult_value = {
 		}
 		add = spread_decrease_mult_unlikely
 	}
+
+	multiply = spread_settlement_size_mult_value
 }
 
 #### DAILY INFECTION RATE ###
@@ -1791,45 +1752,108 @@ character_infection_chance_default_value = {
     # Slight buff.
     if = {
         limit = {
-            host.domicile ?= { has_domicile_parameter = camp_infection_chance_buff_1 }
+            OR = {
+                domicile ?= { has_domicile_parameter = camp_infection_chance_buff_1 }
+                host.domicile ?= { has_domicile_parameter = camp_infection_chance_buff_1 }
+            }
         }
         add = -10
     }
     # Max buff.
     else_if = {
         limit = {
-            host.domicile ?= { has_domicile_parameter = camp_infection_chance_buff_6 }
+            OR = {
+                domicile ?= { has_domicile_parameter = camp_infection_chance_buff_6 }
+                host.domicile ?= { has_domicile_parameter = camp_infection_chance_buff_6 }
+            }
         }
         add = -40
     }
     # Very high buff.
     else_if = {
         limit = {
-            host.domicile ?= { has_domicile_parameter = camp_infection_chance_buff_5 }
+            OR = {
+                domicile ?= { has_domicile_parameter = camp_infection_chance_buff_5 }
+                host.domicile ?= { has_domicile_parameter = camp_infection_chance_buff_5 }
+            }
         }
         add = -30
     }
     # High buff.
     else_if = {
         limit = {
-            host.domicile ?= { has_domicile_parameter = camp_infection_chance_buff_4 }
+            OR = {
+                domicile ?= { has_domicile_parameter = camp_infection_chance_buff_4 }
+                host.domicile ?= { has_domicile_parameter = camp_infection_chance_buff_4 }
+            }
         }
         add = -25
     }
     # Medium buff.
     else_if = {
         limit = {
-            host.domicile ?= { has_domicile_parameter = camp_infection_chance_buff_3 }
+            OR = {
+                domicile ?= { has_domicile_parameter = camp_infection_chance_buff_3 }
+                host.domicile ?= { has_domicile_parameter = camp_infection_chance_buff_3 }
+            }
         }
         add = -20
     }
     # Small buff.
     else_if = {
         limit = {
-            host.domicile ?= { has_domicile_parameter = camp_infection_chance_buff_2 }
+            OR = {
+                domicile ?= { has_domicile_parameter = camp_infection_chance_buff_2 }
+                host.domicile ?= { has_domicile_parameter = camp_infection_chance_buff_2 }
+            }
         }
         add = -15
     }
+	if = {
+		limit = {
+			OR = {
+				domicile ?= { has_domicile_parameter = merchant_infection_chance_buff_5 }
+				host.domicile ?= { has_domicile_parameter = merchant_infection_chance_buff_5 }
+			}
+		}
+		add = -30
+	}
+	else_if = {
+		limit = {
+			OR = {
+				domicile ?= { has_domicile_parameter = merchant_infection_chance_buff_4 }
+				host.domicile ?= { has_domicile_parameter = merchant_infection_chance_buff_4 }
+			}
+		}
+		add = -25
+	}
+	else_if = {
+		limit = {
+			OR = {
+				domicile ?= { has_domicile_parameter = merchant_infection_chance_buff_3 }
+				host.domicile ?= { has_domicile_parameter = merchant_infection_chance_buff_3 }
+			}
+		}
+		add = -20
+	}
+	else_if = {
+		limit = {
+			OR = {
+				domicile ?= { has_domicile_parameter = merchant_infection_chance_buff_2 }
+				host.domicile ?= { has_domicile_parameter = merchant_infection_chance_buff_2 }
+			}
+		}
+		add = -15
+	}
+	else_if = {
+		limit = {
+			OR = {
+				domicile ?= { has_domicile_parameter = merchant_infection_chance_buff_1 }
+				host.domicile ?= { has_domicile_parameter = merchant_infection_chance_buff_1 }
+			}
+		}
+		add = -10
+	}
 	#Would you follow social distancing?
 	#your numerical social distance value gets transformed here into a bonus/malus
 	add = {
@@ -1938,18 +1962,14 @@ recent_epidemics_outbreak_mult_value = {
 	min = 0
 }
 
-#How badly effected is a county's development?
-epidemic_development_loss_value = {
+#How badly affected is a county's prosperity?
+epidemic_prosperity_loss_value = {
 	subtract = scope:base_loss
 
-	#This feeds into the change_development_progress in 00_epidemics
-	#Bear in mind that minimal_development_progress_loss is 10
-	#and massive_development_progress_loss is 100
-	#Aim for something between those two extremes generally (in minus)
+	#This feeds into change_prosperity_progress in 00_epidemics
+	#minimal_prosperity_progress_loss is 10 and massive_prosperity_progress_loss is 100, so aim between them (as a negative value)
 
-	#Since we have widespread development loss handled by modifier, we
-	#now use this figure to 'chunk' down places with very high development
-	#so they are disproportionately affected
+	#Modifiers cover widespread loss, so we hit high-prosperity counties harder here
 
 	scope:epidemic = {
 		switch = {
@@ -1960,9 +1980,9 @@ epidemic_development_loss_value = {
 		}
 	}
 
-	# Development
+	# Prosperity
 	subtract = {
-		value = development_level
+		value = prosperity_level
 		multiply = 0.3
 	}
 

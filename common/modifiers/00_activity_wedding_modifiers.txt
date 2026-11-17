@@ -1,5 +1,5 @@
 ﻿wedding_nagging_spouse_modifier = {
-	icon = wedding_mixed
+	icon = wedding_negative
 	stress_gain_mult = 0.2
 	fertility = 0.2
 	monthly_lifestyle_xp_gain_mult = 0.1
@@ -23,7 +23,7 @@ wedding_purified_modifier = {
 }
 
 wedding_insecure_marriage_modifier = {
-	icon = wedding_mixed
+	icon = wedding_negative
 	enemy_personal_scheme_phase_duration_add = medium_scheme_phase_duration_malus_value
 	stress_gain_mult = 0.5
 }
@@ -52,8 +52,7 @@ gwedding_gracious_host_modifier = {
 	icon = wedding_positive
 	monthly_prestige_gain_mult = 0.03
 	monthly_dynasty_prestige_mult = 0.03
-	courtly_opinion = 3 # THE MOD
-
+	courtly_opinion = 3
 }
 
 gwedding_magnificent_host_modifier = {
@@ -62,28 +61,24 @@ gwedding_magnificent_host_modifier = {
 	monthly_prestige_gain_mult = 0.05
 	monthly_stewardship_lifestyle_xp_gain_mult = 0.1
 	monthly_diplomacy_lifestyle_xp_gain_mult = 0.1
-	courtly_opinion = 5 # THE MOD
-
+	courtly_opinion = 5
 }
 
 gwedding_grand_wedding_modifier = {
 	icon = wedding_positive
-	courtly_opinion = 2 # THE MOD
-
+	courtly_opinion = 2
 	monthly_prestige_gain_mult = 0.01
 }
 
 gwedding_grandiose_wedding_modifier = {
 	icon = wedding_positive
-	courtly_opinion = 3 # THE MOD
-
+	courtly_opinion = 3
 	monthly_prestige_gain_mult = 0.02
 }
 
 gwedding_magnificent_wedding_modifier = {
 	icon = wedding_positive
-	courtly_opinion = 5 # THE MOD
-
+	courtly_opinion = 5
 	monthly_prestige_gain_mult = 0.03
 	monthly_dynasty_prestige_mult = 0.03
 }
@@ -190,9 +185,8 @@ wedding_consorts_envy_modifier = {
 
 wedding_peasants_connections_county_modifier = {
 	icon = county_modifier_opinion_positive
-	county_opinion_add = 5 # THE MOD
-
-	development_growth_factor = 0.2
+	popular_opinion_add = 5
+	prosperity_growth_factor = 0.2
 	county_fertility_growth_mult = tiny_county_fertility_growth_gain
 }
 
@@ -247,28 +241,23 @@ ep2_wedding_ewan_0041_attraction_modifier = {
 
 ep2_wedding_ewan_0051_snooty_modifier = {
 	icon = bird_mixed
-	courtly_opinion = 15 # THE MOD
-
+	courtly_opinion = 15
 	parochial_opinion = -10
 }
 
 ep2_wedding_ewan_0051_approachable_modifier = {
 	icon = dog_mixed
-	parochial_opinion = 15 # THE MOD
-
-	minority_opinion = 5 # THE MOD
-
-	barons_and_minor_landholders_opinion = 5 # THE MOD
-
+	parochial_opinion = 15
+	minority_opinion = 5
+	barons_and_minor_landholders_opinion = 5
 	courtly_opinion = -10
 }
 
 ruler_married_here_county_modifier = {
 	icon = county_modifier_opinion_positive
-	county_opinion_add = 5 # THE MOD
-
-	development_growth_factor = medium_development_growth_gain
-	development_growth = 0.1
+	popular_opinion_add = 5
+	prosperity_growth_factor = medium_prosperity_growth_gain
+	prosperity_growth = 0.1
 	county_fertility_growth_mult = small_county_fertility_growth_gain
 }
 
@@ -286,7 +275,6 @@ wedding_severe_host_modifier = {
 
 wedding_social_drinker_modifier = {
 	icon = social_mixed
-	courtly_opinion = 3 # THE MOD
-
+	courtly_opinion = 3
 	monthly_income_mult = -0.01
 }

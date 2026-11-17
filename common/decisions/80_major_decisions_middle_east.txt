@@ -7,6 +7,7 @@ create_outremer_empire_decision = {
 	desc = create_outremer_empire_decision_desc
 	selection_tooltip = create_outremer_empire_decision_tooltip
 	decision_group_type = major
+	sort_order = 120
 
 	ai_check_interval_by_tier = {
 		barony = 0
@@ -90,20 +91,15 @@ create_outremer_empire_decision = {
 	}
 }
 
-
 ### Restore the Ash'ari Caliphate ###
 restore_sunni_caliphate_decision = {
-
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
 	}
-
 	desc = restore_sunni_caliphate_decision_desc
-
 	selection_tooltip = restore_sunni_caliphate_decision_tooltip
-
 	decision_group_type = major
-
+	sort_order = 100
 
 	ai_check_interval_by_tier = {
 		barony = 0
@@ -114,7 +110,6 @@ restore_sunni_caliphate_decision = {
 		hegemony = 120
 	}
 
-
 	is_shown = {
 		highest_held_title_tier > 3 #Only Kings and Emperors
 		faith ?= faith:sunni
@@ -123,22 +118,13 @@ restore_sunni_caliphate_decision = {
 		is_ruler = yes
 	}
 
-
 	is_valid = {
-
 		completely_controls = title:c_mecca
-
 		completely_controls = title:d_medina
-
 		completely_controls = title:d_shammar
-
 		completely_controls = title:d_palestine
-
 		completely_controls = title:d_oultrejourdain
-
-	
-}
-
+	}
 
 	is_valid_showing_failures_only = {
 		is_landed = yes
@@ -146,7 +132,6 @@ restore_sunni_caliphate_decision = {
 		is_imprisoned = no
 		top_liege = this
 	}
-
 
 	effect = {
 		custom_tooltip = restore_sunni_caliphate_decision_effect_tooltip
@@ -158,11 +143,9 @@ restore_sunni_caliphate_decision = {
 		}
 	}
 
-
 	ai_potential = {
 		always = yes
 	}
-
 
 	ai_will_do = { #Always do it when possible.
 		base = 100
@@ -174,10 +157,7 @@ restore_sunni_caliphate_decision = {
 			has_trait = cynical
 		}
 	}
-
-
 }
-
 
 ### Embrace Outremer Culture ###
 embrace_outremer_culture_decision = {
@@ -187,6 +167,7 @@ embrace_outremer_culture_decision = {
 	desc = embrace_outremer_culture_decision_desc
 	selection_tooltip = embrace_outremer_culture_decision_tooltip
 	decision_group_type = major
+	sort_order = 100
 
 	ai_check_interval_by_tier = {
 		barony = 0
@@ -302,7 +283,6 @@ embrace_outremer_culture_decision = {
 	}
 }
 
-
 ### Restore Israel ###
 create_israel_kingdom_decision = {
 	picture = {
@@ -311,6 +291,7 @@ create_israel_kingdom_decision = {
 	desc = create_israel_kingdom_decision_desc
 	selection_tooltip = create_israel_kingdom_decision_tooltip
 	decision_group_type = major
+	sort_order = 110
 
 	ai_check_interval_by_tier = {
 		barony = 0
@@ -322,7 +303,8 @@ create_israel_kingdom_decision = {
 	}
 
 	is_shown = {
-		faith.religion ?= faith:rabbinic_faith.religion
+		is_landed = yes
+		is_ruler = yes
 		is_playable_character = yes
 		NOR = {
 			exists = title:k_israel.holder
@@ -332,7 +314,7 @@ create_israel_kingdom_decision = {
 				target = flag:create_israel_kingdom
 			}
 		}
-		is_ruler = yes
+		faith.religion ?= faith:rabbinic_faith.religion
 	}
 
 	is_valid = {
@@ -348,7 +330,6 @@ create_israel_kingdom_decision = {
 	}
 
 	is_valid_showing_failures_only = {
-		is_landed = yes
 		is_capable_adult = yes
 		is_imprisoned = no
 		top_liege = this
@@ -385,7 +366,6 @@ create_israel_kingdom_decision = {
 	}
 }
 
-
 ### Restore the [ROOT.Char.GetFaith.GetAdjectiveNoTooltip] High Priesthood ###
 jewish_restore_high_priesthood_decision = {
 	picture = {
@@ -394,6 +374,7 @@ jewish_restore_high_priesthood_decision = {
 	desc = jewish_restore_high_priesthood_decision_desc
 	selection_tooltip = jewish_restore_high_priesthood_decision_tooltip
 	decision_group_type = major
+	sort_order = 100
 
 	ai_check_interval_by_tier = {
 		barony = 0
@@ -456,7 +437,6 @@ jewish_restore_high_priesthood_decision = {
 		base = 100
 	}
 }
-
 
 ### Restore the [ROOT.Char.GetFaith.AltPriestTermPlural] ###
 zoroastrian_restore_high_priesthood_decision = { #Updated for FP3 by Ola
@@ -537,7 +517,6 @@ zoroastrian_restore_high_priesthood_decision = { #Updated for FP3 by Ola
 	}
 }
 
-
 ### Become the Saoshyant ###
 become_saoshyant_decision = {
 	picture = {
@@ -607,7 +586,6 @@ become_saoshyant_decision = {
 	}
 }
 
-
 #Refound the long-lapsed & short-lived Armenian Empire - by Ewan Cowhig Croft
 ### Revive Greater Armenia ###
 create_armenian_empire_decision = {
@@ -617,6 +595,7 @@ create_armenian_empire_decision = {
 	desc = create_armenian_empire_decision_desc
 	selection_tooltip = create_armenian_empire_decision_tooltip
 	decision_group_type = major
+	sort_order = 120
 
 	ai_check_interval = 0
 
@@ -640,6 +619,14 @@ create_armenian_empire_decision = {
 				name = unavailable_unique_decisions
 				target = flag:flag_created_armenian_empire
 			}
+		}
+		OR = {
+			government_has_flag = government_is_feudal
+			government_has_flag = government_is_republic
+			government_has_flag = government_is_clan
+			government_has_mechanic = administrative
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_merchant
 		}
 	}
 
@@ -697,7 +684,6 @@ create_armenian_empire_decision = {
 	}
 }
 
-
 #################################
 # Found the Empire of Beth Nahrain
 # by Anna Johansson
@@ -709,6 +695,7 @@ found_empire_of_beth_nahrain_decision = {
 		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
 	}
 	decision_group_type = major
+	sort_order = 120
 
 	ai_check_interval_by_tier = {
 		barony = 0
@@ -726,6 +713,10 @@ found_empire_of_beth_nahrain_decision = {
 	is_shown = {
 		is_ruler = yes
 		is_playable_character = yes
+		capital_province ?= { geographical_region = world_middle_east }
+
+		culture = { has_cultural_pillar = heritage_syriac }
+
 		any_sub_realm_county = {
 			OR = {
 				faith ?= faith:nestorian
@@ -753,7 +744,6 @@ found_empire_of_beth_nahrain_decision = {
 	is_valid = {
 		is_independent_ruler = yes
 		highest_held_title_tier = tier_kingdom
-		culture = { has_cultural_pillar = heritage_syriac }
 		custom_tooltip = {
 			text = completely_controls_jazira_mesopotamia_tt
 			completely_controls = title:k_jazira
@@ -894,7 +884,6 @@ found_empire_of_beth_nahrain_decision = {
 	}
 }
 
-
 ##############
 # Dar al-Islam
 ##############
@@ -912,15 +901,16 @@ create_dar_al_islam_decision = {
 	sort_order = 1000 # Should be at the very top
 
 	is_shown = {
-		# Only for Islamic head of faiths
+		is_landed = yes
 		faith.religion ?= religion:islam_religion
 		# And only if it hasn't been created yet
 		NOT = { has_global_variable = created_dar_al_islam }
 	}
 	is_valid = {
+		# Only for Islamic head of faiths
+		faith = { religious_head ?= root }
 		# The basics
 		is_independent_ruler = yes
-		faith.religious_head ?= root
 		any_held_title = {
 			count >= 2
 			tier >= tier_empire
@@ -1014,4 +1004,3 @@ create_dar_al_islam_decision = {
 		base = 100
 	}
 }
-

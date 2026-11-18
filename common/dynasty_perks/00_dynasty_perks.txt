@@ -125,7 +125,7 @@ warfare_legacy_4 = { # Inherited Tactics
 
 	character_modifier = {
 		counter_efficiency = 0.15
-		advantage = 5
+		advantage = 2
 	}
 }
 
@@ -133,11 +133,8 @@ warfare_legacy_5 = { # Private Army
 	legacy = warfare_legacy_track
 
 	character_modifier = {
-	}
-	effect = {
-		custom_description_no_bullet = {
-			text = warfare_legacy_5_unlock_effect
-		}
+		maa_toughness_mult = 0.10
+		men_at_arms_maintenance = -0.10
 	}
 }
 

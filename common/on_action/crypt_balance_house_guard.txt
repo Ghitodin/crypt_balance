@@ -1,0 +1,15 @@
+﻿# Remove House Guard regiments carried over from older saves.
+on_game_start_after_lobby = { on_actions = { crypt_balance_remove_house_guard_regiments } }
+yearly_global_pulse = { on_actions = { crypt_balance_remove_house_guard_regiments } }
+
+crypt_balance_remove_house_guard_regiments = {
+	effect = {
+		every_ruler = {
+			limit = { any_maa_regiment = { is_maa_type = house_guard } }
+			every_maa_regiment = {
+				limit = { is_maa_type = house_guard }
+				destroy_maa_regiment = yes
+			}
+		}
+	}
+}

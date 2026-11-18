@@ -639,15 +639,7 @@ handgunners = {
 # Special
 house_guard = {
 	type = heavy_infantry
-	can_recruit = {
-		dynasty ?= {
-			has_dynasty_perk = warfare_legacy_5
-		}
-		NOR = {
-			government_has_flag = government_is_merchant
-			culture = { has_cultural_parameter = strength_in_numbers_heavy_maa_ban }
-		}
-	}
+	can_recruit = { always = no }
 
 	damage = 40
 	toughness = 32

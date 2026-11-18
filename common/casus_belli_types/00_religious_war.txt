@@ -335,6 +335,7 @@ religious_war = {
 
 	# Additional requirements to the defines in 00_casus_belli_groups.txt
 	allowed_for_character = {
+		scope:attacker.highest_held_title_tier >= tier_duchy
 		scope:attacker.faith = {
 			NOR = {
 				has_doctrine_parameter = unreformed

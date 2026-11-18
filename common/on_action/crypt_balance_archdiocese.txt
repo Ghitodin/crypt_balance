@@ -1,0 +1,29 @@
+﻿# The outgoing archbishop's death hook runs before the title transfer.
+on_death = { on_actions = { crypt_balance_capture_archdiocese_succession } }
+
+crypt_balance_capture_archdiocese_succession = {
+	trigger = {
+		primary_title ?= {
+			tier = tier_duchy
+			has_clerical_region = yes
+			is_head_of_faith = no
+		}
+		NOT = { any_held_county = { always = yes } }
+		primary_heir ?= {
+			government_has_flag = government_is_ecclesiastical
+			primary_title ?= { tier = tier_county }
+			liege ?= {
+				this != prev
+				highest_held_title_tier > tier_duchy
+			}
+		}
+	}
+	effect = {
+		primary_title = { save_scope_as = crypt_balance_archdiocese }
+		primary_heir = {
+			primary_title = { save_scope_as = crypt_balance_archdiocese_heir_county }
+			liege = { save_scope_as = crypt_balance_archdiocese_previous_liege }
+			trigger_event = { id = crypt_balance_archdiocese.0001 days = 1 }
+		}
+	}
+}

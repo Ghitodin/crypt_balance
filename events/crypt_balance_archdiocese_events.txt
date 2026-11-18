@@ -1,0 +1,22 @@
+﻿namespace = crypt_balance_archdiocese
+
+crypt_balance_archdiocese.0001 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		is_alive = yes
+		government_has_flag = government_is_ecclesiastical
+		is_independent_ruler = yes
+		primary_title ?= { this = scope:crypt_balance_archdiocese }
+		scope:crypt_balance_archdiocese_heir_county.holder ?= { this = root }
+		scope:crypt_balance_archdiocese_previous_liege ?= {
+			is_alive = yes
+			highest_held_title_tier > root.highest_held_title_tier
+			NOT = { is_at_war_with = root }
+		}
+	}
+	immediate = {
+		crypt_balance_restore_archdiocese_liege_effect = yes
+	}
+}

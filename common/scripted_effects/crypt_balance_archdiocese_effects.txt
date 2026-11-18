@@ -1,0 +1,12 @@
+﻿crypt_balance_restore_archdiocese_liege_effect = {
+	create_title_and_vassal_change = {
+		type = granted
+		save_scope_as = crypt_balance_archdiocese_liege_change
+		add_claim_on_loss = no
+	}
+	change_liege = {
+		liege = scope:crypt_balance_archdiocese_previous_liege
+		change = scope:crypt_balance_archdiocese_liege_change
+	}
+	resolve_title_and_vassal_change = scope:crypt_balance_archdiocese_liege_change
+}

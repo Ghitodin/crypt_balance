@@ -21,6 +21,10 @@
 @respected_culture_for_maa_type_value = 100
 @disinterested_culture_for_maa_type_value = -100
 
+@number_maa_regiments_increment_1 = 1
+@number_maa_regiments_increment_2 = 2
+@number_maa_regiments_increment_3 = 3
+@number_maa_regiments_increment_4 = 4
 
 @accolade_maa_maint_1 = -0.03
 @accolade_maa_maint_2 = -0.04

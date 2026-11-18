@@ -427,23 +427,6 @@
 		on_victory_claim_cb_effect = yes
 
 		# Attacker gets Prestige Experience, Defender loses Prestige, all other participants gain Prestige based on their war contribution.
-		else_if = {
-			limit = {
-				scope:claimant != scope:attacker
-				scope:attacker = {
-					can_add_hook = {
-					  	type = favor_hook
-					  	target = scope:claimant
-					}
-				}
-			}
-			scope:attacker = {
-				add_hook = {
-		  			target = scope:claimant
-		  			type = favor_hook
-		 		}
-			}
-		}
 		modify_all_participants_fame_values = {
 			WINNER = scope:attacker
 			LOSER = scope:defender

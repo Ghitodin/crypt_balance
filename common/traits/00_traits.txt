@@ -122,6 +122,7 @@ education_intrigue_5 = {
 	monthly_intrigue_lifestyle_xp_gain_mult = 0.3
 	monthly_diplomacy_lifestyle_xp_gain_mult = 0.1
 	owned_hostile_scheme_success_chance_max_add = 10
+	flag = agent_acceptance_25
 	governor_efficiency_add = 0.04
 	
 	ruler_designer_cost = 150
@@ -284,6 +285,8 @@ education_diplomacy_5 = {
 	monthly_diplomacy_lifestyle_xp_gain_mult = 0.3
 	monthly_martial_lifestyle_xp_gain_mult = 0.1
 	owned_personal_scheme_success_chance_max_add = 10
+	flag = offer_vassalisation_25
+	flag = better_war_hostages
 	governor_efficiency_add = 0.04
 	
 	ruler_designer_cost = 150

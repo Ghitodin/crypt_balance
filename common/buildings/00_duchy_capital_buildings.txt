@@ -3791,10 +3791,9 @@ military_academy_01 = {
 	cost_gold = expensive_building_tier_3_cost
 
 	character_modifier = {
-		knight_limit = 1
-		knight_effectiveness_mult = 0.10
+		knight_limit = 2
+		knight_effectiveness_mult = 0.04
 		men_at_arms_recruitment_cost = -0.1
-		prowess = 2 # THE MOD
 	}
 	duchy_capital_county_modifier = {
 		stationed_maa_maintenance_low_modifier = -0.025
@@ -3808,7 +3807,7 @@ military_academy_01 = {
 	flag = duchy_building
 
 	ai_value = {
-		base = 30
+		base = 10
 		ai_capital_preference_modifier = yes
 		ai_duchy_district_building_modifier = { LEVEL = 1 }
 	}
@@ -3832,10 +3831,9 @@ military_academy_02 = {
 	cost_gold = expensive_building_tier_4_cost
 
 	character_modifier = {
-		knight_limit = 2
-		knight_effectiveness_mult = 0.15
+		knight_limit = 3
+		knight_effectiveness_mult = 0.08
 		men_at_arms_recruitment_cost = -0.15
-		prowess = 3 # THE MOD
 	}
 	duchy_capital_county_modifier = {
 		stationed_maa_maintenance_low_modifier = -0.03
@@ -3847,7 +3845,7 @@ military_academy_02 = {
 	flag = duchy_building
 
 	ai_value = {
-		base = 30
+		base = 10
 		ai_capital_preference_modifier = yes
 		ai_duchy_district_building_modifier = { LEVEL = 2 }
 	}
@@ -3871,10 +3869,9 @@ military_academy_03 = {
 	cost_gold = expensive_building_tier_4_cost
 
 	character_modifier = {
-		knight_limit = 3
-		knight_effectiveness_mult = 0.2
+		knight_limit = 4
+		knight_effectiveness_mult = 0.12
 		men_at_arms_recruitment_cost = -0.2
-		prowess = 4 # THE MOD
 	}
 	duchy_capital_county_modifier = {
 		stationed_maa_maintenance_low_modifier = -0.035
@@ -3886,7 +3883,7 @@ military_academy_03 = {
 	flag = duchy_building
 
 	ai_value = {
-		base = 30
+		base = 10
 		ai_capital_preference_modifier = yes
 		ai_duchy_district_building_modifier = { LEVEL = 3 }
 	}
@@ -3913,7 +3910,6 @@ military_academy_04 = {
 		knight_limit = 5
 		knight_effectiveness_mult = 0.16
 		men_at_arms_recruitment_cost = -0.25
-		men_at_arms_limit = 2
 	}
 	duchy_capital_county_modifier = {
 		stationed_maa_maintenance_low_modifier = -0.0425
@@ -3952,7 +3948,6 @@ military_academy_05 = {
 		knight_limit = 6
 		knight_effectiveness_mult = 0.2
 		men_at_arms_recruitment_cost = -0.3
-		men_at_arms_limit = 3
 	}
 	duchy_capital_county_modifier = {
 		stationed_maa_maintenance_low_modifier = -0.05

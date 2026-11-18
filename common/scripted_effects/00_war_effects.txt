@@ -2350,12 +2350,6 @@ pay_short_term_gold_reparations_effect = {
 			value = {
 				value = medium_gold_value
 				multiply = $GOLD_VALUE$
-				if = {
-					limit= {
-						scope:defender.culture = { has_cultural_parameter = more_gold_for_successful_defensive_wars }
-					}
-					multiply = 2
-				}
 				max = reparations_max_payment_value
 			}
 		}
@@ -2365,12 +2359,6 @@ pay_short_term_gold_reparations_effect = {
 			target = scope:defender
 			value = {
 				value = $GOLD_VALUE$
-				if = {
-					limit = {
-						scope:defender.culture = { has_cultural_parameter = more_gold_for_successful_defensive_wars }
-					}
-					multiply = 2
-				}
 				multiply = yearly_character_income # STANDARD
 				max = reparations_max_payment_value
 			}
@@ -2386,14 +2374,6 @@ pay_short_term_gold_reparations_prefer_greater_income_effect = {
 				value = scope:defender.yearly_character_income
 				multiply = {
 					add = $FACTOR$
-					if = {
-						limit= {
-							scope:defender.culture = {
-								has_cultural_parameter = more_gold_for_successful_defensive_wars
-							}
-						}
-						multiply = 2
-					}
 				}
 				max = reparations_max_gold_payment_value
 			}
@@ -2406,14 +2386,6 @@ pay_short_term_gold_reparations_prefer_greater_income_effect = {
 				value = yearly_character_income
 				multiply = {
 					add = $FACTOR$
-					if = {
-						limit= {
-							scope:defender.culture = {
-								has_cultural_parameter = more_gold_for_successful_defensive_wars
-							}
-						}
-						multiply = 2
-					}
 				}
 				max = reparations_max_gold_payment_value
 			}

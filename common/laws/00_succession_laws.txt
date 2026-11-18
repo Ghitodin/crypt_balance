@@ -266,10 +266,6 @@ single_heir_succession_law = {
 			}
 		}
 	}
-	can_title_have = {
-		# Ceremonial Regent
-		NOT = { exists = var:administrative_ui_special_title.holder }
-	}
 	can_have = {
 		NOR = {
 			government_has_flag = government_is_nomadic
@@ -491,7 +487,7 @@ single_heir_dynasty_house = { # LAST CALL
 	can_keep = {
 		trigger_if = {
 			limit = { has_realm_law = single_heir_dynasty_house }
-			has_variable = kek # THE MOD
+			always = no # Crypt Balance disables House Seniority.
 		}
 		can_keep_single_heir_dynasty_house_trigger = yes
 		# Vassal Contract allows it
@@ -509,11 +505,11 @@ single_heir_dynasty_house = { # LAST CALL
 			government_has_flag = government_is_landless_adventurer
 			government_has_flag = government_is_merchant
 		}
-		has_variable = kek # THE MOD
+		always = no # Crypt Balance disables House Seniority.
 		can_have_single_heir_dynasty_house_trigger = yes
 	}
 	can_pass = {
-		has_variable = kek # THE MOD
+		always = no # Crypt Balance disables House Seniority.
 		can_change_single_heir_dynasty_house_succession_law_trigger = yes
 		trigger_if = {
 			limit = {
@@ -523,7 +519,7 @@ single_heir_dynasty_house = { # LAST CALL
 		}
 	}
 	should_start_with = {
-		has_variable = kek # THE MOD
+		always = no # Crypt Balance disables House Seniority.
 		historical_succession_access_single_heir_dynasty_house_trigger = yes
 		NOT = { government_has_mechanic = administrative }
 	}

@@ -67,7 +67,7 @@ historical_succession_access_single_heir_succession_law_youngest_trigger = {
 }
 
 historical_succession_access_single_heir_dynasty_house_trigger = {
-	has_variable = kek # THE MOD
+	always = no # Crypt Balance disables House Seniority.
 	NOT = { government_has_mechanic = administrative }
 	AND = {
 		has_title = title:d_bohemia

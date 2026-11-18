@@ -1187,7 +1187,7 @@ tradition_roman_legacy = {
 	}
 	character_modifier = {
 		levy_size = -0.2
-		men_at_arms_recruitment_cost = -0.15
+		men_at_arms_recruitment_cost = -0.1
 		men_at_arms_maintenance = -0.15
 		levy_reinforcement_rate = -0.20
 		heavy_infantry_max_size_add = 1

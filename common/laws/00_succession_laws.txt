@@ -266,6 +266,10 @@ single_heir_succession_law = {
 			}
 		}
 	}
+	can_title_have = {
+		# Ceremonial Regent
+		NOT = { exists = var:administrative_ui_special_title.holder }
+	}
 	can_have = {
 		NOR = {
 			government_has_flag = government_is_nomadic

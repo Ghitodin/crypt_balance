@@ -1,4 +1,4 @@
-on_game_start_after_lobby = { on_actions = { crypt_balance_start_existing_camp_upkeep } }
+﻿on_game_start_after_lobby = { on_actions = { crypt_balance_start_existing_camp_upkeep } }
 yearly_global_pulse = { on_actions = { crypt_balance_start_existing_camp_upkeep } }
 quarterly_playable_pulse = { on_actions = { crypt_balance_start_camp_upkeep } }
 on_government_change = { on_actions = { crypt_balance_start_camp_upkeep } }

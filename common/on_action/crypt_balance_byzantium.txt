@@ -1,4 +1,4 @@
-on_game_start = {
+﻿on_game_start = {
     on_actions = { crypt_balance_byzantium_feudal_start }
 }
 on_game_start_after_lobby = {

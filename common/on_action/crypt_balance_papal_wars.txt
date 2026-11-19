@@ -1,4 +1,4 @@
-on_game_start_after_lobby = { on_actions = { crypt_balance_refresh_papal_war_restriction } }
+﻿on_game_start_after_lobby = { on_actions = { crypt_balance_refresh_papal_war_restriction } }
 yearly_global_pulse = { on_actions = { crypt_balance_refresh_papal_war_restriction } }
 quarterly_playable_pulse = { on_actions = { crypt_balance_apply_papal_war_restriction } }
 on_title_gain = { on_actions = { crypt_balance_apply_papal_war_restriction } }

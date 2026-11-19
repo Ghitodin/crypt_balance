@@ -1,4 +1,4 @@
-crypt_balance_monthly_camp_upkeep_value = {
+﻿crypt_balance_monthly_camp_upkeep_value = {
 	value = 0
 	every_maa_regiment = {
 		limit = { is_personal_maa_regiment = yes }

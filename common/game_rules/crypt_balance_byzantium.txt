@@ -1,4 +1,4 @@
-crypt_balance_byzantium_government_867 = {
+﻿crypt_balance_byzantium_government_867 = {
     categories = { historicity }
     default = crypt_balance_byzantium_867_administrative
 

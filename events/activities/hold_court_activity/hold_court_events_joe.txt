@@ -513,7 +513,7 @@ hold_court.8300 = {
 			add_opinion = {
 				target = root
 				modifier = pleased_opinion
-				opinion = 15
+				opinion = 8
 			}
 		}
 		stress_and_fulfillment_impact = {
@@ -560,7 +560,7 @@ hold_court.8300 = {
 			add_opinion = {
 				target = root
 				modifier = pleased_opinion
-				opinion = 15
+				opinion = 8
 			}
 		}
 		stress_and_fulfillment_impact = {
@@ -587,7 +587,7 @@ hold_court.8300 = {
 			add_opinion = {
 				target = root
 				modifier = pleased_opinion
-				opinion = 15
+				opinion = 8
 			}
 		}
 		stress_and_fulfillment_impact = {
@@ -1252,7 +1252,7 @@ hold_court.8320 = {
 		reverse_add_opinion = {
 			target = scope:probate_priest
 			modifier = grateful_opinion
-			opinion = 30
+			opinion = 15
 		}
 		scope:probate_vassal = {
 			add_opinion = {
@@ -1406,7 +1406,7 @@ hold_court.8320 = {
 		name = hold_court.8320.d
 		reverse_add_opinion = {
 			modifier = grateful_opinion
-			opinion = 15
+			opinion = 8
 			target = scope:probate_vassal
 		}
 		every_vassal = {
@@ -1572,7 +1572,7 @@ scripted_effect hold_court_8330_add_opinion_effect = {
 			add_opinion = {
 				target = root
 				modifier = pleased_opinion
-				opinion = 10
+				opinion = 5
 			}
 		}
 	}
@@ -1765,12 +1765,12 @@ hold_court.8330 = {
 					reverse_add_opinion = {
 						target = scope:vassal_1
 						modifier = flattered_opinion
-						opinion = 15
+						opinion = 8
 					}
 					reverse_add_opinion = {
 						target = scope:vassal_2
 						modifier = flattered_opinion
-						opinion = 15
+						opinion = 8
 					}
 				}
 			}
@@ -1827,7 +1827,7 @@ hold_court.8330 = {
 		reverse_add_opinion = {
 			target = scope:vassal_1
 			modifier = pleased_opinion
-			opinion = 10
+			opinion = 5
 		}
 		scope:vassal_2 = { hold_court_8330_remove_opinion_stance_effect = yes }
 		hold_court_8330_stress_effect = { VASSAL = scope:vassal_2 }
@@ -1864,7 +1864,7 @@ hold_court.8330 = {
 		reverse_add_opinion = {
 			target = scope:vassal_2
 			modifier = pleased_opinion
-			opinion = 10
+			opinion = 5
 		}
 		scope:vassal_1 = { hold_court_8330_remove_opinion_stance_effect = yes }
 		hold_court_8330_stress_effect = { VASSAL = scope:vassal_1 }

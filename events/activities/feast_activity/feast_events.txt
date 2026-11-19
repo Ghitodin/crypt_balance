@@ -1932,7 +1932,7 @@ scripted_effect feast_7201_give_goh_prestige_effect = {
 		add_opinion = {
 			target = scope:host
 			modifier = pleased_opinion
-			opinion = 30
+			opinion = 15
 		}
 	}
 }
@@ -2468,7 +2468,7 @@ feast.7202 = {
 		add_opinion = {
 			target = scope:host
 			modifier = pleased_opinion
-			opinion = 30
+			opinion = 15
 		}
 
 		stress_and_fulfillment_impact = {
@@ -3096,7 +3096,7 @@ feast.7205 = {
 			add_opinion = {
 				target = root
 				modifier = pleased_opinion
-				opinion = 30
+				opinion = 15
 			}
 		}
 		stress_and_fulfillment_impact = {

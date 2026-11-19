@@ -788,7 +788,7 @@ feast_events_ewan.0201 = {
 		reverse_add_opinion = {
 			target = scope:intent_target
 			modifier = relieved_opinion
-			opinion = 20
+			opinion = 10
 		}
 
 		stress_and_fulfillment_impact = {
@@ -994,7 +994,7 @@ feast_events_ewan.0401 = {
 					reverse_add_opinion = {
 						target = scope:intent_target
 						modifier = friendliness_opinion
-						opinion = 30
+						opinion = 15
 					}
 				}
 			}
@@ -1061,7 +1061,7 @@ feast_events_ewan.0401 = {
 		reverse_add_opinion = {
 			target = scope:activity.activity_host
 			modifier = pleased_opinion
-			opinion = 25
+			opinion = 13
 		}
 		# But scope:intent_target is a tad upset.
 		reverse_add_opinion = {
@@ -1836,7 +1836,7 @@ feast_events_ewan.0801 = {
 				add_opinion = {
 					target = root
 					modifier = friendliness_opinion
-					opinion = 20
+					opinion = 10
 				}
 			}
 		}

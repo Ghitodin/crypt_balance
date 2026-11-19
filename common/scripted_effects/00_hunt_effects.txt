@@ -1956,6 +1956,7 @@ hunt_animal_bow_kill_effect = {
 									add_opinion = {
 										target = scope:host
 										modifier = obedience_opinion
+										opinion = 15
 									}
 								}
 							}
@@ -2298,6 +2299,7 @@ hunt_animal_slayer_bow_opinion_effect = {
 						add_opinion = {
 							target = scope:host
 							modifier = obedience_opinion
+							opinion = 15
 						}
 					}
 				}
@@ -2314,7 +2316,7 @@ hunt_animal_slayer_bow_opinion_effect = {
 		add_opinion = {
 			target = scope:host
 			modifier = hunt_honored_with_kill_opinion
-			opinion = 15
+			opinion = 8
 		}
 	}
 	else_if = {
@@ -2327,14 +2329,14 @@ hunt_animal_slayer_bow_opinion_effect = {
 		add_opinion = {
 			target = scope:host
 			modifier = hunt_honored_with_kill_opinion
-			opinion = 5
+			opinion = 3
 		}
 	}
 	else = {
 		add_opinion = {
 			target = scope:host
 			modifier = hunt_honored_with_kill_opinion
-			opinion = 10
+			opinion = 5
 		}
 	}
 }
@@ -2400,6 +2402,7 @@ hunt_animal_slayer_melee_opinion_effect = {
 						add_opinion = {
 							target = scope:host
 							modifier = obedience_opinion
+							opinion = 15
 						}
 					}
 				}
@@ -2418,7 +2421,7 @@ hunt_animal_slayer_melee_opinion_effect = {
 		add_opinion = {
 			target = scope:host
 			modifier = hunt_honored_with_kill_opinion
-			opinion = 10
+			opinion = 5
 		}
 	}
 }
@@ -2479,6 +2482,7 @@ activity_improve_relations_intent_effect = {
 					add_opinion = {
 						target = scope:host
 						modifier = obedience_opinion
+						opinion = 15
 					}
 				}
 			}
@@ -2488,6 +2492,7 @@ activity_improve_relations_intent_effect = {
 		limit = {
 			NOT = { this = $CHARACTER$ }
 		}
+		save_temporary_scope_value_as = { name = crypt_balance_activity_opinion value = $OPINION$ }
 		reverse_add_opinion = {
 			modifier = $MODIFIER$
 			opinion = $OPINION$
@@ -3121,13 +3126,13 @@ hunt_physician_treatment_effect = {
 								add_opinion = {
 									target = scope:host
 									modifier = grateful_opinion
-									opinion = 10
+									opinion = 5
 								}
 							}
 							add_opinion = {
 								target = scope:physician
 								modifier = grateful_opinion
-								opinion = 10
+								opinion = 5
 							}
 						}
 					}
@@ -3382,7 +3387,7 @@ hunt_murder_confession_opinion_effect = {
 			add_opinion = {
 				modifier = cruelty_opinion
 				target = root
-				opinion = 10
+				opinion = 5
 			}
 		}
 	}

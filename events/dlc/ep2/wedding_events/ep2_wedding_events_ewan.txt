@@ -85,7 +85,7 @@ scripted_effect ep2_wedding_ewan_0000_host_approves_effect = {
 		reverse_add_opinion = {
 			target = scope:activity.activity_host
 			modifier = friendliness_opinion
-			opinion = 15
+			opinion = 8
 		}
 	}
 }
@@ -2750,7 +2750,7 @@ ep2_wedding_ewan.0021 = {
 		reverse_add_opinion = {
 			target = scope:intent_target
 			modifier = flattered_opinion
-			opinion = 30
+			opinion = 15
 		}
 		
 		if = {
@@ -2861,7 +2861,7 @@ scripted_effect ep2_wedding_ewan_0031_make_friend_effect = {
 	reverse_add_opinion = {
 		target = $TARGET$
 		modifier = friendliness_opinion
-		opinion = 15
+		opinion = 8
 	}
 }
 
@@ -3438,12 +3438,12 @@ ep2_wedding_ewan.0041 = {
 		reverse_add_opinion = {
 			target = scope:spouse_1
 			modifier = kindness_opinion
-			opinion = 30
+			opinion = 15
 		}
 		reverse_add_opinion = {
 			target = scope:spouse_2
 			modifier = kindness_opinion
-			opinion = 30
+			opinion = 15
 		}
 
 		stress_and_fulfillment_impact = {
@@ -3476,7 +3476,7 @@ ep2_wedding_ewan.0041 = {
 			reverse_add_opinion = {
 				target = scope:host
 				modifier = pleased_opinion
-				opinion = 20
+				opinion = 10
 			}
 		}
 		# Annoy the spouses.
@@ -3553,7 +3553,7 @@ ep2_wedding_ewan.0041 = {
 					reverse_add_opinion = {
 						target = scope:intent_target
 						modifier = flustered_opinion
-						opinion = 20
+						opinion = 10
 					}
 					# If possible, they grow interested in you.
 					if = {
@@ -3651,7 +3651,7 @@ ep2_wedding_ewan.0041 = {
 							reverse_add_opinion = {
 								target = root
 								modifier = respect_opinion
-								opinion = 20
+								opinion = 10
 							}
 						}
 					}
@@ -3700,7 +3700,7 @@ ep2_wedding_ewan.0041 = {
 		reverse_add_opinion = {
 			target = scope:intent_target
 			modifier = pleased_opinion
-			opinion = 20
+			opinion = 10
 		}
 		# Plus they get a neat modifier.
 		scope:intent_target = {
@@ -3795,12 +3795,12 @@ ep2_wedding_ewan.0041 = {
 		reverse_add_opinion = {
 			target = scope:spouse_1
 			modifier = kindness_opinion
-			opinion = 10
+			opinion = 5
 		}
 		reverse_add_opinion = {
 			target = scope:spouse_2
 			modifier = kindness_opinion
-			opinion = 10
+			opinion = 5
 		}
 
 		# We most give base stress loss for this'un.
@@ -4381,7 +4381,7 @@ ep2_wedding_ewan.0051 = {
 					reverse_add_opinion = {
 						target = scope:dolt
 						modifier = friendliness_opinion
-						opinion = 50
+						opinion = 25
 					}
 				}
 			}
@@ -4425,7 +4425,7 @@ ep2_wedding_ewan.0051 = {
 				add_opinion = {
 					target = root
 					modifier = respect_opinion
-					opinion = 20
+					opinion = 10
 				}
 			}
 		}
@@ -4509,7 +4509,7 @@ ep2_wedding_ewan.0051 = {
 				reverse_add_opinion = {
 					target = root
 					modifier = respect_opinion
-					opinion = 30
+					opinion = 15
 				}
 			}
 		}
@@ -4791,7 +4791,7 @@ ep2_wedding_ewan.0051 = {
 		reverse_add_opinion = {
 			target = scope:dolt
 			modifier = friendliness_opinion
-			opinion = 40
+			opinion = 20
 		}
 		# Try to give a hook - they're likely uninteresting (y'know, inherently), which is why we put this in the opt-out.
 		if = {
@@ -5067,7 +5067,7 @@ ep2_wedding_ewan.0052 = {
 				add_opinion = {
 					target = root
 					modifier = grateful_opinion
-					opinion = 50 
+					opinion = 25
 				}
 			}
 		}
@@ -5096,7 +5096,7 @@ ep2_wedding_ewan.0052 = {
 				add_opinion = {
 					target = root
 					modifier = grateful_opinion
-					opinion = 50 
+					opinion = 25
 				}
 			}
 		}
@@ -5282,7 +5282,7 @@ ep2_wedding_ewan.0053 = {
 				add_opinion = {
 					target = root
 					modifier = kindness_opinion
-					opinion = 30
+					opinion = 15
 				}
 			}
 		}
@@ -5587,7 +5587,7 @@ ep2_wedding_ewan.0061 = {
 		reverse_add_opinion = {
 			target = scope:relative
 			modifier = grateful_opinion
-			opinion = 40
+			opinion = 20
 		}
 
 		stress_and_fulfillment_impact = {
@@ -5649,7 +5649,7 @@ ep2_wedding_ewan.0061 = {
 		reverse_add_opinion = {
 			target = scope:relative
 			modifier = grateful_opinion
-			opinion = 40
+			opinion = 20
 		}
 
 		stress_and_fulfillment_impact = {
@@ -5683,7 +5683,7 @@ ep2_wedding_ewan.0061 = {
 				reverse_add_opinion = {
 					target = root
 					modifier = commiseration_opinion
-					opinion = 15
+					opinion = 8
 				}
 			}
 		}
@@ -5758,7 +5758,7 @@ ep2_wedding_ewan.0061 = {
 		reverse_add_opinion = {
 			target = scope:oldling
 			modifier = compliment_opinion
-			opinion = 40
+			opinion = 20
 		}
 
 		# We give base stress loss for this'un too.
@@ -5854,7 +5854,7 @@ ep2_wedding_ewan.0061 = {
 		reverse_add_opinion = {
 			target = scope:oldling
 			modifier = compliment_opinion
-			opinion = 10
+			opinion = 5
 		}
 
 		stress_and_fulfillment_impact = {
@@ -6046,7 +6046,7 @@ ep2_wedding_ewan.0071 = {
 			add_opinion = {
 				target = root
 				modifier = grateful_opinion
-				opinion = 30
+				opinion = 15
 			}
 		}
 

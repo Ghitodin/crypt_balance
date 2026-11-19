@@ -37,7 +37,7 @@ disburse_tournament_activity_rewards = {
 			add_opinion = {
 				modifier = hosted_tournament_opinion
 				target = root
-				opinion = 25
+				opinion = 13
 			}
 		}
 		# Belligerent Vassal Opinion
@@ -50,7 +50,7 @@ disburse_tournament_activity_rewards = {
 			add_opinion = {
 				modifier = hosted_tournament_opinion
 				target = root
-				opinion = 25
+				opinion = 13
 			}
 		}
 	}
@@ -83,7 +83,7 @@ disburse_tournament_activity_rewards = {
 			add_opinion = {
 				modifier = hosted_tournament_opinion
 				target = root
-				opinion = 20
+				opinion = 10
 			}
 		}
 		# Belligerent Vassal Opinion
@@ -96,7 +96,7 @@ disburse_tournament_activity_rewards = {
 			add_opinion = {
 				modifier = hosted_tournament_opinion
 				target = root
-				opinion = 20
+				opinion = 10
 			}
 		}
 	}
@@ -130,7 +130,7 @@ disburse_tournament_activity_rewards = {
 			add_opinion = {
 				modifier = hosted_tournament_opinion
 				target = root
-				opinion = 15
+				opinion = 8
 			}
 		}
 		# Belligerent Vassal Opinion
@@ -143,7 +143,7 @@ disburse_tournament_activity_rewards = {
 			add_opinion = {
 				modifier = hosted_tournament_opinion
 				target = root
-				opinion = 15
+				opinion = 8
 			}
 		}
 	}
@@ -176,7 +176,7 @@ disburse_tournament_activity_rewards = {
 			add_opinion = {
 				modifier = hosted_tournament_opinion
 				target = root
-				opinion = 10
+				opinion = 5
 			}
 		}
 		# Belligerent Vassal Opinion
@@ -189,7 +189,7 @@ disburse_tournament_activity_rewards = {
 			add_opinion = {
 				modifier = hosted_tournament_opinion
 				target = root
-				opinion = 10
+				opinion = 5
 			}
 		}
 	}
@@ -232,7 +232,7 @@ disburse_tournament_activity_rewards = {
 			add_opinion = {
 				modifier = hosted_tournament_opinion
 				target = root
-				opinion = 5
+				opinion = 3
 			}
 		}
 		# Belligerent Vassal Opinion
@@ -245,7 +245,7 @@ disburse_tournament_activity_rewards = {
 			add_opinion = {
 				modifier = hosted_tournament_opinion
 				target = root
-				opinion = 5
+				opinion = 3
 			}
 		}
 	}
@@ -434,7 +434,7 @@ disburse_tour_activity_rewards = {
 						add_opinion = {
 							modifier = hosted_tour_opinion
 							target = root
-							opinion = 50
+							opinion = 25
 						}
 					}
 				}
@@ -448,7 +448,7 @@ disburse_tour_activity_rewards = {
 					add_opinion = {
 						modifier = tour_visited_vassal_opinion
 						target = root
-						opinion = 30
+						opinion = 15
 					}
 				}
 			}
@@ -496,7 +496,7 @@ disburse_tour_activity_rewards = {
 						add_opinion = {
 							modifier = hosted_tour_opinion
 							target = root
-							opinion = 40
+							opinion = 20
 						}
 					}
 				}
@@ -511,7 +511,7 @@ disburse_tour_activity_rewards = {
 					add_opinion = {
 						modifier = tour_visited_vassal_opinion
 						target = root
-						opinion = 25
+						opinion = 13
 					}
 				}
 			}
@@ -556,7 +556,7 @@ disburse_tour_activity_rewards = {
 						add_opinion = {
 							modifier = hosted_tour_opinion
 							target = root
-							opinion = 35
+							opinion = 18
 						}
 					}
 				}
@@ -572,7 +572,7 @@ disburse_tour_activity_rewards = {
 						add_opinion = {
 							modifier = tour_visited_vassal_opinion
 							target = root
-							opinion = 20
+							opinion = 10
 						}
 					}
 				}
@@ -618,7 +618,7 @@ disburse_tour_activity_rewards = {
 						add_opinion = {
 							modifier = hosted_tour_opinion
 							target = root
-							opinion = 30
+							opinion = 15
 						}
 					}
 				}
@@ -877,7 +877,7 @@ disburse_murder_wedding_host_rewards = {
 							add_opinion = {
 								target = scope:host
 								modifier = impressed_opinion
-								opinion = 10
+								opinion = 5
 							}
 						}
 						every_attending_character = {
@@ -898,7 +898,7 @@ disburse_murder_wedding_host_rewards = {
 									reverse_add_opinion = {
 										target = scope:host
 										modifier = came_to_my_wedding_opinion
-										opinion = 5
+										opinion = 3
 									}
 								}
 							}
@@ -911,7 +911,7 @@ disburse_murder_wedding_host_rewards = {
 									reverse_add_opinion = {
 										target = scope:spouse_1
 										modifier = came_to_my_wedding_opinion
-										opinion = 5
+										opinion = 3
 									}
 								}
 							}
@@ -944,7 +944,7 @@ disburse_murder_wedding_host_rewards = {
 							add_opinion = {
 								target = scope:host
 								modifier = impressed_opinion
-								opinion = 5
+								opinion = 3
 							}
 						}
 					}
@@ -978,7 +978,7 @@ disburse_murder_wedding_host_rewards = {
 								add_opinion = {
 									modifier = hosted_wedding_opinion
 									target = root
-									opinion = 10
+									opinion = 5
 								}
 							}
 						}
@@ -1011,7 +1011,7 @@ disburse_murder_wedding_host_rewards = {
 								add_opinion = {
 									modifier = hosted_wedding_opinion
 									target = root
-									opinion = 5
+									opinion = 3
 								}
 							}
 						}
@@ -1128,7 +1128,7 @@ disburse_murder_wedding_host_rewards = {
 						add_opinion = {
 							target = scope:host
 							modifier = impressed_opinion
-							opinion = 10
+							opinion = 5
 						}
 					}
 					every_attending_character = {
@@ -1149,7 +1149,7 @@ disburse_murder_wedding_host_rewards = {
 								reverse_add_opinion = {
 									target = scope:host
 									modifier = came_to_my_wedding_opinion
-									opinion = 5
+									opinion = 3
 								}
 							}
 						}
@@ -1162,7 +1162,7 @@ disburse_murder_wedding_host_rewards = {
 								reverse_add_opinion = {
 									target = scope:spouse_1
 									modifier = came_to_my_wedding_opinion
-									opinion = 5
+									opinion = 3
 								}
 							}
 						}
@@ -1195,7 +1195,7 @@ disburse_murder_wedding_host_rewards = {
 						add_opinion = {
 							target = scope:host
 							modifier = impressed_opinion
-							opinion = 5
+							opinion = 3
 						}
 					}
 				}
@@ -1229,7 +1229,7 @@ disburse_murder_wedding_host_rewards = {
 							add_opinion = {
 								modifier = hosted_wedding_opinion
 								target = root
-								opinion = 10
+								opinion = 5
 							}
 						}
 					}
@@ -1262,7 +1262,7 @@ disburse_murder_wedding_host_rewards = {
 							add_opinion = {
 								modifier = hosted_wedding_opinion
 								target = root
-								opinion = 5
+								opinion = 3
 							}
 						}
 					}
@@ -1284,7 +1284,7 @@ disburse_murder_wedding_host_rewards = {
 		add_opinion = {
 			modifier = respect_opinion
 			target = scope:host
-			opinion = 20
+			opinion = 10
 		}
 	}
 	every_vassal_or_below = {
@@ -1428,7 +1428,7 @@ disburse_wedding_activity_rewards = {
 					add_opinion = {
 						target = root
 						modifier = impressed_opinion
-						opinion = 30
+						opinion = 15
 					}
 				}
 				every_attending_character = {
@@ -1450,7 +1450,7 @@ disburse_wedding_activity_rewards = {
 							reverse_add_opinion = {
 								target = scope:host
 								modifier = came_to_my_wedding_opinion
-								opinion = 15
+								opinion = 8
 							}
 						}
 					}
@@ -1463,7 +1463,7 @@ disburse_wedding_activity_rewards = {
 							reverse_add_opinion = {
 								target = scope:spouse_1
 								modifier = came_to_my_wedding_opinion
-								opinion = 15
+								opinion = 8
 							}
 						}
 					}
@@ -1476,7 +1476,7 @@ disburse_wedding_activity_rewards = {
 							reverse_add_opinion = {
 								target = scope:spouse_2
 								modifier = came_to_my_wedding_opinion
-								opinion = 15
+								opinion = 8
 							}
 						}
 					}
@@ -1504,7 +1504,7 @@ disburse_wedding_activity_rewards = {
 					add_opinion = {
 						target = root
 						modifier = impressed_opinion
-						opinion = 20
+						opinion = 10
 					}
 				}
 				every_attending_character = {
@@ -1526,7 +1526,7 @@ disburse_wedding_activity_rewards = {
 							reverse_add_opinion = {
 								target = scope:host
 								modifier = came_to_my_wedding_opinion
-								opinion = 10
+								opinion = 5
 							}
 						}
 					}
@@ -1539,7 +1539,7 @@ disburse_wedding_activity_rewards = {
 							reverse_add_opinion = {
 								target = scope:spouse_1
 								modifier = came_to_my_wedding_opinion
-								opinion = 10
+								opinion = 5
 							}
 						}
 					}
@@ -1552,7 +1552,7 @@ disburse_wedding_activity_rewards = {
 							reverse_add_opinion = {
 								target = scope:spouse_2
 								modifier = came_to_my_wedding_opinion
-								opinion = 10
+								opinion = 5
 							}
 						}
 					}
@@ -1580,7 +1580,7 @@ disburse_wedding_activity_rewards = {
 					add_opinion = {
 						target = root
 						modifier = impressed_opinion
-						opinion = 5
+						opinion = 3
 					}
 				}
 				every_attending_character = {
@@ -1602,7 +1602,7 @@ disburse_wedding_activity_rewards = {
 							reverse_add_opinion = {
 								target = scope:host
 								modifier = came_to_my_wedding_opinion
-								opinion = 5
+								opinion = 3
 							}
 						}
 					}
@@ -1615,7 +1615,7 @@ disburse_wedding_activity_rewards = {
 							reverse_add_opinion = {
 								target = scope:spouse_1
 								modifier = came_to_my_wedding_opinion
-								opinion = 5
+								opinion = 3
 							}
 						}
 					}
@@ -1628,7 +1628,7 @@ disburse_wedding_activity_rewards = {
 							reverse_add_opinion = {
 								target = scope:spouse_2
 								modifier = came_to_my_wedding_opinion
-								opinion = 5
+								opinion = 3
 							}
 						}
 					}
@@ -1669,7 +1669,7 @@ disburse_wedding_activity_rewards = {
 							add_opinion = {
 								modifier = hosted_wedding_opinion
 								target = root
-								opinion = 30
+								opinion = 15
 							}
 						}
 					}
@@ -1731,7 +1731,7 @@ disburse_wedding_activity_rewards = {
 							add_opinion = {
 								modifier = hosted_wedding_opinion
 								target = root
-								opinion = 20
+								opinion = 10
 							}
 						}
 					}
@@ -1793,7 +1793,7 @@ disburse_wedding_activity_rewards = {
 							add_opinion = {
 								modifier = hosted_wedding_opinion
 								target = root
-								opinion = 5
+								opinion = 3
 							}
 						}
 					}
@@ -2063,7 +2063,7 @@ disburse_wedding_spouse_activity_rewards = {
 						add_opinion = {
 							target = scope:root_scope
 							modifier = impressed_opinion
-							opinion = 25
+							opinion = 13
 						}
 					}
 				}
@@ -2109,7 +2109,7 @@ disburse_wedding_spouse_activity_rewards = {
 						add_opinion = {
 							target = scope:root_scope
 							modifier = impressed_opinion
-							opinion = 15
+							opinion = 8
 						}
 					}
 				}
@@ -2155,7 +2155,7 @@ disburse_wedding_spouse_activity_rewards = {
 						add_opinion = {
 							target = scope:root_scope
 							modifier = impressed_opinion
-							opinion = 5
+							opinion = 3
 						}
 					}
 				}
@@ -2306,7 +2306,7 @@ tooltip_disburse_wedding_host_activity_rewards = {
 				add_opinion = {
 					target = root
 					modifier = impressed_opinion
-					opinion = 30
+					opinion = 15
 				}
 			}
 		}
@@ -2323,7 +2323,7 @@ tooltip_disburse_wedding_host_activity_rewards = {
 				add_opinion = {
 					target = root
 					modifier = impressed_opinion
-					opinion = 20
+					opinion = 10
 				}
 			}
 		}
@@ -2340,7 +2340,7 @@ tooltip_disburse_wedding_host_activity_rewards = {
 				add_opinion = {
 					target = root
 					modifier = impressed_opinion
-					opinion = 5
+					opinion = 3
 				}
 			}
 		}
@@ -2368,7 +2368,7 @@ tooltip_disburse_wedding_host_activity_rewards = {
 						add_opinion = {
 							modifier = hosted_wedding_opinion
 							target = root
-							opinion = 30
+							opinion = 15
 						}
 					}
 				}
@@ -2398,7 +2398,7 @@ tooltip_disburse_wedding_host_activity_rewards = {
 						add_opinion = {
 							modifier = hosted_wedding_opinion
 							target = root
-							opinion = 20
+							opinion = 10
 						}
 					}
 				}
@@ -2436,7 +2436,7 @@ tooltip_disburse_wedding_host_activity_rewards = {
 						add_opinion = {
 							modifier = hosted_wedding_opinion
 							target = root
-							opinion = 5
+							opinion = 3
 						}
 					}
 				}
@@ -2880,7 +2880,7 @@ disburse_hunt_activity_rewards = {
 			add_opinion = {
 				modifier = hosted_hunt_opinion
 				target = scope:root_scope
-				opinion = 5
+				opinion = 3
 			}
 		}
 		remove_character_flag = impressive_hunt
@@ -2955,10 +2955,11 @@ disburse_hunt_activity_rewards = {
 			is_participant_in_activity = scope:activity
 		}
 		custom = every_participating_glory_hound_vassal
+		save_temporary_scope_value_as = { name = crypt_balance_activity_opinion value = hunt_glory_hound_vassal_opinion_value }
 		add_opinion = {
 			modifier = hosted_hunt_opinion
 			target = scope:root_scope
-			opinion = hunt_glory_hound_vassal_opinion_value
+			opinion = { value = scope:crypt_balance_activity_opinion if = { limit = { scope:crypt_balance_activity_opinion > 0 } divide = 2 add = 0.5 floor = yes } }
 		}
 	}
 	remove_variable = attending_glory_hounds
@@ -2976,7 +2977,7 @@ disburse_hunt_activity_rewards = {
 		add_opinion = {
 			modifier = hosted_hunt_opinion
 			target = scope:root_scope
-			opinion = 15
+			opinion = 8
 		}
 	}
 	remove_variable = attending_belligerent
@@ -3105,10 +3106,11 @@ disburse_feast_activity_rewards = {
 								is_participant_in_activity = scope:activity
 							}
 							custom = every_courtly_vassal
+							save_temporary_scope_value_as = { name = crypt_balance_activity_opinion value = feast_opinion_max_food_value }
 							add_opinion = {
 								modifier = hosted_feast_opinion
 								target = root
-								opinion = feast_opinion_max_food_value
+								opinion = { value = scope:crypt_balance_activity_opinion if = { limit = { scope:crypt_balance_activity_opinion > 0 } divide = 2 add = 0.5 floor = yes } }
 							}
 						}
 						# Vassal Opinion
@@ -3124,10 +3126,11 @@ disburse_feast_activity_rewards = {
 									}
 								}
 								custom = custom.every_attending_character_but_courtly
+								save_temporary_scope_value_as = { name = crypt_balance_activity_opinion value = feast_opinion_max_food_value }
 								add_opinion = {
 									target = root
 									modifier = impressed_opinion
-									opinion = feast_opinion_max_food_value
+									opinion = { value = scope:crypt_balance_activity_opinion if = { limit = { scope:crypt_balance_activity_opinion > 0 } divide = 2 add = 0.5 floor = yes } }
 								}
 							}
 						}
@@ -3171,10 +3174,11 @@ disburse_feast_activity_rewards = {
 								is_participant_in_activity = scope:activity
 							}
 							custom = every_courtly_vassal
+							save_temporary_scope_value_as = { name = crypt_balance_activity_opinion value = feast_opinion_medium_food_value }
 							add_opinion = {
 								modifier = hosted_feast_opinion
 								target = root
-								opinion = feast_opinion_medium_food_value
+								opinion = { value = scope:crypt_balance_activity_opinion if = { limit = { scope:crypt_balance_activity_opinion > 0 } divide = 2 add = 0.5 floor = yes } }
 							}
 						}
 						# Vassal Opinion
@@ -3190,10 +3194,11 @@ disburse_feast_activity_rewards = {
 									}
 								}
 								custom = custom.every_attending_character_but_courtly
+								save_temporary_scope_value_as = { name = crypt_balance_activity_opinion value = feast_opinion_medium_food_value }
 								add_opinion = {
 									target = root
 									modifier = impressed_opinion
-									opinion = feast_opinion_medium_food_value
+									opinion = { value = scope:crypt_balance_activity_opinion if = { limit = { scope:crypt_balance_activity_opinion > 0 } divide = 2 add = 0.5 floor = yes } }
 								}
 							}
 						}
@@ -3226,10 +3231,11 @@ disburse_feast_activity_rewards = {
 								is_participant_in_activity = scope:activity
 							}
 							custom = every_courtly_vassal
+							save_temporary_scope_value_as = { name = crypt_balance_activity_opinion value = feast_opinion_mediocre_food_value }
 							add_opinion = {
 								modifier = hosted_mediocre_feast_opinion
 								target = root
-								opinion = feast_opinion_mediocre_food_value
+								opinion = { value = scope:crypt_balance_activity_opinion if = { limit = { scope:crypt_balance_activity_opinion > 0 } divide = 2 add = 0.5 floor = yes } }
 							}
 						}
 						# Vassal Opinion
@@ -3246,10 +3252,11 @@ disburse_feast_activity_rewards = {
 									}
 								}
 								custom = custom.every_attending_character_but_courtly
+								save_temporary_scope_value_as = { name = crypt_balance_activity_opinion value = feast_opinion_mediocre_food_value }
 								add_opinion = {
 									target = root
 									modifier = impressed_opinion
-									opinion = feast_opinion_mediocre_food_value
+									opinion = { value = scope:crypt_balance_activity_opinion if = { limit = { scope:crypt_balance_activity_opinion > 0 } divide = 2 add = 0.5 floor = yes } }
 								}
 							}
 						}
@@ -3288,7 +3295,7 @@ disburse_feast_activity_rewards = {
 							add_opinion = {
 								target = root
 								modifier = impressed_opinion
-								opinion = 5
+								opinion = 3
 							}
 						}
 					}
@@ -3728,7 +3735,7 @@ disburse_feast_activity_rewards = {
 							add_opinion = {
 								target = root
 								modifier = pious_opinion
-								opinion = 5
+								opinion = 3
 							}
 							root = {
 								add_piety = 5
@@ -3765,7 +3772,7 @@ disburse_feast_activity_rewards = {
 							add_opinion = {
 								target = root
 								modifier = pious_opinion
-								opinion = 10
+								opinion = 5
 							}
 						}
 					}
@@ -4056,7 +4063,7 @@ disburse_murder_feast_activity_rewards = {
 								add_opinion = {
 									modifier = hosted_feast_opinion
 									target = root
-									opinion = 15
+									opinion = 8
 								}
 							}
 							# Vassal Opinion
@@ -4067,7 +4074,7 @@ disburse_murder_feast_activity_rewards = {
 									add_opinion = {
 										target = root
 										modifier = impressed_opinion
-										opinion = 10
+										opinion = 5
 									}
 								}
 							}
@@ -4110,7 +4117,7 @@ disburse_murder_feast_activity_rewards = {
 								add_opinion = {
 									modifier = hosted_feast_opinion
 									target = root
-									opinion = 5
+									opinion = 3
 								}
 							}
 							# Vassal Opinion
@@ -4121,7 +4128,7 @@ disburse_murder_feast_activity_rewards = {
 									add_opinion = {
 										target = root
 										modifier = impressed_opinion
-										opinion = 5
+										opinion = 3
 									}
 								}
 							}

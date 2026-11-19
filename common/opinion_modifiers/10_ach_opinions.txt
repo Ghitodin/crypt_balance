@@ -36,5 +36,5 @@ purchased_hashish_opinion = {
 ach_intent_opinion = {
 	opinion = 10
 	decaying = yes
-	years = 10
+	years = 5
 }

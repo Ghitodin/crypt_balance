@@ -1,0 +1,9 @@
+﻿crypt_balance_eligible_child_court_invitation_trigger = {
+	scope:recipient = {
+		is_child_of = scope:actor
+		NOR = {
+			has_relation_rival = scope:actor
+			has_relation_nemesis = scope:actor
+		}
+	}
+}

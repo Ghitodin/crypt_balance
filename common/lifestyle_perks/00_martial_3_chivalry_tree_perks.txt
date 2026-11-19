@@ -147,12 +147,6 @@ loyalty_and_respect_perk = {
 		trait_track_wit_xp_gain_mult = 0.25
 	}
 
-	government_character_modifier = {
-		flag = government_is_administrative
-		invert_check = yes
-		knight_effectiveness_mult = 0.5
-	}
-
 	character_modifier = {
 		spouse_opinion = 50
 	}

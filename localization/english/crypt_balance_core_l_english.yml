@@ -10,3 +10,4 @@
  crypt_balance_tribute_war_reparations_tt: "The defeated ruler pays a one-time indemnity to the victor"
  crypt_balance_install_claimant_hook: "$strong_favor_hook$"
  CRYPT_BALANCE_FACTION_REASON_NOMADIC_DOMINANCE: "Nomadic Dominance"
+ crypt_balance_prisoner_hostile_faith_requires_traits_tt: "A prisoner of an organized hostile Faith can only be recruited or converted if they are both Cynical and Deceitful."

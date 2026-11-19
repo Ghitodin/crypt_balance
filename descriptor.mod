@@ -1,8 +1,8 @@
-version="2.2-core-1.21.0"
+version="2.2-core-1.21.0.3"
 tags={
 	"Balance"
 	"Fixes"
 }
 name="Crypt Balance"
-supported_version="1.21.0"
+supported_version="1.21.0.3"
 remote_file_id="2262138819"

@@ -339,7 +339,6 @@ archer_attribute = {
 				archers_toughness_mult = @accolade_maa_toughness_2
 
 			}
-			men_at_arms = { accolade_maa_archers }
 		}
 		3 = {
 			liege_modifier = {
@@ -349,7 +348,6 @@ archer_attribute = {
 				archers_damage_mult = @accolade_maa_damage_6
 				archers_toughness_mult = @accolade_maa_toughness_3
 			}
-			men_at_arms = { accolade_maa_archers }
 		}
 	}
 }
@@ -487,7 +485,6 @@ skirmisher_attribute = {
 				skirmishers_screen_mult = @accolade_maa_screen_3
 				winter_movement_speed = @skirmisher_attr_winter_movement_speed_2
 			}
-			men_at_arms = { accolade_maa_skirmishers }
 		}
 		3 = {
 			liege_modifier = {
@@ -499,7 +496,6 @@ skirmisher_attribute = {
 				skirmishers_screen_mult = @accolade_maa_screen_5
 				winter_movement_speed = @skirmisher_attr_winter_movement_speed_3
 			}
-			men_at_arms = { accolade_maa_skirmishers }
 		}
 	}
 }
@@ -632,7 +628,6 @@ pike_attribute = {
 				pikemen_damage_mult = @accolade_maa_damage_3
 				pikemen_toughness_mult = @accolade_maa_toughness_4
 			}
-			men_at_arms = { accolade_maa_pikes }
 		}
 		3 = {
 			liege_modifier = {
@@ -642,7 +637,6 @@ pike_attribute = {
 				pikemen_damage_mult = @accolade_maa_damage_5
 				pikemen_toughness_mult = @accolade_maa_toughness_6
 			}
-			men_at_arms = { accolade_maa_pikes }
 		}
 	}
 }
@@ -783,7 +777,6 @@ outrider_attribute = {
 				light_cavalry_pursuit_mult = @accolade_maa_pursuit_2
 				movement_speed = @outrider_attr_movement_speed_2
 			}
-			men_at_arms = { accolade_maa_outriders }
 		}
 		3 = {
 			liege_modifier = {
@@ -795,7 +788,6 @@ outrider_attribute = {
 				light_cavalry_pursuit_mult = @accolade_maa_pursuit_4
 				movement_speed = @outrider_attr_movement_speed_3
 			}
-			men_at_arms = { accolade_maa_outriders }
 		}
 	}
 }
@@ -933,7 +925,6 @@ vanguard_attribute = {
 				heavy_infantry_damage_mult = @accolade_maa_damage_4
 				heavy_infantry_toughness_mult = @accolade_maa_toughness_2
 			}
-			men_at_arms = { accolade_maa_vanguards }
 		}
 		3 = {
 			liege_modifier = {
@@ -943,7 +934,6 @@ vanguard_attribute = {
 				heavy_infantry_damage_mult = @accolade_maa_damage_6
 				heavy_infantry_toughness_mult = @accolade_maa_toughness_3
 			}
-			men_at_arms = { accolade_maa_vanguards }
 		}
 	}
 }
@@ -1091,7 +1081,6 @@ lancer_attribute = {
 				heavy_cavalry_damage_mult = @accolade_maa_damage_4
 				heavy_cavalry_toughness_mult = @accolade_maa_toughness_2
 			}
-			men_at_arms = { accolade_maa_lancers }
 		}
 		3 = {
 			liege_modifier = {
@@ -1101,7 +1090,6 @@ lancer_attribute = {
 				heavy_cavalry_damage_mult = @accolade_maa_damage_6
 				heavy_cavalry_toughness_mult = @accolade_maa_toughness_3
 			}
-			men_at_arms = { accolade_maa_lancers }
 		}
 	}
 }
@@ -1232,7 +1220,6 @@ crossbowmen_attribute = {
 				archers_siege_value_add = 0.08
 				archers_screen_mult = 0.15
 			}
-			men_at_arms = { accolade_maa_crossbowers }
 			accolade_parameters = { accolade_increase_hostile_knight_death_medium }
 		}
 		3 = {
@@ -1243,7 +1230,6 @@ crossbowmen_attribute = {
 				archers_siege_value_add = 0.08
 				archers_screen_mult = 0.25
 			}
-			men_at_arms = { accolade_maa_crossbowers }
 			accolade_parameters = { accolade_increase_hostile_knight_death_high }
 		}
 	}
@@ -1490,7 +1476,6 @@ camelry_attribute = {
 				camel_cavalry_screen_mult = @accolade_maa_screen_2
 				movement_speed = @outrider_attr_movement_speed_2
 			}
-			men_at_arms = { accolade_maa_cameliers }
 		}
 		3 = {
 			liege_modifier = {
@@ -1503,7 +1488,6 @@ camelry_attribute = {
 				camel_cavalry_screen_mult = @accolade_maa_screen_3
 				movement_speed = @outrider_attr_movement_speed_3
 			}
-			men_at_arms = { accolade_maa_cameliers }
 		}
 	}
 }
@@ -1626,7 +1610,6 @@ elephantry_attribute = {
 				elephant_cavalry_maintenance_mult = @elephantry_attr_eleph_maint_2
 			}
 			knight_army_modifier = { elephant_cavalry_damage_mult = @elephantry_attr_eleph_damage_2 }
-			men_at_arms = { accolade_maa_elephantiers }
 		}
 		3 = {
 			liege_modifier = {
@@ -1636,7 +1619,6 @@ elephantry_attribute = {
 				elephant_cavalry_damage_mult = @elephantry_attr_eleph_damage_3
 				elephant_cavalry_toughness_mult = @elephantry_attr_eleph_tough_3
 			}
-			men_at_arms = { accolade_maa_elephantiers }
 		}
 	}
 }
@@ -1766,7 +1748,6 @@ horse_archer_attribute = {
 				archer_cavalry_pursuit_mult = @accolade_maa_pursuit_2
 				movement_speed = @outrider_attr_movement_speed_2
 			}
-			men_at_arms = { accolade_maa_horse_archers }
 		}
 		3 = {
 			liege_modifier = {
@@ -1778,7 +1759,6 @@ horse_archer_attribute = {
 				archer_cavalry_pursuit_mult = @accolade_maa_pursuit_4
 				movement_speed = @outrider_attr_movement_speed_3
 			}
-			men_at_arms = { accolade_maa_horse_archers }
 		}
 	}
 }
@@ -1914,7 +1894,6 @@ gunpowder_attribute = {
 				gunpowder_toughness_mult = @accolade_maa_toughness_2 
 
 			}
-			men_at_arms = { accolade_maa_handgunners }
 		}
 		3 = {
 			liege_modifier = {
@@ -1924,7 +1903,6 @@ gunpowder_attribute = {
 				gunpowder_damage_mult = @accolade_maa_damage_6
 				gunpowder_toughness_mult = @accolade_maa_toughness_3
 			}
-			men_at_arms = { accolade_maa_handgunners }
 		}
 	}
 }

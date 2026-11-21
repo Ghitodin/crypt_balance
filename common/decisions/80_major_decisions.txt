@@ -2955,42 +2955,7 @@ expand_duchy_decision = {
 		}
 	}
 
-	is_shown = {
-		highest_held_title_tier >= tier_duchy
-		is_landed_or_landless_administrative = yes
-		NOT = { government_has_flag = government_is_republic }
-		trigger_if = {
-			limit = {
-				highest_held_title_tier = tier_duchy
-			}
-			any_held_title = {
-				tier = tier_duchy
-				NOR = {
-					is_landless_type_title = yes
-					is_noble_family_title = yes
-				}
-				save_temporary_scope_as = duchy_title
-			}
-		}
-		trigger_else = {
-			root.capital_county.duchy = {
-				save_temporary_scope_as = duchy_title
-			}
-		}
-		OR = {
-			has_game_rule = on_custom_duchies
-			AND = {
-				is_ai = no
-				has_game_rule = on_custom_duchies_player
-			}
-		}
-		save_temporary_scope_as = root_scope_temporary
-		scope:duchy_title ?= {
-			any_de_jure_county = {
-				count < expand_duchy_max_size_value
-			}
-		}
-	}
+	is_shown = { always = no }
 
 	is_valid = {
 		save_temporary_scope_as = root_scope_temporary

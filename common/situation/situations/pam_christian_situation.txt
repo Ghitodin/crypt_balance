@@ -756,7 +756,7 @@ the_christian_church = {
 						# On actions
 						catalyst_lose_jerusalem = 750
 						catalyst_lose_holy_site = monumental_plus_situation_catalyst_gain
-						catalyst_non_christian_kingdom_in_europe = 500
+						catalyst_non_christian_kingdom_in_europe = 300
 						catalyst_byzantine_emperor_non_christian = monumental_situation_catalyst_gain
 						catalyst_the_christian_church_great_holy_war_declared_on_christian = monumental_situation_catalyst_gain
 						catalyst_the_christian_church_great_holy_war_lost = massive_plus_situation_catalyst_gain
@@ -1927,7 +1927,7 @@ the_christian_church = {
 						# On actions
 						catalyst_lose_jerusalem = 750
 						catalyst_lose_holy_site = monumental_plus_situation_catalyst_gain
-						catalyst_non_christian_kingdom_in_europe = 500
+						catalyst_non_christian_kingdom_in_europe = 300
 						catalyst_byzantine_emperor_non_christian = monumental_situation_catalyst_gain
 						catalyst_the_christian_church_great_holy_war_declared_on_christian = monumental_situation_catalyst_gain
 						catalyst_the_christian_church_great_holy_war_lost = massive_plus_situation_catalyst_gain

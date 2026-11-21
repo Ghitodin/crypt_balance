@@ -1,0 +1,2308 @@
+﻿#########################
+#### UNITY DECISIONS ####
+#########################
+
+# House Head decision - These are only available to the House Head
+### Reinforce Army with Loyal Officers ###
+unity_reinforce_army_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 72
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/antagonistic.dds"
+	}
+	is_invisible = yes
+	
+	sort_order = 60
+
+	desc = unity_reinforce_army_decision_desc
+
+	cooldown = { years = 20 }
+
+	is_shown = {
+		government_has_flag = government_uses_house_unity
+	}
+
+	is_valid = {
+		is_house_head = yes
+	}
+
+	is_valid_showing_failures_only = {
+		house = {
+			NOT = { has_house_unity_modifier = unity_antagonistic_maa_modifier }
+		}
+		custom_tooltip = {
+			text = unity_required_level_not_met_tooltip
+			house = { has_house_unity_parameter = unity_reinforce_army_decision }
+		}
+	}
+
+	effect = {
+		house = {
+			add_house_unity_modifier = {
+				modifier = unity_antagonistic_maa_modifier
+				years = 10
+			}
+		}
+	}
+	
+	cost = {
+		gold = {
+			value = medium_gold_value
+		}
+		piety = {
+			value = 0
+			if = {
+				limit = { government_has_flag = government_is_clan }
+				add = unity_major_decision_piety_cost
+				add = {
+					value = 20
+					multiply = {
+						value = number_of_landed_house_members_value
+						subtract = 1 # We don't want to add any extra for the first ruler
+					}
+				}
+			}
+		}
+		prestige = {
+			value = 0
+			if = {
+				limit = {
+					NOT = { government_has_flag = government_is_clan }
+				}
+				add = unity_major_decision_prestige_cost
+				add = {
+					value = 20
+					multiply = {
+						value = number_of_landed_house_members_value
+						subtract = 1 # We don't want to add any extra for the first ruler
+					}
+				}
+			}
+		}
+	}
+	
+	ai_potential = {
+		house ?= { # Don't bother unless you have a few landed house members who would benefit
+			any_house_unity_member = {
+				count >= 3
+			}
+		}
+		ai_has_warlike_personality = yes
+	}
+
+	ai_will_do = {
+		base = 25
+	}
+}
+
+### Enforce Intrigue Network ###
+unity_establish_network_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 72
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/competitive.dds"
+	}
+	is_invisible = yes
+	
+	sort_order = 60
+
+	desc = unity_establish_network_decision_desc
+
+	cooldown = { years = 20 }
+
+	is_shown = {
+		government_has_flag = government_uses_house_unity
+		is_ruler = yes
+	}
+
+	is_valid = {
+		is_house_head = yes
+	}
+
+	is_valid_showing_failures_only = {
+		house = {
+			NOT = { has_house_unity_modifier = unity_competitive_spies_modifier }
+		}
+		custom_tooltip = {
+			text = unity_required_level_not_met_tooltip
+			house = { has_house_unity_parameter = unity_establish_network_decision }
+		}
+	}
+
+	effect = {
+		switch = {
+			trigger = is_landed
+			yes = {
+				house = {
+					add_house_unity_modifier = {
+						modifier = unity_competitive_spies_modifier
+						years = 10
+					}
+				}
+			}
+			fallback = { # add more entries if other landless governments use unity in future
+				house = {
+					add_house_unity_modifier = {
+						modifier = unity_competitive_spies_landless_merchant_modifier
+						years = 10
+					}
+				}
+			}
+		}
+	}
+	
+	cost = {
+		gold = {
+			value = medium_gold_value
+		}
+		piety = {
+			value = 0
+			if = {
+				limit = { government_has_flag = government_is_clan }
+				add = unity_major_decision_piety_cost
+				add = {
+					value = 20
+					multiply = {
+						value = number_of_landed_house_members_value
+						subtract = 1 # We don't want to add any extra for the first ruler
+					}
+				}
+			}
+		}
+		prestige = {
+			value = 0
+			if = {
+				limit = {
+					NOT = { government_has_flag = government_is_clan }
+				}
+				add = unity_major_decision_prestige_cost
+				add = {
+					value = 20
+					multiply = {
+						value = number_of_landed_house_members_value
+						subtract = 1 # We don't want to add any extra for the first ruler
+					}
+				}
+			}
+		}
+	}
+	
+	ai_potential = {
+		house ?= { # Don't bother unless you have a few landed house members who would benefit
+			any_house_unity_member = {
+				count >= 3
+			}
+		}
+		ai_has_cautious_personality = yes
+	}
+
+	ai_will_do = {
+		base = 25
+	}
+}
+
+### Improve Taxation ###
+unity_improve_taxation_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 72
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
+	picture = {
+		trigger = {
+			NOT = { government_has_flag = government_is_clan }
+		}
+		reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3_decision_tax_collector.dds"
+	}
+	is_invisible = yes
+	
+	sort_order = 60
+
+	desc = unity_improve_taxation_decision_desc
+
+	cooldown = { years = 20 }
+
+	is_shown = {
+		government_has_flag = government_uses_house_unity
+		is_landed = yes
+	}
+
+	is_valid = {
+		is_house_head = yes
+	}
+
+	is_valid_showing_failures_only = {
+		house = {
+			NOT = { has_house_unity_modifier = unity_impassive_tax_modifier }
+		}
+		is_house_head = yes
+		custom_tooltip = {
+			text = unity_required_level_not_met_tooltip
+			house = { has_house_unity_parameter = unity_improve_taxation_decision }
+		}
+	}
+
+	effect = {
+		house = {
+			add_house_unity_modifier = {
+				modifier = unity_impassive_tax_modifier
+				years = 10
+			}
+		}
+	}
+	
+	cost = {
+		piety = {
+			value = 0
+			if = {
+				limit = { government_has_flag = government_is_clan }
+				add = unity_major_decision_piety_cost
+				add = {
+					value = 20
+					multiply = {
+						value = number_of_landed_house_members_value
+						subtract = 1 # We don't want to add any extra for the first ruler
+					}
+				}
+			}
+		}
+		prestige = {
+			value = 0
+			if = {
+				limit = {
+					NOT = { government_has_flag = government_is_clan }
+				}
+				add = unity_major_decision_prestige_cost
+				add = {
+					value = 20
+					multiply = {
+						value = number_of_landed_house_members_value
+						subtract = 1 # We don't want to add any extra for the first ruler
+					}
+				}
+			}
+		}
+	}
+	
+	ai_potential = {
+		house ?= { # Don't bother unless you have a few landed house members who would benefit
+			any_house_unity_member = {
+				count >= 3
+			}
+		}
+		ai_has_builder_or_pious_builder_personality = yes
+	}
+
+	ai_will_do = {
+		base = 25
+	}
+}
+
+### Send Bailiffs ###
+unity_send_bailiffs_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 72
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/friendly.dds"
+	}
+	is_invisible = yes
+	
+	sort_order = 60
+
+	desc = unity_send_bailiffs_decision_desc
+
+	cooldown = { years = 20 }
+
+	is_shown = {
+		government_has_flag = government_uses_house_unity
+		is_landed = yes
+	}
+
+	is_valid = {
+		is_house_head = yes
+	}
+
+	is_valid_showing_failures_only = {
+		house = {
+			NOT = { has_house_unity_modifier = unity_friendly_bailiff_modifier }
+		}
+		custom_tooltip = {
+			text = unity_required_level_not_met_tooltip
+			house = { has_house_unity_parameter = unity_send_bailiffs_decision }
+		}
+	}
+
+	effect = {
+		house = {
+			add_house_unity_modifier = {
+				modifier = unity_friendly_bailiff_modifier
+				years = 10
+			}
+		}
+	}
+	
+	cost = {
+		gold = {
+			value = medium_gold_value
+		}
+		piety = {
+			value = 0
+			if = {
+				limit = { government_has_flag = government_is_clan }
+				add = unity_major_decision_piety_cost
+				add = {
+					value = 20
+					multiply = {
+						value = number_of_landed_house_members_value
+						subtract = 1 # We don't want to add any extra for the first ruler
+					}
+				}
+			}
+		}
+		prestige = {
+			value = 0
+			if = {
+				limit = {
+					NOT = { government_has_flag = government_is_clan }
+				}
+				add = unity_major_decision_prestige_cost
+				add = {
+					value = 20
+					multiply = {
+						value = number_of_landed_house_members_value
+						subtract = 1 # We don't want to add any extra for the first ruler
+					}
+				}
+			}
+		}
+	}
+	
+	ai_potential = {
+		house ?= { # Don't bother unless you have a few landed house members who would benefit
+			any_house_unity_member = {
+				count >= 3
+			}
+		}
+		OR = {
+			ai_has_warlike_personality = yes
+			ai_has_economical_boom_personality = yes
+		}
+	}
+
+	ai_will_do = {
+		base = 25
+	}
+}
+
+### Placate Vassals ###
+unity_placate_vassals_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/harmonious.dds"
+	}
+	is_invisible = yes
+	
+	sort_order = 60
+
+	desc = unity_placate_vassals_decision_desc
+
+	cooldown = { years = 20 }
+
+	is_shown = {
+		government_has_flag = government_uses_house_unity
+		is_landed = yes
+	}
+
+	is_valid = {
+		is_house_head = yes
+	}
+
+	is_valid_showing_failures_only = {
+		house = {
+			NOT = { has_house_unity_modifier = unity_harmonious_placation_modifier }
+		}
+		custom_tooltip = {
+			text = unity_required_level_not_met_tooltip
+			house = { has_house_unity_parameter = unity_placate_vassals_decision }
+		}
+	}
+
+	effect = {
+		house = {
+			add_house_unity_modifier = {
+				modifier = unity_harmonious_placation_modifier
+				years = 10
+			}
+		}
+	}
+	
+	cost = {
+		gold = {
+			value = medium_gold_value
+		}
+		piety = {
+			value = 0
+			if = {
+				limit = { government_has_flag = government_is_clan }
+				add = unity_major_decision_piety_cost
+				add = {
+					value = 20
+					multiply = {
+						value = number_of_landed_house_members_value
+						subtract = 1 # We don't want to add any extra for the first ruler
+					}
+				}
+			}
+		}
+		prestige = {
+			value = 0
+			if = {
+				limit = {
+					NOT = { government_has_flag = government_is_clan }
+				}
+				add = unity_major_decision_prestige_cost
+				add = {
+					value = 20
+					multiply = {
+						value = number_of_landed_house_members_value
+						subtract = 1 # We don't want to add any extra for the first ruler
+					}
+				}
+			}
+		}
+	}
+	
+	ai_potential = {
+		house ?= { # Don't bother unless you have a few landed house members who would benefit
+			any_house_unity_member = {
+				count >= 3
+			}
+		}
+		ai_has_warlike_personality = no
+	}
+
+	ai_will_do = {
+		base = 20
+	}
+}
+
+### Organize House Members for War ###
+unity_organize_house_for_war_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 36
+		duchy = 36
+		kingdom = 12
+		empire = 12
+		hegemony = 12
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_sunder.dds"
+	}
+	is_invisible = yes
+	
+	sort_order = 60
+
+	desc = unity_organize_house_for_war_decision_desc
+
+	cooldown = { years = 20 }
+
+	is_shown = {
+		government_has_flag = government_uses_house_unity
+		is_landed = yes
+		house ?= { # We still want to show these in tooltips for other unity levels
+			trigger_if = {
+				limit = { has_house_unity_parameter = unity_organize_house_for_war_decision }
+				has_house_unity_parameter = unity_organize_house_for_war_decision
+			}
+		}
+	}
+	
+	is_valid = {
+		is_house_head = yes
+	}
+	
+	is_valid_showing_failures_only = {
+		house = {
+			NOR = {
+				has_house_modifier = unity_house_focused_on_economy_modifier # Cannot promote war while the house is focused on economy already
+				has_house_modifier = unity_house_organized_for_war_modifier
+			}
+		}
+		custom_tooltip = {
+			text = unity_required_level_not_met_tooltip
+			house = { has_house_unity_parameter = unity_organize_house_for_war_decision }
+		}
+	}
+
+	effect = {
+		house = {
+			add_house_modifier = {
+				modifier = unity_house_organized_for_war_modifier
+				years = 20
+			}
+		}
+	}
+	
+	cost = {
+		piety = {
+			value = 0
+			if = {
+				limit = { government_has_flag = government_is_clan }
+				add = unity_minor_decision_piety_cost
+			}
+		}
+		prestige = {
+			value = 0
+			if = {
+				limit = {
+					NOT = { government_has_flag = government_is_clan }
+				}
+				add = unity_minor_decision_prestige_cost
+			}
+		}
+	}
+	
+	ai_potential = {
+		government_has_flag = government_uses_house_unity
+		is_landed = yes
+		ai_has_warlike_personality = yes
+	}
+
+	ai_will_do = {
+		base = 20
+	}
+}
+
+### Encourage House to Improve the Economy ###
+unity_encourage_house_economy_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 72
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3_decision_tax_collector.dds"
+	}
+	is_invisible = yes
+	
+	sort_order = 60
+
+	desc = unity_encourage_house_economy_decision_desc
+
+	cooldown = { years = 20 }
+
+	is_shown = {
+		government_has_flag = government_uses_house_unity
+		is_landed = yes
+	}
+	
+	is_valid_showing_failures_only = {
+		house = {
+			NOR = {
+				has_house_modifier = unity_house_organized_for_war_modifier # Cannot promote economy while the house is focused on war already
+				has_house_modifier = unity_house_focused_on_economy_modifier
+			}
+		}
+		custom_tooltip = {
+			text = unity_required_level_not_met_tooltip
+			house = { has_house_unity_parameter = unity_encourage_house_economy_decision }
+		}
+	}
+
+	is_valid = {
+		is_house_head = yes
+	}
+
+	effect = {
+		house = {
+			add_house_modifier = {
+				modifier = unity_house_focused_on_economy_modifier
+				years = 20
+			}
+		}
+	}
+	
+	cost = {
+		piety = {
+			value = 0
+			if = {
+				limit = { government_has_flag = government_is_clan }
+				add = unity_minor_decision_piety_cost
+			}
+		}
+		prestige = {
+			value = 0
+			if = {
+				limit = {
+					NOT = { government_has_flag = government_is_clan }
+				}
+				add = unity_minor_decision_prestige_cost
+			}
+		}
+	}
+	
+	ai_potential = {
+		government_has_flag = government_uses_house_unity
+		is_house_head = yes
+		ai_has_economical_boom_personality = yes
+	}
+
+	ai_will_do = { base = 20 }
+}
+
+### Steer House Unity ###
+unity_steer_house_direction_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 24
+		duchy = 24
+		kingdom = 24
+		empire = 24
+		hegemony = 24
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	}
+	#is_invisible = yes
+	decision_group_type = house_unity
+	
+	sort_order = 1500 # We want the decision to be at the top of the list to make it real easy to find.
+	
+	cooldown = { years = 10 }
+
+	is_shown = { always = no }
+	
+	is_valid_showing_failures_only = {
+		# Option localisation
+		trigger_if = {
+			limit = { scope:steer_unity_towards_harmonious = yes }
+			custom_tooltip = {
+				text = steer_unity_towards_harmonious_tt
+				NOT = { house = { has_house_unity_stage = harmonious } }
+			}
+		}
+		trigger_if = {
+			limit = { scope:steer_unity_towards_antagonistic = yes }
+			custom_tooltip = {
+				text = steer_unity_towards_antagonistic_tt
+				NOT = { house = { has_house_unity_stage = antagonistic } }
+			}
+		}
+	}
+
+	is_valid = {
+		is_house_head = yes
+	}
+	
+	widget = {
+		gui = "decision_view_widget_unity_steer_house_direction"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "CHOOSE_UNITY_DIRECTION"
+		show_from_start = yes
+
+		### Increase Unity
+		item = {
+			value = steer_unity_towards_harmonious
+			is_valid = {
+				custom_tooltip = {
+					text = steer_unity_towards_harmonious_tt
+					NOT = { house = { has_house_unity_stage = harmonious } }
+				}
+			}
+			current_description = steer_unity_towards_harmonious_desc
+			localization = steer_unity_towards_harmonious_name
+			icon = "gfx/interface/icons/currencies/house_unity/harmonious.dds"
+			ai_chance = {
+				value = 100
+				if = {
+					limit = { ai_wants_low_unity = yes }
+					multiply = 0
+				}
+			}
+		}
+		### Decrease Unity
+		item = {
+			value = steer_unity_towards_antagonistic
+			is_valid = {
+				custom_tooltip = {
+					text = steer_unity_towards_antagonistic_tt
+					NOT = { house = { has_house_unity_stage = antagonistic } }
+				}
+			}
+			current_description = steer_unity_towards_antagonistic_desc
+			localization = steer_unity_towards_antagonistic_name
+			icon = "gfx/interface/icons/currencies/house_unity/antagonistic.dds"
+			ai_chance = {
+				value = 100
+				if = {
+					limit = { ai_wants_high_unity = yes }
+					multiply = 0
+				}
+			}
+		}
+	}
+
+	effect = {
+		switch = {
+			trigger = yes
+			# Increase Unity
+			scope:steer_unity_towards_harmonious = {
+				house = {
+					add_unity_value = {
+						value = massive_unity_gain
+						character = root
+						desc = clan_unity_steer_direction_change.desc
+					}
+				}
+				custom_tooltip = steer_unity_towards_harmonious_passive_gain_tt
+				add_character_flag = {
+					flag = steer_unity_towards_harmonious_passive_gain
+					years = 10
+				}
+				# Let's send notifications to relevant characters
+				hidden_effect = {
+					every_player = {
+						limit = { house ?= root.house }
+						send_interface_message = {
+							type = msg_house_unity_change_value
+							title = steer_unity_notification_title
+							desc = steer_unity_towards_harmonious_toast
+							left_icon = root
+							right_icon = house
+							show_as_tooltip = {
+								house = {
+									add_unity_value = {
+										value = massive_unity_gain
+										character = root
+										desc = clan_unity_steer_direction_change.desc
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			# Decrease Unity
+			scope:steer_unity_towards_antagonistic = {
+				house = {
+					add_unity_value = {
+						value = massive_unity_loss
+						character = root
+						desc = clan_unity_steer_direction_change.desc
+					}
+				}
+				custom_tooltip = steer_unity_towards_antagonistic_passive_loss_tt
+				add_character_flag = {
+					flag = steer_unity_towards_antagonistic_passive_loss
+					years = 10
+				}
+				# Let's send notifications to relevant characters
+				hidden_effect = {
+					every_player = {
+						limit = { house ?= root.house }
+						send_interface_message = {
+							type = msg_house_unity_change_value
+							title = steer_unity_notification_title
+							desc = steer_unity_towards_antagonistic_toast
+							left_icon = root
+							right_icon = house
+							show_as_tooltip = {
+								house = {
+									add_unity_value = {
+										value = massive_unity_loss
+										character = root
+										desc = clan_unity_steer_direction_change.desc
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	cost = {
+		piety = unity_major_decision_piety_cost
+	}
+	
+	ai_potential = {
+		highest_held_title_tier >= tier_county # Barons doesn't have to use the decision
+		is_ruler = yes
+		exists = house
+	}
+
+	ai_will_do = {
+		base = 20
+		
+		# If unity is at max or min levels, increase the AI weight if they want to go in the opposite direction
+		modifier = {
+			OR = {
+				ai_wants_high_unity = yes
+				ai_wants_low_unity = yes
+			}
+			add = 40
+		}
+		
+		# If unity is at max or min levels, increase the AI weight if they want to go in the opposite direction
+		modifier = {
+			OR = {
+				AND = {
+					ai_wants_high_unity = yes
+					house = {
+						OR = {
+							has_house_unity_stage = antagonistic
+							has_house_unity_stage = competitive
+						}
+					}
+				}
+				AND = {
+					ai_wants_low_unity = yes
+					house = {
+						OR = {
+							has_house_unity_stage = harmonious
+							has_house_unity_stage = friendly
+						}
+					}
+				}
+			}
+			add = 40
+		}
+	}
+}
+
+# General Unity decisions - These are available to all members of a House
+### Search for Tax Collectors ###
+unity_search_for_administrators_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3_decision_tax_collector.dds"
+	}
+	sort_order = 60
+	decision_group_type = house_unity
+
+	desc = unity_search_for_administrators_decision_desc
+
+	cooldown = { years = 10 }
+
+	is_shown = {
+		government_has_flag = government_uses_tax_collectors
+		government_has_flag = government_uses_house_unity
+		is_landed = yes
+		exists = house
+	}
+
+	effect = {
+		custom_tooltip = search_administors_decision.tt
+		hidden_effect = {
+			random_list = {
+				40 = {
+					save_temporary_scope_value_as = {
+						name = number_of_new_administrators
+						value = 1
+					}
+				}
+				40 = {
+					save_temporary_scope_value_as = {
+						name = number_of_new_administrators
+						value = 2
+					}
+				}
+				20 = {
+					save_temporary_scope_value_as = {
+						name = number_of_new_administrators
+						value = 3
+					}
+				}
+			}
+			while = {
+				count = scope:number_of_new_administrators
+				create_character = {
+					template = administrator_character
+					employer = root
+					faith = root.faith
+					rite = root.rite
+					culture = root.culture
+					gender_female_chance = {
+						if = {
+							limit = { root.rite = { rite_has_doctrine = doctrine_gender_male_dominated } }
+							add = 0
+						}
+						else_if = {
+							limit = { root.rite = { rite_has_doctrine = doctrine_gender_female_dominated } }
+							add = 100
+						}
+						else = {
+							add = 50
+						}
+					}
+					save_scope_as = new_administrator
+				}
+				send_interface_message = {
+					type = event_dynasty_good_with_text
+					title = unity_search_for_administrators_decision.msg.t
+					desc = unity_search_for_administrators_decision.msg.desc
+					left_icon = scope:new_administrator
+				}
+			}
+		}
+	}
+	
+	cost = { # We give the AI some handicap here by making the decision free for them, but they only ever use it if they don't have any tax collectors at all
+		gold = {
+			value = 0
+			if = {
+				limit = {
+					has_treasury = no
+					is_ai = no
+				}
+				add = minor_gold_value
+			}
+		}
+		treasury = {
+			value = 0
+			if = {
+				limit = {
+					has_treasury = yes
+					is_ai = no
+				}
+				add = minor_gold_value
+			}
+		}
+		piety = {
+			value = 0
+			if = {
+				limit = { is_ai = no }
+				add = medium_piety_value
+			}
+		}
+	}
+	
+	ai_potential = {
+		government_has_flag = government_uses_tax_collectors
+		government_has_flag = government_uses_house_unity
+		highest_held_title_tier >= tier_duchy
+		any_tax_collector = { count <= 0 }
+		any_vassal = {
+			count >= 2
+			government_has_flag = government_uses_tax_collectors
+			government_has_flag = government_uses_house_unity
+		}
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+# FP3 Unity Decisions
+### Demand Shared Army Logistics ###
+unity_improve_logistics_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 72
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_concession.dds"
+	}
+	is_invisible = yes
+	
+	sort_order = 60
+
+	desc = unity_improve_logistics_decision_desc
+
+	cooldown = { years = 20 }
+
+	is_shown = {
+		has_fp3_dlc_trigger = yes
+		culture ?= { has_cultural_pillar = heritage_iranian }
+		government_has_flag = government_uses_house_unity
+		is_landed = yes
+	}
+
+	is_valid = {
+		is_house_head = yes
+		# We show the culture requirement here to tell the player why they have the decision available
+		culture = { has_cultural_pillar = heritage_iranian }
+	}
+
+	is_valid_showing_failures_only = {
+		house = {
+			NOT = { has_house_unity_modifier = fp3_unity_improved_logistics_modifier }
+		}
+		custom_tooltip = {
+			text = unity_required_level_not_met_tooltip
+			house = { has_house_unity_parameter = unity_improve_logistics_decision }
+		}
+	}
+
+	effect = {
+		house = {
+			add_house_unity_modifier = {
+				modifier = fp3_unity_improved_logistics_modifier
+				years = 10
+			}
+		}
+	}
+
+	cost = {
+		gold = {
+			value = medium_gold_value
+		}
+		piety = {
+			value = 0
+			if = {
+				limit = { government_has_flag = government_is_clan }
+				add = unity_major_decision_piety_cost
+				add = {
+					value = 20
+					multiply = {
+						value = number_of_landed_house_members_value
+						subtract = 1 # We don't want to add any extra for the first ruler
+					}
+				}
+			}
+		}
+		prestige = {
+			value = 0
+			if = {
+				limit = {
+					NOT = { government_has_flag = government_is_clan }
+				}
+				add = unity_major_decision_prestige_cost
+				add = {
+					value = 20
+					multiply = {
+						value = number_of_landed_house_members_value
+						subtract = 1 # We don't want to add any extra for the first ruler
+					}
+				}
+			}
+		}
+	}
+	
+	ai_potential = {
+		house ?= { # Don't bother unless you have a few landed house members who would benefit
+			any_house_unity_member = {
+				count >= 3
+			}
+		}
+		ai_has_warlike_personality = yes
+	}
+
+	ai_will_do = {
+		base = 10
+	}
+}
+
+### Promote Prosperity ###
+unity_promote_prosperity_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 72
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_golden_age.dds"
+	}
+	is_invisible = yes
+	
+	sort_order = 60
+
+	desc = unity_promote_prosperity_decision_desc
+
+	cooldown = { years = 20 }
+
+	is_shown = {
+		has_fp3_dlc_trigger = yes
+		culture = { has_cultural_pillar = heritage_iranian }
+		government_has_flag = government_uses_house_unity
+	}
+
+	is_valid = {
+		is_house_head = yes
+		# We show the culture requirement here to tell the player why they have the decision available
+		culture = { has_cultural_pillar = heritage_iranian }
+	}
+
+	is_valid_showing_failures_only = {
+		house = {
+			NOT = { has_house_unity_modifier = fp3_unity_promoted_prosperity_modifier }
+		}
+		custom_tooltip = {
+			text = unity_required_level_not_met_tooltip
+			house = { has_house_unity_parameter = unity_promote_prosperity_decision }
+		}
+	}
+
+	effect = {
+		house = {
+			add_house_unity_modifier = {
+				modifier = fp3_unity_promoted_prosperity_modifier
+				years = 10
+			}
+		}
+	}
+
+	cost = {
+		gold = {
+			value = medium_gold_value
+		}
+		piety = {
+			value = 0
+			if = {
+				limit = { government_has_flag = government_is_clan }
+				add = unity_major_decision_piety_cost
+				add = {
+					value = 20
+					multiply = {
+						value = number_of_landed_house_members_value
+						subtract = 1 # We don't want to add any extra for the first ruler
+					}
+				}
+			}
+		}
+		prestige = {
+			value = 0
+			if = {
+				limit = {
+					NOT = { government_has_flag = government_is_clan }
+				}
+				add = unity_major_decision_prestige_cost
+				add = {
+					value = 20
+					multiply = {
+						value = number_of_landed_house_members_value
+						subtract = 1 # We don't want to add any extra for the first ruler
+					}
+				}
+			}
+		}
+	}
+	
+	ai_potential = {
+		house ?= { # Don't bother unless you have a few landed house members who would benefit
+			any_house_unity_member = {
+				count >= 3
+			}
+		}
+		ai_has_warlike_personality = no
+	}
+
+	ai_will_do = {
+		base = 10
+	}
+}
+
+### Consult House Members ###
+unity_consult_house_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 72
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	is_invisible = yes
+	
+	sort_order = 60
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_council = yes }
+				desc = unity_consult_house_decision_desc
+			}
+			desc = unity_consult_house_decision_desc_court_position
+		}
+	}
+	
+	selection_tooltip = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_council = yes }
+				desc = unity_consult_house_decision_tooltip
+			}
+			desc = unity_consult_house_decision_tooltip_court_position
+		}
+	}
+
+	is_shown = {
+		government_has_flag = government_uses_house_unity
+		is_ruler = yes
+	}
+	
+	is_valid_showing_failures_only = {
+		custom_tooltip = {
+			text = unity_consult_house_decision.tt_cooldown
+			NOT = { has_character_flag = fp3_consulted_house }
+		}
+		custom_tooltip = {
+			text = unity_required_level_not_met_tooltip
+			house = { has_house_unity_parameter = unity_consult_house_decision }
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { has_council = yes }
+			custom_tooltip = unity_consult_house_decision.tt_house_council_bonus
+		}
+		else = { custom_tooltip = unity_consult_house_decision.tt_house_court_position_bonus }
+		#custom_tooltip = unity_consult_house_decision.tt_no_unity_change
+		custom_tooltip = unity_consult_house_decision.tt_lifetime
+		add_character_flag = { flag = fp3_consulted_house }
+	}
+	
+	cost = {
+		piety = {
+			value = 0
+			if = {
+				limit = { government_has_flag = government_is_clan }
+				add = unity_minor_decision_piety_cost
+			}
+		}
+		prestige = {
+			value = 0
+			if = {
+				limit = {	
+					NOT = { government_has_flag = government_is_clan }
+				}
+				add = unity_minor_decision_prestige_cost
+			}
+		}
+	}
+	
+	ai_potential = {
+		# AI has more than 1 house member that is their vassal/courtier (can serve as a councillor)
+		house ?= {
+			any_house_member = {
+				count > 1
+				OR = {
+					is_vassal_of = root
+					is_courtier_of = root
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		base = 20
+		# AI has more than 1 house member actively serving as a councillor
+		modifier = {
+			any_councillor = {
+				count > 1
+				house ?= root.house
+			}
+			add = 100
+		}
+		# Benefits AI to stack family buffs
+		modifier = {
+			culture = { has_cultural_parameter = close_family_better_councillors }
+			add = 50
+		}
+	}
+}
+
+### Establish Futuwaa Lodges ###
+unity_establish_futuwaa_lodges_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 72
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/competitive.dds"
+	}
+	is_invisible = yes
+	sort_order = 60
+
+	desc = {
+		desc = unity_establish_futuwaa_lodges_decision_desc_intro
+		first_valid = {
+			# "People"
+			triggered_desc = {
+				trigger = {
+					OR = {
+						AND = {
+							has_dlc_feature = diverge_culture
+							culture = { has_cultural_parameter = martial_custom_equal_combatant } 
+						}
+						rite = { rite_has_parameter = combatant_can_be_either_gender_if_no_roco }
+						has_character_modifier = ignores_gender_army_rules
+						culture = { 
+							OR = {
+								has_cultural_parameter = has_access_to_shieldmaidens
+								has_cultural_parameter = high_prowess_ignores_knight_restrictions
+							}
+						}
+					}
+				}
+				desc = people
+			}
+			# "Women"
+			triggered_desc = {
+				trigger = {
+					OR = {
+						AND = {
+							has_dlc_feature = diverge_culture
+							culture = { has_cultural_parameter = martial_custom_female_only_combatant } 
+						}
+						rite = { rite_has_parameter = combatant_must_be_female_if_no_roco }
+					}
+				}
+				desc = women
+			}
+			# "Men"
+			triggered_desc = {
+				trigger = {
+					OR = {
+						AND = {
+							has_dlc_feature = diverge_culture
+							culture = { has_cultural_parameter = martial_custom_male_only_combatant } 
+						}
+						rite = { rite_has_parameter = combatant_must_be_male_if_no_roco }
+					}
+				}
+				desc = loc_men
+			}
+		}
+		desc = unity_establish_futuwaa_lodges_decision_desc_outro
+	}
+
+	cooldown = { years = 20 }
+
+	is_shown = {
+		government_has_flag = government_is_clan
+		exists = capital_province
+		is_landed = yes
+	}
+
+	is_valid = {
+		culture = { has_cultural_tradition = tradition_futuwaa }
+	}
+
+	is_valid_showing_failures_only = {
+		custom_tooltip = {
+			text = unity_required_level_not_met_tooltip
+			house = { has_house_unity_parameter = unity_establish_futuwaa_lodges_decision }
+		}
+	}
+
+	effect = {
+		save_scope_as = sponsor # For loc
+
+		# Yup this nonsense is necessary, custom_tooltip does not support triggered_desc
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						has_dlc_feature = diverge_culture
+						culture = { has_cultural_parameter = martial_custom_equal_combatant } 
+					}
+					rite = { rite_has_parameter = combatant_can_be_either_gender_if_no_roco }
+					has_character_modifier = ignores_gender_army_rules
+					culture = {
+						OR = {
+							has_cultural_parameter = has_access_to_shieldmaidens
+							has_cultural_parameter = high_prowess_ignores_knight_restrictions
+						}
+					}
+				}
+			}
+			save_scope_as = any_combatants # This is relevant for a TT later on
+			custom_tooltip = { text = unity_establish_futuwaa_lodges_decision.tt_people }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					AND = {
+						has_dlc_feature = diverge_culture
+						culture = { has_cultural_parameter = martial_custom_female_only_combatant } 
+					}
+					rite = { rite_has_parameter = combatant_must_be_female_if_no_roco }
+				}
+			}
+			save_scope_as = female_combatants
+			custom_tooltip = { text = unity_establish_futuwaa_lodges_decision.tt_women }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					AND = {
+						has_dlc_feature = diverge_culture
+						culture = { has_cultural_parameter = martial_custom_male_only_combatant } 
+					}
+					rite = { rite_has_parameter = combatant_must_be_male_if_no_roco }
+				}
+			}
+			save_scope_as = male_combatants
+			custom_tooltip = { text = unity_establish_futuwaa_lodges_decision.tt_men }
+		}
+		
+
+		if = {
+			limit = { exists = scope:any_combatants }
+			custom_tooltip = { text = unity_establish_futuwaa_lodges_decision.tt_num_people }
+		}
+		else_if = {
+			limit = { exists = scope:female_combatants }
+			custom_tooltip = { text = unity_establish_futuwaa_lodges_decision.tt_num_women }
+		}
+		else_if = {
+			limit = { exists = scope:male_combatants }
+			custom_tooltip = { text = unity_establish_futuwaa_lodges_decision.tt_num_men }
+		}
+
+		add_character_modifier = {
+			modifier = fp3_established_futuwaa_lodges_modifier
+			years = 20
+		}
+
+		add_character_flag = {
+			flag = fp3_established_futuwaa_lodges
+			years = 20
+		}
+		
+		create_story = story_cycle_futuwaa_lodges
+	}
+
+	cost = {
+		piety = { value = unity_minor_decision_piety_cost }
+	}
+	
+	ai_potential = {
+		house.house_head ?= this
+		government_has_flag = government_is_clan
+		highest_held_title_tier >= tier_duchy
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}
+
+### Unity Educate Youth In Madrasas Decision ###
+unity_educate_youth_in_madrasas_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 72
+		duchy = 36
+		kingdom = 12
+		empire = 12
+		hegemony = 12
+	}
+
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_secret_faith.dds"
+	}
+	is_invisible = yes
+	sort_order = 60
+
+	title = {
+		desc = unity_educate_youth_in_madrasas_decision.t_intro
+		first_valid = {
+			# Call them madrasas if our capital is advanced enough
+			triggered_desc = {
+				trigger = {
+					capital_county ?= {
+						prosperity_level >= bad_prosperity_level
+					}
+				}
+				desc = unity_educate_youth_in_madrasas_decision.t_madrasas
+			}
+			# Otherwise just say that the youth are being educated in houses of worship
+			desc = unity_educate_youth_in_madrasas_decision.t_houses_of_worship
+		}
+	}
+
+	desc = {
+		desc = unity_educate_youth_in_madrasas_decision_desc_intro
+		first_valid = {
+			# "People"
+			triggered_desc = {
+				trigger = { has_realm_law = equal_law }
+				desc = people
+			}
+			# "Women"
+			triggered_desc = {
+				trigger = {
+					OR = {
+						has_realm_law = female_only_law
+						has_realm_law = female_preference_law
+					}
+				}
+				desc = women
+			}
+			# "Men"
+			triggered_desc = {
+				trigger = {
+					OR = {
+						has_realm_law = male_only_law
+						has_realm_law = male_preference_law
+					}
+				}
+				desc = loc_men
+			}
+		}
+		desc = unity_educate_youth_in_madrasas_decision_desc_outro
+	}
+
+	cooldown = { years = 20 }
+
+	is_shown = {
+		government_has_flag = government_is_clan
+		is_landed = yes
+		exists = capital_province # Sanity check
+		culture ?= { has_cultural_tradition = tradition_fp3_beacon_of_learning }
+		house ?= { # We still want to show these in tooltips for other unity levels
+			trigger_if = {
+				limit = { has_house_unity_parameter = unity_educate_youth_in_madrasas_decision }
+				has_house_unity_parameter = unity_educate_youth_in_madrasas_decision
+			}
+		}
+	}
+
+	is_valid = {
+		is_at_war = no
+	}
+
+	is_valid_showing_failures_only = {
+		custom_tooltip = {
+			text = unity_required_level_not_met_tooltip
+			house = { has_house_unity_parameter = unity_educate_youth_in_madrasas_decision }
+		}
+	}
+
+	effect = {
+		save_scope_as = sponsor # For loc
+		# TT for who is educated
+		# Yup this nonsense is necessary, custom_tooltip does not support triggered_desc
+		if = {
+			limit = { has_realm_law = equal_law }
+			save_scope_as = realm_law_people # This is relevant for a TT later on
+			custom_tooltip = { text = unity_educate_youth_in_madrasas_decision.tt_people }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_realm_law = female_only_law
+					has_realm_law = female_preference_law
+				}
+			}
+			save_scope_as = realm_law_women
+			custom_tooltip = { text = unity_educate_youth_in_madrasas_decision.tt_women }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_realm_law = male_only_law
+					has_realm_law = male_preference_law
+				}
+			}
+			save_scope_as = realm_law_men
+			custom_tooltip = { text = unity_educate_youth_in_madrasas_decision.tt_men }
+		}
+
+		if = {
+			limit = { exists = scope:realm_law_people }
+			custom_tooltip = { text = unity_educate_youth_in_madrasas_decision.tt_num_people }
+		}
+		else_if = {
+			limit = { exists = scope:realm_law_women }
+			custom_tooltip = { text = unity_educate_youth_in_madrasas_decision.tt_num_women }
+		}
+		else_if = {
+			limit = { exists = scope:realm_law_men }
+			custom_tooltip = { text = unity_educate_youth_in_madrasas_decision.tt_num_men }
+		}
+
+		add_character_modifier = {
+			modifier = fp3_established_madrasas_modifier
+			years = 20
+		}
+
+		add_character_flag = {
+			flag = fp3_educated_youth_in_madrasas
+			years = 20
+		}
+		
+		create_story = story_cycle_madrasas
+	}
+	
+	cost = {
+		piety = { value = unity_minor_decision_piety_cost }
+	}
+	
+	ai_potential = {
+		house.house_head ?= this
+		government_has_flag = government_is_clan
+		highest_held_title_tier >= tier_duchy
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}
+
+# GDP Unity Decisions
+
+### Decentralized Trade Network ###
+unity_regional_networks_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 36
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	}
+	is_invisible = yes
+	
+	sort_order = 60
+
+	cooldown = { years = 20 }
+
+	is_shown = {
+		government_has_flag = government_uses_company_sentiment
+		government_has_flag = government_is_merchant
+	}
+
+	is_valid = {
+		is_house_head = yes
+	}
+
+	is_valid_showing_failures_only = {
+		house = {
+			NOT = { has_house_unity_modifier = unity_regional_networks_landless_merchant_modifier }
+		}
+		custom_tooltip = {
+			text = unity_required_level_not_met_tooltip
+			house = { has_house_unity_parameter = unity_regional_networks_decision }
+		}
+	}
+
+	effect = {
+		house = {
+			add_house_unity_modifier = {
+				modifier = unity_regional_networks_landless_merchant_modifier
+				years = 10
+			}
+		}
+	}
+	
+	cost = {
+		piety = {
+			value = 0
+			if = {
+				limit = { government_has_flag = government_is_clan }
+				add = unity_major_decision_piety_cost
+				add = {
+					value = 20
+					multiply = {
+						value = number_of_landed_house_members_value
+						subtract = 1 # We don't want to add any extra for the first ruler
+					}
+				}
+			}
+		}
+		prestige = {
+			value = 0
+			if = {
+				limit = {
+					NOT = { government_has_flag = government_is_clan }
+				}
+				add = unity_major_decision_prestige_cost
+				add = {
+					value = 20
+					multiply = {
+						value = number_of_landed_house_members_value
+						subtract = 1 # We don't want to add any extra for the first ruler
+					}
+				}
+			}
+		}
+	}
+	
+	ai_potential = {
+		house ?= { # Don't bother unless you have a few landed house members who would benefit
+			any_house_unity_member = {
+				count >= 3
+			}
+		}
+		OR = {
+			ai_has_warlike_personality = yes
+			ai_has_economical_boom_personality = yes
+		}
+	}
+
+	ai_will_do = {
+		base = 25
+	}
+}
+
+### Centralized Trade Office ###
+unity_family_business_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 36
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_recruitment.dds"
+	}
+	is_invisible = yes
+	
+	sort_order = 60
+
+	cooldown = { years = 20 }
+
+	is_shown = {
+		government_has_flag = government_uses_company_sentiment
+		government_has_flag = government_is_merchant
+	}
+
+	is_valid = {
+		is_house_head = yes
+	}
+
+	is_valid_showing_failures_only = {
+		house = {
+			NOT = { has_house_unity_modifier = unity_family_business_landless_merchant_modifier }
+		}
+		custom_tooltip = {
+			text = unity_required_level_not_met_tooltip
+			house = { has_house_unity_parameter = unity_family_business_decision }
+		}
+	}
+
+	effect = {
+		house = {
+			add_house_unity_modifier = {
+				modifier = unity_family_business_landless_merchant_modifier
+				years = 10
+			}
+		}
+	}
+	
+	cost = {
+		piety = {
+			value = 0
+			if = {
+				limit = { government_has_flag = government_is_clan }
+				add = unity_major_decision_piety_cost
+				add = {
+					value = 20
+					multiply = {
+						value = number_of_landed_house_members_value
+						subtract = 1 # We don't want to add any extra for the first ruler
+					}
+				}
+			}
+		}
+		prestige = {
+			value = 0
+			if = {
+				limit = {
+					NOT = { government_has_flag = government_is_clan }
+				}
+				add = unity_major_decision_prestige_cost
+				add = {
+					value = 20
+					multiply = {
+						value = number_of_landed_house_members_value
+						subtract = 1 # We don't want to add any extra for the first ruler
+					}
+				}
+			}
+		}
+	}
+	
+	ai_potential = {
+		house ?= { # Don't bother unless you have a few landed house members who would benefit
+			any_house_unity_member = {
+				count >= 3
+			}
+		}
+		OR = {
+			ai_has_warlike_personality = yes
+			ai_has_economical_boom_personality = yes
+		}
+	}
+
+	ai_will_do = {
+		base = 25
+	}
+}
+
+### Promote Prosperity
+unity_merchant_prosperity_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 36
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/ep3_decision_city.dds"
+	}
+	is_invisible = yes
+	
+	sort_order = 60
+
+	cooldown = { years = 20 }
+
+	is_shown = {
+		government_has_flag = government_uses_company_sentiment
+		government_has_flag = government_is_merchant
+	}
+
+	is_valid = {
+		is_house_head = yes
+	}
+
+	is_valid_showing_failures_only = {
+		custom_tooltip = {
+			text = unity_merchant_prosperity_decision_cooldown_tooltip
+			house = {
+				NOT = { exists = var:unity_merchant_prosperity_decision_cooldown }
+			}
+		}
+		custom_tooltip = {
+			text = unity_required_level_not_met_tooltip
+			house = { has_house_unity_parameter = unity_merchant_prosperity_decision }
+		}
+	}
+
+	effect = {
+		house = {
+			set_variable = {
+				name = unity_merchant_prosperity_decision_cooldown
+				years = 10
+			}
+		}
+		domicile.domicile_location.county ?= {
+			add_county_modifier = {
+				modifier = unity_merchant_prosperity_modifier
+				years = 10
+			}
+		}
+		add_prestige = 100
+	}
+
+	cost = {
+		gold = {
+			value = major_gold_value
+		}
+	}
+	
+	ai_potential = {
+		house ?= { # Don't bother unless you have a few landed house members who would benefit
+			any_house_unity_member = {
+				count >= 3
+			}
+		}
+	}
+
+	ai_will_do = {
+		base = 10
+	}
+}
+
+### Send Bailiffs ###
+unity_merchant_bailiffs_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 36
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	}
+	is_invisible = yes
+	
+	sort_order = 60
+
+	cooldown = { years = 20 }
+
+	is_shown = {
+		government_has_flag = government_uses_company_sentiment
+		government_has_flag = government_is_merchant
+	}
+
+	is_valid = {
+		is_house_head = yes
+		custom_tooltip = {
+			text = unity_merchant_bailiffs_decision_control_tooltip
+			domicile.domicile_location.county ?= { county_control < county_control_baseline }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		custom_tooltip = {
+			text = unity_merchant_bailiffs_decision_cooldown_tooltip
+			house = {
+				NOT = { exists = var:unity_merchant_bailiffs_decision_cooldown }
+			}
+		}
+		custom_tooltip = {
+			text = unity_required_level_not_met_tooltip
+			house = { has_house_unity_parameter = unity_merchant_bailiffs_decision }
+		}
+	}
+
+	effect = {
+		house = {
+			set_variable = {
+				name = unity_merchant_bailiffs_decision_cooldown
+				years = 10
+			}
+		}
+		domicile.domicile_location.county ?= {
+			add_county_modifier = {
+				modifier = unity_merchant_bailiffs_modifier
+				years = 10
+			}
+		}
+		add_prestige = 100
+	}
+	
+	cost = {
+		gold = {
+			value = major_gold_value
+		}
+	}
+	
+	ai_potential = {
+		house ?= { # Don't bother unless you have a few landed house members who would benefit
+			any_house_unity_member = {
+				count >= 3
+			}
+		}
+		OR = {
+			ai_has_warlike_personality = yes
+			ai_has_economical_boom_personality = yes
+		}
+	}
+
+	ai_will_do = {
+		base = 25
+	}
+}
+
+### Promote Diligence ###
+unity_merchant_promote_diligence_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 36
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/cooperative.dds"
+	}
+	decision_group_type = house_unity
+	
+	sort_order = 1500 # We want the decision to be at the top of the list to make it real easy to find.
+
+	cooldown = { years = merchant_promote_diligence_decision_cooldown_years_value }
+
+	cost = {
+		prestige = merchant_promote_diligence_decision_prestige_cost_value
+	}
+
+	is_shown = {
+		government_has_flag = government_is_merchant
+	}
+
+	is_valid = {
+		is_house_head = yes
+		custom_tooltip = {
+			text = unity_required_house_member_nr		
+			house = {
+				any_house_member = {
+					this != root
+					is_adult = yes
+				}
+			}
+		}
+		num_trade_routes >= 1
+		custom_tooltip = {
+			text = unity_merchant_promote_diligence_decision_not_excess_requirement
+			merchant_house_head_drive_decision_not_promoting_excess = yes
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		custom_tooltip = {
+			text = unity_merchant_promote_diligence_decision_cooldown_tooltip
+			house = {
+				NOT = { exists = var:unity_merchant_promote_diligence_decision_cooldown }
+			}
+		}
+	}
+
+	effect = {
+		every_courtier = {
+			limit = {
+				OR = {
+					is_trader = yes
+					has_any_court_position = yes
+				}
+			}
+			add_to_list = unity_promote_diligence_targets
+		}
+		house ?= {
+			every_house_member = {
+				limit = { this != root }
+				add_to_list = unity_promote_diligence_targets
+			}
+		}
+		every_in_list = {
+			list = unity_promote_diligence_targets			
+			custom = custom.every_deputy_or_trader
+			add_character_modifier = {
+				modifier = gdp_promoted_diligence_modifier
+				years = 10
+			}
+		}
+		house ?= {
+			add_house_unity_modifier = {
+				modifier = unity_promoting_diligence_modifier
+				years = 10
+			}
+			custom_tooltip = unity_merchant_promote_diligence_unity_change_tt
+			hidden_effect = {
+				add_unity_value = {
+					value = merchant_promote_diligence_unity_loss_value
+					character = root
+					desc = merchant_unity_promote_diligence.desc
+				}
+			}
+			custom_tooltip = steer_unity_towards_rapacious_passive_loss_tt
+		}
+		add_character_flag = {
+			flag = steer_unity_towards_rapacious_passive_loss
+			years = 10
+		}
+		if = {
+			limit = { has_perk = large_levies_perk }
+			add_character_modifier = {
+				modifier = merchant_family_mobilization_promote_diligence_modifier
+				years = 5
+			}
+		}
+		house = {
+			set_variable = {
+				name = unity_merchant_promote_diligence_decision_cooldown
+				years = merchant_promote_diligence_decision_cooldown_years_value
+			}
+		}
+	}
+	
+	ai_potential = {
+		house ?= { # Don't bother unless you have a few landed house members who would benefit
+			any_house_unity_member = {
+				count >= 3
+			}
+		}
+		OR = {
+			ai_has_warlike_personality = yes
+			ai_has_economical_boom_personality = yes
+		}
+	}
+
+	ai_will_do = {
+		base = 25
+	}
+}
+
+### Promote Excess ###
+unity_merchant_promote_excess_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 36
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/concerted.dds"
+	}
+	decision_group_type = house_unity
+
+	sort_order = 1490
+
+	cooldown = { years = merchant_promote_excess_decision_cooldown_years_value }
+
+	cost = {
+		gold = major_gold_value
+	}
+
+	is_shown = {
+		government_has_flag = government_is_merchant
+	}
+
+	is_valid = {
+		is_house_head = yes
+		custom_tooltip = {
+			text = unity_required_house_member_nr		
+			house = {
+				any_house_member = {
+					this != root
+					is_adult = yes
+				}
+			}
+		}
+		custom_tooltip = {
+			text = unity_merchant_promote_excess_decision_not_diligence_requirement
+			merchant_house_head_drive_decision_not_promoting_diligence = yes
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		custom_tooltip = {
+			text = unity_merchant_promote_excess_decision_cooldown_tooltip
+			house = {
+				NOT = { exists = var:unity_merchant_promote_excess_decision_cooldown }
+			}
+		}
+	}
+
+	effect = {
+		every_courtier = {
+			limit = {
+				OR = {
+					is_trader = yes
+					has_any_court_position = yes
+				}
+			}
+			add_to_list = unity_promote_excess_targets
+		}
+		house ?= {
+			every_house_member = {
+				limit = { this != root }
+				add_to_list = unity_promote_excess_targets
+			}
+		}
+		every_in_list = {
+			list = unity_promote_excess_targets
+			custom = custom.every_deputy_or_trader
+			add_character_modifier = {
+				modifier = gdp_promoted_excess_modifier
+				years = 10
+			}
+		}
+		house ?= {
+			add_house_unity_modifier = {
+				modifier = unity_promoting_excess_modifier
+				years = 10
+			}
+			custom_tooltip = unity_merchant_promote_excess_unity_change_tt
+			hidden_effect = {
+				add_unity_value = {
+					value = monumental_unity_value
+					character = root
+					desc = merchant_unity_promote_excess.desc
+				}
+			}
+			custom_tooltip = steer_unity_towards_ennobled_passive_gain_tt
+		}
+		add_character_flag = {
+			flag = steer_unity_towards_ennobled_passive_gain
+			years = 10
+		}
+		house = {
+			set_variable = {
+				name = unity_merchant_promote_excess_decision_cooldown
+				years = merchant_promote_excess_decision_cooldown_years_value
+			}
+		}
+	}
+
+	ai_potential = {
+		house ?= {
+			any_house_unity_member = {
+				count >= 3
+			}
+		}
+	}
+
+	ai_will_do = {
+		base = 25
+		modifier = {
+			add = 25
+			ai_wants_high_unity = yes
+		}
+	}
+}

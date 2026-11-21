@@ -7669,6 +7669,15 @@ pam_create_great_schism_effect = {
 		days = 30
 	}
 	pam_apply_great_schism_creation_effect = yes
+	# Recheck once after Rome becomes the Catholic main rite.
+	if = {
+		limit = {
+			has_pam_dlc_trigger = yes
+			title:c_roma.holder.top_liege ?= { religion != religion:christianity_religion }
+		}
+		title:c_roma = { set_variable = crypt_balance_vatican_occupation_handled }
+		crypt_balance_adopt_armed_pilgrimages_effect = yes
+	}
 	set_global_variable = pam_great_schism_decision_taken
 	faith:catholic = { save_scope_as = schism_western_faith }
 	faith:orthodox = { save_scope_as = schism_eastern_faith }
@@ -8153,6 +8162,81 @@ pam_merge_new_ecclesiastical_title_interaction_effect = {
 						target = scope:absorbing_holder
 					}
 				}
+			}
+		}
+	}
+}
+
+# Handle each continuous occupation once, including occupations already in a save.
+crypt_balance_update_vatican_occupation_effect = {
+	if = {
+		limit = { has_pam_dlc_trigger = yes }
+		title:c_roma = {
+			if = {
+				limit = {
+					holder.top_liege ?= { religion = religion:christianity_religion }
+					has_variable = crypt_balance_vatican_occupation_handled
+				}
+				remove_variable = crypt_balance_vatican_occupation_handled
+			}
+			else_if = {
+				limit = {
+					holder.top_liege ?= { religion != religion:christianity_religion }
+					NOT = { has_variable = crypt_balance_vatican_occupation_handled }
+				}
+				set_variable = crypt_balance_vatican_occupation_handled
+				crypt_balance_adopt_armed_pilgrimages_effect = yes
+			}
+		}
+	}
+}
+
+crypt_balance_adopt_armed_pilgrimages_effect = {
+	rite:roman_rite.faith ?= {
+		save_temporary_scope_as = vatican_crusade_faith
+		main_rite = {
+			if = {
+				limit = {
+					NOT = {
+						rite_has_tenet = tenet_armed_pilgrimages
+						rite_has_doctrine = doctrine_pilgrimage_forbidden
+					}
+				}
+				ordered_rite_tenet = {
+					limit = {
+						OR = {
+							this = tenet:tenet_peace_of_god
+							this = tenet:tenet_pacifism
+							this = tenet:tenet_dharmic_pacifism
+							AND = {
+								this != tenet:tenet_communion
+								prev = { pam_rite_is_at_core_tenet_cap_trigger = yes }
+							}
+						}
+					}
+					order_by = {
+						save_temporary_scope_as = pam_popularity_tenet
+						value = 0
+						if = {
+							limit = {
+								OR = {
+									this = tenet:tenet_peace_of_god
+									this = tenet:tenet_pacifism
+									this = tenet:tenet_dharmic_pacifism
+								}
+							}
+							add = 100000
+						}
+						scope:vatican_crusade_faith = { subtract = pam_faith_tenet_popularity_value }
+					}
+					position = 0
+					save_temporary_scope_as = vatican_crusade_replaced_tenet
+				}
+				if = {
+					limit = { exists = scope:vatican_crusade_replaced_tenet }
+					remove_rite_tenet = scope:vatican_crusade_replaced_tenet
+				}
+				add_rite_tenet = tenet_armed_pilgrimages
 			}
 		}
 	}

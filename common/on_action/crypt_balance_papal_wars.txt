@@ -1,8 +1,31 @@
 ﻿on_game_start_after_lobby = { on_actions = { crypt_balance_refresh_papal_war_restriction } }
-yearly_global_pulse = { on_actions = { crypt_balance_refresh_papal_war_restriction } }
+yearly_global_pulse = {
+	on_actions = {
+		crypt_balance_refresh_papal_war_restriction
+		crypt_balance_check_vatican_occupation
+	}
+}
 quarterly_playable_pulse = { on_actions = { crypt_balance_apply_papal_war_restriction } }
-on_title_gain = { on_actions = { crypt_balance_apply_papal_war_restriction } }
+on_title_gain = {
+	on_actions = {
+		crypt_balance_apply_papal_war_restriction
+		crypt_balance_check_vatican_occupation_on_title_gain
+	}
+}
 on_title_lost = { on_actions = { crypt_balance_remove_papal_war_restriction } }
+
+crypt_balance_check_vatican_occupation = {
+	effect = {
+		crypt_balance_update_vatican_occupation_effect = yes
+	}
+}
+
+crypt_balance_check_vatican_occupation_on_title_gain = {
+	trigger = { scope:title ?= title:c_roma }
+	effect = {
+		crypt_balance_update_vatican_occupation_effect = yes
+	}
+}
 
 crypt_balance_refresh_papal_war_restriction = {
 	effect = {

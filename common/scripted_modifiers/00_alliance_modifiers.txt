@@ -317,9 +317,29 @@ common_ai_accept_alliance_modifiers = {
 				value = scope:recipient.max_military_strength # For foreign diplomacy, consider recipients max
 				divide = { value = scope:actor.max_military_strength min = 1 }
 			}
-			multiply = 35
-			min = -1000
-			max = 100
+			if = {
+				limit = { scope:recipient.max_military_strength > scope:actor.max_military_strength }
+				# Match the military strength penalty for marriage alliances.
+				multiply = {
+					value = 1
+					subtract = {
+						value = scope:recipient.max_military_strength
+						divide = { value = scope:actor.max_military_strength min = 1 }
+					}
+				}
+				multiply = {
+					value = 1
+					subtract = {
+						value = scope:recipient.max_military_strength
+						divide = { value = scope:actor.max_military_strength min = 1 }
+					}
+				}
+				multiply = 64
+			}
+			else = {
+				multiply = 35
+				max = 100
+			}
 		}
 		desc = AI_MILITARY_BALANCE_REASON
 	}

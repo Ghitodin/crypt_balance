@@ -603,7 +603,7 @@ invite_to_court_interaction = {
 
 	desc = invite_to_court_interaction_desc
 
-	use_diplomatic_range = { crypt_balance_eligible_child_court_invitation_trigger = no }
+	use_diplomatic_range = { crypt_balance_eligible_family_court_invitation_trigger = no }
 
 	is_shown = {
 		scope:actor = { is_ruler = yes }
@@ -612,7 +612,7 @@ invite_to_court_interaction = {
 				is_courtier_of = scope:actor
 				AND = {
 					is_foreign_court_guest = yes
-					crypt_balance_eligible_child_court_invitation_trigger = no
+					crypt_balance_eligible_family_court_invitation_trigger = no
 				}
 				host ?= scope:actor
 				has_trait = order_member
@@ -624,7 +624,7 @@ invite_to_court_interaction = {
 
 	is_valid_showing_failures_only = {
 		trigger_if = {
-			limit = { crypt_balance_eligible_child_court_invitation_trigger = yes }
+			limit = { crypt_balance_eligible_family_court_invitation_trigger = yes }
 			scope:recipient = {
 				bp2_valid_for_standard_interactions_trigger = yes
 				is_imprisoned = no
@@ -1373,7 +1373,7 @@ invite_to_court_interaction = {
 
 	auto_accept = {
 		OR = {
-			crypt_balance_eligible_child_court_invitation_trigger = yes
+			crypt_balance_eligible_family_court_invitation_trigger = yes
 			custom_description = {
 				text = "spending_hook"
 				subject = scope:actor

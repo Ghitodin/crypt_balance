@@ -1,6 +1,18 @@
-﻿crypt_balance_eligible_child_court_invitation_trigger = {
+﻿crypt_balance_eligible_family_court_invitation_trigger = {
 	scope:recipient = {
-		is_child_of = scope:actor
+		OR = {
+			is_child_of = scope:actor
+			AND = {
+				scope:actor = { is_ai = no }
+				is_close_or_extended_family_of = scope:actor
+				liege_or_court_owner ?= {
+					is_ai = yes
+					government_has_flag = government_is_merchant
+				}
+				is_courtier_of = liege_or_court_owner
+				NOT = { is_primary_heir_of = liege_or_court_owner }
+			}
+		}
 		NOR = {
 			has_relation_rival = scope:actor
 			has_relation_nemesis = scope:actor

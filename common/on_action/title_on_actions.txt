@@ -3662,6 +3662,15 @@ on_title_gain_inheritance = {
 			every_close_family_member = {
 				limit = {
 					is_ruler = no
+					# Keep children at a parent's court when a merchant company changes hands.
+					NAND = {
+						scope:title = { gdp_merchant_company_title_trigger = yes }
+						is_adult = no
+						any_parent = {
+							is_alive = yes
+							this = prev.liege_or_court_owner
+						}
+					}
 					NOT = {
 						liege_or_court_owner ?= root
 					}

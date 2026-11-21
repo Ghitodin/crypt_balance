@@ -49,7 +49,6 @@ stewardship_modifier_with_offset = {
 
 martial_modifier = {
 	character_travel_safety = 1
-	knight_limit = 0.2
 	mercenary_hire_limit = 0.1
 }
 martial_modifier_with_offset = {

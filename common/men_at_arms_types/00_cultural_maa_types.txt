@@ -568,7 +568,7 @@ metsanvartija = {
 horse_archers = {
 	type = archer_cavalry
 	
-	damage = 30
+	damage = 20
 	toughness = 18
 	pursuit = 40
 	screen = 30
@@ -576,7 +576,7 @@ horse_archers = {
 	control_value = 4
 
 	terrain_bonus = {
-		steppe = { damage = 45 }
+		steppe = { damage = 22 }
 		plains = { damage = 20 }
 		drylands = { damage = 20 }
 		jungle = { damage = -20 pursuit = -20 }

@@ -9114,7 +9114,7 @@ hajjaj = {
 	rite_modifier = {
 		parameter = mandatory_hajj
 		monthly_piety_gain_mult = 0.35 #offset the -0.25 and add 0.1
-		same_faith_opinion = 5 #offset the -5
+		same_faith_opinion = 2 #offset the -5
 		zealot_opinion = 5
 	}
 	
@@ -18575,7 +18575,7 @@ lifestyle_merchant = {
 	}
 
 	stewardship = 1
-	opposite_opinion = 20
+	opposite_opinion = 0
 	
 	tracks = {
 		caravaneer = {

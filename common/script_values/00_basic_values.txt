@@ -1819,17 +1819,17 @@ gift_artifact_opinion = {
 		# Per level of Rarity
 		if = {
 			limit = { rarity = common }
-			add = 10
+			add = 7
 		}
 		else_if = {
 			limit = { rarity = masterwork }
-			add = 25
+			add = 15
 		}
 		else_if = {
 			limit = { rarity = famed }
-			add = 50
+			add = 25
 		}
-		else = { add = 100 }
+		else = { add = 35 }
 		# Menagerie Creatures are special
 		if = {
 			limit = {

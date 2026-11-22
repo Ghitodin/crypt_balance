@@ -412,7 +412,7 @@ disburse_tour_activity_rewards = {
 				root = {
 					add_character_modifier = { #10 years
 						modifier = mega_itinerant_liege_modifier
-						years = 20
+						years = 10
 					}
 					add_prestige = tour_level_5_prestige_reward
 					if = {
@@ -474,7 +474,7 @@ disburse_tour_activity_rewards = {
 				root = {
 					add_character_modifier = { #10 years
 						modifier = itinerant_liege_modifier
-						years = 20
+						years = 10
 					}
 					add_prestige = tour_level_4_prestige_reward
 					if = {

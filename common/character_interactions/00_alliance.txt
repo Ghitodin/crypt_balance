@@ -370,7 +370,26 @@
 	}
 
 	on_accept = {
+		hidden_effect = {
+			save_temporary_scope_value_as = { name = crypt_balance_track_ally_call value = no }
+			if = {
+				limit = {
+					scope:actor = { is_allied_to = scope:recipient }
+					scope:target ?= { NOT = { is_participant = scope:recipient } }
+				}
+				save_temporary_scope_value_as = { name = crypt_balance_track_ally_call value = yes }
+			}
+		}
 		call_ally_interaction_effect = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					scope:crypt_balance_track_ally_call ?= yes
+					scope:target = { is_participant = scope:recipient }
+				}
+				crypt_balance_record_ally_call_effect = yes
+			}
+		}
 
 		save_scope_value_as = {
 			name = call_ally_interaction

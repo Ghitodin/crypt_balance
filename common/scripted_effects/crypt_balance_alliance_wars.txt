@@ -1,0 +1,53 @@
+﻿crypt_balance_record_ally_call_effect = {
+	scope:recipient = {
+		create_story = {
+			type = crypt_balance_ally_war_call
+			save_scope_as = crypt_balance_war_call_story
+		}
+	}
+	scope:crypt_balance_war_call_story = {
+		set_variable = { name = caller value = scope:actor }
+		set_variable = { name = war value = scope:target }
+		if = {
+			limit = { scope:target = { is_attacker = scope:recipient } }
+			set_variable = { name = joined_as_attacker value = yes }
+		}
+	}
+}
+
+crypt_balance_update_ally_call_effect = {
+	story_owner = { save_temporary_scope_as = crypt_balance_called_ally }
+	if = {
+		limit = {
+			OR = {
+				NOT = { exists = var:war }
+				NOT = { exists = var:caller }
+				var:war ?= { is_war_leader = scope:crypt_balance_called_ally }
+				AND = {
+					has_variable = joined_as_attacker
+					NOT = { var:war ?= { is_attacker = scope:crypt_balance_called_ally } }
+				}
+				AND = {
+					NOT = { has_variable = joined_as_attacker }
+					NOT = { var:war ?= { is_defender = scope:crypt_balance_called_ally } }
+				}
+			}
+		}
+		end_story = yes
+	}
+	else_if = {
+		limit = {
+			var:caller = { NOT = { is_allied_to = scope:crypt_balance_called_ally } }
+		}
+		var:caller = { save_temporary_scope_as = crypt_balance_war_caller }
+		var:war = {
+			primary_attacker = { save_temporary_scope_as = crypt_balance_war_attacker }
+			primary_defender = { save_temporary_scope_as = crypt_balance_war_defender }
+			if = {
+				limit = { NOT = { crypt_balance_has_other_war_call_right_trigger = yes } }
+				remove_participant = scope:crypt_balance_called_ally
+			}
+		}
+		end_story = yes
+	}
+}

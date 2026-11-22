@@ -1,0 +1,41 @@
+﻿# Other grounds that can independently allow a call in this war.
+crypt_balance_has_other_war_call_right_trigger = {
+	OR = {
+		AND = {
+			scope:crypt_balance_war_caller.diarch ?= scope:crypt_balance_called_ally
+			primary_defender = scope:crypt_balance_war_caller
+			diarch_callable_in_internal_war_trigger = yes
+		}
+		scope:crypt_balance_war_caller = {
+			is_vassal_of = scope:crypt_balance_called_ally
+			subject_contract_has_flag = vassal_contract_liege_forced_war_override
+		}
+		AND = {
+			primary_defender = scope:crypt_balance_war_caller
+			scope:crypt_balance_war_caller = {
+				is_tributary_of = scope:crypt_balance_called_ally
+				subject_contract_has_flag = tributary_contract_suzerain_guarantee_override
+			}
+		}
+		AND = {
+			scope:crypt_balance_called_ally = { is_tributary_of = scope:crypt_balance_war_caller }
+			scope:crypt_balance_war_caller = { has_realm_law_flag = can_call_tributaries_for_piety }
+		}
+		AND = {
+			gg_first_and_second_are_same_side_trigger = {
+				FIRST = scope:crypt_balance_war_caller
+				SECOND = scope:crypt_balance_called_ally
+			}
+			gg_first_and_second_are_opposite_sides_trigger = {
+				FIRST = scope:crypt_balance_war_attacker
+				SECOND = scope:crypt_balance_war_defender
+			}
+		}
+		AND = {
+			scope:crypt_balance_called_ally = {
+				gdp_callable_only_through_trade_league_trigger = { ACTOR = scope:crypt_balance_war_caller }
+			}
+			gdp_is_trade_league_war_trigger = yes
+		}
+	}
+}

@@ -1,0 +1,25 @@
+﻿on_alliance_removed = { on_actions = { crypt_balance_end_broken_alliance_war_calls } }
+on_alliance_broken = { on_actions = { crypt_balance_end_broken_alliance_war_calls } }
+
+crypt_balance_end_broken_alliance_war_calls = {
+	effect = {
+		scope:first ?= {
+			every_owned_story = {
+				limit = {
+					story_type = crypt_balance_ally_war_call
+					var:caller ?= scope:second
+				}
+				crypt_balance_update_ally_call_effect = yes
+			}
+		}
+		scope:second ?= {
+			every_owned_story = {
+				limit = {
+					story_type = crypt_balance_ally_war_call
+					var:caller ?= scope:first
+				}
+				crypt_balance_update_ally_call_effect = yes
+			}
+		}
+	}
+}

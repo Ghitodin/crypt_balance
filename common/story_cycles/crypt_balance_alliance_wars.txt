@@ -1,0 +1,12 @@
+﻿crypt_balance_ally_war_call = {
+	on_owner_death = { end_story = yes }
+
+	# Clean up records for wars that ended or that the ally left.
+	effect_group = {
+		days = 30
+		triggered_effect = {
+			trigger = { always = yes }
+			effect = { crypt_balance_update_ally_call_effect = yes }
+		}
+	}
+}

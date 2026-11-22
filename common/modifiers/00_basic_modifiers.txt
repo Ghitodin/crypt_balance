@@ -909,7 +909,7 @@ province_size_level_2 = {
 	monthly_urban_tax = 0.1
 	build_speed = 0.9
 	epidemic_resistance = -2
-	popular_opinion_add = -2
+	popular_opinion_add = -3
 	control_baseline_add = -5
 }
 
@@ -920,7 +920,7 @@ province_size_level_3 = {
 	monthly_urban_tax = 0.2
 	build_speed = 0.8
 	epidemic_resistance = -4
-	popular_opinion_add = -6
+	popular_opinion_add = -7
 	control_baseline_add = -15
 }
 
@@ -935,7 +935,7 @@ province_size_level_4 = {
 	monthly_urban_tax = 0.3
 	build_speed = 0.65
 	epidemic_resistance = -6
-	popular_opinion_add = -9
+	popular_opinion_add = -10
 	control_baseline_add = -20
 }
 
@@ -950,7 +950,7 @@ province_size_level_5 = {
 	monthly_urban_tax = 0.4
 	build_speed = 0.5
 	epidemic_resistance = -8
-	popular_opinion_add = -12
+	popular_opinion_add = -13
 	control_baseline_add = -25
 }
 
@@ -965,7 +965,7 @@ province_size_level_6 = {
 	monthly_urban_tax = 0.5
 	build_speed = 0.45
 	epidemic_resistance = -10
-	popular_opinion_add = -15
+	popular_opinion_add = -16
 	control_baseline_add = -35
 }
 
@@ -980,7 +980,7 @@ province_size_level_7 = {
 	monthly_urban_tax = 0.6
 	build_speed = 0.35
 	epidemic_resistance = -12
-	popular_opinion_add = -18
+	popular_opinion_add = -19
 	control_baseline_add = -45
 }
 
@@ -995,7 +995,7 @@ province_size_level_8 = {
 	monthly_urban_tax = 0.7
 	build_speed = 0.2
 	epidemic_resistance = -14
-	popular_opinion_add = -21
+	popular_opinion_add = -22
 	control_baseline_add = -60
 }
 
@@ -1010,7 +1010,7 @@ province_size_level_9 = {
 	monthly_urban_tax = 0.8
 	build_speed = 0.1
 	epidemic_resistance = -16
-	popular_opinion_add = -23
+	popular_opinion_add = -24
 	control_baseline_add = -70
 }
 
@@ -1024,7 +1024,7 @@ province_size_level_10 = {
 	district_slot_add = 5
 	monthly_urban_tax = 0.9
 	epidemic_resistance = -20
-	popular_opinion_add = -25
+	popular_opinion_add = -26
 	control_baseline_add = -85
 }
 

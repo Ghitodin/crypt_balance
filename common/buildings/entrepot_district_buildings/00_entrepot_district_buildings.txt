@@ -22,6 +22,7 @@ pb_entrepot_01 = {
 	}
 	province_modifier = {
 		building_slots_for_host_district = 1
+		prosperity_growth = 0.0035
 	}
 	next_building = pb_entrepot_02
 	ai_value = {
@@ -62,6 +63,7 @@ pb_entrepot_02 = {
 	}
 	province_modifier = {
 		building_slots_for_host_district = 2
+		prosperity_growth = 0.007
 	}
 
 	can_construct_showing_failures_only = {
@@ -116,6 +118,7 @@ pb_entrepot_03 = {
 	}
 	province_modifier = {
 		building_slots_for_host_district = 3
+		prosperity_growth = 0.01
 	}
 
 	can_construct_showing_failures_only = {
@@ -169,6 +172,7 @@ pb_entrepot_04 = {
 	}
 	province_modifier = {
 		building_slots_for_host_district = 4
+		prosperity_growth = 0.014
 	}
 
 	can_construct_showing_failures_only = {
@@ -233,7 +237,7 @@ entrepot_aromatic_market_1 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		prosperity_growth = entrepot_prosperity_tier_1
+		prosperity_growth = 0.0065
 	}
 	market_modifier = {
 		trade_good_spices_sell_price_mult = entrepot_sell_price_tier_1
@@ -316,7 +320,7 @@ entrepot_aromatic_market_2 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		prosperity_growth = entrepot_prosperity_tier_2
+		prosperity_growth = 0.0125
 	}
 	market_modifier = {
 		trade_good_spices_sell_price_mult = entrepot_sell_price_tier_2
@@ -395,7 +399,7 @@ entrepot_aromatic_market_3 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		prosperity_growth = entrepot_prosperity_tier_3
+		prosperity_growth = 0.02
 	}
 	market_modifier = {
 		trade_good_spices_sell_price_mult = entrepot_sell_price_tier_3
@@ -474,7 +478,7 @@ entrepot_aromatic_market_4 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		prosperity_growth = entrepot_prosperity_tier_4
+		prosperity_growth = 0.025
 	}
 	market_modifier = {
 		trade_good_spices_sell_price_mult = entrepot_sell_price_tier_4

@@ -2015,7 +2015,7 @@ market_fairs_1 = {
 	}
 	show_disabled = yes
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_1
+		monthly_civic_tax = 0.11
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_comforts
@@ -2278,7 +2278,7 @@ market_fairs_2 = {
 	}
 	show_disabled = yes
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_2
+		monthly_civic_tax = 0.225
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_comforts
@@ -2575,7 +2575,7 @@ market_fairs_3 = {
 	}
 	show_disabled = yes
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_3
+		monthly_civic_tax = 0.325
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_comforts
@@ -2872,7 +2872,7 @@ market_fairs_4 = {
 	}
 	show_disabled = yes
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_4
+		monthly_civic_tax = 0.45
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_comforts
@@ -3168,7 +3168,7 @@ market_fairs_5 = {
 	}
 	show_disabled = yes
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_5
+		monthly_civic_tax = 0.55
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_comforts
@@ -3924,7 +3924,7 @@ communal_mill_1 = {
 	show_disabled = yes
 	province_modifier = {
 		prosperity_growth = low_prosperity_tier_1
-		agricultural_tax_mult = normal_building_tax_mult_tier_1
+		agricultural_tax_mult = 0.03
 	}
 	province_potential_trade_good_modifier = {
 		trade_good = trade_good_grain
@@ -3998,7 +3998,7 @@ communal_mill_2 = {
 	show_disabled = yes
 	province_modifier = {
 		prosperity_growth = low_prosperity_tier_2
-		agricultural_tax_mult = normal_building_tax_mult_tier_2
+		agricultural_tax_mult = 0.06
 	}
 	province_potential_trade_good_modifier = {
 		trade_good = trade_good_grain
@@ -4076,7 +4076,7 @@ communal_mill_3 = {
 	show_disabled = yes
 	province_modifier = {
 		prosperity_growth = low_prosperity_tier_3
-		agricultural_tax_mult = normal_building_tax_mult_tier_3
+		agricultural_tax_mult = 0.09
 	}
 	province_potential_trade_good_modifier = {
 		trade_good = trade_good_grain
@@ -4154,7 +4154,7 @@ communal_mill_4 = {
 	show_disabled = yes
 	province_modifier = {
 		prosperity_growth = low_prosperity_tier_4
-		agricultural_tax_mult = normal_building_tax_mult_tier_4
+		agricultural_tax_mult = 0.125
 	}
 	province_potential_trade_good_modifier = {
 		trade_good = trade_good_grain
@@ -4231,7 +4231,7 @@ communal_mill_5 = {
 	show_disabled = yes
 	province_modifier = {
 		prosperity_growth = low_prosperity_tier_5
-		agricultural_tax_mult = normal_building_tax_mult_tier_5
+		agricultural_tax_mult = 0.15
 	}
 	province_potential_trade_good_modifier = {
 		trade_good = trade_good_grain
@@ -6043,6 +6043,7 @@ caravanserai_1 = {
 	province_modifier = {
 		monthly_commerce_tax = normal_building_tax_tier_1
 		commerce_tax_mult = 0.05
+		monthly_civic_tax = 0.04
 	}
 	county_modifier = {
 		travel_danger = -2
@@ -6089,6 +6090,7 @@ caravanserai_2 = {
 	province_modifier = {
 		monthly_commerce_tax = normal_building_tax_tier_2
 		commerce_tax_mult = 0.1
+		monthly_civic_tax = 0.08
 	}
 	county_modifier = {
 		travel_danger = -4
@@ -6137,6 +6139,7 @@ caravanserai_3 = {
 	province_modifier = {
 		monthly_commerce_tax = normal_building_tax_tier_3
 		commerce_tax_mult = 0.15
+		monthly_civic_tax = 0.125
 	}
 	county_modifier = {
 		travel_danger = -6
@@ -6185,6 +6188,7 @@ caravanserai_4 = {
 	province_modifier = {
 		monthly_commerce_tax = normal_building_tax_tier_4
 		commerce_tax_mult = 0.2
+		monthly_civic_tax = 0.16
 	}
 	county_modifier = {
 		travel_danger = -8
@@ -6232,6 +6236,7 @@ caravanserai_5 = {
 	province_modifier = {
 		monthly_commerce_tax = normal_building_tax_tier_5
 		commerce_tax_mult = 0.25
+		monthly_civic_tax = 0.2
 	}
 	county_modifier = {
 		travel_danger = -10

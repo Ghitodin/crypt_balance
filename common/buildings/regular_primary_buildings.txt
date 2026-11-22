@@ -43,7 +43,7 @@ pb_guild_01 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 1
-		monthly_artisan_tax = 0.25
+		monthly_artisan_tax = 0.3
 	}
 	province_terrain_modifier = {
 		parameter = silk_road_oasis_urban_building_slots
@@ -63,6 +63,11 @@ pb_guild_01 = {
 		trade_good = trade_good_oil
 		amount = basic_resource_need
 		culture_parameter = civic_religion_guild_building_slots
+		modifiers = {
+			province_modifier = {
+				monthly_artisan_tax = 0.025
+			}
+		}
 	}
 
 	can_construct_showing_failures_only = {
@@ -109,7 +114,7 @@ pb_guild_02 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 2
-		monthly_artisan_tax = 0.5
+		monthly_artisan_tax = 0.55
 	}
 	province_terrain_modifier = {
 		parameter = silk_road_oasis_urban_building_slots
@@ -129,6 +134,11 @@ pb_guild_02 = {
 		trade_good = trade_good_oil
 		amount = basic_resource_need
 		culture_parameter = civic_religion_guild_building_slots
+		modifiers = {
+			province_modifier = {
+				monthly_artisan_tax = 0.04
+			}
+		}
 	}
 
 	can_construct_showing_failures_only = {
@@ -160,7 +170,7 @@ pb_guild_03 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 3
-		monthly_artisan_tax = 0.75
+		monthly_artisan_tax = 0.85
 	}
 	province_terrain_modifier = {
 		parameter = silk_road_oasis_urban_building_slots
@@ -180,6 +190,11 @@ pb_guild_03 = {
 		trade_good = trade_good_oil
 		amount = basic_resource_need
 		culture_parameter = civic_religion_guild_building_slots
+		modifiers = {
+			province_modifier = {
+				monthly_artisan_tax = 0.06
+			}
+		}
 	}
 
 	can_construct_showing_failures_only = {
@@ -211,7 +226,7 @@ pb_guild_04 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 4
-		monthly_artisan_tax = 1
+		monthly_artisan_tax = 1.1
 	}
 	province_terrain_modifier = {
 		parameter = silk_road_oasis_urban_building_slots
@@ -231,6 +246,11 @@ pb_guild_04 = {
 		trade_good = trade_good_oil
 		amount = basic_resource_need
 		culture_parameter = civic_religion_guild_building_slots
+		modifiers = {
+			province_modifier = {
+				monthly_artisan_tax = 0.075
+			}
+		}
 	}
 
 	can_construct_showing_failures_only = {
@@ -261,7 +281,7 @@ pb_market_01 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 1
-		monthly_commerce_tax = 0.5
+		monthly_commerce_tax = 0.55
 		prosperity_per_province_size_level = 0.005
 	}
 
@@ -291,7 +311,7 @@ pb_market_02 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 2
-		monthly_commerce_tax = 0.75
+		monthly_commerce_tax = 0.8
 		prosperity_per_province_size_level = 0.01
 	}
 
@@ -325,7 +345,7 @@ pb_market_03 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 3
-		monthly_commerce_tax = 1
+		monthly_commerce_tax = 1.1
 		prosperity_per_province_size_level = 0.015
 	}
 
@@ -359,7 +379,7 @@ pb_market_04 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 4
-		monthly_commerce_tax = 1.25
+		monthly_commerce_tax = 1.4
 		prosperity_per_province_size_level = 0.02
 	}
 
@@ -393,7 +413,7 @@ pb_port_01 = {
 	type_icon = "district_buildings/port_district.dds"
 	province_modifier = {
 		building_slots_for_host_district = 1
-		monthly_maritime_tax = port_primary_maritime_tax_tier_1
+		monthly_maritime_tax = 0.3
 		epidemic_resistance = port_primary_epidemic_resistance
 		additional_fort_level = port_primary_fort_level
 	}
@@ -451,7 +471,7 @@ pb_port_02 = {
 	cost_gold = district_tier_2_cost
 	province_modifier = {
 		building_slots_for_host_district = 2
-		monthly_maritime_tax = port_primary_maritime_tax_tier_2
+		monthly_maritime_tax = 0.6
 		epidemic_resistance = port_primary_epidemic_resistance
 		additional_fort_level = port_primary_fort_level
 	}
@@ -508,7 +528,7 @@ pb_port_03 = {
 	cost_gold = district_tier_3_cost
 	province_modifier = {
 		building_slots_for_host_district = 3
-		monthly_maritime_tax = port_primary_maritime_tax_tier_3
+		monthly_maritime_tax = 0.9
 		epidemic_resistance = port_primary_epidemic_resistance
 		additional_fort_level = port_primary_fort_level
 	}
@@ -569,7 +589,7 @@ pb_port_04 = {
 	cost_gold = district_tier_4_cost
 	province_modifier = {
 		building_slots_for_host_district = 4
-		monthly_maritime_tax = port_primary_maritime_tax_tier_4
+		monthly_maritime_tax = 1.2
 		epidemic_resistance = port_primary_epidemic_resistance
 		additional_fort_level = port_primary_fort_level
 	}
@@ -639,6 +659,7 @@ pb_border_forts_01 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 1
+		control_baseline_add = 0.35
 	}
 
 	type_icon = "district_buildings/border_forts_district.dds"
@@ -666,6 +687,7 @@ pb_border_forts_02 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 2
+		control_baseline_add = 0.7
 	}
 
 	can_construct_showing_failures_only = {
@@ -696,6 +718,7 @@ pb_border_forts_03 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 3
+		control_baseline_add = 1.05
 	}
 
 	can_construct_showing_failures_only = {
@@ -726,6 +749,7 @@ pb_border_forts_04 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 4
+		control_baseline_add = 1.4
 	}
 
 	can_construct_showing_failures_only = {
@@ -757,7 +781,7 @@ pb_walls_01 = {
 	province_modifier = {
 		building_slots_for_host_district = 1
 		additional_fort_level = 1
-		control_baseline_add = 15
+		control_baseline_add = 16.75
 		defender_holding_advantage = 2
 	}
 	province_culture_modifier = {
@@ -811,7 +835,7 @@ pb_walls_02 = {
 	province_modifier = {
 		building_slots_for_host_district = 2
 		additional_fort_level = 2
-		control_baseline_add = 25
+		control_baseline_add = 26.75
 		defender_holding_advantage = 3
 	}
 	province_culture_modifier = {
@@ -860,7 +884,7 @@ pb_walls_03 = {
 	province_modifier = {
 		building_slots_for_host_district = 3
 		additional_fort_level = 3
-		control_baseline_add = 30
+		control_baseline_add = 31.75
 		defender_holding_advantage = 4
 	}
 	province_culture_modifier = {
@@ -909,7 +933,7 @@ pb_walls_04 = {
 	province_modifier = {
 		building_slots_for_host_district = 4
 		additional_fort_level = 4
-		control_baseline_add = 40
+		control_baseline_add = 41.75
 		defender_holding_advantage = 6
 	}
 	province_culture_modifier = {
@@ -969,7 +993,7 @@ pb_military_01 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 1
-		monthly_civic_tax = poor_building_tax_tier_1
+		monthly_civic_tax = 0.11
 	}
 
 	type_icon = "district_buildings/military_district.dds"
@@ -1035,7 +1059,7 @@ pb_military_02 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 2
-		monthly_civic_tax = poor_building_tax_tier_2
+		monthly_civic_tax = 0.225
 	}
 
 	can_construct_showing_failures_only = {
@@ -1106,7 +1130,7 @@ pb_military_03 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 3
-		monthly_civic_tax = poor_building_tax_tier_3
+		monthly_civic_tax = 0.35
 	}
 
 	can_construct_showing_failures_only = {
@@ -1177,7 +1201,7 @@ pb_military_04 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 4
-		monthly_civic_tax = poor_building_tax_tier_4
+		monthly_civic_tax = 0.45
 	}
 
 	can_construct_showing_failures_only = {
@@ -1238,7 +1262,7 @@ pb_bureaucratic_01 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 1
-		control_baseline_add = 10
+		control_baseline_add = 11.5
 	}
 	province_culture_modifier = {
 		parameter = scholar_officials_bureaucratic_building_slot
@@ -1306,7 +1330,7 @@ pb_bureaucratic_02 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 2
-		control_baseline_add = 15
+		control_baseline_add = 18
 	}
 	province_culture_modifier = {
 		parameter = scholar_officials_bureaucratic_building_slot
@@ -1362,7 +1386,7 @@ pb_bureaucratic_03 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 3
-		control_baseline_add = 30
+		control_baseline_add = 34.5
 	}
 	province_culture_modifier = {
 		parameter = scholar_officials_bureaucratic_building_slot
@@ -1419,7 +1443,7 @@ pb_bureaucratic_04 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 4
-		control_baseline_add = 35
+		control_baseline_add = 41
 	}
 	province_culture_modifier = {
 		parameter = scholar_officials_bureaucratic_building_slot
@@ -1503,7 +1527,7 @@ pb_royal_palace_01 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 1
-		monthly_civic_tax = poor_building_tax_tier_1
+		monthly_civic_tax = 0.125
 	}
 	province_culture_modifier = {
 		parameter = astute_diplomats_household_building_slot
@@ -1677,7 +1701,7 @@ pb_royal_palace_02 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 2
-		monthly_civic_tax = poor_building_tax_tier_2
+		monthly_civic_tax = 0.25
 	}
 	province_culture_modifier = {
 		parameter = astute_diplomats_household_building_slot
@@ -1850,7 +1874,7 @@ pb_royal_palace_03 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 3
-		monthly_civic_tax = poor_building_tax_tier_3
+		monthly_civic_tax = 0.35
 	}
 	province_culture_modifier = {
 		parameter = astute_diplomats_household_building_slot
@@ -2023,7 +2047,7 @@ pb_royal_palace_04 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 4
-		monthly_civic_tax = poor_building_tax_tier_4
+		monthly_civic_tax = 0.5
 	}
 	province_culture_modifier = {
 		parameter = astute_diplomats_household_building_slot
@@ -2168,7 +2192,7 @@ pb_mandala_01 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 1
-		monthly_religious_tax = normal_building_tax_tier_1
+		monthly_religious_tax = 0.225
 		additional_fort_level = normal_building_fort_level_tier_1
 	}
 	province_culture_modifier = {
@@ -2207,7 +2231,7 @@ pb_mandala_02 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 2
-		monthly_religious_tax = normal_building_tax_tier_2
+		monthly_religious_tax = 0.45
 		additional_fort_level = normal_building_fort_level_tier_2
 	}
 	province_culture_modifier = {
@@ -2243,7 +2267,7 @@ pb_mandala_03 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 3
-		monthly_religious_tax = normal_building_tax_tier_3
+		monthly_religious_tax = 0.7
 		additional_fort_level = normal_building_fort_level_tier_3
 	}
 	province_culture_modifier = {
@@ -2278,7 +2302,7 @@ pb_mandala_04 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 4
-		monthly_religious_tax = normal_building_tax_tier_4
+		monthly_religious_tax = 0.9
 		additional_fort_level = normal_building_fort_level_tier_4
 	}
 	province_culture_modifier = {
@@ -2352,10 +2376,12 @@ pb_temple_01 = {
 	province_modifier = {
 		building_slots_for_host_district = 1
 		popular_opinion_add = 5
+		monthly_religious_tax = 0.04
 	}
 	province_rite_modifier = {
 		parameter = tenet_be_fruitful_and_multiply_temple_growth
 		monthly_province_size_change_when_below_baseline_add = regular_building_province_size_baseline_increase_tier_1
+		monthly_religious_tax = 0.0275
 	}
 	province_culture_modifier = {
 		parameter = esoteric_power_stationed_skirmisher_control
@@ -2754,10 +2780,12 @@ pb_temple_02 = {
 	province_modifier = {
 		building_slots_for_host_district = 2
 		popular_opinion_add = 6
+		monthly_religious_tax = 0.08
 	}
 	province_rite_modifier = {
 		parameter = tenet_be_fruitful_and_multiply_temple_growth
 		monthly_province_size_change_when_below_baseline_add = regular_building_province_size_baseline_increase_tier_2
+		monthly_religious_tax = 0.055
 	}
 	province_culture_modifier = {
 		parameter = esoteric_power_stationed_skirmisher_control
@@ -3142,10 +3170,12 @@ pb_temple_03 = {
 	province_modifier = {
 		building_slots_for_host_district = 3
 		popular_opinion_add = 7
+		monthly_religious_tax = 0.125
 	}
 	province_rite_modifier = {
 		parameter = tenet_be_fruitful_and_multiply_temple_growth
 		monthly_province_size_change_when_below_baseline_add = regular_building_province_size_baseline_increase_tier_3
+		monthly_religious_tax = 0.08
 	}
 	province_culture_modifier = {
 		parameter = esoteric_power_stationed_skirmisher_control
@@ -3535,10 +3565,12 @@ pb_temple_04 = {
 	province_modifier = {
 		building_slots_for_host_district = 4
 		popular_opinion_add = 8
+		monthly_religious_tax = 0.175
 	}
 	province_rite_modifier = {
 		parameter = tenet_be_fruitful_and_multiply_temple_growth
 		monthly_province_size_change_when_below_baseline_add = regular_building_province_size_baseline_increase_tier_4
+		monthly_religious_tax = 0.11
 	}
 	province_culture_modifier = {
 		parameter = esoteric_power_stationed_skirmisher_control
@@ -3914,6 +3946,7 @@ pb_entertainment_01 = {
 	province_modifier = {
 		building_slots_for_host_district = 1
 		popular_opinion_add = building_tiny_popular_opinion_gain
+		monthly_urban_tax = 0.07
 	}
 
 	type_icon = "district_buildings/entertainment_square_district.dds"
@@ -3940,6 +3973,7 @@ pb_entertainment_02 = {
 	province_modifier = {
 		building_slots_for_host_district = 2
 		popular_opinion_add = building_minor_popular_opinion_gain
+		monthly_urban_tax = 0.14
 	}
 
 	can_construct_showing_failures_only = {
@@ -3969,6 +4003,7 @@ pb_entertainment_03 = {
 	province_modifier = {
 		building_slots_for_host_district = 3
 		popular_opinion_add = building_moderate_popular_opinion_gain
+		monthly_urban_tax = 0.2
 	}
 
 	can_construct_showing_failures_only = {
@@ -3999,6 +4034,7 @@ pb_entertainment_04 = {
 	province_modifier = {
 		building_slots_for_host_district = 4
 		popular_opinion_add = building_medium_popular_opinion_gain
+		monthly_urban_tax = 0.275
 	}
 
 	can_construct_showing_failures_only = {
@@ -4027,6 +4063,7 @@ pb_patrician_01 = {
 	province_modifier = {
 		building_slots_for_host_district = 1
 		prosperity_per_province_size_level = patrician_primary_prosperity_per_size_tier_1
+		popular_opinion_add = 1
 	}
 	province_culture_modifier = {
 		parameter = palace_politics_patrician_building_slot
@@ -4110,6 +4147,7 @@ pb_patrician_02 = {
 	province_modifier = {
 		building_slots_for_host_district = 2
 		prosperity_per_province_size_level = patrician_primary_prosperity_per_size_tier_2
+		popular_opinion_add = 1
 	}
 	province_culture_modifier = {
 		parameter = palace_politics_patrician_building_slot
@@ -4192,6 +4230,7 @@ pb_patrician_03 = {
 	province_modifier = {
 		building_slots_for_host_district = 3
 		prosperity_per_province_size_level = patrician_primary_prosperity_per_size_tier_3
+		popular_opinion_add = 1
 	}
 	province_culture_modifier = {
 		parameter = palace_politics_patrician_building_slot
@@ -4275,6 +4314,7 @@ pb_patrician_04 = {
 	province_modifier = {
 		building_slots_for_host_district = 4
 		prosperity_per_province_size_level = patrician_primary_prosperity_per_size_tier_4
+		popular_opinion_add = 1
 	}
 	province_culture_modifier = {
 		parameter = palace_politics_patrician_building_slot
@@ -4357,6 +4397,7 @@ pb_urban_housing_01 = {
 	province_modifier = {
 		building_slots_for_host_district = 1
 		monthly_province_size_change_when_below_baseline_add = 0.1
+		monthly_urban_tax = 0.025
 	}
 	province_terrain_modifier = {
 		parameter = silk_road_oasis_urban_building_slots
@@ -4505,6 +4546,7 @@ pb_urban_housing_02 = {
 	province_modifier = {
 		building_slots_for_host_district = 2
 		monthly_province_size_change_when_below_baseline_add = 0.2
+		monthly_urban_tax = 0.05
 	}
 	province_terrain_modifier = {
 		parameter = silk_road_oasis_urban_building_slots
@@ -4651,6 +4693,7 @@ pb_urban_housing_03 = {
 	province_modifier = {
 		building_slots_for_host_district = 3
 		monthly_province_size_change_when_below_baseline_add = 0.3
+		monthly_urban_tax = 0.075
 	}
 	province_terrain_modifier = {
 		parameter = silk_road_oasis_urban_building_slots
@@ -4797,6 +4840,7 @@ pb_urban_housing_04 = {
 	province_modifier = {
 		building_slots_for_host_district = 4
 		monthly_province_size_change_when_below_baseline_add = 0.4
+		monthly_urban_tax = 0.1
 	}
 	province_terrain_modifier = {
 		parameter = silk_road_oasis_urban_building_slots
@@ -6794,7 +6838,7 @@ pb_tribal_economy_prestige_01 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 1
-		monthly_tribal_tax = 0.1
+		monthly_tribal_tax = 0.125
 	}
 	province_terrain_modifier = {
 		parameter = jungle_tribal_economy_building_slot
@@ -6874,7 +6918,7 @@ pb_tribal_economy_prestige_02 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 2
-		monthly_tribal_tax = 0.2
+		monthly_tribal_tax = 0.25
 	}
 	province_terrain_modifier = {
 		parameter = jungle_tribal_economy_building_slot
@@ -6946,7 +6990,7 @@ pb_tribal_economy_prestige_03 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 3
-		monthly_tribal_tax = 0.3
+		monthly_tribal_tax = 0.35
 	}
 	province_terrain_modifier = {
 		parameter = jungle_tribal_economy_building_slot
@@ -7024,7 +7068,7 @@ pb_tribal_economy_prestige_04 = {
 
 	province_modifier = {
 		building_slots_for_host_district = 4
-		monthly_tribal_tax = 0.4
+		monthly_tribal_tax = 0.5
 	}
 	province_terrain_modifier = {
 		parameter = jungle_tribal_economy_building_slot

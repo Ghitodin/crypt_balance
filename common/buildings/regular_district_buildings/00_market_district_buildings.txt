@@ -43,7 +43,7 @@ day_market_1 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = normal_market_building_tax_tier_1
+		monthly_commerce_tax = 0.065
 		prosperity_growth = low_prosperity_tier_1
 	}
 	market_modifier = {
@@ -91,7 +91,7 @@ day_market_2 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = normal_market_building_tax_tier_2
+		monthly_commerce_tax = 0.125
 		prosperity_growth = low_prosperity_tier_2
 	}
 	market_modifier = {
@@ -139,7 +139,7 @@ day_market_3 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = normal_market_building_tax_tier_3
+		monthly_commerce_tax = 0.2
 		prosperity_growth = low_prosperity_tier_3
 	}
 	market_modifier = {
@@ -187,7 +187,7 @@ day_market_4 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = normal_market_building_tax_tier_4
+		monthly_commerce_tax = 0.25
 		prosperity_growth = low_prosperity_tier_4
 	}
 	market_modifier = {
@@ -234,7 +234,7 @@ day_market_5 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = normal_market_building_tax_tier_5
+		monthly_commerce_tax = 0.325
 		prosperity_growth = low_prosperity_tier_5
 	}
 	market_modifier = {
@@ -491,7 +491,7 @@ fabric_market_1 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = normal_market_building_tax_tier_1
+		monthly_commerce_tax = 0.065
 		prosperity_growth = low_prosperity_tier_1
 	}
 	market_modifier = {
@@ -530,7 +530,7 @@ fabric_market_2 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = normal_market_building_tax_tier_2
+		monthly_commerce_tax = 0.125
 		prosperity_growth = low_prosperity_tier_2
 	}
 	market_modifier = {
@@ -569,7 +569,7 @@ fabric_market_3 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = normal_market_building_tax_tier_3
+		monthly_commerce_tax = 0.2
 		prosperity_growth = low_prosperity_tier_3
 	}
 	market_modifier = {
@@ -608,7 +608,7 @@ fabric_market_4 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = normal_market_building_tax_tier_4
+		monthly_commerce_tax = 0.25
 		prosperity_growth = low_prosperity_tier_4
 	}
 	market_modifier = {
@@ -688,7 +688,7 @@ merchant_lodging_houses_1 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = normal_market_building_tax_tier_1
+		monthly_commerce_tax = 0.125
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_alcohol
@@ -705,6 +705,11 @@ merchant_lodging_houses_1 = {
 		trade_good_category = trade_category_comforts
 		amount = basic_resource_need
 
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = 0.014
+			}
+		}
 	}
 
 	ai_value = {
@@ -738,7 +743,7 @@ merchant_lodging_houses_2 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = normal_market_building_tax_tier_2
+		monthly_commerce_tax = 0.25
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_alcohol
@@ -759,6 +764,11 @@ merchant_lodging_houses_2 = {
 
 		can_be_filled_multiple_times = 2
 
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = 0.014
+			}
+		}
 	}
 
 	ai_value = {
@@ -792,7 +802,7 @@ merchant_lodging_houses_3 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = normal_market_building_tax_tier_3
+		monthly_commerce_tax = 0.35
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_alcohol
@@ -813,6 +823,11 @@ merchant_lodging_houses_3 = {
 
 		can_be_filled_multiple_times = 3
 
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = 0.014
+			}
+		}
 	}
 
 	ai_value = {
@@ -846,7 +861,7 @@ merchant_lodging_houses_4 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = normal_market_building_tax_tier_4
+		monthly_commerce_tax = 0.5
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_alcohol
@@ -867,6 +882,11 @@ merchant_lodging_houses_4 = {
 
 		can_be_filled_multiple_times = 4
 
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = 0.014
+			}
+		}
 	}
 
 	ai_value = {
@@ -899,7 +919,7 @@ merchant_lodging_houses_5 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = normal_market_building_tax_tier_5
+		monthly_commerce_tax = 0.6
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_alcohol
@@ -920,6 +940,11 @@ merchant_lodging_houses_5 = {
 
 		can_be_filled_multiple_times = 5
 
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = 0.014
+			}
+		}
 	}
 
 	ai_value = {
@@ -2202,7 +2227,7 @@ high_street_market_1 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = good_building_tax_tier_1
+		monthly_commerce_tax = 0.275
 	}
 	market_modifier = {
 		trade_category_luxury_items_sell_price_mult = price_basic_building_1
@@ -2241,7 +2266,7 @@ high_street_market_2 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = good_building_tax_tier_2
+		monthly_commerce_tax = 0.5
 	}
 	market_modifier = {
 		trade_category_luxury_items_sell_price_mult = price_basic_building_2
@@ -2280,7 +2305,7 @@ high_street_market_3 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = good_building_tax_tier_3
+		monthly_commerce_tax = 0.7
 	}
 	market_modifier = {
 		trade_category_luxury_items_sell_price_mult = price_basic_building_3
@@ -2319,7 +2344,7 @@ high_street_market_4 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = good_building_tax_tier_4
+		monthly_commerce_tax = 0.9
 	}
 	market_modifier = {
 		trade_category_luxury_items_sell_price_mult = price_basic_building_4
@@ -2357,7 +2382,7 @@ high_street_market_5 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = good_building_tax_tier_5
+		monthly_commerce_tax = 1.1
 	}
 	market_modifier = {
 		trade_category_luxury_items_sell_price_mult = price_basic_building_5

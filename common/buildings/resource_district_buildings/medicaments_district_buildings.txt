@@ -1092,6 +1092,11 @@ local_hospital_1 = {
 	trade_good_need = {
 		trade_good = trade_good_medicaments
 		amount = basic_resource_need
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = 0.0035
+			}
+		}
 	}
 	on_complete = {
 
@@ -1137,6 +1142,11 @@ local_hospital_2 = {
 		amount = basic_resource_need
 
 		can_be_filled_multiple_times = 2
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = 0.0035
+			}
+		}
 	}
 	on_complete = {
 
@@ -1181,6 +1191,11 @@ local_hospital_3 = {
 		amount = basic_resource_need
 
 		can_be_filled_multiple_times = 3
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = 0.0035
+			}
+		}
 	}
 	on_complete = {
 
@@ -1225,6 +1240,11 @@ local_hospital_4 = {
 		amount = basic_resource_need
 
 		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = 0.0035
+			}
+		}
 	}
 	on_complete = {
 
@@ -1269,6 +1289,11 @@ local_hospital_5 = {
 		amount = basic_resource_need
 
 		can_be_filled_multiple_times = 5
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = 0.0035
+			}
+		}
 	}
 	on_complete = {
 
@@ -1300,7 +1325,7 @@ apothecary_1 = {
 	cost_gold = resource_district_normal_tier_1_cost
 
 	province_modifier = {
-		prosperity_growth = apothecary_prosperity_tier_1
+		prosperity_growth = 0.0065
 	}
 
 
@@ -1353,7 +1378,7 @@ apothecary_2 = {
 	cost_gold = resource_district_normal_tier_2_cost
 
 	province_modifier = {
-		prosperity_growth = apothecary_prosperity_tier_2
+		prosperity_growth = 0.0125
 	}
 
 
@@ -1407,7 +1432,7 @@ apothecary_3 = {
 	cost_gold = resource_district_normal_tier_3_cost
 
 	province_modifier = {
-		prosperity_growth = apothecary_prosperity_tier_3
+		prosperity_growth = 0.02
 	}
 
 
@@ -1461,7 +1486,7 @@ apothecary_4 = {
 	cost_gold = resource_district_normal_tier_4_cost
 
 	province_modifier = {
-		prosperity_growth = apothecary_prosperity_tier_4
+		prosperity_growth = 0.025
 	}
 
 
@@ -1515,7 +1540,7 @@ apothecary_5 = {
 	cost_gold = resource_district_normal_tier_5_cost
 
 	province_modifier = {
-		prosperity_growth = apothecary_prosperity_tier_5
+		prosperity_growth = 0.0325
 	}
 
 

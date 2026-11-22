@@ -56,7 +56,7 @@ bartering_markets_1 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		tribal_tax_mult = 0.025
+		tribal_tax_mult = 0.016
 		monthly_barter_goods_mult = 0.02
 	}
 	market_modifier = {
@@ -147,7 +147,7 @@ bartering_markets_2 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		tribal_tax_mult = 0.05
+		tribal_tax_mult = 0.0325
 		monthly_barter_goods_mult = 0.04
 	}
 	market_modifier = {
@@ -245,7 +245,7 @@ bartering_markets_3 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		tribal_tax_mult = 0.075
+		tribal_tax_mult = 0.05
 		monthly_barter_goods_mult = 0.06
 	}
 	market_modifier = {
@@ -343,7 +343,7 @@ bartering_markets_4 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		tribal_tax_mult = 0.1
+		tribal_tax_mult = 0.065
 		monthly_barter_goods_mult = 0.08
 	}
 	market_modifier = {
@@ -440,7 +440,7 @@ bartering_markets_5 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		tribal_tax_mult = 0.125
+		tribal_tax_mult = 0.08
 		monthly_barter_goods_mult = 0.1
 	}
 	market_modifier = {
@@ -3481,11 +3481,21 @@ storehouses_1 = {
 		trade_good_category = trade_category_cereals
 		amount = rural_resource_need
 		not_rite_parameter = cereals_forbidden
+		modifiers = {
+			province_modifier = {
+				tribal_tax_mult = 0.00175
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_meat
 		amount = rural_resource_need
 		rite_parameter = cereals_forbidden
+		modifiers = {
+			province_modifier = {
+				tribal_tax_mult = 0.00175
+			}
+		}
 	}
 
 	ai_value = {
@@ -3509,6 +3519,9 @@ storehouses_1 = {
 		ai_economical_building_preference_modifier = yes
 		ai_capital_preference_modifier = yes
 		ai_regular_new_building_modifier = yes
+	}
+	province_modifier = {
+		tribal_tax_mult = 0.0055
 	}
 }
 
@@ -3562,6 +3575,11 @@ storehouses_2 = {
 		can_be_filled_multiple_times = 2
 
 		not_rite_parameter = cereals_forbidden
+		modifiers = {
+			province_modifier = {
+				tribal_tax_mult = 0.00175
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_meat
@@ -3570,6 +3588,11 @@ storehouses_2 = {
 		can_be_filled_multiple_times = 2
 
 		rite_parameter = cereals_forbidden
+		modifiers = {
+			province_modifier = {
+				tribal_tax_mult = 0.00175
+			}
+		}
 	}
 
 	ai_value = {
@@ -3593,6 +3616,9 @@ storehouses_2 = {
 		ai_economical_building_preference_modifier = yes
 		ai_capital_preference_modifier = yes
 		ai_regular_building_upgrade_modifier = { LEVEL = 2 }
+	}
+	province_modifier = {
+		tribal_tax_mult = 0.011
 	}
 }
 
@@ -3646,6 +3672,11 @@ storehouses_3 = {
 		can_be_filled_multiple_times = 3
 
 		not_rite_parameter = cereals_forbidden
+		modifiers = {
+			province_modifier = {
+				tribal_tax_mult = 0.00175
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_meat
@@ -3654,6 +3685,11 @@ storehouses_3 = {
 		can_be_filled_multiple_times = 3
 
 		rite_parameter = cereals_forbidden
+		modifiers = {
+			province_modifier = {
+				tribal_tax_mult = 0.00175
+			}
+		}
 	}
 
 	ai_value = {
@@ -3677,6 +3713,9 @@ storehouses_3 = {
 		ai_economical_building_preference_modifier = yes
 		ai_capital_preference_modifier = yes
 		ai_regular_building_upgrade_modifier = { LEVEL = 3 }
+	}
+	province_modifier = {
+		tribal_tax_mult = 0.016
 	}
 }
 
@@ -3730,6 +3769,11 @@ storehouses_4 = {
 		can_be_filled_multiple_times = 4
 
 		not_rite_parameter = cereals_forbidden
+		modifiers = {
+			province_modifier = {
+				tribal_tax_mult = 0.00175
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_meat
@@ -3738,6 +3782,11 @@ storehouses_4 = {
 		can_be_filled_multiple_times = 4
 
 		rite_parameter = cereals_forbidden
+		modifiers = {
+			province_modifier = {
+				tribal_tax_mult = 0.00175
+			}
+		}
 	}
 
 	ai_value = {
@@ -3761,6 +3810,9 @@ storehouses_4 = {
 		ai_economical_building_preference_modifier = yes
 		ai_capital_preference_modifier = yes
 		ai_regular_building_upgrade_modifier = { LEVEL = 4 }
+	}
+	province_modifier = {
+		tribal_tax_mult = 0.0225
 	}
 }
 
@@ -3813,6 +3865,11 @@ storehouses_5 = {
 		can_be_filled_multiple_times = 5
 
 		not_rite_parameter = cereals_forbidden
+		modifiers = {
+			province_modifier = {
+				tribal_tax_mult = 0.00175
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_meat
@@ -3821,6 +3878,11 @@ storehouses_5 = {
 		can_be_filled_multiple_times = 5
 
 		rite_parameter = cereals_forbidden
+		modifiers = {
+			province_modifier = {
+				tribal_tax_mult = 0.00175
+			}
+		}
 	}
 
 	ai_value = {
@@ -3844,5 +3906,8 @@ storehouses_5 = {
 		ai_economical_building_preference_modifier = yes
 		ai_capital_preference_modifier = yes
 		ai_regular_building_upgrade_modifier = { LEVEL = 5 }
+	}
+	province_modifier = {
+		tribal_tax_mult = 0.0275
 	}
 }

@@ -53,7 +53,8 @@ royal_great_hall_1 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_1
+		monthly_civic_tax = 0.055
+		popular_opinion_add = 1
 	}
 	market_modifier = {
 		trade_good_spices_sell_price_mult = household_price_mult
@@ -249,7 +250,8 @@ royal_great_hall_2 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_2
+		monthly_civic_tax = 0.11
+		popular_opinion_add = 2
 	}
 	market_modifier = {
 		trade_good_spices_sell_price_mult = household_price_mult
@@ -454,7 +456,8 @@ royal_great_hall_3 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_3
+		monthly_civic_tax = 0.17
+		popular_opinion_add = 2
 	}
 	market_modifier = {
 		trade_good_spices_sell_price_mult = household_price_mult
@@ -659,7 +662,8 @@ royal_great_hall_4 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_4
+		monthly_civic_tax = 0.225
+		popular_opinion_add = 3
 	}
 	market_modifier = {
 		trade_good_spices_sell_price_mult = household_price_mult
@@ -863,7 +867,8 @@ royal_great_hall_5 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_5
+		monthly_civic_tax = 0.375
+		popular_opinion_add = 4
 	}
 	market_modifier = {
 		trade_good_spices_sell_price_mult = household_price_mult
@@ -1066,8 +1071,9 @@ royal_chapel_1 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		popular_opinion_add = 3
+		popular_opinion_add = 2
 		monthly_civic_tax = poor_building_tax_tier_1
+		prosperity_growth = 0.004
 	}
 	market_modifier = {
 		trade_good_incense_sell_price_mult = household_price_mult
@@ -1177,8 +1183,9 @@ royal_chapel_2 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		popular_opinion_add = 6
+		popular_opinion_add = 3
 		monthly_civic_tax = poor_building_tax_tier_2
+		prosperity_growth = 0.008
 	}
 	market_modifier = {
 		trade_good_incense_sell_price_mult = household_price_mult
@@ -1296,8 +1303,9 @@ royal_chapel_3 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		popular_opinion_add = 9
+		popular_opinion_add = 5
 		monthly_civic_tax = poor_building_tax_tier_3
+		prosperity_growth = 0.0125
 	}
 	market_modifier = {
 		trade_good_incense_sell_price_mult = household_price_mult
@@ -1415,8 +1423,9 @@ royal_chapel_4 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		popular_opinion_add = 12
+		popular_opinion_add = 6
 		monthly_civic_tax = poor_building_tax_tier_4
+		prosperity_growth = 0.016
 	}
 	market_modifier = {
 		trade_good_incense_sell_price_mult = household_price_mult
@@ -1533,8 +1542,9 @@ royal_chapel_5 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		popular_opinion_add = 15
+		popular_opinion_add = 8
 		monthly_civic_tax = poor_building_tax_tier_5
+		prosperity_growth = 0.02
 	}
 	market_modifier = {
 		trade_good_incense_sell_price_mult = household_price_mult
@@ -1634,7 +1644,7 @@ knights_stables_1 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_2
+		monthly_civic_tax = 0.175
 		stationed_heavy_cavalry_control_value_add = 1
 		stationed_light_cavalry_control_value_add = 1
 	}
@@ -1762,7 +1772,7 @@ knights_stables_2 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_3
+		monthly_civic_tax = 0.3
 		stationed_heavy_cavalry_control_value_add = 2
 		stationed_light_cavalry_control_value_add = 2
 	}
@@ -1901,7 +1911,7 @@ knights_stables_3 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_4
+		monthly_civic_tax = 0.4
 		stationed_heavy_cavalry_control_value_add = 3
 		stationed_light_cavalry_control_value_add = 3
 	}
@@ -2178,7 +2188,7 @@ knights_stables_5 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_6
+		monthly_civic_tax = 0.6
 		stationed_heavy_cavalry_control_value_add = 5
 		stationed_light_cavalry_control_value_add = 5
 	}
@@ -2346,7 +2356,7 @@ royal_knights_hall_1 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_1
+		monthly_civic_tax = 0.12
 	}
 	province_culture_modifier = {
 		parameter = chivalry_knights_hall_popular_opinion
@@ -2511,7 +2521,7 @@ royal_knights_hall_2 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_2
+		monthly_civic_tax = 0.2
 	}
 	province_culture_modifier = {
 		parameter = chivalry_knights_hall_popular_opinion
@@ -2686,7 +2696,7 @@ royal_knights_hall_3 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_3
+		monthly_civic_tax = 0.3
 	}
 	province_culture_modifier = {
 		parameter = chivalry_knights_hall_popular_opinion
@@ -3035,7 +3045,7 @@ royal_knights_hall_5 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_5
+		monthly_civic_tax = 0.5
 	}
 	province_culture_modifier = {
 		parameter = chivalry_knights_hall_popular_opinion
@@ -3181,8 +3191,8 @@ royal_court_workshops_1 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		prosperity_growth = medium_prosperity_tier_1
-		monthly_civic_tax = poor_building_tax_tier_1
+		prosperity_growth = 0.008
+		monthly_civic_tax = 0.125
 	}
 	market_modifier = {
 		trade_category_fabrics_sell_price_mult = household_price_mult
@@ -3250,8 +3260,8 @@ royal_court_workshops_2 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		prosperity_growth = medium_prosperity_tier_2
-		monthly_civic_tax = poor_building_tax_tier_2
+		prosperity_growth = 0.016
+		monthly_civic_tax = 0.25
 	}
 	market_modifier = {
 		trade_category_fabrics_sell_price_mult = household_price_mult
@@ -3325,8 +3335,8 @@ royal_court_workshops_3 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		prosperity_growth = medium_prosperity_tier_3
-		monthly_civic_tax = poor_building_tax_tier_3
+		prosperity_growth = 0.025
+		monthly_civic_tax = 0.375
 	}
 	market_modifier = {
 		trade_category_fabrics_sell_price_mult = household_price_mult
@@ -3400,8 +3410,8 @@ royal_court_workshops_4 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		prosperity_growth = medium_prosperity_tier_4
-		monthly_civic_tax = poor_building_tax_tier_4
+		prosperity_growth = 0.0325
+		monthly_civic_tax = 0.5
 	}
 	market_modifier = {
 		trade_category_fabrics_sell_price_mult = household_price_mult
@@ -3474,8 +3484,8 @@ royal_court_workshops_5 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		prosperity_growth = medium_prosperity_tier_5
-		monthly_civic_tax = poor_building_tax_tier_5
+		prosperity_growth = 0.04
+		monthly_civic_tax = 0.65
 	}
 	market_modifier = {
 		trade_category_fabrics_sell_price_mult = household_price_mult
@@ -3551,7 +3561,8 @@ royal_wardrobe_1 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_1
+		monthly_civic_tax = 0.075
+		prosperity_growth = 0.004
 	}
 	market_modifier = {
 		trade_category_clothes_sell_price_mult = household_price_mult
@@ -3636,7 +3647,8 @@ royal_wardrobe_2 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_2
+		monthly_civic_tax = 0.15
+		prosperity_growth = 0.008
 	}
 	market_modifier = {
 		trade_category_clothes_sell_price_mult = household_price_mult
@@ -3726,7 +3738,8 @@ royal_wardrobe_3 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_3
+		monthly_civic_tax = 0.225
+		prosperity_growth = 0.0125
 	}
 	market_modifier = {
 		trade_category_clothes_sell_price_mult = household_price_mult
@@ -3816,7 +3829,8 @@ royal_wardrobe_4 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_4
+		monthly_civic_tax = 0.3
+		prosperity_growth = 0.016
 	}
 	market_modifier = {
 		trade_category_clothes_sell_price_mult = household_price_mult
@@ -3905,7 +3919,8 @@ royal_wardrobe_5 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_5
+		monthly_civic_tax = 0.375
+		prosperity_growth = 0.02
 	}
 	market_modifier = {
 		trade_category_clothes_sell_price_mult = household_price_mult
@@ -4006,6 +4021,7 @@ royal_mausoleum_1 = {
 	}
 	province_modifier = {
 		monthly_civic_tax = poor_building_tax_tier_1
+		popular_opinion_add = 1
 	}
 	market_modifier = {
 		trade_good_jewelry_sell_price_mult = household_price_mult
@@ -4097,6 +4113,7 @@ royal_mausoleum_2 = {
 	}
 	province_modifier = {
 		monthly_civic_tax = poor_building_tax_tier_2
+		popular_opinion_add = 2
 	}
 	market_modifier = {
 		trade_good_jewelry_sell_price_mult = household_price_mult
@@ -4193,6 +4210,7 @@ royal_mausoleum_3 = {
 	}
 	province_modifier = {
 		monthly_civic_tax = poor_building_tax_tier_3
+		popular_opinion_add = 2
 	}
 	market_modifier = {
 		trade_good_jewelry_sell_price_mult = household_price_mult
@@ -4289,6 +4307,7 @@ royal_mausoleum_4 = {
 	}
 	province_modifier = {
 		monthly_civic_tax = poor_building_tax_tier_4
+		popular_opinion_add = 3
 	}
 	market_modifier = {
 		trade_good_jewelry_sell_price_mult = household_price_mult
@@ -4384,6 +4403,7 @@ royal_mausoleum_5 = {
 	}
 	province_modifier = {
 		monthly_civic_tax = poor_building_tax_tier_5
+		popular_opinion_add = 4
 	}
 	market_modifier = {
 		trade_good_jewelry_sell_price_mult = household_price_mult
@@ -4497,7 +4517,8 @@ royal_palace_library_1 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_1
+		monthly_civic_tax = 0.075
+		prosperity_growth = 0.004
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = household_price_mult
@@ -4600,7 +4621,8 @@ royal_palace_library_2 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_2
+		monthly_civic_tax = 0.15
+		prosperity_growth = 0.008
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = household_price_mult
@@ -4712,7 +4734,8 @@ royal_palace_library_3 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_3
+		monthly_civic_tax = 0.225
+		prosperity_growth = 0.0125
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = household_price_mult
@@ -4824,7 +4847,8 @@ royal_palace_library_4 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_4
+		monthly_civic_tax = 0.3
+		prosperity_growth = 0.016
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = household_price_mult
@@ -4935,7 +4959,8 @@ royal_palace_library_5 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_5
+		monthly_civic_tax = 0.375
+		prosperity_growth = 0.02
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = household_price_mult
@@ -5026,7 +5051,7 @@ ambassadorial_residences_1 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_1
+		monthly_civic_tax = 0.125
 	}
 	market_modifier = {
 		trade_category_alcohol_sell_price_mult = household_price_mult
@@ -5209,7 +5234,7 @@ ambassadorial_residences_2 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_2
+		monthly_civic_tax = 0.25
 	}
 	market_modifier = {
 		trade_category_alcohol_sell_price_mult = household_price_mult
@@ -5401,7 +5426,7 @@ ambassadorial_residences_3 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_3
+		monthly_civic_tax = 0.4
 	}
 	market_modifier = {
 		trade_category_alcohol_sell_price_mult = household_price_mult
@@ -5593,7 +5618,7 @@ ambassadorial_residences_4 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_4
+		monthly_civic_tax = 0.5
 	}
 	market_modifier = {
 		trade_category_alcohol_sell_price_mult = household_price_mult
@@ -5784,7 +5809,7 @@ ambassadorial_residences_5 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_5
+		monthly_civic_tax = 0.65
 	}
 	market_modifier = {
 		trade_category_alcohol_sell_price_mult = household_price_mult
@@ -5987,7 +6012,7 @@ royal_inner_court_1 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_1
+		monthly_civic_tax = 0.1
 	}
 	market_modifier = {
 		trade_good_silk_sell_price_mult = household_price_mult
@@ -6178,7 +6203,7 @@ royal_inner_court_2 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_2
+		monthly_civic_tax = 0.2
 	}
 	market_modifier = {
 		trade_good_silk_sell_price_mult = household_price_mult
@@ -6378,7 +6403,7 @@ royal_inner_court_3 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_3
+		monthly_civic_tax = 0.3
 	}
 	market_modifier = {
 		trade_good_silk_sell_price_mult = household_price_mult
@@ -6578,7 +6603,7 @@ royal_inner_court_4 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_4
+		monthly_civic_tax = 0.4
 	}
 	market_modifier = {
 		trade_good_silk_sell_price_mult = household_price_mult
@@ -6777,7 +6802,7 @@ royal_inner_court_5 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_tier_5
+		monthly_civic_tax = 0.5
 	}
 	market_modifier = {
 		trade_good_silk_sell_price_mult = household_price_mult
@@ -7003,6 +7028,9 @@ banner_halls_1 = {
 		ai_capital_preference_modifier = yes
 		ai_regular_new_building_modifier = yes
 	}
+	province_modifier = {
+		monthly_civic_tax = 0.025
+	}
 }
 
 # Chapter House
@@ -7076,6 +7104,9 @@ banner_halls_2 = {
 		ai_general_building_modifier = yes
 		ai_capital_preference_modifier = yes
 		ai_regular_building_upgrade_modifier = { LEVEL = 2 }
+	}
+	province_modifier = {
+		monthly_civic_tax = 0.05
 	}
 }
 
@@ -7151,6 +7182,9 @@ banner_halls_3 = {
 		ai_capital_preference_modifier = yes
 		ai_regular_building_upgrade_modifier = { LEVEL = 3 }
 	}
+	province_modifier = {
+		monthly_civic_tax = 0.075
+	}
 }
 
 # Chapter House
@@ -7225,6 +7259,9 @@ banner_halls_4 = {
 		ai_capital_preference_modifier = yes
 		ai_regular_building_upgrade_modifier = { LEVEL = 4 }
 	}
+	province_modifier = {
+		monthly_civic_tax = 0.1
+	}
 }
 
 # Chapter House
@@ -7297,5 +7334,8 @@ banner_halls_5 = {
 		ai_general_building_modifier = yes
 		ai_capital_preference_modifier = yes
 		ai_regular_building_upgrade_modifier = { LEVEL = 5 }
+	}
+	province_modifier = {
+		monthly_civic_tax = 0.125
 	}
 }

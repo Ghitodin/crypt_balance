@@ -1171,9 +1171,9 @@ gatehouses_1 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		control_baseline_add = 5
+		control_baseline_add = 3.25
 		epidemic_resistance = 0.5
-		urban_tax_mult = 0.02
+		urban_tax_mult = 0.01
 	}
 	market_modifier = {
 		trade_category_base_metals_sell_price_mult = price_basic_building_1
@@ -1227,9 +1227,9 @@ gatehouses_2 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		control_baseline_add = 5
+		control_baseline_add = 3.25
 		epidemic_resistance = 1
-		urban_tax_mult = 0.04
+		urban_tax_mult = 0.02
 	}
 	market_modifier = {
 		trade_category_base_metals_sell_price_mult = price_basic_building_1
@@ -1287,9 +1287,9 @@ gatehouses_3 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		control_baseline_add = 5
+		control_baseline_add = 3.25
 		epidemic_resistance = 1.5
-		urban_tax_mult = 0.06
+		urban_tax_mult = 0.03
 	}
 	market_modifier = {
 		trade_category_base_metals_sell_price_mult = price_basic_building_1
@@ -1347,9 +1347,9 @@ gatehouses_4 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		control_baseline_add = 5
+		control_baseline_add = 3.25
 		epidemic_resistance = 2
-		urban_tax_mult = 0.08
+		urban_tax_mult = 0.04
 	}
 	market_modifier = {
 		trade_category_base_metals_sell_price_mult = price_basic_building_1
@@ -1408,7 +1408,7 @@ gatehouses_5 = {
 	province_modifier = {
 		control_baseline_add = 5
 		epidemic_resistance = 2.5
-		urban_tax_mult = 0.1
+		urban_tax_mult = 0.05
 	}
 	market_modifier = {
 		trade_category_base_metals_sell_price_mult = price_basic_building_1
@@ -2524,6 +2524,7 @@ borghi_1 = {
 	}
 	province_modifier = {
 		monthly_commerce_tax = normal_building_tax_tier_1
+		urban_tax_mult = 0.01
 	}
 	market_rite_modifier = {
 		parameter = meat_permitted
@@ -2567,6 +2568,7 @@ borghi_2 = {
 	}
 	province_modifier = {
 		monthly_commerce_tax = normal_building_tax_tier_2
+		urban_tax_mult = 0.02
 	}
 	market_rite_modifier = {
 		parameter = meat_permitted
@@ -2611,6 +2613,7 @@ borghi_3 = {
 	province_modifier = {
 		monthly_commerce_tax = normal_building_tax_tier_3
 		monthly_urban_tax = poor_building_tax_tier_3
+		urban_tax_mult = 0.03
 	}
 	market_rite_modifier = {
 		parameter = meat_permitted
@@ -2655,6 +2658,7 @@ borghi_4 = {
 	province_modifier = {
 		monthly_commerce_tax = normal_building_tax_tier_4
 		monthly_urban_tax = poor_building_tax_tier_4
+		urban_tax_mult = 0.04
 	}
 	market_rite_modifier = {
 		parameter = meat_permitted
@@ -2698,6 +2702,7 @@ borghi_5 = {
 	province_modifier = {
 		monthly_commerce_tax = normal_building_tax_tier_5
 		monthly_urban_tax = poor_building_tax_tier_5
+		urban_tax_mult = 0.05
 	}
 	market_rite_modifier = {
 		parameter = meat_permitted

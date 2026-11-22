@@ -42,7 +42,7 @@ city_archive_1 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		control_baseline_add = 5
+		control_baseline_add = 3.5
 	}
 	character_modifier = {
 		governor_xp_gain_mult = bureaucratic_governor_xp_gain_tier_1
@@ -81,7 +81,7 @@ city_archive_2 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		control_baseline_add = 10
+		control_baseline_add = 7
 	}
 	character_modifier = {
 		governor_xp_gain_mult = bureaucratic_governor_xp_gain_tier_2
@@ -121,7 +121,7 @@ city_archive_3 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		control_baseline_add = 15
+		control_baseline_add = 10.5
 	}
 	character_modifier = {
 		governor_xp_gain_mult = bureaucratic_governor_xp_gain_tier_3
@@ -161,7 +161,7 @@ city_archive_4 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		control_baseline_add = 20
+		control_baseline_add = 14
 	}
 	character_modifier = {
 		governor_xp_gain_mult = bureaucratic_governor_xp_gain_tier_4
@@ -1264,7 +1264,7 @@ printing_press_1 = {
 		cultural_head_fascination_mult = bureaucratic_printing_fascination_tier_1
 	}
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_1
+		monthly_civic_tax = 0.125
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = price_basic_building_1
@@ -1306,7 +1306,7 @@ printing_press_2 = {
 		cultural_head_fascination_mult = bureaucratic_printing_fascination_tier_2
 	}
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_2
+		monthly_civic_tax = 0.25
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = price_basic_building_1
@@ -1349,7 +1349,7 @@ printing_press_3 = {
 		cultural_head_fascination_mult = bureaucratic_printing_fascination_tier_3
 	}
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_3
+		monthly_civic_tax = 0.4
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = price_basic_building_1
@@ -1392,7 +1392,7 @@ printing_press_4 = {
 		cultural_head_fascination_mult = bureaucratic_printing_fascination_tier_4
 	}
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_4
+		monthly_civic_tax = 0.5
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = price_basic_building_1
@@ -1433,7 +1433,7 @@ printing_press_5 = {
 		cultural_head_fascination_mult = bureaucratic_printing_fascination_tier_5
 	}
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_5
+		monthly_civic_tax = 0.65
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = price_basic_building_1
@@ -1488,7 +1488,7 @@ court_of_law_1 = {
 		civic_tax_mult = normal_building_tax_mult_tier_1
 	}
 	province_modifier = {
-		control_baseline_add = 5
+		control_baseline_add = 3.5
 	}
 	province_culture_modifier = {
 		parameter = equitable_court_buildings_popular_opinion
@@ -1547,7 +1547,7 @@ court_of_law_2 = {
 		civic_tax_mult = normal_building_tax_mult_tier_2
 	}
 	province_modifier = {
-		control_baseline_add = 10
+		control_baseline_add = 7
 	}
 	province_culture_modifier = {
 		parameter = equitable_court_buildings_popular_opinion
@@ -1599,7 +1599,7 @@ court_of_law_3 = {
 		civic_tax_mult = normal_building_tax_mult_tier_3
 	}
 	province_modifier = {
-		control_baseline_add = 15
+		control_baseline_add = 10.5
 	}
 	province_culture_modifier = {
 		parameter = equitable_court_buildings_popular_opinion
@@ -1651,7 +1651,7 @@ court_of_law_4 = {
 		civic_tax_mult = normal_building_tax_mult_tier_4
 	}
 	province_modifier = {
-		control_baseline_add = 20
+		control_baseline_add = 14
 	}
 	province_culture_modifier = {
 		parameter = equitable_court_buildings_popular_opinion
@@ -1702,7 +1702,7 @@ court_of_law_5 = {
 		civic_tax_mult = normal_building_tax_mult_tier_5
 	}
 	province_modifier = {
-		control_baseline_add = 25
+		control_baseline_add = 17.5
 	}
 	province_culture_modifier = {
 		parameter = equitable_court_buildings_popular_opinion
@@ -2239,6 +2239,11 @@ administrative_palace_1 = {
 		trade_good_category = trade_category_luxury_items
 		amount = luxury_resource_need
 
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = 1.5
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_precious_metals
@@ -2298,6 +2303,11 @@ administrative_palace_2 = {
 		amount = luxury_resource_need
 		can_be_filled_multiple_times = 2
 
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = 1.5
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_precious_metals
@@ -2359,6 +2369,11 @@ administrative_palace_3 = {
 		amount = luxury_resource_need
 		can_be_filled_multiple_times = 3
 
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = 1.5
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_precious_metals
@@ -2420,6 +2435,11 @@ administrative_palace_4 = {
 		amount = luxury_resource_need
 		can_be_filled_multiple_times = 4
 
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = 1.5
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_precious_metals
@@ -2480,6 +2500,11 @@ administrative_palace_5 = {
 		amount = luxury_resource_need
 		can_be_filled_multiple_times = 5
 
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = 1.5
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_precious_metals
@@ -2753,7 +2778,7 @@ capital_magistracy_1 = {
 		civic_tax_mult = bureaucratic_tax_mult_tier_1
 	}
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_1
+		monthly_civic_tax = 0.275
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = price_basic_building_1
@@ -2818,7 +2843,7 @@ capital_magistracy_2 = {
 		civic_tax_mult = bureaucratic_tax_mult_tier_2
 	}
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_2
+		monthly_civic_tax = 0.55
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = price_basic_building_1
@@ -2885,7 +2910,7 @@ capital_magistracy_3 = {
 		civic_tax_mult = bureaucratic_tax_mult_tier_3
 	}
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_3
+		monthly_civic_tax = 0.8
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = price_basic_building_1
@@ -2953,7 +2978,7 @@ capital_magistracy_4 = {
 		stewardship_per_influence_level = 1
 	}
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_4
+		monthly_civic_tax = 1.1
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = price_basic_building_1
@@ -3020,7 +3045,7 @@ capital_magistracy_5 = {
 		stewardship_per_influence_level = 1
 	}
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_5
+		monthly_civic_tax = 1.35
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = price_basic_building_1

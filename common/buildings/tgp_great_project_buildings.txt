@@ -44,6 +44,7 @@ mandala_capital_01 = {
 	county_modifier = {
 		prosperity_growth = 0.1
 		religious_tax_mult = 0.1
+		popular_opinion_add = 1
 	}
 
 	trade_good_need = {
@@ -291,6 +292,7 @@ mandala_capital_02 = {
 	county_modifier = {
 		prosperity_growth = 0.15
 		religious_tax_mult = 0.2
+		popular_opinion_add = 1
 	}
 
 	trade_good_need = {
@@ -553,6 +555,7 @@ mandala_capital_03 = {
 	county_modifier = {
 		prosperity_growth = 0.2
 		religious_tax_mult = 0.25
+		popular_opinion_add = 2
 	}
 
 	trade_good_need = {
@@ -817,6 +820,7 @@ mandala_capital_04 = {
 	county_modifier = {
 		prosperity_growth = 0.3
 		religious_tax_mult = 0.3
+		popular_opinion_add = 2
 	}
 
 	trade_good_need = {
@@ -1080,6 +1084,7 @@ mandala_capital_05 = {
 		religious_tax_mult = 0.35
 		levy_size = 0.5
 		garrison_size = 0.5
+		popular_opinion_add = 3
 	}
 
 	trade_good_need = {

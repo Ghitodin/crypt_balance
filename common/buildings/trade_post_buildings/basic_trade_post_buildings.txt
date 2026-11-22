@@ -262,7 +262,7 @@ trade_counting_house_01 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = trade_post_tax_income_value_tier_1
+		monthly_commerce_tax = 0.065
 	}
 	market_modifier = {
 	}
@@ -310,7 +310,7 @@ trade_counting_house_02 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = trade_post_tax_income_value_tier_2
+		monthly_commerce_tax = 0.125
 	}
 	market_modifier = {
 	}
@@ -358,7 +358,7 @@ trade_counting_house_03 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = trade_post_tax_income_value_tier_3
+		monthly_commerce_tax = 0.2
 	}
 	market_modifier = {
 	}
@@ -406,7 +406,7 @@ trade_counting_house_04 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = trade_post_tax_income_value_tier_4
+		monthly_commerce_tax = 0.25
 	}
 	market_modifier = {
 	}
@@ -453,7 +453,7 @@ trade_counting_house_05 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = trade_post_tax_income_value_tier_5
+		monthly_commerce_tax = 0.325
 	}
 	market_modifier = {
 	}
@@ -506,7 +506,7 @@ trade_treasury_01 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = trade_post_tax_income_value_tier_1
+		monthly_commerce_tax = 0.065
 	}
 	market_modifier = {
 	}
@@ -563,7 +563,7 @@ trade_treasury_02 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = trade_post_tax_income_value_tier_2
+		monthly_commerce_tax = 0.125
 	}
 	market_modifier = {
 	}
@@ -620,7 +620,7 @@ trade_treasury_03 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = trade_post_tax_income_value_tier_3
+		monthly_commerce_tax = 0.2
 	}
 	market_modifier = {
 	}
@@ -677,7 +677,7 @@ trade_treasury_04 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = trade_post_tax_income_value_tier_4
+		monthly_commerce_tax = 0.25
 	}
 	market_modifier = {
 	}
@@ -733,7 +733,7 @@ trade_treasury_05 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_commerce_tax = trade_post_tax_income_value_tier_5
+		monthly_commerce_tax = 0.325
 	}
 	market_modifier = {
 	}
@@ -1372,7 +1372,7 @@ trade_shipyard_01 = {
 		trade_route_length_add = 1
 	}
 	county_modifier = {
-		prosperity_growth_factor = trade_post_prosperity_growth_value_tier_1
+		prosperity_growth_factor = 0.006
 	}
 	province_modifier = {
 	}
@@ -1426,7 +1426,7 @@ trade_shipyard_02 = {
 		trade_route_length_add = 1
 	}
 	county_modifier = {
-		prosperity_growth_factor = trade_post_prosperity_growth_value_tier_2
+		prosperity_growth_factor = 0.0125
 	}
 	province_modifier = {
 	}
@@ -1480,7 +1480,7 @@ trade_shipyard_03 = {
 		trade_route_length_add = 2
 	}
 	county_modifier = {
-		prosperity_growth_factor = trade_post_prosperity_growth_value_tier_3
+		prosperity_growth_factor = 0.02
 	}
 	province_modifier = {
 	}
@@ -1534,7 +1534,7 @@ trade_shipyard_04 = {
 		trade_route_length_add = 2
 	}
 	county_modifier = {
-		prosperity_growth_factor = trade_post_prosperity_growth_value_tier_4
+		prosperity_growth_factor = 0.025
 	}
 	province_modifier = {
 	}
@@ -1587,7 +1587,7 @@ trade_shipyard_05 = {
 		trade_route_length_add = 3
 	}
 	county_modifier = {
-		prosperity_growth_factor = trade_post_prosperity_growth_value_tier_5
+		prosperity_growth_factor = 0.0325
 	}
 	province_modifier = {
 	}
@@ -2202,6 +2202,9 @@ trade_warehouse_01 = {
 		ai_trade_post_merchant_attraction_modifier = { GOOD = trade_good_wood }
 		ai_trade_post_new_building_modifier = yes
 	}
+	province_modifier = {
+		monthly_commerce_tax = 0.035
+	}
 }
 
 trade_warehouse_02 = {
@@ -2237,6 +2240,9 @@ trade_warehouse_02 = {
 		ai_trade_post_merchant_attraction_modifier = { GOOD = trade_good_stone }
 		ai_trade_post_merchant_attraction_modifier = { GOOD = trade_good_wood }
 		ai_trade_post_building_upgrade_modifier = { LEVEL = 2 }
+	}
+	province_modifier = {
+		monthly_commerce_tax = 0.07
 	}
 }
 
@@ -2274,6 +2280,9 @@ trade_warehouse_03 = {
 		ai_trade_post_merchant_attraction_modifier = { GOOD = trade_good_wood }
 		ai_trade_post_building_upgrade_modifier = { LEVEL = 3 }
 	}
+	province_modifier = {
+		monthly_commerce_tax = 0.1
+	}
 }
 
 trade_warehouse_04 = {
@@ -2310,6 +2319,9 @@ trade_warehouse_04 = {
 		ai_trade_post_merchant_attraction_modifier = { GOOD = trade_good_wood }
 		ai_trade_post_building_upgrade_modifier = { LEVEL = 4 }
 	}
+	province_modifier = {
+		monthly_commerce_tax = 0.14
+	}
 }
 
 trade_warehouse_05 = {
@@ -2344,6 +2356,9 @@ trade_warehouse_05 = {
 		ai_trade_post_merchant_attraction_modifier = { GOOD = trade_good_stone }
 		ai_trade_post_merchant_attraction_modifier = { GOOD = trade_good_wood }
 		ai_trade_post_building_upgrade_modifier = { LEVEL = 5 }
+	}
+	province_modifier = {
+		monthly_commerce_tax = 0.175
 	}
 }
 
@@ -2700,6 +2715,9 @@ trade_granary_01 = {
 			character_modifier = {
 				domicile_monthly_gold_add = trade_post_domicile_income_add_value_tier_1
 			}
+			county_modifier = {
+				prosperity_growth_factor = 0.00175
+			}
 		}
 	}
 	trade_good_need = {
@@ -2712,6 +2730,9 @@ trade_granary_01 = {
 		modifiers = {
 			character_modifier = {
 				domicile_monthly_gold_add = trade_post_domicile_income_add_value_tier_1
+			}
+			county_modifier = {
+				prosperity_growth_factor = 0.00175
 			}
 		}
 	}
@@ -2768,6 +2789,9 @@ trade_granary_02 = {
 			character_modifier = {
 				domicile_monthly_gold_add = trade_post_domicile_income_add_value_tier_1
 			}
+			county_modifier = {
+				prosperity_growth_factor = 0.00175
+			}
 		}
 	}
 	trade_good_need = {
@@ -2780,6 +2804,9 @@ trade_granary_02 = {
 		modifiers = {
 			character_modifier = {
 				domicile_monthly_gold_add = trade_post_domicile_income_add_value_tier_1
+			}
+			county_modifier = {
+				prosperity_growth_factor = 0.00175
 			}
 		}
 	}
@@ -2836,6 +2863,9 @@ trade_granary_03 = {
 			character_modifier = {
 				domicile_monthly_gold_add = trade_post_domicile_income_add_value_tier_1
 			}
+			county_modifier = {
+				prosperity_growth_factor = 0.00175
+			}
 		}
 	}
 	trade_good_need = {
@@ -2848,6 +2878,9 @@ trade_granary_03 = {
 		modifiers = {
 			character_modifier = {
 				domicile_monthly_gold_add = trade_post_domicile_income_add_value_tier_1
+			}
+			county_modifier = {
+				prosperity_growth_factor = 0.00175
 			}
 		}
 	}
@@ -2904,6 +2937,9 @@ trade_granary_04 = {
 			character_modifier = {
 				domicile_monthly_gold_add = trade_post_domicile_income_add_value_tier_1
 			}
+			county_modifier = {
+				prosperity_growth_factor = 0.00175
+			}
 		}
 	}
 	trade_good_need = {
@@ -2916,6 +2952,9 @@ trade_granary_04 = {
 		modifiers = {
 			character_modifier = {
 				domicile_monthly_gold_add = trade_post_domicile_income_add_value_tier_1
+			}
+			county_modifier = {
+				prosperity_growth_factor = 0.00175
 			}
 		}
 	}
@@ -2971,6 +3010,9 @@ trade_granary_05 = {
 			character_modifier = {
 				domicile_monthly_gold_add = trade_post_domicile_income_add_value_tier_1
 			}
+			county_modifier = {
+				prosperity_growth_factor = 0.00175
+			}
 		}
 	}
 	trade_good_need = {
@@ -2983,6 +3025,9 @@ trade_granary_05 = {
 		modifiers = {
 			character_modifier = {
 				domicile_monthly_gold_add = trade_post_domicile_income_add_value_tier_1
+			}
+			county_modifier = {
+				prosperity_growth_factor = 0.00175
 			}
 		}
 	}
@@ -3336,6 +3381,9 @@ trade_food_depot_01 = {
 		ai_trade_post_merchant_attraction_modifier = { GOOD = trade_good_honey }
 		ai_trade_post_new_building_modifier = yes
 	}
+	province_modifier = {
+		monthly_commerce_tax = 0.035
+	}
 }
 
 trade_food_depot_02 = {
@@ -3380,6 +3428,9 @@ trade_food_depot_02 = {
 		ai_trade_post_merchant_attraction_modifier = { GOOD = trade_good_oil }
 		ai_trade_post_merchant_attraction_modifier = { GOOD = trade_good_honey }
 		ai_trade_post_building_upgrade_modifier = { LEVEL = 2 }
+	}
+	province_modifier = {
+		monthly_commerce_tax = 0.07
 	}
 }
 
@@ -3426,6 +3477,9 @@ trade_food_depot_03 = {
 		ai_trade_post_merchant_attraction_modifier = { GOOD = trade_good_honey }
 		ai_trade_post_building_upgrade_modifier = { LEVEL = 3 }
 	}
+	province_modifier = {
+		monthly_commerce_tax = 0.1
+	}
 }
 
 trade_food_depot_04 = {
@@ -3471,6 +3525,9 @@ trade_food_depot_04 = {
 		ai_trade_post_merchant_attraction_modifier = { GOOD = trade_good_honey }
 		ai_trade_post_building_upgrade_modifier = { LEVEL = 4 }
 	}
+	province_modifier = {
+		monthly_commerce_tax = 0.14
+	}
 }
 
 trade_food_depot_05 = {
@@ -3514,6 +3571,9 @@ trade_food_depot_05 = {
 		ai_trade_post_merchant_attraction_modifier = { GOOD = trade_good_oil }
 		ai_trade_post_merchant_attraction_modifier = { GOOD = trade_good_honey }
 		ai_trade_post_building_upgrade_modifier = { LEVEL = 5 }
+	}
+	province_modifier = {
+		monthly_commerce_tax = 0.175
 	}
 }
 

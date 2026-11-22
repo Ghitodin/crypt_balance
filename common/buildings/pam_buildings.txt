@@ -117,6 +117,7 @@ great_project_cathedral_01 = {
 		prosperity_growth_factor = 0.1
 		control_baseline_add = 10
 		religious_tax_mult = 0.1
+		monthly_popular_opinion_change = 0.025
 	}
 
 	province_modifier = {
@@ -221,6 +222,7 @@ great_project_cathedral_02 = {
 		prosperity_growth_factor = 0.2
 		control_baseline_add = 15
 		religious_tax_mult = 0.15
+		monthly_popular_opinion_change = 0.05
 	}
 
 	province_modifier = {
@@ -326,6 +328,7 @@ great_project_cathedral_03 = {
 		prosperity_growth_factor = 0.3
 		control_baseline_add = 20
 		religious_tax_mult = 0.2
+		monthly_popular_opinion_change = 0.075
 	}
 
 	province_modifier = {

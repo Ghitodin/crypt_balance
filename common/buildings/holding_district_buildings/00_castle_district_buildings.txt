@@ -632,8 +632,8 @@ castle_court_1 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_halved_tier_1
-		monthly_control_change_when_below_baseline_add = 0.1
+		monthly_civic_tax = 0.0375
+		monthly_control_change_when_below_baseline_add = 0.065
 	}
 	market_modifier = {
 		trade_category_fabrics_sell_price_mult = price_holding_district_need
@@ -672,8 +672,8 @@ castle_court_2 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_halved_tier_2
-		monthly_control_change_when_below_baseline_add = 0.2
+		monthly_civic_tax = 0.075
+		monthly_control_change_when_below_baseline_add = 0.125
 	}
 	market_modifier = {
 		trade_category_fabrics_sell_price_mult = price_holding_district_need
@@ -715,8 +715,8 @@ castle_court_3 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_halved_tier_3
-		monthly_control_change_when_below_baseline_add = 0.3
+		monthly_civic_tax = 0.11
+		monthly_control_change_when_below_baseline_add = 0.2
 	}
 	market_modifier = {
 		trade_category_fabrics_sell_price_mult = price_holding_district_need
@@ -758,8 +758,8 @@ castle_court_4 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_civic_tax = poor_building_tax_halved_tier_4
-		monthly_control_change_when_below_baseline_add = 0.4
+		monthly_civic_tax = 0.15
+		monthly_control_change_when_below_baseline_add = 0.25
 	}
 	market_modifier = {
 		trade_category_fabrics_sell_price_mult = price_holding_district_need
@@ -801,7 +801,7 @@ castle_court_5 = {
 	}
 	province_modifier = {
 		monthly_civic_tax = poor_building_tax_halved_tier_5
-		monthly_control_change_when_below_baseline_add = 0.5
+		monthly_control_change_when_below_baseline_add = 0.325
 	}
 	market_modifier = {
 		trade_category_fabrics_sell_price_mult = price_holding_district_need
@@ -845,6 +845,7 @@ castle_citadel_1 = {
 	province_modifier = {
 		monthly_civic_tax = poor_building_tax_halved_tier_1
 		hostile_raid_time = 0.025
+		monthly_control_change_when_below_baseline_add = 0.035
 	}
 	market_modifier = {
 		trade_category_carpentry_supplies_sell_price_mult = price_holding_district_need
@@ -885,6 +886,7 @@ castle_citadel_2 = {
 	province_modifier = {
 		monthly_civic_tax = poor_building_tax_halved_tier_2
 		hostile_raid_time = 0.05
+		monthly_control_change_when_below_baseline_add = 0.07
 	}
 	market_modifier = {
 		trade_category_carpentry_supplies_sell_price_mult = price_holding_district_need
@@ -928,6 +930,7 @@ castle_citadel_3 = {
 	province_modifier = {
 		monthly_civic_tax = poor_building_tax_halved_tier_3
 		hostile_raid_time = 0.075
+		monthly_control_change_when_below_baseline_add = 0.1
 	}
 	market_modifier = {
 		trade_category_carpentry_supplies_sell_price_mult = price_holding_district_need
@@ -971,6 +974,7 @@ castle_citadel_4 = {
 	province_modifier = {
 		monthly_civic_tax = poor_building_tax_halved_tier_4
 		hostile_raid_time = 0.10
+		monthly_control_change_when_below_baseline_add = 0.14
 	}
 	market_modifier = {
 		trade_category_carpentry_supplies_sell_price_mult = price_holding_district_need
@@ -1013,6 +1017,7 @@ castle_citadel_5 = {
 	province_modifier = {
 		monthly_civic_tax = poor_building_tax_halved_tier_5
 		hostile_raid_time = 0.125
+		monthly_control_change_when_below_baseline_add = 0.175
 	}
 	market_modifier = {
 		trade_category_carpentry_supplies_sell_price_mult = price_holding_district_need

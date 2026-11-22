@@ -231,7 +231,7 @@ republic_loggia_01 = {
 	}
 
 	province_modifier = {
-		prosperity_growth = low_building_prosperity_growth_tier_1
+		prosperity_growth = 0.006
 	}
 	character_modifier = {
 	}
@@ -268,7 +268,7 @@ republic_loggia_02 = {
 	}
 
 	province_modifier = {
-		prosperity_growth = low_building_prosperity_growth_tier_2
+		prosperity_growth = 0.0125
 	}
 	character_modifier = {
 	}
@@ -306,7 +306,7 @@ republic_loggia_03 = {
 	}
 
 	province_modifier = {
-		prosperity_growth = low_building_prosperity_growth_tier_3
+		prosperity_growth = 0.02
 	}
 	character_modifier = {
 	}
@@ -344,7 +344,7 @@ republic_loggia_04 = {
 	}
 
 	province_modifier = {
-		prosperity_growth = low_building_prosperity_growth_tier_4
+		prosperity_growth = 0.025
 	}
 	character_modifier = {
 	}
@@ -381,7 +381,7 @@ republic_loggia_05 = {
 	}
 
 	province_modifier = {
-		prosperity_growth = low_building_prosperity_growth_tier_5
+		prosperity_growth = 0.0325
 	}
 	character_modifier = {
 	}
@@ -422,7 +422,7 @@ republic_statute_hall_01 = {
 	}
 
 	province_modifier = {
-		popular_opinion_add = 2
+		popular_opinion_add = 1
 	}
 	character_modifier = {
 	}
@@ -458,7 +458,7 @@ republic_statute_hall_02 = {
 	}
 
 	province_modifier = {
-		popular_opinion_add = 4
+		popular_opinion_add = 2
 	}
 	character_modifier = {
 	}
@@ -495,7 +495,7 @@ republic_statute_hall_03 = {
 	}
 
 	province_modifier = {
-		popular_opinion_add = 6
+		popular_opinion_add = 3
 	}
 	character_modifier = {
 	}
@@ -532,7 +532,7 @@ republic_statute_hall_04 = {
 	}
 
 	province_modifier = {
-		popular_opinion_add = 8
+		popular_opinion_add = 4
 	}
 	character_modifier = {
 	}
@@ -568,7 +568,7 @@ republic_statute_hall_05 = {
 	}
 
 	province_modifier = {
-		popular_opinion_add = 10
+		popular_opinion_add = 5
 	}
 	character_modifier = {
 	}
@@ -608,7 +608,7 @@ republic_council_chamber_01 = {
 	}
 
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_1
+		monthly_civic_tax = 0.125
 		civic_tax_mult = normal_building_tax_mult_tier_1
 	}
 	character_modifier = {
@@ -645,7 +645,7 @@ republic_council_chamber_02 = {
 	}
 
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_2
+		monthly_civic_tax = 0.25
 		civic_tax_mult = normal_building_tax_mult_tier_2
 	}
 	character_modifier = {
@@ -683,7 +683,7 @@ republic_council_chamber_03 = {
 	}
 
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_3
+		monthly_civic_tax = 0.4
 		civic_tax_mult = normal_building_tax_mult_tier_3
 	}
 	character_modifier = {
@@ -721,7 +721,7 @@ republic_council_chamber_04 = {
 	}
 
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_4
+		monthly_civic_tax = 0.5
 		civic_tax_mult = normal_building_tax_mult_tier_4
 	}
 	character_modifier = {
@@ -758,7 +758,7 @@ republic_council_chamber_05 = {
 	}
 
 	province_modifier = {
-		monthly_civic_tax = normal_building_tax_tier_5
+		monthly_civic_tax = 0.65
 		civic_tax_mult = normal_building_tax_mult_tier_5
 	}
 	character_modifier = {
@@ -2102,12 +2102,22 @@ republic_podesta_residence_01 = {
 		amount = luxury_resource_need
 		not_rite_parameter = luxury_forbidden
 
+		modifiers = {
+			province_modifier = {
+				monthly_civic_tax = 0.035
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_luxury_consumption
 		amount = ascetic_rural_resource_need
 		rite_parameter = luxury_forbidden
 
+		modifiers = {
+			province_modifier = {
+				monthly_civic_tax = 0.035
+			}
+		}
 	}
 
 	ai_value = {
@@ -2149,6 +2159,11 @@ republic_podesta_residence_02 = {
 		not_rite_parameter = luxury_forbidden
 		can_be_filled_multiple_times = 2
 
+		modifiers = {
+			province_modifier = {
+				monthly_civic_tax = 0.035
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_luxury_consumption
@@ -2156,6 +2171,11 @@ republic_podesta_residence_02 = {
 		rite_parameter = luxury_forbidden
 		can_be_filled_multiple_times = 2
 
+		modifiers = {
+			province_modifier = {
+				monthly_civic_tax = 0.035
+			}
+		}
 	}
 
 	ai_value = {
@@ -2197,6 +2217,11 @@ republic_podesta_residence_03 = {
 		not_rite_parameter = luxury_forbidden
 		can_be_filled_multiple_times = 3
 
+		modifiers = {
+			province_modifier = {
+				monthly_civic_tax = 0.035
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_luxury_consumption
@@ -2204,6 +2229,11 @@ republic_podesta_residence_03 = {
 		rite_parameter = luxury_forbidden
 		can_be_filled_multiple_times = 3
 
+		modifiers = {
+			province_modifier = {
+				monthly_civic_tax = 0.035
+			}
+		}
 	}
 
 	ai_value = {
@@ -2245,6 +2275,11 @@ republic_podesta_residence_04 = {
 		not_rite_parameter = luxury_forbidden
 		can_be_filled_multiple_times = 4
 
+		modifiers = {
+			province_modifier = {
+				monthly_civic_tax = 0.035
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_luxury_consumption
@@ -2252,6 +2287,11 @@ republic_podesta_residence_04 = {
 		rite_parameter = luxury_forbidden
 		can_be_filled_multiple_times = 4
 
+		modifiers = {
+			province_modifier = {
+				monthly_civic_tax = 0.035
+			}
+		}
 	}
 
 	ai_value = {
@@ -2292,6 +2332,11 @@ republic_podesta_residence_05 = {
 		not_rite_parameter = luxury_forbidden
 		can_be_filled_multiple_times = 5
 
+		modifiers = {
+			province_modifier = {
+				monthly_civic_tax = 0.035
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_luxury_consumption
@@ -2299,6 +2344,11 @@ republic_podesta_residence_05 = {
 		rite_parameter = luxury_forbidden
 		can_be_filled_multiple_times = 5
 
+		modifiers = {
+			province_modifier = {
+				monthly_civic_tax = 0.035
+			}
+		}
 	}
 
 	ai_value = {
@@ -2325,6 +2375,7 @@ republic_fountain_01 = {
 	province_modifier = {
 		epidemic_resistance = 1
 		prosperity_growth_factor = 0.02
+		popular_opinion_add = 1
 	}
 	character_modifier = {
 	}
@@ -2358,6 +2409,7 @@ republic_fountain_02 = {
 	province_modifier = {
 		epidemic_resistance = 2
 		prosperity_growth_factor = 0.04
+		popular_opinion_add = 2
 	}
 	character_modifier = {
 	}
@@ -2391,6 +2443,7 @@ republic_fountain_03 = {
 	province_modifier = {
 		epidemic_resistance = 3
 		prosperity_growth_factor = 0.06
+		popular_opinion_add = 3
 	}
 	character_modifier = {
 	}
@@ -2424,6 +2477,7 @@ republic_fountain_04 = {
 	province_modifier = {
 		epidemic_resistance = 4
 		prosperity_growth_factor = 0.08
+		popular_opinion_add = 4
 	}
 	character_modifier = {
 	}
@@ -2456,6 +2510,7 @@ republic_fountain_05 = {
 	province_modifier = {
 		epidemic_resistance = 5
 		prosperity_growth_factor = 0.1
+		popular_opinion_add = 5
 	}
 	character_modifier = {
 	}
@@ -2516,11 +2571,21 @@ republic_basilica_01 = {
 		trade_good_category = trade_category_luxury_items
 		amount = basic_resource_need
 		not_rite_parameter = luxury_forbidden
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = 0.00175
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_luxury_items
 		amount = ascetic_basic_resource_need
 		rite_parameter = luxury_forbidden
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = 0.00175
+			}
+		}
 	}
 	ai_value = {
 		base = 9.1
@@ -2566,12 +2631,22 @@ republic_basilica_02 = {
 		amount = basic_resource_need
 		not_rite_parameter = luxury_forbidden
 		can_be_filled_multiple_times = 2
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = 0.00175
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_luxury_items
 		amount = ascetic_basic_resource_need
 		rite_parameter = luxury_forbidden
 		can_be_filled_multiple_times = 2
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = 0.00175
+			}
+		}
 	}
 	ai_value = {
 		base = 9.1
@@ -2613,12 +2688,22 @@ republic_basilica_03 = {
 		amount = basic_resource_need
 		not_rite_parameter = luxury_forbidden
 		can_be_filled_multiple_times = 3
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = 0.00175
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_luxury_items
 		amount = ascetic_basic_resource_need
 		rite_parameter = luxury_forbidden
 		can_be_filled_multiple_times = 3
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = 0.00175
+			}
+		}
 	}
 	ai_value = {
 		base = 9.1
@@ -2660,12 +2745,22 @@ republic_basilica_04 = {
 		amount = basic_resource_need
 		not_rite_parameter = luxury_forbidden
 		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = 0.00175
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_luxury_items
 		amount = ascetic_basic_resource_need
 		rite_parameter = luxury_forbidden
 		can_be_filled_multiple_times = 4
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = 0.00175
+			}
+		}
 	}
 	ai_value = {
 		base = 9.1
@@ -2706,12 +2801,22 @@ republic_basilica_05 = {
 		amount = basic_resource_need
 		not_rite_parameter = luxury_forbidden
 		can_be_filled_multiple_times = 5
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = 0.00175
+			}
+		}
 	}
 	trade_good_need = {
 		trade_good_category = trade_category_luxury_items
 		amount = ascetic_basic_resource_need
 		rite_parameter = luxury_forbidden
 		can_be_filled_multiple_times = 5
+		modifiers = {
+			province_modifier = {
+				prosperity_growth = 0.00175
+			}
+		}
 	}
 	ai_value = {
 		base = 9.1

@@ -562,7 +562,7 @@ confectionaries_1 = {
 	}
 	province_modifier = {
 		prosperity_per_province_size_level = patrician_prosperity_per_size_tier_1
-		popular_opinion_add = patrician_popular_opinion_tier_1
+		popular_opinion_add = 1
 	}
 	market_modifier = {
 		trade_good_sugar_sell_price_mult = price_basic_building_1
@@ -637,7 +637,7 @@ confectionaries_2 = {
 	}
 	province_modifier = {
 		prosperity_per_province_size_level = patrician_prosperity_per_size_tier_2
-		popular_opinion_add = patrician_popular_opinion_tier_2
+		popular_opinion_add = 2
 	}
 	market_modifier = {
 		trade_good_sugar_sell_price_mult = price_basic_building_1
@@ -720,7 +720,7 @@ confectionaries_3 = {
 	}
 	province_modifier = {
 		prosperity_per_province_size_level = patrician_prosperity_per_size_tier_3
-		popular_opinion_add = patrician_popular_opinion_tier_3
+		popular_opinion_add = 2
 	}
 	market_modifier = {
 		trade_good_sugar_sell_price_mult = price_basic_building_1
@@ -803,7 +803,7 @@ confectionaries_4 = {
 	}
 	province_modifier = {
 		prosperity_per_province_size_level = patrician_prosperity_per_size_tier_4
-		popular_opinion_add = patrician_popular_opinion_tier_4
+		popular_opinion_add = 3
 	}
 	market_modifier = {
 		trade_good_sugar_sell_price_mult = price_basic_building_1
@@ -885,7 +885,7 @@ confectionaries_5 = {
 	}
 	province_modifier = {
 		prosperity_per_province_size_level = patrician_prosperity_per_size_tier_5
-		popular_opinion_add = patrician_popular_opinion_tier_5
+		popular_opinion_add = 4
 	}
 	market_modifier = {
 		trade_good_sugar_sell_price_mult = price_basic_building_1
@@ -969,7 +969,7 @@ wine_cellars_1 = {
 	}
 	province_modifier = {
 		prosperity_per_province_size_level = patrician_prosperity_per_size_tier_1
-		urban_tax_mult = patrician_urban_tax_mult_tier_1
+		urban_tax_mult = 0.016
 	}
 	market_modifier = {
 		trade_good_wine_sell_price_mult = price_basic_building_1
@@ -1026,7 +1026,7 @@ wine_cellars_2 = {
 	}
 	province_modifier = {
 		prosperity_per_province_size_level = patrician_prosperity_per_size_tier_2
-		urban_tax_mult = patrician_urban_tax_mult_tier_2
+		urban_tax_mult = 0.0325
 	}
 	market_modifier = {
 		trade_good_wine_sell_price_mult = price_basic_building_1
@@ -1087,7 +1087,7 @@ wine_cellars_3 = {
 	}
 	province_modifier = {
 		prosperity_per_province_size_level = patrician_prosperity_per_size_tier_3
-		urban_tax_mult = patrician_urban_tax_mult_tier_3
+		urban_tax_mult = 0.05
 	}
 	market_modifier = {
 		trade_good_wine_sell_price_mult = price_basic_building_1
@@ -1148,7 +1148,7 @@ wine_cellars_4 = {
 	}
 	province_modifier = {
 		prosperity_per_province_size_level = patrician_prosperity_per_size_tier_4
-		urban_tax_mult = patrician_urban_tax_mult_tier_4
+		urban_tax_mult = 0.065
 	}
 	market_modifier = {
 		trade_good_wine_sell_price_mult = price_basic_building_1
@@ -1208,7 +1208,7 @@ wine_cellars_5 = {
 	}
 	province_modifier = {
 		prosperity_per_province_size_level = patrician_prosperity_per_size_tier_5
-		urban_tax_mult = patrician_urban_tax_mult_tier_5
+		urban_tax_mult = 0.08
 	}
 	market_modifier = {
 		trade_good_wine_sell_price_mult = price_basic_building_1
@@ -1606,6 +1606,7 @@ fine_tailors_1 = {
 	}
 	province_modifier = {
 		civic_tax_mult = patrician_civic_tax_mult_tier_1
+		urban_tax_mult = 0.009
 	}
 	market_modifier = {
 		trade_category_luxury_consumption_sell_price_mult = price_basic_building_1
@@ -1678,6 +1679,7 @@ fine_tailors_2 = {
 	}
 	province_modifier = {
 		civic_tax_mult = patrician_civic_tax_mult_tier_2
+		urban_tax_mult = 0.0175
 	}
 	market_modifier = {
 		trade_category_luxury_consumption_sell_price_mult = price_basic_building_1
@@ -1758,6 +1760,7 @@ fine_tailors_3 = {
 	}
 	province_modifier = {
 		civic_tax_mult = patrician_civic_tax_mult_tier_3
+		urban_tax_mult = 0.025
 	}
 	market_modifier = {
 		trade_category_luxury_consumption_sell_price_mult = price_basic_building_1
@@ -1838,6 +1841,7 @@ fine_tailors_4 = {
 	}
 	province_modifier = {
 		civic_tax_mult = patrician_civic_tax_mult_tier_4
+		urban_tax_mult = 0.035
 	}
 	market_modifier = {
 		trade_category_luxury_consumption_sell_price_mult = price_basic_building_1
@@ -1917,6 +1921,7 @@ fine_tailors_5 = {
 	}
 	province_modifier = {
 		civic_tax_mult = patrician_civic_tax_mult_tier_5
+		urban_tax_mult = 0.045
 	}
 	market_modifier = {
 		trade_category_luxury_consumption_sell_price_mult = price_basic_building_1
@@ -2042,6 +2047,9 @@ confraternity_hall_1 = {
 		ai_capital_preference_modifier = yes
 		ai_regular_new_building_modifier = yes
 	}
+	province_modifier = {
+		popular_opinion_add = 1
+	}
 }
 
 confraternity_hall_2 = {
@@ -2104,6 +2112,9 @@ confraternity_hall_2 = {
 		ai_economical_building_preference_modifier = yes
 		ai_capital_preference_modifier = yes
 		ai_regular_building_upgrade_modifier = { LEVEL = 2 }
+	}
+	province_modifier = {
+		popular_opinion_add = 1
 	}
 }
 
@@ -2168,6 +2179,9 @@ confraternity_hall_3 = {
 		ai_capital_preference_modifier = yes
 		ai_regular_building_upgrade_modifier = { LEVEL = 3 }
 	}
+	province_modifier = {
+		popular_opinion_add = 1
+	}
 }
 
 confraternity_hall_4 = {
@@ -2231,6 +2245,9 @@ confraternity_hall_4 = {
 		ai_capital_preference_modifier = yes
 		ai_regular_building_upgrade_modifier = { LEVEL = 4 }
 	}
+	province_modifier = {
+		popular_opinion_add = 1
+	}
 }
 
 confraternity_hall_5 = {
@@ -2292,6 +2309,9 @@ confraternity_hall_5 = {
 		ai_economical_building_preference_modifier = yes
 		ai_capital_preference_modifier = yes
 		ai_regular_building_upgrade_modifier = { LEVEL = 5 }
+	}
+	province_modifier = {
+		popular_opinion_add = 1
 	}
 }
 
@@ -3397,7 +3417,7 @@ garden_complex_1 = {
 		stress_loss_mult = patrician_stress_loss_mult_tier_1
 	}
 	province_modifier = {
-		popular_opinion_add = patrician_popular_opinion_tier_1
+		popular_opinion_add = 1
 	}
 	market_modifier = {
 		trade_category_comforts_sell_price_mult = price_basic_building_1
@@ -3444,7 +3464,7 @@ garden_complex_2 = {
 		stress_loss_mult = patrician_stress_loss_mult_tier_2
 	}
 	province_modifier = {
-		popular_opinion_add = patrician_popular_opinion_tier_2
+		popular_opinion_add = 1
 	}
 	market_modifier = {
 		trade_category_comforts_sell_price_mult = price_basic_building_1
@@ -3493,7 +3513,7 @@ garden_complex_3 = {
 		stress_loss_mult = patrician_stress_loss_mult_tier_3
 	}
 	province_modifier = {
-		popular_opinion_add = patrician_popular_opinion_tier_3
+		popular_opinion_add = 2
 	}
 	market_modifier = {
 		trade_category_comforts_sell_price_mult = price_basic_building_1
@@ -3542,7 +3562,7 @@ garden_complex_4 = {
 		stress_loss_mult = patrician_stress_loss_mult_tier_4
 	}
 	province_modifier = {
-		popular_opinion_add = patrician_popular_opinion_tier_4
+		popular_opinion_add = 3
 	}
 	market_modifier = {
 		trade_category_comforts_sell_price_mult = price_basic_building_1
@@ -3634,7 +3654,7 @@ writing_offices_1 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		control_baseline_add = patrician_control_baseline_tier_1
+		control_baseline_add = 1.95
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = price_basic_building_1
@@ -3673,7 +3693,7 @@ writing_offices_2 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		control_baseline_add = patrician_control_baseline_tier_2
+		control_baseline_add = 3.9
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = price_basic_building_1
@@ -3714,7 +3734,7 @@ writing_offices_3 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		control_baseline_add = patrician_control_baseline_tier_3
+		control_baseline_add = 5.85
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = price_basic_building_1
@@ -3755,7 +3775,7 @@ writing_offices_4 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		control_baseline_add = patrician_control_baseline_tier_4
+		control_baseline_add = 7.8
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = price_basic_building_1
@@ -3795,7 +3815,7 @@ writing_offices_5 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		control_baseline_add = patrician_control_baseline_tier_5
+		control_baseline_add = 9.75
 	}
 	market_modifier = {
 		trade_good_books_paper_sell_price_mult = price_basic_building_1
@@ -4315,6 +4335,7 @@ fortified_compounds_1 = {
 	}
 	province_modifier = {
 		additional_fort_level = patrician_fortified_compound_fort_level
+		control_baseline_add = 1.05
 	}
 	ai_value = {
 		base = 10
@@ -4339,6 +4360,7 @@ fortified_compounds_2 = {
 	}
 	province_modifier = {
 		additional_fort_level = patrician_fortified_compound_fort_level
+		control_baseline_add = 2.1
 	}
 	ai_value = {
 		base = 10
@@ -4363,6 +4385,7 @@ fortified_compounds_3 = {
 	}
 	province_modifier = {
 		additional_fort_level = patrician_fortified_compound_fort_level
+		control_baseline_add = 3.15
 	}
 	ai_value = {
 		base = 10
@@ -4387,6 +4410,7 @@ fortified_compounds_4 = {
 	}
 	province_modifier = {
 		additional_fort_level = patrician_fortified_compound_fort_level
+		control_baseline_add = 4.2
 	}
 	ai_value = {
 		base = 10
@@ -4410,6 +4434,7 @@ fortified_compounds_5 = {
 	}
 	province_modifier = {
 		additional_fort_level = patrician_fortified_compound_fort_level
+		control_baseline_add = 5.25
 	}
 	ai_value = {
 		base = 10

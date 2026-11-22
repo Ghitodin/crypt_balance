@@ -228,7 +228,7 @@ city_town_watch_1 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_urban_tax = poor_building_tax_halved_tier_1
+		monthly_urban_tax = 0.025
 		levy_size = 0.025
 	}
 	market_rite_modifier = {
@@ -285,7 +285,7 @@ city_town_watch_2 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_urban_tax = poor_building_tax_halved_tier_2
+		monthly_urban_tax = 0.05
 		levy_size = 0.05
 	}
 	market_rite_modifier = {
@@ -348,7 +348,7 @@ city_town_watch_3 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_urban_tax = poor_building_tax_halved_tier_3
+		monthly_urban_tax = 0.075
 		levy_size = 0.075
 	}
 	market_rite_modifier = {
@@ -411,7 +411,7 @@ city_town_watch_4 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_urban_tax = poor_building_tax_halved_tier_4
+		monthly_urban_tax = 0.1
 		levy_size = 0.10
 	}
 	market_rite_modifier = {
@@ -816,7 +816,7 @@ city_magistrate_1 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_urban_tax = poor_building_tax_halved_tier_1
+		monthly_urban_tax = 0.0325
 		monthly_control_change_when_below_baseline_add = 0.1
 	}
 	market_modifier = {
@@ -860,7 +860,7 @@ city_magistrate_2 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_urban_tax = poor_building_tax_halved_tier_2
+		monthly_urban_tax = 0.065
 		monthly_control_change_when_below_baseline_add = 0.2
 	}
 	market_modifier = {
@@ -907,7 +907,7 @@ city_magistrate_3 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_urban_tax = poor_building_tax_halved_tier_3
+		monthly_urban_tax = 0.1
 		monthly_control_change_when_below_baseline_add = 0.3
 	}
 	market_modifier = {
@@ -954,7 +954,7 @@ city_magistrate_4 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_urban_tax = poor_building_tax_halved_tier_4
+		monthly_urban_tax = 0.125
 		monthly_control_change_when_below_baseline_add = 0.4
 	}
 	market_modifier = {
@@ -1000,7 +1000,7 @@ city_magistrate_5 = {
 	can_construct_showing_failures_only = {
 	}
 	province_modifier = {
-		monthly_urban_tax = poor_building_tax_halved_tier_5
+		monthly_urban_tax = 0.16
 		monthly_control_change_when_below_baseline_add = 0.5
 	}
 	market_modifier = {
@@ -1045,6 +1045,7 @@ city_council_hall_1 = {
 	}
 	province_modifier = {
 		urban_tax_mult = 0.01
+		monthly_urban_tax = 0.0175
 	}
 	market_modifier = {
 		trade_category_carpentry_supplies_sell_price_mult = price_holding_district_need
@@ -1084,6 +1085,7 @@ city_council_hall_2 = {
 	}
 	province_modifier = {
 		urban_tax_mult = 0.02
+		monthly_urban_tax = 0.035
 	}
 	market_modifier = {
 		trade_category_carpentry_supplies_sell_price_mult = price_holding_district_need
@@ -1126,6 +1128,7 @@ city_council_hall_3 = {
 	}
 	province_modifier = {
 		urban_tax_mult = 0.03
+		monthly_urban_tax = 0.05
 	}
 	market_modifier = {
 		trade_category_carpentry_supplies_sell_price_mult = price_holding_district_need
@@ -1168,6 +1171,7 @@ city_council_hall_4 = {
 	}
 	province_modifier = {
 		urban_tax_mult = 0.04
+		monthly_urban_tax = 0.07
 	}
 	market_modifier = {
 		trade_category_carpentry_supplies_sell_price_mult = price_holding_district_need
@@ -1209,6 +1213,7 @@ city_council_hall_5 = {
 	}
 	province_modifier = {
 		urban_tax_mult = 0.05
+		monthly_urban_tax = 0.09
 	}
 	market_modifier = {
 		trade_category_carpentry_supplies_sell_price_mult = price_holding_district_need

@@ -830,7 +830,7 @@ guild_carpenters_1 = {
 	cost_gold = premium_building_cost_tier_1
 
 	province_modifier = {
-		monthly_artisan_tax = normal_artisan_building_tax_tier_1
+		monthly_artisan_tax = 0.125
 		build_gold_cost = -0.02
 	}
 	market_modifier = {
@@ -884,7 +884,7 @@ guild_carpenters_2 = {
 	cost_gold = premium_building_cost_tier_2
 
 	province_modifier = {
-		monthly_artisan_tax = normal_artisan_building_tax_tier_2
+		monthly_artisan_tax = 0.25
 		build_gold_cost = -0.04
 	}
 	market_modifier = {
@@ -938,7 +938,7 @@ guild_carpenters_3 = {
 	district_level_requirement = 3
 
 	province_modifier = {
-		monthly_artisan_tax = normal_artisan_building_tax_tier_3
+		monthly_artisan_tax = 0.4
 		build_gold_cost = -0.06
 	}
 	market_modifier = {
@@ -992,7 +992,7 @@ guild_carpenters_4 = {
 	district_level_requirement = 4
 
 	province_modifier = {
-		monthly_artisan_tax = normal_artisan_building_tax_tier_4
+		monthly_artisan_tax = 0.55
 		build_gold_cost = -0.08
 	}
 	market_modifier = {
@@ -1047,7 +1047,7 @@ guild_carpenters_5 = {
 	district_level_requirement = 4
 
 	province_modifier = {
-		monthly_artisan_tax = normal_artisan_building_tax_tier_5
+		monthly_artisan_tax = 0.65
 		build_gold_cost = -0.1
 	}
 	market_modifier = {
@@ -1098,7 +1098,7 @@ guild_butchery_1 = {
 	cost_gold = premium_building_cost_tier_1
 
 	province_modifier = {
-		monthly_artisan_tax = normal_artisan_building_tax_tier_1
+		monthly_artisan_tax = 0.075
 	}
 	market_modifier = {
 		trade_good_cattle_sell_price_mult = price_basic_building_1
@@ -1164,7 +1164,7 @@ guild_butchery_2 = {
 	cost_gold = premium_building_cost_tier_2
 
 	province_modifier = {
-		monthly_artisan_tax = normal_artisan_building_tax_tier_2
+		monthly_artisan_tax = 0.15
 	}
 	market_modifier = {
 		trade_good_cattle_sell_price_mult = price_basic_building_1
@@ -1231,7 +1231,7 @@ guild_butchery_3 = {
 	district_level_requirement = 3
 
 	province_modifier = {
-		monthly_artisan_tax = normal_artisan_building_tax_tier_3
+		monthly_artisan_tax = 0.225
 	}
 	market_modifier = {
 		trade_good_cattle_sell_price_mult = price_basic_building_1
@@ -1298,7 +1298,7 @@ guild_butchery_4 = {
 	district_level_requirement = 4
 
 	province_modifier = {
-		monthly_artisan_tax = normal_artisan_building_tax_tier_4
+		monthly_artisan_tax = 0.3
 	}
 	market_modifier = {
 		trade_good_cattle_sell_price_mult = price_basic_building_1
@@ -1365,7 +1365,7 @@ guild_butchery_5 = {
 	district_level_requirement = 4
 
 	province_modifier = {
-		monthly_artisan_tax = normal_artisan_building_tax_tier_5
+		monthly_artisan_tax = 0.375
 	}
 	market_modifier = {
 		trade_good_cattle_sell_price_mult = price_basic_building_1
@@ -2541,7 +2541,7 @@ blacksmiths_guild_1 = {
 	}
 
 	province_modifier = {
-		monthly_artisan_tax = good_artisan_building_tax_tier_1
+		monthly_artisan_tax = 0.25
 	}
 	market_modifier = {
 		trade_category_base_metals_sell_price_mult = price_metal_building_1
@@ -2607,7 +2607,7 @@ blacksmiths_guild_2 = {
 	district_level_requirement = 2
 
 	province_modifier = {
-		monthly_artisan_tax = good_artisan_building_tax_tier_2
+		monthly_artisan_tax = 0.4
 	}
 	market_modifier = {
 		trade_category_base_metals_sell_price_mult = price_metal_building_1
@@ -2676,7 +2676,7 @@ blacksmiths_guild_3 = {
 	district_level_requirement = 3
 
 	province_modifier = {
-		monthly_artisan_tax = good_artisan_building_tax_tier_3
+		monthly_artisan_tax = 0.6
 	}
 	market_modifier = {
 		trade_category_base_metals_sell_price_mult = price_metal_building_1
@@ -2745,7 +2745,7 @@ blacksmiths_guild_4 = {
 	district_level_requirement = 4
 
 	province_modifier = {
-		monthly_artisan_tax = good_artisan_building_tax_tier_4
+		monthly_artisan_tax = 0.8
 	}
 	market_modifier = {
 		trade_category_base_metals_sell_price_mult = price_metal_building_1
@@ -3619,7 +3619,7 @@ guild_textiles_silk_1 = {
 	district_level_requirement = 3
 
 	province_modifier = {
-		monthly_artisan_tax = good_artisan_building_tax_tier_1
+		monthly_artisan_tax = 0.2
 	}
 	market_modifier = {
 		trade_good_silk_sell_price_mult = price_textiles_building_1
@@ -3696,7 +3696,7 @@ guild_textiles_silk_2 = {
 	district_level_requirement = 3
 
 	province_modifier = {
-		monthly_artisan_tax = good_artisan_building_tax_tier_2
+		monthly_artisan_tax = 0.35
 	}
 	market_modifier = {
 		trade_good_silk_sell_price_mult = price_textiles_building_1
@@ -3774,7 +3774,7 @@ guild_textiles_silk_3 = {
 	district_level_requirement = 3
 
 	province_modifier = {
-		monthly_artisan_tax = good_artisan_building_tax_tier_3
+		monthly_artisan_tax = 0.5
 	}
 	market_modifier = {
 		trade_good_silk_sell_price_mult = price_textiles_building_1
@@ -3852,7 +3852,7 @@ guild_textiles_silk_4 = {
 	district_level_requirement = 4
 
 	province_modifier = {
-		monthly_artisan_tax = good_artisan_building_tax_tier_4
+		monthly_artisan_tax = 0.65
 	}
 	market_modifier = {
 		trade_good_silk_sell_price_mult = price_textiles_building_1
@@ -3929,7 +3929,7 @@ guild_textiles_silk_5 = {
 	district_level_requirement = 4
 
 	province_modifier = {
-		monthly_artisan_tax = good_artisan_building_tax_tier_5
+		monthly_artisan_tax = 0.8
 	}
 	market_modifier = {
 		trade_good_silk_sell_price_mult = price_textiles_building_1
@@ -4277,7 +4277,7 @@ guild_goldsmiths_1 = {
 
 	province_modifier = {
 		prosperity_growth = medium_prosperity_tier_1
-		monthly_artisan_tax = good_artisan_building_tax_tier_1
+		monthly_artisan_tax = 0.225
 	}
 	market_modifier = {
 		trade_category_jewelry_materials_sell_price_mult = price_basic_building_1
@@ -4344,7 +4344,7 @@ guild_goldsmiths_2 = {
 
 	province_modifier = {
 		prosperity_growth = medium_prosperity_tier_2
-		monthly_artisan_tax = good_artisan_building_tax_tier_2
+		monthly_artisan_tax = 0.4
 	}
 	market_modifier = {
 		trade_category_jewelry_materials_sell_price_mult = price_basic_building_1
@@ -4413,7 +4413,7 @@ guild_goldsmiths_3 = {
 
 	province_modifier = {
 		prosperity_growth = medium_prosperity_tier_3
-		monthly_artisan_tax = good_artisan_building_tax_tier_3
+		monthly_artisan_tax = 0.55
 	}
 	market_modifier = {
 		trade_category_jewelry_materials_sell_price_mult = price_basic_building_1
@@ -4482,7 +4482,7 @@ guild_goldsmiths_4 = {
 
 	province_modifier = {
 		prosperity_growth = medium_prosperity_tier_4
-		monthly_artisan_tax = good_artisan_building_tax_tier_4
+		monthly_artisan_tax = 0.75
 	}
 	market_modifier = {
 		trade_category_jewelry_materials_sell_price_mult = price_basic_building_1
@@ -4551,7 +4551,7 @@ guild_goldsmiths_5 = {
 
 	province_modifier = {
 		prosperity_growth = medium_prosperity_tier_5
-		monthly_artisan_tax = good_artisan_building_tax_tier_5
+		monthly_artisan_tax = 0.9
 	}
 	market_modifier = {
 		trade_category_jewelry_materials_sell_price_mult = price_basic_building_1
@@ -4632,7 +4632,7 @@ guild_hall_1 = {
 
 	province_modifier = {
 		prosperity_growth = medium_prosperity_tier_1
-		monthly_artisan_tax = excellent_artisan_building_tax_tier_1
+		monthly_artisan_tax = 0.55
 	}
 	character_modifier = {
 		monthly_prestige = 0.1
@@ -4704,7 +4704,7 @@ guild_hall_2 = {
 
 	province_modifier = {
 		prosperity_growth = medium_prosperity_tier_2
-		monthly_artisan_tax = excellent_artisan_building_tax_tier_2
+		monthly_artisan_tax = 0.9
 	}
 	character_modifier = {
 		monthly_prestige = 0.2
@@ -4795,7 +4795,7 @@ guild_hall_3 = {
 
 	province_modifier = {
 		prosperity_growth = medium_prosperity_tier_3
-		monthly_artisan_tax = excellent_artisan_building_tax_tier_3
+		monthly_artisan_tax = 1.25
 	}
 	character_modifier = {
 		monthly_prestige = 0.3
@@ -4896,7 +4896,7 @@ guild_hall_4 = {
 
 	province_modifier = {
 		prosperity_growth = medium_prosperity_tier_4
-		monthly_artisan_tax = excellent_artisan_building_tax_tier_4
+		monthly_artisan_tax = 1.6
 	}
 	character_modifier = {
 		monthly_prestige = 0.4
@@ -5007,7 +5007,7 @@ guild_hall_5 = {
 
 	province_modifier = {
 		prosperity_growth = medium_prosperity_tier_5
-		monthly_artisan_tax = excellent_artisan_building_tax_tier_5
+		monthly_artisan_tax = 1.95
 	}
 	character_modifier = {
 		monthly_prestige = 0.5
@@ -5539,6 +5539,9 @@ guild_hospitals_1 = {
 		ai_cultural_unlock_building_modifier = { PARAMETER = civic_religion_guild_charity_buildings }
 		ai_regular_new_building_modifier = yes
 	}
+	province_modifier = {
+		control_baseline_add = 0.5
+	}
 }
 
 # Hospitals
@@ -5601,6 +5604,9 @@ guild_hospitals_2 = {
 		ai_capital_preference_modifier = yes
 		ai_cultural_unlock_building_modifier = { PARAMETER = civic_religion_guild_charity_buildings }
 		ai_regular_building_upgrade_modifier = { LEVEL = 2 }
+	}
+	province_modifier = {
+		control_baseline_add = 1
 	}
 }
 
@@ -5665,6 +5671,9 @@ guild_hospitals_3 = {
 		ai_cultural_unlock_building_modifier = { PARAMETER = civic_religion_guild_charity_buildings }
 		ai_regular_building_upgrade_modifier = { LEVEL = 3 }
 	}
+	province_modifier = {
+		control_baseline_add = 1.5
+	}
 }
 
 # Hospitals
@@ -5728,6 +5737,9 @@ guild_hospitals_4 = {
 		ai_cultural_unlock_building_modifier = { PARAMETER = civic_religion_guild_charity_buildings }
 		ai_regular_building_upgrade_modifier = { LEVEL = 4 }
 	}
+	province_modifier = {
+		control_baseline_add = 2
+	}
 }
 
 # Hospitals
@@ -5790,6 +5802,9 @@ guild_hospitals_5 = {
 		ai_cultural_unlock_building_modifier = { PARAMETER = civic_religion_guild_charity_buildings }
 		ai_regular_building_upgrade_modifier = { LEVEL = 5 }
 	}
+	province_modifier = {
+		control_baseline_add = 2.5
+	}
 }
 
 
@@ -5811,7 +5826,7 @@ guild_notary_1 = {
 	}
 	province_modifier = {
 		artisan_tax_mult = notary_artisan_tax_mult_tier_1
-		control_baseline_add = 1
+		control_baseline_add = 0.5
 	}
 	province_culture_modifier = {
 		parameter = roman_law_legal_buildings_popular_opinion
@@ -5863,7 +5878,7 @@ guild_notary_2 = {
 	}
 	province_modifier = {
 		artisan_tax_mult = notary_artisan_tax_mult_tier_2
-		control_baseline_add = 2
+		control_baseline_add = 1
 	}
 	province_culture_modifier = {
 		parameter = roman_law_legal_buildings_popular_opinion
@@ -5916,7 +5931,7 @@ guild_notary_3 = {
 	}
 	province_modifier = {
 		artisan_tax_mult = notary_artisan_tax_mult_tier_3
-		control_baseline_add = 3
+		control_baseline_add = 1.5
 	}
 	province_culture_modifier = {
 		parameter = roman_law_legal_buildings_popular_opinion
@@ -5969,7 +5984,7 @@ guild_notary_4 = {
 	}
 	province_modifier = {
 		artisan_tax_mult = notary_artisan_tax_mult_tier_4
-		control_baseline_add = 4
+		control_baseline_add = 2
 	}
 	province_culture_modifier = {
 		parameter = roman_law_legal_buildings_popular_opinion
@@ -6021,7 +6036,7 @@ guild_notary_5 = {
 	}
 	province_modifier = {
 		artisan_tax_mult = notary_artisan_tax_mult_tier_5
-		control_baseline_add = 5
+		control_baseline_add = 2.5
 	}
 	province_culture_modifier = {
 		parameter = roman_law_legal_buildings_popular_opinion

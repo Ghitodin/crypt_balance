@@ -37,7 +37,7 @@ temple_viharas_1 = {
 		monthly_piety = 0.1
 	}
 	county_modifier = {
-		popular_opinion_add = building_tiny_popular_opinion_gain
+		popular_opinion_add = 2
 	}
 	province_modifier = {
 	}
@@ -105,7 +105,7 @@ temple_viharas_2 = {
 		monthly_piety = 0.2
 	}
 	county_modifier = {
-		popular_opinion_add = building_miniscule_popular_opinion_gain
+		popular_opinion_add = 3
 	}
 	province_modifier = {
 	}
@@ -179,7 +179,7 @@ temple_viharas_3 = {
 		monthly_piety = 0.3
 	}
 	county_modifier = {
-		popular_opinion_add = building_minor_popular_opinion_gain
+		popular_opinion_add = 5
 	}
 	province_modifier = {
 	}
@@ -253,7 +253,7 @@ temple_viharas_4 = {
 		monthly_piety = 0.4
 	}
 	county_modifier = {
-		popular_opinion_add = building_moderate_popular_opinion_gain
+		popular_opinion_add = 6
 	}
 	province_modifier = {
 	}
@@ -326,7 +326,7 @@ temple_viharas_5 = {
 		monthly_piety = 0.5
 	}
 	county_modifier = {
-		popular_opinion_add = building_medium_popular_opinion_gain
+		popular_opinion_add = 8
 	}
 	province_modifier = {
 	}
@@ -889,7 +889,7 @@ donation_store_1 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		religious_tax_per_piety_level = super_poor_building_tax_tier_1
+		religious_tax_per_piety_level = 0.0325
 	}
 	market_culture_modifier = {
 		parameter = votive_incense_demand
@@ -1109,7 +1109,7 @@ donation_store_2 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		religious_tax_per_piety_level = super_poor_building_tax_tier_2
+		religious_tax_per_piety_level = 0.065
 	}
 	market_culture_modifier = {
 		parameter = votive_incense_demand
@@ -1340,7 +1340,7 @@ donation_store_3 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		religious_tax_per_piety_level = super_poor_building_tax_tier_3
+		religious_tax_per_piety_level = 0.1
 	}
 	market_culture_modifier = {
 		parameter = votive_incense_demand
@@ -1571,7 +1571,7 @@ donation_store_4 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		religious_tax_per_piety_level = super_poor_building_tax_tier_4
+		religious_tax_per_piety_level = 0.125
 	}
 	market_culture_modifier = {
 		parameter = votive_incense_demand
@@ -1801,7 +1801,7 @@ donation_store_5 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		religious_tax_per_piety_level = super_poor_building_tax_tier_5
+		religious_tax_per_piety_level = 0.16
 	}
 	market_culture_modifier = {
 		parameter = votive_incense_demand
@@ -2697,6 +2697,11 @@ temple_treasuries_1 = {
 	trade_good_need = {
 		trade_good = trade_good_rice
 		amount = basic_resource_need
+		modifiers = {
+			province_modifier = {
+				religious_tax_per_piety_level = 0.0175
+			}
+		}
 	}
 
 	on_complete = {
@@ -2764,6 +2769,11 @@ temple_treasuries_2 = {
 
 		can_be_filled_multiple_times = 2
 
+		modifiers = {
+			province_modifier = {
+				religious_tax_per_piety_level = 0.0175
+			}
+		}
 	}
 
 	on_complete = {
@@ -2831,6 +2841,11 @@ temple_treasuries_3 = {
 
 		can_be_filled_multiple_times = 3
 
+		modifiers = {
+			province_modifier = {
+				religious_tax_per_piety_level = 0.0175
+			}
+		}
 	}
 
 	on_complete = {
@@ -2898,6 +2913,11 @@ temple_treasuries_4 = {
 
 		can_be_filled_multiple_times = 4
 
+		modifiers = {
+			province_modifier = {
+				religious_tax_per_piety_level = 0.0175
+			}
+		}
 	}
 
 	on_complete = {
@@ -2964,6 +2984,11 @@ temple_treasuries_5 = {
 
 		can_be_filled_multiple_times = 5
 
+		modifiers = {
+			province_modifier = {
+				religious_tax_per_piety_level = 0.0175
+			}
+		}
 	}
 
 	on_complete = {
@@ -3424,7 +3449,7 @@ devaraja_image_1 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_religious_tax = poor_building_tax_tier_1
+		monthly_religious_tax = 0.07
 	}
 	market_modifier = {
 		trade_category_jewelry_materials_sell_price_mult = price_basic_building_1
@@ -3480,7 +3505,7 @@ devaraja_image_2 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_religious_tax = poor_building_tax_tier_2
+		monthly_religious_tax = 0.14
 	}
 	market_modifier = {
 		trade_category_jewelry_materials_sell_price_mult = price_basic_building_1
@@ -3539,7 +3564,7 @@ devaraja_image_3 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_religious_tax = poor_building_tax_tier_3
+		monthly_religious_tax = 0.2
 	}
 	market_modifier = {
 		trade_category_jewelry_materials_sell_price_mult = price_basic_building_1
@@ -3598,7 +3623,7 @@ devaraja_image_4 = {
 	county_modifier = {
 	}
 	province_modifier = {
-		monthly_religious_tax = poor_building_tax_tier_4
+		monthly_religious_tax = 0.275
 	}
 	market_modifier = {
 		trade_category_jewelry_materials_sell_price_mult = price_basic_building_1

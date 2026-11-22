@@ -29,27 +29,9 @@ call_house_member_to_war_interaction = {
 		}
 	}
 
-	is_shown = {
-		scope:recipient != scope:actor
+	is_shown = { always = no }
 
-		scope:actor = {
-			religion ?= scope:recipient.religion
-			house ?= scope:recipient.house
-			any_character_war = {
-				is_war_leader = scope:actor
-			}
-		}
-
-		scope:recipient = {
-			is_playable_character = yes
-		}
-
-		scope:recipient = {
-			NOT = {
-				target_is_liege_or_above = scope:actor
-			}
-		}
-	}
+	is_valid = { always = no }
 	
 	has_valid_target = {
 		exists = scope:target

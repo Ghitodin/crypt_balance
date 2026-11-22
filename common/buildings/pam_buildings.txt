@@ -120,7 +120,6 @@ great_project_cathedral_01 = {
 	}
 
 	province_modifier = {
-		province_size_baseline_add = pam_cathedral_province_size_baseline_tier_1
 		trade_good_books_paper_production_add = special_building_books_output
 	}
 	market_modifier = {
@@ -225,7 +224,6 @@ great_project_cathedral_02 = {
 	}
 
 	province_modifier = {
-		province_size_baseline_add = pam_cathedral_province_size_baseline_tier_2
 		trade_good_books_paper_production_add = special_building_books_output
 	}
 	market_modifier = {
@@ -331,7 +329,6 @@ great_project_cathedral_03 = {
 	}
 
 	province_modifier = {
-		province_size_baseline_add = pam_cathedral_province_size_baseline_tier_3
 		trade_good_books_paper_production_add = special_building_books_output
 	}
 	market_modifier = {

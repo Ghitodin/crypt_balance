@@ -1,0 +1,537 @@
+﻿# One modifier per whole county prosperity level.
+
+crypt_balance_settlement_prosperity_level_1 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 9
+}
+
+crypt_balance_settlement_prosperity_level_2 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 18
+}
+
+crypt_balance_settlement_prosperity_level_3 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 27
+}
+
+crypt_balance_settlement_prosperity_level_4 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 36
+}
+
+crypt_balance_settlement_prosperity_level_5 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 45
+}
+
+crypt_balance_settlement_prosperity_level_6 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 54
+}
+
+crypt_balance_settlement_prosperity_level_7 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 63
+}
+
+crypt_balance_settlement_prosperity_level_8 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 72
+}
+
+crypt_balance_settlement_prosperity_level_9 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 81
+}
+
+crypt_balance_settlement_prosperity_level_10 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 90
+}
+
+crypt_balance_settlement_prosperity_level_11 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 99
+}
+
+crypt_balance_settlement_prosperity_level_12 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 108
+}
+
+crypt_balance_settlement_prosperity_level_13 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 117
+}
+
+crypt_balance_settlement_prosperity_level_14 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 126
+}
+
+crypt_balance_settlement_prosperity_level_15 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 135
+}
+
+crypt_balance_settlement_prosperity_level_16 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 144
+}
+
+crypt_balance_settlement_prosperity_level_17 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 153
+}
+
+crypt_balance_settlement_prosperity_level_18 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 162
+}
+
+crypt_balance_settlement_prosperity_level_19 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 171
+}
+
+crypt_balance_settlement_prosperity_level_20 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 180
+}
+
+crypt_balance_settlement_prosperity_level_21 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 189
+}
+
+crypt_balance_settlement_prosperity_level_22 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 198
+}
+
+crypt_balance_settlement_prosperity_level_23 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 207
+}
+
+crypt_balance_settlement_prosperity_level_24 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 216
+}
+
+crypt_balance_settlement_prosperity_level_25 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 225
+}
+
+crypt_balance_settlement_prosperity_level_26 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 234
+}
+
+crypt_balance_settlement_prosperity_level_27 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 243
+}
+
+crypt_balance_settlement_prosperity_level_28 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 252
+}
+
+crypt_balance_settlement_prosperity_level_29 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 261
+}
+
+crypt_balance_settlement_prosperity_level_30 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 270
+}
+
+crypt_balance_settlement_prosperity_level_31 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 279
+}
+
+crypt_balance_settlement_prosperity_level_32 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 288
+}
+
+crypt_balance_settlement_prosperity_level_33 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 297
+}
+
+crypt_balance_settlement_prosperity_level_34 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 306
+}
+
+crypt_balance_settlement_prosperity_level_35 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 315
+}
+
+crypt_balance_settlement_prosperity_level_36 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 324
+}
+
+crypt_balance_settlement_prosperity_level_37 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 333
+}
+
+crypt_balance_settlement_prosperity_level_38 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 342
+}
+
+crypt_balance_settlement_prosperity_level_39 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 351
+}
+
+crypt_balance_settlement_prosperity_level_40 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 360
+}
+
+crypt_balance_settlement_prosperity_level_41 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 369
+}
+
+crypt_balance_settlement_prosperity_level_42 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 378
+}
+
+crypt_balance_settlement_prosperity_level_43 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 387
+}
+
+crypt_balance_settlement_prosperity_level_44 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 396
+}
+
+crypt_balance_settlement_prosperity_level_45 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 405
+}
+
+crypt_balance_settlement_prosperity_level_46 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 414
+}
+
+crypt_balance_settlement_prosperity_level_47 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 423
+}
+
+crypt_balance_settlement_prosperity_level_48 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 432
+}
+
+crypt_balance_settlement_prosperity_level_49 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 441
+}
+
+crypt_balance_settlement_prosperity_level_50 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 450
+}
+
+crypt_balance_settlement_prosperity_level_51 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 459
+}
+
+crypt_balance_settlement_prosperity_level_52 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 468
+}
+
+crypt_balance_settlement_prosperity_level_53 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 477
+}
+
+crypt_balance_settlement_prosperity_level_54 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 486
+}
+
+crypt_balance_settlement_prosperity_level_55 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 495
+}
+
+crypt_balance_settlement_prosperity_level_56 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 504
+}
+
+crypt_balance_settlement_prosperity_level_57 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 513
+}
+
+crypt_balance_settlement_prosperity_level_58 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 522
+}
+
+crypt_balance_settlement_prosperity_level_59 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 531
+}
+
+crypt_balance_settlement_prosperity_level_60 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 540
+}
+
+crypt_balance_settlement_prosperity_level_61 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 549
+}
+
+crypt_balance_settlement_prosperity_level_62 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 558
+}
+
+crypt_balance_settlement_prosperity_level_63 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 567
+}
+
+crypt_balance_settlement_prosperity_level_64 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 576
+}
+
+crypt_balance_settlement_prosperity_level_65 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 585
+}
+
+crypt_balance_settlement_prosperity_level_66 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 594
+}
+
+crypt_balance_settlement_prosperity_level_67 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 603
+}
+
+crypt_balance_settlement_prosperity_level_68 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 612
+}
+
+crypt_balance_settlement_prosperity_level_69 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 621
+}
+
+crypt_balance_settlement_prosperity_level_70 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 630
+}
+
+crypt_balance_settlement_prosperity_level_71 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 639
+}
+
+crypt_balance_settlement_prosperity_level_72 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 648
+}
+
+crypt_balance_settlement_prosperity_level_73 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 657
+}
+
+crypt_balance_settlement_prosperity_level_74 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 666
+}
+
+crypt_balance_settlement_prosperity_level_75 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 675
+}
+
+crypt_balance_settlement_prosperity_level_76 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 684
+}
+
+crypt_balance_settlement_prosperity_level_77 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 693
+}
+
+crypt_balance_settlement_prosperity_level_78 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 702
+}
+
+crypt_balance_settlement_prosperity_level_79 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 711
+}
+
+crypt_balance_settlement_prosperity_level_80 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 720
+}
+
+crypt_balance_settlement_prosperity_level_81 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 729
+}
+
+crypt_balance_settlement_prosperity_level_82 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 738
+}
+
+crypt_balance_settlement_prosperity_level_83 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 747
+}
+
+crypt_balance_settlement_prosperity_level_84 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 756
+}
+
+crypt_balance_settlement_prosperity_level_85 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 765
+}
+
+crypt_balance_settlement_prosperity_level_86 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 774
+}
+
+crypt_balance_settlement_prosperity_level_87 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 783
+}
+
+crypt_balance_settlement_prosperity_level_88 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 792
+}
+
+crypt_balance_settlement_prosperity_level_89 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 801
+}
+
+crypt_balance_settlement_prosperity_level_90 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 810
+}
+
+crypt_balance_settlement_prosperity_level_91 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 819
+}
+
+crypt_balance_settlement_prosperity_level_92 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 828
+}
+
+crypt_balance_settlement_prosperity_level_93 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 837
+}
+
+crypt_balance_settlement_prosperity_level_94 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 846
+}
+
+crypt_balance_settlement_prosperity_level_95 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 855
+}
+
+crypt_balance_settlement_prosperity_level_96 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 864
+}
+
+crypt_balance_settlement_prosperity_level_97 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 873
+}
+
+crypt_balance_settlement_prosperity_level_98 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 882
+}
+
+crypt_balance_settlement_prosperity_level_99 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 891
+}
+
+crypt_balance_settlement_prosperity_level_100 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 900
+}
+
+# Retained so saves can load and remove the old cumulative modifiers.
+crypt_balance_settlement_prosperity_64 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 576
+}
+
+crypt_balance_settlement_prosperity_32 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 288
+}
+
+crypt_balance_settlement_prosperity_16 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 144
+}
+
+crypt_balance_settlement_prosperity_8 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 72
+}
+
+crypt_balance_settlement_prosperity_4 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 36
+}
+
+crypt_balance_settlement_prosperity_2 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 18
+}
+
+crypt_balance_settlement_prosperity_1 = {
+	icon = county_modifier_prosperity_positive
+	province_size_baseline_add = 9
+}

@@ -36,7 +36,6 @@ mandala_capital_01 = {
 	}
 
 	province_modifier = {
-		province_size_baseline_add = 50
 		stationed_maa_damage_mult = 0.1
 		levy_size = 0.15
 		garrison_size = 0.15
@@ -51,11 +50,6 @@ mandala_capital_01 = {
 		trade_good = trade_good_stone
 		amount = special_building_need_amount
 
-		modifiers = {
-			province_modifier = {
-				province_size_baseline_add = 10
-			}
-		}
 	}
 	market_culture_modifier = {
 		parameter = votive_incense_demand
@@ -289,7 +283,6 @@ mandala_capital_02 = {
 	}
 
 	province_modifier = {
-		province_size_baseline_add = 100
 		stationed_maa_damage_mult = 0.1
 		levy_size = 0.25
 		garrison_size = 0.25
@@ -306,11 +299,6 @@ mandala_capital_02 = {
 
 		can_be_filled_multiple_times = 2
 
-		modifiers = {
-			province_modifier = {
-				province_size_baseline_add = 10
-			}
-		}
 	}
 	market_culture_modifier = {
 		parameter = votive_incense_demand
@@ -557,7 +545,6 @@ mandala_capital_03 = {
 	}
 
 	province_modifier = {
-		province_size_baseline_add = 150
 		stationed_maa_damage_mult = 0.1
 		levy_size = 0.35
 		garrison_size = 0.35
@@ -574,11 +561,6 @@ mandala_capital_03 = {
 
 		can_be_filled_multiple_times = 3
 
-		modifiers = {
-			province_modifier = {
-				province_size_baseline_add = 10
-			}
-		}
 	}
 	market_culture_modifier = {
 		parameter = votive_incense_demand
@@ -826,7 +808,6 @@ mandala_capital_04 = {
 	}
 
 	province_modifier = {
-		province_size_baseline_add = 200
 		stationed_maa_damage_mult = 0.1
 		levy_size = 0.4
 		garrison_size = 0.5
@@ -844,11 +825,6 @@ mandala_capital_04 = {
 
 		can_be_filled_multiple_times = 4
 
-		modifiers = {
-			province_modifier = {
-				province_size_baseline_add = 10
-			}
-		}
 	}
 	market_culture_modifier = {
 		parameter = votive_incense_demand
@@ -1095,7 +1071,6 @@ mandala_capital_05 = {
 	}
 
 	province_modifier = {
-		province_size_baseline_add = 250
 		stationed_maa_damage_mult = 0.1
 		monthly_religious_tax = 0.75
 	}
@@ -1113,11 +1088,6 @@ mandala_capital_05 = {
 
 		can_be_filled_multiple_times = 5
 
-		modifiers = {
-			province_modifier = {
-				province_size_baseline_add = 10
-			}
-		}
 	}
 	market_culture_modifier = {
 		parameter = votive_incense_demand

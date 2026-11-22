@@ -1126,7 +1126,7 @@ NProvince = {
 	RAZE_HOLDING_COOLDOWN_YEARS = 5 			# Sets the cooldown perid in years for nomads razing holdings that they completely control
 	MAX_BUILDINGS = 7 							# Maximum number of building slots that a province can have
 	DEFAULT_PROVINCE_SIZE = 1                   # Size level used when history omits province_size, and the level the raw DEFAULT_PROVINCE_SIZE_BASELINE maps to
-	DEFAULT_PROVINCE_SIZE_BASELINE = 150        # Default baseline value a province's raw size trends toward in absence of modifiers
+	DEFAULT_PROVINCE_SIZE_BASELINE = 50        # Default baseline value a province's raw size trends toward in absence of modifiers
 	MAX_PROVINCE_SIZE_LEVEL = 10                # Highest named size level (matches province_size_level_0..province_size_level_10)
 	MAX_PROVINCE_SIZE_VALUE = 1000              # Upper bound on the raw CFixedPoint province size value
 	PROVINCE_SIZE_LEVEL_STEP = 100              # Value per level - history `province_size = X` resolves to value X * PROVINCE_SIZE_LEVEL_STEP

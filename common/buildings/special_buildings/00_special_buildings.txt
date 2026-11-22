@@ -1452,7 +1452,7 @@ holy_site_great_mosque_of_mecca_01 = {
 	}
 
 	province_modifier = {
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	
 	market_modifier = {
@@ -1582,7 +1582,7 @@ holy_site_great_mosque_of_cordoba_01 = {
 	}
 	
 	province_modifier = {
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	market_modifier = {
 		trade_good_incense_sell_price_mult = special_building_need_sell_price
@@ -1864,7 +1864,7 @@ holy_site_great_mosque_of_samarra_01 = {
 	}
 
 	province_modifier = {
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 
 	on_complete = {
@@ -2642,7 +2642,7 @@ holy_site_prophetic_mosque_01 = {
 	}
 
 	province_modifier = {
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	market_modifier = {
 		trade_good_incense_sell_price_mult = special_building_need_sell_price
@@ -2758,7 +2758,7 @@ doges_palace_01 = {
 		levy_size = 1
 		defender_holding_advantage = 10
 		travel_danger = -20
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	market_modifier = {
 		trade_good_spices_sell_price_mult = special_building_need_sell_price
@@ -2855,7 +2855,7 @@ walls_of_genoa_01 = {
 		fort_level = 2
 		monthly_commerce_tax = 2
 		travel_danger = -20
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	market_modifier = {
 		trade_good_textiles_sell_price_mult = special_building_need_sell_price
@@ -3679,7 +3679,7 @@ alhambra_01 = {
 		stationed_maa_toughness_mult = normal_maa_toughness_tier_1
 		stationed_siege_weapon_siege_value_mult = normal_maa_siege_value_tier_1
 		travel_danger = -10
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	market_modifier = {
 		trade_good_stone_sell_price_mult = special_building_need_sell_price
@@ -3763,7 +3763,7 @@ alhambra_02 = {
 		stationed_maa_toughness_mult = normal_maa_toughness_tier_2
 		stationed_siege_weapon_siege_value_mult = normal_maa_siege_value_tier_2
 		travel_danger = -20
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	county_modifier = {
 		control_baseline_add = 5
@@ -3855,7 +3855,7 @@ citadel_of_aleppo_01 = {
 		stationed_maa_toughness_mult = normal_maa_toughness_tier_1
 		stationed_siege_weapon_siege_value_mult = normal_maa_siege_value_tier_1
 		travel_danger = -10
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	market_modifier = {
 		trade_good_stone_sell_price_mult = special_building_need_sell_price
@@ -3934,7 +3934,7 @@ citadel_of_aleppo_02 = {
 		stationed_maa_toughness_mult = normal_maa_toughness_tier_2
 		stationed_siege_weapon_siege_value_mult = normal_maa_siege_value_tier_2
 		travel_danger = -20
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	market_modifier = {
 		trade_good_stone_sell_price_mult = special_building_need_sell_price
@@ -4330,7 +4330,7 @@ notre_dame_01 = {
 	}
 	province_modifier = {
 		trade_good_books_paper_production_add = special_building_books_output
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	market_modifier = {
 		trade_good_incense_sell_price_mult = special_building_need_sell_price
@@ -4613,7 +4613,7 @@ ananda_temple_01 = {
 	}
 	province_modifier = {
 		monthly_religious_tax = 1
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 
 	on_complete = {
@@ -4719,7 +4719,7 @@ the_friday_mosque_01 = {
 		religious_tax_mult = 0.2
 	}
 	province_modifier = {
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 
 	on_complete = {
@@ -5211,7 +5211,7 @@ dome_of_the_rock_01 = {
 	}
 
 	province_modifier = {
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 
 	on_complete = {
@@ -5331,7 +5331,7 @@ temple_in_jerusalem_01 = {
 	}
 
 	province_modifier = {
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 
 	on_complete = {
@@ -5749,7 +5749,7 @@ al_azhar_university = {
 		monthly_dynasty_prestige = 0.25
 	}
 	province_modifier = {
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	
 	ai_value = {
@@ -8009,7 +8009,7 @@ ark_of_bukhara_01 = {
 		fort_level = good_building_fort_level_tier_2
 		stationed_maa_damage_mult = normal_maa_damage_tier_1
 		stationed_maa_toughness_mult = normal_maa_toughness_tier_1
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	county_modifier = {
 		hostile_raid_time = 0.25
@@ -8103,7 +8103,7 @@ shah_i_zinda_01 = {
 	}
 
 	province_modifier = {
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	market_modifier = {
 		trade_good_stone_sell_price_mult = special_building_need_sell_price
@@ -8168,7 +8168,7 @@ shah_i_zinda_02 = {
 	}
 	
 	province_modifier = {
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	market_modifier = {
 		trade_good_incense_sell_price_mult = special_building_need_sell_price
@@ -8628,7 +8628,7 @@ hagios_demetrios = {
 
 	province_modifier = {
 		monthly_religious_tax = 0.5
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 
 	on_complete = {
@@ -10952,7 +10952,7 @@ yungang_grottoes_01 = {
 	
 
 	province_modifier = {
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	market_modifier = {
 		trade_good_incense_sell_price_mult = special_building_need_sell_price
@@ -11319,7 +11319,7 @@ kaifeng_palace_01 = {
 		civic_tax_mult = 0.3
 	}
 	province_modifier = {
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	market_modifier = {
 		trade_good_silk_sell_price_mult = special_building_need_sell_price
@@ -11546,7 +11546,7 @@ quanzhou_seaport_01 = {
 	}
 	province_modifier = {
 		monthly_commerce_tax = 2
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	
 	market_modifier = {
@@ -11632,7 +11632,7 @@ angkor_wat_01 = {
 	}
 	province_modifier = {
 		monthly_religious_tax = 1
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 
 	on_complete = {
@@ -11720,7 +11720,7 @@ citadel_thang_long_01 = {
 		fort_level = 2
 		defender_holding_advantage = 5
 		stationed_maa_damage_mult = normal_maa_damage_tier_1
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	market_modifier = {
 		trade_good_wood_sell_price_mult = special_building_need_sell_price
@@ -11788,7 +11788,7 @@ citadel_thang_long_02 = {
 		fort_level = 4
 		defender_holding_advantage = 10
 		stationed_maa_damage_mult = normal_maa_damage_tier_2
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	
 	market_modifier = {
@@ -12170,7 +12170,7 @@ herat_bazaar_02 = {
 	province_modifier = {
 		travel_danger = -15
 		monthly_commerce_tax = 2
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	county_culture_modifier = {
 		parameter = silk_road_market_owner_bonuses
@@ -12810,7 +12810,7 @@ lahur_bazaar_02 = {
 	province_modifier = {
 		travel_danger = -15
 		monthly_commerce_tax = 2
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	county_culture_modifier = {
 		parameter = silk_road_market_owner_bonuses
@@ -13505,7 +13505,7 @@ heian_palace_01 = {
 	province_modifier = {
 		fort_level = 2
 		defender_holding_advantage = 5
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	market_modifier = {
 		trade_good_silk_sell_price_mult = special_building_need_sell_price
@@ -13656,7 +13656,7 @@ kofuku_ji_01 = {
 	}
 
 	province_modifier = {
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	
 	ai_value = {
@@ -13896,7 +13896,7 @@ hakata_port_01 = {
 	
 	province_modifier = {
 		monthly_commerce_tax = 2
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	
 	market_modifier = {
@@ -13957,7 +13957,7 @@ hwangnyongsa_01 = {
 	}
 
 	province_modifier = {
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	
 	ai_value = {
@@ -14729,7 +14729,7 @@ gongsanseong_fortress_01 = {
 		stationed_maa_toughness_mult = normal_maa_toughness_tier_2
 		stationed_siege_weapon_siege_value_mult = normal_maa_siege_value_tier_1
 		travel_danger = -20
-		province_size_baseline_add = 40
+		province_size_baseline_add = 20
 	}
 	market_modifier = {
 		trade_good_rice_sell_price_mult = special_building_need_sell_price

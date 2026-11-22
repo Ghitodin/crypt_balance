@@ -1,0 +1,32 @@
+﻿on_game_start_after_lobby = {
+	on_actions = { crypt_balance_update_settlement_population }
+}
+
+quarterly_playable_pulse = {
+	on_actions = { crypt_balance_update_domain_settlement_population }
+}
+
+crypt_balance_update_settlement_population = {
+	effect = {
+		every_province = {
+			limit = {
+				has_holding = yes
+				exists = county
+			}
+			crypt_balance_update_prosperity_population_effect = yes
+		}
+	}
+}
+
+# The root is the ruler. Update only directly held counties on each staggered pulse.
+crypt_balance_update_domain_settlement_population = {
+	effect = {
+		every_held_title = {
+			limit = { tier = tier_county }
+			every_county_province = {
+				limit = { has_holding = yes }
+				crypt_balance_update_prosperity_population_effect = yes
+			}
+		}
+	}
+}

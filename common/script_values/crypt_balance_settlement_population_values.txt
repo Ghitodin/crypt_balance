@@ -1,0 +1,41 @@
+﻿# The modifiers on the county capital represent the bonus currently in effect.
+crypt_balance_applied_prosperity_settlement_size = {
+	value = 0
+	title_province = {
+		if = {
+			limit = { has_variable = crypt_balance_applied_settlement_prosperity }
+			add = var:crypt_balance_applied_settlement_prosperity
+			multiply = 9
+		}
+		else = {
+			if = {
+				limit = { has_province_modifier = crypt_balance_settlement_prosperity_64 }
+				add = 576
+			}
+			if = {
+				limit = { has_province_modifier = crypt_balance_settlement_prosperity_32 }
+				add = 288
+			}
+			if = {
+				limit = { has_province_modifier = crypt_balance_settlement_prosperity_16 }
+				add = 144
+			}
+			if = {
+				limit = { has_province_modifier = crypt_balance_settlement_prosperity_8 }
+				add = 72
+			}
+			if = {
+				limit = { has_province_modifier = crypt_balance_settlement_prosperity_4 }
+				add = 36
+			}
+			if = {
+				limit = { has_province_modifier = crypt_balance_settlement_prosperity_2 }
+				add = 18
+			}
+			if = {
+				limit = { has_province_modifier = crypt_balance_settlement_prosperity_1 }
+				add = 9
+			}
+		}
+	}
+}

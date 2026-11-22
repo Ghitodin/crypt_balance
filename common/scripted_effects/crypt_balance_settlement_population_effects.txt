@@ -1,0 +1,173 @@
+﻿# Province scope. Replace the previous population bonus when county prosperity changes.
+crypt_balance_update_prosperity_population_effect = {
+	save_temporary_scope_value_as = {
+		name = crypt_balance_settlement_prosperity_level
+		value = {
+			value = county.prosperity_level
+			floor = yes
+			min = 0
+			max = 100
+		}
+	}
+	if = {
+		limit = {
+			NOT = { has_variable = crypt_balance_applied_settlement_prosperity }
+		}
+		crypt_balance_remove_legacy_settlement_prosperity_effect = yes
+		set_variable = { name = crypt_balance_applied_settlement_prosperity value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { var:crypt_balance_applied_settlement_prosperity = scope:crypt_balance_settlement_prosperity_level }
+		}
+		crypt_balance_change_settlement_prosperity_modifier_effect = {
+			LEVEL = var:crypt_balance_applied_settlement_prosperity
+			OPERATION = remove_province_modifier
+		}
+		crypt_balance_change_settlement_prosperity_modifier_effect = {
+			LEVEL = scope:crypt_balance_settlement_prosperity_level
+			OPERATION = add_province_modifier
+		}
+		set_variable = {
+			name = crypt_balance_applied_settlement_prosperity
+			value = scope:crypt_balance_settlement_prosperity_level
+		}
+	}
+}
+
+crypt_balance_change_settlement_prosperity_modifier_effect = {
+	switch = {
+		trigger = $LEVEL$
+		1 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_1 }
+		2 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_2 }
+		3 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_3 }
+		4 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_4 }
+		5 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_5 }
+		6 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_6 }
+		7 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_7 }
+		8 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_8 }
+		9 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_9 }
+		10 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_10 }
+		11 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_11 }
+		12 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_12 }
+		13 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_13 }
+		14 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_14 }
+		15 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_15 }
+		16 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_16 }
+		17 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_17 }
+		18 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_18 }
+		19 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_19 }
+		20 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_20 }
+		21 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_21 }
+		22 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_22 }
+		23 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_23 }
+		24 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_24 }
+		25 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_25 }
+		26 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_26 }
+		27 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_27 }
+		28 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_28 }
+		29 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_29 }
+		30 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_30 }
+		31 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_31 }
+		32 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_32 }
+		33 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_33 }
+		34 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_34 }
+		35 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_35 }
+		36 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_36 }
+		37 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_37 }
+		38 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_38 }
+		39 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_39 }
+		40 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_40 }
+		41 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_41 }
+		42 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_42 }
+		43 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_43 }
+		44 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_44 }
+		45 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_45 }
+		46 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_46 }
+		47 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_47 }
+		48 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_48 }
+		49 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_49 }
+		50 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_50 }
+		51 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_51 }
+		52 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_52 }
+		53 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_53 }
+		54 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_54 }
+		55 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_55 }
+		56 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_56 }
+		57 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_57 }
+		58 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_58 }
+		59 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_59 }
+		60 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_60 }
+		61 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_61 }
+		62 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_62 }
+		63 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_63 }
+		64 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_64 }
+		65 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_65 }
+		66 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_66 }
+		67 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_67 }
+		68 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_68 }
+		69 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_69 }
+		70 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_70 }
+		71 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_71 }
+		72 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_72 }
+		73 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_73 }
+		74 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_74 }
+		75 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_75 }
+		76 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_76 }
+		77 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_77 }
+		78 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_78 }
+		79 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_79 }
+		80 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_80 }
+		81 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_81 }
+		82 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_82 }
+		83 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_83 }
+		84 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_84 }
+		85 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_85 }
+		86 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_86 }
+		87 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_87 }
+		88 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_88 }
+		89 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_89 }
+		90 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_90 }
+		91 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_91 }
+		92 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_92 }
+		93 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_93 }
+		94 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_94 }
+		95 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_95 }
+		96 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_96 }
+		97 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_97 }
+		98 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_98 }
+		99 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_99 }
+		100 = { $OPERATION$ = crypt_balance_settlement_prosperity_level_100 }
+	}
+}
+
+crypt_balance_remove_legacy_settlement_prosperity_effect = {
+	if = {
+		limit = { has_province_modifier = crypt_balance_settlement_prosperity_64 }
+		remove_all_province_modifier_instances = crypt_balance_settlement_prosperity_64
+	}
+	if = {
+		limit = { has_province_modifier = crypt_balance_settlement_prosperity_32 }
+		remove_all_province_modifier_instances = crypt_balance_settlement_prosperity_32
+	}
+	if = {
+		limit = { has_province_modifier = crypt_balance_settlement_prosperity_16 }
+		remove_all_province_modifier_instances = crypt_balance_settlement_prosperity_16
+	}
+	if = {
+		limit = { has_province_modifier = crypt_balance_settlement_prosperity_8 }
+		remove_all_province_modifier_instances = crypt_balance_settlement_prosperity_8
+	}
+	if = {
+		limit = { has_province_modifier = crypt_balance_settlement_prosperity_4 }
+		remove_all_province_modifier_instances = crypt_balance_settlement_prosperity_4
+	}
+	if = {
+		limit = { has_province_modifier = crypt_balance_settlement_prosperity_2 }
+		remove_all_province_modifier_instances = crypt_balance_settlement_prosperity_2
+	}
+	if = {
+		limit = { has_province_modifier = crypt_balance_settlement_prosperity_1 }
+		remove_all_province_modifier_instances = crypt_balance_settlement_prosperity_1
+	}
+}

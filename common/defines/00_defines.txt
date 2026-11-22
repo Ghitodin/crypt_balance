@@ -1340,14 +1340,14 @@ NMercenary = {
 NHolyOrder = {
 	# In addition to the holding levies, a holy order has levies according to this formula:
 	# NUM_LEVIES_BASE + <num holdings> * NUM_LEVIES_PER_HOLDING
-	NUM_LEVIES_BASE = 25
+	NUM_LEVIES_BASE = 10
 	NUM_LEVIES_PER_HOLDING = 0
 
 	# The holy order starts out with NUM_MAA_BASE Men-At-Arms sub-regiments. These will always try to use the holy_order_maa defined in the religion, if any are available.
-	NUM_MAA_BASE = 2
+	NUM_MAA_BASE = 1
 
 	# The holy order also gets NUM_MAA_PER_HOLDING additional Men-At-Arms sub-regiments for each holding leased to it.
-	NUM_MAA_PER_HOLDING = 1
+	NUM_MAA_PER_HOLDING = 0.5
 	# The MaA from this many holdings will all go into the same regiment
 	NUM_HOLDINGS_PER_MAA_REGIMENT = 3
 	# The regiment type of these additional Men-At-Arms has a chance of RELIGION_MAA_RATIO % (multiplied by 100) to use a religious type, like NUM_MAA_BASE.

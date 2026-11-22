@@ -1,0 +1,34 @@
+﻿# Both rulers must have a free slot for a new negotiated alliance.
+crypt_balance_can_form_alliance_trigger = {
+	$FIRST$ = {
+		NOT = { any_ally = { count >= 2 } }
+	}
+	$SECOND$ = {
+		NOT = { any_ally = { count >= 2 } }
+	}
+}
+
+# Use the same alliance prediction as the vanilla marriage acceptance modifiers.
+crypt_balance_marriage_respects_alliance_limit_trigger = {
+	trigger_if = {
+		limit = {
+			exists = scope:secondary_actor
+			exists = scope:secondary_recipient
+			exists = scope:puppet_or_actor
+			exists = scope:recipient
+			scope:puppet_or_actor != scope:recipient
+			scope:recipient = {
+				NOT = { is_allied_to = scope:puppet_or_actor }
+				yields_alliance = {
+					candidate = scope:secondary_recipient
+					target = scope:puppet_or_actor
+					target_candidate = scope:secondary_actor
+				}
+			}
+		}
+		crypt_balance_can_form_alliance_trigger = {
+			FIRST = scope:puppet_or_actor
+			SECOND = scope:recipient
+		}
+	}
+}

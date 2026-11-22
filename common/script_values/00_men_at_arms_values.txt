@@ -6,7 +6,7 @@
 # Costs #
 #########
 
-@high_maint_mult = 2.5
+@high_maint_mult = 3.75
 
 ### Base Cost Values
 @skirmisher_recruitment_cost = 45
@@ -197,9 +197,9 @@ horse_archers_high_maint_cost = @[skirmisher_high_maint_cost * 3]
 warrior_monks_gold_recruitment_cost = 45
 warrior_monks_piety_recruitment_cost = 200
 warrior_monks_gold_low_maint_cost = 0.1
-warrior_monks_gold_high_maint_cost = 0.3
+warrior_monks_gold_high_maint_cost = 0.45
 warrior_monks_piety_low_maint_cost = 0.2
-warrior_monks_piety_high_maint_cost = 0.6
+warrior_monks_piety_high_maint_cost = 0.9
 
 ayyar_recruitment_cost = @[heavy_infantry_recruitment_cost - 15]
 ayyar_low_maint_cost = @[heavy_infantry_low_maint_cost * 0.9]
@@ -307,7 +307,7 @@ ballistrai_high_maint_cost = @[archers_high_maint_cost * 0.75]
 
 asawira_recruitment_cost = 300
 asawira_low_maint_cost = 1
-asawira_high_maint_cost = 3
+asawira_high_maint_cost = 4.5
 
 fire_lancers_recruitment_cost = @[gunpowder_recruitment_cost]
 fire_lancers_low_maint_cost = @[gunpowder_low_maint_cost]

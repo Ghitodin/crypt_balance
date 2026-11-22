@@ -656,7 +656,7 @@ house_guard = {
 
 	buy_cost = { gold = 50 }
 	low_maintenance_cost = { gold = 0 }
-	high_maintenance_cost = { gold = 1 }
+	high_maintenance_cost = { gold = 1.5 }
 	provision_cost = @provisions_cost_infantry_expensive
 
 	max_regiments = 1

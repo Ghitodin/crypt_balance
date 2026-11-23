@@ -85,7 +85,7 @@ baron_modifier = {
 
 count_modifier = {
 	domain_limit = 3
-	knight_limit = 1
+	knight_limit = 3
 	accolades = -2
 	tax_slot_add = 1
 	ai_war_chance = -0.4
@@ -94,7 +94,7 @@ count_modifier = {
 
 duke_modifier = {
 	domain_limit = 3
-	knight_limit = 2
+	knight_limit = 5
 	vassal_limit = 20
 	tax_slot_add = 1
 	mercenary_hire_cost_mult = 0.1
@@ -104,7 +104,7 @@ duke_modifier = {
 
 king_modifier = {
 	domain_limit = 3
-	knight_limit = 3
+	knight_limit = 6
 	vassal_limit = 30
 	accolades = 1
 	tax_slot_add = 2
@@ -117,7 +117,7 @@ king_modifier = {
 
 emperor_modifier = {
 	domain_limit = 3
-	knight_limit = 4
+	knight_limit = 7
 	vassal_limit = 35
 	ai_amenity_target_baseline = 0.3
 	accolades = 2
@@ -132,7 +132,7 @@ emperor_modifier = {
 
 hegemon_modifier = {
 	domain_limit = 3
-	knight_limit = 9
+	knight_limit = 8
 	vassal_limit = 80
 	ai_amenity_target_baseline = 0.4
 	accolades = 2

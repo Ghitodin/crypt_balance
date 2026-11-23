@@ -94,7 +94,7 @@ count_modifier = {
 
 duke_modifier = {
 	domain_limit = 3
-	knight_limit = 5
+	knight_limit = 4
 	vassal_limit = 20
 	tax_slot_add = 1
 	mercenary_hire_cost_mult = 0.1
@@ -104,7 +104,7 @@ duke_modifier = {
 
 king_modifier = {
 	domain_limit = 3
-	knight_limit = 6
+	knight_limit = 5
 	vassal_limit = 30
 	accolades = 1
 	tax_slot_add = 2

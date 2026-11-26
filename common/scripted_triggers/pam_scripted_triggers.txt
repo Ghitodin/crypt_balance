@@ -7466,10 +7466,12 @@ can_send_make_external_ruler_puppet_trigger = {
 			}
 			AND = {
 				$ACTOR$ = {
+					exists = house
 					has_trait = family_first
 				}
 				$RECIPIENT$ = {
-					is_close_family_of = $ACTOR$
+					exists = house
+					house = $ACTOR$.house
 				}
 			}
 			$ACTOR$ = {

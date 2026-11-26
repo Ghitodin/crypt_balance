@@ -33726,200 +33726,6 @@ k_italy = {
 			}
 		}
 	}
-}
-
-k_sardinia = {	#Sardinia & Corsica
-	color = { 210 165 255 }
-
-	capital = c_cagliari # Cagliari
-
-	cultural_names = {
-		name_list_catalan = cn_sardenya_i_corsega
-		name_list_greek = cn_sardhnia_kai_thn_korsikn
-		name_list_italian = cn_sardegna_e_corsica
-		name_list_cisalpine = cn_sardegna_e_corsica
-		name_list_sicilian = cn_sardegna_e_corsica
-		name_list_sardinian = cn_sardegna_e_corsica
-	}
-
-	d_corsica = {
-		color = { 200 200 250 }
-
-		capital = c_ajaccio # Ajaccio
-
-		c_ajaccio = {
-			color = { 200 200 250 }
-
-			b_ajaccio = {
-				province = 2650
-
-				color = { 200 200 250 }
-			}
-			b_calvi = {
-				province = 2649
-
-				color = { 200 200 250 }
-			}
-		}
-		c_bastia = {
-			color = { 226 248 251 }
-
-			b_bastia = {
-				province = 2647
-
-				color = { 226 248 251 }
-			}
-			b_corte = {
-				province = 2648
-
-				color = { 226 248 251 }
-			}
-		}
-		c_vecchio = {
-			color = { 205 230 235 }
-
-			b_bonifacio = {
-				province = 2652
-
-				color = { 205 230 235 }
-			}
-			b_vecchio = {
-				province = 2651
-
-				color = { 205 230 235 }
-			}
-		}
-	}
-
-	d_sardinia = {
-		color = { 217 159 255 }
-
-		capital = c_cagliari # Cagliari
-
-		cultural_names = {
-			name_list_carthaginian = cn_sardinia
-		}
-
-
-		c_cagliari = {
-			color = { 220 160 250 }
-
-			cultural_names = {
-				name_list_carthaginian = cn_caralis
-			}
-
-			b_cagliari = {
-				province = 2653
-
-				color = { 220 160 250 }
-
-				cultural_names = {
-					name_list_carthaginian = cn_caralis
-			}
-
-			}
-			b_iglesias = {
-				province = 2654
-
-				color = { 220 160 250 }
-			}
-			b_samassi = {
-				province = 2660
-
-				color = { 220 160 250 }
-			}
-		}
-		c_arborea = {
-			color = { 200 185 250 }
-
-			b_oristano = {
-				province = 2659
-
-				color = { 200 185 250 }
-			}
-			b_isili = {
-				province = 2661
-
-				color = { 200 185 250 }
-			}
-		}
-		c_gallura = {
-			color = { 195 175 225 }
-
-			cultural_names = {
-				name_list_carthaginian = cn_tibia
-			}
-
-			b_olbia = {
-				province = 2658
-
-				color = { 195 175 225 }
-			}
-			b_galtelli = {
-				province = 2657
-
-				color = { 195 175 225 }
-			}
-		}
-		c_logudoro = {
-			color = { 170 182 225 }
-
-			b_sassari = {
-				province = 2662
-
-				color = { 170 182 225 }
-			}
-			b_alghero = {
-				province = 2665
-
-				color = { 170 182 225 }
-			}
-			b_porto_torres = {
-				province = 2664
-
-				color = { 170 182 225 }
-			}
-			b_ardara = {
-				province = 2663
-
-				color = { 170 182 225 }
-			}
-		}
-		c_tortoli = {
-			color = { 180 170 180 }
-
-			b_tortoli = {
-				province = 2656
-
-				color = { 180 170 180 }
-			}
-			b_carbonara = {
-				province = 2655
-
-				color = { 180 170 180 }
-			}
-		}
-	}
-}
-
-k_romagna = {
-	color = { 215 141 152 }
-
-	capital = c_roma # Rome
-
-	can_create = {
-		trigger_if = {
-			limit = {
-				is_ai = yes
-			}
-			faith = { religion_tag = christianity_religion }
-		}
-		gg_can_create_northern_italian_titles_trigger = yes
-	}
-
-	cultural_names = {
-		name_list_greek = cn_ravenna
-	}
 
 	d_romagna = {
 		color = { 244 180 130 }
@@ -34198,6 +34004,200 @@ k_romagna = {
 				color = { 157 132 123 }
 			}
 		}
+	}
+}
+
+k_sardinia = {	#Sardinia & Corsica
+	color = { 210 165 255 }
+
+	capital = c_cagliari # Cagliari
+
+	cultural_names = {
+		name_list_catalan = cn_sardenya_i_corsega
+		name_list_greek = cn_sardhnia_kai_thn_korsikn
+		name_list_italian = cn_sardegna_e_corsica
+		name_list_cisalpine = cn_sardegna_e_corsica
+		name_list_sicilian = cn_sardegna_e_corsica
+		name_list_sardinian = cn_sardegna_e_corsica
+	}
+
+	d_corsica = {
+		color = { 200 200 250 }
+
+		capital = c_ajaccio # Ajaccio
+
+		c_ajaccio = {
+			color = { 200 200 250 }
+
+			b_ajaccio = {
+				province = 2650
+
+				color = { 200 200 250 }
+			}
+			b_calvi = {
+				province = 2649
+
+				color = { 200 200 250 }
+			}
+		}
+		c_bastia = {
+			color = { 226 248 251 }
+
+			b_bastia = {
+				province = 2647
+
+				color = { 226 248 251 }
+			}
+			b_corte = {
+				province = 2648
+
+				color = { 226 248 251 }
+			}
+		}
+		c_vecchio = {
+			color = { 205 230 235 }
+
+			b_bonifacio = {
+				province = 2652
+
+				color = { 205 230 235 }
+			}
+			b_vecchio = {
+				province = 2651
+
+				color = { 205 230 235 }
+			}
+		}
+	}
+
+	d_sardinia = {
+		color = { 217 159 255 }
+
+		capital = c_cagliari # Cagliari
+
+		cultural_names = {
+			name_list_carthaginian = cn_sardinia
+		}
+
+
+		c_cagliari = {
+			color = { 220 160 250 }
+
+			cultural_names = {
+				name_list_carthaginian = cn_caralis
+			}
+
+			b_cagliari = {
+				province = 2653
+
+				color = { 220 160 250 }
+
+				cultural_names = {
+					name_list_carthaginian = cn_caralis
+			}
+
+			}
+			b_iglesias = {
+				province = 2654
+
+				color = { 220 160 250 }
+			}
+			b_samassi = {
+				province = 2660
+
+				color = { 220 160 250 }
+			}
+		}
+		c_arborea = {
+			color = { 200 185 250 }
+
+			b_oristano = {
+				province = 2659
+
+				color = { 200 185 250 }
+			}
+			b_isili = {
+				province = 2661
+
+				color = { 200 185 250 }
+			}
+		}
+		c_gallura = {
+			color = { 195 175 225 }
+
+			cultural_names = {
+				name_list_carthaginian = cn_tibia
+			}
+
+			b_olbia = {
+				province = 2658
+
+				color = { 195 175 225 }
+			}
+			b_galtelli = {
+				province = 2657
+
+				color = { 195 175 225 }
+			}
+		}
+		c_logudoro = {
+			color = { 170 182 225 }
+
+			b_sassari = {
+				province = 2662
+
+				color = { 170 182 225 }
+			}
+			b_alghero = {
+				province = 2665
+
+				color = { 170 182 225 }
+			}
+			b_porto_torres = {
+				province = 2664
+
+				color = { 170 182 225 }
+			}
+			b_ardara = {
+				province = 2663
+
+				color = { 170 182 225 }
+			}
+		}
+		c_tortoli = {
+			color = { 180 170 180 }
+
+			b_tortoli = {
+				province = 2656
+
+				color = { 180 170 180 }
+			}
+			b_carbonara = {
+				province = 2655
+
+				color = { 180 170 180 }
+			}
+		}
+	}
+}
+
+k_romagna = {
+	color = { 215 141 152 }
+
+	capital = c_roma # Rome
+
+	can_create = {
+		trigger_if = {
+			limit = {
+				is_ai = yes
+			}
+			faith = { religion_tag = christianity_religion }
+		}
+		gg_can_create_northern_italian_titles_trigger = yes
+	}
+
+	cultural_names = {
+		name_list_greek = cn_ravenna
 	}
 
 	d_latium = {

@@ -1,0 +1,46 @@
+quarterly_playable_pulse = {
+	on_actions = { crypt_balance_player_court_first_child }
+}
+
+crypt_balance_player_court_first_child = {
+	trigger = {
+		is_ai = no
+		is_landless_adventurer = yes
+		is_landed = no
+		exists = domicile
+	}
+	effect = {
+		every_courtier = {
+			limit = {
+				is_female = yes
+				is_adult = yes
+				is_ruler = no
+				is_imprisoned = no
+				primary_spouse ?= {
+					is_male = yes
+					is_alive = yes
+					is_adult = yes
+					is_ruler = no
+					is_imprisoned = no
+					is_courtier_of = root
+				}
+				possible_pregnancy_after_sex_with_character_trigger = { CHARACTER = primary_spouse }
+				NOT = {
+					any_child = {
+						even_if_dead = yes
+						is_child_of = prev.primary_spouse
+					}
+				}
+			}
+			random = {
+				# Two characters with 0.5 fertility get a 5% chance per quarter.
+				chance = {
+					value = fertility
+					add = primary_spouse.fertility
+					multiply = 5
+				}
+				make_pregnant = { father = primary_spouse }
+			}
+		}
+	}
+}
